@@ -48,12 +48,65 @@ mindmap
 
 ## 关键公式与方法
 
-- 两个重要极限：$\lim_{x\to0}\frac{\sin x}{x}=1$，$\lim_{x\to\infty}(1+\frac1x)^x=e$。
-- 常见等价无穷小（$x\to0$）：$\sin x\sim x$、$\tan x\sim x$、$\ln(1+x)\sim x$、$e^x-1\sim x$、$1-\cos x\sim x^2/2$。
-- 等价无穷小通常用于乘除因子；加减结构中先展开或变形，不能机械替换。
-- 参数方程若 $x=x(t),y=y(t)$，则 $\frac{dy}{dx}=\frac{y'(t)}{x'(t)}$，要求分母不为零。
-- 分部积分：$\int u\,dv=uv-\int v\,du$。
-- 多元复合函数求导要画清变量依赖关系；二重积分先画区域，再选直角坐标或极坐标。
+### 1. 两个重要极限
+
+$$
+\lim_{x\to 0}\frac{\sin x}{x}=1,\qquad
+\lim_{x\to\infty}\left(1+\frac{1}{x}\right)^x=e
+$$
+
+### 2. 常见等价无穷小（$x\to 0$）
+
+$$
+\begin{aligned}
+\sin x &\sim x, & \tan x &\sim x,\\
+\ln(1+x) &\sim x, & e^x-1 &\sim x,\\
+1-\cos x &\sim \frac{x^2}{2}
+\end{aligned}
+$$
+
+**使用原则：** 等价无穷小通常用于乘除因子；对于加减结构，应先展开或变形，不能机械逐项替换，尤其要注意同阶无穷小相减时主项可能抵消。
+
+### 3. 参数方程求导
+
+若参数方程为
+
+$$
+x=x(t),\qquad y=y(t),
+$$
+
+且 $x'(t)\ne 0$，则
+
+$$
+\frac{dy}{dx}=\frac{\frac{dy}{dt}}{\frac{dx}{dt}}=\frac{y'(t)}{x'(t)}.
+$$
+
+### 4. 分部积分
+
+$$
+\int u\,dv=uv-\int v\,du
+$$
+
+使用时先选择 $u$ 与 $dv$，再分别求出 $du$ 和 $v$；定积分还需代入积分上下限。
+
+### 5. 多元复合函数求导
+
+先画清变量依赖关系，再沿依赖路径使用链式法则。例如 $z=f(u,v)$、$u=u(x,y)$、$v=v(x,y)$ 时：
+
+$$
+\frac{\partial z}{\partial x}
+=\frac{\partial z}{\partial u}\frac{\partial u}{\partial x}
++\frac{\partial z}{\partial v}\frac{\partial v}{\partial x}.
+$$
+
+### 6. 二重积分
+
+先画出积分区域，再根据区域边界和被积函数特点选择直角坐标或极坐标。使用极坐标时注意面积元素：
+
+$$
+dx\,dy=r\,dr\,d\theta.
+$$
+
 
 ## 范围边界提醒
 
