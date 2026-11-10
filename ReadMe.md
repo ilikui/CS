@@ -3,6 +3,7 @@
 
 
 > 更多的学习计划在 : https://read.likui.space/learn/ 
+> 资源链接：https://ipoger.github.io/kaoyan-daily/#today
 
 
 ## 高等数学
