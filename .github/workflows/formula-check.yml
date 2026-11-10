@@ -1,0 +1,34 @@
+name: Markdown Formula Check
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "Project/**/*.md"
+      - "docs/**/*.md"
+      - "scripts/check_math.py"
+      - ".github/workflows/formula-check.yml"
+  pull_request:
+    paths:
+      - "Project/**/*.md"
+      - "docs/**/*.md"
+      - "scripts/check_math.py"
+      - ".github/workflows/formula-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  formula-check:
+    name: Validate Markdown formulas
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Check formula delimiters and LaTeX environments
+        run: python scripts/check_math.py
