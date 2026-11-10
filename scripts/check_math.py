@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SCAN_ROOTS = ("Project/Artificial Intelligence", "docs")
 FENCE_RE = re.compile(r"^\s{0,3}(\x60{3,}|~{3,})")
-INLINE_CODE_RE = re.compile(r"(?<!\x60)\x60+[^ \x60]*?\x60+(?!\x60)")
+INLINE_CODE_RE = re.compile(r"(?<!\x60)\x60+.*?\x60+(?!\x60)")
 LEGACY_RE = re.compile(r"(?<!\\)\\(?:\(|\)|\[|\])")
 ENV_RE = re.compile(r"\\(begin|end)\{([^}]+)\}")
 DOLLAR_RE = re.compile(r"(?<!\\)\$")
