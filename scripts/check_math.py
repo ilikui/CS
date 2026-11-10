@@ -91,7 +91,7 @@ def main() -> int:
     print(f"Scanned {len(files)} Markdown files.")
     if errors:
         print(f"Found {len(errors)} formula/document-structure issue(s):")
-        print("\\n".join(f"- {error}" for error in errors))
+        print("\n".join(f"- {error}" for error in errors))
         return 1
     print("All formula delimiter and LaTeX environment checks passed.")
     return 0
