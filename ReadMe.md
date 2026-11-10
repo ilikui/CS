@@ -145,6 +145,8 @@ flowchart TB
 
 详细规范见[数学公式与 GitHub 渲染规范](./docs/数学公式与GitHub渲染规范.md)。
 
+公式质量检查已接入 GitHub Actions：修改 `Project/` 或 `docs/` 下的 Markdown 时，会自动检查公式定界符、代码围栏及 LaTeX 环境配对；也可在 Actions 页面手动运行 `Markdown Formula Check`。
+
 ## 内容质量原则
 
 - 数学公式使用 LaTeX；算法与数据结构示例优先提供清晰、可读的 C/C++ 代码。
