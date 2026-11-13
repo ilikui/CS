@@ -66,6 +66,47 @@ def plain(value: str) -> str:
     return text
 
 
+
+class ExampleIndexParser(HTMLParser):
+    """Extract only example counts and source labels; never republish sentence text."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.stack = []
+        self.current = None
+        self.root_depth = None
+        self.count = 0
+        self.sources = []
+
+    def handle_starttag(self, tag, attrs):
+        classes = set(dict(attrs).get("class", "").split())
+        if tag.lower() == "li" and "example-card" in classes and self.current is None:
+            self.current = []
+            self.root_depth = len(self.stack)
+            self.count += 1
+        self.stack.append({"tag": tag.lower(), "source": "example-source" in classes})
+
+    def handle_data(self, data):
+        if self.current is not None and any(item["source"] for item in self.stack):
+            self.current.append(data)
+
+    def handle_endtag(self, tag):
+        if not self.stack:
+            return
+        match = None
+        for index in range(len(self.stack) - 1, -1, -1):
+            if self.stack[index]["tag"] == tag.lower():
+                match = index
+                break
+        if match is None:
+            return
+        del self.stack[match:]
+        if tag.lower() == "li" and self.current is not None and len(self.stack) == self.root_depth:
+            source = re.sub(r"\\s+", " ", "".join(self.current)).strip()
+            if source and source not in self.sources:
+                self.sources.append(source)
+            self.current = None
+            self.root_depth = None
+
 def field_key(name: str) -> str:
     return re.sub(r"[^a-z0-9\u4e00-\u9fff]+", "", (name or "").lower())
 
@@ -212,40 +253,46 @@ def convert(apkg: Path, out_dir: Path):
             skipped += 1
             continue
 
-        word = first_match(fields, [r"\bword\b", r"headword", r"单词", r"词头", r"目标词", r"词目"])
+        word = first_match(fields, [r"\\bword\\b", r"headword", r"单词", r"词头", r"目标词", r"词目"])
         if not looks_like_headword(word):
             word = next((f["text"] for f in fields if looks_like_headword(f["text"])), "")
         if not word:
             skipped += 1
             continue
 
-        phonetic = first_match(fields, [r"phonetic", r"pronunciation", r"\bipa\b", r"音标", r"发音"])
-        pos = first_match(fields, [r"part.?of.?speech", r"\bpos\b", r"词性"])
-        meaning = first_match(fields, [r"meaning", r"definition", r"释义", r"中文释义", r"词义"])
-        if not meaning:
-            meaning = next((f["text"] for f in fields if f["text"] != word and re.search(r"[\u4e00-\u9fff]", f["text"])), "")
-        collocations = first_match(fields, [r"collocation", r"phrase", r"搭配", r"短语"])
-        family = first_match(fields, [r"etymology", r"root", r"word.?family", r"word.?forms", r"\\bforms\\b", r"词根", r"词源", r"派生", r"词形"])
-        example = first_match(fields, [r"example", r"sentence", r"真题", r"例句", r"语境", r"原文"])
-        translation = first_match(fields, [r"translation", r"译文", r"翻译"])
-        source = first_match(fields, [r"source", r"出处", r"年份", r"考试"])
+        phonetic = first_match(fields, [r"phonetic", r"pronunciation", r"\\bipa\\b", r"音标", r"发音"])
+        level = first_match(fields, [r"\\blevel\\b", r"等级", r"考频", r"频率"])
+        word_forms = first_match(fields, [r"word.?forms", r"\\bforms\\b", r"词形", r"派生"])
+        meta = first_match(fields, [r"\\bmeta\\b", r"来源", r"出处", r"年份", r"考试"])
+        examples_html = next((value for name, value in zip(
+            [d.get("name", f"字段 {i+1}") for i, d in enumerate(sorted(model.get("flds", []), key=lambda x: x.get("ord", 0)))],
+            (row["flds"] or "").split("\\x1f")
+        ) if name.lower() == "examples"), "")
+        example_parser = ExampleIndexParser()
+        if examples_html:
+            example_parser.feed(examples_html)
         note_id = str(row["id"])
+        small_fields = [f for f in fields if f["name"].lower() in ("level", "wordforms", "meta") and len(f["text"]) <= 12000]
         record = {
             "id": f"redbook-2027-{note_id}",
             "word": word,
             "phonetic": phonetic,
-            "pos": pos,
-            "meaning": meaning,
-            "collocations": collocations,
-            "family": family,
-            "example": example,
-            "translation": translation,
-            "source": SOURCE_NAME + ((" · " + source) if source else ""),
+            "pos": "",
+            "meaning": "",
+            "collocations": "",
+            "family": word_forms,
+            "example": "",
+            "translation": "",
+            "level": level,
+            "source": SOURCE_NAME + ((" · " + meta) if meta else ""),
             "deck": sorted(set(x for x in cards_by_note.get(note_id, []) if x)),
             "tags": (row["tags"] or "").strip().split(),
             "model": model.get("name", ""),
-            "fields": fields,
-            "searchText": " ".join([word, phonetic, pos, meaning, collocations, family, example, translation] + [f["text"] for f in fields]).lower(),
+            "fields": small_fields,
+            "exampleCount": example_parser.count,
+            "exampleSources": example_parser.sources[:50],
+            "hasLazyExamples": "as-manifest" in examples_html or "data-study-script-transport" in examples_html,
+            "searchText": " ".join([word, phonetic, word_forms, level, meta, " ".join((row["tags"] or "").split())]).lower(),
         }
         records.append(record)
 
@@ -254,9 +301,25 @@ def convert(apkg: Path, out_dir: Path):
     records.sort(key=lambda x: x["id"])
     out_dir.mkdir(parents=True, exist_ok=True)
     chunks = []
-    for start in range(0, len(records), CHUNK_SIZE):
-        batch = records[start:start + CHUNK_SIZE]
-        name = f"words-{start // CHUNK_SIZE + 1:02d}.json"
+    batch = []
+    batch_bytes = 2
+    chunk_number = 0
+    for record in records:
+        encoded = json.dumps(record, ensure_ascii=False, separators=(",", ":"))
+        encoded_bytes = len(encoded.encode("utf-8"))
+        if batch and (len(batch) >= CHUNK_SIZE or batch_bytes + encoded_bytes + 1 > 4 * 1024 * 1024):
+            chunk_number += 1
+            name = f"words-{chunk_number:03d}.json"
+            payload = json.dumps(batch, ensure_ascii=False, separators=(",", ":"))
+            (out_dir / name).write_text(payload, encoding="utf-8")
+            chunks.append({"file": name, "count": len(batch), "bytes": len(payload.encode("utf-8"))})
+            batch = []
+            batch_bytes = 2
+        batch.append(record)
+        batch_bytes += encoded_bytes + 1
+    if batch:
+        chunk_number += 1
+        name = f"words-{chunk_number:03d}.json"
         payload = json.dumps(batch, ensure_ascii=False, separators=(",", ":"))
         (out_dir / name).write_text(payload, encoding="utf-8")
         chunks.append({"file": name, "count": len(batch), "bytes": len(payload.encode("utf-8"))})
@@ -268,11 +331,13 @@ def convert(apkg: Path, out_dir: Path):
         "asset": apkg.name,
         "sha256": digest,
         "total": len(records),
+        "sentenceTotal": sum(record["exampleCount"] for record in records),
+        "publicContentScope": "Word headwords, IPA, level, word forms, and source/count index only. Copyrighted definitions, example sentences, translations, and audio are not redistributed.",
         "skippedNonWordNotes": skipped,
         "chunkSize": CHUNK_SIZE,
         "chunks": chunks,
         "generatedAt": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(),
-        "notice": "词条字段来自公开 Anki 发布包；原始 HTML 已转为纯文本，音频附件不随静态 JSON 发布。请以每条卡片的来源字段为准。",
+        "notice": "公开网页仅发布单词索引、音标、等级、词形和真题出处/数量索引；不转载红宝书释义、真题例句全文、译文或音频。请通过正版 Anki 卡包查阅完整原卡片。",
     }
     (out_dir / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({"total": len(records), "skipped": skipped, "chunks": len(chunks), "sha256": digest}, ensure_ascii=False))
