@@ -70,7 +70,7 @@ function renderTree(list){
  $('#tree').querySelectorAll('[data-path]').forEach(b=>b.addEventListener('click',()=>openDoc(b.dataset.path)));
 }
 function applyFilter(key,openEntry=true){
- currentSubject=subjectConfig[key]?key:'all';if(currentSubject!=='408')current408Sub='all';const cfg=subjectConfig[currentSubject];
+ currentSubject=subjectConfig[key]?key:'all';current408Sub='all';const cfg=subjectConfig[currentSubject];
  visibleDocs=docs.filter(d=>belongs(d.path,currentSubject));
  const q=$('#search').value.trim().toLowerCase();if(q)visibleDocs=visibleDocs.filter(d=>d.path.toLowerCase().includes(q));
  renderTree(visibleDocs);
