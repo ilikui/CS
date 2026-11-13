@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>考研政治</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:#f8f6f3;color:#2c2c2c;line-height:1.7;overflow-x:hidden}
+
+/* Spotlight */
+.spotlight{position:fixed;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(192,57,43,0.04) 0%,transparent 70%);pointer-events:none;z-index:1;transform:translate(-50%,-50%);transition:left 0.4s ease-out,top 0.4s ease-out}
+
+/* Top bar */
+.top-bar{position:fixed;top:0;left:0;right:0;z-index:100;height:52px;background:rgba(255,255,255,0.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:space-between;padding:0 28px}
+.top-bar .left{display:flex;align-items:center;gap:16px}
+.top-bar a{color:#999;text-decoration:none;font-size:13px;transition:color 0.3s cubic-bezier(0.16,1,0.3,1)}
+.top-bar a:hover{color:#c0392b}
+.top-bar .title{font-size:14px;font-weight:700;color:#2c2c2c;letter-spacing:1px}
+
+/* Page */
+.page{position:relative;z-index:2;margin-top:52px;display:flex;min-height:calc(100vh - 52px)}
+
+/* Sidebar nav */
+.side-nav{width:200px;flex-shrink:0;padding:28px 20px;border-right:1px solid rgba(0,0,0,0.06);position:sticky;top:52px;height:calc(100vh - 52px);overflow-y:auto;background:rgba(255,255,255,0.5)}
+.nav-group{margin-bottom:20px}
+.nav-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#aaa;margin-bottom:8px;font-weight:700}
+.nav-item{display:flex;align-items:center;gap:8px;padding:7px 12px;border-radius:8px;font-size:13px;color:#777;cursor:pointer;transition:all 0.3s cubic-bezier(0.16,1,0.3,1);margin-bottom:2px}
+.nav-item:hover{background:rgba(192,57,43,0.06);color:#c0392b}
+.nav-item.active{background:rgba(192,57,43,0.08);color:#c0392b;font-weight:600}
+.nav-item svg{font-size:16px;flex-shrink:0}
+
+/* Main content */
+.content{flex:1;padding:28px 36px;max-width:800px}
+.content h2{font-size:22px;font-weight:800;color:#2c2c2c;margin-bottom:6px;letter-spacing:-0.5px}
+.content .subtitle{font-size:13px;color:#999;margin-bottom:24px}
+
+/* Search */
+.search-wrap{position:relative;margin-bottom:24px}
+.search-wrap svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#bbb;font-size:16px}
+.search{width:100%;padding:10px 14px 10px 40px;border:1px solid rgba(0,0,0,0.08);border-radius:12px;font-size:14px;background:white;color:#2c2c2c;outline:none;transition:border-color 0.3s cubic-bezier(0.16,1,0.3,1)}
+.search:focus{border-color:rgba(192,57,43,0.3)}
+.search::placeholder{color:#ccc}
+
+/* Knowledge cards */
+.kb-section{margin-bottom:32px}
+.kb-head{display:flex;align-items:center;gap:10px;padding:14px 18px;background:white;border:1px solid rgba(0,0,0,0.06);border-radius:14px;cursor:pointer;transition:all 0.3s cubic-bezier(0.16,1,0.3,1);margin-bottom:8px}
+.kb-head:hover{border-color:rgba(192,57,43,0.2);background:rgba(192,57,43,0.02)}
+.kb-head.open{border-color:rgba(192,57,43,0.2);border-bottom-left-radius:0;border-bottom-right-radius:0;background:rgba(192,57,43,0.03)}
+.kb-head svg{color:#c0392b;font-size:18px}
+.kb-head .text{flex:1}
+.kb-head .text .t1{font-size:15px;font-weight:700;color:#2c2c2c}
+.kb-head .text .t2{font-size:12px;color:#999;margin-top:2px}
+.kb-head .arrow{color:#bbb;transition:transform 0.3s cubic-bezier(0.16,1,0.3,1);font-size:14px}
+.kb-head.open .arrow{transform:rotate(90deg)}
+.kb-body{display:none;border:1px solid rgba(192,57,43,0.12);border-top:none;border-bottom-left-radius:14px;border-bottom-right-radius:14px;padding:16px 18px;background:rgba(192,57,43,0.01)}
+.kb-body.show{display:block}
+.kb-item{padding:12px 0;border-bottom:1px solid rgba(0,0,0,0.04);cursor:pointer}
+.kb-item:last-child{border-bottom:none}
+.kb-item .ki-title{font-size:14px;font-weight:600;color:#555;margin-bottom:0;display:flex;align-items:center;gap:8px}
+.kb-item .ki-title svg{color:#c0392b;font-size:14px}
+.kb-item .ki-content{font-size:13px;color:#777;line-height:1.8;display:none;padding-top:8px}
+.kb-item.open .ki-content{display:block}
+.kb-item.open .ki-title{color:#2c2c2c}
+
+/* Question bank */
+.q-filter-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.q-pill{padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;border:1px solid rgba(0,0,0,0.08);background:white;color:#777;transition:all 0.3s cubic-bezier(0.16,1,0.3,1)}
+.q-pill:hover{border-color:rgba(192,57,43,0.3);color:#c0392b}
+.q-pill.active{background:rgba(192,57,43,0.08);color:#c0392b;border-color:rgba(192,57,43,0.2)}
+.q-stats{font-size:12px;color:#999;margin-bottom:12px}
+.q-stats b{color:#c0392b}
+
+.q-card{background:white;border:1px solid rgba(0,0,0,0.06);border-radius:14px;padding:18px;margin-bottom:12px;transition:border-color 0.3s cubic-bezier(0.16,1,0.3,1)}
+.q-card:hover{border-color:rgba(192,57,43,0.15)}
+.q-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.q-tags{display:flex;gap:6px}
+.q-tag{padding:2px 10px;border-radius:8px;font-size:11px;font-weight:700}
+.q-tag.part{background:rgba(192,57,43,0.06);color:#c0392b}
+.q-tag.单选{background:rgba(52,152,219,0.08);color:#2980b9}
+.q-tag.多选{background:rgba(230,126,34,0.08);color:#d35400}
+.q-tag.分析{background:rgba(46,204,113,0.08);color:#27ae60}
+.q-num{font-size:12px;color:#999}
+.q-text{font-size:14px;line-height:1.8;margin:8px 0;color:#333}
+.q-opts{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0}
+.q-opt{padding:6px 12px;background:#f8f7f5;border:1px solid rgba(0,0,0,0.04);border-radius:8px;font-size:13px;color:#555}
+.q-btn{display:inline-flex;align-items:center;gap:4px;background:rgba(192,57,43,0.06);color:#c0392b;border:none;padding:5px 14px;border-radius:8px;cursor:pointer;font-size:12px;font-weight:600;transition:all 0.3s cubic-bezier(0.16,1,0.3,1)}
+.q-btn:hover{background:rgba(192,57,43,0.1)}
+.q-hidden{display:none}
+.q-ans{margin-top:10px;padding:14px;background:rgba(192,57,43,0.02);border:1px dashed rgba(192,57,43,0.15);border-radius:10px}
+.q-ans-label{font-size:12px;font-weight:700;color:#c0392b;margin-bottom:4px;display:flex;align-items:center;gap:4px}
+.q-ans-label svg{font-size:14px}
+.q-ans-text{font-size:13px;color:#555;line-height:1.7}
+.q-sol{margin-top:8px;padding:14px;background:rgba(46,204,113,0.02);border:1px dashed rgba(46,204,113,0.12);border-radius:10px}
+.q-sol-label{font-size:12px;font-weight:700;color:#27ae60;margin-bottom:4px;display:flex;align-items:center;gap:4px}
+.q-sol-label svg{font-size:14px}
+.q-sol-text{font-size:13px;color:#777;line-height:1.7}
+
+/* Pagination */
+.pag{display:flex;gap:6px;justify-content:center;margin-top:16px}
+.pag-btn{padding:5px 12px;border:1px solid rgba(0,0,0,0.08);border-radius:8px;background:white;color:#777;cursor:pointer;font-size:12px;transition:all 0.3s cubic-bezier(0.16,1,0.3,1)}
+.pag-btn:hover{border-color:rgba(192,57,43,0.3);color:#c0392b}
+.pag-btn.active{background:rgba(192,57,43,0.08);color:#c0392b;border-color:rgba(192,57,43,0.2)}
+
+/* Right panel (stats) */
+.right-panel{width:260px;flex-shrink:0;padding:28px 20px;border-left:1px solid rgba(0,0,0,0.06);position:sticky;top:52px;height:calc(100vh - 52px);overflow-y:auto;background:rgba(255,255,255,0.4)}
+.stat-block{margin-bottom:24px}
+.stat-block .label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#aaa;margin-bottom:10px;font-weight:700}
+.stat-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.04)}
+.stat-row .name{font-size:13px;color:#777}
+.stat-row .val{font-size:14px;font-weight:700;color:#c0392b}
+.tip-card{padding:16px;background:rgba(192,57,43,0.03);border:1px solid rgba(192,57,43,0.08);border-radius:12px;margin-bottom:16px}
+.tip-card .tip-title{font-size:13px;font-weight:700;color:#c0392b;margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.tip-card .tip-title svg{font-size:15px}
+.tip-card .tip-text{font-size:12px;color:#777;line-height:1.7}
+
+/* Responsive */
+@media(max-width:900px){.side-nav,.right-panel{display:none}.content{padding:20px;max-width:100%}.q-opts{grid-template-columns:1fr}}
+@media(max-width:768px){.page{flex-direction:column}.top-bar{padding:0 16px}}
+</style>
+</head>
+<body>
+
+<div class="spotlight" id="spotlight"></div>
+
+<div class="top-bar">
+  <div class="left">
+    <a href="../index.html">← 返回</a>
+    <span class="title">考研政治</span>
+  </div>
+</div>
+
+<div class="page">
+  <!-- Left nav -->
+  <div class="side-nav">
+    <div class="nav-group">
+      <div class="nav-label">板块</div>
+      <div class="nav-item active" data-part="all" onclick="navPart(this,'all')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg> 全部</div>
+      <div class="nav-item" data-part="马原" onclick="navPart(this,'马原')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-60 12 12)"/></svg> 马原</div>
+      <div class="nav-item" data-part="毛中特" onclick="navPart(this,'毛中特')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg> 毛中特</div>
+      <div class="nav-item" data-part="史纲" onclick="navPart(this,'史纲')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> 史纲</div>
+      <div class="nav-item" data-part="思法" onclick="navPart(this,'思法')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18"/><path d="M5 7l7-4 7 4"/><path d="M2 12a5 5 0 0 0 6 0"/><path d="M22 12a5 5 0 0 1-6 0"/></svg> 思法</div>
+      <div class="nav-item" data-part="形策" onclick="navPart(this,'形策')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> 形策</div>
+    </div>
+    <div class="nav-group">
+      <div class="nav-label">模式</div>
+      <div class="nav-item active" onclick="switchMode(this,'kb')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg> 知识库</div>
+      <div class="nav-item" onclick="switchMode(this,'qb')"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="13" y2="15"/></svg> 刷题</div>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <div class="content">
+    <!-- KB view -->
+    <div id="view-kb">
+      <h2>知识点速查</h2>
+      <p class="subtitle">点开看详细，背完直接刷题</p>
+      <div class="search-wrap">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input class="search" id="kbSearch" type="text" placeholder="搜一下..." oninput="searchKB(this.value)">
+      </div>
+      <div id="kbContent"></div>
+    </div>
+    <!-- QB view -->
+    <div id="view-qb" style="display:none">
+      <h2>真题题库</h2>
+      <p class="subtitle">单选多选分析都有，做完看解析</p>
+      <div class="q-filter-bar" id="typeFilter">
+        <span class="q-pill active" onclick="fType(this,'all')">全部</span>
+        <span class="q-pill" onclick="fType(this,'单选')">单选</span>
+        <span class="q-pill" onclick="fType(this,'多选')">多选</span>
+        <span class="q-pill" onclick="fType(this,'分析')">分析</span>
+      </div>
+      <div class="q-stats" id="qStats"></div>
+      <div id="qContent"></div>
+      <div class="pag" id="qPag"></div>
+    </div>
+  </div>
+
+  <!-- Right panel -->
+  <div class="right-panel">
+    <div class="tip-card">
+      <div class="tip-title"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg> 复习建议</div>
+      <div class="tip-text">马原重理解，毛中特重记忆。史纲按时间线背，思法靠刷题。形策最后一个月突击就行。</div>
+    </div>
+    <div class="stat-block">
+      <div class="nav-label">题库统计</div>
+      <div id="statRows"></div>
+    </div>
+    <div class="stat-block">
+      <div class="nav-label">分值分布</div>
+      <div class="stat-row"><span class="name">马原</span><span class="val">~24分</span></div>
+      <div class="stat-row"><span class="name">毛中特</span><span class="val">~24分</span></div>
+      <div class="stat-row"><span class="name">史纲</span><span class="val">~14分</span></div>
+      <div class="stat-row"><span class="name">思法</span><span class="val">~16分</span></div>
+      <div class="stat-row"><span class="name">形策</span><span class="val">~16分</span></div>
+      <div class="stat-row"><span class="name">分析题</span><span class="val">50分</span></div>
+    </div>
+  </div>
+</div>
+
+<script src="politics_data.js"></script>
+<script>
+// Spotlight
+const sl=document.getElementById('spotlight');
+document.addEventListener('mousemove',e=>{sl.style.left=e.clientX+'px';sl.style.top=e.clientY+'px'});
+
+// State
+let curPart='all',curType='all',curMode='kb',curPage=1;
+const PAGE=15;
+
+// Nav
+function navPart(el,part){
+  curPart=part;curPage=1;
+  document.querySelectorAll('.nav-item[data-part]').forEach(e=>e.classList.remove('active'));
+  el.classList.add('active');
+  if(curMode==='kb')renderKB();else renderQ();
+  renderStats();
+}
+function switchMode(el,mode){
+  curMode=mode;
+  document.querySelectorAll('.nav-group')[1].querySelectorAll('.nav-item').forEach(e=>e.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('view-kb').style.display=mode==='kb'?'':'none';
+  document.getElementById('view-qb').style.display=mode==='qb'?'':'none';
+  if(mode==='kb')renderKB();else renderQ();
+}
+
+// KB
+function renderKB(filter){
+  const c=document.getElementById('kbContent');let h='';
+  for(const[part,topics]of Object.entries(POLITICS_KB)){
+    if(curPart!=='all'&&part!==curPart)continue;
+    for(const[topic,items]of Object.entries(topics)){
+      let itemsH='';
+      for(const item of items){
+        if(filter&&!item.t.includes(filter)&&!item.c.includes(filter))continue;
+        itemsH+=`<div class="kb-item" onclick="this.classList.toggle('open')"><div class="ki-title"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>${item.t}</div><div class="ki-content">${item.c}</div></div>`;
+      }
+      if(!itemsH)continue;
+      h+=`<div class="kb-section"><div class="kb-head" onclick="toggleKB(this)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg><div class="text"><div class="t1">${topic}</div><div class="t2">${part} · ${items.length}个考点</div></div><svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></div><div class="kb-body">${itemsH}</div></div>`;
+    }
+  }
+  c.innerHTML=h||'<div style="text-align:center;padding:60px 0;color:#333">没找到，换个词试试</div>';
+}
+function toggleKB(el){el.classList.toggle('open');el.nextElementSibling.classList.toggle('show')}
+function searchKB(q){renderKB(q.trim())}
+
+// Questions
+function getQ(){
+  return POLITICS_QUESTIONS.filter(q=>(curPart==='all'||q[0]===curPart)&&(curType==='all'||q[1]===curType));
+}
+function renderQ(){
+  const f=getQ(),tp=Math.ceil(f.length/PAGE);
+  if(curPage>tp)curPage=tp||1;
+  const s=(curPage-1)*PAGE,pg=f.slice(s,s+PAGE);
+  // Stats
+  const st=document.getElementById('qStats');
+  let sh=`<b>${f.length}</b> 题`;
+  const tc={};f.forEach(q=>{tc[q[1]]=(tc[q[1]]||0)+1});
+  for(const[k,v]of Object.entries(tc))sh+=` · ${k} <b>${v}</b>`;
+  if(tp>1)sh+=` · <b>${curPage}/${tp}</b> 页`;
+  st.innerHTML=sh;
+  // Cards
+  let h='';
+  for(const[part,type,num,q,ans,sol]of pg){
+    let optsH='';
+    if(type==='单选'||type==='多选'){
+      const pts=q.split(/(?=[A-D][.．])/);
+      if(pts.length>1)optsH='<div class="q-opts">'+pts.slice(1).map(o=>`<div class="q-opt">${o.trim()}</div>`).join('')+'</div>';
+    }
+    h+=`<div class="q-card"><div class="q-top"><div class="q-tags"><span class="q-tag part">${part}</span><span class="q-tag ${type}">${type}</span><span class="q-num">第${num}题</span></div><button class="q-btn" onclick="toggleA(this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 看答案</button></div><div class="q-text">${q}</div>${optsH}<div class="q-hidden"><div class="q-ans"><div class="q-ans-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> 答案</div><div class="q-ans-text">${ans}</div></div><div class="q-sol"><div class="q-sol-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg> 解析</div><div class="q-sol-text">${sol}</div></div></div></div>`;
+  }
+  document.getElementById('qContent').innerHTML=h||'<div style="text-align:center;padding:60px 0;color:#333">没有匹配的题</div>';
+  // Pagination
+  let ph='';
+  if(tp>1){
+    if(curPage>1)ph+=`<button class="pag-btn" onclick="goP(${curPage-1})">←</button>`;
+    let sp=Math.max(1,curPage-3),ep=Math.min(tp,sp+6);
+    if(ep-sp<6)sp=Math.max(1,ep-6);
+    for(let p=sp;p<=ep;p++)ph+=`<button class="pag-btn${p===curPage?' active':''}" onclick="goP(${p})">${p}</button>`;
+    if(curPage<tp)ph+=`<button class="pag-btn" onclick="goP(${curPage+1})">→</button>`;
+  }
+  document.getElementById('qPag').innerHTML=ph;
+}
+function fType(el,type){
+  curType=type;curPage=1;
+  document.getElementById('typeFilter').querySelectorAll('.q-pill').forEach(e=>e.classList.remove('active'));
+  el.classList.add('active');renderQ();
+}
+function goP(p){curPage=p;renderQ()}
+function toggleA(btn){
+  const h=btn.parentElement.nextElementSibling.nextElementSibling;
+  if(h.classList.contains('q-hidden')){h.classList.remove('q-hidden');btn.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg> 收起'}
+  else{h.classList.add('q-hidden');btn.innerHTML='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg> 看答案'}
+}
+
+// Stats
+function renderStats(){
+  const c=document.getElementById('statRows');let h='';
+  const parts={};
+  POLITICS_QUESTIONS.forEach(q=>{if(!parts[q[0]])parts[q[0]]={单选:0,多选:0,分析:0};parts[q[0]][q[1]]++});
+  for(const[part,types]of Object.entries(parts)){
+    if(curPart!=='all'&&part!==curPart)continue;
+    const total=Object.values(types).reduce((a,b)=>a+b,0);
+    h+=`<div class="stat-row"><span class="name">${part}</span><span class="val">${total}题</span></div>`;
+  }
+  c.innerHTML=h;
+}
+
+// Init
+renderKB();
+renderStats();
+</script>
+</body>
+</html>
