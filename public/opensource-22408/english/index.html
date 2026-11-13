@@ -94,7 +94,7 @@
     </style>
 
 <style id="study-card-enhancements">
-#dd{display:none!important}
+#dd{display:none}
 .study-mode-switch{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:18px auto 14px}
 .study-mode-btn{border:1px solid #e8dfd8;background:#fff;color:#6f625c;border-radius:999px;padding:9px 17px;font-size:13px;font-weight:700;cursor:pointer;transition:.2s}
 .study-mode-btn.active,.study-mode-btn:hover{background:#9f3d32;color:#fff;border-color:#9f3d32}
@@ -126,6 +126,31 @@
 .dictionary-loading{font-size:12px;color:#9a8d85}
 .study-stats{font-size:11px;color:#a09289;text-align:center;margin-top:12px}
 body.study-mode-spell #dw,body.study-mode-quiz #dw{display:none}
+body.study-card-revealed #dd{display:block}
+body.study-mode-spell #dd,body.study-mode-quiz #dd{display:none}
+.word-card{width:min(92%,820px);padding:clamp(20px,4vw,42px);margin:18px auto 10px;background:linear-gradient(145deg,#fff 0%,#fffaf7 100%);border:1px solid #eee5de;border-radius:28px;box-shadow:0 18px 55px rgba(65,42,30,.08)}
+.word-line{font-size:clamp(42px,7vw,76px);letter-spacing:-2px;color:#302722;line-height:1.08;margin:10px 0 14px}
+#dd{max-width:690px;margin:18px auto 4px;padding:18px 22px;border-radius:18px;background:#f8f3ee;text-align:left}
+#dd .def-item{font-size:clamp(16px,2vw,20px);line-height:1.85;margin:0;padding:5px 0;color:#51443c}
+#dp{font-size:13px;color:#9b7163;letter-spacing:.3px;margin-top:14px}
+.study-mode-switch{position:sticky;top:8px;z-index:5;width:fit-content;max-width:calc(100% - 24px);margin:20px auto 16px;padding:6px;background:rgba(255,255,255,.9);border:1px solid #eee6df;border-radius:999px;box-shadow:0 8px 24px rgba(54,39,30,.07);backdrop-filter:blur(12px)}
+.study-mode-btn{border:0;background:transparent;padding:10px 18px;color:#786a61}
+.study-mode-btn.active{background:#9f3d32;color:#fff;box-shadow:0 4px 12px rgba(159,61,50,.2)}
+.study-panel{width:min(100%,760px);padding:0 14px;margin:0 auto 26px}
+.study-card-face,.spell-prompt,.quiz-prompt{border:1px solid #eee4dc;border-radius:24px;background:linear-gradient(145deg,#fff,#fffaf6);box-shadow:0 14px 38px rgba(65,42,30,.06);padding:clamp(20px,4vw,32px)}
+.study-eyebrow{letter-spacing:1.8px;color:#a17f70}
+.study-meaning{font-size:17px;line-height:1.9;color:#3f342e}
+.study-actions{gap:10px}
+.study-action{border-radius:999px;padding:12px 20px;box-shadow:0 4px 12px rgba(159,61,50,.12)}
+.study-action.secondary{box-shadow:none}
+.spell-input{box-sizing:border-box;margin-top:12px;border-radius:16px;padding:17px 18px;font-size:21px;background:#fff}
+.quiz-option{border-radius:16px;padding:16px;transition:transform .18s,border-color .18s,background .18s}
+.quiz-option:hover{transform:translateY(-2px)}
+.study-stats{padding:10px 12px;color:#928278}
+.page-info{margin:12px 0 24px}
+#main-screen{gap:0}
+@media(max-width:768px){#main-screen{padding:68px 12px 110px}.word-card{width:100%;box-sizing:border-box;margin:8px auto 8px;padding:20px 14px;border-radius:22px}.study-mode-switch{width:100%;box-sizing:border-box;justify-content:center;gap:3px;top:6px}.study-mode-btn{flex:1;padding:10px 8px;font-size:12px}.study-panel{padding:0;width:100%}#dd{padding:14px 16px}.study-card-face,.spell-prompt,.quiz-prompt{border-radius:20px;padding:20px}.study-action{padding:11px 16px}}
+@media(prefers-reduced-motion:no-preference){.word-card,.study-card-face,.spell-prompt,.quiz-prompt{animation:studyFadeUp .35s ease both}@keyframes studyFadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}}
 #main-screen{overflow-y:auto;justify-content:flex-start;padding-top:5vh;padding-bottom:120px}
 @media(max-width:768px){.study-panel{padding:0 4px}.study-card-face{padding:18px}.quiz-options{grid-template-columns:1fr}.study-mode-switch{margin-top:12px}.study-mode-btn{padding:8px 13px}}
 </style>
@@ -401,10 +426,10 @@ window.onload=function(){
     if(currentDictionaryWord===word)renderStudyPanel();
   };
   window.setStudyMode=function(mode){
-    studyMode=mode;cardRevealed=false;document.body.classList.toggle('study-mode-spell',mode==='spell');document.body.classList.toggle('study-mode-quiz',mode==='quiz');
+    studyMode=mode;cardRevealed=false;document.body.classList.remove('study-card-revealed');document.body.classList.toggle('study-mode-spell',mode==='spell');document.body.classList.toggle('study-mode-quiz',mode==='quiz');
     document.querySelectorAll('.study-mode-btn').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));renderStudyPanel();
   };
-  window.flipStudyCard=function(){cardRevealed=!cardRevealed;renderStudyPanel()};
+  window.flipStudyCard=function(){cardRevealed=!cardRevealed;document.body.classList.toggle('study-card-revealed',cardRevealed&&studyMode==='card');renderStudyPanel()};
   window.markStudyStatus=function(status){
     const w=current();if(!w)return;const old=savedStats[w.w]||{attempts:0,correct:0};
     old.status=status;old.updated=Date.now();savedStats[w.w]=old;
@@ -431,7 +456,7 @@ window.onload=function(){
     const defs=meanings(w),meaning='<ol>'+defs.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol>';
     if(studyMode==='card'){
       panel.innerHTML='<div class="study-card-face"><div class="study-eyebrow">'+(cardRevealed?'WORD MEANING':'ACTIVE RECALL · 先回忆，再翻卡')+'</div>'+
-      (cardRevealed?'<div class="study-meaning">'+meaning+'</div>'+dictionaryHtml(w.w):'<div class="study-meaning">先尝试回忆这个单词的全部含义、词性和常见用法。</div>')+
+      (cardRevealed?dictionaryHtml(w.w):'<div class="study-meaning">先尝试回忆这个单词的全部含义、词性和常见用法。</div>')+
       '<div class="study-actions"><button class="study-action" onclick="flipStudyCard()">'+(cardRevealed?'收起释义':'翻开卡片 · 查看释义')+'</button><button class="study-action secondary" onclick="playPronunciation(2,event)">🔊 听发音</button></div>'+(cardRevealed?'<div class="study-actions"><button class="study-action" onclick="markStudyStatus(&quot;known&quot;)">✓ 已掌握</button><button class="study-action secondary" onclick="markStudyStatus(&quot;review&quot;)">↻ 加入复习</button></div>':'')+'</div>'+statsHtml();
     }else if(studyMode==='spell'){
       panel.innerHTML='<div class="spell-prompt"><div class="study-eyebrow">SPELLING PRACTICE · 根据释义拼写</div><div class="study-meaning">'+meaning+'</div><div class="study-hint">读音可点击上方英音 / 美音按钮播放</div></div><input id="spell-answer" class="spell-input" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="输入英文单词…" onkeydown="if(event.key==='Enter'){event.preventDefault();checkSpelling()}" onclick="event.stopPropagation()"><div class="study-actions"><button class="study-action" onclick="checkSpelling()">检查拼写</button><button class="study-action secondary" onclick="document.getElementById('spell-answer').value='';document.getElementById('spell-answer').focus()">清空</button></div><div id="spell-feedback" class="spell-feedback"></div>'+statsHtml();
@@ -442,7 +467,7 @@ window.onload=function(){
     }
   }
   const baseRenderW=window.renderW;
-  window.renderW=function(){baseRenderW();cardRevealed=false;renderStudyPanel()};
+  window.renderW=function(){baseRenderW();cardRevealed=false;document.body.classList.remove('study-card-revealed');renderStudyPanel()};
   window.addEventListener('load',()=>{document.getElementById('study-mode-switch')?.addEventListener('click',e=>e.stopPropagation());renderStudyPanel()});
 })();
 </script>
