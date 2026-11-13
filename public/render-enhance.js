@@ -52,6 +52,7 @@
 
   function toMermaid(root) {
     const blocks = [];
+    const converted = [];
     if (root.matches?.('pre > code.language-mermaid, pre > code.lang-mermaid')) blocks.push(root);
     blocks.push(...(root.querySelectorAll?.('pre > code.language-mermaid, pre > code.lang-mermaid') || []));
     for (const code of blocks) {
@@ -62,12 +63,14 @@
       diagram.textContent = code.textContent;
       diagram.dataset.renderPending = '1';
       pre.replaceWith(diagram);
+      converted.push(diagram);
     }
+    return converted;
   }
 
   async function enhance(root) {
     if (!root || root.nodeType !== 1) return;
-    toMermaid(root);
+    const converted = toMermaid(root);
     await mathReady;
     if (window.renderMathInElement) {
       try { window.renderMathInElement(root, mathOptions); }
@@ -75,7 +78,7 @@
     }
     const mermaid = await mermaidReady;
     if (mermaid) {
-      const nodes = [];
+      const nodes = [...converted];
       if (root.matches?.('.mermaid[data-render-pending="1"]')) nodes.push(root);
       nodes.push(...root.querySelectorAll('.mermaid[data-render-pending="1"]'));
       if (nodes.length) {
