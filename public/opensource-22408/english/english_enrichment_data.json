@@ -2,7 +2,7 @@
   "version": 1,
   "language": "en-zh",
   "scope": "考研英语高频核心词首批离线拓展",
-  "note": "共82个离线核心词条，按考研必考词单元持续扩充。 本次补充必考词 Unit1 缺失的 23 个词条，重点整理高频短语、固定搭配、中文释义及考研语境例句。 Unit2 第一批补充：mediate—abstract，共16个词条，强化媒介、教育、制度、社会议题等阅读语境中的固定搭配。 Unit2 第二批补充：ban—casualty，共16个词条，重点覆盖禁令、能力、资本、职业、案例论证及社会经济语境。",
+  "note": "共82个离线核心词条，按考研必考词单元持续扩充。 本次补充必考词 Unit1 缺失的 23 个词条，重点整理高频短语、固定搭配、中文释义及考研语境例句。 Unit2 第一批补充：mediate—abstract，共16个词条，强化媒介、教育、制度、社会议题等阅读语境中的固定搭配。 Unit2 第二批补充：ban—casualty，共16个词条，重点覆盖禁令、能力、资本、职业、案例论证及社会经济语境。 Unit2 第三批补充：catch—deem，共16个词条，补充常见动词短语、因果表达及制度类阅读搭配。",
   "entries": {
     "abandon": {
       "pos": "verb",
@@ -6246,6 +6246,815 @@
           "casualty",
           "victim",
           "casualty 常指事故或冲突中的伤亡者；victim 泛指受到伤害、不公或欺骗的人"
+        ]
+      ]
+    },
+    "catch": {
+      "pos": "verb / noun",
+      "meanings": [
+        "抓住；接住；捕获",
+        "赶上（交通工具）；及时发现",
+        "感染（疾病）；引起注意",
+        "陷阱；捕获量"
+      ],
+      "phrases": [
+        [
+          "catch a cold",
+          "感冒"
+        ],
+        [
+          "catch one's attention",
+          "引起某人的注意"
+        ],
+        [
+          "catch up with",
+          "赶上；追上"
+        ],
+        [
+          "catch sight of",
+          "看见；瞥见"
+        ]
+      ],
+      "sentences": [
+        [
+          "The campaign was designed to catch the attention of young consumers.",
+          "这项活动旨在吸引年轻消费者的注意。"
+        ],
+        [
+          "It is difficult for wages to catch up with rising living costs.",
+          "工资很难赶上不断上涨的生活成本。"
+        ]
+      ],
+      "forms": [
+        "caught（v. catch 的过去式和过去分词）",
+        "catching（adj. 引人注目的）",
+        "catcher（n. 捕手；捕捉者）"
+      ],
+      "confusables": [
+        [
+          "catch",
+          "capture",
+          "catch 常指抓住或赶上；capture 强调控制、夺取或记录"
+        ]
+      ]
+    },
+    "category": {
+      "pos": "noun",
+      "meanings": [
+        "类别；种类",
+        "范畴；类型"
+      ],
+      "phrases": [
+        [
+          "a broad category",
+          "广泛的类别"
+        ],
+        [
+          "fall into a category",
+          "归入某一类别"
+        ],
+        [
+          "category of goods",
+          "商品类别"
+        ],
+        [
+          "social category",
+          "社会范畴"
+        ]
+      ],
+      "sentences": [
+        [
+          "The researchers divided the responses into several categories.",
+          "研究人员将回答分成了几个类别。"
+        ],
+        [
+          "Age is only one category of difference among individuals.",
+          "年龄只是个体差异的一个类别。"
+        ]
+      ],
+      "forms": [
+        "categorize / categorise（v. 分类）",
+        "categorical（adj. 明确的；绝对的）",
+        "categorically（adv. 断然地）"
+      ],
+      "confusables": [
+        [
+          "category",
+          "classification",
+          "category 指类别本身；classification 指分类的过程或体系"
+        ]
+      ]
+    },
+    "cater": {
+      "pos": "verb",
+      "meanings": [
+        "满足；迎合（需求、兴趣）",
+        "提供饮食服务；承办餐饮"
+      ],
+      "phrases": [
+        [
+          "cater for sb.'s needs",
+          "满足某人的需求"
+        ],
+        [
+          "cater to demand",
+          "迎合需求"
+        ],
+        [
+          "cater for a conference",
+          "为会议提供餐饮"
+        ],
+        [
+          "cater to all tastes",
+          "迎合各种喜好"
+        ]
+      ],
+      "sentences": [
+        [
+          "Public services should cater for the needs of disadvantaged groups.",
+          "公共服务应满足弱势群体的需求。"
+        ],
+        [
+          "Some universities have expanded their courses to cater to changing job markets.",
+          "一些大学扩大了课程设置，以适应不断变化的就业市场。"
+        ]
+      ],
+      "forms": [
+        "caterer（n. 餐饮承办者）",
+        "catering（n. 餐饮服务）"
+      ],
+      "confusables": [
+        [
+          "cater for",
+          "cater to",
+          "两者都可表示满足需求；cater for 常指提供所需服务，cater to 常带有迎合意味"
+        ]
+      ]
+    },
+    "cause": {
+      "pos": "noun / verb",
+      "meanings": [
+        "原因；起因",
+        "事业；目标；主张",
+        "引起；导致"
+      ],
+      "phrases": [
+        [
+          "cause and effect",
+          "因果关系"
+        ],
+        [
+          "the root cause of",
+          "……的根本原因"
+        ],
+        [
+          "cause damage to",
+          "对……造成损害"
+        ],
+        [
+          "a worthy cause",
+          "值得支持的事业"
+        ]
+      ],
+      "sentences": [
+        [
+          "Researchers are trying to identify the root causes of social inequality.",
+          "研究人员正试图找出社会不平等的根本原因。"
+        ],
+        [
+          "Air pollution can cause serious damage to public health.",
+          "空气污染会严重损害公共健康。"
+        ]
+      ],
+      "forms": [
+        "causal（adj. 因果关系的）",
+        "causality（n. 因果关系）",
+        "causative（adj. 引起……的）",
+        "causation（n. 因果关系；起因）"
+      ],
+      "confusables": [
+        [
+          "cause",
+          "reason",
+          "cause 强调导致结果的根本因素；reason 强调解释或理由"
+        ]
+      ]
+    },
+    "caution": {
+      "pos": "noun / verb",
+      "meanings": [
+        "谨慎；小心",
+        "警告；告诫",
+        "使警惕；提醒"
+      ],
+      "phrases": [
+        [
+          "with caution",
+          "谨慎地"
+        ],
+        [
+          "exercise caution",
+          "保持谨慎"
+        ],
+        [
+          "a word of caution",
+          "一句提醒"
+        ],
+        [
+          "caution against doing sth.",
+          "告诫不要做某事"
+        ]
+      ],
+      "sentences": [
+        [
+          "The results should be interpreted with caution.",
+          "这些结果应谨慎解读。"
+        ],
+        [
+          "Experts caution against relying on a single source of information.",
+          "专家告诫人们不要依赖单一信息来源。"
+        ]
+      ],
+      "forms": [
+        "cautious（adj. 谨慎的）",
+        "cautiously（adv. 谨慎地）",
+        "cautionary（adj. 警示性的）"
+      ],
+      "confusables": [
+        [
+          "caution",
+          "warning",
+          "caution 强调谨慎或提醒；warning 通常是对危险或不良后果的明确警告"
+        ]
+      ]
+    },
+    "cautious": {
+      "pos": "adjective",
+      "meanings": [
+        "谨慎的；小心的",
+        "慎重的；不轻易表态的"
+      ],
+      "phrases": [
+        [
+          "be cautious about",
+          "对……保持谨慎"
+        ],
+        [
+          "a cautious approach",
+          "谨慎的方法"
+        ],
+        [
+          "cautiously optimistic",
+          "谨慎乐观的"
+        ],
+        [
+          "be cautious in doing sth.",
+          "做某事时谨慎"
+        ]
+      ],
+      "sentences": [
+        [
+          "Investors remain cautious about the uncertain economic outlook.",
+          "投资者对不确定的经济前景仍持谨慎态度。"
+        ],
+        [
+          "A cautious approach is needed when interpreting limited evidence.",
+          "解释有限证据时需要采取谨慎的方法。"
+        ]
+      ],
+      "forms": [
+        "caution（n./v. 谨慎；警告）",
+        "cautiously（adv. 谨慎地）",
+        "cautiousness（n. 谨慎）"
+      ],
+      "confusables": [
+        [
+          "cautious",
+          "careful",
+          "cautious 更强调规避风险；careful 更强调认真细致"
+        ]
+      ]
+    },
+    "cease": {
+      "pos": "verb / noun",
+      "meanings": [
+        "停止；终止",
+        "结束；中止"
+      ],
+      "phrases": [
+        [
+          "cease to exist",
+          "不复存在"
+        ],
+        [
+          "cease doing sth.",
+          "停止做某事"
+        ],
+        [
+          "cease operations",
+          "停止运营"
+        ],
+        [
+          "cease fire",
+          "停火"
+        ]
+      ],
+      "sentences": [
+        [
+          "The company was forced to cease operations after years of losses.",
+          "多年亏损后，这家公司被迫停止运营。"
+        ],
+        [
+          "Some traditional practices have ceased to exist in modern society.",
+          "一些传统做法在现代社会已经不复存在。"
+        ]
+      ],
+      "forms": [
+        "ceaseless（adj. 不停的；持续的）",
+        "ceaselessly（adv. 不停地）",
+        "cessation（n. 停止；中止）"
+      ],
+      "confusables": [
+        [
+          "cease",
+          "stop",
+          "cease 较正式，常指活动或状态终止；stop 是更常用的普通表达"
+        ]
+      ]
+    },
+    "celebrate": {
+      "pos": "verb",
+      "meanings": [
+        "庆祝；庆贺",
+        "赞扬；颂扬",
+        "举行纪念活动"
+      ],
+      "phrases": [
+        [
+          "celebrate an anniversary",
+          "庆祝周年纪念"
+        ],
+        [
+          "celebrate success",
+          "庆祝成功"
+        ],
+        [
+          "celebrate diversity",
+          "颂扬多样性"
+        ],
+        [
+          "widely celebrated",
+          "广受赞誉的"
+        ]
+      ],
+      "sentences": [
+        [
+          "The event celebrates the contribution of women to scientific research.",
+          "这项活动旨在颂扬女性对科学研究的贡献。"
+        ],
+        [
+          "Communities gather to celebrate their cultural traditions.",
+          "社区成员聚集起来庆祝自己的文化传统。"
+        ]
+      ],
+      "forms": [
+        "celebration（n. 庆祝；庆典）",
+        "celebratory（adj. 庆祝的）",
+        "celebrated（adj. 著名的；受赞誉的）",
+        "celebrity（n. 名人）"
+      ],
+      "confusables": [
+        [
+          "celebrate",
+          "commemorate",
+          "celebrate 可庆祝喜事或成就；commemorate 侧重纪念重要人物或历史事件"
+        ]
+      ]
+    },
+    "celebrity": {
+      "pos": "noun",
+      "meanings": [
+        "名人；名流",
+        "名声；名望（较正式）"
+      ],
+      "phrases": [
+        [
+          "a television celebrity",
+          "电视名人"
+        ],
+        [
+          "celebrity culture",
+          "名人文化"
+        ],
+        [
+          "celebrity status",
+          "名人地位"
+        ],
+        [
+          "celebrity endorsement",
+          "名人代言"
+        ]
+      ],
+      "sentences": [
+        [
+          "Social media have changed the relationship between celebrities and their audiences.",
+          "社交媒体改变了名人与受众之间的关系。"
+        ],
+        [
+          "Celebrity endorsement does not always guarantee product quality.",
+          "名人代言并不总能保证产品质量。"
+        ]
+      ],
+      "forms": [
+        "celebrate（v. 庆祝；赞扬）",
+        "celebration（n. 庆祝）",
+        "celebrated（adj. 著名的）"
+      ],
+      "confusables": [
+        [
+          "celebrity",
+          "fame",
+          "celebrity 指名人或名望；fame 指成名状态或声誉"
+        ]
+      ]
+    },
+    "ceremony": {
+      "pos": "noun",
+      "meanings": [
+        "典礼；仪式",
+        "礼节；礼貌（常用于 without ceremony）"
+      ],
+      "phrases": [
+        [
+          "opening ceremony",
+          "开幕式"
+        ],
+        [
+          "award ceremony",
+          "颁奖典礼"
+        ],
+        [
+          "graduation ceremony",
+          "毕业典礼"
+        ],
+        [
+          "without ceremony",
+          "不拘礼节地；直接地"
+        ]
+      ],
+      "sentences": [
+        [
+          "The opening ceremony reflected the country's cultural traditions.",
+          "开幕式体现了这个国家的文化传统。"
+        ],
+        [
+          "The agreement was signed in a formal ceremony.",
+          "这项协议在正式仪式上签署。"
+        ]
+      ],
+      "forms": [
+        "ceremonial（adj. 仪式的；礼仪的）",
+        "ceremonially（adv. 按仪式地）",
+        "ceremonious（adj. 讲究礼节的）"
+      ],
+      "confusables": [
+        [
+          "ceremony",
+          "ritual",
+          "ceremony 常指正式典礼；ritual 强调按固定规则重复进行的仪式或行为"
+        ]
+      ]
+    },
+    "certain": {
+      "pos": "adjective / pronoun",
+      "meanings": [
+        "确定的；确信的",
+        "某个；某些（不具体指明）",
+        "必然的；不可避免的"
+      ],
+      "phrases": [
+        [
+          "be certain of",
+          "确信……"
+        ],
+        [
+          "make certain that",
+          "确保……"
+        ],
+        [
+          "for certain",
+          "确切地；肯定地"
+        ],
+        [
+          "a certain degree of",
+          "某种程度的"
+        ]
+      ],
+      "sentences": [
+        [
+          "It is not certain whether the policy will produce the expected results.",
+          "这项政策是否会产生预期结果尚不确定。"
+        ],
+        [
+          "A certain degree of flexibility is necessary in a changing environment.",
+          "在不断变化的环境中，一定程度的灵活性是必要的。"
+        ]
+      ],
+      "forms": [
+        "certainty（n. 确定；确实）",
+        "certainly（adv. 当然；确定地）",
+        "uncertain（adj. 不确定的）",
+        "uncertainty（n. 不确定性）"
+      ],
+      "confusables": [
+        [
+          "certain",
+          "sure",
+          "certain 较正式，可表示某事确定；sure 更常用于表达个人确信"
+        ]
+      ]
+    },
+    "certainty": {
+      "pos": "noun",
+      "meanings": [
+        "确定；确实",
+        "必然发生的事",
+        "确信；把握"
+      ],
+      "phrases": [
+        [
+          "with certainty",
+          "确定无疑地"
+        ],
+        [
+          "a degree of certainty",
+          "一定程度的确定性"
+        ],
+        [
+          "moral certainty",
+          "道德上的确信"
+        ],
+        [
+          "absolute certainty",
+          "绝对确定"
+        ]
+      ],
+      "sentences": [
+        [
+          "Scientific conclusions are rarely established with complete certainty.",
+          "科学结论很少能够被完全确定地确立。"
+        ],
+        [
+          "The uncertainty of the future makes long-term planning difficult.",
+          "未来的不确定性使长期规划变得困难。"
+        ]
+      ],
+      "forms": [
+        "certain（adj. 确定的）",
+        "certainly（adv. 确定地）",
+        "uncertain（adj. 不确定的）",
+        "uncertainty（n. 不确定性）"
+      ],
+      "confusables": [
+        [
+          "certainty",
+          "confidence",
+          "certainty 强调事实或结果确定；confidence 强调人的信心或信任"
+        ]
+      ]
+    },
+    "certificate": {
+      "pos": "noun / verb",
+      "meanings": [
+        "证书；证明书",
+        "执照；合格证明",
+        "发给证书；证明合格"
+      ],
+      "phrases": [
+        [
+          "birth certificate",
+          "出生证明"
+        ],
+        [
+          "certificate of qualification",
+          "资格证书"
+        ],
+        [
+          "medical certificate",
+          "医疗证明"
+        ],
+        [
+          "certificate of completion",
+          "结业证书"
+        ]
+      ],
+      "sentences": [
+        [
+          "Applicants must provide a certificate of professional qualification.",
+          "申请人必须提供职业资格证书。"
+        ],
+        [
+          "A certificate alone does not necessarily demonstrate practical competence.",
+          "仅凭证书并不一定能证明实际能力。"
+        ]
+      ],
+      "forms": [
+        "certify（v. 证明；认证）",
+        "certification（n. 认证；证明）",
+        "certified（adj. 经认证的）"
+      ],
+      "confusables": [
+        [
+          "certificate",
+          "diploma",
+          "certificate 常指证明资格或完成某项要求的证书；diploma 常指学校颁发的文凭"
+        ]
+      ]
+    },
+    "certify": {
+      "pos": "verb",
+      "meanings": [
+        "证明；证实",
+        "颁发证书；认证",
+        "正式确认（某人符合标准）"
+      ],
+      "phrases": [
+        [
+          "certify that",
+          "证明……"
+        ],
+        [
+          "certify a document",
+          "证明文件真实有效"
+        ],
+        [
+          "be certified as",
+          "获得……认证"
+        ],
+        [
+          "certified public accountant",
+          "注册会计师"
+        ]
+      ],
+      "sentences": [
+        [
+          "The laboratory is certified to conduct safety tests.",
+          "该实验室获得了进行安全测试的认证。"
+        ],
+        [
+          "The organization must certify that its products meet national standards.",
+          "该组织必须证明其产品符合国家标准。"
+        ]
+      ],
+      "forms": [
+        "certificate（n. 证书）",
+        "certification（n. 认证）",
+        "certified（adj. 经认证的）",
+        "certifier（n. 认证机构；证明人）"
+      ],
+      "confusables": [
+        [
+          "certify",
+          "verify",
+          "certify 强调正式证明或认证；verify 强调核实信息是否准确"
+        ]
+      ]
+    },
+    "decrease": {
+      "pos": "verb / noun",
+      "meanings": [
+        "减少；下降",
+        "减少量；降幅"
+      ],
+      "phrases": [
+        [
+          "decrease by 10 percent",
+          "下降百分之十"
+        ],
+        [
+          "decrease in demand",
+          "需求下降"
+        ],
+        [
+          "a sharp decrease",
+          "大幅下降"
+        ],
+        [
+          "decrease the risk of",
+          "降低……的风险"
+        ]
+      ],
+      "sentences": [
+        [
+          "The new policy led to a decrease in energy consumption.",
+          "新政策使能源消耗有所下降。"
+        ],
+        [
+          "Regular exercise can decrease the risk of several chronic diseases.",
+          "规律运动能够降低多种慢性疾病的风险。"
+        ]
+      ],
+      "forms": [
+        "decreasing（adj. 逐渐减少的）",
+        "decreased（adj. 减少了的）",
+        "decreasingly（adv. 越来越少地）"
+      ],
+      "confusables": [
+        [
+          "decrease",
+          "decline",
+          "decrease 中性地表示数量减少；decline 常暗示持续下降或衰退"
+        ]
+      ]
+    },
+    "decree": {
+      "pos": "noun / verb",
+      "meanings": [
+        "法令；政令；判决",
+        "颁布法令；裁定"
+      ],
+      "phrases": [
+        [
+          "by decree",
+          "通过法令；依照命令"
+        ],
+        [
+          "issue a decree",
+          "颁布法令"
+        ],
+        [
+          "a royal decree",
+          "王室法令"
+        ],
+        [
+          "decree that",
+          "裁定……"
+        ]
+      ],
+      "sentences": [
+        [
+          "The reform was introduced by government decree.",
+          "这项改革是通过政府法令推行的。"
+        ],
+        [
+          "The court decreed that the agreement was invalid.",
+          "法院裁定这项协议无效。"
+        ]
+      ],
+      "forms": [
+        "decree（过去式/过去分词 decreed）",
+        "decreeing（现在分词）"
+      ],
+      "confusables": [
+        [
+          "decree",
+          "regulation",
+          "decree 通常指权威机构颁布的正式命令；regulation 指具体规则或管理条例"
+        ]
+      ]
+    },
+    "deem": {
+      "pos": "verb",
+      "meanings": [
+        "认为；视为；认定（正式）"
+      ],
+      "phrases": [
+        [
+          "be deemed to be",
+          "被认为是……"
+        ],
+        [
+          "deem it necessary",
+          "认为有必要"
+        ],
+        [
+          "be deemed eligible",
+          "被认定符合资格"
+        ],
+        [
+          "deem sth. appropriate",
+          "认为某事恰当"
+        ]
+      ],
+      "sentences": [
+        [
+          "The practice is widely deemed harmful to the environment.",
+          "这种做法普遍被认为有害于环境。"
+        ],
+        [
+          "Applicants deemed suitable will be invited for an interview.",
+          "被认为合适的申请人将获邀参加面试。"
+        ]
+      ],
+      "forms": [
+        "deemed（v. deem 的过去式和过去分词）",
+        "deeming（v. deem 的现在分词）"
+      ],
+      "confusables": [
+        [
+          "deem",
+          "consider",
+          "deem 较正式，常用于制度、法律或评估语境；consider 用法更广泛"
         ]
       ]
     }
