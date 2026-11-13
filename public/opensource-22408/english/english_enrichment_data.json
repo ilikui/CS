@@ -2,7 +2,7 @@
   "version": 1,
   "language": "en-zh",
   "scope": "考研英语高频核心词首批离线拓展",
-  "note": "共82个离线核心词条，按考研必考词单元持续扩充。 本次补充必考词 Unit1 缺失的 23 个词条，重点整理高频短语、固定搭配、中文释义及考研语境例句。 Unit2 第一批补充：mediate—abstract，共16个词条，强化媒介、教育、制度、社会议题等阅读语境中的固定搭配。",
+  "note": "共82个离线核心词条，按考研必考词单元持续扩充。 本次补充必考词 Unit1 缺失的 23 个词条，重点整理高频短语、固定搭配、中文释义及考研语境例句。 Unit2 第一批补充：mediate—abstract，共16个词条，强化媒介、教育、制度、社会议题等阅读语境中的固定搭配。 Unit2 第二批补充：ban—casualty，共16个词条，重点覆盖禁令、能力、资本、职业、案例论证及社会经济语境。",
   "entries": {
     "abandon": {
       "pos": "verb",
@@ -5463,6 +5463,789 @@
           "abstract",
           "theoretical",
           "abstract 强调脱离具体事物；theoretical 强调基于理论而非实践"
+        ]
+      ]
+    },
+    "ban": {
+      "pos": "verb / noun",
+      "meanings": [
+        "禁止；取缔",
+        "禁令；禁止"
+      ],
+      "phrases": [
+        [
+          "ban smoking",
+          "禁止吸烟"
+        ],
+        [
+          "impose a ban on",
+          "对……实施禁令"
+        ],
+        [
+          "a total ban",
+          "全面禁令"
+        ],
+        [
+          "lift the ban",
+          "解除禁令"
+        ]
+      ],
+      "sentences": [
+        [
+          "Several countries have introduced a ban on single-use plastics.",
+          "一些国家已经出台了一次性塑料制品禁令。"
+        ],
+        [
+          "The court ruled that the restriction amounted to an unfair ban.",
+          "法院裁定这项限制构成了不公平的禁令。"
+        ]
+      ],
+      "forms": [
+        "banned（v. 禁止；ban 的过去式）",
+        "banning（n./v. 禁止）",
+        "banishment（n. 放逐；驱逐）"
+      ],
+      "confusables": [
+        [
+          "ban",
+          "prohibit",
+          "ban 常用于政策或社会层面的禁止；prohibit 更正式，强调法规禁止"
+        ]
+      ]
+    },
+    "bar": {
+      "pos": "noun / verb",
+      "meanings": [
+        "条；棒；横木",
+        "酒吧；吧台",
+        "障碍；阻碍",
+        "禁止；阻挡"
+      ],
+      "phrases": [
+        [
+          "bar chart",
+          "条形图"
+        ],
+        [
+          "a barrier to entry",
+          "进入的障碍"
+        ],
+        [
+          "bar sb. from doing sth.",
+          "禁止某人做某事"
+        ],
+        [
+          "raise the bar",
+          "提高标准"
+        ]
+      ],
+      "sentences": [
+        [
+          "High housing costs remain a major bar to social mobility.",
+          "高昂的住房成本仍然是社会流动的一大障碍。"
+        ],
+        [
+          "The new rules bar companies from using misleading claims.",
+          "新规禁止企业使用误导性宣传。"
+        ]
+      ],
+      "forms": [
+        "barred（adj. 被禁止的；有横木的）",
+        "barring（prep. 除非；不包括）",
+        "barrier（n. 障碍）"
+      ],
+      "confusables": [
+        [
+          "bar",
+          "ban",
+          "bar 可表示阻挡或禁止某人参与；ban 更常指正式禁令"
+        ]
+      ]
+    },
+    "bare": {
+      "pos": "adjective / verb",
+      "meanings": [
+        "赤裸的；无遮盖的",
+        "仅有的；勉强够的",
+        "最基本的；最低限度的",
+        "揭露；使暴露"
+      ],
+      "phrases": [
+        [
+          "bare minimum",
+          "最低限度"
+        ],
+        [
+          "bare facts",
+          "基本事实"
+        ],
+        [
+          "bare hands",
+          "赤手；徒手"
+        ],
+        [
+          "bare one's soul",
+          "袒露内心"
+        ]
+      ],
+      "sentences": [
+        [
+          "The workers were paid only the bare minimum required by law.",
+          "工人得到的报酬仅达到法律规定的最低标准。"
+        ],
+        [
+          "The report reveals the bare facts behind the controversy.",
+          "这份报告揭示了争议背后的基本事实。"
+        ]
+      ],
+      "forms": [
+        "barely（adv. 几乎不；勉强）",
+        "bareness（n. 赤裸；空旷）",
+        "barefaced（adj. 公然的；厚颜无耻的）"
+      ],
+      "confusables": [
+        [
+          "bare",
+          "naked",
+          "bare 可指缺少覆盖或仅有基本部分；naked 通常指身体未穿衣或完全暴露"
+        ]
+      ]
+    },
+    "barely": {
+      "pos": "adverb",
+      "meanings": [
+        "几乎不；几乎没有",
+        "勉强；刚刚",
+        "仅仅；刚刚才"
+      ],
+      "phrases": [
+        [
+          "barely enough",
+          "勉强够用"
+        ],
+        [
+          "barely visible",
+          "几乎看不见"
+        ],
+        [
+          "barely survive",
+          "勉强生存"
+        ],
+        [
+          "barely recognize",
+          "几乎认不出来"
+        ]
+      ],
+      "sentences": [
+        [
+          "Many low-income families can barely afford basic necessities.",
+          "许多低收入家庭几乎负担不起基本生活必需品。"
+        ],
+        [
+          "The difference between the two results was barely noticeable.",
+          "两项结果之间的差异几乎难以察觉。"
+        ]
+      ],
+      "forms": [
+        "bare（adj. 赤裸的；仅有的）",
+        "bareness（n. 赤裸；空旷）"
+      ],
+      "confusables": [
+        [
+          "barely",
+          "hardly",
+          "两者都表示“几乎不”；barely 常带有勉强达到某种程度的意味"
+        ]
+      ]
+    },
+    "bargain": {
+      "pos": "noun / verb",
+      "meanings": [
+        "便宜货；划算的交易",
+        "协议；交易",
+        "讨价还价；商谈条件"
+      ],
+      "phrases": [
+        [
+          "a good bargain",
+          "划算的交易"
+        ],
+        [
+          "strike a bargain",
+          "达成协议"
+        ],
+        [
+          "bargain with sb.",
+          "与某人讨价还价"
+        ],
+        [
+          "bargaining power",
+          "议价能力"
+        ]
+      ],
+      "sentences": [
+        [
+          "Consumers often regard low prices as evidence of a good bargain.",
+          "消费者常把低价视为划算交易的标志。"
+        ],
+        [
+          "Collective bargaining can improve workers' negotiating power.",
+          "集体谈判能够增强劳动者的议价能力。"
+        ]
+      ],
+      "forms": [
+        "bargaining（n. 讨价还价；谈判）",
+        "bargainer（n. 谈判者）",
+        "bargain-basement（adj. 极便宜的）"
+      ],
+      "confusables": [
+        [
+          "bargain",
+          "deal",
+          "bargain 强调价格优惠或讨价还价；deal 泛指交易、协议或安排"
+        ]
+      ]
+    },
+    "capable": {
+      "pos": "adjective",
+      "meanings": [
+        "有能力的；能胜任的",
+        "可能……的；能够……的"
+      ],
+      "phrases": [
+        [
+          "be capable of doing sth.",
+          "有能力做某事"
+        ],
+        [
+          "a capable leader",
+          "有能力的领导者"
+        ],
+        [
+          "highly capable",
+          "能力很强的"
+        ],
+        [
+          "capable of change",
+          "能够改变的"
+        ]
+      ],
+      "sentences": [
+        [
+          "Every individual is capable of learning new skills throughout life.",
+          "每个人一生中都能够学习新技能。"
+        ],
+        [
+          "The system is capable of processing large amounts of data.",
+          "该系统能够处理大量数据。"
+        ]
+      ],
+      "forms": [
+        "capability（n. 能力；性能）",
+        "capably（adv. 能干地）",
+        "incapable（adj. 无能力的）"
+      ],
+      "confusables": [
+        [
+          "capable",
+          "competent",
+          "capable 强调具备做某事的能力；competent 强调达到胜任某项工作的标准"
+        ]
+      ]
+    },
+    "capacity": {
+      "pos": "noun",
+      "meanings": [
+        "容量；容积；承载量",
+        "能力；才能",
+        "职位；身份",
+        "生产能力；处理能力"
+      ],
+      "phrases": [
+        [
+          "the capacity to do sth.",
+          "做某事的能力"
+        ],
+        [
+          "at full capacity",
+          "满负荷地"
+        ],
+        [
+          "capacity for growth",
+          "增长潜力"
+        ],
+        [
+          "production capacity",
+          "生产能力"
+        ]
+      ],
+      "sentences": [
+        [
+          "Education can strengthen people's capacity for independent thought.",
+          "教育能够增强人们独立思考的能力。"
+        ],
+        [
+          "The factory is operating at full capacity to meet demand.",
+          "工厂正满负荷运转以满足需求。"
+        ]
+      ],
+      "forms": [
+        "capable（adj. 有能力的）",
+        "capability（n. 能力；性能）",
+        "capacitate（v. 使具备能力；使有资格）"
+      ],
+      "confusables": [
+        [
+          "capacity",
+          "ability",
+          "capacity 常指潜能、容纳量或处理能力；ability 泛指做某事的能力"
+        ]
+      ]
+    },
+    "capital": {
+      "pos": "noun / adjective",
+      "meanings": [
+        "首都；首府",
+        "资本；资金",
+        "大写字母",
+        "首要的；极好的（较旧用法）"
+      ],
+      "phrases": [
+        [
+          "human capital",
+          "人力资本"
+        ],
+        [
+          "capital investment",
+          "资本投资"
+        ],
+        [
+          "capital city",
+          "首都"
+        ],
+        [
+          "capital punishment",
+          "死刑"
+        ]
+      ],
+      "sentences": [
+        [
+          "Investment in education is a long-term investment in human capital.",
+          "教育投资是对人力资本的长期投资。"
+        ],
+        [
+          "Small firms often find it difficult to obtain sufficient capital.",
+          "小企业往往难以获得充足的资金。"
+        ]
+      ],
+      "forms": [
+        "capitalist（n. 资本家；adj. 资本主义的）",
+        "capitalism（n. 资本主义）",
+        "capitalize（v. 利用；大写；资本化）",
+        "capitalization（n. 资本化；大写）"
+      ],
+      "confusables": [
+        [
+          "capital",
+          "capitol",
+          "capital 指首都、资本或大写字母；Capitol 通常指美国国会大厦或州议会大厦"
+        ]
+      ]
+    },
+    "captive": {
+      "pos": "adjective / noun",
+      "meanings": [
+        "被俘虏的；被关押的",
+        "受控制的；无法自由选择的",
+        "俘虏；被关押者"
+      ],
+      "phrases": [
+        [
+          "captive audience",
+          "无法离开的听众；被动受众"
+        ],
+        [
+          "captive animals",
+          "圈养动物"
+        ],
+        [
+          "take sb. captive",
+          "俘虏某人"
+        ],
+        [
+          "captive market",
+          "受限市场；固定客户群"
+        ]
+      ],
+      "sentences": [
+        [
+          "The documentary examines the conditions of captive animals in zoos.",
+          "这部纪录片考察了动物园中圈养动物的生存状况。"
+        ],
+        [
+          "Advertisers often target a captive audience in public transport.",
+          "广告商常把公共交通中的被动受众作为目标。"
+        ]
+      ],
+      "forms": [
+        "captivity（n. 被俘；囚禁）",
+        "captivate（v. 迷住；吸引）",
+        "captivating（adj. 迷人的）"
+      ],
+      "confusables": [
+        [
+          "captive",
+          "prisoner",
+          "captive 强调被控制或失去自由；prisoner 通常指被关押的囚犯或俘虏"
+        ]
+      ]
+    },
+    "capture": {
+      "pos": "verb / noun",
+      "meanings": [
+        "捕获；俘获",
+        "记录；拍摄；捕捉（图像、声音）",
+        "夺取；赢得",
+        "吸引；体现（注意力、特点）"
+      ],
+      "phrases": [
+        [
+          "capture attention",
+          "吸引注意力"
+        ],
+        [
+          "capture the moment",
+          "记录瞬间"
+        ],
+        [
+          "capture data",
+          "采集数据"
+        ],
+        [
+          "capture market share",
+          "夺取市场份额"
+        ]
+      ],
+      "sentences": [
+        [
+          "The survey captures changes in public attitudes toward technology.",
+          "这项调查记录了公众对技术态度的变化。"
+        ],
+        [
+          "The campaign failed to capture the attention of younger voters.",
+          "这场宣传未能吸引年轻选民的注意。"
+        ]
+      ],
+      "forms": [
+        "captured（adj. 被捕获的）",
+        "capturing（n./adj. 捕获；引人注目的）",
+        "captivity（n. 囚禁）"
+      ],
+      "confusables": [
+        [
+          "capture",
+          "catch",
+          "capture 常强调成功控制、记录或夺取；catch 更常指抓住或赶上"
+        ]
+      ]
+    },
+    "career": {
+      "pos": "noun",
+      "meanings": [
+        "职业；事业",
+        "职业生涯；发展历程",
+        "（快速）飞驰；猛冲（动词）"
+      ],
+      "phrases": [
+        [
+          "career development",
+          "职业发展"
+        ],
+        [
+          "career prospects",
+          "职业前景"
+        ],
+        [
+          "career path",
+          "职业道路"
+        ],
+        [
+          "a career in research",
+          "从事研究工作"
+        ]
+      ],
+      "sentences": [
+        [
+          "Career development increasingly depends on lifelong learning.",
+          "职业发展越来越依赖终身学习。"
+        ],
+        [
+          "Economic changes may reshape the career prospects of young people.",
+          "经济变化可能重塑年轻人的职业前景。"
+        ]
+      ],
+      "forms": [
+        "careerist（n. 野心勃勃的职业主义者）",
+        "career-oriented（adj. 以职业为导向的）"
+      ],
+      "confusables": [
+        [
+          "career",
+          "occupation",
+          "career 强调长期职业发展历程；occupation 指具体职业或工作种类"
+        ]
+      ]
+    },
+    "careful": {
+      "pos": "adjective",
+      "meanings": [
+        "小心的；谨慎的",
+        "仔细的；周密的",
+        "精心的；注意细节的"
+      ],
+      "phrases": [
+        [
+          "be careful about",
+          "对……谨慎；注意……"
+        ],
+        [
+          "careful consideration",
+          "仔细考虑"
+        ],
+        [
+          "a careful analysis",
+          "细致分析"
+        ],
+        [
+          "careful attention to detail",
+          "认真关注细节"
+        ]
+      ],
+      "sentences": [
+        [
+          "A careful analysis of the evidence is essential before drawing conclusions.",
+          "得出结论之前，必须仔细分析证据。"
+        ],
+        [
+          "Consumers should be careful about information found on social media.",
+          "消费者应谨慎对待社交媒体上的信息。"
+        ]
+      ],
+      "forms": [
+        "care（n./v. 关心；照料）",
+        "carefully（adv. 仔细地）",
+        "carefulness（n. 仔细；谨慎）",
+        "careless（adj. 粗心的）"
+      ],
+      "confusables": [
+        [
+          "careful",
+          "cautious",
+          "careful 强调认真细致；cautious 更强调防范风险、避免危险"
+        ]
+      ]
+    },
+    "case": {
+      "pos": "noun / verb",
+      "meanings": [
+        "情况；情形；事例",
+        "案件；诉讼",
+        "病例；病人",
+        "论据；理由；主张",
+        "箱子；容器"
+      ],
+      "phrases": [
+        [
+          "in case of",
+          "如果发生；万一"
+        ],
+        [
+          "in any case",
+          "无论如何"
+        ],
+        [
+          "make a case for",
+          "为……提出理由"
+        ],
+        [
+          "a case study",
+          "案例研究"
+        ],
+        [
+          "in this case",
+          "在这种情况下"
+        ]
+      ],
+      "sentences": [
+        [
+          "In many cases, early intervention can prevent more serious problems.",
+          "在许多情况下，早期干预能够防止问题进一步恶化。"
+        ],
+        [
+          "The researchers made a strong case for stricter environmental standards.",
+          "研究人员为制定更严格的环境标准提出了有力论据。"
+        ]
+      ],
+      "forms": [
+        "casework（n. 个案工作）",
+        "casebook（n. 案例集）",
+        "showcase（n./v. 展示；陈列）"
+      ],
+      "confusables": [
+        [
+          "case",
+          "instance",
+          "case 可指情况、案件或病例；instance 通常指某一具体例子"
+        ]
+      ]
+    },
+    "cast": {
+      "pos": "verb / noun",
+      "meanings": [
+        "投掷；抛",
+        "投射（光线、阴影、目光）",
+        "选派演员；分配角色",
+        "铸造；使形成",
+        "演员阵容；铸件"
+      ],
+      "phrases": [
+        [
+          "cast a shadow",
+          "投下阴影"
+        ],
+        [
+          "cast doubt on",
+          "使……受到怀疑"
+        ],
+        [
+          "cast a vote",
+          "投票"
+        ],
+        [
+          "cast light on",
+          "阐明；使……更清楚"
+        ],
+        [
+          "the cast of a film",
+          "电影演员阵容"
+        ]
+      ],
+      "sentences": [
+        [
+          "The findings cast doubt on the assumption that growth benefits everyone.",
+          "这些发现使“经济增长惠及所有人”这一假设受到质疑。"
+        ],
+        [
+          "The study casts new light on the relationship between sleep and memory.",
+          "这项研究为睡眠与记忆之间的关系提供了新的解释。"
+        ]
+      ],
+      "forms": [
+        "casting（n. 铸造；演员选角）",
+        "caster（n. 投掷者；脚轮）",
+        "cast（过去式和过去分词同形）"
+      ],
+      "confusables": [
+        [
+          "cast",
+          "throw",
+          "cast 可表示投射、选角或铸造；throw 主要指用力扔出"
+        ]
+      ]
+    },
+    "casual": {
+      "pos": "adjective",
+      "meanings": [
+        "随意的；非正式的",
+        "漫不经心的；不经意的",
+        "临时的；非固定的",
+        "偶然的"
+      ],
+      "phrases": [
+        [
+          "casual clothes",
+          "便装"
+        ],
+        [
+          "casual conversation",
+          "随意交谈"
+        ],
+        [
+          "casual workers",
+          "临时工"
+        ],
+        [
+          "a casual remark",
+          "随口一说"
+        ]
+      ],
+      "sentences": [
+        [
+          "Casual employment may offer flexibility but little job security.",
+          "临时就业可能提供灵活性，却缺乏工作保障。"
+        ],
+        [
+          "A casual remark can sometimes reveal deeply held beliefs.",
+          "一句随意的话有时会暴露根深蒂固的信念。"
+        ]
+      ],
+      "forms": [
+        "casually（adv. 随意地）",
+        "casualness（n. 随意；漫不经心）",
+        "casualty（n. 伤亡人员；受害者）"
+      ],
+      "confusables": [
+        [
+          "casual",
+          "informal",
+          "casual 可指随意或临时的；informal 主要指非正式、不拘礼节的"
+        ]
+      ]
+    },
+    "casualty": {
+      "pos": "noun",
+      "meanings": [
+        "伤亡人员；死伤者",
+        "事故或灾难中的受害者",
+        "（冲突、事件的）损失"
+      ],
+      "phrases": [
+        [
+          "civilian casualties",
+          "平民伤亡"
+        ],
+        [
+          "casualty figures",
+          "伤亡人数"
+        ],
+        [
+          "a casualty of war",
+          "战争中的受害者"
+        ],
+        [
+          "traffic casualties",
+          "交通事故伤亡者"
+        ]
+      ],
+      "sentences": [
+        [
+          "The conflict caused a large number of civilian casualties.",
+          "这场冲突造成大量平民伤亡。"
+        ],
+        [
+          "Small businesses were among the casualties of the economic crisis.",
+          "小企业是这场经济危机的受害者之一。"
+        ]
+      ],
+      "forms": [
+        "casual（adj. 随意的；临时的）",
+        "casualty rate（n. 伤亡率）"
+      ],
+      "confusables": [
+        [
+          "casualty",
+          "victim",
+          "casualty 常指事故或冲突中的伤亡者；victim 泛指受到伤害、不公或欺骗的人"
         ]
       ]
     }
