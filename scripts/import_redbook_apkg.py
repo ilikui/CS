@@ -266,7 +266,7 @@ def convert(apkg: Path, out_dir: Path):
         meta = first_match(fields, [r"\\bmeta\\b", r"来源", r"出处", r"年份", r"考试"])
         examples_html = next((value for name, value in zip(
             [d.get("name", f"字段 {i+1}") for i, d in enumerate(sorted(model.get("flds", []), key=lambda x: x.get("ord", 0)))],
-            (row["flds"] or "").split("\\x1f")
+            (row["flds"] or "").split(chr(31))
         ) if name.lower() == "examples"), "")
         example_parser = ExampleIndexParser()
         if examples_html:
