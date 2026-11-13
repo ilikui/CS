@@ -51,8 +51,8 @@
 
 - 上游项目：[CHNragdoll/anki-pipeline](https://github.com/CHNragdoll/anki-pipeline)；[公开发行包](https://github.com/CHNragdoll/anki-pipeline/releases)。其中包含 2027 红宝书真题例句词卡等 Anki 资源。
 1. 从 CHNragdoll 的 Anki 发布包下载并导入 Anki 客户端；该项目发布的 APKG 属于可导入的学习卡包，网页背诵工具不会直接读取 APKG 二进制文件。
-2. 在 Anki 中选择对应牌组，导出为字段分隔文本 / CSV（建议包含单词、音标、词性、释义、搭配、例句、译文、来源）。
-3. 在背诵室点击「导入词库」，选择 CSV；也可按 JSON 数组导入，字段名支持 `word`、`phonetic`、`pos`、`meaning`、`collocations`、`family`、`example`、`translation`、`source`。
+2. 在 Anki 中选择对应牌组，导出为字段分隔文本（制表符）或 CSV（建议包含单词、音标、词性、释义、搭配、例句、译文、来源）。
+3. 在背诵室点击「导入词库」，选择 CSV / 制表符文本；也可按 JSON 数组导入，字段名支持 `word`、`phonetic`、`pos`、`meaning`、`collocations`、`family`、`example`、`translation`、`source`。
 4. 导入内容会追加到当前词库；复习记录保存在当前浏览器。导出进度文件可用于备份，不等同于 Anki 原生复习记录同步。
 
 > 来源边界：当前页面默认读取本仓库 Unit 1 的词条；Unit 1 例句为自编学习例句。CHNragdoll 发布包中的真题词卡应通过用户合法获取的 APKG 导出后导入，不能把演示词条标成真题原文。
