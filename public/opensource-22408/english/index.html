@@ -160,6 +160,16 @@ body.study-mode-spell #dd,body.study-mode-quiz #dd{display:none}
 @media(prefers-reduced-motion:no-preference){.word-card,.study-card-face,.spell-prompt,.quiz-prompt{animation:studyFadeUp .35s ease both}@keyframes studyFadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}}
 #main-screen{overflow-y:auto;justify-content:flex-start;padding-top:5vh;padding-bottom:120px}
 @media(max-width:768px){.study-panel{padding:0 4px}.study-card-face{padding:18px}.quiz-options{grid-template-columns:1fr}.study-mode-switch{margin-top:12px}.study-mode-btn{padding:8px 13px}}
+
+/* Browse-all vocabulary controls */
+#browse-toolbar{position:sticky;top:0;z-index:205;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:-16px -16px 18px;padding:14px 18px;background:rgba(255,255,255,.96);border-bottom:1px solid #e7edf2;backdrop-filter:blur(12px)}
+#browse-toolbar .browse-toolbar-title{font-size:14px;font-weight:800;color:#34495c}
+#browse-toolbar .browse-toolbar-actions{display:flex;gap:8px;flex-wrap:wrap}
+#browse-toolbar button{border:1px solid #dbe6ee;background:#f5f8fa;color:#416987;border-radius:9px;padding:8px 12px;font-size:12px;font-weight:700;cursor:pointer}
+#browse-toolbar button:hover{background:#eaf2f8;border-color:#b9ccda}
+#bc .bg{scroll-margin-top:76px}
+#bc .bgt{padding:12px 10px;border-radius:9px;background:#f8fafc}
+@media(max-width:768px){#browse-toolbar{margin:-16px -16px 14px;padding:12px}#browse-toolbar .browse-toolbar-title{width:100%}#browse-toolbar button{flex:1}}
 </style>
 <style id="english-page-redesign">
 :root{--ink:#202a35;--muted:#718096;--line:#e8edf2;--paper:#f4f7fb;--accent:#426b8f;--accent-soft:#eaf2f8;--warm:#b66b4b}
@@ -310,7 +320,7 @@ body.study-card-revealed #dd{display:block!important}
     <div class="hint">← → 方向键翻页</div>
 </div>
 <div id="sr"></div>
-<div id="bv"><div class="cb"><div class="pill" onclick="toggleBrowse()">✕</div></div><div id="bc"></div></div>
+<div id="bv"><div class="cb"><div class="pill" onclick="toggleBrowse()">✕</div></div><div id="browse-toolbar"><div class="browse-toolbar-title">📚 全部单词 · 分类浏览</div><div class="browse-toolbar-actions"><button type="button" onclick="setBrowseGroupsCollapsed(true)">全部折叠</button><button type="button" onclick="setBrowseGroupsCollapsed(false)">全部展开</button></div></div><div id="bc"></div></div>
 <script src="english_data.js"></script>
 <script>
 
@@ -464,11 +474,19 @@ async function goW(word,page){
 
 // Browse
 function toggleBrowse(){bOpen=!bOpen;document.getElementById('bv').classList.toggle('show',bOpen);if(bOpen)renderB()}
+function setBrowseGroupsCollapsed(collapsed){
+    document.querySelectorAll('#bc .bg').forEach(group=>{
+        const title=group.querySelector('.bgt');
+        const grid=group.querySelector('.bw-grid');
+        if(title)title.classList.toggle('hid',collapsed);
+        if(grid)grid.classList.toggle('hid',collapsed);
+    });
+}
 function renderB(){
     let h='';
     for(const[g,cd]of(Object.entries(WD))){
         for(const[p,ws]of(Object.entries(cd))){
-            h+='<div class="bg"><div class="bgt" onclick="this.classList.toggle(&apos;hid&apos;);this.nextElementSibling.classList.toggle(&apos;hid&apos;)"><span>'+p+' <span class="ct">('+ws.length+'词)</span></span><span class="ar">▼</span></div><div class="bw-grid">'+ws.map(w=>'<div class="bw-item" onclick="goW(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,&apos;'+p.replace(/'/g,"&apos;")+'&apos;)"><div class="bw-w" role="button" tabindex="0" title="点击单词播放发音" onclick="speakBrowseWord(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,event)" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();speakBrowseWord(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,event)}">'+w[0]+' <span class="bw-sound" aria-hidden="true">🔊</span></div><div class="bw-d">'+w[1]+'</div></div>').join('')+'</div></div>'
+            h+='<div class="bg"><div class="bgt hid" onclick="this.classList.toggle(\'hid\');this.nextElementSibling.classList.toggle(\'hid\')"><span>'+p+' <span class="ct">('+ws.length+'词)</span></span><span class="ar">▼</span></div><div class="bw-grid hid">'+ws.map(w=>'<div class="bw-item" onclick="goW(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,&apos;'+p.replace(/'/g,"&apos;")+'&apos;)"><div class="bw-w" role="button" tabindex="0" title="点击单词播放发音" onclick="speakBrowseWord(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,event)" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();speakBrowseWord(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,event)}">'+w[0]+' <span class="bw-sound" aria-hidden="true">🔊</span></div><div class="bw-d">'+w[1]+'</div></div>').join('')+'</div></div>'
         }
     }
     document.getElementById('bc').innerHTML=h;
