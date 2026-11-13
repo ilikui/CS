@@ -470,12 +470,31 @@ window.onload=function(){
  function textOf(x){if(typeof x==='string')return x;if(Array.isArray(x))return x.map(textOf).filter(Boolean).join('；');if(x&&typeof x==='object')return x.i||x.text||x.value||x.content||'';return '';}
  function collectPhrases(data){
    const out=[],seen=new Set();
-   function add(v){let s=textOf(v).replace(/<[^>]*>/g,'').trim();if(s&&s.length<100&&!seen.has(s.toLowerCase())){seen.add(s.toLowerCase());out.push(s);}}
-   function walk(o,key=''){if(!o||typeof o!=='object')return;if(Array.isArray(o)){o.forEach(v=>walk(v,key));return;}
-     if(/phrs|phrases|phrase/i.test(key)){if(Array.isArray(o)){o.forEach(v=>{add(v.head||v.headword||v.phrase||v.word);walk(v,'phraseItem');});}else{add(o.head||o.headword||o.phrase||o.word);walk(o.phrs||o.phrase||o.trs||o.tr,'phraseItem');}}
-     if(key==='phraseItem'){add(o.head||o.headword||o.phrase||o.word);const trs=o.trs||o.tr||[];walk(trs,'phraseTranslation');}
-     if(key==='phraseTranslation'){add(o.l?.i||o.i||o.text||o.value);}
-     Object.keys(o).forEach(k=>{if(k!=='phraseItem'&&k!=='phraseTranslation')walk(o[k],k);});
+   function phraseText(v){return textOf(v).replace(/<[^>]*>/g,'').trim();}
+   function translationOf(v){
+     const found=[];
+     function scan(x){if(!x||typeof x!=='object')return;if(Array.isArray(x)){x.forEach(scan);return;}
+       const value=x.l?.i||x.i||x.translation||x.trans;
+       if(typeof value==='string'&&value.trim())found.push(value.trim());
+       Object.keys(x).forEach(k=>{if(k!=='l'&&k!=='i'&&k!=='translation'&&k!=='trans')scan(x[k]);});
+     }
+     scan(v);return [...new Set(found)].slice(0,2).join('；');
+   }
+   function walk(o,key=''){
+     if(!o||typeof o!=='object')return;
+     if(Array.isArray(o)){o.forEach(v=>walk(v,key));return;}
+     if(key==='phraseItem'){
+       const en=phraseText(o.head||o.headword||o.phrase||o.word||o.text);
+       const zh=translationOf(o.trs||o.tr||o.translation||[]);
+       if(en&&en.length<100&&!seen.has(en.toLowerCase())){seen.add(en.toLowerCase());out.push({en,zh});}
+       return;
+     }
+     if(/^(phrs|phrases|phrase)$/i.test(key)){
+       if(Array.isArray(o))o.forEach(v=>walk(v,'phraseItem'));
+       else Object.keys(o).forEach(k=>walk(o[k],/^(phrs|phrases|phrase)$/i.test(k)?k:'phraseItem'));
+       return;
+     }
+     Object.keys(o).forEach(k=>walk(o[k],k));
    }
    walk(data);return out.slice(0,12);
  }
@@ -492,7 +511,7 @@ window.onload=function(){
  function renderResult(word,phrases,sentences,extra){
    const el=document.getElementById('enrich-content');if(!el)return;
    let html='';
-   if(phrases.length)html+='<div class="enrich-section"><h3>常见词组与固定搭配</h3><div class="enrich-tags">'+phrases.map(p=>'<span class="enrich-tag">'+safe(p)+'</span>').join('')+'</div></div>';
+   if(phrases.length)html+='<div class="enrich-section"><h3>常见词组与固定搭配</h3><div class="enrich-tags">'+phrases.map(p=>'<span class="enrich-tag"><b>'+safe(p.en)+'</b>'+(p.zh?'<br><span class="enrich-zh">'+safe(p.zh)+'</span>':'')+'</span>').join('')+'</div></div>';
    if(sentences.length)html+='<div class="enrich-section"><h3>双语短句 · 在语境中理解单词</h3>'+sentences.map(s=>'<div class="enrich-sentence"><div class="enrich-en">'+safe(s.en)+'</div>'+(s.zh?'<div class="enrich-zh">'+safe(s.zh)+'</div>':'<div class="enrich-zh">暂未取得该例句的中文翻译</div>')+'</div>').join('')+'</div>';
    if(extra.length)html+='<div class="enrich-section"><h3>补充英文释义</h3>'+extra.map(x=>'<div class="enrich-tag">'+safe(x)+'</div>').join('')+'</div>';
    if(!html)html='<div class="enrich-error">在线词典暂未返回该词的词组或例句。你仍可使用上方原始中文释义和拼写练习。</div>';
