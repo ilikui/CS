@@ -1,8 +1,8 @@
 {
   "repository": "ilikui/CS",
   "branch": "cloudflare-pages",
-  "generatedAt": "2026-11-13T12:56:50.846Z",
-  "count": 104,
+  "generatedAt": "2026-11-13T22:10:00+08:00",
+  "count": 109,
   "files": [
     {
       "path": "Doc/Books/ReadMe.md",
@@ -225,6 +225,11 @@
       "size": 4607
     },
     {
+      "path": "Project/Artificial Intelligence/02_408/五大经典学习法-408统一模板.md",
+      "sha": "d2ac8b454285a773949e9f8f73151a138ffaa275",
+      "size": 2388
+    },
+    {
       "path": "Project/Artificial Intelligence/02_408/历年真题/ReadMe.md",
       "sha": "6e0f6391b76a59d272cec27bb7d0cebc960dd386",
       "size": 264
@@ -233,6 +238,11 @@
       "path": "Project/Artificial Intelligence/02_408/操作系统/ReadMe.md",
       "sha": "02346f80aa4509b025d919781495493801b21ec2",
       "size": 3173
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/操作系统/五大经典学习法应用指南.md",
+      "sha": "c652c4adf14204831f59353a687589555bc4d116",
+      "size": 2535
     },
     {
       "path": "Project/Artificial Intelligence/02_408/操作系统/基础概念与核心术语.md",
@@ -273,6 +283,11 @@
       "path": "Project/Artificial Intelligence/02_408/数据结构/ReadMe.md",
       "sha": "c5229c5a968f0fb5e2b72d9993abaf53049f9ae4",
       "size": 3010
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/数据结构/五大经典学习法应用指南.md",
+      "sha": "5b598e552953ca7d696bbc3fbf6d213a854893af",
+      "size": 2807
     },
     {
       "path": "Project/Artificial Intelligence/02_408/数据结构/基础概念与核心术语.md",
@@ -320,6 +335,11 @@
       "size": 3233
     },
     {
+      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/五大经典学习法应用指南.md",
+      "sha": "7741cb772ec1f59188e7ab048a61c5b70b303b1f",
+      "size": 2490
+    },
+    {
       "path": "Project/Artificial Intelligence/02_408/计算机组成原理/基础概念与核心术语.md",
       "sha": "2806941311916016c916cae5bc420003334b0344",
       "size": 5357
@@ -358,6 +378,11 @@
       "path": "Project/Artificial Intelligence/02_408/计算机网络/ReadMe.md",
       "sha": "cf577019081d4dd5b86c511e4d661efd6a660b9b",
       "size": 3422
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机网络/五大经典学习法应用指南.md",
+      "sha": "55943782bb2a70e9595a307c45ef6a3d621eddd3",
+      "size": 2489
     },
     {
       "path": "Project/Artificial Intelligence/02_408/计算机网络/基础概念与核心术语.md",
