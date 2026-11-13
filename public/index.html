@@ -139,6 +139,7 @@ load().then(()=>{const m=location.hash.match(/^#doc=(.+)$/);if(m){const path=dec
 (()=> {
  const root=document.querySelector('.static-index');
  if(!root)return;
+ root.dataset.readerReady='true';
  const cards=[...root.querySelectorAll('.static-category')];
  const buttons=[...document.querySelectorAll('#subjectFilters [data-filter]')];
  const search=document.querySelector('#search');
@@ -193,7 +194,7 @@ load().then(()=>{const m=location.hash.match(/^#doc=(.+)$/);if(m){const path=dec
      content.innerHTML='<p class="empty">'+String(err.message||err)+'</p><p><a target="_blank" rel="noopener" href="'+a.href+'">改为打开 GitHub 原文 ↗</a></p>';
    }
  });
- apply();
+ try{apply();root.dataset.readerApplied='true';}catch(err){root.dataset.readerError=String(err&&err.message||err);}
 })();
 </script><script src="/render-enhance.js" defer></script>
 </body></html>
