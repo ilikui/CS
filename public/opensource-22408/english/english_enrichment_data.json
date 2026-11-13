@@ -1,0 +1,872 @@
+{
+  "version": 1,
+  "language": "en-zh",
+  "scope": "考研英语高频核心词首批离线拓展",
+  "note": "例句为学习用途原创短句；中文释义按常见考研语境整理。后续按词库单元扩充。",
+  "entries": {
+    "abandon": {
+      "pos": "verb",
+      "meanings": [
+        "放弃；抛弃",
+        "遗弃；离弃",
+        "沉溺于（abandon oneself to）"
+      ],
+      "phrases": [
+        [
+          "abandon a plan",
+          "放弃一项计划"
+        ],
+        [
+          "abandon hope",
+          "放弃希望"
+        ],
+        [
+          "abandon oneself to",
+          "沉溺于；纵情于"
+        ]
+      ],
+      "sentences": [
+        [
+          "We should not abandon our efforts after one failure.",
+          "我们不应因一次失败就放弃努力。"
+        ],
+        [
+          "The old factory was abandoned many years ago.",
+          "这家旧工厂多年前就被废弃了。"
+        ]
+      ],
+      "forms": [
+        "abandoned（过去式/过去分词；被遗弃的）",
+        "abandonment（n. 放弃；遗弃）"
+      ],
+      "confusables": [
+        [
+          "abandon",
+          "give up",
+          "abandon 更强调彻底丢弃；give up 常指停止尝试或努力"
+        ]
+      ]
+    },
+    "access": {
+      "pos": "noun / verb",
+      "meanings": [
+        "n. 通道；入口",
+        "n. 使用权；接触（或获取）的机会",
+        "v. 访问；获取（计算机数据）"
+      ],
+      "phrases": [
+        [
+          "have access to",
+          "有权使用；有机会接触"
+        ],
+        [
+          "gain access to",
+          "获得进入/使用的权限"
+        ],
+        [
+          "Internet access",
+          "互联网接入"
+        ]
+      ],
+      "sentences": [
+        [
+          "All students have access to the online library.",
+          "所有学生都可以使用这个在线图书馆。"
+        ],
+        [
+          "The new system allows users to access information quickly.",
+          "新系统允许用户快速访问信息。"
+        ]
+      ],
+      "forms": [
+        "accessible（adj. 可进入的；可使用的）",
+        "inaccessible（adj. 难以到达的；无法使用的）",
+        "accessibility（n. 可及性；易用性）"
+      ],
+      "confusables": [
+        [
+          "access",
+          "assess",
+          "access 是“进入/使用”；assess 是“评估”"
+        ]
+      ]
+    },
+    "achieve": {
+      "pos": "verb",
+      "meanings": [
+        "实现；达到（目标）",
+        "取得；获得（成就）"
+      ],
+      "phrases": [
+        [
+          "achieve a goal",
+          "实现目标"
+        ],
+        [
+          "achieve success",
+          "取得成功"
+        ],
+        [
+          "achieve a balance",
+          "达到平衡"
+        ]
+      ],
+      "sentences": [
+        [
+          "Hard work alone does not guarantee that we will achieve our goals.",
+          "仅靠努力并不能保证我们实现目标。"
+        ],
+        [
+          "The team achieved remarkable progress in a short time.",
+          "这个团队在短时间内取得了显著进展。"
+        ]
+      ],
+      "forms": [
+        "achievement（n. 成就；完成）",
+        "achievable（adj. 可实现的）",
+        "achiever（n. 成功者；有成就的人）"
+      ],
+      "confusables": [
+        [
+          "achieve",
+          "acquire",
+          "achieve 强调努力后实现目标；acquire 强调获得或习得"
+        ]
+      ]
+    },
+    "acknowledge": {
+      "pos": "verb",
+      "meanings": [
+        "承认（事实、错误等）",
+        "确认收到；告知已收到",
+        "对……表示感谢"
+      ],
+      "phrases": [
+        [
+          "acknowledge a mistake",
+          "承认错误"
+        ],
+        [
+          "acknowledge receipt of",
+          "确认收到……"
+        ],
+        [
+          "acknowledge the importance of",
+          "承认……的重要性"
+        ]
+      ],
+      "sentences": [
+        [
+          "He acknowledged that the decision had been difficult.",
+          "他承认这个决定很难作出。"
+        ],
+        [
+          "The author acknowledges the help of her colleagues.",
+          "作者对同事们的帮助表示感谢。"
+        ]
+      ],
+      "forms": [
+        "acknowledgment / acknowledgement（n. 承认；致谢；收件确认）"
+      ],
+      "confusables": [
+        [
+          "acknowledge",
+          "admit",
+          "acknowledge 可指公开认可或确认；admit 常强调承认不情愿的事实"
+        ]
+      ]
+    },
+    "acquire": {
+      "pos": "verb",
+      "meanings": [
+        "获得；取得",
+        "学到；习得（技能、知识、语言等）",
+        "购得；收购"
+      ],
+      "phrases": [
+        [
+          "acquire knowledge",
+          "获取知识"
+        ],
+        [
+          "acquire a skill",
+          "掌握一项技能"
+        ],
+        [
+          "acquire a company",
+          "收购一家公司"
+        ]
+      ],
+      "sentences": [
+        [
+          "Children acquire language through daily interaction.",
+          "儿童通过日常互动习得语言。"
+        ],
+        [
+          "The company plans to acquire a smaller competitor.",
+          "这家公司计划收购一家规模较小的竞争对手。"
+        ]
+      ],
+      "forms": [
+        "acquisition（n. 获得；收购）",
+        "acquired（adj. 后天获得的）"
+      ],
+      "confusables": [
+        [
+          "acquire",
+          "require",
+          "acquire 是“获得”；require 是“需要；要求”"
+        ]
+      ]
+    },
+    "adapt": {
+      "pos": "verb",
+      "meanings": [
+        "适应；适合",
+        "改编；改写"
+      ],
+      "phrases": [
+        [
+          "adapt to change",
+          "适应变化"
+        ],
+        [
+          "adapt oneself to",
+          "使自己适应……"
+        ],
+        [
+          "adapt a novel for television",
+          "把小说改编成电视剧"
+        ]
+      ],
+      "sentences": [
+        [
+          "People need time to adapt to a new environment.",
+          "人们需要时间来适应新环境。"
+        ],
+        [
+          "The book was adapted for a younger audience.",
+          "这本书经过改编，以适合更年轻的读者。"
+        ]
+      ],
+      "forms": [
+        "adaptation（n. 适应；改编）",
+        "adaptable（adj. 能适应的）",
+        "adaptive（adj. 适应性的）"
+      ],
+      "confusables": [
+        [
+          "adapt",
+          "adopt",
+          "adapt 是“适应/改编”；adopt 是“采纳/收养”"
+        ]
+      ]
+    },
+    "affect": {
+      "pos": "verb",
+      "meanings": [
+        "影响；对……产生作用",
+        "（感情上）打动；使悲伤（较正式）"
+      ],
+      "phrases": [
+        [
+          "affect the result",
+          "影响结果"
+        ],
+        [
+          "be deeply affected by",
+          "深受……影响"
+        ],
+        [
+          "affect people's lives",
+          "影响人们的生活"
+        ]
+      ],
+      "sentences": [
+        [
+          "Climate change affects the lives of millions of people.",
+          "气候变化影响着数百万人的生活。"
+        ],
+        [
+          "The report may affect future policy decisions.",
+          "这份报告可能会影响未来的政策决策。"
+        ]
+      ],
+      "forms": [
+        "effect（常作名词：影响；效果）",
+        "effective（adj. 有效的）",
+        "affection（n. 喜爱；感情）"
+      ],
+      "confusables": [
+        [
+          "affect",
+          "effect",
+          "affect 通常作动词“影响”；effect 通常作名词“影响/效果”"
+        ]
+      ]
+    },
+    "afford": {
+      "pos": "verb",
+      "meanings": [
+        "负担得起（费用、时间等）",
+        "提供；给予（机会、便利等）"
+      ],
+      "phrases": [
+        [
+          "afford to do sth.",
+          "有能力做某事；承担得起做某事"
+        ],
+        [
+          "cannot afford",
+          "负担不起；不能承受"
+        ],
+        [
+          "afford an opportunity",
+          "提供机会"
+        ]
+      ],
+      "sentences": [
+        [
+          "Many families cannot afford expensive housing.",
+          "许多家庭负担不起昂贵的住房。"
+        ],
+        [
+          "The new technology affords researchers more flexibility.",
+          "这项新技术为研究人员提供了更大的灵活性。"
+        ]
+      ],
+      "forms": [
+        "affordable（adj. 负担得起的）",
+        "affordability（n. 可负担性）"
+      ],
+      "confusables": [
+        [
+          "afford",
+          "offer",
+          "afford 可表示“提供”，但 offer 更常用来表达主动提出或给予"
+        ]
+      ]
+    },
+    "approach": {
+      "pos": "noun / verb",
+      "meanings": [
+        "n. 方法；途径",
+        "n. 接近；临近",
+        "v. 接近；着手处理；与……接洽"
+      ],
+      "phrases": [
+        [
+          "an approach to a problem",
+          "解决问题的方法"
+        ],
+        [
+          "approach a task",
+          "着手处理一项任务"
+        ],
+        [
+          "the approach of winter",
+          "冬天的临近"
+        ]
+      ],
+      "sentences": [
+        [
+          "We need a different approach to the problem.",
+          "我们需要用另一种方法解决这个问题。"
+        ],
+        [
+          "The researchers approached the question from several angles.",
+          "研究人员从多个角度着手研究这个问题。"
+        ]
+      ],
+      "forms": [
+        "approachable（adj. 平易近人的；可接近的）",
+        "approaching（adj. 即将到来的）"
+      ],
+      "confusables": [
+        [
+          "approach",
+          "method",
+          "approach 可指整体思路或处理途径；method 更强调具体方法和步骤"
+        ]
+      ]
+    },
+    "assess": {
+      "pos": "verb",
+      "meanings": [
+        "评估；评价",
+        "估算（价值、数量等）",
+        "征收（税款、费用）"
+      ],
+      "phrases": [
+        [
+          "assess the situation",
+          "评估形势"
+        ],
+        [
+          "assess the impact of",
+          "评估……的影响"
+        ],
+        [
+          "be assessed on",
+          "根据……进行评估"
+        ]
+      ],
+      "sentences": [
+        [
+          "The study assesses the impact of technology on education.",
+          "这项研究评估了技术对教育的影响。"
+        ],
+        [
+          "Students are assessed on both their knowledge and practical skills.",
+          "学生的知识和实践技能都会受到评估。"
+        ]
+      ],
+      "forms": [
+        "assessment（n. 评估；评价）",
+        "assessor（n. 评估员）"
+      ],
+      "confusables": [
+        [
+          "assess",
+          "access",
+          "assess 是“评估”；access 是“进入/使用”"
+        ]
+      ]
+    },
+    "assume": {
+      "pos": "verb",
+      "meanings": [
+        "假定；假设",
+        "认为；臆断",
+        "承担（责任、职务等）",
+        "呈现（某种面貌或特征）"
+      ],
+      "phrases": [
+        [
+          "assume that",
+          "假定；认为"
+        ],
+        [
+          "assume responsibility for",
+          "承担……的责任"
+        ],
+        [
+          "make an assumption",
+          "作出假设"
+        ]
+      ],
+      "sentences": [
+        [
+          "We should not assume that everyone has the same needs.",
+          "我们不应假定每个人都有相同的需求。"
+        ],
+        [
+          "She assumed responsibility for the project.",
+          "她承担起了这个项目的责任。"
+        ]
+      ],
+      "forms": [
+        "assumption（n. 假定；设想）",
+        "assumed（adj. 假定的；假装的）"
+      ],
+      "confusables": [
+        [
+          "assume",
+          "presume",
+          "assume 常指未经证明地假定；presume 常含有依据或较大可能性的推断"
+        ]
+      ]
+    },
+    "benefit": {
+      "pos": "noun / verb",
+      "meanings": [
+        "n. 益处；优势；福利",
+        "v. 对……有益；使受益"
+      ],
+      "phrases": [
+        [
+          "benefit from",
+          "从……中受益"
+        ],
+        [
+          "for the benefit of",
+          "为了……的利益"
+        ],
+        [
+          "mutual benefit",
+          "互惠；共同利益"
+        ]
+      ],
+      "sentences": [
+        [
+          "Students can benefit from regular feedback.",
+          "学生可以从定期反馈中受益。"
+        ],
+        [
+          "The policy is designed for the benefit of the whole community.",
+          "这项政策旨在造福整个社区。"
+        ]
+      ],
+      "forms": [
+        "beneficial（adj. 有益的）",
+        "beneficiary（n. 受益者）",
+        "benefit（过去式/过去分词：benefited 或 benefitted）"
+      ],
+      "confusables": [
+        [
+          "benefit",
+          "profit",
+          "benefit 强调好处或受益；profit 常指经济利润或从中获利"
+        ]
+      ]
+    },
+    "claim": {
+      "pos": "noun / verb",
+      "meanings": [
+        "v. 声称；宣称",
+        "v. 索取；认领",
+        "n. 声明；主张；索赔"
+      ],
+      "phrases": [
+        [
+          "claim that",
+          "声称……"
+        ],
+        [
+          "claim responsibility for",
+          "声称对……负责"
+        ],
+        [
+          "make a claim",
+          "提出主张；提出索赔"
+        ]
+      ],
+      "sentences": [
+        [
+          "The report claims that the new method is more effective.",
+          "报告声称这种新方法更有效。"
+        ],
+        [
+          "Anyone who finds the bag can claim it at the front desk.",
+          "任何找到这个包的人都可以到前台认领。"
+        ]
+      ],
+      "forms": [
+        "claimant（n. 申请人；索赔人）",
+        "claimed（adj. 声称的；据称的）"
+      ],
+      "confusables": [
+        [
+          "claim",
+          "declare",
+          "claim 常表达有待证实的主张；declare 更强调正式宣布"
+        ]
+      ]
+    },
+    "concern": {
+      "pos": "noun / verb",
+      "meanings": [
+        "n. 担心；忧虑",
+        "n. 关心的事；重要的事",
+        "v. 涉及；与……有关；使担忧"
+      ],
+      "phrases": [
+        [
+          "be concerned about",
+          "担心；关心"
+        ],
+        [
+          "be concerned with",
+          "涉及；与……有关"
+        ],
+        [
+          "a matter of concern",
+          "令人担忧的事情"
+        ]
+      ],
+      "sentences": [
+        [
+          "There is growing concern about the cost of education.",
+          "人们越来越担心教育成本问题。"
+        ],
+        [
+          "The article is concerned with changes in social behavior.",
+          "这篇文章讨论的是社会行为的变化。"
+        ]
+      ],
+      "forms": [
+        "concerned（adj. 担心的；有关的）",
+        "concerning（prep. 关于）",
+        "unconcerned（adj. 不担心的）"
+      ],
+      "confusables": [
+        [
+          "concern",
+          "consider",
+          "concern 是“涉及/使担忧”；consider 是“考虑”"
+        ]
+      ]
+    },
+    "contribute": {
+      "pos": "verb",
+      "meanings": [
+        "捐献；捐助",
+        "贡献；出力",
+        "促成；导致（某种结果）",
+        "投稿"
+      ],
+      "phrases": [
+        [
+          "contribute to",
+          "有助于；促成；向……捐赠"
+        ],
+        [
+          "contribute money to",
+          "向……捐款"
+        ],
+        [
+          "make a contribution to",
+          "为……作出贡献"
+        ]
+      ],
+      "sentences": [
+        [
+          "Regular exercise contributes to better health.",
+          "经常锻炼有助于改善健康。"
+        ],
+        [
+          "Several factors contributed to the success of the project.",
+          "多种因素促成了这个项目的成功。"
+        ]
+      ],
+      "forms": [
+        "contribution（n. 贡献；捐款；投稿）",
+        "contributor（n. 贡献者；撰稿人）",
+        "contributory（adj. 起促成作用的）"
+      ],
+      "confusables": [
+        [
+          "contribute to",
+          "attribute to",
+          "contribute to 表示“促成”；attribute A to B 表示“把A归因于B”"
+        ]
+      ]
+    },
+    "decline": {
+      "pos": "noun / verb",
+      "meanings": [
+        "v. 下降；减少；衰退",
+        "v. 婉言拒绝",
+        "n. 下降；衰退"
+      ],
+      "phrases": [
+        [
+          "a decline in",
+          "……方面的下降"
+        ],
+        [
+          "decline rapidly",
+          "迅速下降"
+        ],
+        [
+          "decline an invitation",
+          "婉拒邀请"
+        ]
+      ],
+      "sentences": [
+        [
+          "The number of visitors has declined in recent years.",
+          "近年来，游客数量有所下降。"
+        ],
+        [
+          "She declined the invitation because she was busy.",
+          "她因为很忙而婉拒了邀请。"
+        ]
+      ],
+      "forms": [
+        "declining（adj. 下降的；衰退的）",
+        "declined（adj. 已减少的）"
+      ],
+      "confusables": [
+        [
+          "decline",
+          "decrease",
+          "decline 可表示趋势性衰退或婉拒；decrease 主要表示数量减少"
+        ]
+      ]
+    },
+    "evidence": {
+      "pos": "noun",
+      "meanings": [
+        "证据；证明",
+        "迹象；根据"
+      ],
+      "phrases": [
+        [
+          "evidence of",
+          "……的证据"
+        ],
+        [
+          "provide evidence",
+          "提供证据"
+        ],
+        [
+          "in evidence",
+          "显而易见；明显存在"
+        ]
+      ],
+      "sentences": [
+        [
+          "There is little evidence to support this argument.",
+          "几乎没有证据支持这一论点。"
+        ],
+        [
+          "The researchers collected evidence from several independent sources.",
+          "研究人员从多个独立来源收集了证据。"
+        ]
+      ],
+      "forms": [
+        "evident（adj. 明显的）",
+        "evidence（通常作不可数名词）",
+        "evidently（adv. 显然）"
+      ],
+      "confusables": [
+        [
+          "evidence",
+          "proof",
+          "evidence 是支持判断的证据；proof 通常指足以证明结论的确凿证据"
+        ]
+      ]
+    },
+    "maintain": {
+      "pos": "verb",
+      "meanings": [
+        "维持；保持",
+        "维修；保养",
+        "坚持主张；断言",
+        "赡养；供养"
+      ],
+      "phrases": [
+        [
+          "maintain a balance",
+          "保持平衡"
+        ],
+        [
+          "maintain contact with",
+          "与……保持联系"
+        ],
+        [
+          "maintain that",
+          "坚持认为；声称"
+        ]
+      ],
+      "sentences": [
+        [
+          "It is important to maintain a healthy balance between work and rest.",
+          "保持工作与休息之间的健康平衡很重要。"
+        ],
+        [
+          "The researchers maintain that more data is needed.",
+          "研究人员坚持认为还需要更多数据。"
+        ]
+      ],
+      "forms": [
+        "maintenance（n. 维护；保养；维持）",
+        "maintained（adj. 得到维护的）"
+      ],
+      "confusables": [
+        [
+          "maintain",
+          "sustain",
+          "maintain 强调维持现状；sustain 强调支撑或使某事持续"
+        ]
+      ]
+    },
+    "obtain": {
+      "pos": "verb",
+      "meanings": [
+        "获得；得到",
+        "存在；通行（较正式）"
+      ],
+      "phrases": [
+        [
+          "obtain information",
+          "获取信息"
+        ],
+        [
+          "obtain permission",
+          "获得许可"
+        ],
+        [
+          "obtain a degree",
+          "取得学位"
+        ]
+      ],
+      "sentences": [
+        [
+          "Researchers obtained the data from public records.",
+          "研究人员从公开记录中获得了这些数据。"
+        ],
+        [
+          "You must obtain permission before using the material.",
+          "使用这些材料之前必须获得许可。"
+        ]
+      ],
+      "forms": [
+        "obtainable（adj. 可获得的）",
+        "obtainment（n. 获得，较少用）"
+      ],
+      "confusables": [
+        [
+          "obtain",
+          "attain",
+          "obtain 强调取得某物；attain 强调经过努力达到目标或水平"
+        ]
+      ]
+    },
+    "significant": {
+      "pos": "adjective",
+      "meanings": [
+        "重要的；重大的",
+        "显著的；有意义的",
+        "（统计学）具有显著性的"
+      ],
+      "phrases": [
+        [
+          "be significant to",
+          "对……有重要意义"
+        ],
+        [
+          "a significant difference",
+          "显著差异"
+        ],
+        [
+          "significant progress",
+          "重大进展"
+        ]
+      ],
+      "sentences": [
+        [
+          "Education plays a significant role in social development.",
+          "教育在社会发展中发挥着重要作用。"
+        ],
+        [
+          "The study found a significant difference between the two groups.",
+          "研究发现两组之间存在显著差异。"
+        ]
+      ],
+      "forms": [
+        "significance（n. 重要性；意义）",
+        "significantly（adv. 显著地；重要地）",
+        "insignificant（adj. 不重要的；微不足道的）"
+      ],
+      "confusables": [
+        [
+          "significant",
+          "important",
+          "significant 常强调程度、影响或统计意义上的显著；important 强调重要性"
+        ]
+      ]
+    }
+  }
+}
