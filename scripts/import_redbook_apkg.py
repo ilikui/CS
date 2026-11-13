@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import html
+import io
 import json
 import re
 import sqlite3
@@ -116,12 +117,21 @@ def load_collection(apkg: Path):
                     import zstandard
                 except ImportError as exc:
                     raise RuntimeError("发现 zstd 压缩的 collection.anki21b，请安装 zstandard") from exc
-                db_bytes = zstandard.ZstdDecompressor().decompress(payload)
+                reader = zstandard.ZstdDecompressor().stream_reader(io.BytesIO(payload))
+                with temp.open("wb") as dst:
+                    while True:
+                        block = reader.read(8 * 1024 * 1024)
+                        if not block:
+                            break
+                        dst.write(block)
+                reader.close()
+                db_bytes = None
             else:
                 print("Skipping unsupported collection member:", entry.filename)
                 continue
             temp = apkg.parent / (apkg.stem + "-" + re.sub(r"[^a-zA-Z0-9]+","_",entry.filename) + ".sqlite")
-            temp.write_bytes(db_bytes)
+            if db_bytes is not None:
+                temp.write_bytes(db_bytes)
             probe = sqlite3.connect(f"file:{temp}?mode=ro", uri=True)
             tables = {row[0] for row in probe.execute("SELECT name FROM sqlite_master WHERE type='table'")}
             count = probe.execute("SELECT COUNT(*) FROM notes").fetchone()[0] if "notes" in tables else 0
@@ -140,7 +150,7 @@ def load_collection(apkg: Path):
     conn = sqlite3.connect(f"file:{db_path}?mode=ro", uri=True)
     conn.create_collation("unicase", lambda a, b: (a.casefold() > b.casefold()) - (a.casefold() < b.casefold()))
     conn.row_factory = sqlite3.Row
-    integrity = conn.execute("PRAGMA integrity_check").fetchone()[0]
+    integrity = conn.execute("PRAGMA quick_check").fetchone()[0]
     if integrity != "ok":
         conn.close()
         raise RuntimeError(f"SQLite integrity_check failed: {integrity}")
@@ -164,14 +174,18 @@ def load_collection(apkg: Path):
             }
     if not decks and "decks" in tables:
         for deck in conn.execute("SELECT id, name FROM decks ORDER BY id"):
-            decks[str(deck["id"])] = {"name": (deck["name"] or "").replace("\\x1f", "::")}
+            decks[str(deck["id"])] = {"name": (deck["name"] or "").replace(chr(31), "::")}
     print("Selected collection model names:", [m.get("name","") for m in models.values()])
     print("Selected collection model field counts:", {m.get("name",""):len(m.get("flds",[])) for m in models.values()})
 
     return conn, models, decks, db_path
 
 def convert(apkg: Path, out_dir: Path):
-    digest = hashlib.sha256(apkg.read_bytes()).hexdigest()
+    hasher = hashlib.sha256()
+    with apkg.open("rb") as source_file:
+        for block in iter(lambda: source_file.read(8 * 1024 * 1024), b""):
+            hasher.update(block)
+    digest = hasher.hexdigest()
     if digest != EXPECTED_SHA256:
         raise RuntimeError(f"APKG SHA-256 mismatch: {digest}")
     conn, models, decks, db_path = load_collection(apkg)
