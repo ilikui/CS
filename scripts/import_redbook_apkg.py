@@ -243,9 +243,15 @@ def convert(apkg: Path, out_dir: Path):
         definitions = sorted(model.get("flds", []), key=lambda x: x.get("ord", 0))
         values = (row["flds"] or "").split("\x1f")
         fields = []
+        examples_html = ""
         for index, value in enumerate(values):
             definition = definitions[index] if index < len(definitions) else {}
             name = definition.get("name") or f"字段 {index + 1}"
+            if name.lower() == "examples":
+                examples_html = value
+                continue
+            if name.lower() == "audio":
+                continue
             text = plain(value)
             if text:
                 fields.append({"name": name, "text": text})
@@ -264,10 +270,6 @@ def convert(apkg: Path, out_dir: Path):
         level = first_match(fields, [r"\\blevel\\b", r"等级", r"考频", r"频率"])
         word_forms = first_match(fields, [r"word.?forms", r"\\bforms\\b", r"词形", r"派生"])
         meta = first_match(fields, [r"\\bmeta\\b", r"来源", r"出处", r"年份", r"考试"])
-        examples_html = next((value for name, value in zip(
-            [d.get("name", f"字段 {i+1}") for i, d in enumerate(sorted(model.get("flds", []), key=lambda x: x.get("ord", 0)))],
-            (row["flds"] or "").split(chr(31))
-        ) if name.lower() == "examples"), "")
         example_parser = ExampleIndexParser()
         if examples_html:
             example_parser.feed(examples_html)
