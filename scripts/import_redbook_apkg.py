@@ -270,9 +270,16 @@ def convert(apkg: Path, out_dir: Path):
         level = first_match(fields, [r"\blevel\b", r"等级", r"考频", r"频率"])
         word_forms = first_match(fields, [r"word.?forms", r"\bforms\b", r"词形", r"派生"])
         meta = first_match(fields, [r"\bmeta\b", r"来源", r"出处", r"年份", r"考试"])
-        example_parser = ExampleIndexParser()
+        example_count = sum(1 for _ in re.finditer(r'<li[^>]*class="[^"]*example-card[^"]*"[^>]*>', examples_html, re.I)) if examples_html else 0
+        example_sources = []
         if examples_html:
-            example_parser.feed(examples_html)
+            source_pattern = re.compile(r'<span[^>]*class="[^"]*example-source[^"]*"[^>]*>(.*?)</span>', re.I | re.S)
+            for match in source_pattern.finditer(examples_html):
+                source_label = plain(match.group(1))
+                if source_label and source_label not in example_sources:
+                    example_sources.append(source_label)
+                    if len(example_sources) >= 50:
+                        break
         note_id = str(row["id"])
         small_fields = [f for f in fields if f["name"].lower() in ("level", "wordforms", "meta") and len(f["text"]) <= 12000]
         record = {
@@ -291,8 +298,8 @@ def convert(apkg: Path, out_dir: Path):
             "tags": (row["tags"] or "").strip().split(),
             "model": model.get("name", ""),
             "fields": small_fields,
-            "exampleCount": example_parser.count,
-            "exampleSources": example_parser.sources[:50],
+            "exampleCount": example_count,
+            "exampleSources": example_sources,
             "hasLazyExamples": "as-manifest" in examples_html or "data-study-script-transport" in examples_html,
             "searchText": " ".join([word, phonetic, word_forms, level, meta, " ".join((row["tags"] or "").split())]).lower(),
         }
