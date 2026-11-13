@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>考研数学二复习宝典 | 武忠祥高数基础篇</title>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['$$','$$'], ['\\[','\\]']] },
+  startup: { pageReady: () => MathJax.startup.defaultPageReady() }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+<style>
+:root {
+  --primary: #c0392b;
+  --primary-dark: #a93226;
+  --primary-light: rgba(192,57,43,0.06);
+  --accent: #d35400;
+  --accent-light: rgba(211,84,0,0.06);
+  --bg: #f8f6f3;
+  --card: #ffffff;
+  --text: #2c2c2c;
+  --text-secondary: #777;
+  --border: rgba(0,0,0,0.06);
+  --success: #27ae60;
+  --success-light: rgba(39,174,96,0.06);
+  --warning: #d35400;
+  --danger: #c0392b;
+  --purple: #7c3aed;
+  --purple-light: rgba(124,58,237,0.06);
+  --teal: #0d9488;
+  --teal-light: rgba(13,148,136,0.06);
+  --sidebar-width: 240px;
+  --header-height: 52px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.8; overflow-x: hidden;
+}
+
+/* ========== HEADER ========== */
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: var(--header-height);
+  background: rgba(255,255,255,0.85); backdrop-filter: blur(16px);
+  color: var(--text); display: flex; align-items: center; padding: 0 24px;
+  border-bottom: 1px solid var(--border);
+}
+.header h1 { font-size: 16px; font-weight: 700; letter-spacing: 0.5px; color: var(--text); }
+.header .subtitle { font-size: 11px; color: var(--text-secondary); margin-left: 16px; }
+.menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 20px; cursor: pointer; margin-right: 16px; }
+.back-link { color: var(--text-secondary); text-decoration: none; font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 4px; transition: color 0.2s; margin-right: 16px; }
+.back-link:hover { color: var(--primary); }
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+  position: fixed; top: var(--header-height); left: 0; bottom: 0;
+  width: var(--sidebar-width); background: rgba(255,255,255,0.6);
+  border-right: 1px solid var(--border); overflow-y: auto; z-index: 999;
+  transition: transform 0.3s cubic-bezier(0.16,1,0.3,1);
+}
+.sidebar-section { padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.04); }
+.sidebar-title { font-size: 10px; text-transform: uppercase; letter-spacing: 3px; color: var(--primary); font-weight: 800; padding: 0 18px; margin-bottom: 4px; }
+.sidebar a { display: flex; align-items: center; padding: 7px 18px; color: var(--text-secondary); text-decoration: none; font-size: 13px; transition: all 0.3s cubic-bezier(0.16,1,0.3,1); border-left: 3px solid transparent; gap: 8px; }
+.sidebar a:hover, .sidebar a.active { background: var(--primary-light); color: var(--primary); border-left-color: var(--primary); font-weight: 600; }
+.sidebar a .icon { width: 20px; text-align: center; flex-shrink: 0; }
+
+/* ========== MAIN ========== */
+.main { margin-left: var(--sidebar-width); margin-top: var(--header-height); padding: 28px; max-width: 1100px; }
+.section { display: none; }
+.section.active { display: block; animation: fadeIn 0.4s cubic-bezier(0.16,1,0.3,1); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ========== CARDS ========== */
+.card {
+  background: var(--card); border-radius: 14px; padding: 24px; margin-bottom: 20px;
+  border: 1px solid var(--border);
+}
+.card h2 { font-size: 22px; color: var(--primary); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--primary-light); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.card h3 { font-size: 17px; color: var(--text); margin: 22px 0 12px; padding-left: 14px; border-left: 4px solid var(--primary); }
+.card h4 { font-size: 15px; color: var(--accent); margin: 16px 0 8px; }
+
+/* ========== VISUAL: Stats Grid ========== */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-bottom: 24px; }
+.stat-card { background: var(--card); border-radius: 12px; padding: 18px; text-align: center; border: 1px solid var(--border); position: relative; overflow: hidden; }
+.stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+.stat-card:nth-child(1)::before { background: var(--primary); }
+.stat-card:nth-child(2)::before { background: var(--accent); }
+.stat-card:nth-child(3)::before { background: var(--success); }
+.stat-card:nth-child(4)::before { background: var(--danger); }
+.stat-card .stat-number { font-size: 36px; font-weight: 800; }
+.stat-card:nth-child(1) .stat-number { color: var(--primary); }
+.stat-card:nth-child(2) .stat-number { color: var(--accent); }
+.stat-card:nth-child(3) .stat-number { color: var(--success); }
+.stat-card:nth-child(4) .stat-number { color: var(--danger); }
+.stat-card .stat-label { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+
+/* ========== VISUAL: Mind Maps ========== */
+.mindmap { display: flex; justify-content: center; padding: 20px 0; overflow-x: auto; }
+.mindmap-container { display: flex; align-items: center; gap: 0; min-width: fit-content; }
+.mm-center { background: rgba(192,57,43,0.08); color: var(--primary); padding: 14px 22px; border-radius: 16px; font-weight: 700; font-size: 16px; white-space: nowrap; border: 1px solid rgba(192,57,43,0.15); position: relative; z-index: 2; }
+.mm-branches { display: flex; flex-direction: column; gap: 6px; margin-left: -4px; }
+.mm-branch { display: flex; align-items: center; gap: 0; }
+.mm-line { width: 30px; height: 2px; background: var(--border); flex-shrink: 0; }
+.mm-node { padding: 8px 14px; border-radius: 10px; font-size: 13px; font-weight: 600; white-space: nowrap; border: 2px solid; position: relative; }
+.mm-node.c1 { background: rgba(52,152,219,0.06); border-color: rgba(52,152,219,0.2); color: #2980b9; }
+.mm-node.c2 { background: rgba(192,57,43,0.06); border-color: rgba(192,57,43,0.2); color: #c0392b; }
+.mm-node.c3 { background: rgba(39,174,96,0.06); border-color: rgba(39,174,96,0.2); color: #27ae60; }
+.mm-node.c4 { background: rgba(211,84,0,0.06); border-color: rgba(211,84,0,0.2); color: #d35400; }
+.mm-node.c5 { background: rgba(124,58,237,0.06); border-color: rgba(124,58,237,0.2); color: #7c3aed; }
+.mm-node.c6 { background: rgba(13,148,136,0.06); border-color: rgba(13,148,136,0.2); color: #0d9488; }
+.mm-node.c7 { background: rgba(211,84,0,0.06); border-color: rgba(211,84,0,0.2); color: #d35400; }
+.mm-subnodes { display: flex; flex-direction: column; gap: 3px; margin-left: -2px; }
+.mm-subline { width: 20px; height: 1px; background: #ccc; }
+.mm-sub { padding: 3px 10px; border-radius: 6px; font-size: 11px; background: #f8f9fa; color: #666; border: 1px solid #e0e0e0; white-space: nowrap; }
+
+/* ========== VISUAL: Flowcharts ========== */
+.flowchart { display: flex; flex-direction: column; align-items: center; gap: 0; padding: 20px 0; }
+.fc-step { padding: 12px 24px; border-radius: 12px; font-size: 14px; font-weight: 600; text-align: center; max-width: 350px; position: relative; }
+.fc-step.start { background: rgba(192,57,43,0.08); color: var(--primary); border-radius: 24px; font-weight: 600; }
+.fc-step.process { background: rgba(192,57,43,0.04); color: var(--primary); border: 1px solid rgba(192,57,43,0.15); }
+.fc-step.decision { background: rgba(211,84,0,0.04); color: #d35400; border: 1px solid rgba(211,84,0,0.15); transform: rotate(0deg); clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); padding: 28px 40px; }
+.fc-step.end { background: rgba(39,174,96,0.06); color: var(--success); border: 1px solid rgba(39,174,96,0.15); border-radius: 24px; }
+.fc-arrow { width: 2px; height: 24px; background: rgba(0,0,0,0.06); position: relative; }
+.fc-arrow::after { content: ''; position: absolute; bottom: -4px; left: -4px; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid rgba(0,0,0,0.06); }
+.fc-label { font-size: 11px; color: var(--text-secondary); margin: -8px 0; padding: 2px 8px; background: white; border-radius: 4px; }
+.fc-row { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; justify-content: center; }
+.fc-box { flex: 1; min-width: 140px; max-width: 200px; padding: 12px; border-radius: 10px; text-align: center; font-size: 13px; font-weight: 600; }
+
+/* ========== VISUAL: Comparison Bars ========== */
+.bar-chart { padding: 16px 0; }
+.bar-item { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
+.bar-label { min-width: 120px; font-size: 13px; font-weight: 600; text-align: right; }
+.bar-track { flex: 1; height: 28px; background: rgba(0,0,0,0.03); border-radius: 14px; overflow: hidden; position: relative; }
+.bar-fill { height: 100%; border-radius: 14px; display: flex; align-items: center; justify-content: flex-end; padding-right: 12px; font-size: 12px; font-weight: 700; color: white; transition: width 0.8s cubic-bezier(0.16,1,0.3,1); }
+.bar-fill.blue { background: linear-gradient(90deg, #5dade2, #2980b9); }
+.bar-fill.green { background: linear-gradient(90deg, #58d68d, #27ae60); }
+.bar-fill.orange { background: linear-gradient(90deg, #f0a04b, #d35400); }
+.bar-fill.red { background: linear-gradient(90deg, #e74c3c, #c0392b); }
+.bar-fill.purple { background: linear-gradient(90deg, #a569bd, #7d3c98); }
+
+/* ========== VISUAL: Pie chart (CSS only) ========== */
+.pie-container { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; padding: 20px 0; }
+.pie { width: 180px; height: 180px; border-radius: 50%; position: relative; }
+.pie-legend { display: flex; flex-direction: column; gap: 8px; }
+.pie-legend-item { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.pie-dot { width: 14px; height: 14px; border-radius: 4px; flex-shrink: 0; }
+
+/* ========== VISUAL: Timeline ========== */
+.timeline { position: relative; padding: 20px 0 20px 40px; }
+.timeline::before { content: ''; position: absolute; left: 16px; top: 0; bottom: 0; width: 3px; background: rgba(192,57,43,0.1); border-radius: 2px; }
+.tl-item { position: relative; margin-bottom: 24px; }
+.tl-item::before { content: ''; position: absolute; left: -32px; top: 6px; width: 14px; height: 14px; border-radius: 50%; border: 3px solid var(--primary); background: white; z-index: 1; }
+.tl-item.done::before { background: var(--success); border-color: var(--success); }
+.tl-title { font-weight: 700; font-size: 15px; color: var(--primary); }
+.tl-desc { font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+
+/* ========== FORMULA BOXES ========== */
+.formula-box { background: rgba(192,57,43,0.02); border: 1px solid rgba(192,57,43,0.08); border-radius: 10px; padding: 18px; margin: 14px 0; overflow-x: auto; }
+.formula-box.important { background: rgba(211,84,0,0.03); border-color: rgba(211,84,0,0.15); border-left: 4px solid var(--accent); }
+.formula-box.success { background: rgba(39,174,96,0.03); border-color: rgba(39,174,96,0.12); }
+.formula-box.purple { background: rgba(124,58,237,0.03); border-color: rgba(124,58,237,0.12); border-left: 4px solid var(--purple); }
+
+/* ========== TAGS ========== */
+.tag { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 700; margin: 0 3px; }
+.tag.must { background: rgba(192,57,43,0.08); color: #c0392b; }
+.tag.hot { background: rgba(211,84,0,0.08); color: #d35400; }
+.tag.wu { background: rgba(192,57,43,0.06); color: #c0392b; }
+.tag.new { background: rgba(13,148,136,0.08); color: #0d9488; }
+
+/* ========== EXAMPLES ========== */
+.example { background: rgba(192,57,43,0.02); border-left: 4px solid var(--primary); padding: 18px; margin: 14px 0; border-radius: 0 10px 10px 0; }
+.example.exercise { border-left-color: var(--accent); background: rgba(211,84,0,0.02); }
+.example-title { font-weight: 700; color: var(--primary); margin-bottom: 8px; font-size: 14px; }
+.example.exercise .example-title { color: var(--accent); }
+
+/* ========== COLLAPSIBLE ========== */
+.answer-toggle { background: var(--primary); color: white; border: none; padding: 6px 16px; border-radius: 8px; cursor: pointer; font-size: 13px; margin-top: 10px; transition: 0.3s cubic-bezier(0.16,1,0.3,1); }
+.answer-toggle:hover { background: var(--primary-dark); }
+.answer-content { display: none; margin-top: 10px; padding: 14px; background: rgba(192,57,43,0.02); border-radius: 8px; border: 1px dashed rgba(192,57,43,0.15); }
+.answer-content.show { display: block; }
+
+/* ========== TABLES ========== */
+table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 13px; }
+th { background: rgba(192,57,43,0.06); color: var(--primary); padding: 10px 14px; text-align: left; font-size: 13px; font-weight: 700; }
+td { padding: 9px 14px; border-bottom: 1px solid rgba(0,0,0,0.04); }
+tr:nth-child(even) { background: rgba(0,0,0,0.01); }
+tr:hover { background: var(--primary-light); }
+
+/* ========== TIP BOXES ========== */
+.tip-box { padding: 14px 18px; border-radius: 10px; margin: 14px 0; display: flex; align-items: flex-start; gap: 10px; font-size: 14px; }
+.tip-box.info { background: rgba(52,152,219,0.04); border: 1px solid rgba(52,152,219,0.12); }
+.tip-box.warning { background: rgba(211,84,0,0.04); border: 1px solid rgba(211,84,0,0.12); }
+.tip-box.danger { background: rgba(192,57,43,0.04); border: 1px solid rgba(192,57,43,0.12); }
+.tip-box.success { background: rgba(39,174,96,0.04); border: 1px solid rgba(39,174,96,0.12); }
+.tip-box .tip-icon { font-size: 18px; flex-shrink: 0; }
+
+/* ========== PROGRESS ========== */
+.progress-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 10px; margin: 14px 0; }
+.progress-item { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; cursor: pointer; transition: 0.3s cubic-bezier(0.16,1,0.3,1); font-size: 13px; }
+.progress-item:hover { border-color: rgba(192,57,43,0.2); }
+.progress-item.done { background: rgba(39,174,96,0.04); border-color: rgba(39,174,96,0.2); }
+.progress-item label { cursor: pointer; }
+.progress-item input { margin-right: 6px; }
+
+/* ========== INTERACTIVE: Canvas ========== */
+.graph-container { display: flex; justify-content: center; margin: 16px 0; }
+canvas { border: 1px solid rgba(0,0,0,0.06); border-radius: 10px; background: white; max-width: 100%; }
+
+/* ========== VISUAL: Relationship map ========== */
+.rel-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin: 16px 0; max-width: 500px; }
+.rel-cell { padding: 12px 8px; text-align: center; font-size: 12px; font-weight: 600; border-radius: 6px; }
+.rel-header { background: rgba(192,57,43,0.08); color: var(--primary); font-weight: 700; }
+.rel-yes { background: rgba(39,174,96,0.06); color: #27ae60; }
+.rel-no { background: rgba(192,57,43,0.06); color: #c0392b; }
+.rel-label { background: rgba(0,0,0,0.02); color: var(--text); }
+
+/* ========== SEARCH ========== */
+.search-box { width: 100%; padding: 10px 16px; border: 1px solid rgba(0,0,0,0.08); border-radius: 10px; font-size: 14px; margin-bottom: 16px; transition: 0.3s cubic-bezier(0.16,1,0.3,1); background: white; }
+.search-box:focus { border-color: rgba(192,57,43,0.3); outline: none; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); }
+  .main { margin-left: 0; padding: 16px; }
+  .menu-toggle { display: block; }
+  .header .subtitle { display: none; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .mindmap-container { flex-direction: column; align-items: flex-start; }
+  .mm-branches { margin-left: 20px; margin-top: -4px; }
+  .pie-container { flex-direction: column; }
+}
+@media print {
+  .sidebar, .header, .menu-toggle, .answer-toggle { display: none !important; }
+  .main { margin: 0; max-width: 100%; }
+  .section { display: block !important; page-break-before: always; }
+  .answer-content { display: block !important; }
+}
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 3px; }
+
+/* ========== VISUAL: Knowledge cards grid ========== */
+.kc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 16px 0; }
+.kc-card { border-radius: 12px; padding: 16px; text-align: center; border: 1px solid rgba(0,0,0,0.06); transition: 0.3s cubic-bezier(0.16,1,0.3,1); cursor: default; }
+.kc-card:hover { transform: translateY(-2px); border-color: rgba(192,57,43,0.15); }
+.kc-card .kc-icon { font-size: 32px; margin-bottom: 8px; }
+.kc-card .kc-title { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
+.kc-card .kc-desc { font-size: 12px; color: var(--text-secondary); }
+.kc-card.c1 { background: rgba(192,57,43,0.03); }
+.kc-card.c2 { background: rgba(211,84,0,0.03); }
+.kc-card.c3 { background: rgba(39,174,96,0.03); }
+.kc-card.c4 { background: rgba(13,148,136,0.03); }
+.kc-card.c5 { background: rgba(124,58,237,0.03); }
+.kc-card.c6 { background: rgba(52,152,219,0.03); }
+.kc-card.c7 { background: rgba(211,84,0,0.03); }
+
+/* Stars */
+.stars { color: #ffd700; letter-spacing: 1px; }
+
+/* ========== EXAM BANK ========== */
+.exam-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; align-items: center; }
+.exam-filters .filter-label { font-size: 13px; font-weight: 700; color: var(--primary); margin-right: 4px; }
+.year-btn, .type-btn { padding: 5px 14px; border: 1px solid rgba(0,0,0,0.08); border-radius: 20px; background: white; cursor: pointer; font-size: 13px; font-weight: 600; transition: 0.3s cubic-bezier(0.16,1,0.3,1); }
+.year-btn:hover, .type-btn:hover { border-color: rgba(192,57,43,0.3); color: var(--primary); }
+.year-btn.active { background: rgba(192,57,43,0.08); color: var(--primary); border-color: rgba(192,57,43,0.2); }
+.type-btn.active { background: rgba(211,84,0,0.08); color: var(--accent); border-color: rgba(211,84,0,0.2); }
+.year-scroll { display: flex; gap: 6px; overflow-x: auto; padding: 8px 0; scrollbar-width: thin; }
+.year-scroll::-webkit-scrollbar { height: 4px; }
+.year-scroll::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.1); border-radius: 2px; }
+.exam-stats { display: flex; gap: 16px; margin-bottom: 16px; font-size: 13px; color: var(--text-secondary); }
+.exam-stats span { font-weight: 700; color: var(--primary); }
+.q-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; margin-bottom: 12px; transition: 0.3s cubic-bezier(0.16,1,0.3,1); }
+.q-card:hover { border-color: rgba(192,57,43,0.15); }
+.q-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.q-meta { display: flex; gap: 8px; align-items: center; }
+.q-year { background: rgba(192,57,43,0.06); color: var(--primary); padding: 2px 10px; border-radius: 10px; font-size: 12px; font-weight: 700; }
+.q-type { padding: 2px 10px; border-radius: 10px; font-size: 12px; font-weight: 700; }
+.q-type.选择题 { background: rgba(52,152,219,0.08); color: #2980b9; }
+.q-type.填空题 { background: rgba(39,174,96,0.08); color: #27ae60; }
+.q-type.解答题 { background: rgba(211,84,0,0.08); color: #d35400; }
+.q-number { font-size: 13px; color: var(--text-secondary); }
+.q-text { font-size: 14px; line-height: 2; margin: 10px 0; }
+.q-text p { margin: 4px 0; }
+.q-options { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 8px 0; }
+.q-option { padding: 6px 12px; background: #f8f9fa; border-radius: 8px; font-size: 13px; }
+.q-answer-box { margin-top: 12px; padding: 14px; background: rgba(192,57,43,0.02); border-radius: 8px; border: 1px dashed rgba(192,57,43,0.15); }
+.q-answer-label { font-weight: 700; color: var(--primary); font-size: 13px; margin-bottom: 6px; }
+.q-solution { margin-top: 8px; padding: 14px; background: rgba(39,174,96,0.02); border-radius: 8px; border: 1px dashed rgba(39,174,96,0.12); font-size: 13px; line-height: 1.8; }
+.q-toggle { background: rgba(192,57,43,0.08); color: var(--primary); border: none; padding: 5px 14px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: 600; transition: 0.3s cubic-bezier(0.16,1,0.3,1); }
+.q-toggle:hover { background: rgba(192,57,43,0.15); }
+.q-hidden { display: none; }
+.no-results { text-align: center; padding: 40px; color: var(--text-secondary); font-size: 15px; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <a href="../index.html" class="back-link">← 返回</a>
+  <button class="menu-toggle" onclick="toggleSidebar()">&#9776;</button>
+  <h1>&#128218; 考研数学二复习宝典</h1>
+  <span class="subtitle">武忠祥高数基础篇 &middot; 高等数学 + 线性代数 &middot; 可视化版</span>
+</header>
+
+<!-- Sidebar -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-section">
+    <div class="sidebar-title">&#127968; 总览</div>
+    <a href="#" onclick="showSection('home')" class="active" id="nav-home"><span class="icon">&#127968;</span>首页概览</a>
+    <a href="#" onclick="showSection('exam')" id="nav-exam"><span class="icon">&#128202;</span>考试结构可视化</a>
+    <a href="#" onclick="showSection('plan')" id="nav-plan"><span class="icon">&#128197;</span>复习时间线</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-title">&#128214; 高等数学</div>
+    <a href="#" onclick="showSection('ch1')" id="nav-ch1"><span class="icon">&#9733;</span>极限与连续</a>
+    <a href="#" onclick="showSection('ch2')" id="nav-ch2"><span class="icon">&#9733;</span>导数与微分</a>
+    <a href="#" onclick="showSection('ch3')" id="nav-ch3"><span class="icon">&#9733;</span>中值定理</a>
+    <a href="#" onclick="showSection('ch4')" id="nav-ch4"><span class="icon">&#9733;</span>不定积分</a>
+    <a href="#" onclick="showSection('ch5')" id="nav-ch5"><span class="icon">&#9733;</span>定积分与应用</a>
+    <a href="#" onclick="showSection('ch6')" id="nav-ch6"><span class="icon">&#9733;</span>多元函数微积分</a>
+    <a href="#" onclick="showSection('ch7')" id="nav-ch7"><span class="icon">&#9733;</span>微分方程</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-title">&#128208; 线性代数</div>
+    <a href="#" onclick="showSection('la1')" id="nav-la1"><span class="icon">&#9670;</span>行列式与矩阵</a>
+    <a href="#" onclick="showSection('la2')" id="nav-la2"><span class="icon">&#9670;</span>向量与方程组</a>
+    <a href="#" onclick="showSection('la3')" id="nav-la3"><span class="icon">&#9670;</span>特征值与二次型</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-title">&#128295; 实战工具箱</div>
+    <a href="#" onclick="showSection('methods')" id="nav-methods"><span class="icon">&#128161;</span>解题方法流程图</a>
+    <a href="#" onclick="showSection('exercises')" id="nav-exercises"><span class="icon">&#9998;</span>真题实战</a>
+    <a href="#" onclick="showSection('exambank')" id="nav-exambank"><span class="icon">&#128218;</span>历年真题库</a>
+    <a href="#" onclick="showSection('mistakes')" id="nav-mistakes"><span class="icon">&#9888;</span>易错雷区</a>
+    <a href="#" onclick="showSection('formulas')" id="nav-formulas"><span class="icon">&#128209;</span>公式速查</a>
+    <a href="#" onclick="showSection('progress')" id="nav-progress"><span class="icon">&#9745;</span>复习进度</a>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="main" id="main-content">
+
+<!-- ===================== HOME ===================== -->
+<div class="section active" id="sec-home">
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-number">150</div><div class="stat-label">总分</div></div>
+    <div class="stat-card"><div class="stat-number">~117</div><div class="stat-label">高等数学分值</div></div>
+    <div class="stat-card"><div class="stat-number">~33</div><div class="stat-label">线性代数分值</div></div>
+    <div class="stat-card"><div class="stat-number">0</div><div class="stat-label">概率论（不考）</div></div>
+  </div>
+
+  <!-- Knowledge overview mind map -->
+  <div class="card">
+    <h2>&#127758; 数学二知识全景图</h2>
+    <div class="kc-grid">
+      <div class="kc-card c1" onclick="showSection('ch1')">
+        <div class="kc-icon">&#127919;</div>
+        <div class="kc-title">极限与连续</div>
+        <div class="kc-desc">等价无穷小 / 夹逼准则 / 间断点</div>
+      </div>
+      <div class="kc-card c2" onclick="showSection('ch2')">
+        <div class="kc-icon">&#128200;</div>
+        <div class="kc-title">导数与微分</div>
+        <div class="kc-desc">求导法则 / 泰勒展开 / 高阶导数</div>
+      </div>
+      <div class="kc-card c3" onclick="showSection('ch3')">
+        <div class="kc-icon">&#128293;</div>
+        <div class="kc-title">中值定理</div>
+        <div class="kc-desc">罗尔 / 拉格朗日 / 辅助函数构造</div>
+      </div>
+      <div class="kc-card c4" onclick="showSection('ch4')">
+        <div class="kc-icon">&#8747;</div>
+        <div class="kc-title">不定积分</div>
+        <div class="kc-desc">换元法 / 分部积分 / 有理函数</div>
+      </div>
+      <div class="kc-card c5" onclick="showSection('ch5')">
+        <div class="kc-icon">&#128208;</div>
+        <div class="kc-title">定积分与应用</div>
+        <div class="kc-desc">面积 / 旋转体积 / 反常积分</div>
+      </div>
+      <div class="kc-card c6" onclick="showSection('ch6')">
+        <div class="kc-icon">&#127760;</div>
+        <div class="kc-title">多元函数微积分</div>
+        <div class="kc-desc">偏导 / 极值 / 二重积分</div>
+      </div>
+      <div class="kc-card c7" onclick="showSection('ch7')">
+        <div class="kc-icon">&#9881;</div>
+        <div class="kc-title">微分方程</div>
+        <div class="kc-desc">一阶线性 / 二阶常系数</div>
+      </div>
+    </div>
+    <div class="kc-grid" style="max-width:700px">
+      <div class="kc-card c1" onclick="showSection('la1')">
+        <div class="kc-icon">&#9638;</div>
+        <div class="kc-title">行列式与矩阵</div>
+        <div class="kc-desc">计算 / 逆矩阵 / 秩</div>
+      </div>
+      <div class="kc-card c4" onclick="showSection('la2')">
+        <div class="kc-icon">&#8644;</div>
+        <div class="kc-title">向量与方程组</div>
+        <div class="kc-desc">线性相关 / 解的结构</div>
+      </div>
+      <div class="kc-card c5" onclick="showSection('la3')">
+        <div class="kc-icon">&#955;</div>
+        <div class="kc-title">特征值与二次型</div>
+        <div class="kc-desc">对角化 / 正定性</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wu Zhongxiang info card -->
+  <div class="card">
+    <h2>&#128105;&#8205;&#127891; 武忠祥老师教学体系</h2>
+    <div class="tip-box info">
+      <span class="tip-icon">&#128161;</span>
+      <div><strong>简介：</strong>西安交通大学数学教授，23年+考研辅导经验。国家高等数学试题库骨干专家，多次参与考研大纲修订与命题。教学风格"稳健细致、干货密集"。</div>
+    </div>
+
+    <h3>核心方法论</h3>
+    <div class="kc-grid">
+      <div class="kc-card c3" style="text-align:left">
+        <div class="kc-title">&#128170; 基础为王</div>
+        <div class="kc-desc">把每个知识点"掰开揉碎了去训练"</div>
+      </div>
+      <div class="kc-card c1" style="text-align:left">
+        <div class="kc-title">&#128301; 未雨绸缪</div>
+        <div class="kc-desc">在学生犯错之前就讲清所有陷阱</div>
+      </div>
+      <div class="kc-card c5" style="text-align:left">
+        <div class="kc-title">&#128260; 一题多解</div>
+        <div class="kc-desc">多种解法理解内在联系</div>
+      </div>
+      <div class="kc-card c4" style="text-align:left">
+        <div class="kc-title">&#128220; 题型归纳</div>
+        <div class="kc-desc">系统化归纳解题流程和套路</div>
+      </div>
+    </div>
+
+    <h3>四步学习法</h3>
+    <div class="flowchart">
+      <div class="fc-step start">课前预习</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step process">视频学习 + 做笔记</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step process">课后复盘（整理重点）</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step end">章节例题独立练习</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== EXAM ===================== -->
+<div class="section" id="sec-exam">
+  <div class="card">
+    <h2>&#128202; 分值分布可视化</h2>
+
+    <!-- Pie-like visual -->
+    <div class="pie-container">
+      <div class="pie" style="background: conic-gradient(var(--primary) 0% 78%, var(--success) 78% 100%);"></div>
+      <div class="pie-legend">
+        <div class="pie-legend-item"><div class="pie-dot" style="background:var(--primary)"></div><strong>高等数学 ~78%</strong>（约117分）</div>
+        <div class="pie-legend-item"><div class="pie-dot" style="background:var(--success)"></div><strong>线性代数 ~22%</strong>（约33分）</div>
+        <div class="pie-legend-item"><div class="pie-dot" style="background:#eee"></div><span style="text-decoration:line-through;color:#999">概率论 0%（不考）</span></div>
+      </div>
+    </div>
+
+    <h3>题型结构</h3>
+    <div class="bar-chart">
+      <div class="bar-item"><div class="bar-label">选择题 50分</div><div class="bar-track"><div class="bar-fill blue" style="width:33%">10题 &times; 5分</div></div></div>
+      <div class="bar-item"><div class="bar-label">填空题 30分</div><div class="bar-track"><div class="bar-fill green" style="width:20%">6题 &times; 5分</div></div></div>
+      <div class="bar-item"><div class="bar-label">解答题 70分</div><div class="bar-track"><div class="bar-fill orange" style="width:47%">6题 &times; 10-12分</div></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>&#128293; 高频考点热力图</h2>
+    <h3>高等数学</h3>
+    <div class="bar-chart">
+      <div class="bar-item"><div class="bar-label">积分计算</div><div class="bar-track"><div class="bar-fill red" style="width:100%">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+      <div class="bar-item"><div class="bar-label">导数应用</div><div class="bar-track"><div class="bar-fill red" style="width:100%">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+      <div class="bar-item"><div class="bar-label">多元函数</div><div class="bar-track"><div class="bar-fill red" style="width:100%">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+      <div class="bar-item"><div class="bar-label">微分方程</div><div class="bar-track"><div class="bar-fill red" style="width:95%">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+      <div class="bar-item"><div class="bar-label">二重积分</div><div class="bar-track"><div class="bar-fill orange" style="width:85%">&#9733;&#9733;&#9733;&#9733;</div></div></div>
+      <div class="bar-item"><div class="bar-label">中值定理</div><div class="bar-track"><div class="bar-fill orange" style="width:82%">&#9733;&#9733;&#9733;&#9733;</div></div></div>
+      <div class="bar-item"><div class="bar-label">极限计算</div><div class="bar-track"><div class="bar-fill blue" style="width:78%">&#9733;&#9733;&#9733;&#9733;</div></div></div>
+      <div class="bar-item"><div class="bar-label">定积分应用</div><div class="bar-track"><div class="bar-fill green" style="width:65%">&#9733;&#9733;&#9733;</div></div></div>
+    </div>
+    <h3>线性代数</h3>
+    <div class="bar-chart">
+      <div class="bar-item"><div class="bar-label">特征值向量</div><div class="bar-track"><div class="bar-fill purple" style="width:100%">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+      <div class="bar-item"><div class="bar-label">线性方程组</div><div class="bar-track"><div class="bar-fill purple" style="width:95%">&#9733;&#9733;&#9733;&#9733;&#9733;</div></div></div>
+      <div class="bar-item"><div class="bar-label">矩阵运算</div><div class="bar-track"><div class="bar-fill purple" style="width:80%">&#9733;&#9733;&#9733;&#9733;</div></div></div>
+      <div class="bar-item"><div class="bar-label">二次型</div><div class="bar-track"><div class="bar-fill purple" style="width:78%">&#9733;&#9733;&#9733;&#9733;</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PLAN ===================== -->
+<div class="section" id="sec-plan">
+  <div class="card">
+    <h2>&#128197; 全年复习时间线</h2>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-title">3-4月 | 基础阶段上</div><div class="tl-desc">高数上册：极限、导数、积分。教材：武忠祥《基础篇》+ 同济七版。每天3-4小时。</div></div>
+      <div class="tl-item"><div class="tl-title">5月 | 基础阶段中</div><div class="tl-desc">高数下册：多元函数、重积分、微分方程。配套330题。</div></div>
+      <div class="tl-item"><div class="tl-title">6月 | 基础阶段下</div><div class="tl-desc">线性代数全部。推荐李永乐。</div></div>
+      <div class="tl-item"><div class="tl-title">7-8月 | 强化阶段</div><div class="tl-desc">武忠祥《辅导讲义》+ 严选题/660题。每天4-5小时。形成知识框架。</div></div>
+      <div class="tl-item"><div class="tl-title">9月 | 查漏补缺</div><div class="tl-desc">线代强化 + 薄弱环节专项训练。可选《高数17堂课》。</div></div>
+      <div class="tl-item"><div class="tl-title">10-11月 | 真题阶段</div><div class="tl-desc">严格计时做真题。分析错题，按专题回顾。</div></div>
+      <div class="tl-item"><div class="tl-title">12月 | 冲刺阶段</div><div class="tl-desc">回顾公式，做模拟卷（李林6+4），保持手感。不再学新内容。</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>&#128218; 推荐搭配方案</h2>
+    <table>
+      <tr><th>科目</th><th>方案A（稳扎稳打）</th><th>方案B（技巧提升）</th></tr>
+      <tr><td><strong>高数</strong></td><td>武忠祥 基础+强化</td><td>张宇 基础30讲+强化18讲</td></tr>
+      <tr><td><strong>线代</strong></td><td>李永乐 全程</td><td>李永乐 全程</td></tr>
+      <tr><td><strong>习题</strong></td><td>660/880 + 严选题</td><td>张宇1000题</td></tr>
+      <tr><td><strong>冲刺</strong></td><td>李林6+4套卷</td><td>李林6+4套卷</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ===================== CH1: 极限与连续 ===================== -->
+<div class="section" id="sec-ch1">
+  <div class="card">
+    <h2>第一章 函数、极限、连续 <span class="tag must">每年必考</span><span class="tag wu">武忠祥重点</span></h2>
+
+    <!-- Mind map -->
+    <h3>知识脑图</h3>
+    <div class="mindmap">
+      <div class="mindmap-container">
+        <div class="mm-center">极限与连续</div>
+        <div class="mm-branches">
+          <div class="mm-branch"><div class="mm-line"></div><div class="mm-node c1">等价无穷小</div><div class="mm-subnodes"><div class="mm-branch"><div class="mm-subline"></div><div class="mm-sub">基础级 10个</div></div><div class="mm-branch"><div class="mm-subline"></div><div class="mm-sub">高阶级 6个</div></div></div></div>
+          <div class="mm-branch"><div class="mm-line"></div><div class="mm-node c2">两个重要极限</div><div class="mm-subnodes"><div class="mm-branch"><div class="mm-subline"></div><div class="mm-sub">sinx/x</div></div><div class="mm-branch"><div class="mm-subline"></div><div class="mm-sub">(1+1/x)^x</div></div></div></div>
+          <div class="mm-branch"><div class="mm-line"></div><div class="mm-node c3">极限存在准则</div><div class="mm-subnodes"><div class="mm-branch"><div class="mm-subline"></div><div class="mm-sub">夹逼准则</div></div><div class="mm-branch"><div class="mm-subline"></div><div class="mm-sub">单调有界</div></div></div></div>
+          <div class="mm-branch"><div class="mm-line"></div><div class="mm-node c4">间断点分类</div><div class="mm-subnodes"><div class="mm-branch"><div class="mm-subline"></div><div class="mm-sub">第一类(可去/跳跃)</div></div><div class="mm-branch"><div class="mm-subline"></div><div class="mm-sub">第二类(无穷/振荡)</div></div></div></div>
+          <div class="mm-branch"><div class="mm-line"></div><div class="mm-node c5">连续性定理</div><div class="mm-subnodes"><div class="mm-branch"><div class="mm-subline"></div><div class="mm-sub">零点定理</div></div><div class="mm-branch"><div class="mm-subline"></div><div class="mm-sub">介值定理</div></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>等价无穷小速查表（$x \to 0$）</h3>
+    <div class="formula-box important">
+      <p><strong>&#128308; 基础级（必背）：</strong></p>
+      $$\sin x \sim x, \quad \tan x \sim x, \quad \arcsin x \sim x, \quad \arctan x \sim x$$
+      $$e^x - 1 \sim x, \quad \ln(1+x) \sim x, \quad (1+x)^\alpha - 1 \sim \alpha x$$
+      $$1 - \cos x \sim \frac{x^2}{2}, \quad a^x - 1 \sim x\ln a$$
+    </div>
+    <div class="formula-box purple">
+      <p><strong>&#128995; 高阶级（武忠祥特别强调）：</strong></p>
+      $$x - \sin x \sim \frac{x^3}{6}, \quad \tan x - x \sim \frac{x^3}{3}$$
+      $$x - \arctan x \sim \frac{x^3}{3}, \quad \arcsin x - x \sim \frac{x^3}{6}$$
+      $$x - \ln(1+x) \sim \frac{x^2}{2}$$
+    </div>
+    <div class="tip-box danger">
+      <span class="tip-icon">&#9888;</span>
+      <div><strong>武忠祥的"加减法陷阱"警告：</strong>等价无穷小<strong>只能在乘除法中直接替换</strong>！加减法中替换可能导致精度丢失（一阶项抵消），必须用泰勒展开。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>$1^\infty$ 型极限 — 武忠祥三步曲法</h3>
+    <div class="flowchart">
+      <div class="fc-step start">识别 $1^\infty$ 型：$u \to 1, v \to \infty$</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step process">Step 1：凑标准形 $[1+\alpha(x)]^{\beta(x)}$<br>("减1加1"技巧)</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step process">Step 2：算 $A = \lim \alpha(x) \cdot \beta(x)$</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step end">Step 3：答案 $= e^A$</div>
+    </div>
+    <div class="formula-box success">
+      <p><strong>快速公式：</strong>$\lim u^v = e^{\lim v(u-1)}$（当 $u \to 1, v \to \infty$）</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>间断点分类可视化</h3>
+    <!-- Visual classification -->
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;padding:16px 0">
+      <div style="border:2px solid rgba(192,57,43,0.15);border-radius:12px;padding:16px;min-width:200px;background:rgba(192,57,43,0.04);text-align:center">
+        <div style="font-weight:700;color:#c0392b;font-size:15px;margin-bottom:8px">第一类间断点</div>
+        <div style="font-size:13px;color:#666;margin-bottom:8px">左右极限<strong>都存在</strong></div>
+        <div style="display:flex;gap:8px;justify-content:center">
+          <div style="background:white;padding:8px 12px;border-radius:8px;font-size:12px;border:1px solid #90caf9"><strong>可去</strong><br>左右极限相等</div>
+          <div style="background:white;padding:8px 12px;border-radius:8px;font-size:12px;border:1px solid #90caf9"><strong>跳跃</strong><br>左右极限不等</div>
+        </div>
+      </div>
+      <div style="border:2px solid rgba(192,57,43,0.2);border-radius:12px;padding:16px;min-width:200px;background:rgba(192,57,43,0.06);text-align:center">
+        <div style="font-weight:700;color:#c0392b;font-size:15px;margin-bottom:8px">第二类间断点</div>
+        <div style="font-size:13px;color:#666;margin-bottom:8px">至少一个极限<strong>不存在</strong></div>
+        <div style="display:flex;gap:8px;justify-content:center">
+          <div style="background:white;padding:8px 12px;border-radius:8px;font-size:12px;border:1px solid #ef9a9a"><strong>无穷</strong><br>极限为 $\infty$</div>
+          <div style="background:white;padding:8px 12px;border-radius:8px;font-size:12px;border:1px solid #ef9a9a"><strong>振荡</strong><br>极限不存在</div>
+        </div>
+      </div>
+    </div>
+    <div class="tip-box info">
+      <span class="tip-icon">&#128161;</span>
+      <div><strong>武忠祥归纳的三种必须分左右极限讨论的情况：</strong><br>1. 分段函数的分界点 &nbsp; 2. 含 $e^{1/x}$ 的点 &nbsp; 3. 含 $\arctan(1/x)$ 的点</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>典型例题</h3>
+    <div class="example">
+      <div class="example-title">例1 | 泰勒展开求极限</div>
+      <p>求 $\displaystyle\lim_{x \to 0} \frac{e^x - e^{-x} - 2x}{x - \sin x}$</p>
+      <button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button>
+      <div class="answer-content">
+        <p>分子：$e^x - e^{-x} - 2x = \frac{x^3}{3} + o(x^3)$</p>
+        <p>分母：$x - \sin x = \frac{x^3}{6} + o(x^3)$</p>
+        $$\text{答案} = \frac{1/3}{1/6} = \boxed{2}$$
+      </div>
+    </div>
+    <div class="example">
+      <div class="example-title">例2 | 间断点分类</div>
+      <p>求 $f(x) = \dfrac{x(x-1)}{(x-1)(x+1)}$ 的间断点并分类。</p>
+      <button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button>
+      <div class="answer-content">
+        <p>$x=1$：$\lim\frac{x}{x+1} = \frac{1}{2}$，极限存在但无定义 → <strong>可去间断点</strong></p>
+        <p>$x=-1$：$\lim\frac{x}{x+1} = \infty$ → <strong>无穷间断点</strong></p>
+      </div>
+    </div>
+    <div class="example">
+      <div class="example-title">例3 | $1^\infty$ 型（三步法）</div>
+      <p>求 $\displaystyle\lim_{x \to 0}\left(\frac{\sin x}{x}\right)^{1/x^2}$</p>
+      <button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button>
+      <div class="answer-content">
+        <p>识别：$\frac{\sin x}{x} \to 1$，$\frac{1}{x^2} \to \infty$ → $1^\infty$ 型</p>
+        <p>$\lim \frac{1}{x^2}\left(\frac{\sin x}{x}-1\right) = \lim\frac{\sin x - x}{x^3} = -\frac{1}{6}$</p>
+        <p>答案：$e^{-1/6}$</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CH2: 导数与微分 ===================== -->
+<div class="section" id="sec-ch2">
+  <div class="card">
+    <h2>第二章 导数与微分 <span class="tag must">必考</span></h2>
+    <h3>求导公式速查表</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;">
+      <div class="formula-box">
+        <p><strong>幂/指/对</strong></p>
+        $$(x^n)' = nx^{n-1}$$
+        $$(e^x)' = e^x \quad (a^x)' = a^x\ln a$$
+        $$(\ln x)' = \frac{1}{x}$$
+      </div>
+      <div class="formula-box">
+        <p><strong>三角函数</strong></p>
+        $$(\sin x)' = \cos x \quad (\cos x)' = -\sin x$$
+        $$(\tan x)' = \sec^2 x \quad (\cot x)' = -\csc^2 x$$
+      </div>
+      <div class="formula-box">
+        <p><strong>反三角函数</strong></p>
+        $$(\arcsin x)' = \frac{1}{\sqrt{1-x^2}}$$
+        $$(\arctan x)' = \frac{1}{1+x^2}$$
+      </div>
+    </div>
+
+    <h3>泰勒展开可视化</h3>
+    <p>下图展示 $\sin x$ 的泰勒展开逐次逼近效果：</p>
+    <div class="graph-container"><canvas id="taylorCanvas" width="500" height="300"></canvas></div>
+    <div style="text-align:center;font-size:12px;color:var(--text-secondary);margin-top:6px">
+      <span style="color:#e74c3c">&#9632;</span> $\sin x$ &nbsp;
+      <span style="color:#3498db">&#9632;</span> $P_1 = x$ &nbsp;
+      <span style="color:#2ecc71">&#9632;</span> $P_3 = x - x^3/6$ &nbsp;
+      <span style="color:#9b59b6">&#9632;</span> $P_5 = x - x^3/6 + x^5/120$
+    </div>
+
+    <h3>常用泰勒展开（必背）</h3>
+    <div class="formula-box important">
+      $$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots \qquad \sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots$$
+      $$\cos x = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \cdots \qquad \ln(1+x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots$$
+      $$\frac{1}{1-x} = 1 + x + x^2 + \cdots \qquad (1+x)^\alpha = 1 + \alpha x + \frac{\alpha(\alpha-1)}{2!}x^2 + \cdots$$
+    </div>
+
+    <div class="tip-box danger">
+      <span class="tip-icon">&#9888;</span>
+      <div><strong>参数方程二阶导易错：</strong>$\frac{d^2y}{dx^2} \neq \frac{\psi''(t)}{\varphi''(t)}$！正确是 $\frac{d^2y}{dx^2} = \frac{d}{dt}\!\left(\frac{dy}{dx}\right) \Big/ \frac{dx}{dt}$</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CH3: 中值定理 ===================== -->
+<div class="section" id="sec-ch3">
+  <div class="card">
+    <h2>第三章 中值定理与导数应用 <span class="tag must">大题必考</span><span class="tag wu">武忠祥核心</span></h2>
+
+    <h3>三大中值定理关系图</h3>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:0;padding:16px 0">
+      <div style="background:linear-gradient(135deg,rgba(124,58,237,0.06),rgba(124,58,237,0.04));padding:14px 28px;border-radius:12px;font-weight:700;color:#7c3aed;text-align:center;border:2px solid rgba(124,58,237,0.2);width:fit-content">
+        <div>泰勒中值定理</div>
+        <div style="font-size:11px;font-weight:400">$f(x) = \sum\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k + R_n$</div>
+      </div>
+      <div style="display:flex;gap:30px;margin-top:-2px">
+        <div style="width:2px;height:30px;background:rgba(124,58,237,0.2)"></div>
+        <div style="width:2px;height:30px;background:rgba(124,58,237,0.2)"></div>
+      </div>
+      <div style="display:flex;gap:24px">
+        <div style="background:rgba(192,57,43,0.04);padding:12px 20px;border-radius:12px;font-weight:700;color:#c0392b;text-align:center;border:2px solid rgba(192,57,43,0.15)">
+          <div>拉格朗日中值定理</div>
+          <div style="font-size:11px;font-weight:400">$f(b)-f(a)=f'(\xi)(b-a)$</div>
+        </div>
+        <div style="background:rgba(39,174,96,0.06);padding:12px 20px;border-radius:12px;font-weight:700;color:#2e7d32;text-align:center;border:2px solid #66bb6a">
+          <div>柯西中值定理</div>
+          <div style="font-size:11px;font-weight:400">$\frac{f(b)-f(a)}{g(b)-g(a)}=\frac{f'(\xi)}{g'(\xi)}$</div>
+        </div>
+      </div>
+      <div style="width:2px;height:24px;background:rgba(192,57,43,0.15);margin-left:-80px"></div>
+      <div style="background:rgba(192,57,43,0.06);padding:12px 20px;border-radius:12px;font-weight:700;color:#c0392b;text-align:center;border:2px solid rgba(192,57,43,0.2);margin-left:-80px">
+        <div>罗尔定理</div>
+        <div style="font-size:11px;font-weight:400">$f(a)=f(b) \Rightarrow f'(\xi)=0$</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:12px;color:var(--text-secondary)">（罗尔是拉格朗日的特殊情况，拉格朗日是泰勒N=0的特殊情况）</div>
+
+    <h3>辅助函数构造法（武忠祥三大方法）</h3>
+    <table>
+      <tr><th>结论形式</th><th>辅助函数 $F(x)$</th><th>记忆技巧</th></tr>
+      <tr><td>$f'g + fg' = 0$</td><td>$F = fg$</td><td>乘法求导</td></tr>
+      <tr><td>$f' + fg' = 0$</td><td>$F = fe^g$</td><td>$e^g$ 的链式</td></tr>
+      <tr><td>$f' + kf = 0$</td><td>$F = fe^{kx}$</td><td>一阶线性齐次</td></tr>
+      <tr><td>$f' - kf = 0$</td><td>$F = fe^{-kx}$</td><td>符号反转</td></tr>
+      <tr><td>$f'g - fg' = 0$</td><td>$F = f/g$</td><td>除法求导</td></tr>
+      <tr><td>$xf' + nf = 0$</td><td>$F = x^n f$</td><td>$x^n$ 的链式</td></tr>
+    </table>
+
+    <h3>导数应用：渐近线判定流程</h3>
+    <div class="flowchart">
+      <div class="fc-step start">给定函数 $f(x)$</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-row">
+        <div class="fc-box" style="background:rgba(192,57,43,0.04);border:2px solid rgba(192,57,43,0.15);color:#c0392b">
+          <strong>垂直渐近线</strong><br>
+          找使 $f \to \infty$ 的点 $x_0$<br>
+          → $x = x_0$
+        </div>
+        <div class="fc-box" style="background:rgba(39,174,96,0.06);border:2px solid #66bb6a;color:#2e7d32">
+          <strong>水平渐近线</strong><br>
+          $\lim_{x\to\pm\infty}f(x) = c$<br>
+          → $y = c$
+        </div>
+        <div class="fc-box" style="background:rgba(211,84,0,0.06);border:2px solid rgba(211,84,0,0.2);color:#d35400">
+          <strong>斜渐近线</strong><br>
+          $a = \lim\frac{f}{x}$，$b = \lim(f-ax)$<br>
+          → $y = ax + b$
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>典型例题</h3>
+    <div class="example">
+      <div class="example-title">例 | 中值定理证明（经典大题）</div>
+      <p>$f(x)$ 在 $[0,1]$ 连续，$(0,1)$ 可导，$f(0)=0$，$f(1)=1$。证明：$\exists\,\xi,\eta$，$\xi \neq \eta$，使 $f'(\xi)+f'(\eta)=2$。</p>
+      <button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button>
+      <div class="answer-content">
+        <p>取 $c$ 使 $f(c)=1/2$（介值定理保证存在）</p>
+        <p>$[0,c]$ 拉格朗日：$f'(\xi) = 2f(c) = 1/(2c) \cdot 2c = 2f(c)$</p>
+        <p>$[c,1]$ 拉格朗日：$f'(\eta) = 2(1-f(c))$</p>
+        <p>相加：$f'(\xi)+f'(\eta) = 2f(c)+2-2f(c) = 2$ &nbsp;$\blacksquare$</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CH4: 不定积分 ===================== -->
+<div class="section" id="sec-ch4">
+  <div class="card">
+    <h2>第四章 不定积分 <span class="tag must">必考</span></h2>
+
+    <h3>积分方法选择流程图</h3>
+    <div class="flowchart">
+      <div class="fc-step start">面对不定积分 $\int f(x)dx$</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step process">能直接用基本公式？→ 直接积</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step process">能凑微分？→ 第一类换元法</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step process">含 $\sqrt{a^2 \pm x^2}$？→ 三角代换</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step process">$\int P(x)e^x dx$ / $\int P(x)\sin x dx$？→ 分部积分</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step end">有理分式？→ 部分分式分解</div>
+    </div>
+
+    <h3>分部积分优先级（武忠祥口诀）</h3>
+    <div style="display:flex;justify-content:center;padding:16px 0">
+      <div style="display:flex;align-items:center;gap:0">
+        <div style="background:rgba(192,57,43,0.04);padding:12px 16px;border-radius:10px 0 0 10px;font-weight:700;font-size:14px;color:#c0392b;border:2px solid rgba(192,57,43,0.15)">反三角</div>
+        <div style="background:rgba(192,57,43,0.06);padding:8px 4px;font-size:18px;color:#c0392b">></div>
+        <div style="background:rgba(39,174,96,0.06);padding:12px 16px;font-weight:700;font-size:14px;color:#2e7d32;border:2px solid #66bb6a;border-left:none">对数</div>
+        <div style="background:#c8e6c9;padding:8px 4px;font-size:18px;color:#2e7d32">></div>
+        <div style="background:rgba(211,84,0,0.06);padding:12px 16px;font-weight:700;font-size:14px;color:#d35400;border:2px solid rgba(211,84,0,0.2);border-left:none">幂</div>
+        <div style="background:#ffe0b2;padding:8px 4px;font-size:18px;color:#d35400">></div>
+        <div style="background:rgba(192,57,43,0.06);padding:12px 16px;font-weight:700;font-size:14px;color:#c0392b;border:2px solid rgba(192,57,43,0.2);border-left:none">指数</div>
+        <div style="background:rgba(192,57,43,0.08);padding:8px 4px;font-size:18px;color:#c0392b">></div>
+        <div style="background:rgba(124,58,237,0.06);padding:12px 16px;border-radius:0 10px 10px 0;font-weight:700;font-size:14px;color:#6a1b9a;border:2px solid #ab47bc;border-left:none">三角</div>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:13px;color:var(--text-secondary)">排在前面的作 $u$（被求导），排在后面的作 $dv$（被积分）</p>
+
+    <h3>三角代换速查</h3>
+    <table>
+      <tr><th>被积函数特征</th><th>代换</th><th>利用的恒等式</th></tr>
+      <tr><td>$\sqrt{a^2 - x^2}$</td><td>$x = a\sin t$</td><td>$1 - \sin^2 t = \cos^2 t$</td></tr>
+      <tr><td>$\sqrt{a^2 + x^2}$</td><td>$x = a\tan t$</td><td>$1 + \tan^2 t = \sec^2 t$</td></tr>
+      <tr><td>$\sqrt{x^2 - a^2}$</td><td>$x = a\sec t$</td><td>$\sec^2 t - 1 = \tan^2 t$</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ===================== CH5: 定积分 ===================== -->
+<div class="section" id="sec-ch5">
+  <div class="card">
+    <h2>第五章 定积分与应用 <span class="tag must">必考</span><span class="tag wu">万能公式</span></h2>
+
+    <h3>旋转体体积可视化</h3>
+    <div class="graph-container"><canvas id="rotationCanvas" width="500" height="280"></canvas></div>
+    <div style="text-align:center;font-size:12px;color:var(--text-secondary);margin-top:6px">
+      $y = \sin x$ 绕 $x$ 轴旋转形成的旋转体截面示意
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px">
+      <div class="formula-box" style="text-align:center">
+        <p><strong>绕 $x$ 轴（盘法）</strong></p>
+        $$V_x = \pi\int_a^b [f(x)]^2\,dx$$
+        <div style="font-size:12px;color:var(--text-secondary)">截面是圆盘</div>
+      </div>
+      <div class="formula-box" style="text-align:center">
+        <p><strong>绕 $y$ 轴（壳法）</strong></p>
+        $$V_y = 2\pi\int_a^b x|f(x)|\,dx$$
+        <div style="font-size:12px;color:var(--text-secondary)">微元是圆柱壳</div>
+      </div>
+    </div>
+
+    <div class="formula-box important">
+      <p><strong>武忠祥"万能公式"（用二重积分求任意旋转体体积）：</strong></p>
+      $$V = 2\pi\iint_D r(x,y)\,d\sigma$$
+      <p>$r(x,y)$ = 点到旋转轴的距离。此方法适用于绕任意直线旋转！</p>
+    </div>
+
+    <h3>华里士公式（点火公式）</h3>
+    <div class="formula-box purple">
+      $$\int_0^{\pi/2}\sin^n x\,dx = \int_0^{\pi/2}\cos^n x\,dx = \begin{cases}\frac{(n-1)!!}{n!!}\cdot\frac{\pi}{2}, & n\text{为偶} \\ \frac{(n-1)!!}{n!!}, & n\text{为奇}\end{cases}$$
+    </div>
+
+    <h3>对称性与周期性</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+      <div class="formula-box success" style="text-align:center;font-size:13px">
+        <strong>奇函数</strong><br>$\int_{-a}^{a}f(x)dx = 0$
+      </div>
+      <div class="formula-box success" style="text-align:center;font-size:13px">
+        <strong>偶函数</strong><br>$\int_{-a}^{a}f = 2\int_0^a f$
+      </div>
+      <div class="formula-box success" style="text-align:center;font-size:13px">
+        <strong>周期函数</strong><br>$\int_a^{a+T} = \int_0^T$
+      </div>
+    </div>
+
+    <h3>反常积分判敛速查</h3>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin:12px 0">
+      <div style="background:rgba(39,174,96,0.06);border:2px solid #66bb6a;border-radius:10px;padding:14px;text-align:center;min-width:180px">
+        <div style="font-weight:700;color:#2e7d32">$\int_1^{+\infty}\frac{1}{x^p}dx$</div>
+        <div style="font-size:13px">$p > 1$ &#9989; 收敛</div>
+        <div style="font-size:13px">$p \le 1$ &#10060; 发散</div>
+      </div>
+      <div style="background:rgba(192,57,43,0.04);border:2px solid rgba(192,57,43,0.15);border-radius:10px;padding:14px;text-align:center;min-width:180px">
+        <div style="font-weight:700;color:#c0392b">$\int_0^{1}\frac{1}{x^p}dx$</div>
+        <div style="font-size:13px">$p < 1$ &#9989; 收敛</div>
+        <div style="font-size:13px">$p \ge 1$ &#10060; 发散</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CH6: 多元函数 ===================== -->
+<div class="section" id="sec-ch6">
+  <div class="card">
+    <h2>第六章 多元函数微积分 <span class="tag must">必考</span></h2>
+
+    <h3>"连续-偏导-可微"关系图</h3>
+    <div style="display:flex;justify-content:center;padding:16px 0">
+      <div style="position:relative;width:360px;height:200px">
+        <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);background:rgba(124,58,237,0.06);border:2px solid rgba(124,58,237,0.2);border-radius:10px;padding:10px 20px;font-weight:700;color:#7c3aed;text-align:center">偏导数连续</div>
+        <div style="position:absolute;top:56px;left:50%;transform:translateX(-50%);color:rgba(124,58,237,0.2);font-size:20px">&#8595;</div>
+        <div style="position:absolute;top:80px;left:50%;transform:translateX(-50%);background:rgba(39,174,96,0.06);border:2px solid #66bb6a;border-radius:10px;padding:10px 20px;font-weight:700;color:#2e7d32;text-align:center">可微</div>
+        <div style="position:absolute;top:136px;left:25%;transform:translateX(-50%);color:#66bb6a;font-size:20px">&#8601;</div>
+        <div style="position:absolute;top:136px;left:75%;transform:translateX(-50%);color:#66bb6a;font-size:20px">&#8600;</div>
+        <div style="position:absolute;top:160px;left:10%;background:rgba(192,57,43,0.04);border:2px solid rgba(192,57,43,0.15);border-radius:10px;padding:8px 14px;font-weight:700;color:#c0392b;font-size:13px">偏导数存在</div>
+        <div style="position:absolute;top:160px;right:10%;background:rgba(192,57,43,0.06);border:2px solid rgba(192,57,43,0.2);border-radius:10px;padding:8px 14px;font-weight:700;color:#c0392b;font-size:13px">连续</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:12px;color:var(--text-secondary)">箭头方向 = 可以推出。注意：偏导存在 &#8622; 连续，偏导存在 &#8622; 可微</div>
+
+    <h3>极值判定（$\Delta$ 判别法）</h3>
+    <div class="formula-box important">
+      <p>$A = f_{xx}, B = f_{xy}, C = f_{yy}$，$\Delta = AC - B^2$</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:12px 0">
+      <div style="background:rgba(39,174,96,0.06);border:2px solid #66bb6a;border-radius:10px;padding:12px;text-align:center"><strong style="color:#2e7d32">$\Delta > 0, A > 0$</strong><br><span style="font-size:13px">极小值</span></div>
+      <div style="background:rgba(192,57,43,0.06);border:2px solid rgba(192,57,43,0.2);border-radius:10px;padding:12px;text-align:center"><strong style="color:#c0392b">$\Delta > 0, A < 0$</strong><br><span style="font-size:13px">极大值</span></div>
+      <div style="background:rgba(211,84,0,0.06);border:2px solid rgba(211,84,0,0.2);border-radius:10px;padding:12px;text-align:center"><strong style="color:#d35400">$\Delta < 0$</strong><br><span style="font-size:13px">鞍点（非极值）</span></div>
+      <div style="background:rgba(0,0,0,0.03);border:2px solid rgba(0,0,0,0.08);border-radius:10px;padding:12px;text-align:center"><strong style="color:#777">$\Delta = 0$</strong><br><span style="font-size:13px">无法判定</span></div>
+    </div>
+
+    <div class="tip-box info">
+      <span class="tip-icon">&#128161;</span>
+      <div><strong>武忠祥：</strong>复合函数求偏导时画"树形图"！分段函数分界处偏导必须用定义求！极坐标二重积分别忘乘 $r$！</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CH7: 微分方程 ===================== -->
+<div class="section" id="sec-ch7">
+  <div class="card">
+    <h2>第七章 微分方程 <span class="tag must">必考</span></h2>
+
+    <h3>方程类型识别流程图</h3>
+    <div class="flowchart">
+      <div class="fc-step start">拿到微分方程</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step process">一阶 or 二阶？</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-row">
+        <div class="fc-box" style="background:rgba(192,57,43,0.04);border:2px solid rgba(192,57,43,0.15);color:#c0392b">
+          <strong>一阶</strong><br>
+          可分离变量?<br>齐次?<br>一阶线性?<br>伯努利?
+        </div>
+        <div class="fc-box" style="background:rgba(39,174,96,0.06);border:2px solid #66bb6a;color:#2e7d32">
+          <strong>二阶</strong><br>
+          常系数齐次?<br>常系数非齐次?<br>可降阶?
+        </div>
+      </div>
+    </div>
+
+    <h3>一阶线性方程通解公式（必背）</h3>
+    <div class="formula-box important">
+      $$y' + P(x)y = Q(x) \implies y = e^{-\int Pdx}\left[\int Qe^{\int Pdx}dx + C\right]$$
+    </div>
+
+    <h3>二阶常系数线性方程</h3>
+    <p>$y'' + py' + qy = 0$ → 特征方程 $r^2 + pr + q = 0$</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0">
+      <div style="background:rgba(192,57,43,0.04);border:2px solid rgba(192,57,43,0.15);border-radius:10px;padding:14px;text-align:center">
+        <div style="font-weight:700;color:#c0392b;font-size:14px">两不等实根</div>
+        <div style="font-size:12px">$r_1 \neq r_2$</div>
+        <div style="font-size:13px;margin-top:6px">$y = C_1e^{r_1x} + C_2e^{r_2x}$</div>
+      </div>
+      <div style="background:rgba(39,174,96,0.06);border:2px solid #66bb6a;border-radius:10px;padding:14px;text-align:center">
+        <div style="font-weight:700;color:#2e7d32;font-size:14px">二重实根</div>
+        <div style="font-size:12px">$r_1 = r_2 = r$</div>
+        <div style="font-size:13px;margin-top:6px">$y = (C_1+C_2x)e^{rx}$</div>
+      </div>
+      <div style="background:rgba(124,58,237,0.06);border:2px solid #ab47bc;border-radius:10px;padding:14px;text-align:center">
+        <div style="font-weight:700;color:#6a1b9a;font-size:14px">共轭复根</div>
+        <div style="font-size:12px">$\alpha \pm \beta i$</div>
+        <div style="font-size:13px;margin-top:6px">$y = e^{\alpha x}(C_1\cos\beta x + C_2\sin\beta x)$</div>
+      </div>
+    </div>
+
+    <div class="example">
+      <div class="example-title">例 | 典型二阶非齐次</div>
+      <p>$y'' - 5y' + 6y = e^{2x}$</p>
+      <button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button>
+      <div class="answer-content">
+        <p>特征根 $r=2,3$。$\lambda=2$ 单重 → $k=1$，设 $y^* = axe^{2x}$，代入得 $a=-1$</p>
+        $$y = C_1e^{2x}+C_2e^{3x}-xe^{2x}$$
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LA1: 行列式与矩阵 ===================== -->
+<div class="section" id="sec-la1">
+  <div class="card">
+    <h2>行列式与矩阵</h2>
+    <div class="formula-box">
+      <p><strong>逆矩阵：</strong>$A^{-1} = \frac{1}{|A|}A^*$ &nbsp;&nbsp; $(AB)^{-1} = B^{-1}A^{-1}$</p>
+      <p><strong>秩的不等式：</strong>$r(AB) \le \min\{r(A),r(B)\}$，$r(A)+r(B)-n \le r(AB)$</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LA2: 向量与方程组 ===================== -->
+<div class="section" id="sec-la2">
+  <div class="card">
+    <h2>向量与方程组 <span class="tag must">必考大题</span></h2>
+
+    <h3>方程组解的判定流程</h3>
+    <div class="flowchart">
+      <div class="fc-step start">方程组 $Ax = b$</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step process">求增广矩阵 $(A|b)$ 的行最简形</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-row">
+        <div class="fc-box" style="background:rgba(192,57,43,0.06);border:2px solid rgba(192,57,43,0.2);color:#c0392b">
+          <strong>$r(A) \neq r(A|b)$</strong><br>无解
+        </div>
+        <div class="fc-box" style="background:rgba(39,174,96,0.06);border:2px solid #66bb6a;color:#2e7d32">
+          <strong>$r(A) = r(A|b) = n$</strong><br>唯一解
+        </div>
+        <div class="fc-box" style="background:rgba(192,57,43,0.04);border:2px solid rgba(192,57,43,0.15);color:#c0392b">
+          <strong>$r(A) = r(A|b) < n$</strong><br>无穷多解<br>自由变量 $n-r$ 个
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LA3: 特征值与二次型 ===================== -->
+<div class="section" id="sec-la3">
+  <div class="card">
+    <h2>特征值与二次型 <span class="tag must">必考</span></h2>
+    <h3>特征值性质速查</h3>
+    <table>
+      <tr><th>矩阵变换</th><th>特征值变化</th></tr>
+      <tr><td>$A$</td><td>$\lambda$</td></tr>
+      <tr><td>$kA$</td><td>$k\lambda$</td></tr>
+      <tr><td>$A^n$</td><td>$\lambda^n$</td></tr>
+      <tr><td>$A^{-1}$</td><td>$1/\lambda$</td></tr>
+      <tr><td>$A^*$（伴随）</td><td>$|A|/\lambda$</td></tr>
+      <tr><td>$A + kE$</td><td>$\lambda + k$</td></tr>
+    </table>
+
+    <h3>正定矩阵判定（三种等价条件）</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:12px 0">
+      <div style="background:rgba(39,174,96,0.06);border:2px solid #66bb6a;border-radius:10px;padding:14px;text-align:center;font-size:13px"><strong style="color:#2e7d32">所有特征值 > 0</strong></div>
+      <div style="background:rgba(192,57,43,0.04);border:2px solid rgba(192,57,43,0.15);border-radius:10px;padding:14px;text-align:center;font-size:13px"><strong style="color:#c0392b">所有顺序主子式 > 0</strong></div>
+      <div style="background:rgba(124,58,237,0.06);border:2px solid #ab47bc;border-radius:10px;padding:14px;text-align:center;font-size:13px"><strong style="color:#6a1b9a">$\exists$ 可逆 $C$ 使 $A=C^TC$</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== METHODS ===================== -->
+<div class="section" id="sec-methods">
+  <div class="card">
+    <h2>&#128161; 武忠祥八大极限求法</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;">
+      <div class="kc-card c1"><div class="kc-icon">1</div><div class="kc-title">基本极限</div><div class="kc-desc">$\frac{\sin x}{x}$，$(1+\frac{1}{x})^x$</div></div>
+      <div class="kc-card c2"><div class="kc-icon">2</div><div class="kc-title">等价无穷小</div><div class="kc-desc">乘除法优先替换</div></div>
+      <div class="kc-card c3"><div class="kc-icon">3</div><div class="kc-title">有理运算</div><div class="kc-desc">非零因子先分离</div></div>
+      <div class="kc-card c4"><div class="kc-icon">4</div><div class="kc-title">洛必达法则</div><div class="kc-desc">$\frac{0}{0}$、$\frac{\infty}{\infty}$ 型</div></div>
+      <div class="kc-card c5"><div class="kc-icon">5</div><div class="kc-title">泰勒公式</div><div class="kc-desc">加减抵消时首选</div></div>
+      <div class="kc-card c6"><div class="kc-icon">6</div><div class="kc-title">夹逼准则</div><div class="kc-desc">n项和型数列</div></div>
+      <div class="kc-card c7"><div class="kc-icon">7</div><div class="kc-title">单调有界</div><div class="kc-desc">递推数列极限</div></div>
+      <div class="kc-card c1"><div class="kc-icon">8</div><div class="kc-title">定积分定义</div><div class="kc-desc">$\frac{1}{n}\sum f(\frac{i}{n})$ 型</div></div>
+    </div>
+
+    <h3>极限求解总流程图</h3>
+    <div class="flowchart">
+      <div class="fc-step start">拿到极限问题</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step process">Step 1：判断类型（七种未定式 or 确定型）</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step process">Step 2：非零因子先计算（化简）</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-step process">Step 3：有理化、变量代换</div>
+      <div class="fc-arrow"></div>
+      <div class="fc-row">
+        <div class="fc-box" style="background:rgba(192,57,43,0.04);border:2px solid rgba(192,57,43,0.15);color:#c0392b"><strong>乘除法</strong><br>等价无穷小优先</div>
+        <div class="fc-box" style="background:rgba(39,174,96,0.06);border:2px solid #66bb6a;color:#2e7d32"><strong>加减法</strong><br>泰勒展开优先</div>
+        <div class="fc-box" style="background:rgba(211,84,0,0.06);border:2px solid rgba(211,84,0,0.2);color:#d35400"><strong>复杂型</strong><br>洛必达法则</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>&#128161; 大题得分策略</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+      <div style="background:rgba(192,57,43,0.04);border-radius:10px;padding:14px">
+        <div style="font-weight:700;color:#c0392b;margin-bottom:6px">证明题结构</div>
+        <div style="font-size:12px">(1) 构造辅助函数 [2分]<br>(2) 验证定理条件 [1-2分]<br>(3) 应用定理 [2-3分]<br>(4) 化简得结论 [2分]</div>
+      </div>
+      <div style="background:rgba(39,174,96,0.06);border-radius:10px;padding:14px">
+        <div style="font-weight:700;color:#2e7d32;margin-bottom:6px">不会做也要写</div>
+        <div style="font-size:12px">- 写出相关定义/定理<br>- 写出已知条件的数学表达<br>- 尝试部分计算<br>- 可得1-3分步骤分</div>
+      </div>
+      <div style="background:rgba(211,84,0,0.06);border-radius:10px;padding:14px">
+        <div style="font-weight:700;color:#d35400;margin-bottom:6px">选择题速解</div>
+        <div style="font-size:12px">- 特殊值法<br>- 排除法（代入特殊矩阵）<br>- 几何直观法<br>- 逆推法（从选项验证）</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== EXERCISES ===================== -->
+<div class="section" id="sec-exercises">
+  <div class="card">
+    <h2>&#9998; 练习题库（7个专题 &middot; 46道题）</h2>
+    <p>先独立思考再看答案。点击专题切换。</p>
+    <div class="tabs" id="exerciseTabs">
+      <button class="tab-btn active" onclick="switchTab('ex','t1')">极限(8)</button>
+      <button class="tab-btn" onclick="switchTab('ex','t2')">导数(8)</button>
+      <button class="tab-btn" onclick="switchTab('ex','t3')">积分(8)</button>
+      <button class="tab-btn" onclick="switchTab('ex','t4')">多元(6)</button>
+      <button class="tab-btn" onclick="switchTab('ex','t5')">微方(6)</button>
+      <button class="tab-btn" onclick="switchTab('ex','t6')">矩阵(5)</button>
+      <button class="tab-btn" onclick="switchTab('ex','t7')">特征值(5)</button>
+    </div>
+
+    <!-- 专题一：极限 -->
+    <div class="tab-content active" id="ex-t1">
+      <div class="example exercise"><div class="example-title">1.1 | 0/0型（泰勒展开）</div><p>$\displaystyle\lim_{x\to 0}\frac{\sin x - x\cos x}{x^3}$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$\sin x = x - x^3/6 + o(x^3)$，$x\cos x = x - x^3/2 + o(x^3)$</p><p>分子 $= x^3/3 + o(x^3)$，答案 $= \boxed{1/3}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">1.2 | 0/0型</div><p>$\displaystyle\lim_{x\to 0}\frac{e^x - e^{-x} - 2x}{x - \sin x}$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>分子 $= x^3/3$，分母 $= x^3/6$，答案 $= \boxed{2}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">1.3 | $1^\infty$ 型</div><p>$\displaystyle\lim_{x\to 0}\left(\frac{\sin x}{x}\right)^{1/x^2}$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>指数极限 $= \lim\frac{\sin x - x}{x^3} = -1/6$，答案 $= \boxed{e^{-1/6}}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">1.4 | $1^\infty$ 型</div><p>$\displaystyle\lim_{x\to+\infty}\left(\frac{x+3}{x-1}\right)^x$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$\lim x\cdot\frac{4}{x-1} = 4$，答案 $= \boxed{e^4}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">1.5 | $\infty - \infty$ 型</div><p>$\displaystyle\lim_{x\to 0}\left(\frac{1}{x^2} - \frac{1}{\sin^2 x}\right)$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>通分后分子 $\sin^2 x - x^2 = -x^4/3 + o(x^4)$，分母 $\sim x^4$，答案 $= \boxed{-1/3}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">1.6 | $\infty - \infty$ 型</div><p>$\displaystyle\lim_{x\to 0^+}\left(\frac{1}{e^x-1} - \frac{1}{x}\right)$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>通分：$\frac{x-(e^x-1)}{x(e^x-1)} = \frac{-x^2/2}{x^2} = \boxed{-1/2}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">1.7 | 夹逼准则</div><p>$\displaystyle\lim_{n\to\infty}\sum_{k=1}^n\frac{1}{\sqrt{n^2+k}}$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$\frac{n}{\sqrt{n^2+n}} \le S_n \le \frac{n}{\sqrt{n^2+1}}$，两端极限均为1，答案 $= \boxed{1}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">1.8 | 定积分定义</div><p>$\displaystyle\lim_{n\to\infty}\sum_{k=1}^n\frac{k}{n^2+k^2}$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$= \int_0^1\frac{x}{1+x^2}dx = \frac{1}{2}\ln(1+x^2)\big|_0^1 = \boxed{\frac{\ln 2}{2}}$</p></div></div>
+    </div>
+
+    <!-- 专题二：导数 -->
+    <div class="tab-content" id="ex-t2">
+      <div class="example exercise"><div class="example-title">2.1 | 隐函数求导</div><p>$e^y + xy - e = 0$，求 $y''(0)$。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$y(0)=1$。对方程求导得 $e^yy'+y+xy'=0$，$y'(0)=-1/e$。</p><p>再求导 $e^y(y')^2+e^yy''+2y'+xy''=0$，代入得 $\boxed{y''(0)=1/e^2}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">2.2 | 参数方程求二阶导</div><p>$x=a(t-\sin t), y=a(1-\cos t)$，求 $d^2y/dx^2$。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$dy/dx = \sin t/(1-\cos t) = \cot(t/2)$</p><p>$d^2y/dx^2 = \frac{-\csc^2(t/2)/2}{a\cdot 2\sin^2(t/2)} = \boxed{-\frac{1}{4a\sin^4(t/2)}}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">2.3 | 中值定理证明</div><p>$f(0)=0,f(1)=1$。证：$\exists\,\xi\neq\eta$，$1/f'(\xi)+1/f'(\eta)=2$。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>取 $f(c)=1/2$。$[0,c]$ 拉格朗日得 $1/f'(\xi)=2c$，$[c,1]$ 得 $1/f'(\eta)=2(1-c)$。相加 $=2$。</p></div></div>
+
+      <div class="example exercise"><div class="example-title">2.4 | 构造辅助函数</div><p>$f(a)=f(b)=0$，证：$\exists\,\xi$，$f'(\xi)=2\xi f(\xi)$。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>构造 $F(x)=f(x)e^{-x^2}$。$F(a)=F(b)=0$，由Rolle定理 $\exists\,\xi$，$F'(\xi)=0$。</p><p>$F'=e^{-x^2}[f'-2xf]=0$，故 $f'(\xi)=2\xi f(\xi)$。</p></div></div>
+
+      <div class="example exercise"><div class="example-title">2.5 | 泰勒公式证明</div><p>$f(0)=f(1)=0, f(1/2)=1$。证：$\exists\,\xi$，$f''(\xi)\le -8$。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>在 $x_0=1/2$ 处用泰勒公式：$f(0)$ 和 $f(1)$ 分别给出含 $f''(c_1)$ 和 $f''(c_2)$ 的等式。</p><p>两式相加得 $f''(c_1)+f''(c_2)=-16$，至少有一个 $\le -8$。</p></div></div>
+
+      <div class="example exercise"><div class="example-title">2.6 | 极值与最值</div><p>$f(x)=x^3-3x+1$ 在 $[-3,0]$ 上的最大值和最小值。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$f'=3(x+1)(x-1)=0$，区间内驻点 $x=-1$。</p><p>$f(-3)=-17, f(-1)=3, f(0)=1$。$\boxed{\max=3, \min=-17}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">2.7 | 不等式证明（单调性）</div><p>$x>0$ 时，证 $e^x > 1+x+x^2/2$。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>令 $\varphi=e^x-1-x-x^2/2$，$\varphi(0)=0$。$\varphi'=e^x-1-x$，$\varphi'(0)=0$。$\varphi''=e^x-1>0$（$x>0$）。</p><p>逐层推出 $\varphi'>0$，$\varphi>0$。</p></div></div>
+
+      <div class="example exercise"><div class="example-title">2.8 | 不等式（中值定理）</div><p>$a>b>0$，证 $\frac{a-b}{a}<\ln\frac{a}{b}<\frac{a-b}{b}$。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$f(x)=\ln x$ 在 $[b,a]$ 用拉格朗日：$\ln(a/b)=(a-b)/\xi$，$b<\xi<a$。</p><p>由 $1/a<1/\xi<1/b$ 乘以 $(a-b)>0$ 得证。</p></div></div>
+    </div>
+
+    <!-- 专题三：积分 -->
+    <div class="tab-content" id="ex-t3">
+      <div class="example exercise"><div class="example-title">3.1 | 换元+分部综合</div><p>$\displaystyle\int\frac{x\arctan x}{(1+x^2)^2}dx$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>令 $x=\tan t$，化为 $\frac{1}{2}\int t\sin 2t\,dt$，分部积分后回代。</p><p>$= -\frac{(1-x^2)\arctan x}{4(1+x^2)} + \frac{x}{4(1+x^2)} + C$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">3.2 | 有理函数积分</div><p>$\displaystyle\int\frac{dx}{x(x^2+1)}$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>部分分式：$\frac{1}{x}-\frac{x}{x^2+1}$</p><p>$= \ln|x| - \frac{1}{2}\ln(x^2+1) + C = \boxed{\ln\frac{|x|}{\sqrt{x^2+1}}+C}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">3.3 | 分部积分</div><p>$\displaystyle\int x^2e^{2x}dx$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>两次分部积分：$\boxed{\frac{e^{2x}}{4}(2x^2-2x+1)+C}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">3.4 | 定积分对称性</div><p>$\displaystyle\int_{-\pi/2}^{\pi/2}\frac{\sin^2 x}{1+e^{-x}}dx$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$f(x)+f(-x)=\sin^2 x$，所以 $I = \frac{1}{2}\int_{-\pi/2}^{\pi/2}\sin^2 x\,dx = \boxed{\pi/4}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">3.5 | Wallis公式</div><p>$\displaystyle\int_0^{\pi/2}\sin^6 x\,dx$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$n=6$ 偶数：$\frac{5}{6}\cdot\frac{3}{4}\cdot\frac{1}{2}\cdot\frac{\pi}{2} = \boxed{\frac{5\pi}{32}}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">3.6 | 变上限积分</div><p>$f(x)=\int_0^x(x^2-t^2)e^{-t^2}dt$，求 $f'(x)$。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>分离：$f=x^2\int_0^x e^{-t^2}dt - \int_0^x t^2e^{-t^2}dt$</p><p>求导后 $x^2e^{-x^2}$ 项抵消，$\boxed{f'(x)=2x\int_0^x e^{-t^2}dt}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">3.7 | 旋转体体积</div><p>$y=x^2$ 与 $y=\sqrt{x}$ 围成图形绕 $x$ 轴旋转的体积。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>交点 $(0,0),(1,1)$。$V=\pi\int_0^1(x-x^4)dx = \pi(1/2-1/5) = \boxed{3\pi/10}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">3.8 | 反常积分</div><p>$\displaystyle\int_0^{+\infty}\frac{x}{(1+x^2)^2}dx$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>令 $u=1+x^2$：$\frac{1}{2}\int_1^\infty u^{-2}du = \frac{1}{2}\cdot 1 = \boxed{1/2}$</p></div></div>
+    </div>
+
+    <!-- 专题四：多元函数 -->
+    <div class="tab-content" id="ex-t4">
+      <div class="example exercise"><div class="example-title">4.1 | 隐函数偏导</div><p>$F(x-y, yz)=0$，求 $\partial z/\partial x$ 和 $\partial z/\partial y$。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>设 $u=x-y,v=yz$。$\frac{\partial z}{\partial x} = -\frac{F_1'}{yF_2'}$</p><p>$\frac{\partial z}{\partial y} = \frac{F_1'-zF_2'}{yF_2'}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">4.2 | 交换积分顺序</div><p>$\displaystyle\int_0^1 dx\int_x^1 e^{y^2}dy$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>交换后：$\int_0^1 dy\int_0^y e^{y^2}dx = \int_0^1 ye^{y^2}dy$</p><p>令 $t=y^2$：$\frac{1}{2}(e-1) = \boxed{\frac{e-1}{2}}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">4.3 | 极坐标二重积分</div><p>$\iint_D(x^2+y^2)dxdy$，$D$：$x^2+y^2\le 2x$。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$D$ 是圆心 $(1,0)$ 半径1的圆，$r\le 2\cos\theta$。</p><p>$= \int_{-\pi/2}^{\pi/2}d\theta\int_0^{2\cos\theta}r^3dr = 8\int_0^{\pi/2}\cos^4\theta\,d\theta\cdot\frac{16}{4}$</p><p>$= 8\cdot\frac{3\pi}{16} = \boxed{\frac{3\pi}{2}}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">4.4 | 拉格朗日乘数法</div><p>$f=x^2+y^2+z^2$ 在 $x+y+z=1$ 下的最小值。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$x=y=z=1/3$，$f_{\min} = \boxed{1/3}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">4.5 | 无约束极值</div><p>$f=x^3-y^3+3x^2+3y^2-9x$ 的极值。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>驻点4个，$\Delta=AC-B^2$ 判别：</p><p>$(-3,2)$：极大值 $31$；$(1,0)$：极小值 $-5$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">4.6 | 二重积分（对称区域）</div><p>$\iint_D(x+y)d\sigma$，$D$ 由 $y=x,y=2-x,y=0$ 围成。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>分两段：$\int_0^1\frac{3x^2}{2}dx + \int_1^2(2-x^2/2)dx = \frac{1}{2}+\frac{5}{6} = \boxed{4/3}$</p></div></div>
+    </div>
+
+    <!-- 专题五：微分方程 -->
+    <div class="tab-content" id="ex-t5">
+      <div class="example exercise"><div class="example-title">5.1 | 一阶线性</div><p>$y'+y/x=x^2$（$x>0$）的通解。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$P=1/x$，积分因子 $\mu=x$。$y = \frac{1}{x}[\int x^3dx+C] = \boxed{\frac{x^3}{4}+\frac{C}{x}}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">5.2 | 伯努利方程</div><p>$y'-2y/x = x^2/y$（$y\neq 0$）</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>令 $u=y^2$，化为 $u'-4u/x=2x^2$。解得 $\boxed{y^2=Cx^4-2x^3}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">5.3 | 二阶齐次（复根）</div><p>$y''-2y'+5y=0$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$r=1\pm 2i$，$\boxed{y=e^x(C_1\cos 2x+C_2\sin 2x)}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">5.4 | 二阶非齐次</div><p>$y''-3y'+2y=e^{3x}$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$r=1,2$。$\lambda=3$ 非特征根，$k=0$。$y^*=e^{3x}/2$</p><p>$\boxed{y=C_1e^x+C_2e^{2x}+\frac{1}{2}e^{3x}}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">5.5 | 二阶非齐次（重根）</div><p>$y''-2y'+y=e^x$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$r=1$（二重根），$\lambda=1$ 是二重特征根，$k=2$。$y^*=\frac{1}{2}x^2e^x$</p><p>$\boxed{y=(C_1+C_2x)e^x+\frac{1}{2}x^2e^x}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">5.6 | 应用题</div><p>曲线过 $(1,2)$，任意点斜率 $= 2x-y/x$，求曲线方程。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$y'+y/x=2x$，解得 $y=\frac{2x^2}{3}+C/x$。代入 $(1,2)$：$C=4/3$</p><p>$\boxed{y=\frac{2x^2}{3}+\frac{4}{3x}}$</p></div></div>
+    </div>
+
+    <!-- 专题六：矩阵与方程组 -->
+    <div class="tab-content" id="ex-t6">
+      <div class="example exercise"><div class="example-title">6.1 | 求逆矩阵</div><p>$A=\begin{pmatrix}1&2&0\\0&1&1\\1&0&1\end{pmatrix}$，求 $A^{-1}$。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$(A|E)$ 初等行变换化为 $(E|A^{-1})$。$|A|=3$。</p><p>$A^{-1}=\frac{1}{3}\begin{pmatrix}1&-2&2\\1&1&-1\\-1&2&1\end{pmatrix}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">6.2 | 矩阵方程</div><p>$A=\begin{pmatrix}1&1\\0&1\end{pmatrix}, B=\begin{pmatrix}1&0\\1&1\end{pmatrix}$，求 $X$ 使 $AXB=A+B$。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$X=A^{-1}(A+B)B^{-1} = \boxed{\begin{pmatrix}2&-1\\-1&2\end{pmatrix}}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">6.3 | 齐次方程组</div><p>$\begin{cases}x_1+x_2-x_3+x_4=0\\x_1-x_2+x_3-3x_4=0\\x_1+3x_2-3x_3+5x_4=0\end{cases}$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$r(A)=2$，自由变量2个。基础解系：</p><p>$\xi_1=(0,1,1,0)^T$，$\xi_2=(1,-2,0,1)^T$</p><p>通解：$x=k_1\xi_1+k_2\xi_2$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">6.4 | 非齐次方程组</div><p>$\begin{cases}x_1+x_2+x_3=1\\x_1+2x_2+3x_3=3\\2x_1+3x_2+4x_3=4\end{cases}$</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$r(A)=r(\bar A)=2<3$，无穷多解。</p><p>$x=(-1,2,0)^T+k(1,-2,1)^T$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">6.5 | 向量组的秩</div><p>$\alpha_1=(1,2,1)^T, \alpha_2=(2,1,-1)^T, \alpha_3=(1,-1,-2)^T, \alpha_4=(1,1,1)^T$，求秩并表示 $\alpha_3$。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>秩为3，极大无关组 $\{\alpha_1,\alpha_2,\alpha_4\}$。$\alpha_3=-\alpha_1+\alpha_2$。</p></div></div>
+    </div>
+
+    <!-- 专题七：特征值与二次型 -->
+    <div class="tab-content" id="ex-t7">
+      <div class="example exercise"><div class="example-title">7.1 | 特征值与向量</div><p>$A=\begin{pmatrix}2&1&0\\0&2&0\\0&0&1\end{pmatrix}$，求特征值和特征向量。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$\lambda=2$（二重），$\lambda=1$。</p><p>$\lambda=2$：$\xi=(1,0,0)^T$（几何重数仅1）。$\lambda=1$：$\xi=(0,0,1)^T$。</p></div></div>
+
+      <div class="example exercise"><div class="example-title">7.2 | 相似对角化</div><p>$A=\begin{pmatrix}1&-1&1\\0&1&0\\0&2&-1\end{pmatrix}$，能否对角化？</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$\lambda=1$（二重），$\lambda=-1$。$\lambda=1$ 几何重数=代数重数=2，可以对角化。</p><p>$P=\begin{pmatrix}1&0&1\\0&1&0\\0&1&-2\end{pmatrix}$，$\Lambda=\text{diag}(1,1,-1)$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">7.3 | 正交对角化</div><p>$A=\begin{pmatrix}2&-1&-1\\-1&2&-1\\-1&-1&2\end{pmatrix}$，求正交矩阵 $Q$。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>$\lambda=0,3,3$。$\lambda=0$：$\xi=(1,1,1)^T$。$\lambda=3$：正交化得 $(-1,1,0)^T$ 和 $(-1,-1,2)^T$。</p><p>单位化后 $Q^TAQ=\text{diag}(0,3,3)$。</p></div></div>
+
+      <div class="example exercise"><div class="example-title">7.4 | 正定性判定</div><p>$A=\begin{pmatrix}2&-1&0\\-1&2&-1\\0&-1&2\end{pmatrix}$，是否正定？</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>顺序主子式：$\Delta_1=2>0$，$\Delta_2=3>0$，$\Delta_3=4>0$。$\boxed{A\text{ 正定}}$</p></div></div>
+
+      <div class="example exercise"><div class="example-title">7.5 | 二次型标准化</div><p>$f=x_1^2+4x_1x_2+4x_2^2+2x_2x_3+x_3^2$，用正交变换化标准形。</p><button class="answer-toggle" onclick="toggleAnswer(this)">查看解答</button><div class="answer-content"><p>矩阵 $A=\begin{pmatrix}1&2&0\\2&4&1\\0&1&1\end{pmatrix}$。$\lambda_1=1, \lambda_2=\frac{5+\sqrt{29}}{2}, \lambda_3=\frac{5-\sqrt{29}}{2}$。</p><p>标准形 $f=y_1^2+\frac{5+\sqrt{29}}{2}y_2^2+\frac{5-\sqrt{29}}{2}y_3^2$</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== EXAM BANK ===================== -->
+<div class="section" id="sec-exambank">
+  <div class="card">
+    <h2>&#128218; 历年真题库（1987-2026 · 共771题）</h2>
+    <p style="color:var(--text-secondary);font-size:14px;margin-bottom:16px">选择年份和题型进行筛选，点击"查看解答"展开答案与解析。</p>
+
+    <div class="exam-filters">
+      <span class="filter-label">&#128197; 年份：</span>
+      <div class="year-scroll" id="yearScroll"></div>
+    </div>
+    <div class="exam-filters">
+      <span class="filter-label">&#128196; 题型：</span>
+      <button class="type-btn active" onclick="filterExamType('all')">全部</button>
+      <button class="type-btn" onclick="filterExamType('选择题')">选择题</button>
+      <button class="type-btn" onclick="filterExamType('填空题')">填空题</button>
+      <button class="type-btn" onclick="filterExamType('解答题')">解答题</button>
+    </div>
+
+    <div class="exam-stats" id="examStats"></div>
+    <div id="examQuestions"></div>
+  </div>
+</div>
+
+<!-- ===================== MISTAKES ===================== -->
+<div class="section" id="sec-mistakes">
+  <div class="card">
+    <h2>&#9888; 武忠祥总结的十大易错雷区</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+      <div class="tip-box danger" style="flex-direction:column">
+        <div style="font-weight:700;color:#c0392b">&#9312; 等价无穷小加减法陷阱</div>
+        <div style="font-size:13px">$\frac{x-\sin x}{x^3} \neq \frac{x-x}{x^3}=0$ &#10060;<br>正确：泰勒展开 $= 1/6$ &#9989;</div>
+      </div>
+      <div class="tip-box danger" style="flex-direction:column">
+        <div style="font-weight:700;color:#c0392b">&#9313; 参数方程二阶导</div>
+        <div style="font-size:13px">$\neq \psi''/\varphi''$！正确：$\frac{d}{dt}(dy/dx) / (dx/dt)$</div>
+      </div>
+      <div class="tip-box danger" style="flex-direction:column">
+        <div style="font-weight:700;color:#c0392b">&#9314; $1^\infty$ 不等于1</div>
+        <div style="font-size:13px">必须用三步法或对数变换，不能直接判断！</div>
+      </div>
+      <div class="tip-box danger" style="flex-direction:column">
+        <div style="font-weight:700;color:#c0392b">&#9315; 洛必达的反面</div>
+        <div style="font-size:13px">导数之比不存在 $\not\Rightarrow$ 原极限不存在（充分非必要）</div>
+      </div>
+      <div class="tip-box danger" style="flex-direction:column">
+        <div style="font-weight:700;color:#c0392b">&#9316; 极值点 ≠ 驻点</div>
+        <div style="font-size:13px">$|x|$ 在 $x=0$：极值点但非驻点<br>$x^3$ 在 $x=0$：驻点但非极值点</div>
+      </div>
+      <div class="tip-box danger" style="flex-direction:column">
+        <div style="font-weight:700;color:#c0392b">&#9317; 偏导存在 ≠ 可微</div>
+        <div style="font-size:13px">偏导存在 $\not\Rightarrow$ 可微，也 $\not\Rightarrow$ 连续！分段函数分界处用定义求偏导。</div>
+      </div>
+      <div class="tip-box danger" style="flex-direction:column">
+        <div style="font-weight:700;color:#c0392b">&#9318; 极坐标忘乘 $r$</div>
+        <div style="font-size:13px">$d\sigma = r\,dr\,d\theta$，这个 $r$ 千万不能忘！</div>
+      </div>
+      <div class="tip-box danger" style="flex-direction:column">
+        <div style="font-weight:700;color:#c0392b">&#9319; 可分离变量丢解</div>
+        <div style="font-size:13px">除以 $g(y)$ 时 $g(y)=0$ 可能给出额外常数解。</div>
+      </div>
+      <div class="tip-box danger" style="flex-direction:column">
+        <div style="font-weight:700;color:#c0392b">&#9320; 特解中 $k$ 取错</div>
+        <div style="font-size:13px">$k$ = $\lambda$ 是特征根的重数（0/1/2），这是最关键的一步。</div>
+      </div>
+      <div class="tip-box danger" style="flex-direction:column">
+        <div style="font-weight:700;color:#c0392b">&#9321; 求面积忘绝对值</div>
+        <div style="font-size:13px">$S = \int|f-g|dx$，必须先画图判断上下关系。</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FORMULAS ===================== -->
+<div class="section" id="sec-formulas">
+  <div class="card">
+    <h2>&#128209; 公式速查手册</h2>
+    <input class="search-box" type="text" id="formulaSearch" placeholder="输入关键词搜索（如：积分、导数、极限...）" oninput="searchFormulas()">
+
+    <div class="formula-item"><h3>等价无穷小</h3><div class="formula-box">$$\sin x \sim x, \; \tan x \sim x, \; e^x-1 \sim x, \; \ln(1+x) \sim x, \; 1-\cos x \sim \frac{x^2}{2}$$ $$x-\sin x \sim \frac{x^3}{6}, \; \tan x-x \sim \frac{x^3}{3}, \; x-\ln(1+x) \sim \frac{x^2}{2}$$</div></div>
+
+    <div class="formula-item"><h3>导数公式</h3><div class="formula-box">$$(x^n)'=nx^{n-1} \; (e^x)'=e^x \; (\ln x)'=\frac{1}{x}$$ $$(\sin x)'=\cos x \; (\arcsin x)'=\frac{1}{\sqrt{1-x^2}} \; (\arctan x)'=\frac{1}{1+x^2}$$</div></div>
+
+    <div class="formula-item"><h3>积分公式</h3><div class="formula-box">$$\int\frac{dx}{1+x^2}=\arctan x+C \quad \int\frac{dx}{\sqrt{1-x^2}}=\arcsin x+C \quad \int\sec x\,dx=\ln|\sec x+\tan x|+C$$</div></div>
+
+    <div class="formula-item"><h3>泰勒展开</h3><div class="formula-box">$$e^x=\textstyle\sum\frac{x^n}{n!} \quad \sin x=\textstyle\sum(-1)^n\frac{x^{2n+1}}{(2n+1)!} \quad \ln(1+x)=\textstyle\sum(-1)^{n-1}\frac{x^n}{n}$$</div></div>
+
+    <div class="formula-item"><h3>定积分应用</h3><div class="formula-box">$$V_x=\pi\int y^2dx \quad V_y=2\pi\int x|y|dx \quad s=\int\sqrt{1+y'^2}dx \quad K=\frac{|y''|}{(1+y'^2)^{3/2}}$$</div></div>
+
+    <div class="formula-item"><h3>微分方程</h3><div class="formula-box"><p>一阶线性：$y=e^{-\int Pdx}[\int Qe^{\int Pdx}dx+C]$</p><p>二阶常系数：特征方程 $r^2+pr+q=0$</p></div></div>
+
+    <div class="formula-item"><h3>线性代数</h3><div class="formula-box"><p>$\sum\lambda_i = \text{tr}(A)$，$\prod\lambda_i = |A|$</p><p>$A^{-1}$ 特征值 $1/\lambda$；$A^*$ 特征值 $|A|/\lambda$</p><p>正定 $\iff$ 特征值全 $>0$ $\iff$ 顺序主子式全 $>0$</p></div></div>
+  </div>
+</div>
+
+<!-- ===================== PROGRESS ===================== -->
+<div class="section" id="sec-progress">
+  <div class="card">
+    <h2>&#9745; 复习进度追踪</h2>
+    <p>勾选已完成的章节，进度自动保存到浏览器。</p>
+    <div style="text-align:center;margin-bottom:16px">
+      <p id="progressText" style="font-size:20px;font-weight:800;color:var(--primary)">进度：0 / 32</p>
+      <div style="background:rgba(0,0,0,0.04);border-radius:12px;height:24px;overflow:hidden;max-width:500px;margin:8px auto;">
+        <div id="progressBar" style="background:linear-gradient(90deg,var(--primary),var(--success));height:100%;width:0%;transition:width 0.5s;border-radius:12px;"></div>
+      </div>
+    </div>
+
+    <h3>高等数学</h3>
+    <div class="progress-grid">
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 极限计算</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 等价无穷小</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 间断点分类</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 求导法则</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 泰勒展开</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 三大中值定理</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 辅助函数构造</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 渐近线</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 凑微分法</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 分部积分</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 定积分性质</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 变上限积分</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 旋转体体积</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 反常积分</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 偏导数与全微分</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 多元极值</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 二重积分</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 一阶微分方程</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 二阶常系数方程</label></div>
+    </div>
+
+    <h3>线性代数</h3>
+    <div class="progress-grid">
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 行列式计算</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 矩阵运算与秩</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 向量线性相关性</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 线性方程组</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 特征值与向量</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 相似对角化</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 二次型与正定</label></div>
+    </div>
+
+    <h3>实战训练</h3>
+    <div class="progress-grid">
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 八大极限法掌握</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 辅助函数构造练习</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 真题一轮</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 真题二轮</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 易错点复习</label></div>
+      <div class="progress-item"><label><input type="checkbox" onchange="saveProgress()"> 公式手册背完</label></div>
+    </div>
+  </div>
+</div>
+
+</div><!-- end main -->
+
+<script>
+// Section navigation
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.sidebar a').forEach(a => a.classList.remove('active'));
+  const sec = document.getElementById('sec-' + id);
+  if (sec) sec.classList.add('active');
+  const nav = document.getElementById('nav-' + id);
+  if (nav) nav.classList.add('active');
+  window.scrollTo(0, 0);
+  if (window.innerWidth <= 768) document.getElementById('sidebar').classList.remove('open');
+}
+
+function toggleSidebar() { document.getElementById('sidebar').classList.toggle('open'); }
+
+function toggleAnswer(btn) {
+  const c = btn.nextElementSibling;
+  c.classList.toggle('show');
+  btn.textContent = c.classList.contains('show') ? '收起解答' : '查看解答';
+}
+
+function switchTab(prefix, tab) {
+  const container = document.getElementById(prefix + '-' + tab).parentElement;
+  container.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  container.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(prefix + '-' + tab).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function searchFormulas() {
+  const q = document.getElementById('formulaSearch').value.toLowerCase();
+  document.querySelectorAll('.formula-item').forEach(item => {
+    item.style.display = item.textContent.toLowerCase().includes(q) ? 'block' : 'none';
+  });
+}
+
+function saveProgress() {
+  const cbs = document.querySelectorAll('#sec-progress input[type="checkbox"]');
+  localStorage.setItem('ky_progress', JSON.stringify(Array.from(cbs).map(c => c.checked)));
+  updateProgress();
+}
+
+function updateProgress() {
+  const cbs = document.querySelectorAll('#sec-progress input[type="checkbox"]');
+  const total = cbs.length, done = Array.from(cbs).filter(c => c.checked).length;
+  document.getElementById('progressText').textContent = `进度：${done} / ${total}`;
+  document.getElementById('progressBar').style.width = (done/total*100) + '%';
+  cbs.forEach(c => c.closest('.progress-item').classList.toggle('done', c.checked));
+}
+
+function loadProgress() {
+  const s = localStorage.getItem('ky_progress');
+  if (s) { const a = JSON.parse(s); document.querySelectorAll('#sec-progress input[type="checkbox"]').forEach((c,i) => { if(a[i]) c.checked = true; }); }
+  updateProgress();
+}
+
+// Draw Taylor series visualization
+function drawTaylor() {
+  const canvas = document.getElementById('taylorCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const cx = W/2, cy = H/2;
+  const scaleX = 50, scaleY = 80;
+
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = '#f8f6f3';
+  ctx.fillRect(0, 0, W, H);
+
+  // Grid
+  ctx.strokeStyle = '#e8e8e8'; ctx.lineWidth = 1;
+  for (let x = -5; x <= 5; x++) { ctx.beginPath(); ctx.moveTo(cx + x*scaleX, 0); ctx.lineTo(cx + x*scaleX, H); ctx.stroke(); }
+  for (let y = -2; y <= 2; y++) { ctx.beginPath(); ctx.moveTo(0, cy - y*scaleY); ctx.lineTo(W, cy - y*scaleY); ctx.stroke(); }
+
+  // Axes
+  ctx.strokeStyle = '#999'; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(0, cy); ctx.lineTo(W, cy); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(cx, 0); ctx.lineTo(cx, H); ctx.stroke();
+
+  function plotFunc(fn, color, width) {
+    ctx.strokeStyle = color; ctx.lineWidth = width;
+    ctx.beginPath();
+    let started = false;
+    for (let px = 0; px < W; px++) {
+      const x = (px - cx) / scaleX;
+      const y = fn(x);
+      const py = cy - y * scaleY;
+      if (py < -50 || py > H + 50) { started = false; continue; }
+      if (!started) { ctx.moveTo(px, py); started = true; } else { ctx.lineTo(px, py); }
+    }
+    ctx.stroke();
+  }
+
+  plotFunc(x => Math.sin(x), '#e74c3c', 3);
+  plotFunc(x => x, '#3498db', 1.5);
+  plotFunc(x => x - x*x*x/6, '#2ecc71', 1.5);
+  plotFunc(x => x - x*x*x/6 + x*x*x*x*x/120, '#9b59b6', 1.5);
+
+  // Labels
+  ctx.fillStyle = '#999'; ctx.font = '11px sans-serif';
+  ctx.fillText('0', cx + 4, cy + 14);
+  ctx.fillText('π', cx + Math.PI*scaleX - 4, cy + 14);
+  ctx.fillText('-π', cx - Math.PI*scaleX - 8, cy + 14);
+  ctx.fillText('1', cx + 4, cy - scaleY + 4);
+}
+
+// Draw rotation body
+function drawRotation() {
+  const canvas = document.getElementById('rotationCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = '#f8f6f3';
+  ctx.fillRect(0, 0, W, H);
+
+  const ox = 60, oy = H/2;
+  const sx = (W-120)/Math.PI, sy = 100;
+
+  // Axis
+  ctx.strokeStyle = '#999'; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(ox - 20, oy); ctx.lineTo(W - 30, oy); ctx.stroke();
+
+  // Fill the rotation body (ellipses for cross-sections)
+  for (let px = ox; px < ox + Math.PI * sx; px += 3) {
+    const x = (px - ox) / sx;
+    const r = Math.sin(x) * sy;
+    if (r < 2) continue;
+    ctx.fillStyle = `rgba(26, 115, 232, ${0.06 + 0.04 * Math.sin(x)})`;
+    ctx.beginPath();
+    ctx.ellipse(px, oy, 2, r, 0, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // Draw sin curve (top)
+  ctx.strokeStyle = '#e74c3c'; ctx.lineWidth = 2.5;
+  ctx.beginPath();
+  for (let px = ox; px <= ox + Math.PI * sx; px++) {
+    const x = (px - ox) / sx;
+    const y = Math.sin(x) * sy;
+    if (px === ox) ctx.moveTo(px, oy - y); else ctx.lineTo(px, oy - y);
+  }
+  ctx.stroke();
+
+  // Mirror (bottom)
+  ctx.strokeStyle = '#3498db'; ctx.lineWidth = 2; ctx.setLineDash([4, 4]);
+  ctx.beginPath();
+  for (let px = ox; px <= ox + Math.PI * sx; px++) {
+    const x = (px - ox) / sx;
+    const y = Math.sin(x) * sy;
+    if (px === ox) ctx.moveTo(px, oy + y); else ctx.lineTo(px, oy + y);
+  }
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Cross-section ellipses at key points
+  [0.5, 1.0, 1.5, 2.0, 2.5].forEach(x => {
+    const px = ox + x * sx;
+    const r = Math.sin(x) * sy;
+    ctx.strokeStyle = 'rgba(26, 115, 232, 0.3)'; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.ellipse(px, oy, 8, r, 0, 0, Math.PI * 2); ctx.stroke();
+  });
+
+  // Labels
+  ctx.fillStyle = '#333'; ctx.font = 'bold 12px sans-serif';
+  ctx.fillText('0', ox - 4, oy + 16);
+  ctx.fillText('π', ox + Math.PI * sx - 4, oy + 16);
+  ctx.fillText('V = π²/2', W/2 - 30, 24);
+  ctx.font = '11px sans-serif'; ctx.fillStyle = '#e74c3c';
+  ctx.fillText('y = sin x', ox + 1.2*sx, oy - Math.sin(1.2)*sy - 10);
+}
+
+// Init
+loadProgress();
+setTimeout(() => { drawTaylor(); drawRotation(); }, 500);
+
+document.addEventListener('click', function(e) {
+  if (window.innerWidth <= 768) {
+    const sb = document.getElementById('sidebar'), tg = document.querySelector('.menu-toggle');
+    if (!sb.contains(e.target) && !tg.contains(e.target)) sb.classList.remove('open');
+  }
+});
+</script>
+<script src="exam_data.js"></script>
+<script src="exam_bank.js"></script>
+
+</body>
+</html>
