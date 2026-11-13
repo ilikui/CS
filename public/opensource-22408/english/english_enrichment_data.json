@@ -2,7 +2,7 @@
   "version": 1,
   "language": "en-zh",
   "scope": "考研英语高频核心词首批离线拓展",
-  "note": "共60个离线核心词条。当前优先按考研必考词单元推进；例句为学习用途原创短句，中文释义按常见考研语境整理。",
+  "note": "共82个离线核心词条，按考研必考词单元持续扩充。",
   "entries": {
     "abandon": {
       "pos": "verb",
@@ -2615,6 +2615,992 @@
           "journal",
           "magazine",
           "journal 常指学术期刊或个人日志；magazine 多指面向大众的杂志"
+        ]
+      ]
+    },
+    "label": {
+      "pos": "noun / verb",
+      "meanings": [
+        "n. 标签；标牌；称谓",
+        "v. 贴标签于；把……称为",
+        "v. （音乐）录制或发行唱片"
+      ],
+      "phrases": [
+        [
+          "attach a label to",
+          "给……贴上标签"
+        ],
+        [
+          "label A as B",
+          "把A称为B"
+        ],
+        [
+          "under the label of",
+          "以……的名义/标签"
+        ]
+      ],
+      "sentences": [
+        [
+          "The product carries a label showing its country of origin.",
+          "产品贴有标明原产国的标签。"
+        ],
+        [
+          "It is unfair to label someone as a failure after one mistake.",
+          "仅凭一次错误就把某人称为失败者是不公平的。"
+        ]
+      ],
+      "forms": [
+        "labelled / labeled（v. 贴标签；标注）",
+        "labelling / labeling（n. 标签；标注）",
+        "labeller / labeler（n. 贴标签者；标签机）"
+      ],
+      "confusables": [
+        [
+          "label",
+          "tag",
+          "label 常指商品或概念的标签/分类；tag 常指附加的小标签或标记"
+        ]
+      ]
+    },
+    "lag": {
+      "pos": "verb / noun",
+      "meanings": [
+        "v. 落后；滞后",
+        "v. 缓慢移动",
+        "n. 时间间隔；滞后现象"
+      ],
+      "phrases": [
+        [
+          "lag behind",
+          "落后于"
+        ],
+        [
+          "a time lag",
+          "时间滞后"
+        ],
+        [
+          "lag far behind",
+          "远远落后"
+        ]
+      ],
+      "sentences": [
+        [
+          "Wages have failed to keep up with prices and continue to lag behind.",
+          "工资未能跟上物价，仍然处于落后状态。"
+        ],
+        [
+          "There is often a time lag between investment and economic growth.",
+          "投资与经济增长之间通常存在时间差。"
+        ]
+      ],
+      "forms": [
+        "lagged（过去式/过去分词）",
+        "lagging（adj. 落后的；滞后的）",
+        "laggard（n. 落后者）"
+      ],
+      "confusables": [
+        [
+          "lag",
+          "delay",
+          "lag 强调落后于预期或他者；delay 强调某事被推迟或耽搁"
+        ]
+      ]
+    },
+    "largely": {
+      "pos": "adverb",
+      "meanings": [
+        "在很大程度上；主要地",
+        "大半；基本上"
+      ],
+      "phrases": [
+        [
+          "largely because of",
+          "主要是因为"
+        ],
+        [
+          "be largely responsible for",
+          "在很大程度上应对……负责"
+        ],
+        [
+          "largely depend on",
+          "主要取决于"
+        ]
+      ],
+      "sentences": [
+        [
+          "The success of the project was largely due to teamwork.",
+          "这个项目的成功主要归功于团队合作。"
+        ],
+        [
+          "The region is largely dependent on agriculture.",
+          "该地区在很大程度上依赖农业。"
+        ]
+      ],
+      "forms": [
+        "large（adj. 大的；大量的）",
+        "largely（adv. 在很大程度上）",
+        "enlarge（v. 扩大）",
+        "enlargement（n. 扩大）"
+      ],
+      "confusables": [
+        [
+          "largely",
+          "mainly",
+          "largely 强调整体程度或占比很大；mainly 强调主要部分或主要原因"
+        ]
+      ]
+    },
+    "lateral": {
+      "pos": "adjective / noun",
+      "meanings": [
+        "adj. 侧面的；横向的；侧向的",
+        "adj. （思维）横向的；非线性的",
+        "n. 侧向移动；横向传球（体育）"
+      ],
+      "phrases": [
+        [
+          "lateral movement",
+          "横向移动"
+        ],
+        [
+          "lateral thinking",
+          "横向思维"
+        ],
+        [
+          "lateral pressure",
+          "侧向压力"
+        ]
+      ],
+      "sentences": [
+        [
+          "The design allows lateral movement while maintaining stability.",
+          "这种设计在保持稳定性的同时允许横向移动。"
+        ],
+        [
+          "Lateral thinking can help people find creative solutions.",
+          "横向思维有助于人们找到创造性的解决方案。"
+        ]
+      ],
+      "forms": [
+        "laterally（adv. 横向地；侧面地）",
+        "bilateral（adj. 双边的；双侧的）",
+        "unilateral（adj. 单边的；单侧的）"
+      ],
+      "confusables": [
+        [
+          "lateral",
+          "vertical",
+          "lateral 表示侧向或水平的；vertical 表示垂直方向的"
+        ]
+      ]
+    },
+    "latter": {
+      "pos": "adjective / noun",
+      "meanings": [
+        "adj. 后者的；两者中后面的",
+        "adj. 后期的；较后的",
+        "n. 后者（the latter）"
+      ],
+      "phrases": [
+        [
+          "the former ... the latter",
+          "前者……后者……"
+        ],
+        [
+          "in the latter half",
+          "在后半部分"
+        ],
+        [
+          "the latter point",
+          "后面提到的那一点"
+        ]
+      ],
+      "sentences": [
+        [
+          "Of the two proposals, the latter is more practical.",
+          "在这两项提议中，后者更为实际。"
+        ],
+        [
+          "The latter part of the report focuses on social effects.",
+          "报告的后半部分着重讨论社会影响。"
+        ]
+      ],
+      "forms": [
+        "late（adj. 晚的；迟的）",
+        "later（adv. 后来；更晚）",
+        "latest（adj. 最新的；最近的）",
+        "lately（adv. 最近）"
+      ],
+      "confusables": [
+        [
+          "latter",
+          "later",
+          "latter 指两者中的后者；later 表示时间上更晚"
+        ]
+      ]
+    },
+    "law": {
+      "pos": "noun",
+      "meanings": [
+        "法律；法规",
+        "法学；法律体系",
+        "规律；法则",
+        "警察（the law，口语）"
+      ],
+      "phrases": [
+        [
+          "break the law",
+          "违法"
+        ],
+        [
+          "by law",
+          "依法；根据法律"
+        ],
+        [
+          "the law of nature",
+          "自然法则"
+        ]
+      ],
+      "sentences": [
+        [
+          "Everyone is equal before the law.",
+          "法律面前人人平等。"
+        ],
+        [
+          "The law requires companies to provide accurate information.",
+          "法律要求企业提供准确信息。"
+        ]
+      ],
+      "forms": [
+        "legal（adj. 合法的；法律的）",
+        "illegal（adj. 非法的）",
+        "lawful（adj. 合法的）",
+        "lawyer（n. 律师）",
+        "legislation（n. 法律；立法）"
+      ],
+      "confusables": [
+        [
+          "law",
+          "rule",
+          "law 通常指由国家制定并执行的法律；rule 可指范围更广的规则或规定"
+        ]
+      ]
+    },
+    "lawsuit": {
+      "pos": "noun",
+      "meanings": [
+        "诉讼；官司",
+        "法律诉讼案件"
+      ],
+      "phrases": [
+        [
+          "file a lawsuit",
+          "提起诉讼"
+        ],
+        [
+          "bring a lawsuit against",
+          "对……提起诉讼"
+        ],
+        [
+          "settle a lawsuit",
+          "和解；解决诉讼"
+        ]
+      ],
+      "sentences": [
+        [
+          "The company faced a lawsuit over the safety of its products.",
+          "这家公司因产品安全问题面临诉讼。"
+        ],
+        [
+          "The two sides agreed to settle the lawsuit out of court.",
+          "双方同意庭外和解这起诉讼。"
+        ]
+      ],
+      "forms": [
+        "sue（v. 起诉）",
+        "sued（v. 起诉的过去式/过去分词）",
+        "litigation（n. 诉讼）",
+        "litigant（n. 诉讼当事人）"
+      ],
+      "confusables": [
+        [
+          "lawsuit",
+          "trial",
+          "lawsuit 指诉讼案件或法律行动；trial 指法庭审理过程"
+        ]
+      ]
+    },
+    "magnitude": {
+      "pos": "noun",
+      "meanings": [
+        "巨大；重要性；规模",
+        "（物理）量值；强度",
+        "（天文学）星等；（地震）震级"
+      ],
+      "phrases": [
+        [
+          "of great magnitude",
+          "规模巨大；影响重大"
+        ],
+        [
+          "the magnitude of the problem",
+          "问题的严重程度"
+        ],
+        [
+          "order of magnitude",
+          "数量级"
+        ]
+      ],
+      "sentences": [
+        [
+          "The study reveals the magnitude of the social changes.",
+          "这项研究揭示了社会变革的巨大规模。"
+        ],
+        [
+          "Few people understood the magnitude of the disaster at first.",
+          "起初很少有人意识到这场灾难的严重程度。"
+        ]
+      ],
+      "forms": [
+        "magnify（v. 放大；夸大）",
+        "magnification（n. 放大；放大率）",
+        "magnificent（adj. 壮丽的）"
+      ],
+      "confusables": [
+        [
+          "magnitude",
+          "dimension",
+          "magnitude 强调规模、程度或量值；dimension 强调尺寸、维度或方面"
+        ]
+      ]
+    },
+    "magnify": {
+      "pos": "verb",
+      "meanings": [
+        "放大；扩大（影像、声音等）",
+        "夸大； exaggerate",
+        "使（问题、影响等）加重"
+      ],
+      "phrases": [
+        [
+          "magnify an image",
+          "放大图像"
+        ],
+        [
+          "magnify the problem",
+          "夸大问题"
+        ],
+        [
+          "be magnified by",
+          "被……放大/加剧"
+        ]
+      ],
+      "sentences": [
+        [
+          "A microscope can magnify objects that are too small to see clearly.",
+          "显微镜可以放大那些肉眼无法看清的物体。"
+        ],
+        [
+          "Small errors may be magnified by poor communication.",
+          "沟通不畅可能会放大一些小错误。"
+        ]
+      ],
+      "forms": [
+        "magnification（n. 放大；放大率）",
+        "magnifying glass（n. 放大镜）",
+        "magnificent（adj. 壮丽的；极好的）",
+        "magnitude（n. 规模；程度）"
+      ],
+      "confusables": [
+        [
+          "magnify",
+          "enlarge",
+          "magnify 常指借助工具放大或夸大；enlarge 泛指尺寸、范围或规模变大"
+        ]
+      ]
+    },
+    "magnificent": {
+      "pos": "adjective",
+      "meanings": [
+        "壮丽的；宏伟的",
+        "极好的；令人赞叹的",
+        "（表现、成就）卓越的"
+      ],
+      "phrases": [
+        [
+          "a magnificent view",
+          "壮丽的景色"
+        ],
+        [
+          "a magnificent achievement",
+          "卓越的成就"
+        ],
+        [
+          "magnificent architecture",
+          "宏伟的建筑"
+        ]
+      ],
+      "sentences": [
+        [
+          "The museum is famous for its magnificent architecture.",
+          "这座博物馆以其宏伟的建筑而闻名。"
+        ],
+        [
+          "The team made a magnificent effort to complete the project.",
+          "团队为完成项目付出了卓越的努力。"
+        ]
+      ],
+      "forms": [
+        "magnificence（n. 壮丽；宏伟）",
+        "magnificently（adv. 壮丽地；极好地）",
+        "magnify（v. 放大；夸大）",
+        "magnitude（n. 规模；程度）"
+      ],
+      "confusables": [
+        [
+          "magnificent",
+          "splendid",
+          "magnificent 常强调宏伟壮观或令人惊叹；splendid 泛指极好、出色或华丽"
+        ]
+      ]
+    },
+    "major": {
+      "pos": "adjective / noun / verb",
+      "meanings": [
+        "adj. 主要的；重要的；较大的",
+        "n. 专业；主修学生；少校",
+        "v. 主修（major in）"
+      ],
+      "phrases": [
+        [
+          "a major factor",
+          "主要因素"
+        ],
+        [
+          "major in economics",
+          "主修经济学"
+        ],
+        [
+          "a major problem",
+          "重大问题"
+        ]
+      ],
+      "sentences": [
+        [
+          "Education is a major factor in social mobility.",
+          "教育是社会流动的重要因素。"
+        ],
+        [
+          "She plans to major in computer science.",
+          "她计划主修计算机科学。"
+        ]
+      ],
+      "forms": [
+        "majority（n. 大多数；多数票）",
+        "majority rule（n. 多数原则）",
+        "majorly（adv. 非正式：非常；主要地）"
+      ],
+      "confusables": [
+        [
+          "major",
+          "main",
+          "major 强调重要性或规模较大；main 强调最主要、最核心的部分"
+        ]
+      ]
+    },
+    "majority": {
+      "pos": "noun",
+      "meanings": [
+        "大多数；大部分",
+        "多数票；多数优势",
+        "（法律）成年；法定成年年龄"
+      ],
+      "phrases": [
+        [
+          "the vast majority of",
+          "绝大多数……"
+        ],
+        [
+          "majority vote",
+          "多数票"
+        ],
+        [
+          "by a majority of",
+          "以……多数票"
+        ]
+      ],
+      "sentences": [
+        [
+          "The vast majority of participants supported the proposal.",
+          "绝大多数参与者支持这项提议。"
+        ],
+        [
+          "The decision was approved by a large majority.",
+          "这项决定以多数票获得通过。"
+        ]
+      ],
+      "forms": [
+        "major（adj. 主要的；重要的）",
+        "majority（n. 大多数）",
+        "minority（n. 少数；少数群体）"
+      ],
+      "confusables": [
+        [
+          "majority",
+          "most",
+          "majority 通常指超过一半的群体或数量；most 泛指大部分，语法使用更灵活"
+        ]
+      ]
+    },
+    "make": {
+      "pos": "verb / noun",
+      "meanings": [
+        "v. 制作；制造；生产",
+        "v. 使得；导致；迫使",
+        "v. 成为；合计；构成",
+        "n. 品牌；型号；类型"
+      ],
+      "phrases": [
+        [
+          "make a decision",
+          "作出决定"
+        ],
+        [
+          "make an effort",
+          "作出努力"
+        ],
+        [
+          "make up for",
+          "弥补；补偿"
+        ],
+        [
+          "make sense of",
+          "理解；弄懂"
+        ]
+      ],
+      "sentences": [
+        [
+          "The new policy may make it easier for small businesses to grow.",
+          "新政策可能使小企业更容易发展。"
+        ],
+        [
+          "It takes time to make a well-informed decision.",
+          "作出一个有充分依据的决定需要时间。"
+        ]
+      ],
+      "forms": [
+        "made（过去式/过去分词）",
+        "maker（n. 制造者）",
+        "making（n. 制作；形成）",
+        "makeup（n. 组成；化妆品）"
+      ],
+      "confusables": [
+        [
+          "make",
+          "do",
+          "make 常强调创造、形成结果或产品；do 常强调执行活动、任务或工作"
+        ]
+      ]
+    },
+    "theme": {
+      "pos": "noun",
+      "meanings": [
+        "主题；主旨",
+        "（文学、艺术等）主题思想",
+        "（音乐）主题曲；主旋律"
+      ],
+      "phrases": [
+        [
+          "the central theme",
+          "中心主题"
+        ],
+        [
+          "theme of the article",
+          "文章主题"
+        ],
+        [
+          "theme park",
+          "主题公园"
+        ]
+      ],
+      "sentences": [
+        [
+          "The central theme of the novel is the search for identity.",
+          "这部小说的中心主题是对身份认同的探寻。"
+        ],
+        [
+          "The article explores the theme of social inequality.",
+          "这篇文章探讨了社会不平等这一主题。"
+        ]
+      ],
+      "forms": [
+        "thematic（adj. 主题的；专题的）",
+        "thematically（adv. 从主题角度）",
+        "theme-based（adj. 以主题为基础的）"
+      ],
+      "confusables": [
+        [
+          "theme",
+          "topic",
+          "theme 强调贯穿作品或讨论的核心思想；topic 指具体讨论的话题"
+        ]
+      ]
+    },
+    "theory": {
+      "pos": "noun",
+      "meanings": [
+        "理论；学说",
+        "推测；看法",
+        "（实践的对照）理论方面"
+      ],
+      "phrases": [
+        [
+          "in theory",
+          "理论上"
+        ],
+        [
+          "theory and practice",
+          "理论与实践"
+        ],
+        [
+          "a theory of learning",
+          "学习理论"
+        ]
+      ],
+      "sentences": [
+        [
+          "The theory provides a useful framework for understanding social behavior.",
+          "这一理论为理解社会行为提供了有用框架。"
+        ],
+        [
+          "In theory, the plan should reduce costs.",
+          "理论上，这项计划应该能够降低成本。"
+        ]
+      ],
+      "forms": [
+        "theoretical（adj. 理论的）",
+        "theoretically（adv. 理论上）",
+        "theorist（n. 理论家）",
+        "theorize（v. 建立理论；推测）"
+      ],
+      "confusables": [
+        [
+          "theory",
+          "hypothesis",
+          "theory 是经过大量证据支持的系统解释；hypothesis 是有待检验的假设"
+        ]
+      ]
+    },
+    "theoretical": {
+      "pos": "adjective",
+      "meanings": [
+        "理论的；学理上的",
+        "理论上成立的；假设性的",
+        "纯理论的（与实际应用相对）"
+      ],
+      "phrases": [
+        [
+          "theoretical framework",
+          "理论框架"
+        ],
+        [
+          "theoretical knowledge",
+          "理论知识"
+        ],
+        [
+          "theoretical possibility",
+          "理论上的可能性"
+        ]
+      ],
+      "sentences": [
+        [
+          "The course combines theoretical knowledge with practical training.",
+          "这门课程把理论知识与实践训练结合起来。"
+        ],
+        [
+          "The proposal is attractive in theory but difficult to implement.",
+          "这项提议理论上很有吸引力，但实施起来很困难。"
+        ]
+      ],
+      "forms": [
+        "theory（n. 理论）",
+        "theoretically（adv. 理论上）",
+        "theorist（n. 理论家）",
+        "theorize（v. 推理论证）"
+      ],
+      "confusables": [
+        [
+          "theoretical",
+          "practical",
+          "theoretical 强调理论层面；practical 强调实际应用和操作"
+        ]
+      ]
+    },
+    "therapy": {
+      "pos": "noun",
+      "meanings": [
+        "治疗；疗法",
+        "心理治疗；康复治疗",
+        "（医学）治疗过程或方法"
+      ],
+      "phrases": [
+        [
+          "physical therapy",
+          "物理治疗；康复治疗"
+        ],
+        [
+          "gene therapy",
+          "基因治疗"
+        ],
+        [
+          "undergo therapy",
+          "接受治疗"
+        ]
+      ],
+      "sentences": [
+        [
+          "Early therapy can improve the quality of life for patients.",
+          "早期治疗能够改善患者的生活质量。"
+        ],
+        [
+          "The study examines the effectiveness of cognitive behavioral therapy.",
+          "这项研究考察认知行为疗法的有效性。"
+        ]
+      ],
+      "forms": [
+        "therapist（n. 治疗师；心理治疗师）",
+        "therapeutic（adj. 治疗的；有益健康的）",
+        "therapeutically（adv. 具有治疗效果地）"
+      ],
+      "confusables": [
+        [
+          "therapy",
+          "treatment",
+          "therapy 常指系统的疗法或治疗过程；treatment 泛指医疗处理或治疗"
+        ]
+      ]
+    },
+    "qualification": {
+      "pos": "noun",
+      "meanings": [
+        "资格；资历；学历",
+        "资格证书；合格证明",
+        "限制条件；限定性说明"
+      ],
+      "phrases": [
+        [
+          "professional qualification",
+          "专业资格"
+        ],
+        [
+          "academic qualifications",
+          "学历；学术资历"
+        ],
+        [
+          "meet the qualifications",
+          "符合资格要求"
+        ]
+      ],
+      "sentences": [
+        [
+          "Relevant experience is as important as formal qualifications.",
+          "相关经验与正式资历同样重要。"
+        ],
+        [
+          "The position requires a professional qualification.",
+          "这个职位要求具备专业资格。"
+        ]
+      ],
+      "forms": [
+        "qualify（v. 使合格；取得资格）",
+        "qualified（adj. 有资格的；合格的）",
+        "qualifying（adj. 使具备资格的）",
+        "qualification（n. 资格）"
+      ],
+      "confusables": [
+        [
+          "qualification",
+          "quality",
+          "qualification 指资格或资历；quality 指品质、质量或特性"
+        ]
+      ]
+    },
+    "qualify": {
+      "pos": "verb",
+      "meanings": [
+        "使合格；使具备资格",
+        "取得资格；合格",
+        "限定；修饰（语法、逻辑）",
+        "有权；配得上"
+      ],
+      "phrases": [
+        [
+          "qualify for",
+          "取得……资格；有资格获得"
+        ],
+        [
+          "qualify as",
+          "取得……资格成为"
+        ],
+        [
+          "qualify a statement",
+          "限定某项陈述"
+        ]
+      ],
+      "sentences": [
+        [
+          "Applicants must qualify for the position through relevant experience.",
+          "申请人必须凭借相关经验达到该职位的资格要求。"
+        ],
+        [
+          "Only the top teams qualify for the final round.",
+          "只有排名靠前的队伍才能进入决赛阶段。"
+        ]
+      ],
+      "forms": [
+        "qualification（n. 资格；资历）",
+        "qualified（adj. 合格的；有资格的）",
+        "qualifier（n. 预选赛；限定词）",
+        "qualifying（adj. 资格赛的）"
+      ],
+      "confusables": [
+        [
+          "qualify",
+          "certify",
+          "qualify 指达到资格标准；certify 指由权威机构正式证明或认证"
+        ]
+      ]
+    },
+    "quality": {
+      "pos": "noun / adjective",
+      "meanings": [
+        "n. 质量；品质",
+        "n. 特质；品德",
+        "adj. 优质的；高质量的（常作定语）"
+      ],
+      "phrases": [
+        [
+          "quality of life",
+          "生活质量"
+        ],
+        [
+          "quality control",
+          "质量控制"
+        ],
+        [
+          "high-quality products",
+          "高质量产品"
+        ]
+      ],
+      "sentences": [
+        [
+          "Education can improve both productivity and quality of life.",
+          "教育能够提高生产力和生活质量。"
+        ],
+        [
+          "The company introduced stricter quality control measures.",
+          "公司引入了更严格的质量控制措施。"
+        ]
+      ],
+      "forms": [
+        "qualitative（adj. 定性的；性质的）",
+        "qualitatively（adv. 从性质上）",
+        "qualify（v. 使合格）",
+        "quality assurance（n. 质量保证）"
+      ],
+      "confusables": [
+        [
+          "quality",
+          "quantity",
+          "quality 指质量或品质；quantity 指数量"
+        ]
+      ]
+    },
+    "qualitative": {
+      "pos": "adjective",
+      "meanings": [
+        "定性的；从性质角度进行的",
+        "强调特征、属性而非数量的"
+      ],
+      "phrases": [
+        [
+          "qualitative analysis",
+          "定性分析"
+        ],
+        [
+          "qualitative research",
+          "定性研究"
+        ],
+        [
+          "qualitative difference",
+          "性质上的差异"
+        ]
+      ],
+      "sentences": [
+        [
+          "The researchers used interviews to conduct qualitative research.",
+          "研究人员通过访谈开展定性研究。"
+        ],
+        [
+          "There is a qualitative difference between the two approaches.",
+          "这两种方法之间存在性质上的差异。"
+        ]
+      ],
+      "forms": [
+        "quality（n. 质量；品质）",
+        "qualitatively（adv. 定性地）",
+        "qualify（v. 使合格；限定）",
+        "quantitative（adj. 定量的）"
+      ],
+      "confusables": [
+        [
+          "qualitative",
+          "quantitative",
+          "qualitative 关注性质和特征；quantitative 关注数量和可测量的数据"
+        ]
+      ]
+    },
+    "safeguard": {
+      "pos": "noun / verb",
+      "meanings": [
+        "v. 保护；保障；捍卫",
+        "n. 安全措施；保护机制",
+        "n. 防护装置"
+      ],
+      "phrases": [
+        [
+          "safeguard the interests of",
+          "维护……的利益"
+        ],
+        [
+          "safeguard against",
+          "防范；保护免受……"
+        ],
+        [
+          "legal safeguards",
+          "法律保障措施"
+        ]
+      ],
+      "sentences": [
+        [
+          "Strong laws are needed to safeguard personal information.",
+          "需要强有力的法律来保护个人信息。"
+        ],
+        [
+          "The system includes safeguards against unauthorized access.",
+          "该系统设有防止未经授权访问的安全措施。"
+        ]
+      ],
+      "forms": [
+        "safeguarding（n. 保护；保障）",
+        "safeguarded（adj. 受到保护的）",
+        "safeguarder（n. 保护者，较少用）"
+      ],
+      "confusables": [
+        [
+          "safeguard",
+          "protect",
+          "safeguard 常强调预防风险的保障措施；protect 泛指保护人或事物免受伤害"
         ]
       ]
     }
