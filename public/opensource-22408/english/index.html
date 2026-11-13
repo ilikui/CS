@@ -470,7 +470,7 @@ window.onload=function(){
  function textOf(x){if(typeof x==='string')return x;if(Array.isArray(x))return x.map(textOf).filter(Boolean).join('；');if(x&&typeof x==='object')return x.i||x.text||x.value||x.content||'';return '';}
  function collectPhrases(data){
    const out=[],seen=new Set();
-   function phraseText(v){return textOf(v).replace(/<[^>]*>/g,'').trim();}
+   function clean(v){return textOf(v).replace(/<[^>]*>/g,'').trim();}
    function translationOf(v){
      const found=[];
      function scan(x){if(!x||typeof x!=='object')return;if(Array.isArray(x)){x.forEach(scan);return;}
@@ -480,21 +480,14 @@ window.onload=function(){
      }
      scan(v);return [...new Set(found)].slice(0,2).join('；');
    }
-   function walk(o,key=''){
+   function walk(o){
      if(!o||typeof o!=='object')return;
-     if(Array.isArray(o)){o.forEach(v=>walk(v,key));return;}
-     if(key==='phraseItem'){
-       const en=phraseText(o.head||o.headword||o.phrase||o.word||o.text);
-       const zh=translationOf(o.trs||o.tr||o.translation||[]);
-       if(en&&en.length<100&&!seen.has(en.toLowerCase())){seen.add(en.toLowerCase());out.push({en,zh});}
-       return;
+     if(Array.isArray(o)){o.forEach(walk);return;}
+     const en=clean(o.head||o.headword||o.phrase||o.phr||'');
+     if(en&&en.length<100&&(o.trs||o.tr||o.translation)&&!seen.has(en.toLowerCase())){
+       seen.add(en.toLowerCase());out.push({en,zh:translationOf(o.trs||o.tr||o.translation)});
      }
-     if(/^(phrs|phrases|phrase)$/i.test(key)){
-       if(Array.isArray(o))o.forEach(v=>walk(v,'phraseItem'));
-       else Object.keys(o).forEach(k=>walk(o[k],/^(phrs|phrases|phrase)$/i.test(k)?k:'phraseItem'));
-       return;
-     }
-     Object.keys(o).forEach(k=>walk(o[k],k));
+     Object.values(o).forEach(walk);
    }
    walk(data);return out.slice(0,12);
  }
