@@ -13,7 +13,7 @@ permissions:
 
 concurrency:
   group: import-redbook-vocabulary-v3
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   import-redbook:
