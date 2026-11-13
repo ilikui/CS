@@ -109,7 +109,9 @@ def load_collection(apkg: Path):
         # shell database that can be present alongside it.
         databases = []
         for entry in candidates:
+            temp = apkg.parent / (apkg.stem + "-" + re.sub(r"[^a-zA-Z0-9]+","_",entry.filename) + ".sqlite")
             payload = zf.read(entry.filename)
+            db_bytes = None
             if payload.startswith(b"SQLite format 3"):
                 db_bytes = payload
             elif payload.startswith(bytes.fromhex("28b52ffd")):
@@ -129,7 +131,6 @@ def load_collection(apkg: Path):
             else:
                 print("Skipping unsupported collection member:", entry.filename)
                 continue
-            temp = apkg.parent / (apkg.stem + "-" + re.sub(r"[^a-zA-Z0-9]+","_",entry.filename) + ".sqlite")
             if db_bytes is not None:
                 temp.write_bytes(db_bytes)
             probe = sqlite3.connect(f"file:{temp}?mode=ro", uri=True)
