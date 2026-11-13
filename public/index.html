@@ -115,7 +115,7 @@ async function load(){
   status.innerHTML='<h2>暂时无法连接知识库</h2><p class="empty">'+esc(e.message)+'</p><p><a href="https://github.com/ilikui/CS/tree/cloudflare-pages" target="_blank" rel="noopener">直接打开 GitHub 笔记仓库</a></p>';
  }
 }
-function rawAsset(path,src){if(/^(https?:|data:|blob:|\/\/|#|\/)/i.test(src))return src;const base=path.split('/').slice(0,-1).join('/');const joined=(base?base+'/':'')+src;const stack=[];for(const part of joined.split('/')){if(part==='..')stack.pop();else if(part!=='.'&&part!=='')stack.push(part)}return 'https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/'+stack.map(encodeURIComponent).join('/')}
+function rawAsset(path,src){if(/^(https?:|data:|blob:|\/\/|#|\/)/i.test(src))return src;const base=path.split('/').slice(0,-1).join('/');const clean=String(src).split(/[?#]/,1)[0];const suffix=String(src).slice(clean.length);const joined=(base?base+'/':'')+clean;const stack=[];for(const rawPart of joined.split('/')){let part=rawPart;try{part=decodeURIComponent(rawPart)}catch(_){}if(part==='..')stack.pop();else if(part!=='.'&&part!=='')stack.push(part)}return 'https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/'+stack.map(encodeURIComponent).join('/')+suffix}
 function renderMarkdown(md){
  const slash=String.fromCharCode(92);
  const tokens=[
@@ -198,14 +198,19 @@ load().then(()=>{const m=location.hash.match(/^#doc=(.+)$/);if(m){const path=dec
      const md=await response.text();
      if(window.marked?.parse){window.marked.setOptions({gfm:true,breaks:false});content.innerHTML=renderMarkdown(md);}
      else content.innerHTML='<pre class="markdown-fallback"></pre>',content.querySelector('pre').textContent=md;
-     const base=path.split('/').slice(0,-1).join('/');
      content.querySelectorAll('img').forEach(img=>{
        const src=img.getAttribute('src')||'';
-       if(src&&!/^(https?:|data:|blob:|\/\/|#|\/)/i.test(src)){
-         const stack=[];for(const part of (base?base+'/':'').concat(src).split('/')){if(part==='..')stack.pop();else if(part!=='.'&&part)stack.push(part);}
-         img.src='https://raw.githubusercontent.com/ilikui/CS/cloudflare-pages/'+stack.map(encodeURIComponent).join('/');
-       }
+       if(src)img.src=rawAsset(path,src);
        img.loading='lazy';
+       img.onerror=()=>{img.dataset.loadError='true';img.alt=(img.alt||'图片')+'（图片加载失败，可打开原图）';};
+     });
+     content.querySelectorAll('a').forEach(link=>{
+       const href=link.getAttribute('href')||'';
+       if(href&&!/^(https?:|mailto:|#|\/)/i.test(href)){
+         const target=rawAsset(path,href);
+         link.href=/\.md(?:[?#].*)?$/i.test(href)?'https://github.com/ilikui/CS/blob/cloudflare-pages/'+target.replace('https://raw.githubusercontent.com/ilikui/CS/cloudflare-pages/',''):target;
+       }
+       if(link.href){link.target='_blank';link.rel='noopener';}
      });
      if(window.CSRender?.enhance)await window.CSRender.enhance(content);
      history.replaceState(null,'','#doc='+encodeURIComponent(path));
