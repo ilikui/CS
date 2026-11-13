@@ -2,7 +2,7 @@
   "version": 1,
   "language": "en-zh",
   "scope": "考研英语高频核心词首批离线拓展",
-  "note": "共82个离线核心词条，按考研必考词单元持续扩充。 本次补充必考词 Unit1 缺失的 23 个词条，重点整理高频短语、固定搭配、中文释义及考研语境例句。",
+  "note": "共82个离线核心词条，按考研必考词单元持续扩充。 本次补充必考词 Unit1 缺失的 23 个词条，重点整理高频短语、固定搭配、中文释义及考研语境例句。 Unit2 第一批补充：mediate—abstract，共16个词条，强化媒介、教育、制度、社会议题等阅读语境中的固定搭配。",
   "entries": {
     "abandon": {
       "pos": "verb",
@@ -4697,6 +4697,772 @@
           "provided that",
           "providing that",
           "两者都可表示“只要”；provided that 在正式书面语中更常见"
+        ]
+      ]
+    },
+    "mediate": {
+      "pos": "verb",
+      "meanings": [
+        "调解；斡旋",
+        "居间促成；作为中介",
+        "（在两者之间）影响；连接"
+      ],
+      "phrases": [
+        [
+          "mediate a dispute",
+          "调解争端"
+        ],
+        [
+          "mediate between A and B",
+          "在A和B之间调解"
+        ],
+        [
+          "mediate negotiations",
+          "斡旋谈判"
+        ],
+        [
+          "mediate the relationship",
+          "影响两者之间的关系"
+        ]
+      ],
+      "sentences": [
+        [
+          "An independent organization was invited to mediate the dispute.",
+          "一家独立机构受邀调解这场争端。"
+        ],
+        [
+          "Social institutions can mediate between individuals and the state.",
+          "社会制度能够在个人与国家之间发挥中介作用。"
+        ]
+      ],
+      "forms": [
+        "mediation（n. 调解；斡旋）",
+        "mediator（n. 调解人；中介）",
+        "mediatory（adj. 调解的）"
+      ],
+      "confusables": [
+        [
+          "mediate",
+          "intervene",
+          "mediate 强调居中协调以解决分歧；intervene 泛指介入某事"
+        ]
+      ]
+    },
+    "meditation": {
+      "pos": "noun",
+      "meanings": [
+        "沉思；冥想",
+        "深思熟虑；思考"
+      ],
+      "phrases": [
+        [
+          "deep meditation",
+          "深入沉思"
+        ],
+        [
+          "a period of meditation",
+          "一段冥想时间"
+        ],
+        [
+          "meditation on life",
+          "对人生的思考"
+        ],
+        [
+          "meditation practice",
+          "冥想练习"
+        ]
+      ],
+      "sentences": [
+        [
+          "Meditation may help people manage stress and improve concentration.",
+          "冥想可能有助于人们管理压力、提高注意力。"
+        ],
+        [
+          "Her meditation on the meaning of work led to a change in career.",
+          "她对工作意义的思考促使她改变了职业方向。"
+        ]
+      ],
+      "forms": [
+        "meditate（v. 沉思；冥想）",
+        "meditative（adj. 沉思的；冥想的）",
+        "meditator（n. 冥想者）"
+      ],
+      "confusables": [
+        [
+          "meditation",
+          "reflection",
+          "meditation 常指专注的沉思或冥想；reflection 强调回顾、反思"
+        ]
+      ]
+    },
+    "medium": {
+      "pos": "noun / adjective",
+      "meanings": [
+        "媒介；手段；传播媒介",
+        "中间；中等程度",
+        "（艺术）材料；表现形式",
+        "中等的；适中的"
+      ],
+      "phrases": [
+        [
+          "a medium of communication",
+          "交流媒介"
+        ],
+        [
+          "the mass media",
+          "大众传媒"
+        ],
+        [
+          "a happy medium",
+          "折中办法"
+        ],
+        [
+          "medium-sized enterprises",
+          "中型企业"
+        ]
+      ],
+      "sentences": [
+        [
+          "Language is a powerful medium for transmitting culture.",
+          "语言是传承文化的有力媒介。"
+        ],
+        [
+          "The government needs to find a happy medium between growth and environmental protection.",
+          "政府需要在经济增长与环境保护之间找到折中办法。"
+        ]
+      ],
+      "forms": [
+        "media（n. 媒体；medium 的复数形式之一）",
+        "mediate（v. 调解；居中促成）",
+        "mediocre（adj. 平庸的）"
+      ],
+      "confusables": [
+        [
+          "medium",
+          "means",
+          "medium 强调传播或表达的媒介；means 强调实现目的的方法或手段"
+        ]
+      ]
+    },
+    "media": {
+      "pos": "noun",
+      "meanings": [
+        "媒体；传播媒介（medium 的复数）",
+        "大众传媒；新闻媒体"
+      ],
+      "phrases": [
+        [
+          "social media",
+          "社交媒体"
+        ],
+        [
+          "mass media",
+          "大众传媒"
+        ],
+        [
+          "media coverage",
+          "媒体报道"
+        ],
+        [
+          "media attention",
+          "媒体关注"
+        ]
+      ],
+      "sentences": [
+        [
+          "Social media have changed the way people obtain information.",
+          "社交媒体改变了人们获取信息的方式。"
+        ],
+        [
+          "The issue attracted considerable media attention.",
+          "这一问题引起了媒体的广泛关注。"
+        ]
+      ],
+      "forms": [
+        "medium（n. 媒介；中间）",
+        "mediate（v. 调解）",
+        "mediation（n. 调解）"
+      ],
+      "confusables": [
+        [
+          "media",
+          "press",
+          "media 范围较广，包括电视、网络等；press 通常指新闻出版业或新闻界"
+        ]
+      ]
+    },
+    "elaborate": {
+      "pos": "adjective / verb",
+      "meanings": [
+        "详尽的；复杂精巧的",
+        "精心制作的",
+        "详细说明； elaboration"
+      ],
+      "phrases": [
+        [
+          "elaborate on an idea",
+          "详细阐述一个观点"
+        ],
+        [
+          "an elaborate plan",
+          "周密的计划"
+        ],
+        [
+          "elaborate design",
+          "精巧的设计"
+        ],
+        [
+          "elaborate system",
+          "复杂的系统"
+        ]
+      ],
+      "sentences": [
+        [
+          "The report provides an elaborate account of the causes of inequality.",
+          "这份报告详细说明了不平等产生的原因。"
+        ],
+        [
+          "The author elaborated on the social consequences of the policy.",
+          "作者进一步阐述了这项政策的社会后果。"
+        ]
+      ],
+      "forms": [
+        "elaboration（n. 详尽阐述；精心制作）",
+        "elaborately（adv. 精巧地；详尽地）"
+      ],
+      "confusables": [
+        [
+          "elaborate",
+          "complicated",
+          "elaborate 强调细致、精心设计；complicated 强调复杂难懂"
+        ]
+      ]
+    },
+    "elegant": {
+      "pos": "adjective",
+      "meanings": [
+        "优雅的；雅致的",
+        "简洁巧妙的；精妙的",
+        "（论证、解决方案）简明而有效的"
+      ],
+      "phrases": [
+        [
+          "an elegant solution",
+          "巧妙的解决方案"
+        ],
+        [
+          "elegant design",
+          "优雅的设计"
+        ],
+        [
+          "an elegant style",
+          "优雅的风格"
+        ],
+        [
+          "an elegant argument",
+          "精妙的论证"
+        ]
+      ],
+      "sentences": [
+        [
+          "The researcher proposed an elegant solution to a difficult problem.",
+          "研究人员为一个难题提出了巧妙的解决方案。"
+        ],
+        [
+          "An elegant theory explains complex phenomena with simple principles.",
+          "精妙的理论用简单原理解释复杂现象。"
+        ]
+      ],
+      "forms": [
+        "elegance（n. 优雅；简洁）",
+        "elegantly（adv. 优雅地；巧妙地）"
+      ],
+      "confusables": [
+        [
+          "elegant",
+          "graceful",
+          "elegant 可指设计或思想简洁精妙；graceful 多强调动作或姿态优美"
+        ]
+      ]
+    },
+    "element": {
+      "pos": "noun",
+      "meanings": [
+        "要素；组成部分",
+        "元素；基本成分",
+        "（学科）基础；入门"
+      ],
+      "phrases": [
+        [
+          "a key element of",
+          "……的关键要素"
+        ],
+        [
+          "chemical element",
+          "化学元素"
+        ],
+        [
+          "an element of surprise",
+          "一丝意外因素"
+        ],
+        [
+          "the human element",
+          "人的因素"
+        ]
+      ],
+      "sentences": [
+        [
+          "Trust is a key element of successful cooperation.",
+          "信任是成功合作的关键要素。"
+        ],
+        [
+          "The human element should not be ignored when designing new technology.",
+          "设计新技术时不应忽视人的因素。"
+        ]
+      ],
+      "forms": [
+        "elemental（adj. 基本的；自然力的）",
+        "elementary（adj. 基本的；初级的）",
+        "elementally（adv. 从基本层面）"
+      ],
+      "confusables": [
+        [
+          "element",
+          "factor",
+          "element 指构成整体的组成部分；factor 指影响结果的因素"
+        ]
+      ]
+    },
+    "elementary": {
+      "pos": "adjective",
+      "meanings": [
+        "基本的；初级的",
+        "容易的；简单的",
+        "基础教育阶段的"
+      ],
+      "phrases": [
+        [
+          "elementary education",
+          "初等教育"
+        ],
+        [
+          "elementary school",
+          "小学"
+        ],
+        [
+          "elementary knowledge",
+          "基础知识"
+        ],
+        [
+          "elementary principles",
+          "基本原理"
+        ]
+      ],
+      "sentences": [
+        [
+          "Students need a firm grasp of elementary mathematical concepts.",
+          "学生需要牢固掌握基础数学概念。"
+        ],
+        [
+          "The problem is not as elementary as it first appears.",
+          "这个问题并不像最初看起来那么简单。"
+        ]
+      ],
+      "forms": [
+        "element（n. 要素；元素）",
+        "elementally（adv. 基本地）"
+      ],
+      "confusables": [
+        [
+          "elementary",
+          "fundamental",
+          "elementary 常指初级或基础层次；fundamental 强调根本性、基础性"
+        ]
+      ]
+    },
+    "eliminate": {
+      "pos": "verb",
+      "meanings": [
+        "消除；排除",
+        "淘汰；使出局",
+        "（数学）消去；消元"
+      ],
+      "phrases": [
+        [
+          "eliminate the risk",
+          "消除风险"
+        ],
+        [
+          "eliminate poverty",
+          "消除贫困"
+        ],
+        [
+          "eliminate a candidate",
+          "淘汰一名候选者"
+        ],
+        [
+          "eliminate unnecessary steps",
+          "删去不必要的步骤"
+        ]
+      ],
+      "sentences": [
+        [
+          "The new measures aim to eliminate barriers to education.",
+          "新措施旨在消除教育障碍。"
+        ],
+        [
+          "Researchers must eliminate alternative explanations before accepting the hypothesis.",
+          "研究人员在接受该假设之前必须排除其他解释。"
+        ]
+      ],
+      "forms": [
+        "elimination（n. 消除；淘汰）",
+        "eliminator（n. 消除者；淘汰者）",
+        "eliminative（adj. 排除性的）"
+      ],
+      "confusables": [
+        [
+          "eliminate",
+          "remove",
+          "eliminate 强调彻底排除或使不再存在；remove 强调移走或去除"
+        ]
+      ]
+    },
+    "abolish": {
+      "pos": "verb",
+      "meanings": [
+        "废除；取消（制度、法律、习俗）",
+        "彻底废止"
+      ],
+      "phrases": [
+        [
+          "abolish slavery",
+          "废除奴隶制"
+        ],
+        [
+          "abolish a law",
+          "废除一项法律"
+        ],
+        [
+          "abolish the death penalty",
+          "废除死刑"
+        ],
+        [
+          "call for the abolition of",
+          "呼吁废除……"
+        ]
+      ],
+      "sentences": [
+        [
+          "Many reformers campaigned to abolish discriminatory laws.",
+          "许多改革者发起运动，要求废除歧视性法律。"
+        ],
+        [
+          "The government decided to abolish the outdated system.",
+          "政府决定废除这套过时的制度。"
+        ]
+      ],
+      "forms": [
+        "abolition（n. 废除；废止）",
+        "abolitionist（n. 废奴主义者；废除主义者）",
+        "abolitionist（adj. 主张废除的）"
+      ],
+      "confusables": [
+        [
+          "abolish",
+          "cancel",
+          "abolish 通常指废除制度、法律或习俗；cancel 常指取消计划、活动或订单"
+        ]
+      ]
+    },
+    "absence": {
+      "pos": "noun",
+      "meanings": [
+        "缺席；不在场",
+        "缺乏；不存在",
+        "（某人）不在期间"
+      ],
+      "phrases": [
+        [
+          "in the absence of",
+          "在缺乏……的情况下"
+        ],
+        [
+          "absence from work",
+          "缺勤"
+        ],
+        [
+          "absence of evidence",
+          "缺乏证据"
+        ],
+        [
+          "during one's absence",
+          "某人不在期间"
+        ]
+      ],
+      "sentences": [
+        [
+          "In the absence of reliable data, the conclusion remains uncertain.",
+          "由于缺乏可靠数据，这一结论仍不确定。"
+        ],
+        [
+          "Her prolonged absence affected the team's performance.",
+          "她长期缺席影响了团队的表现。"
+        ]
+      ],
+      "forms": [
+        "absent（adj. 缺席的；缺乏的）",
+        "absentee（n. 缺席者）",
+        "absenteeism（n. 旷工；旷课）"
+      ],
+      "confusables": [
+        [
+          "absence",
+          "lack",
+          "absence 强调不在或不存在；lack 强调缺少所需之物"
+        ]
+      ]
+    },
+    "absent": {
+      "pos": "adjective / verb",
+      "meanings": [
+        "缺席的；不在场的",
+        "缺乏的；不存在的",
+        "心不在焉的",
+        "使缺席；不参加（absent oneself）"
+      ],
+      "phrases": [
+        [
+          "be absent from",
+          "缺席……"
+        ],
+        [
+          "absent without leave",
+          "擅自缺席；未经许可离开"
+        ],
+        [
+          "an absent expression",
+          "心不在焉的神情"
+        ],
+        [
+          "absent oneself from",
+          "不参加；缺席"
+        ]
+      ],
+      "sentences": [
+        [
+          "Several members were absent from the meeting.",
+          "有几名成员没有出席会议。"
+        ],
+        [
+          "The report was notable for its absent discussion of social costs.",
+          "这份报告的显著问题在于没有讨论社会成本。"
+        ]
+      ],
+      "forms": [
+        "absence（n. 缺席；缺乏）",
+        "absentee（n. 缺席者）",
+        "absently（adv. 心不在焉地）"
+      ],
+      "confusables": [
+        [
+          "absent",
+          "missing",
+          "absent 常指人未到场或某物缺乏；missing 强调找不到或失踪"
+        ]
+      ]
+    },
+    "abroad": {
+      "pos": "adverb",
+      "meanings": [
+        "在国外；到国外",
+        "广泛传播；流传（较正式）"
+      ],
+      "phrases": [
+        [
+          "study abroad",
+          "出国留学"
+        ],
+        [
+          "go abroad",
+          "出国"
+        ],
+        [
+          "from abroad",
+          "从国外；来自海外"
+        ],
+        [
+          "travel abroad",
+          "出国旅行"
+        ]
+      ],
+      "sentences": [
+        [
+          "Studying abroad can expose students to different academic cultures.",
+          "出国留学能让学生接触不同的学术文化。"
+        ],
+        [
+          "The news quickly spread abroad through online networks.",
+          "这一消息通过网络迅速传播开来。"
+        ]
+      ],
+      "forms": [
+        "abroad（adv. 在国外）",
+        "overseas（adv./adj. 在海外；海外的）"
+      ],
+      "confusables": [
+        [
+          "abroad",
+          "aboard",
+          "abroad 表示在国外；aboard 表示在船、飞机或火车上"
+        ]
+      ]
+    },
+    "absolute": {
+      "pos": "adjective / noun",
+      "meanings": [
+        "绝对的；完全的",
+        "确凿的；不容置疑的",
+        "不受限制的；独立的",
+        "绝对真理或绝对事物（名词）"
+      ],
+      "phrases": [
+        [
+          "absolute power",
+          "绝对权力"
+        ],
+        [
+          "absolute freedom",
+          "绝对自由"
+        ],
+        [
+          "absolute certainty",
+          "完全确定"
+        ],
+        [
+          "an absolute necessity",
+          "绝对必要的事物"
+        ]
+      ],
+      "sentences": [
+        [
+          "Few social questions can be answered with absolute certainty.",
+          "很少有社会问题能够得到绝对确定的答案。"
+        ],
+        [
+          "The protection of basic rights should not depend on absolute political power.",
+          "基本权利的保护不应取决于绝对政治权力。"
+        ]
+      ],
+      "forms": [
+        "absolutely（adv. 绝对地；完全地）",
+        "absoluteness（n. 绝对性）",
+        "absolutism（n. 专制主义；绝对主义）"
+      ],
+      "confusables": [
+        [
+          "absolute",
+          "complete",
+          "absolute 强调不受限制或没有例外；complete 强调完整、全部"
+        ]
+      ]
+    },
+    "absorb": {
+      "pos": "verb",
+      "meanings": [
+        "吸收（液体、气体、热量等）",
+        "理解；掌握（信息）",
+        "使全神贯注；吸引",
+        "承担；缓冲（成本、冲击）"
+      ],
+      "phrases": [
+        [
+          "absorb information",
+          "吸收信息"
+        ],
+        [
+          "be absorbed in",
+          "全神贯注于"
+        ],
+        [
+          "absorb the shock",
+          "吸收冲击；缓冲影响"
+        ],
+        [
+          "absorb the cost",
+          "承担成本"
+        ]
+      ],
+      "sentences": [
+        [
+          "Children absorb language through interaction with others.",
+          "儿童通过与他人互动习得语言。"
+        ],
+        [
+          "Small businesses may struggle to absorb rising energy costs.",
+          "小企业可能难以承担不断上涨的能源成本。"
+        ]
+      ],
+      "forms": [
+        "absorption（n. 吸收；专注）",
+        "absorbed（adj. 全神贯注的）",
+        "absorbent（adj. 吸水的；能吸收的）",
+        "absorbing（adj. 引人入胜的）"
+      ],
+      "confusables": [
+        [
+          "absorb",
+          "digest",
+          "absorb 强调吸收或接纳；digest 强调消化、理解并整理信息"
+        ]
+      ]
+    },
+    "abstract": {
+      "pos": "adjective / noun / verb",
+      "meanings": [
+        "抽象的；理论上的",
+        "摘要；概要",
+        "抽象概念；抽象艺术",
+        "提取；摘录"
+      ],
+      "phrases": [
+        [
+          "abstract concept",
+          "抽象概念"
+        ],
+        [
+          "abstract thinking",
+          "抽象思维"
+        ],
+        [
+          "an abstract of the paper",
+          "论文摘要"
+        ],
+        [
+          "in the abstract",
+          "抽象地；理论上"
+        ]
+      ],
+      "sentences": [
+        [
+          "Abstract ideas become meaningful when connected with practical experience.",
+          "抽象思想与实践经验联系起来时才会变得有意义。"
+        ],
+        [
+          "The article begins with an abstract summarizing its main findings.",
+          "文章以一段概述主要研究发现的摘要开篇。"
+        ]
+      ],
+      "forms": [
+        "abstraction（n. 抽象；抽象概念）",
+        "abstractly（adv. 抽象地）",
+        "abstracted（adj. 心不在焉的）"
+      ],
+      "confusables": [
+        [
+          "abstract",
+          "theoretical",
+          "abstract 强调脱离具体事物；theoretical 强调基于理论而非实践"
         ]
       ]
     }
