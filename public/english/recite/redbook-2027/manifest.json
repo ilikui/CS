@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "source": "CHNragdoll/anki-pipeline · 2027 红宝书完整真题例句版",
+  "sourceRepository": "https://github.com/CHNragdoll/anki-pipeline",
+  "release": "redbook-2027.10.06",
+  "asset": "redbook-2027.apkg",
+  "sha256": "fb1756f2c37dc332b1a5bf7f015d969297be2976db6d3aca8869091e8f91ee58",
+  "total": 0,
+  "skippedNonWordNotes": 1,
+  "chunkSize": 300,
+  "chunks": [],
+  "generatedAt": "2026-11-13T13:46:07.941137+00:00",
+  "notice": "词条字段来自公开 Anki 发布包；原始 HTML 已转为纯文本，音频附件不随静态 JSON 发布。请以每条卡片的来源字段为准。"
+}
