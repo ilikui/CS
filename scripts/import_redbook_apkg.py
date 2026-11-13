@@ -259,17 +259,17 @@ def convert(apkg: Path, out_dir: Path):
             skipped += 1
             continue
 
-        word = first_match(fields, [r"\bword\\b", r"headword", r"单词", r"词头", r"目标词", r"词目"])
+        word = first_match(fields, [r"\bword\b", r"headword", r"单词", r"词头", r"目标词", r"词目"])
         if not looks_like_headword(word):
             word = next((f["text"] for f in fields if looks_like_headword(f["text"])), "")
         if not word:
             skipped += 1
             continue
 
-        phonetic = first_match(fields, [r"phonetic", r"pronunciation", r"\bipa\\b", r"音标", r"发音"])
-        level = first_match(fields, [r"\blevel\\b", r"等级", r"考频", r"频率"])
-        word_forms = first_match(fields, [r"word.?forms", r"\bforms\\b", r"词形", r"派生"])
-        meta = first_match(fields, [r"\bmeta\\b", r"来源", r"出处", r"年份", r"考试"])
+        phonetic = first_match(fields, [r"phonetic", r"pronunciation", r"\bipa\b", r"音标", r"发音"])
+        level = first_match(fields, [r"\blevel\b", r"等级", r"考频", r"频率"])
+        word_forms = first_match(fields, [r"word.?forms", r"\bforms\b", r"词形", r"派生"])
+        meta = first_match(fields, [r"\bmeta\b", r"来源", r"出处", r"年份", r"考试"])
         example_parser = ExampleIndexParser()
         if examples_html:
             example_parser.feed(examples_html)
