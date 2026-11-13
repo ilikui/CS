@@ -91,18 +91,52 @@ def looks_like_headword(text: str) -> bool:
 
 
 def load_collection(apkg: Path):
+    db_path = apkg.parent / (apkg.stem + ".sqlite")
     with zipfile.ZipFile(apkg) as zf:
-        names = set(zf.namelist())
-        db_name = next((n for n in ("collection.anki21", "collection.anki2", "collection.anki21b") if n in names), None)
-        if not db_name:
-            raise RuntimeError("APKG 中未找到 collection.anki21 / collection.anki2")
-        db_path = apkg.parent / (apkg.stem + ".sqlite")
-        with zf.open(db_name) as src, db_path.open("wb") as dst:
-            while True:
-                block = src.read(8 * 1024 * 1024)
-                if not block:
-                    break
-                dst.write(block)
+        entries = zf.infolist()
+        candidates = [e for e in entries if e.filename in ("collection.anki21", "collection.anki2", "collection.anki21b")]
+        print("APKG members:", json.dumps([{"name":e.filename,"size":e.file_size} for e in entries[:30]], ensure_ascii=False))
+        if not candidates:
+            raise RuntimeError("APKG 中未找到 collection.anki21 / collection.anki2 / collection.anki21b")
+        inspected = []
+        for entry in candidates:
+            head = zf.read(entry.filename)[:16]
+            inspected.append({"name":entry.filename,"magic":head.hex(),"size":entry.file_size})
+        print("Collection candidates:", json.dumps(inspected, ensure_ascii=False))
+        # Modern Anki may use a zstd-compressed .anki21b database. Prefer the
+        # candidate that actually contains the most notes, not a compatibility
+        # shell database that can be present alongside it.
+        databases = []
+        for entry in candidates:
+            payload = zf.read(entry.filename)
+            if payload.startswith(b"SQLite format 3"):
+                db_bytes = payload
+            elif payload.startswith(bytes.fromhex("28b52ffd")):
+                try:
+                    import zstandard
+                except ImportError as exc:
+                    raise RuntimeError("发现 zstd 压缩的 collection.anki21b，请安装 zstandard") from exc
+                db_bytes = zstandard.ZstdDecompressor().decompress(payload)
+            else:
+                print("Skipping unsupported collection member:", entry.filename)
+                continue
+            temp = apkg.parent / (apkg.stem + "-" + re.sub(r"[^a-zA-Z0-9]+","_",entry.filename) + ".sqlite")
+            temp.write_bytes(db_bytes)
+            probe = sqlite3.connect(f"file:{temp}?mode=ro", uri=True)
+            tables = {row[0] for row in probe.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+            count = probe.execute("SELECT COUNT(*) FROM notes").fetchone()[0] if "notes" in tables else 0
+            print("Collection database:", entry.filename, "tables=", sorted(tables), "notes=", count)
+            probe.close()
+            databases.append((count, temp))
+        if not databases:
+            raise RuntimeError("APKG 中没有可识别的 SQLite collection 数据库")
+        _, selected = max(databases, key=lambda item:item[0])
+        if db_path.exists():
+            db_path.unlink()
+        selected.replace(db_path)
+        for _, other in databases:
+            if other.exists() and other != db_path:
+                other.unlink()
     conn = sqlite3.connect(f"file:{db_path}?mode=ro", uri=True)
     conn.row_factory = sqlite3.Row
     integrity = conn.execute("PRAGMA integrity_check").fetchone()[0]
@@ -112,8 +146,9 @@ def load_collection(apkg: Path):
     col = conn.execute("SELECT models, decks FROM col LIMIT 1").fetchone()
     models = json.loads(col["models"])
     decks = json.loads(col["decks"])
+    print("Selected collection model names:", [m.get("name","") for m in models.values()])
+    print("Selected collection model field counts:", {m.get("name",""):len(m.get("flds",[])) for m in models.values()})
     return conn, models, decks, db_path
-
 
 def convert(apkg: Path, out_dir: Path):
     digest = hashlib.sha256(apkg.read_bytes()).hexdigest()
