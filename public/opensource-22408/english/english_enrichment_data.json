@@ -2,7 +2,7 @@
   "version": 1,
   "language": "en-zh",
   "scope": "考研英语高频核心词首批离线拓展",
-  "note": "共40个首批离线核心词条。例句为学习用途原创短句；中文释义按常见考研语境整理。后续按词库单元继续扩充。",
+  "note": "共60个离线核心词条。当前优先按考研必考词单元推进；例句为学习用途原创短句，中文释义按常见考研语境整理。",
   "entries": {
     "abandon": {
       "pos": "verb",
@@ -1738,6 +1738,883 @@
           "require",
           "acquire",
           "require 是“需要/要求”；acquire 是“获得/习得”"
+        ]
+      ]
+    },
+    "radiate": {
+      "pos": "verb",
+      "meanings": [
+        "散发；发出（光、热、能量等）",
+        "流露；显露（情感、品质等）",
+        "呈辐射状延伸"
+      ],
+      "phrases": [
+        [
+          "radiate heat",
+          "散发热量"
+        ],
+        [
+          "radiate confidence",
+          "流露出自信"
+        ],
+        [
+          "radiate from",
+          "从……向外辐射"
+        ]
+      ],
+      "sentences": [
+        [
+          "The sun radiates heat and light.",
+          "太阳散发热量和光。"
+        ],
+        [
+          "Her face seemed to radiate happiness.",
+          "她的脸上似乎洋溢着幸福。"
+        ]
+      ],
+      "forms": [
+        "radiation（n. 辐射；放射）",
+        "radiant（adj. 容光焕发的；光芒四射的）",
+        "radioactive（adj. 放射性的）"
+      ],
+      "confusables": [
+        [
+          "radiate",
+          "emit",
+          "radiate 强调向四周发散；emit 泛指发出声音、光、气体等"
+        ]
+      ]
+    },
+    "radiant": {
+      "pos": "adjective",
+      "meanings": [
+        "容光焕发的；喜气洋洋的",
+        "光芒四射的；明亮的",
+        "辐射的；放射的"
+      ],
+      "phrases": [
+        [
+          "a radiant smile",
+          "灿烂的笑容"
+        ],
+        [
+          "radiant energy",
+          "辐射能"
+        ],
+        [
+          "radiant heat",
+          "辐射热"
+        ]
+      ],
+      "sentences": [
+        [
+          "She gave us a radiant smile when she heard the news.",
+          "听到这个消息时，她向我们露出了灿烂的笑容。"
+        ],
+        [
+          "The room was filled with radiant sunlight.",
+          "房间里充满了明亮的阳光。"
+        ]
+      ],
+      "forms": [
+        "radiance（n. 光辉；容光焕发）",
+        "radiantly（adv. 容光焕发地）",
+        "radiate（v. 发光；散发）"
+      ],
+      "confusables": [
+        [
+          "radiant",
+          "brilliant",
+          "radiant 常强调光芒或神采；brilliant 还可表示才华出众、极聪明"
+        ]
+      ]
+    },
+    "radical": {
+      "pos": "adjective / noun",
+      "meanings": [
+        "根本的；彻底的",
+        "激进的； radical 的政治立场",
+        "n. 激进分子；（化学）基团、游离基"
+      ],
+      "phrases": [
+        [
+          "radical change",
+          "根本性变化"
+        ],
+        [
+          "radical reform",
+          "彻底改革"
+        ],
+        [
+          "a radical idea",
+          "激进的想法"
+        ]
+      ],
+      "sentences": [
+        [
+          "The new policy represents a radical change in direction.",
+          "这项新政策代表着方向上的根本转变。"
+        ],
+        [
+          "We need to address the problem at its most radical level.",
+          "我们需要从最根本的层面解决这个问题。"
+        ]
+      ],
+      "forms": [
+        "radically（adv. 根本地；彻底地）",
+        "radicalism（n. 激进主义）",
+        "radicalize（v. 使激进化）"
+      ],
+      "confusables": [
+        [
+          "radical",
+          "fundamental",
+          "radical 强调彻底、剧烈或激进；fundamental 强调基础性和根本重要性"
+        ]
+      ]
+    },
+    "object": {
+      "pos": "noun / verb",
+      "meanings": [
+        "n. 物体；物品；对象",
+        "n. 目标；目的（较正式）",
+        "n. （语法）宾语",
+        "v. 反对；不赞成（常接 to）"
+      ],
+      "phrases": [
+        [
+          "object to doing sth.",
+          "反对做某事"
+        ],
+        [
+          "the object of the study",
+          "研究对象"
+        ],
+        [
+          "the main object",
+          "主要目标"
+        ]
+      ],
+      "sentences": [
+        [
+          "Some residents object to building a factory nearby.",
+          "一些居民反对在附近建厂。"
+        ],
+        [
+          "The object of the experiment is to test the theory.",
+          "实验的目的是检验这一理论。"
+        ]
+      ],
+      "forms": [
+        "objection（n. 反对；异议）",
+        "objective（n. 目标；adj. 客观的）",
+        "objector（n. 反对者）"
+      ],
+      "confusables": [
+        [
+          "object",
+          "objective",
+          "object 作名词可指物体或目标；objective 常指具体目标，也可作形容词“客观的”"
+        ]
+      ]
+    },
+    "objective": {
+      "pos": "noun / adjective",
+      "meanings": [
+        "n. 目标；目的；（军事）攻击目标",
+        "adj. 客观的；不带个人感情的",
+        "adj. 基于事实的；客观存在的"
+      ],
+      "phrases": [
+        [
+          "achieve an objective",
+          "实现目标"
+        ],
+        [
+          "objective assessment",
+          "客观评估"
+        ],
+        [
+          "be objective about",
+          "客观地看待……"
+        ]
+      ],
+      "sentences": [
+        [
+          "The main objective is to improve public health.",
+          "主要目标是改善公众健康。"
+        ],
+        [
+          "Researchers should remain objective when interpreting the results.",
+          "研究人员在解释结果时应保持客观。"
+        ]
+      ],
+      "forms": [
+        "objectively（adv. 客观地）",
+        "objectivity（n. 客观性）",
+        "object（n. 对象；目标；v. 反对）"
+      ],
+      "confusables": [
+        [
+          "objective",
+          "subjective",
+          "objective 指基于事实的客观判断；subjective 指受个人感受或观点影响的主观判断"
+        ]
+      ]
+    },
+    "objection": {
+      "pos": "noun",
+      "meanings": [
+        "反对；异议",
+        "反对的理由；不赞成之处"
+      ],
+      "phrases": [
+        [
+          "raise an objection",
+          "提出异议"
+        ],
+        [
+          "have no objection to",
+          "不反对……"
+        ],
+        [
+          "objection to doing sth.",
+          "反对做某事"
+        ]
+      ],
+      "sentences": [
+        [
+          "Several members raised objections to the proposal.",
+          "几位成员对这项提议提出了异议。"
+        ],
+        [
+          "I have no objection to changing the schedule.",
+          "我不反对调整日程。"
+        ]
+      ],
+      "forms": [
+        "object（v. 反对；n. 物体）",
+        "objective（adj. 客观的；n. 目标）",
+        "objectionable（adj. 令人反感的；不合意的）"
+      ],
+      "confusables": [
+        [
+          "objection",
+          "opposition",
+          "objection 常指具体异议或反对理由；opposition 常指持续的反对立场或力量"
+        ]
+      ]
+    },
+    "obligation": {
+      "pos": "noun",
+      "meanings": [
+        "义务；责任",
+        "（法律或道德上的）约束",
+        "债务；欠款（复数 obligations）"
+      ],
+      "phrases": [
+        [
+          "have an obligation to do sth.",
+          "有义务做某事"
+        ],
+        [
+          "legal obligation",
+          "法律义务"
+        ],
+        [
+          "a sense of obligation",
+          "责任感"
+        ]
+      ],
+      "sentences": [
+        [
+          "Parents have an obligation to protect their children.",
+          "父母有责任保护自己的孩子。"
+        ],
+        [
+          "The agreement creates a legal obligation for both parties.",
+          "这项协议使双方都承担法律义务。"
+        ]
+      ],
+      "forms": [
+        "oblige（v. 迫使；帮忙）",
+        "obliged（adj. 感激的；必须的）",
+        "obligatory（adj. 义务性的；强制的）"
+      ],
+      "confusables": [
+        [
+          "obligation",
+          "responsibility",
+          "obligation 强调必须履行的义务；responsibility 强调应承担的职责或责任"
+        ]
+      ]
+    },
+    "oblige": {
+      "pos": "verb",
+      "meanings": [
+        "迫使；使不得不（常用被动）",
+        "帮忙；施恩于（常见于 oblige sb.）",
+        "使感激；使满意"
+      ],
+      "phrases": [
+        [
+          "be obliged to do sth.",
+          "不得不做某事；有义务做某事"
+        ],
+        [
+          "oblige sb. with sth.",
+          "给某人提供帮助/某物"
+        ],
+        [
+          "much obliged",
+          "非常感激"
+        ]
+      ],
+      "sentences": [
+        [
+          "The law obliges companies to protect customer data.",
+          "法律要求企业保护客户数据。"
+        ],
+        [
+          "Could you oblige me with a copy of the report?",
+          "您能帮我提供一份报告吗？"
+        ]
+      ],
+      "forms": [
+        "obligation（n. 义务；责任）",
+        "obligatory（adj. 强制性的）",
+        "obliging（adj. 乐于助人的）"
+      ],
+      "confusables": [
+        [
+          "oblige",
+          "force",
+          "oblige 常指因规则、责任或情势而使某人不得不做；force 强调强制力量"
+        ]
+      ]
+    },
+    "obscure": {
+      "pos": "adjective / verb",
+      "meanings": [
+        "adj. 鲜为人知的；不出名的",
+        "adj. 难以理解的；含糊的",
+        "v. 遮掩；使模糊；掩盖"
+      ],
+      "phrases": [
+        [
+          "remain obscure",
+          "仍不为人所知"
+        ],
+        [
+          "an obscure reference",
+          "含糊的引述"
+        ],
+        [
+          "obscure the truth",
+          "掩盖真相"
+        ]
+      ],
+      "sentences": [
+        [
+          "The meaning of the passage is rather obscure.",
+          "这段文字的意思相当晦涩。"
+        ],
+        [
+          "Clouds obscured the view of the mountains.",
+          "云层遮住了群山的景色。"
+        ]
+      ],
+      "forms": [
+        "obscurity（n. 默默无闻；晦涩）",
+        "obscurely（adv. 模糊地）",
+        "obscured（adj. 被遮蔽的）"
+      ],
+      "confusables": [
+        [
+          "obscure",
+          "vague",
+          "obscure 强调难懂、鲜为人知或被遮蔽；vague 强调表达不明确、不具体"
+        ]
+      ]
+    },
+    "observation": {
+      "pos": "noun",
+      "meanings": [
+        "观察；观测",
+        "观察结果；监测记录",
+        "评论；评述"
+      ],
+      "phrases": [
+        [
+          "make an observation",
+          "作出观察/评论"
+        ],
+        [
+          "under observation",
+          "在观察中；受监视"
+        ],
+        [
+          "close observation",
+          "密切观察"
+        ]
+      ],
+      "sentences": [
+        [
+          "Careful observation is essential to scientific research.",
+          "仔细观察对科学研究至关重要。"
+        ],
+        [
+          "The doctor kept the patient under observation overnight.",
+          "医生让病人留院观察了一夜。"
+        ]
+      ],
+      "forms": [
+        "observe（v. 观察；遵守）",
+        "observer（n. 观察者）",
+        "observational（adj. 观察的；观测的）"
+      ],
+      "confusables": [
+        [
+          "observation",
+          "experiment",
+          "observation 侧重观察和记录；experiment 侧重通过控制条件进行实验"
+        ]
+      ]
+    },
+    "observe": {
+      "pos": "verb",
+      "meanings": [
+        "观察；注视；注意到",
+        "遵守（法律、规则、习俗）",
+        "庆祝；纪念（节日、仪式）",
+        "评论；指出"
+      ],
+      "phrases": [
+        [
+          "observe a phenomenon",
+          "观察一种现象"
+        ],
+        [
+          "observe the rules",
+          "遵守规则"
+        ],
+        [
+          "observe a holiday",
+          "庆祝节日"
+        ]
+      ],
+      "sentences": [
+        [
+          "Scientists observed changes in the behavior of the animals.",
+          "科学家观察到了这些动物行为上的变化。"
+        ],
+        [
+          "All employees must observe the safety regulations.",
+          "所有员工都必须遵守安全规定。"
+        ]
+      ],
+      "forms": [
+        "observation（n. 观察；评论）",
+        "observer（n. 观察者）",
+        "observant（adj. 善于观察的；机警的）"
+      ],
+      "confusables": [
+        [
+          "observe",
+          "notice",
+          "observe 常指有目的、持续或仔细地观察；notice 强调注意到某事"
+        ]
+      ]
+    },
+    "obsession": {
+      "pos": "noun",
+      "meanings": [
+        "痴迷；着迷",
+        "令人无法摆脱的念头；执念"
+      ],
+      "phrases": [
+        [
+          "an obsession with",
+          "对……的痴迷"
+        ],
+        [
+          "become an obsession",
+          "变成一种执念"
+        ],
+        [
+          "a national obsession",
+          "全民热衷的事物"
+        ]
+      ],
+      "sentences": [
+        [
+          "His obsession with details sometimes slows the project down.",
+          "他对细节的过度执着有时会拖慢项目进度。"
+        ],
+        [
+          "For some people, social media has become an obsession.",
+          "对一些人来说，社交媒体已经成了一种痴迷。"
+        ]
+      ],
+      "forms": [
+        "obsess（v. 使着迷；使困扰）",
+        "obsessed（adj. 着迷的；念念不忘的）",
+        "obsessive（adj. 着迷的；强迫性的）"
+      ],
+      "confusables": [
+        [
+          "obsession",
+          "passion",
+          "obsession 常含过度、难以摆脱的意味；passion 多指强烈而积极的热情"
+        ]
+      ]
+    },
+    "obsolete": {
+      "pos": "adjective",
+      "meanings": [
+        "过时的；淘汰的",
+        "废弃不用的；不再使用的"
+      ],
+      "phrases": [
+        [
+          "become obsolete",
+          "变得过时"
+        ],
+        [
+          "obsolete technology",
+          "过时技术"
+        ],
+        [
+          "render sth. obsolete",
+          "使某物被淘汰"
+        ]
+      ],
+      "sentences": [
+        [
+          "Rapid innovation can make existing technology obsolete.",
+          "快速创新可能使现有技术变得过时。"
+        ],
+        [
+          "The old regulations are now obsolete.",
+          "旧规定如今已经失效。"
+        ]
+      ],
+      "forms": [
+        "obsolescence（n. 过时；淘汰）",
+        "obsolescent（adj. 逐渐过时的）"
+      ],
+      "confusables": [
+        [
+          "obsolete",
+          "outdated",
+          "obsolete 强调已不再使用或被替代；outdated 泛指不再新颖或不合时宜"
+        ]
+      ]
+    },
+    "obvious": {
+      "pos": "adjective",
+      "meanings": [
+        "明显的；显而易见的",
+        "不言自明的；容易理解的",
+        "过于明显而缺乏新意的"
+      ],
+      "phrases": [
+        [
+          "it is obvious that",
+          "显然……"
+        ],
+        [
+          "for obvious reasons",
+          "出于显而易见的原因"
+        ],
+        [
+          "an obvious choice",
+          "显而易见的选择"
+        ]
+      ],
+      "sentences": [
+        [
+          "It is obvious that education affects social development.",
+          "显然，教育会影响社会发展。"
+        ],
+        [
+          "The solution may seem obvious, but it is often overlooked.",
+          "这个解决办法看似显而易见，却常常被忽略。"
+        ]
+      ],
+      "forms": [
+        "obviously（adv. 显然）",
+        "obviousness（n. 明显；显而易见）"
+      ],
+      "confusables": [
+        [
+          "obvious",
+          "evident",
+          "obvious 强调容易看出；evident 常强调有证据或迹象表明"
+        ]
+      ]
+    },
+    "ideal": {
+      "pos": "adjective / noun",
+      "meanings": [
+        "adj. 理想的；完美的；最合适的",
+        "n. 理想；典范；完美标准"
+      ],
+      "phrases": [
+        [
+          "an ideal solution",
+          "理想的解决方案"
+        ],
+        [
+          "ideal conditions",
+          "理想条件"
+        ],
+        [
+          "live up to an ideal",
+          "符合某种理想"
+        ]
+      ],
+      "sentences": [
+        [
+          "There is no single ideal solution to every social problem.",
+          "并不存在适用于所有社会问题的唯一理想方案。"
+        ],
+        [
+          "The ideal candidate should have both experience and creativity.",
+          "理想的候选人应兼具经验和创造力。"
+        ]
+      ],
+      "forms": [
+        "ideally（adv. 理想地；最好）",
+        "idealism（n. 理想主义）",
+        "idealist（n. 理想主义者）",
+        "idealistic（adj. 理想主义的）"
+      ],
+      "confusables": [
+        [
+          "ideal",
+          "perfect",
+          "ideal 强调最符合某种目标或条件；perfect 强调没有缺点或错误"
+        ]
+      ]
+    },
+    "ideology": {
+      "pos": "noun",
+      "meanings": [
+        "思想体系；意识形态",
+        "一套政治、经济或社会信念"
+      ],
+      "phrases": [
+        [
+          "political ideology",
+          "政治意识形态"
+        ],
+        [
+          "dominant ideology",
+          "主导意识形态"
+        ],
+        [
+          "ideological differences",
+          "意识形态差异"
+        ]
+      ],
+      "sentences": [
+        [
+          "Political ideology can influence public policy.",
+          "政治意识形态可能影响公共政策。"
+        ],
+        [
+          "The book examines the ideology behind the movement.",
+          "这本书探讨了这一运动背后的思想体系。"
+        ]
+      ],
+      "forms": [
+        "ideological（adj. 思想上的；意识形态的）",
+        "ideologically（adv. 思想上地）",
+        "ideologist（n. 思想家；理论家）"
+      ],
+      "confusables": [
+        [
+          "ideology",
+          "ideal",
+          "ideology 是一套系统的思想或信念；ideal 是理想或完美标准"
+        ]
+      ]
+    },
+    "identical": {
+      "pos": "adjective",
+      "meanings": [
+        "完全相同的；一模一样的",
+        "同一的；同一个的（常用 identical to/with）"
+      ],
+      "phrases": [
+        [
+          "be identical to",
+          "与……完全相同"
+        ],
+        [
+          "virtually identical",
+          "几乎完全相同"
+        ],
+        [
+          "identical twins",
+          "同卵双胞胎"
+        ]
+      ],
+      "sentences": [
+        [
+          "The two versions are almost identical in content.",
+          "这两个版本在内容上几乎完全相同。"
+        ],
+        [
+          "The fingerprints were found to be identical.",
+          "这些指纹被发现完全一致。"
+        ]
+      ],
+      "forms": [
+        "identity（n. 身份；特性；同一性）",
+        "identify（v. 识别；确认）",
+        "identically（adv. 完全相同地）"
+      ],
+      "confusables": [
+        [
+          "identical",
+          "similar",
+          "identical 表示完全相同；similar 表示相似但不一定相同"
+        ]
+      ]
+    },
+    "identification": {
+      "pos": "noun",
+      "meanings": [
+        "确认；识别；鉴定",
+        "身份证明；身份确认",
+        "认同；视为同一"
+      ],
+      "phrases": [
+        [
+          "identification card",
+          "身份证；身份卡"
+        ],
+        [
+          "proof of identification",
+          "身份证明"
+        ],
+        [
+          "identification of the cause",
+          "对原因的确认"
+        ]
+      ],
+      "sentences": [
+        [
+          "The system allows quick identification of potential risks.",
+          "该系统可以快速识别潜在风险。"
+        ],
+        [
+          "Visitors must show identification at the entrance.",
+          "访客必须在入口处出示身份证明。"
+        ]
+      ],
+      "forms": [
+        "identify（v. 识别；确认）",
+        "identity（n. 身份；特性）",
+        "identifiable（adj. 可识别的）",
+        "identifier（n. 标识符；识别者）"
+      ],
+      "confusables": [
+        [
+          "identification",
+          "identity",
+          "identification 是识别或确认的过程/证明；identity 是身份或本质特征"
+        ]
+      ]
+    },
+    "identity": {
+      "pos": "noun",
+      "meanings": [
+        "身份；身分",
+        "个性；特性；本体",
+        "同一性；一致性"
+      ],
+      "phrases": [
+        [
+          "identity card",
+          "身份证"
+        ],
+        [
+          "sense of identity",
+          "身份认同感"
+        ],
+        [
+          "identity theft",
+          "身份盗用"
+        ]
+      ],
+      "sentences": [
+        [
+          "Language plays an important role in cultural identity.",
+          "语言在文化认同中发挥着重要作用。"
+        ],
+        [
+          "The police are trying to establish the identity of the victim.",
+          "警方正在努力确认受害者的身份。"
+        ]
+      ],
+      "forms": [
+        "identify（v. 识别；确认）",
+        "identification（n. 身份确认；识别）",
+        "identical（adj. 完全相同的）",
+        "identity-based（adj. 基于身份的）"
+      ],
+      "confusables": [
+        [
+          "identity",
+          "identification",
+          "identity 指身份或特性；identification 指识别、确认身份的行为或证明"
+        ]
+      ]
+    },
+    "journal": {
+      "pos": "noun",
+      "meanings": [
+        "期刊；学术杂志",
+        "日志；日记",
+        "报纸；（尤指专业领域的）刊物"
+      ],
+      "phrases": [
+        [
+          "academic journal",
+          "学术期刊"
+        ],
+        [
+          "keep a journal",
+          "写日记"
+        ],
+        [
+          "journal article",
+          "期刊论文"
+        ]
+      ],
+      "sentences": [
+        [
+          "The findings were published in a leading scientific journal.",
+          "研究结果发表在一本知名科学期刊上。"
+        ],
+        [
+          "She keeps a journal to record her daily thoughts.",
+          "她通过写日记记录每天的想法。"
+        ]
+      ],
+      "forms": [
+        "journalist（n. 记者；新闻工作者）",
+        "journalism（n. 新闻业；新闻写作）",
+        "journalistic（adj. 新闻工作的）"
+      ],
+      "confusables": [
+        [
+          "journal",
+          "magazine",
+          "journal 常指学术期刊或个人日志；magazine 多指面向大众的杂志"
         ]
       ]
     }
