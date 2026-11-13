@@ -92,6 +92,42 @@
             .nav-btn{width:48px;height:48px;font-size:18px}
         }
     </style>
+
+<style id="study-card-enhancements">
+#dd{display:none!important}
+.study-mode-switch{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:18px auto 14px}
+.study-mode-btn{border:1px solid #e8dfd8;background:#fff;color:#6f625c;border-radius:999px;padding:9px 17px;font-size:13px;font-weight:700;cursor:pointer;transition:.2s}
+.study-mode-btn.active,.study-mode-btn:hover{background:#9f3d32;color:#fff;border-color:#9f3d32}
+.study-panel{width:min(100%,680px);margin:0 auto;padding:0 12px;text-align:left}
+.study-card-face{background:linear-gradient(145deg,#fff,#fffaf6);border:1px solid #eee5de;border-radius:22px;padding:24px;box-shadow:0 12px 36px rgba(73,45,32,.07)}
+.study-eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#a18b7d;font-weight:800;margin-bottom:10px}
+.study-meaning{font-size:17px;line-height:1.8;color:#332d29}
+.study-meaning ol{padding-left:22px}.study-meaning li{padding:3px 0}
+.study-actions{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:16px}
+.study-action{border:0;border-radius:12px;padding:11px 17px;background:#9f3d32;color:#fff;font-weight:700;cursor:pointer}
+.study-action.secondary{background:#f3ece7;color:#76594d}
+.study-action:disabled{opacity:.5;cursor:not-allowed}
+.study-hint{font-size:12px;color:#9a8d85;text-align:center;margin-top:12px}
+.spell-prompt,.quiz-prompt{background:#fff;border:1px solid #eee5de;border-radius:18px;padding:20px;margin-bottom:14px}
+.spell-input{width:100%;padding:15px 16px;border:1.5px solid #e6d8ce;border-radius:13px;font-size:22px;letter-spacing:1px;outline:none;background:#fffdfb}
+.spell-input:focus{border-color:#9f3d32;box-shadow:0 0 0 3px rgba(159,61,50,.08)}
+.spell-feedback{min-height:28px;margin-top:12px;font-size:14px;line-height:1.6}
+.spell-feedback.good{color:#23845b}.spell-feedback.bad{color:#b43d32}
+.spell-masked{font-family:ui-monospace,monospace;letter-spacing:4px;color:#9f3d32;font-size:18px;margin-top:12px}
+.quiz-options{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.quiz-option{border:1px solid #e9dfd8;background:#fff;border-radius:13px;padding:13px;text-align:left;font-size:14px;line-height:1.5;cursor:pointer;color:#403630}
+.quiz-option:hover{border-color:#bd766b;background:#fffaf8}
+.quiz-option.correct{border-color:#4b9b75;background:#eff9f2;color:#26734e}
+.quiz-option.wrong{border-color:#c96c61;background:#fff2f0;color:#a33b31}
+.dictionary-box{margin-top:15px;border-top:1px solid #eee5de;padding-top:14px}
+.dictionary-title{font-size:13px;font-weight:800;color:#9f3d32;margin:12px 0 6px}
+.dictionary-entry{font-size:13px;line-height:1.7;color:#554b45;margin:5px 0}
+.dictionary-entry em{color:#9f3d32;font-style:normal;font-weight:700}
+.dictionary-loading{font-size:12px;color:#9a8d85}
+.study-stats{font-size:11px;color:#a09289;text-align:center;margin-top:12px}
+body.study-mode-spell #dw,body.study-mode-quiz #dw{display:none}
+@media(max-width:768px){.study-panel{padding:0 4px}.study-card-face{padding:18px}.quiz-options{grid-template-columns:1fr}.study-mode-switch{margin-top:12px}.study-mode-btn{padding:8px 13px}}
+</style>
 </head>
 <body oncontextmenu="return false">
 <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
@@ -144,12 +180,18 @@
 <div id="main-screen">
     <div class="word-card">
         <div class="word-line" id="dw">Loading...</div>
+<div class="study-mode-switch" id="study-mode-switch" onclick="event.stopPropagation()">
+<button class="study-mode-btn active" data-mode="card" onclick="setStudyMode('card')">🃏 卡片背诵</button>
+<button class="study-mode-btn" data-mode="spell" onclick="setStudyMode('spell')">✍️ 单词拼写</button>
+<button class="study-mode-btn" data-mode="quiz" onclick="setStudyMode('quiz')">🧠 词义测验</button>
+</div>
         <div class="pronunciation-bar" aria-label="单词发音">
             <button class="pronunciation-btn" id="uk-audio" type="button" onclick="playPronunciation(1,event)" title="播放英式发音">🔊 英音 UK</button>
             <button class="pronunciation-btn" id="us-audio" type="button" onclick="playPronunciation(2,event)" title="播放美式发音">🔊 美音 US</button>
         </div>
         <div class="pronunciation-status" id="pronunciation-status" aria-live="polite"></div>
         <div id="dd"></div>
+        <div class="study-panel" id="study-panel" onclick="event.stopPropagation()"></div>
         <div class="page-info" id="dp"></div>
     </div>
     <div class="nav-btns">
@@ -316,6 +358,87 @@ window.onload=function(){
         if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();goPrev()}
     });
 };
+</script>
+
+<script id="study-card-engine">
+(function(){
+  let studyMode='card', cardRevealed=false, dictionaryCache={}, currentDictionaryWord='';
+  const savedStats=JSON.parse(localStorage.getItem('englishStudyStats')||'{}');
+  function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+  function current(){return Q&&Q.length?Q[C]:null}
+  function meanings(w){return String(w?.d||'暂无中文释义').split(/[;；]/).map(x=>x.trim()).filter(Boolean)}
+  function stat(){const v=Object.values(savedStats);return {done:v.length,correct:v.filter(x=>x.last==='correct').length,wrong:v.filter(x=>x.last==='wrong').length}}
+  function updateStat(word,result){
+    const old=savedStats[word]||{attempts:0,correct:0};
+    old.attempts++;if(result)old.correct++;old.last=result?'correct':'wrong';old.updated=Date.now();
+    savedStats[word]=old;localStorage.setItem('englishStudyStats',JSON.stringify(savedStats));
+  }
+  function statsHtml(){const s=stat();return '<div class="study-stats">已练习 '+s.done+' 词 · 最近答对 '+s.correct+' · 待加强 '+s.wrong+'</div>'}
+  function dictionaryHtml(word){
+    const d=dictionaryCache[word];
+    if(!d)return '<div class="dictionary-box"><button class="study-action secondary" onclick="loadWordDictionary()">＋ 展开英英词典与例句</button><div class="study-hint">按需查询：英英释义、音标、例句、近义词与反义词</div></div>';
+    if(d.loading)return '<div class="dictionary-box dictionary-loading">正在查询英英词典…</div>';
+    if(d.error)return '<div class="dictionary-box"><div class="dictionary-entry">暂时无法获取在线词典内容，中文释义仍可正常学习。</div><button class="study-action secondary" onclick="loadWordDictionary(true)">重试</button></div>';
+    let out='<div class="dictionary-box"><div class="dictionary-title">英英释义与语境</div>';
+    if(d.phonetic)out+='<div class="dictionary-entry">音标：'+esc(d.phonetic)+'</div>';
+    (d.meanings||[]).forEach(m=>{out+='<div class="dictionary-title">'+esc(m.partOfSpeech||'释义')+'</div>';(m.definitions||[]).slice(0,4).forEach(x=>{out+='<div class="dictionary-entry">• '+esc(x.definition)+(x.example?' <br><em>例句：</em>'+esc(x.example):'')+'</div>'});if(m.synonyms?.length)out+='<div class="dictionary-entry"><em>近义词：</em>'+esc(m.synonyms.slice(0,8).join(' · '))+'</div>';if(m.antonyms?.length)out+='<div class="dictionary-entry"><em>反义词：</em>'+esc(m.antonyms.slice(0,8).join(' · '))+'</div>'});
+    return out+'</div>';
+  }
+  window.loadWordDictionary=async function(force){
+    const w=current();if(!w)return;const word=w.w.toLowerCase();currentDictionaryWord=word;
+    const cache=JSON.parse(localStorage.getItem('englishDictionaryCache')||'{}');
+    if(!force&&cache[word]&&Date.now()-cache[word].time<14*86400000){dictionaryCache[word]=cache[word].data;renderStudyPanel();return}
+    dictionaryCache[word]={loading:true};renderStudyPanel();
+    try{
+      const response=await fetch('https://api.dictionaryapi.dev/api/v2/entries/en/'+encodeURIComponent(word));
+      if(!response.ok)throw new Error('Dictionary unavailable');
+      const data=await response.json(), entry=data[0]||{};
+      const all=(entry.meanings||[]).map(m=>({partOfSpeech:m.partOfSpeech,definitions:(m.definitions||[]).slice(0,4).map(x=>({definition:x.definition,example:x.example})),synonyms:m.synonyms||[],antonyms:m.antonyms||[]}));
+      const result={phonetic:entry.phonetic||(entry.phonetics||[]).find(x=>x.text)?.text||'',meanings:all};
+      dictionaryCache[word]=result;cache[word]={time:Date.now(),data:result};localStorage.setItem('englishDictionaryCache',JSON.stringify(cache));
+    }catch(e){dictionaryCache[word]={error:true}}
+    if(currentDictionaryWord===word)renderStudyPanel();
+  };
+  window.setStudyMode=function(mode){
+    studyMode=mode;cardRevealed=false;document.body.classList.toggle('study-mode-spell',mode==='spell');document.body.classList.toggle('study-mode-quiz',mode==='quiz');
+    document.querySelectorAll('.study-mode-btn').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));renderStudyPanel();
+  };
+  window.flipStudyCard=function(){cardRevealed=!cardRevealed;renderStudyPanel()};
+  window.checkSpelling=function(){
+    const w=current();if(!w)return;const input=document.getElementById('spell-answer');if(!input)return;
+    const answer=input.value.trim().toLowerCase(),expected=w.w.toLowerCase(),box=document.getElementById('spell-feedback');
+    if(answer===expected){updateStat(w.w,true);box.className='spell-feedback good';box.textContent='✓ 拼写正确！记得把单词放回例句中理解。';input.disabled=true}
+    else{updateStat(w.w,false);let i=0;while(i<Math.min(answer.length,expected.length)&&answer[i]===expected[i])i++;
+      const hint=expected.split('').map((ch,n)=>n<i?ch:'_').join(' ');
+      box.className='spell-feedback bad';box.innerHTML='✕ 再检查一下：从第 '+(i+1)+' 个字母附近开始核对。<div class="spell-masked">'+esc(hint)+'</div><div>正确拼写：<strong>'+esc(w.w)+'</strong></div>'}
+    const stats=document.getElementById('study-stats');if(stats)stats.outerHTML=statsHtml().replace('study-stats','study-stats');
+  };
+  window.chooseStudyMeaning=function(index){
+    const w=current();if(!w)return;const choices=window.__studyChoices||[];const selected=choices[index];if(!selected)return;
+    const ok=selected.w===w.w;updateStat(w.w,ok);
+    document.querySelectorAll('.quiz-option').forEach((b,i)=>{b.disabled=true;if(choices[i].w===w.w)b.classList.add('correct');else if(i===index)b.classList.add('wrong')});
+    const f=document.getElementById('quiz-feedback');if(f)f.textContent=ok?'✓ 正确！':'✕ 正确答案：'+w.w+'。'+meanings(w).join('；');
+    const st=document.getElementById('study-stats');if(st)st.outerHTML=statsHtml();
+  };
+  function renderStudyPanel(){
+    const panel=document.getElementById('study-panel'),w=current();if(!panel||!w)return;
+    const defs=meanings(w),meaning='<ol>'+defs.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol>';
+    if(studyMode==='card'){
+      panel.innerHTML='<div class="study-card-face"><div class="study-eyebrow">'+(cardRevealed?'WORD MEANING':'ACTIVE RECALL · 先回忆，再翻卡')+'</div>'+
+      (cardRevealed?'<div class="study-meaning">'+meaning+'</div>'+dictionaryHtml(w.w):'<div class="study-meaning">先尝试回忆这个单词的全部含义、词性和常见用法。</div>')+
+      '<div class="study-actions"><button class="study-action" onclick="flipStudyCard()">'+(cardRevealed?'收起释义':'翻开卡片 · 查看释义')+'</button><button class="study-action secondary" onclick="playPronunciation(2,event)">🔊 听发音</button></div></div>'+statsHtml();
+    }else if(studyMode==='spell'){
+      panel.innerHTML='<div class="spell-prompt"><div class="study-eyebrow">SPELLING PRACTICE · 根据释义拼写</div><div class="study-meaning">'+meaning+'</div><div class="study-hint">读音可点击上方英音 / 美音按钮播放</div></div><input id="spell-answer" class="spell-input" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="输入英文单词…" onkeydown="if(event.key===\'Enter\'){event.preventDefault();checkSpelling()}" onclick="event.stopPropagation()"><div class="study-actions"><button class="study-action" onclick="checkSpelling()">检查拼写</button><button class="study-action secondary" onclick="document.getElementById(\'spell-answer\').value=\'\';document.getElementById(\'spell-answer\').focus()">清空</button></div><div id="spell-feedback" class="spell-feedback"></div>'+statsHtml();
+      setTimeout(()=>document.getElementById('spell-answer')?.focus(),0);
+    }else{
+      const pool=(Q||[]).filter(x=>x.w!==w.w);const distractors=pool.sort(()=>Math.random()-.5).slice(0,3);const choices=[w,...distractors].sort(()=>Math.random()-.5);window.__studyChoices=choices;
+      panel.innerHTML='<div class="quiz-prompt"><div class="study-eyebrow">MEANING CHECK · 选择对应单词</div><div class="study-meaning">'+meaning+'</div></div><div class="quiz-options">'+choices.map((x,i)=>'<button class="quiz-option" onclick="chooseStudyMeaning('+i+')">'+esc(x.w)+'</button>').join('')+'</div><div id="quiz-feedback" class="spell-feedback"></div>'+statsHtml();
+    }
+  }
+  const baseRenderW=window.renderW;
+  window.renderW=function(){baseRenderW();cardRevealed=false;renderStudyPanel()};
+  window.addEventListener('load',()=>{document.getElementById('study-mode-switch')?.addEventListener('click',e=>e.stopPropagation());renderStudyPanel()});
+})();
 </script>
 <script src="/render-enhance.js" defer></script>\n</body>
 </html>
