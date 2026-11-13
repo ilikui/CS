@@ -81,8 +81,31 @@ function applyFilter(key,openEntry=true){
  if(openEntry){const subReadme=currentSubject==='408'&&current408Sub!=='all'?'Project/Artificial Intelligence/02_408/'+current408Sub+'/ReadMe.md':null;const entry=visibleDocs.find(d=>d.path===subReadme)||visibleDocs.find(d=>d.path===cfg.readme)||visibleDocs[0];if(entry)openDoc(entry.path);else $('#content').innerHTML='<h2>'+esc(cfg.title)+'</h2><p class="empty">这个主题的文档正在整理中，稍后再来看看。</p>';}
 }
 async function load(){
- try{const r=await fetch(API+'/git/trees/'+BRANCH+'?recursive=1',{headers:{Accept:'application/vnd.github+json'}});if(!r.ok)throw Error('GitHub API '+r.status);const j=await r.json();docs=(j.tree||[]).filter(x=>x.type==='blob'&&/\.md$/i.test(x.path)&&!x.path.startsWith('public/')).sort((a,b)=>a.path.localeCompare(b.path,'zh-CN'));applyFilter('all',false);$('#content').innerHTML='<h2>选择一个学习主题</h2><p>上方选择科目，左侧将只展示该科目的章节与专题文档。</p><p>支持 Markdown、数学公式、Mermaid 图表、表格、代码块和仓库内图片。</p>';}
- catch(e){$('#tree').innerHTML='<p class="empty">目录加载失败：'+esc(e.message)+'</p>';}
+ const status=$('#content');
+ try{
+  let files=[];
+  try{
+   const indexResponse=await fetch('/repo-index.json?v=20261113',{cache:'no-store'});
+   if(!indexResponse.ok)throw Error('静态目录 '+indexResponse.status);
+   const index=await indexResponse.json();
+   files=Array.isArray(index.files)?index.files:[];
+   if(!files.length)throw Error('静态目录为空');
+  }catch(indexError){
+   const apiResponse=await fetch(API+'/git/trees/'+BRANCH+'?recursive=1',{headers:{Accept:'application/vnd.github+json'},cache:'no-store'});
+   if(!apiResponse.ok)throw Error('目录读取失败：静态目录 '+indexError.message+'；GitHub API '+apiResponse.status);
+   const tree=await apiResponse.json();
+   files=(tree.tree||[]).filter(x=>x.type==='blob'&&/\.md$/i.test(x.path)&&!x.path.startsWith('public/'));
+  }
+  docs=files.filter(x=>x&&typeof x.path==='string'&&/\.md$/i.test(x.path)).sort((a,b)=>a.path.localeCompare(b.path,'zh-CN'));
+  if(!docs.length)throw Error('目录已连接，但没有找到 Markdown 文档');
+  applyFilter('all',false);
+  $('#content').innerHTML='<h2>选择一个学习主题</h2><p>已连接 GitHub 知识库，共 '+docs.length+' 篇 Markdown 笔记。上方选择科目，左侧展示对应章节。</p><p>支持 Markdown、数学公式、Mermaid 图表、表格、代码块和仓库内图片。</p>';
+  $('#docCount').textContent=visibleDocs.length;
+ }catch(e){
+  $('#docCount').textContent='—';
+  $('#tree').innerHTML='<p class="empty">知识库加载失败：'+esc(e.message)+'。请刷新页面重试。</p>';
+  status.innerHTML='<h2>暂时无法连接知识库</h2><p class="empty">'+esc(e.message)+'</p><p><a href="https://github.com/ilikui/CS/tree/cloudflare-pages" target="_blank" rel="noopener">直接打开 GitHub 笔记仓库</a></p>';
+ }
 }
 function rawAsset(path,src){if(/^(https?:|data:|blob:|\/\/|#|\/)/i.test(src))return src;const base=path.split('/').slice(0,-1).join('/');const joined=(base?base+'/':'')+src;const stack=[];for(const part of joined.split('/')){if(part==='..')stack.pop();else if(part!=='.'&&part!=='')stack.push(part)}return 'https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/'+stack.map(encodeURIComponent).join('/')}
 async function openDoc(path){
