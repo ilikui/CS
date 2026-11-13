@@ -7745,6 +7745,1001 @@
           ""
         ]
       ]
+    },
+    "embrace": {
+      "pos": "verb / noun",
+      "meanings": [
+        "拥抱",
+        "欣然接受；乐于采纳",
+        "包括；涵盖"
+      ],
+      "phrases": [
+        [
+          "embrace change",
+          "接受变化"
+        ],
+        [
+          "embrace an opportunity",
+          "抓住机会"
+        ],
+        [
+          "embrace diversity",
+          "包容多样性"
+        ],
+        [
+          "embrace a new approach",
+          "采用新方法"
+        ]
+      ],
+      "sentences": [
+        [
+          "Organizations must embrace change to remain competitive.",
+          "组织必须拥抱变化才能保持竞争力。"
+        ],
+        [
+          "The policy aims to embrace people from different backgrounds.",
+          "这项政策旨在包容不同背景的人群。"
+        ]
+      ],
+      "forms": [
+        "embraced（过去式/过去分词）",
+        "embracing（现在分词）",
+        "embraceable（adj. 可接受的）"
+      ],
+      "confusables": [
+        [
+          "embrace",
+          "accept",
+          "embrace 强调积极欣然接受；accept 侧重同意或接纳"
+        ]
+      ]
+    },
+    "embed": {
+      "pos": "verb",
+      "meanings": [
+        "把……嵌入；使深植于",
+        "使融入；使成为组成部分"
+      ],
+      "phrases": [
+        [
+          "embed a sensor in",
+          "把传感器嵌入……"
+        ],
+        [
+          "be embedded in",
+          "嵌入；根植于"
+        ],
+        [
+          "embed values in education",
+          "将价值观融入教育"
+        ],
+        [
+          "deeply embedded beliefs",
+          "根深蒂固的信念"
+        ]
+      ],
+      "sentences": [
+        [
+          "Digital technology is now embedded in everyday life.",
+          "数字技术如今已融入日常生活。"
+        ],
+        [
+          "The researchers embedded sensors in the devices to collect data.",
+          "研究人员将传感器嵌入设备以收集数据。"
+        ]
+      ],
+      "forms": [
+        "embedded（adj. 嵌入的；根深蒂固的）",
+        "embedding（n. 嵌入）"
+      ],
+      "confusables": [
+        [
+          "embed",
+          "insert",
+          "embed 强调成为整体的一部分；insert 强调把某物放入某处"
+        ]
+      ]
+    },
+    "embody": {
+      "pos": "verb",
+      "meanings": [
+        "体现；具体表现",
+        "包含；收录；使具体化"
+      ],
+      "phrases": [
+        [
+          "embody a principle",
+          "体现一种原则"
+        ],
+        [
+          "embody the spirit of",
+          "体现……精神"
+        ],
+        [
+          "be embodied in",
+          "体现在……之中"
+        ],
+        [
+          "embody a vision",
+          "使愿景具体化"
+        ]
+      ],
+      "sentences": [
+        [
+          "The constitution embodies the basic values of the society.",
+          "宪法体现了这个社会的基本价值观。"
+        ],
+        [
+          "These reforms embody a commitment to equal opportunity.",
+          "这些改革体现了对机会平等的承诺。"
+        ]
+      ],
+      "forms": [
+        "embodiment（n. 体现；化身）",
+        "embodied（adj. 体现的）",
+        "embodying（现在分词）"
+      ],
+      "confusables": [
+        [
+          "embody",
+          "represent",
+          "embody 强调具体体现抽象理念；represent 强调代表或象征"
+        ]
+      ]
+    },
+    "embryo": {
+      "pos": "noun",
+      "meanings": [
+        "胚胎",
+        "事物的初期形态；萌芽阶段"
+      ],
+      "phrases": [
+        [
+          "human embryo",
+          "人类胚胎"
+        ],
+        [
+          "embryo development",
+          "胚胎发育"
+        ],
+        [
+          "in embryo",
+          "在萌芽阶段"
+        ],
+        [
+          "an embryo of an idea",
+          "一种思想的雏形"
+        ]
+      ],
+      "sentences": [
+        [
+          "The study examines how environmental factors affect embryo development.",
+          "这项研究考察环境因素如何影响胚胎发育。"
+        ],
+        [
+          "The proposal is still in embryo and requires further discussion.",
+          "这项提案仍处于萌芽阶段，还需要进一步讨论。"
+        ]
+      ],
+      "forms": [
+        "embryonic（adj. 胚胎的；萌芽期的）",
+        "embryology（n. 胚胎学）",
+        "embryologist（n. 胚胎学家）"
+      ],
+      "confusables": [
+        [
+          "embryo",
+          "fetus",
+          "embryo 通常指发育早期的胚胎；fetus 指之后阶段的胎儿"
+        ]
+      ]
+    },
+    "elicit": {
+      "pos": "verb",
+      "meanings": [
+        "引出；诱出（反应、回答、信息）",
+        "探出；套出"
+      ],
+      "phrases": [
+        [
+          "elicit a response",
+          "引起回应"
+        ],
+        [
+          "elicit information",
+          "套取信息"
+        ],
+        [
+          "elicit comments from",
+          "引出……的评论"
+        ],
+        [
+          "elicit strong reactions",
+          "引发强烈反应"
+        ]
+      ],
+      "sentences": [
+        [
+          "The survey was designed to elicit honest opinions from participants.",
+          "这项调查旨在引出参与者的真实意见。"
+        ],
+        [
+          "The announcement elicited strong reactions from the public.",
+          "这项公告引发了公众的强烈反应。"
+        ]
+      ],
+      "forms": [
+        "elicitation（n. 引出；诱出）",
+        "elicited（过去式/过去分词）",
+        "eliciting（现在分词）"
+      ],
+      "confusables": [
+        [
+          "elicit",
+          "provoke",
+          "elicit 强调引出回应或信息；provoke 常带有激起强烈情绪的意味"
+        ]
+      ]
+    },
+    "elite": {
+      "pos": "noun / adjective",
+      "meanings": [
+        "精英；杰出人物；上层人士",
+        "精英的；杰出的"
+      ],
+      "phrases": [
+        [
+          "political elite",
+          "政治精英"
+        ],
+        [
+          "the social elite",
+          "社会精英阶层"
+        ],
+        [
+          "elite universities",
+          "精英大学"
+        ],
+        [
+          "elite athletes",
+          "顶尖运动员"
+        ]
+      ],
+      "sentences": [
+        [
+          "The political elite must respond to public concerns.",
+          "政治精英必须回应公众关切。"
+        ],
+        [
+          "Access to elite universities remains unequal across social groups.",
+          "不同社会群体进入精英大学的机会仍不平等。"
+        ]
+      ],
+      "forms": [
+        "elitism（n. 精英主义）",
+        "elitist（n./adj. 精英主义者；精英主义的）",
+        "elitist attitudes（精英主义态度）"
+      ],
+      "confusables": [
+        [
+          "elite",
+          "privileged",
+          "elite 指处于顶尖地位的群体；privileged 强调拥有特权或优势"
+        ]
+      ]
+    },
+    "elsewhere": {
+      "pos": "adverb",
+      "meanings": [
+        "在别处；去别处",
+        "在其他方面；在其他地方"
+      ],
+      "phrases": [
+        [
+          "look elsewhere",
+          "另寻他处"
+        ],
+        [
+          "elsewhere in the report",
+          "报告的其他部分"
+        ],
+        [
+          "move elsewhere",
+          "搬到别处"
+        ],
+        [
+          "seek opportunities elsewhere",
+          "在别处寻找机会"
+        ]
+      ],
+      "sentences": [
+        [
+          "When local jobs disappear, workers may have to look elsewhere.",
+          "当地工作岗位消失时，劳动者可能不得不另寻出路。"
+        ],
+        [
+          "The same pattern can be observed elsewhere in the report.",
+          "报告其他部分也能观察到同样的模式。"
+        ]
+      ],
+      "forms": [
+        "elsewhere（副词，无常见派生词）",
+        "somewhere（adv. 某处）",
+        "anywhere（adv. 任何地方）"
+      ],
+      "confusables": [
+        [
+          "elsewhere",
+          "somewhere",
+          "elsewhere 指别处；somewhere 指某个未明确的地方"
+        ]
+      ]
+    },
+    "thirst": {
+      "pos": "noun / verb",
+      "meanings": [
+        "口渴；干渴",
+        "渴望；强烈欲望"
+      ],
+      "phrases": [
+        [
+          "thirst for knowledge",
+          "求知欲"
+        ],
+        [
+          "a thirst for power",
+          "对权力的渴望"
+        ],
+        [
+          "die of thirst",
+          "渴死"
+        ],
+        [
+          "quench one's thirst",
+          "解渴"
+        ]
+      ],
+      "sentences": [
+        [
+          "A thirst for knowledge encourages people to keep learning.",
+          "求知欲促使人们不断学习。"
+        ],
+        [
+          "The rapid growth of cities has increased demand for clean water to quench thirst.",
+          "城市快速发展增加了对清洁饮用水的需求。"
+        ]
+      ],
+      "forms": [
+        "thirsty（adj. 口渴的；渴望的）",
+        "thirstily（adv. 口渴地）",
+        "thirstiness（n. 口渴）"
+      ],
+      "confusables": [
+        [
+          "thirst",
+          "desire",
+          "thirst 常用比喻义表示强烈渴望；desire 是更一般的愿望"
+        ]
+      ]
+    },
+    "thorough": {
+      "pos": "adjective",
+      "meanings": [
+        "全面的；彻底的",
+        "仔细的；周密的"
+      ],
+      "phrases": [
+        [
+          "a thorough investigation",
+          "彻底调查"
+        ],
+        [
+          "a thorough understanding",
+          "全面理解"
+        ],
+        [
+          "be thorough in",
+          "在……方面细致"
+        ],
+        [
+          "a thorough review",
+          "全面审查"
+        ]
+      ],
+      "sentences": [
+        [
+          "A thorough investigation is needed before any decision is made.",
+          "作出任何决定之前都需要进行彻底调查。"
+        ],
+        [
+          "Students should develop a thorough understanding of the basic concepts.",
+          "学生应全面理解基本概念。"
+        ]
+      ],
+      "forms": [
+        "thoroughly（adv. 彻底地）",
+        "thoroughness（n. 彻底；周密）",
+        "thoroughgoing（adj. 彻底的）"
+      ],
+      "confusables": [
+        [
+          "thorough",
+          "complete",
+          "thorough 强调过程细致周密；complete 强调完整、没有遗漏"
+        ]
+      ]
+    },
+    "though": {
+      "pos": "conjunction / adverb",
+      "meanings": [
+        "虽然；尽管",
+        "不过；然而（句末或句中）"
+      ],
+      "phrases": [
+        [
+          "even though",
+          "即使；尽管"
+        ],
+        [
+          "as though",
+          "仿佛；好像"
+        ],
+        [
+          "though not",
+          "虽然不是"
+        ],
+        [
+          "strange though it may seem",
+          "尽管这看起来可能很奇怪"
+        ]
+      ],
+      "sentences": [
+        [
+          "Though the policy is costly, it may produce long-term benefits.",
+          "尽管这项政策成本高昂，但可能带来长期收益。"
+        ],
+        [
+          "The method is simple. It is effective, though.",
+          "这种方法很简单，不过确实有效。"
+        ]
+      ],
+      "forms": [
+        "although（conj. 虽然）",
+        "even though（尽管）",
+        "thought（n. 想法；思考）"
+      ],
+      "confusables": [
+        [
+          "though",
+          "although",
+          "两者都表示让步；though 更灵活，可放句末"
+        ]
+      ]
+    },
+    "thought": {
+      "pos": "noun",
+      "meanings": [
+        "想法；意见；念头",
+        "思考；思维",
+        "关心；体贴"
+      ],
+      "phrases": [
+        [
+          "deep in thought",
+          "陷入沉思"
+        ],
+        [
+          "food for thought",
+          "发人深省的事物"
+        ],
+        [
+          "spare a thought for",
+          "关心；体谅"
+        ],
+        [
+          "at the thought of",
+          "一想到……"
+        ]
+      ],
+      "sentences": [
+        [
+          "The article gives readers food for thought about modern education.",
+          "这篇文章引发读者对现代教育的思考。"
+        ],
+        [
+          "Critical thought is essential for evaluating online information.",
+          "批判性思维对于评估网络信息至关重要。"
+        ]
+      ],
+      "forms": [
+        "think（v. 思考）",
+        "thoughtful（adj. 深思熟虑的；体贴的）",
+        "thoughtless（adj. 欠考虑的）"
+      ],
+      "confusables": [
+        [
+          "thought",
+          "idea",
+          "thought 可指思考过程或想法；idea 更常指具体观念或主意"
+        ]
+      ]
+    },
+    "thoughtful": {
+      "pos": "adjective",
+      "meanings": [
+        "深思熟虑的；认真考虑的",
+        "体贴的；关心他人的"
+      ],
+      "phrases": [
+        [
+          "a thoughtful decision",
+          "深思熟虑的决定"
+        ],
+        [
+          "be thoughtful of others",
+          "体谅他人"
+        ],
+        [
+          "thoughtful analysis",
+          "周密分析"
+        ],
+        [
+          "a thoughtful gift",
+          "贴心的礼物"
+        ]
+      ],
+      "sentences": [
+        [
+          "A thoughtful analysis should consider both costs and benefits.",
+          "周密的分析应同时考虑成本与收益。"
+        ],
+        [
+          "Thoughtful leaders listen to people affected by their decisions.",
+          "体贴周到的领导者会倾听受其决策影响的人。"
+        ]
+      ],
+      "forms": [
+        "thought（n. 想法）",
+        "thoughtfully（adv. 深思地；体贴地）",
+        "thoughtfulness（n. 深思；体贴）"
+      ],
+      "confusables": [
+        [
+          "thoughtful",
+          "considerate",
+          "thoughtful 强调有思考或体贴；considerate 更强调顾及他人感受"
+        ]
+      ]
+    },
+    "threat": {
+      "pos": "noun",
+      "meanings": [
+        "威胁；恐吓",
+        "危险；构成威胁的人或事物",
+        "坏事发生的可能性"
+      ],
+      "phrases": [
+        [
+          "pose a threat to",
+          "对……构成威胁"
+        ],
+        [
+          "a serious threat",
+          "严重威胁"
+        ],
+        [
+          "under threat",
+          "受到威胁"
+        ],
+        [
+          "threat of violence",
+          "暴力威胁"
+        ]
+      ],
+      "sentences": [
+        [
+          "Climate change poses a serious threat to coastal communities.",
+          "气候变化对沿海社区构成严重威胁。"
+        ],
+        [
+          "The threat of unemployment can affect people's mental well-being.",
+          "失业风险可能影响人们的心理健康。"
+        ]
+      ],
+      "forms": [
+        "threaten（v. 威胁；危及）",
+        "threatening（adj. 具有威胁的）",
+        "threatened（adj. 受到威胁的）"
+      ],
+      "confusables": [
+        [
+          "threat",
+          "danger",
+          "threat 强调潜在威胁来源；danger 强调危险状态或可能造成的伤害"
+        ]
+      ]
+    },
+    "threaten": {
+      "pos": "verb",
+      "meanings": [
+        "威胁；恐吓",
+        "危及；损害",
+        "可能发生；有……危险"
+      ],
+      "phrases": [
+        [
+          "threaten to do sth.",
+          "威胁要做某事"
+        ],
+        [
+          "threaten public health",
+          "危害公共健康"
+        ],
+        [
+          "be threatened by",
+          "受到……威胁"
+        ],
+        [
+          "threaten the existence of",
+          "威胁……的存在"
+        ]
+      ],
+      "sentences": [
+        [
+          "Rising sea levels threaten the existence of some island communities.",
+          "海平面上升威胁着一些岛屿社区的生存。"
+        ],
+        [
+          "The company threatened to close the factory unless costs were reduced.",
+          "该公司威胁称，除非降低成本，否则将关闭工厂。"
+        ]
+      ],
+      "forms": [
+        "threat（n. 威胁）",
+        "threatening（adj. 威胁性的）",
+        "threatened（adj. 受到威胁的）"
+      ],
+      "confusables": [
+        [
+          "threaten",
+          "endanger",
+          "threaten 可指发出威胁或造成威胁；endanger 专指使处于危险之中"
+        ]
+      ]
+    },
+    "update": {
+      "pos": "verb / noun",
+      "meanings": [
+        "更新；使现代化",
+        "向……提供最新信息",
+        "最新消息；更新内容"
+      ],
+      "phrases": [
+        [
+          "update information",
+          "更新信息"
+        ],
+        [
+          "keep sb. updated",
+          "让某人了解最新情况"
+        ],
+        [
+          "a software update",
+          "软件更新"
+        ],
+        [
+          "provide an update on",
+          "提供……的最新进展"
+        ]
+      ],
+      "sentences": [
+        [
+          "The database is updated regularly to ensure accuracy.",
+          "数据库定期更新以确保准确性。"
+        ],
+        [
+          "The agency provided an update on the environmental investigation.",
+          "该机构通报了环境调查的最新进展。"
+        ]
+      ],
+      "forms": [
+        "updated（adj. 更新后的）",
+        "updating（n./v. 更新）",
+        "updater（n. 更新程序）"
+      ],
+      "confusables": [
+        [
+          "update",
+          "upgrade",
+          "update 强调更新内容或版本；upgrade 强调升级到更高水平"
+        ]
+      ]
+    },
+    "upgrade": {
+      "pos": "verb / noun",
+      "meanings": [
+        "升级；提高质量或水平",
+        "提拔；改善",
+        "升级；改进"
+      ],
+      "phrases": [
+        [
+          "upgrade a system",
+          "升级系统"
+        ],
+        [
+          "upgrade to a new version",
+          "升级到新版本"
+        ],
+        [
+          "a major upgrade",
+          "重大升级"
+        ],
+        [
+          "upgrade skills",
+          "提升技能"
+        ]
+      ],
+      "sentences": [
+        [
+          "The company plans to upgrade its digital infrastructure.",
+          "该公司计划升级其数字基础设施。"
+        ],
+        [
+          "Workers need opportunities to upgrade their skills throughout their careers.",
+          "劳动者在整个职业生涯中都需要提升技能的机会。"
+        ]
+      ],
+      "forms": [
+        "upgraded（adj. 已升级的）",
+        "upgrading（n./v. 升级）",
+        "upgradeable（adj. 可升级的）"
+      ],
+      "confusables": [
+        [
+          "upgrade",
+          "update",
+          "upgrade 强调等级或性能提升；update 强调信息或版本更新"
+        ]
+      ]
+    },
+    "uphold": {
+      "pos": "verb",
+      "meanings": [
+        "支持；维护；捍卫",
+        "维持；确认（判决、决定）"
+      ],
+      "phrases": [
+        [
+          "uphold the law",
+          "维护法律"
+        ],
+        [
+          "uphold human rights",
+          "捍卫人权"
+        ],
+        [
+          "uphold a decision",
+          "维持决定"
+        ],
+        [
+          "uphold standards",
+          "维护标准"
+        ]
+      ],
+      "sentences": [
+        [
+          "The courts are expected to uphold the principles of equality.",
+          "人们期待法院维护平等原则。"
+        ],
+        [
+          "The appeal court upheld the original decision.",
+          "上诉法院维持了原判。"
+        ]
+      ],
+      "forms": [
+        "upheld（过去式/过去分词）",
+        "upholding（现在分词）",
+        "upholdable（adj. 可维护的，少用）"
+      ],
+      "confusables": [
+        [
+          "uphold",
+          "support",
+          "uphold 常指维护原则、法律或决定；support 泛指支持"
+        ]
+      ]
+    },
+    "upset": {
+      "pos": "adjective / verb / noun",
+      "meanings": [
+        "难过的；心烦意乱的",
+        "打乱；使不安",
+        "使（肠胃）不适",
+        "意外结果；冷门"
+      ],
+      "phrases": [
+        [
+          "be upset about",
+          "因……难过"
+        ],
+        [
+          "upset the balance",
+          "打破平衡"
+        ],
+        [
+          "upset a plan",
+          "打乱计划"
+        ],
+        [
+          "an upset victory",
+          "爆冷获胜"
+        ]
+      ],
+      "sentences": [
+        [
+          "The sudden change upset the balance between work and family life.",
+          "突然的变化打破了工作与家庭生活之间的平衡。"
+        ],
+        [
+          "Many residents were upset about the loss of public green space.",
+          "许多居民因公共绿地的消失而感到不满。"
+        ]
+      ],
+      "forms": [
+        "upsetting（adj. 令人烦恼的）",
+        "upset（过去式/过去分词同形）",
+        "upsetter（n. 造成混乱者，少用）"
+      ],
+      "confusables": [
+        [
+          "upset",
+          "disturb",
+          "upset 强调使人心烦或打乱安排；disturb 强调打扰或扰乱状态"
+        ]
+      ]
+    },
+    "up-to-date": {
+      "pos": "adjective",
+      "meanings": [
+        "最新的；现代的",
+        "掌握最新信息的"
+      ],
+      "phrases": [
+        [
+          "up-to-date information",
+          "最新信息"
+        ],
+        [
+          "keep records up to date",
+          "使记录保持最新"
+        ],
+        [
+          "up-to-date technology",
+          "先进技术"
+        ],
+        [
+          "bring sth. up to date",
+          "使某物更新"
+        ]
+      ],
+      "sentences": [
+        [
+          "Researchers need access to up-to-date information.",
+          "研究人员需要获取最新信息。"
+        ],
+        [
+          "The website is regularly revised to keep its content up to date.",
+          "该网站定期修订，以保持内容更新。"
+        ]
+      ],
+      "forms": [
+        "date（n./v. 日期；注明日期）",
+        "update（v./n. 更新）",
+        "outdated（adj. 过时的）"
+      ],
+      "confusables": [
+        [
+          "up-to-date",
+          "updated",
+          "up-to-date 强调当前仍然最新；updated 强调已经经过更新"
+        ]
+      ]
+    },
+    "ventilate": {
+      "pos": "verb",
+      "meanings": [
+        "使通风；使空气流通",
+        "公开表达；公开讨论"
+      ],
+      "phrases": [
+        [
+          "ventilate a room",
+          "使房间通风"
+        ],
+        [
+          "well-ventilated building",
+          "通风良好的建筑"
+        ],
+        [
+          "ventilate a concern",
+          "公开表达担忧"
+        ],
+        [
+          "ventilation system",
+          "通风系统"
+        ]
+      ],
+      "sentences": [
+        [
+          "Buildings should be properly ventilated to reduce indoor air pollution.",
+          "建筑物应保持适当通风，以减少室内空气污染。"
+        ],
+        [
+          "The meeting gave employees an opportunity to ventilate their concerns.",
+          "这次会议让员工有机会公开表达担忧。"
+        ]
+      ],
+      "forms": [
+        "ventilation（n. 通风）",
+        "ventilator（n. 通风设备；呼吸机）",
+        "ventilated（adj. 通风的）"
+      ],
+      "confusables": [
+        [
+          "ventilate",
+          "air",
+          "ventilate 强调使空气流通或表达意见；air 作动词可指公开表达不满"
+        ]
+      ]
+    },
+    "venture": {
+      "pos": "noun / verb",
+      "meanings": [
+        "冒险；冒险事业",
+        "冒险前往；大胆尝试",
+        "试探性地说出"
+      ],
+      "phrases": [
+        [
+          "venture into a new market",
+          "冒险进入新市场"
+        ],
+        [
+          "a joint venture",
+          "合资企业"
+        ],
+        [
+          "venture capital",
+          "风险投资"
+        ],
+        [
+          "venture to suggest",
+          "斗胆建议"
+        ]
+      ],
+      "sentences": [
+        [
+          "Small businesses may hesitate to venture into unfamiliar markets.",
+          "小企业可能不愿冒险进入陌生市场。"
+        ],
+        [
+          "The researchers ventured to suggest a different explanation.",
+          "研究人员试探性地提出了另一种解释。"
+        ]
+      ],
+      "forms": [
+        "venturer（n. 冒险者）",
+        "venturesome（adj. 大胆的；爱冒险的）",
+        "venturing（n./v. 冒险）"
+      ],
+      "confusables": [
+        [
+          "venture",
+          "risk",
+          "venture 强调主动尝试冒险；risk 强调承担损失或危险的可能"
+        ]
+      ]
     }
   }
 }
