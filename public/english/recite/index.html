@@ -20,7 +20,9 @@ button,input,select{font:inherit}button{cursor:pointer;color:inherit}.shell{max-
 const KEY='cs_english_recite_v1', WORD_KEY='cs_english_recite_user_words_v1', $=id=>document.getElementById(id);
 let words=[],view='study',idx=0,show=false,progress={},todayCount=0;
 const todayKey=()=>new Date().toISOString().slice(0,10);
-function loadProgress(){try{progress=JSON.parse(localStorage.getItem(KEY)||'{}')}catch{progress={}}}\nfunction loadUserWords(){try{const v=JSON.parse(localStorage.getItem(WORD_KEY)||'[]');return Array.isArray(v)?v:[]}catch{return[]}}\nfunction saveUserWords(){const v=words.filter(w=>String(w.id||'').startsWith('import-'));localStorage.setItem(WORD_KEY,JSON.stringify(v))}
+function loadProgress(){try{progress=JSON.parse(localStorage.getItem(KEY)||'{}')}catch{progress={}}}
+function loadUserWords(){try{const v=JSON.parse(localStorage.getItem(WORD_KEY)||'[]');return Array.isArray(v)?v:[]}catch{return[]}}
+function saveUserWords(){const v=words.filter(w=>String(w.id||'').startsWith('import-'));localStorage.setItem(WORD_KEY,JSON.stringify(v))}
 function save(){localStorage.setItem(KEY,JSON.stringify(progress));renderStats()}
 function status(w){return progress[w.id]?.status||'new'}
 function due(w){return progress[w.id]?.due||0}
