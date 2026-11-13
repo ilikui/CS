@@ -136,7 +136,7 @@ $('#home').addEventListener('click',e=>{e.preventDefault();$('#dashboard').scrol
 load().then(()=>{const m=location.hash.match(/^#doc=(.+)$/);if(m){const path=decodeURIComponent(m[1]);const key=Object.keys(subjectConfig).find(k=>k!=='all'&&belongs(path,k));if(key)applyFilter(key,false);if(docs.some(d=>d.path===path))openDoc(path);}else{const sm=location.hash.match(/^#subject=(.+)$/);if(sm&&subjectConfig[sm[1]])applyFilter(sm[1],true);}});
 </script><script>
 /* Independent static-first reader: works even if the legacy tree loader fails. */
-(()=> {
+(()=> { try {
  const root=document.querySelector('.static-index');
  if(!root)return;
  root.dataset.readerReady='true';
@@ -195,6 +195,6 @@ load().then(()=>{const m=location.hash.match(/^#doc=(.+)$/);if(m){const path=dec
    }
  });
  try{apply();root.dataset.readerApplied='true';}catch(err){root.dataset.readerError=String(err&&err.message||err);}
-})();
+} catch(err) { const root=document.querySelector('.static-index'); if(root)root.dataset.readerError=String(err&&err.message||err); } })();
 </script><script src="/render-enhance.js" defer></script>
 </body></html>
