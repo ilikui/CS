@@ -207,7 +207,7 @@ load().then(()=>{const m=location.hash.match(/^#doc=(.+)$/);if(m){const path=dec
        }
        img.loading='lazy';
      });
-     if(window.CSRender?.enhance)await window.CSRender.enhance(content); else if(window.renderMathInElement){const slash=String.fromCharCode(92);window.renderMathInElement(content,{delimiters:[{left:'$',right:'$',display:true},{left:slash+'[',right:slash+']',display:true},{left:'
+     if(window.CSRender?.enhance)await window.CSRender.enhance(content);
      history.replaceState(null,'','#doc='+encodeURIComponent(path));
      content.scrollIntoView({behavior:'smooth',block:'start'});
    }catch(err){
