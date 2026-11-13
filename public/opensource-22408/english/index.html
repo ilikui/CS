@@ -154,6 +154,80 @@ body.study-mode-spell #dd,body.study-mode-quiz #dd{display:none}
 #main-screen{overflow-y:auto;justify-content:flex-start;padding-top:5vh;padding-bottom:120px}
 @media(max-width:768px){.study-panel{padding:0 4px}.study-card-face{padding:18px}.quiz-options{grid-template-columns:1fr}.study-mode-switch{margin-top:12px}.study-mode-btn{padding:8px 13px}}
 </style>
+<style id="english-page-redesign">
+:root{--ink:#202a35;--muted:#718096;--line:#e8edf2;--paper:#f4f7fb;--accent:#426b8f;--accent-soft:#eaf2f8;--warm:#b66b4b}
+html,body{height:100%;min-height:100%;overflow:auto;background:var(--paper);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;user-select:text}
+body{background:radial-gradient(ellipse at 75% 0%,#e8f0f7 0,transparent 42%),var(--paper)}
+.sidebar{background:rgba(255,255,255,.94);border-right:1px solid var(--line);box-shadow:8px 0 28px rgba(35,54,75,.035);padding:20px 0 28px}
+.sidebar-back{margin:0 10px 12px;padding:10px 16px;border-radius:10px;background:#f6f8fa}
+.sidebar-title{font-size:11px;letter-spacing:1.4px;color:#7d8b99;padding:10px 20px}
+.sidebar .pill{margin:4px 12px;width:calc(100% - 24px);padding:9px 13px;border-radius:10px;font-size:13px}
+.pill.active,.pill.active-sub{background:var(--accent-soft);color:var(--accent);border-color:#d5e3ee}
+.pill.gp{background:#f7f9fb;color:#475569;border-color:transparent}
+.pill.gp.active{background:#eaf2f8;color:#315e82}
+.search-box input{padding:11px 13px;border-radius:11px;background:#f7f9fb;border-color:#e7edf2}
+#main-screen{height:auto;min-height:100vh;margin-left:var(--sidebar-width);padding:48px clamp(18px,4vw,64px) 120px;display:flex;align-items:center;justify-content:flex-start;flex-direction:column;cursor:default;text-align:left}
+.word-card{width:min(100%,980px);max-width:980px;margin:0 auto;padding:clamp(22px,4vw,48px);background:rgba(255,255,255,.96);border:1px solid #e7edf2;border-radius:26px;box-shadow:0 18px 55px rgba(42,61,82,.07)}
+.word-line{font-size:clamp(46px,7vw,82px);color:#1f2e3d;letter-spacing:-2.5px;line-height:1.04;margin:12px 0 6px;text-align:center}
+.pronunciation-bar{margin:18px 0 12px}
+.pronunciation-btn{border-color:#dce7ef;color:#416987;border-radius:12px;padding:10px 16px}
+.study-mode-switch{position:static;top:auto;width:fit-content;margin:20px auto 22px;padding:5px;background:#f2f5f8;border:1px solid #e8edf2;border-radius:14px}
+.study-mode-btn{border:0;border-radius:10px;padding:10px 17px;background:transparent;color:#687889}
+.study-mode-btn.active{background:#fff;color:#315e82;box-shadow:0 2px 8px rgba(31,52,74,.09)}
+#dd{display:none!important;max-width:780px;margin:18px auto;padding:20px 24px;border:1px solid #e6edf2;border-radius:16px;background:#f7fafc}
+body.study-card-revealed #dd{display:block!important}
+#dd .def-item{font-size:16px;line-height:1.8;color:#405163;padding:5px 0}
+.study-panel{width:100%;max-width:780px;margin:0 auto}
+.study-card-face,.spell-prompt,.quiz-prompt{background:#fbfcfe;border:1px solid #e7edf2;border-radius:18px;box-shadow:none;padding:22px}
+.study-eyebrow{color:#7790a5;letter-spacing:1.5px}
+.study-meaning{font-size:16px;line-height:1.85;color:#344456}
+.study-action{background:#426b8f;border-radius:11px}
+.study-action.secondary{background:#edf2f6;color:#50677b}
+.spell-input{border-color:#dce5ec;border-radius:12px;background:#fff}
+.quiz-option{border-color:#e1e8ee;border-radius:12px;padding:15px;background:#fff}
+.quiz-option:hover{border-color:#8ba9c1;background:#f7fbfe}
+#word-enrichment{width:100%;max-width:780px;margin:18px auto 0;text-align:left}
+.enrich-shell{border:1px solid #e7edf2;border-radius:18px;background:#fff;padding:20px 22px}
+.enrich-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.enrich-title{font-size:15px;font-weight:800;color:#34495c}
+.enrich-subtitle{font-size:12px;color:#8998a6;margin-top:3px}
+.enrich-load{border:1px solid #dbe6ee;background:#f2f7fa;color:#416987;border-radius:10px;padding:9px 13px;font-weight:700;cursor:pointer;white-space:nowrap}
+.enrich-load:hover{background:#e7f0f6}
+.enrich-section{padding:14px 0;border-top:1px solid #edf1f4}
+.enrich-section h3{font-size:13px;color:#55738c;margin-bottom:9px}
+.enrich-tags{display:flex;gap:8px;flex-wrap:wrap}
+.enrich-tag{padding:7px 10px;border-radius:9px;background:#f3f6f8;color:#435668;font-size:13px;line-height:1.5}
+.enrich-sentence{padding:12px 13px;border-radius:12px;background:#f8fafc;margin:8px 0}
+.enrich-en{font-size:14px;line-height:1.7;color:#2e4052}
+.enrich-zh{font-size:13px;line-height:1.7;color:#778695;margin-top:4px}
+.enrich-note{font-size:11px;color:#9aa6b2;line-height:1.6;margin-top:10px}
+.enrich-error{font-size:13px;color:#9b6655;padding:10px 0}
+.page-info{font-size:12px;color:#91a0ad;margin-top:18px;text-align:center}
+.nav-btns{position:fixed;bottom:26px;left:calc(var(--sidebar-width) + (100% - var(--sidebar-width))/2);transform:translateX(-50%);z-index:30;display:flex;gap:12px;padding:8px 12px;border:1px solid rgba(225,233,240,.9);border-radius:18px;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);box-shadow:0 8px 30px rgba(34,54,76,.1)}
+.nav-btn{width:48px;height:48px;border-radius:13px;border:1px solid #e6edf2;background:#fff;color:#526b80;font-size:20px}
+.nav-btn:hover{background:#edf4f8;color:#315e82}
+#fav-btn.active{color:#bd7651;background:#fff7f1}
+.hint{position:static;margin-top:18px;color:#9aa6b2}
+#sr{left:calc(var(--sidebar-width) + (100% - var(--sidebar-width))/2);top:80px;transform:translateX(-50%);width:min(90%,620px);border:1px solid var(--line);box-shadow:0 16px 45px rgba(30,48,68,.14)}
+#bv{background:#f5f8fb;padding:28px clamp(16px,4vw,48px)}
+.bg{max-width:1120px;margin:0 auto 18px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 20px}
+.bgt{border:0;color:#426b8f}
+.bw-item{padding:11px 13px;border-color:#edf1f4}
+@media(max-width:768px){
+ #main-screen{margin-left:0;padding:66px 14px 112px;min-height:100vh}
+ .word-card{width:100%;padding:22px 16px;border-radius:20px}
+ .word-line{font-size:clamp(40px,12vw,58px)}
+ .study-mode-switch{width:100%;gap:4px;justify-content:space-between}
+ .study-mode-btn{flex:1;padding:10px 6px;font-size:12px}
+ .enrich-shell{padding:16px}
+ .enrich-head{align-items:flex-start;flex-direction:column}
+ .enrich-load{width:100%}
+ .nav-btns{left:50%;bottom:14px}
+ #sr{left:50%;top:70px}
+ .hint{font-size:11px}
+}
+@media(prefers-reduced-motion:no-preference){.word-card,.enrich-shell{animation:rise-in .35s ease both}@keyframes rise-in{from{opacity:.7;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}}
+</style>
 </head>
 <body oncontextmenu="return false">
 <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
@@ -218,6 +292,7 @@ body.study-mode-spell #dd,body.study-mode-quiz #dd{display:none}
         <div class="pronunciation-status" id="pronunciation-status" aria-live="polite"></div>
         <div id="dd"></div>
         <div class="study-panel" id="study-panel" onclick="event.stopPropagation()"></div>
+        <section id="word-enrichment" aria-live="polite"></section>
         <div class="page-info" id="dp"></div>
     </div>
     <div class="nav-btns">
@@ -384,6 +459,73 @@ window.onload=function(){
         if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();goPrev()}
     });
 };
+</script>
+
+<script id="word-enrichment-engine">
+(function(){
+ let activeWord='',requestToken=0,loaded=new Set();
+ const root=()=>document.getElementById('word-enrichment');
+ const safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function shell(word){const el=root();if(!el)return;el.innerHTML='<div class="enrich-shell"><div class="enrich-head"><div><div class="enrich-title">📚 词汇拓展 · 词组、搭配与双语例句</div><div class="enrich-subtitle">围绕 <b>'+safe(word)+'</b> 补充常见表达、真实语境与中文翻译</div></div><button class="enrich-load" id="load-enrich-btn" type="button">加载词组与例句 ↗</button></div><div id="enrich-content"><div class="enrich-note">点击加载，按需查询在线词典；原始考研词库释义始终保留。</div></div></div>';document.getElementById('load-enrich-btn').onclick=()=>load(word,true);}
+ function textOf(x){if(typeof x==='string')return x;if(Array.isArray(x))return x.map(textOf).filter(Boolean).join('；');if(x&&typeof x==='object')return x.i||x.text||x.value||x.content||'';return '';}
+ function collectPhrases(data){
+   const out=[],seen=new Set();
+   function add(v){let s=textOf(v).replace(/<[^>]*>/g,'').trim();if(s&&s.length<100&&!seen.has(s.toLowerCase())){seen.add(s.toLowerCase());out.push(s);}}
+   function walk(o,key=''){if(!o||typeof o!=='object')return;if(Array.isArray(o)){o.forEach(v=>walk(v,key));return;}
+     if(/phrs|phrases|phrase/i.test(key)){if(Array.isArray(o)){o.forEach(v=>{add(v.head||v.headword||v.phrase||v.word);walk(v,'phraseItem');});}else{add(o.head||o.headword||o.phrase||o.word);walk(o.phrs||o.phrase||o.trs||o.tr,'phraseItem');}}
+     if(key==='phraseItem'){add(o.head||o.headword||o.phrase||o.word);const trs=o.trs||o.tr||[];walk(trs,'phraseTranslation');}
+     if(key==='phraseTranslation'){add(o.l?.i||o.i||o.text||o.value);}
+     Object.keys(o).forEach(k=>{if(k!=='phraseItem'&&k!=='phraseTranslation')walk(o[k],k);});
+   }
+   walk(data);return out.slice(0,12);
+ }
+ function collectSentences(data){
+   const out=[],seen=new Set();
+   function walk(o){if(!o||typeof o!=='object')return;if(Array.isArray(o)){o.forEach(walk);return;}
+     const en=o.sentence||o.sentenceEng||o.source||o.src||o.orig;
+     const zh=o['sentence-translation']||o.sentenceTranslation||o.translation||o.trans||o.target||o.tgt;
+     if(typeof en==='string'&&en.length>12&&en.length<350){const k=en.toLowerCase();if(!seen.has(k)){seen.add(k);out.push({en,zh:typeof zh==='string'?zh:''});}}
+     Object.values(o).forEach(walk);
+   }
+   walk(data);return out.slice(0,8);
+ }
+ function renderResult(word,phrases,sentences,extra){
+   const el=document.getElementById('enrich-content');if(!el)return;
+   let html='';
+   if(phrases.length)html+='<div class="enrich-section"><h3>常见词组与固定搭配</h3><div class="enrich-tags">'+phrases.map(p=>'<span class="enrich-tag">'+safe(p)+'</span>').join('')+'</div></div>';
+   if(sentences.length)html+='<div class="enrich-section"><h3>双语短句 · 在语境中理解单词</h3>'+sentences.map(s=>'<div class="enrich-sentence"><div class="enrich-en">'+safe(s.en)+'</div>'+(s.zh?'<div class="enrich-zh">'+safe(s.zh)+'</div>':'<div class="enrich-zh">暂未取得该例句的中文翻译</div>')+'</div>').join('')+'</div>';
+   if(extra.length)html+='<div class="enrich-section"><h3>补充英文释义</h3>'+extra.map(x=>'<div class="enrich-tag">'+safe(x)+'</div>').join('')+'</div>';
+   if(!html)html='<div class="enrich-error">在线词典暂未返回该词的词组或例句。你仍可使用上方原始中文释义和拼写练习。</div>';
+   html+='<div class="enrich-note">在线补充内容来自第三方词典接口，网络或接口不可用时不会影响本地词库与背诵功能；例句翻译缺失时会明确标注，不自动编造。</div>';
+   el.innerHTML=html;
+ }
+ async function load(word,force){
+   const token=++requestToken,btn=document.getElementById('load-enrich-btn'),content=document.getElementById('enrich-content');
+   if(!force&&loaded.has(word))return;
+   if(btn){btn.disabled=true;btn.textContent='正在查询…';}
+   if(content)content.innerHTML='<div class="enrich-note">正在查询词组、双语例句与补充释义…</div>';
+   try{
+     const url='https://dict.youdao.com/jsonapi?doctype=json&jsonversion=2&client=web&q='+encodeURIComponent(word);
+     const response=await fetch(url,{mode:'cors',credentials:'omit'});
+     if(!response.ok)throw new Error('词典服务暂不可用（HTTP '+response.status+'）');
+     const data=await response.json();
+     if(token!==requestToken)return;
+     const phrases=collectPhrases(data);
+     const sentences=collectSentences(data);
+     const extra=[];
+     const ec=data.ec?.word?.[0]?.trs||data.ec?.word?.trs||[];
+     ec.forEach(t=>{(t.tr||[]).forEach(x=>{const s=textOf(x.l?.i||x.i);if(s)extra.push(s);});});
+     renderResult(word,phrases,sentences,extra.slice(0,6));loaded.add(word);
+   }catch(err){
+     if(token!==requestToken)return;
+     if(content)content.innerHTML='<div class="enrich-error">暂时无法连接在线词典：'+safe(err.message||'网络请求失败')+'。请检查网络后重试。</div><button class="enrich-load" id="retry-enrich-btn" type="button">重新加载</button>';
+     const retry=document.getElementById('retry-enrich-btn');if(retry)retry.onclick=()=>load(word,true);
+   }finally{if(token===requestToken&&btn){btn.disabled=false;btn.textContent='重新查询 ↻';}}
+ }
+ window.loadWordEnrichment=function(word){if(!word)return;activeWord=word;requestToken++;shell(word);};
+ const base=window.renderW;
+ if(typeof base==='function')window.renderW=function(){base();const w=Array.isArray(Q)&&Q.length?Q[C]:null;if(w)window.loadWordEnrichment(w.w);};
+})();
 </script>
 
 <script id="study-card-engine">
