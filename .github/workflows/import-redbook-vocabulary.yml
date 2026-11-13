@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: import-redbook-vocabulary-v2
+  group: import-redbook-vocabulary-v3
   cancel-in-progress: false
 
 jobs:
