@@ -183,9 +183,7 @@ load().then(()=>{const m=location.hash.match(/^#doc=(.+)$/);if(m){const path=dec
        }
        img.loading='lazy';
      });
-     if(window.renderMathInElement)window.renderMathInElement(content,{delimiters:[{left:'$',right:'$',display:true},{left:'\\[',right:'\\]',display:true},{left:'</script>
-</body></html>,right:'</script>
-</body></html>,display:false},{left:'\\(',right:'\\)',display:false}],throwOnError:false});
+     const slash=String.fromCharCode(92); if(window.renderMathInElement)window.renderMathInElement(content,{delimiters:[{left:'$$',right:'$$',display:true},{left:slash+'[',right:slash+']',display:true},{left:'$',right:'$',display:false},{left:slash+'(',right:slash+')',display:false}],throwOnError:false});
      history.replaceState(null,'','#doc='+encodeURIComponent(path));
      content.scrollIntoView({behavior:'smooth',block:'start'});
    }catch(err){
