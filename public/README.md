@@ -23,3 +23,8 @@ python -m http.server 8080
 然后打开 http://localhost:8080。
 
 > 说明：该站点依赖 GitHub API 与 jsDelivr CDN。GitHub 未认证 API 有请求频率限制；数学公式由 KaTeX 渲染。
+
+
+## 自动部署
+
+Cloudflare Pages 已连接该分支；推送到 `cloudflare-pages` 会触发生产部署。
