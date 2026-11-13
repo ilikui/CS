@@ -138,16 +138,36 @@ def load_collection(apkg: Path):
             if other.exists() and other != db_path:
                 other.unlink()
     conn = sqlite3.connect(f"file:{db_path}?mode=ro", uri=True)
+    conn.create_collation("unicase", lambda a, b: (a.casefold() > b.casefold()) - (a.casefold() < b.casefold()))
     conn.row_factory = sqlite3.Row
     integrity = conn.execute("PRAGMA integrity_check").fetchone()[0]
     if integrity != "ok":
         conn.close()
         raise RuntimeError(f"SQLite integrity_check failed: {integrity}")
-    col = conn.execute("SELECT models, decks FROM col LIMIT 1").fetchone()
-    models = json.loads(col["models"])
-    decks = json.loads(col["decks"])
+    col = conn.execute("SELECT * FROM col LIMIT 1").fetchone()
+    col_columns = set(col.keys())
+    models = {}
+    decks = {}
+    # Legacy schema (v11) stores models/decks as JSON blobs in col.
+    if "models" in col_columns and col["models"]:
+        models = json.loads(col["models"])
+    if "decks" in col_columns and col["decks"]:
+        decks = json.loads(col["decks"])
+    # Current schema (v18) normalizes these into notetypes/fields/decks tables.
+    tables = {row[0] for row in conn.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+    if not models and {"notetypes", "fields"} <= tables:
+        for nt in conn.execute("SELECT id, name FROM notetypes ORDER BY id"):
+            flds = conn.execute("SELECT name, ord FROM fields WHERE ntid=? ORDER BY ord", (nt["id"],)).fetchall()
+            models[str(nt["id"])] = {
+                "name": nt["name"],
+                "flds": [{"name": field["name"], "ord": field["ord"]} for field in flds],
+            }
+    if not decks and "decks" in tables:
+        for deck in conn.execute("SELECT id, name FROM decks ORDER BY id"):
+            decks[str(deck["id"])] = {"name": (deck["name"] or "").replace("\\x1f", "::")}
     print("Selected collection model names:", [m.get("name","") for m in models.values()])
     print("Selected collection model field counts:", {m.get("name",""):len(m.get("flds",[])) for m in models.values()})
+
     return conn, models, decks, db_path
 
 def convert(apkg: Path, out_dir: Path):
