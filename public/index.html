@@ -91,7 +91,7 @@ async function openDoc(path){
  const url='https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/'+path.split('/').map(encodeURIComponent).join('/');
  const r=await fetch(url);if(!r.ok)throw Error('文档读取失败 '+r.status);const md=await r.text();marked.setOptions({gfm:true,breaks:false});$('#content').innerHTML=marked.parse(md);
  $('#content').querySelectorAll('img').forEach(img=>{img.src=rawAsset(path,img.getAttribute('src')||'');img.loading='lazy';img.onerror=()=>{img.alt=(img.alt||'图片')+'（资源暂不可用）';}});
- $('#content').querySelectorAll('a').forEach(a=>{const href=a.getAttribute('href')||'';if(href&&!/^(https?:|mailto:|#|\/)/i.test(href)){const target=rawAsset(path,href);a.href=target.endsWith('.md')?'https://github.com/'+OWNER+'/'+REPO+'/blob/'+BRANCH+'/'+target.split('/').slice(7).join('/'):target;}a.target='_blank';a.rel='noopener'});
+ $('#content').querySelectorAll('a').forEach(a=>{const href=a.getAttribute('href')||'';if(href&&!/^(https?:|mailto:|#|\/)/i.test(href)){const target=rawAsset(path,href);a.href=target.endsWith('.md')?'https://github.com/'+OWNER+'/'+REPO+'/blob/'+BRANCH+'/'+target.replace('https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/',''):target;}a.target='_blank';a.rel='noopener'});
  if(window.CSRender?.enhance)await window.CSRender.enhance($('#content'));
  history.replaceState(null,'','#doc='+encodeURIComponent(path));
  }catch(e){$('#content').innerHTML='<p>'+esc(e.message)+'</p>';}
