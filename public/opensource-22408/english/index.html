@@ -45,6 +45,14 @@
         #main-screen{height:100%;margin-left:var(--sidebar-width);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;position:relative}
         .word-card{width:90%;max-width:800px;padding:20px}
         .word-line{font-size:72px;font-weight:800;margin-bottom:8px;letter-spacing:-1px}
+        .pronunciation-bar{display:flex;justify-content:center;gap:10px;margin:12px 0 20px}
+        .pronunciation-btn{border:1px solid rgba(192,57,43,.18);background:#fff;color:var(--primary);border-radius:22px;padding:8px 16px;font-size:13px;font-weight:650;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:6px}
+        .pronunciation-btn:hover{background:var(--primary-light);border-color:rgba(192,57,43,.35);transform:translateY(-1px)}
+        .pronunciation-btn:active{transform:scale(.97)}
+        .pronunciation-btn:disabled{opacity:.55;cursor:wait}
+        .pronunciation-status{font-size:11px;color:#999;min-height:16px;margin-top:-12px;margin-bottom:8px}
+        @media(max-width:768px){.pronunciation-btn{padding:8px 13px;font-size:12px}}
+
         .def-item{font-size:26px;line-height:1.5;margin-bottom:8px;color:#1d1d1f}
         .page-info{font-size:14px;color:#999;margin-top:16px}
         #fav-btn.active{color:#FF3B30}
@@ -136,6 +144,11 @@
 <div id="main-screen">
     <div class="word-card">
         <div class="word-line" id="dw">Loading...</div>
+        <div class="pronunciation-bar" aria-label="单词发音">
+            <button class="pronunciation-btn" id="uk-audio" type="button" onclick="playPronunciation(1,event)" title="播放英式发音">🔊 英音 UK</button>
+            <button class="pronunciation-btn" id="us-audio" type="button" onclick="playPronunciation(2,event)" title="播放美式发音">🔊 美音 US</button>
+        </div>
+        <div class="pronunciation-status" id="pronunciation-status" aria-live="polite"></div>
         <div id="dd"></div>
         <div class="page-info" id="dp"></div>
     </div>
@@ -185,10 +198,32 @@ function buildQ(fr=false){
     renderW();updateFUI();
 }
 
+// Youdao dictionary pronunciation: type=1 British English, type=2 American English.
+let pronunciationAudio=null;
+function playPronunciation(type,event){
+    if(event)event.stopPropagation();
+    if(!Q.length)return;
+    const word=Q[C]?.w;
+    if(!word)return;
+    const status=document.getElementById('pronunciation-status');
+    const buttons=[document.getElementById('uk-audio'),document.getElementById('us-audio')];
+    if(pronunciationAudio){pronunciationAudio.pause();pronunciationAudio=null}
+    buttons.forEach(b=>b.disabled=true);
+    status.textContent=type===1?'正在播放英音…':'正在播放美音…';
+    const audio=new Audio('https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(word)+'&type='+type);
+    pronunciationAudio=audio;
+    audio.onended=()=>{buttons.forEach(b=>b.disabled=false);status.textContent=''};
+    audio.onerror=()=>{buttons.forEach(b=>b.disabled=false);status.textContent='发音加载失败，请检查网络后重试'};
+    audio.play().then(()=>{}).catch(()=>{buttons.forEach(b=>b.disabled=false);status.textContent='浏览器未能播放音频，请再次点击按钮'});
+}
 function renderW(){
     if(!Q.length)return;
     const w=Q[C];
     document.getElementById('dw').innerText=w.w;
+    const audioButtons=[document.getElementById('uk-audio'),document.getElementById('us-audio')];
+    audioButtons.forEach(b=>b.disabled=false);
+    document.getElementById('pronunciation-status').textContent='';
+    if(pronunciationAudio){pronunciationAudio.pause();pronunciationAudio=null}
     document.getElementById('dd').innerHTML=w.d.split(/[;；]/).map(d=>'<div class="def-item">'+d.trim()+'</div>').join('');
     document.getElementById('dp').innerText=w.p?'📖 '+w.p:'';
     document.getElementById('fav-btn').className=FV[w.w]?'active':'';
