@@ -2,7 +2,7 @@
   "version": 1,
   "language": "en-zh",
   "scope": "考研英语高频核心词首批离线拓展",
-  "note": "例句为学习用途原创短句；中文释义按常见考研语境整理。后续按词库单元扩充。",
+  "note": "共40个首批离线核心词条。例句为学习用途原创短句；中文释义按常见考研语境整理。后续按词库单元继续扩充。",
   "entries": {
     "abandon": {
       "pos": "verb",
@@ -865,6 +865,879 @@
           "significant",
           "important",
           "significant 常强调程度、影响或统计意义上的显著；important 强调重要性"
+        ]
+      ]
+    },
+    "adjust": {
+      "pos": "verb",
+      "meanings": [
+        "调整；调节",
+        "适应；使适应",
+        "校正；整理"
+      ],
+      "phrases": [
+        [
+          "adjust to",
+          "适应……"
+        ],
+        [
+          "adjust the settings",
+          "调整设置"
+        ],
+        [
+          "adjust one's attitude",
+          "调整态度"
+        ]
+      ],
+      "sentences": [
+        [
+          "It takes time to adjust to a new working environment.",
+          "适应新的工作环境需要时间。"
+        ],
+        [
+          "The company adjusted its strategy in response to market changes.",
+          "公司针对市场变化调整了策略。"
+        ]
+      ],
+      "forms": [
+        "adjustment（n. 调整；适应）",
+        "adjustable（adj. 可调节的）",
+        "adjusted（adj. 调整过的）"
+      ],
+      "confusables": [
+        [
+          "adjust",
+          "adapt",
+          "adjust 常指对细节或状态作调整；adapt 强调适应新环境或改编"
+        ]
+      ]
+    },
+    "alternative": {
+      "pos": "noun / adjective",
+      "meanings": [
+        "n. 可供选择的事物；替代方案",
+        "adj. 可替代的；非传统的"
+      ],
+      "phrases": [
+        [
+          "an alternative to",
+          "……的替代品/替代方案"
+        ],
+        [
+          "have no alternative but to",
+          "除了……别无选择"
+        ],
+        [
+          "alternative energy",
+          "替代能源"
+        ]
+      ],
+      "sentences": [
+        [
+          "We need to find an alternative to expensive medical treatment.",
+          "我们需要找到昂贵医疗方案的替代办法。"
+        ],
+        [
+          "There is no alternative but to reconsider the plan.",
+          "除了重新考虑计划，我们别无选择。"
+        ]
+      ],
+      "forms": [
+        "alternatively（adv. 或者；作为另一种选择）",
+        "alternation（n. 交替）"
+      ],
+      "confusables": [
+        [
+          "alternative",
+          "option",
+          "alternative 常强调替代性选择；option 泛指可选项目"
+        ]
+      ]
+    },
+    "appropriate": {
+      "pos": "adjective / verb",
+      "meanings": [
+        "adj. 合适的；恰当的",
+        "v. 挪用；拨（款）专用"
+      ],
+      "phrases": [
+        [
+          "be appropriate for",
+          "适合……"
+        ],
+        [
+          "an appropriate response",
+          "恰当的回应"
+        ],
+        [
+          "take appropriate measures",
+          "采取适当措施"
+        ]
+      ],
+      "sentences": [
+        [
+          "Teachers should choose materials appropriate for their students.",
+          "教师应选择适合学生的材料。"
+        ],
+        [
+          "The government took appropriate measures to reduce the risk.",
+          "政府采取了适当措施来降低风险。"
+        ]
+      ],
+      "forms": [
+        "appropriately（adv. 适当地）",
+        "appropriateness（n. 适当；恰当）",
+        "appropriation（n. 挪用；拨款）"
+      ],
+      "confusables": [
+        [
+          "appropriate",
+          "proper",
+          "appropriate 强调与具体情境相适合；proper 强调符合规则或标准"
+        ]
+      ]
+    },
+    "challenge": {
+      "pos": "noun / verb",
+      "meanings": [
+        "n. 挑战；艰巨任务",
+        "n. 怀疑；质疑",
+        "v. 向……挑战；质疑"
+      ],
+      "phrases": [
+        [
+          "face a challenge",
+          "面对挑战"
+        ],
+        [
+          "meet the challenge",
+          "迎接挑战"
+        ],
+        [
+          "challenge an assumption",
+          "质疑一种假设"
+        ]
+      ],
+      "sentences": [
+        [
+          "Climate change presents a serious challenge to agriculture.",
+          "气候变化给农业带来了严峻挑战。"
+        ],
+        [
+          "The findings challenge the traditional view of intelligence.",
+          "这些发现对传统的智力观提出了质疑。"
+        ]
+      ],
+      "forms": [
+        "challenging（adj. 有挑战性的）",
+        "challenger（n. 挑战者）"
+      ],
+      "confusables": [
+        [
+          "challenge",
+          "difficulty",
+          "challenge 常包含需要应对的任务或考验；difficulty 强调困难本身"
+        ]
+      ]
+    },
+    "commit": {
+      "pos": "verb",
+      "meanings": [
+        "犯（错误、罪行等）",
+        "承诺；保证",
+        "投入（时间、资金等）",
+        "把……交托/送交"
+      ],
+      "phrases": [
+        [
+          "commit a crime",
+          "犯罪"
+        ],
+        [
+          "commit oneself to",
+          "承诺；致力于"
+        ],
+        [
+          "commit resources to",
+          "投入资源于"
+        ]
+      ],
+      "sentences": [
+        [
+          "The organization is committed to protecting the environment.",
+          "该组织致力于保护环境。"
+        ],
+        [
+          "He committed a serious error in the calculation.",
+          "他在计算中犯了一个严重错误。"
+        ]
+      ],
+      "forms": [
+        "commitment（n. 承诺；投入；责任）",
+        "committed（adj. 尽心尽力的；坚定的）",
+        "committee（n. 委员会，词形相近但词义不同）"
+      ],
+      "confusables": [
+        [
+          "commit",
+          "promise",
+          "commit 常表示正式承担责任或投入；promise 强调作出承诺"
+        ]
+      ]
+    },
+    "consider": {
+      "pos": "verb",
+      "meanings": [
+        "考虑；细想",
+        "认为；把……看作",
+        "体谅；顾及"
+      ],
+      "phrases": [
+        [
+          "consider doing sth.",
+          "考虑做某事"
+        ],
+        [
+          "consider A (to be) B",
+          "认为A是B"
+        ],
+        [
+          "take ... into consideration",
+          "把……考虑在内"
+        ]
+      ],
+      "sentences": [
+        [
+          "We should consider the long-term effects of this decision.",
+          "我们应该考虑这一决定的长期影响。"
+        ],
+        [
+          "Many people consider education a basic right.",
+          "许多人认为教育是一项基本权利。"
+        ]
+      ],
+      "forms": [
+        "consideration（n. 考虑；体谅）",
+        "considerate（adj. 体贴的）",
+        "considerable（adj. 相当大的；重要的）",
+        "considerably（adv. 相当地）"
+      ],
+      "confusables": [
+        [
+          "consider",
+          "regard",
+          "consider 可直接接宾语或从句；regard 常见结构为 regard A as B"
+        ]
+      ]
+    },
+    "define": {
+      "pos": "verb",
+      "meanings": [
+        "给……下定义；解释",
+        "界定；规定",
+        "使明确；使轮廓清晰"
+      ],
+      "phrases": [
+        [
+          "define a term",
+          "给术语下定义"
+        ],
+        [
+          "define the boundaries",
+          "界定边界"
+        ],
+        [
+          "be defined as",
+          "被定义为"
+        ]
+      ],
+      "sentences": [
+        [
+          "It is difficult to define success in a single sentence.",
+          "很难用一句话定义成功。"
+        ],
+        [
+          "The law clearly defines the responsibilities of each party.",
+          "法律明确界定了各方的责任。"
+        ]
+      ],
+      "forms": [
+        "definition（n. 定义；清晰度）",
+        "definite（adj. 明确的；一定的）",
+        "definitely（adv. 肯定地）",
+        "definitive（adj. 权威的；最终的）"
+      ],
+      "confusables": [
+        [
+          "define",
+          "describe",
+          "define 说明概念的含义或边界；describe 描述事物的特征"
+        ]
+      ]
+    },
+    "derive": {
+      "pos": "verb",
+      "meanings": [
+        "取得；得到",
+        "源于；来自",
+        "推导；演绎"
+      ],
+      "phrases": [
+        [
+          "derive from",
+          "源于；来自"
+        ],
+        [
+          "derive benefit from",
+          "从……中获益"
+        ],
+        [
+          "derive a formula",
+          "推导公式"
+        ]
+      ],
+      "sentences": [
+        [
+          "Many English words derive from Latin.",
+          "许多英语单词源于拉丁语。"
+        ],
+        [
+          "The researchers derived a general rule from the observations.",
+          "研究人员从观察结果中推导出一条普遍规律。"
+        ]
+      ],
+      "forms": [
+        "derivation（n. 起源；推导）",
+        "derivative（n. 衍生物；导数 adj. 派生的）",
+        "derived（adj. 派生的）"
+      ],
+      "confusables": [
+        [
+          "derive",
+          "deprive",
+          "derive 是“得到/源于”；deprive 是“剥夺”"
+        ]
+      ]
+    },
+    "distribute": {
+      "pos": "verb",
+      "meanings": [
+        "分发；分配",
+        "分布；散布",
+        "使（产品）经销"
+      ],
+      "phrases": [
+        [
+          "distribute ... among",
+          "在……之间分配"
+        ],
+        [
+          "widely distributed",
+          "广泛分布的"
+        ],
+        [
+          "distribute information",
+          "传播信息"
+        ]
+      ],
+      "sentences": [
+        [
+          "The charity distributed food among the affected families.",
+          "慈善机构向受灾家庭分发了食物。"
+        ],
+        [
+          "The species is widely distributed across the region.",
+          "这一物种广泛分布于该地区。"
+        ]
+      ],
+      "forms": [
+        "distribution（n. 分配；分布）",
+        "distributor（n. 经销商；分配者）",
+        "distributed（adj. 分布式的）"
+      ],
+      "confusables": [
+        [
+          "distribute",
+          "contribute",
+          "distribute 是“分发/分布”；contribute 是“贡献/促成”"
+        ]
+      ]
+    },
+    "establish": {
+      "pos": "verb",
+      "meanings": [
+        "建立；创立",
+        "确立；制定",
+        "证实；查明"
+      ],
+      "phrases": [
+        [
+          "establish a relationship",
+          "建立关系"
+        ],
+        [
+          "establish a rule",
+          "确立规则"
+        ],
+        [
+          "establish the facts",
+          "查明事实"
+        ]
+      ],
+      "sentences": [
+        [
+          "The university established a research center in 2010.",
+          "这所大学于2010年建立了一个研究中心。"
+        ],
+        [
+          "Further evidence is needed to establish the cause of the problem.",
+          "还需要更多证据来查明问题的原因。"
+        ]
+      ],
+      "forms": [
+        "establishment（n. 建立；机构）",
+        "established（adj. 已确立的；公认的）",
+        "establishing（n. 建立过程）"
+      ],
+      "confusables": [
+        [
+          "establish",
+          "found",
+          "establish 可指建立制度、关系或事实；found 更常指创办组织或机构"
+        ]
+      ]
+    },
+    "estimate": {
+      "pos": "noun / verb",
+      "meanings": [
+        "v. 估计；估算",
+        "n. 估计；估价；预算"
+      ],
+      "phrases": [
+        [
+          "estimate the cost",
+          "估算成本"
+        ],
+        [
+          "rough estimate",
+          "粗略估计"
+        ],
+        [
+          "be estimated to be",
+          "据估计为"
+        ]
+      ],
+      "sentences": [
+        [
+          "Experts estimate that the project will take two years.",
+          "专家估计这个项目需要两年时间。"
+        ],
+        [
+          "The initial cost estimate was too low.",
+          "最初的成本估算过低。"
+        ]
+      ],
+      "forms": [
+        "estimation（n. 估计；判断）",
+        "estimated（adj. 估计的）",
+        "overestimate（v. 高估）",
+        "underestimate（v. 低估）"
+      ],
+      "confusables": [
+        [
+          "estimate",
+          "evaluate",
+          "estimate 侧重估算数量或价值；evaluate 侧重评价质量、价值或效果"
+        ]
+      ]
+    },
+    "factor": {
+      "pos": "noun / verb",
+      "meanings": [
+        "n. 因素；要素",
+        "n. 因子；因数",
+        "v. 把……因素考虑进去"
+      ],
+      "phrases": [
+        [
+          "a key factor in",
+          "……中的关键因素"
+        ],
+        [
+          "factor in",
+          "把……考虑在内"
+        ],
+        [
+          "risk factor",
+          "风险因素"
+        ]
+      ],
+      "sentences": [
+        [
+          "Cost is an important factor in the decision.",
+          "成本是作出这一决定时的重要因素。"
+        ],
+        [
+          "We must factor in the effects of inflation.",
+          "我们必须把通货膨胀的影响考虑在内。"
+        ]
+      ],
+      "forms": [
+        "factorial（n. 阶乘 adj. 因子的）",
+        "factorization（n. 因式分解）"
+      ],
+      "confusables": [
+        [
+          "factor",
+          "feature",
+          "factor 指影响结果的因素；feature 指事物本身的特征"
+        ]
+      ]
+    },
+    "feature": {
+      "pos": "noun / verb",
+      "meanings": [
+        "n. 特征；特点",
+        "n. 特写；专题报道",
+        "v. 以……为特色；由……主演"
+      ],
+      "phrases": [
+        [
+          "a distinctive feature",
+          "显著特征"
+        ],
+        [
+          "feature article",
+          "专题文章"
+        ],
+        [
+          "feature prominently",
+          "突出展示"
+        ]
+      ],
+      "sentences": [
+        [
+          "One important feature of the system is its flexibility.",
+          "该系统的一个重要特点是灵活性。"
+        ],
+        [
+          "The magazine featured an interview with the scientist.",
+          "这本杂志刊登了对那位科学家的专访。"
+        ]
+      ],
+      "forms": [
+        "featured（adj. 作为重点介绍的）",
+        "featuring（prep. 以……为特色；由……主演）"
+      ],
+      "confusables": [
+        [
+          "feature",
+          "characteristic",
+          "feature 常指可观察到的特点；characteristic 常指典型属性或特性"
+        ]
+      ]
+    },
+    "identify": {
+      "pos": "verb",
+      "meanings": [
+        "识别；认出",
+        "确定；查明",
+        "认同；把……视为同一"
+      ],
+      "phrases": [
+        [
+          "identify the cause",
+          "查明原因"
+        ],
+        [
+          "identify with",
+          "认同；与……产生共鸣"
+        ],
+        [
+          "identify a problem",
+          "发现问题"
+        ]
+      ],
+      "sentences": [
+        [
+          "The researchers identified three major causes of the failure.",
+          "研究人员查明了失败的三个主要原因。"
+        ],
+        [
+          "Readers may identify with the main character.",
+          "读者可能会对主人公产生共鸣。"
+        ]
+      ],
+      "forms": [
+        "identification（n. 识别；身份证明；认同）",
+        "identity（n. 身份；特性）",
+        "identifiable（adj. 可识别的）"
+      ],
+      "confusables": [
+        [
+          "identify",
+          "recognize",
+          "identify 强调确认身份或性质；recognize 强调认出熟悉的人或事物"
+        ]
+      ]
+    },
+    "indicate": {
+      "pos": "verb",
+      "meanings": [
+        "表明；显示",
+        "暗示；象征",
+        "指出；指示"
+      ],
+      "phrases": [
+        [
+          "indicate that",
+          "表明……"
+        ],
+        [
+          "clearly indicate",
+          "清楚地表明"
+        ],
+        [
+          "indicate a direction",
+          "指示方向"
+        ]
+      ],
+      "sentences": [
+        [
+          "The results indicate that the new approach is effective.",
+          "结果表明，这种新方法是有效的。"
+        ],
+        [
+          "A red light indicates that the battery is low.",
+          "红灯表示电池电量不足。"
+        ]
+      ],
+      "forms": [
+        "indication（n. 表明；迹象）",
+        "indicative（adj. 指示的；表明的）",
+        "indicator（n. 指示器；指标）"
+      ],
+      "confusables": [
+        [
+          "indicate",
+          "imply",
+          "indicate 常指明确显示；imply 常指间接暗示"
+        ]
+      ]
+    },
+    "involve": {
+      "pos": "verb",
+      "meanings": [
+        "涉及；包含",
+        "使参与；牵涉",
+        "需要；必然包含（某种结果或活动）"
+      ],
+      "phrases": [
+        [
+          "involve doing sth.",
+          "涉及做某事"
+        ],
+        [
+          "be involved in",
+          "参与；卷入"
+        ],
+        [
+          "involve a risk",
+          "包含风险"
+        ]
+      ],
+      "sentences": [
+        [
+          "The project involves cooperation among several departments.",
+          "这个项目需要几个部门之间的合作。"
+        ],
+        [
+          "More than one hundred volunteers were involved in the study.",
+          "一百多名志愿者参与了这项研究。"
+        ]
+      ],
+      "forms": [
+        "involvement（n. 参与；牵连）",
+        "involved（adj. 复杂的；参与其中的）"
+      ],
+      "confusables": [
+        [
+          "involve",
+          "include",
+          "involve 强调必然牵涉或需要；include 强调把某项列入整体"
+        ]
+      ]
+    },
+    "occur": {
+      "pos": "verb",
+      "meanings": [
+        "发生；出现",
+        "存在；被发现",
+        "（想法）浮现于脑海"
+      ],
+      "phrases": [
+        [
+          "occur to sb.",
+          "某人突然想到"
+        ],
+        [
+          "occur frequently",
+          "频繁发生"
+        ],
+        [
+          "occur naturally",
+          "自然发生"
+        ]
+      ],
+      "sentences": [
+        [
+          "The accident occurred shortly after midnight.",
+          "事故发生在午夜刚过不久。"
+        ],
+        [
+          "A similar idea occurred to several researchers independently.",
+          "几位研究人员各自独立地想到了类似的观点。"
+        ]
+      ],
+      "forms": [
+        "occurrence（n. 发生；事件）",
+        "occasional（adj. 偶尔的）",
+        "occasionally（adv. 偶尔）"
+      ],
+      "confusables": [
+        [
+          "occur",
+          "happen",
+          "occur 较正式，常用于书面语；happen 更口语化"
+        ]
+      ]
+    },
+    "potential": {
+      "pos": "noun / adjective",
+      "meanings": [
+        "n. 潜力；可能性",
+        "adj. 潜在的；可能的"
+      ],
+      "phrases": [
+        [
+          "potential for growth",
+          "增长潜力"
+        ],
+        [
+          "potential risk",
+          "潜在风险"
+        ],
+        [
+          "reach one's potential",
+          "发挥某人的潜力"
+        ]
+      ],
+      "sentences": [
+        [
+          "The technology has the potential to transform education.",
+          "这项技术有可能改变教育。"
+        ],
+        [
+          "We should consider the potential risks before acting.",
+          "行动前我们应该考虑潜在风险。"
+        ]
+      ],
+      "forms": [
+        "potentially（adv. 潜在地；可能地）",
+        "potency（n. 效力；潜能）"
+      ],
+      "confusables": [
+        [
+          "potential",
+          "possible",
+          "potential 强调尚未实现但具备发展的可能；possible 泛指有可能发生"
+        ]
+      ]
+    },
+    "principle": {
+      "pos": "noun",
+      "meanings": [
+        "原则；原理",
+        "行为准则；道德规范",
+        "基本规律"
+      ],
+      "phrases": [
+        [
+          "in principle",
+          "原则上；大体上"
+        ],
+        [
+          "the principle of equality",
+          "平等原则"
+        ],
+        [
+          "on principle",
+          "出于原则；按照原则"
+        ]
+      ],
+      "sentences": [
+        [
+          "The design is based on a simple scientific principle.",
+          "这一设计基于一个简单的科学原理。"
+        ],
+        [
+          "In principle, everyone should have equal access to education.",
+          "原则上，每个人都应享有平等的受教育机会。"
+        ]
+      ],
+      "forms": [
+        "principled（adj. 有原则的）",
+        "principle（注意与 principal 区分）"
+      ],
+      "confusables": [
+        [
+          "principle",
+          "principal",
+          "principle 是“原则/原理”；principal 是“主要的”或“负责人/校长”"
+        ]
+      ]
+    },
+    "require": {
+      "pos": "verb",
+      "meanings": [
+        "需要；要求",
+        "规定；命令",
+        "使有必要"
+      ],
+      "phrases": [
+        [
+          "require sb. to do sth.",
+          "要求某人做某事"
+        ],
+        [
+          "be required to",
+          "被要求；必须"
+        ],
+        [
+          "require attention",
+          "需要关注"
+        ]
+      ],
+      "sentences": [
+        [
+          "The job requires strong communication skills.",
+          "这份工作需要较强的沟通能力。"
+        ],
+        [
+          "Applicants are required to provide proof of identity.",
+          "申请人必须提供身份证明。"
+        ]
+      ],
+      "forms": [
+        "requirement（n. 要求；必要条件）",
+        "required（adj. 必需的；规定的）",
+        "requirement-based（adj. 基于需求的）"
+      ],
+      "confusables": [
+        [
+          "require",
+          "acquire",
+          "require 是“需要/要求”；acquire 是“获得/习得”"
         ]
       ]
     }
