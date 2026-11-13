@@ -2,7 +2,7 @@
   "version": 1,
   "language": "en-zh",
   "scope": "考研英语高频核心词首批离线拓展",
-  "note": "共82个离线核心词条，按考研必考词单元持续扩充。",
+  "note": "共82个离线核心词条，按考研必考词单元持续扩充。 本次补充必考词 Unit1 缺失的 23 个词条，重点整理高频短语、固定搭配、中文释义及考研语境例句。",
   "entries": {
     "abandon": {
       "pos": "verb",
@@ -3601,6 +3601,1102 @@
           "safeguard",
           "protect",
           "safeguard 常强调预防风险的保障措施；protect 泛指保护人或事物免受伤害"
+        ]
+      ]
+    },
+    "journalist": {
+      "pos": "noun",
+      "meanings": [
+        "记者；新闻工作者",
+        "从事新闻采编与报道的人"
+      ],
+      "phrases": [
+        [
+          "investigative journalist",
+          "调查记者"
+        ],
+        [
+          "a leading journalist",
+          "一位知名记者"
+        ],
+        [
+          "journalistic integrity",
+          "新闻职业操守"
+        ],
+        [
+          "journalist reports on",
+          "记者报道……"
+        ]
+      ],
+      "sentences": [
+        [
+          "The journalist questioned the accuracy of the official report.",
+          "这名记者质疑了官方报告的准确性。"
+        ],
+        [
+          "Investigative journalists play an important role in public life.",
+          "调查记者在公共生活中发挥着重要作用。"
+        ]
+      ],
+      "forms": [
+        "journalism（n. 新闻业；新闻报道）",
+        "journalistic（adj. 新闻的；新闻工作者的）"
+      ],
+      "confusables": [
+        [
+          "journalist",
+          "editor",
+          "journalist 负责采访和报道；editor 负责审阅、编辑内容"
+        ]
+      ]
+    },
+    "journey": {
+      "pos": "noun / verb",
+      "meanings": [
+        "旅行；旅程",
+        "（尤指漫长或艰难的）过程；历程"
+      ],
+      "phrases": [
+        [
+          "a long journey",
+          "长途旅行"
+        ],
+        [
+          "go on a journey",
+          "去旅行"
+        ],
+        [
+          "the journey towards success",
+          "迈向成功的历程"
+        ],
+        [
+          "journey through life",
+          "人生旅程"
+        ]
+      ],
+      "sentences": [
+        [
+          "The journey towards equality requires patience and persistent effort.",
+          "迈向平等的历程需要耐心和持续努力。"
+        ],
+        [
+          "The train journey takes approximately three hours.",
+          "乘火车旅行大约需要三个小时。"
+        ]
+      ],
+      "forms": [
+        "journeyed（v. 旅行；行进）",
+        "journeying（n./v. 旅行；行进）"
+      ],
+      "confusables": [
+        [
+          "journey",
+          "travel",
+          "journey 通常指一次具体行程或历程；travel 泛指旅行这一活动"
+        ]
+      ]
+    },
+    "judge": {
+      "pos": "noun / verb",
+      "meanings": [
+        "法官；裁判员",
+        "判断；评价；认为",
+        "审理；裁决"
+      ],
+      "phrases": [
+        [
+          "judge by appearances",
+          "以貌取人；凭外表判断"
+        ],
+        [
+          "judge a case",
+          "审理案件"
+        ],
+        [
+          "judge whether",
+          "判断是否……"
+        ],
+        [
+          "a fair judge of",
+          "对……有公正判断力的人"
+        ]
+      ],
+      "sentences": [
+        [
+          "We should not judge people solely by their appearance.",
+          "我们不应该仅凭外表判断一个人。"
+        ],
+        [
+          "It is difficult to judge whether the policy has been effective.",
+          "很难判断这项政策是否有效。"
+        ]
+      ],
+      "forms": [
+        "judgment / judgement（n. 判断；判决）",
+        "judicial（adj. 司法的；法庭的）",
+        "judicially（adv. 依法地）"
+      ],
+      "confusables": [
+        [
+          "judge",
+          "evaluate",
+          "judge 可指作出判断或裁决；evaluate 更强调系统评估价值或效果"
+        ]
+      ]
+    },
+    "judgement": {
+      "pos": "noun",
+      "meanings": [
+        "判断力；看法",
+        "判断；评判",
+        "判决；裁决"
+      ],
+      "phrases": [
+        [
+          "make a judgement",
+          "作出判断"
+        ],
+        [
+          "a matter of judgement",
+          "需要判断的事情"
+        ],
+        [
+          "in one's judgement",
+          "依某人看来"
+        ],
+        [
+          "sound judgement",
+          "明智的判断力"
+        ]
+      ],
+      "sentences": [
+        [
+          "Good judgement depends on both experience and careful reasoning.",
+          "良好的判断力既依赖经验，也依赖谨慎推理。"
+        ],
+        [
+          "The final judgement will be announced next week.",
+          "最终判决将于下周公布。"
+        ]
+      ],
+      "forms": [
+        "judge（v. 判断；审理）",
+        "judicial（adj. 司法的）",
+        "judgmental（adj. 爱批判他人的）"
+      ],
+      "confusables": [
+        [
+          "judgement",
+          "decision",
+          "judgement 强调判断过程或判断力；decision 强调最终作出的决定"
+        ]
+      ]
+    },
+    "judicial": {
+      "pos": "adjective",
+      "meanings": [
+        "司法的；法庭的",
+        "法官的；审判的"
+      ],
+      "phrases": [
+        [
+          "judicial system",
+          "司法制度"
+        ],
+        [
+          "judicial review",
+          "司法审查"
+        ],
+        [
+          "judicial independence",
+          "司法独立"
+        ],
+        [
+          "judicial authority",
+          "司法权力；司法机关"
+        ]
+      ],
+      "sentences": [
+        [
+          "An independent judicial system is essential to the rule of law.",
+          "独立的司法制度对于法治至关重要。"
+        ],
+        [
+          "The decision is subject to judicial review.",
+          "这一决定须接受司法审查。"
+        ]
+      ],
+      "forms": [
+        "judiciary（n. 司法部门；法官群体）",
+        "judicially（adv. 司法地；依法地）"
+      ],
+      "confusables": [
+        [
+          "judicial",
+          "legal",
+          "judicial 特指司法或法院相关；legal 泛指法律层面的"
+        ]
+      ]
+    },
+    "jury": {
+      "pos": "noun",
+      "meanings": [
+        "陪审团",
+        "评审团；评判委员会"
+      ],
+      "phrases": [
+        [
+          "a jury of twelve",
+          "由十二人组成的陪审团"
+        ],
+        [
+          "jury trial",
+          "陪审团审判"
+        ],
+        [
+          "the jury's decision",
+          "陪审团的裁决"
+        ],
+        [
+          "serve on a jury",
+          "担任陪审员"
+        ]
+      ],
+      "sentences": [
+        [
+          "The jury found the defendant not guilty.",
+          "陪审团裁定被告无罪。"
+        ],
+        [
+          "A panel of experts acted as the jury for the competition.",
+          "专家小组担任了这场比赛的评审团。"
+        ]
+      ],
+      "forms": [
+        "juror（n. 陪审员）",
+        "jury（复数形式通常为 juries）"
+      ],
+      "confusables": [
+        [
+          "jury",
+          "judge",
+          "jury 通常由成员共同评议事实；judge 是主持审判并依法裁决的法官"
+        ]
+      ]
+    },
+    "jurisdiction": {
+      "pos": "noun",
+      "meanings": [
+        "司法权；审判权",
+        "管辖权；管辖范围",
+        "权限；控制范围"
+      ],
+      "phrases": [
+        [
+          "within the jurisdiction of",
+          "在……的管辖范围内"
+        ],
+        [
+          "have jurisdiction over",
+          "对……拥有管辖权"
+        ],
+        [
+          "territorial jurisdiction",
+          "属地管辖权"
+        ],
+        [
+          "legal jurisdiction",
+          "司法管辖权"
+        ]
+      ],
+      "sentences": [
+        [
+          "The case falls within the jurisdiction of the local court.",
+          "此案属于当地法院的管辖范围。"
+        ],
+        [
+          "National laws may differ across jurisdictions.",
+          "不同司法管辖区的国家法律可能有所不同。"
+        ]
+      ],
+      "forms": [
+        "jurisdictional（adj. 管辖权的；司法管辖的）",
+        "jurisdictionally（adv. 在管辖权方面）"
+      ],
+      "confusables": [
+        [
+          "jurisdiction",
+          "authority",
+          "jurisdiction 指法律或制度规定的管辖范围；authority 强调权力或权威"
+        ]
+      ]
+    },
+    "justice": {
+      "pos": "noun",
+      "meanings": [
+        "正义；公平；公正",
+        "司法；法律制度",
+        "法官（用于称谓）"
+      ],
+      "phrases": [
+        [
+          "social justice",
+          "社会正义"
+        ],
+        [
+          "do justice to",
+          "公平对待；充分展现"
+        ],
+        [
+          "bring sb. to justice",
+          "将某人绳之以法"
+        ],
+        [
+          "the pursuit of justice",
+          "对正义的追求"
+        ]
+      ],
+      "sentences": [
+        [
+          "Equal access to education is an important issue of social justice.",
+          "平等接受教育的机会是社会正义的重要议题。"
+        ],
+        [
+          "The new evidence helped bring the criminal to justice.",
+          "新证据有助于将罪犯绳之以法。"
+        ]
+      ],
+      "forms": [
+        "just（adj. 公正的；合理的）",
+        "justify（v. 证明……正当）",
+        "justification（n. 正当理由）",
+        "justly（adv. 公正地）"
+      ],
+      "confusables": [
+        [
+          "justice",
+          "fairness",
+          "justice 常涉及法律、制度和道德正义；fairness 强调公平对待"
+        ]
+      ]
+    },
+    "justify": {
+      "pos": "verb",
+      "meanings": [
+        "证明……有道理；为……辩护",
+        "使……显得合理",
+        "为……提供正当理由"
+      ],
+      "phrases": [
+        [
+          "justify one's actions",
+          "为自己的行为辩解"
+        ],
+        [
+          "justify the decision",
+          "证明这一决定合理"
+        ],
+        [
+          "be justified in doing sth.",
+          "做某事是有正当理由的"
+        ],
+        [
+          "justify the use of",
+          "证明使用……是合理的"
+        ]
+      ],
+      "sentences": [
+        [
+          "Economic benefits alone cannot justify environmental damage.",
+          "仅凭经济利益不足以证明环境破坏是合理的。"
+        ],
+        [
+          "The researchers justified their conclusion with further evidence.",
+          "研究人员用进一步的证据为其结论提供了依据。"
+        ]
+      ],
+      "forms": [
+        "justification（n. 正当理由；辩护）",
+        "justified（adj. 有正当理由的）",
+        "justifiable（adj. 可证明为正当的）",
+        "justifiably（adv. 有正当理由地）"
+      ],
+      "confusables": [
+        [
+          "justify",
+          "explain",
+          "justify 旨在证明行为或观点合理；explain 旨在说明原因或过程"
+        ]
+      ]
+    },
+    "maintenance": {
+      "pos": "noun",
+      "meanings": [
+        "维护；保养",
+        "维持；保持",
+        "抚养费；生活费"
+      ],
+      "phrases": [
+        [
+          "regular maintenance",
+          "定期维护"
+        ],
+        [
+          "maintenance costs",
+          "维护成本"
+        ],
+        [
+          "under maintenance",
+          "正在维护中"
+        ],
+        [
+          "maintenance of order",
+          "维持秩序"
+        ]
+      ],
+      "sentences": [
+        [
+          "Regular maintenance can extend the life of public facilities.",
+          "定期维护能够延长公共设施的使用寿命。"
+        ],
+        [
+          "The maintenance of social stability requires public cooperation.",
+          "维护社会稳定需要公众的合作。"
+        ]
+      ],
+      "forms": [
+        "maintain（v. 维持；维护）",
+        "maintained（adj. 得到维护的）",
+        "maintainable（adj. 可维护的）"
+      ],
+      "confusables": [
+        [
+          "maintenance",
+          "preservation",
+          "maintenance 强调持续维护和保持正常运行；preservation 强调保护原状"
+        ]
+      ]
+    },
+    "safety": {
+      "pos": "noun",
+      "meanings": [
+        "安全；平安",
+        "安全性；安全措施"
+      ],
+      "phrases": [
+        [
+          "public safety",
+          "公共安全"
+        ],
+        [
+          "for safety reasons",
+          "出于安全考虑"
+        ],
+        [
+          "safety measures",
+          "安全措施"
+        ],
+        [
+          "safety standards",
+          "安全标准"
+        ]
+      ],
+      "sentences": [
+        [
+          "Strict safety standards can reduce workplace accidents.",
+          "严格的安全标准能够减少工作场所事故。"
+        ],
+        [
+          "Public safety should be considered when new technologies are introduced.",
+          "引入新技术时应考虑公共安全。"
+        ]
+      ],
+      "forms": [
+        "safe（adj. 安全的）",
+        "safely（adv. 安全地）",
+        "safeguard（v./n. 保护；保障）",
+        "unsafe（adj. 不安全的）"
+      ],
+      "confusables": [
+        [
+          "safety",
+          "security",
+          "safety 多指免受事故或危险伤害；security 多指免受威胁、犯罪或攻击"
+        ]
+      ]
+    },
+    "savage": {
+      "pos": "adjective / noun / verb",
+      "meanings": [
+        "野蛮的；凶猛的",
+        "猛烈的；残酷的",
+        "野蛮人；猛烈抨击"
+      ],
+      "phrases": [
+        [
+          "a savage attack",
+          "猛烈的攻击"
+        ],
+        [
+          "savage criticism",
+          "严厉的批评"
+        ],
+        [
+          "a savage animal",
+          "凶猛的动物"
+        ],
+        [
+          "savage the proposal",
+          "猛烈抨击这项提议"
+        ]
+      ],
+      "sentences": [
+        [
+          "The proposal received savage criticism from environmental groups.",
+          "这项提议遭到了环保组织的猛烈批评。"
+        ],
+        [
+          "The documentary examines the impact of savage conflicts on civilians.",
+          "这部纪录片探讨了残酷冲突对平民的影响。"
+        ]
+      ],
+      "forms": [
+        "savagely（adv. 野蛮地；猛烈地）",
+        "savagery（n. 野蛮；残暴）"
+      ],
+      "confusables": [
+        [
+          "savage",
+          "violent",
+          "savage 常强调残酷、野蛮或猛烈；violent 强调使用暴力或造成伤害"
+        ]
+      ]
+    },
+    "save": {
+      "pos": "verb / noun",
+      "meanings": [
+        "拯救；挽救",
+        "节省；储蓄",
+        "保存；保留",
+        "除……之外（介词，较正式）"
+      ],
+      "phrases": [
+        [
+          "save lives",
+          "拯救生命"
+        ],
+        [
+          "save time and energy",
+          "节省时间和精力"
+        ],
+        [
+          "save money for",
+          "为……存钱"
+        ],
+        [
+          "save sth. for later",
+          "把某物留到以后使用"
+        ]
+      ],
+      "sentences": [
+        [
+          "Early warnings can save lives during natural disasters.",
+          "在自然灾害中，预警能够挽救生命。"
+        ],
+        [
+          "Public transport helps save energy and reduce pollution.",
+          "公共交通有助于节约能源并减少污染。"
+        ]
+      ],
+      "forms": [
+        "savings（n. 储蓄；存款）",
+        "saving（n. 节约；挽救）",
+        "saver（n. 储蓄者；节能装置）"
+      ],
+      "confusables": [
+        [
+          "save",
+          "rescue",
+          "save 可指挽救、节省或储存；rescue 主要指从危险中营救"
+        ]
+      ]
+    },
+    "saving": {
+      "pos": "noun / adjective",
+      "meanings": [
+        "节约；节省",
+        "储蓄；存款（常用复数 savings）",
+        "挽救；补偿性的"
+      ],
+      "phrases": [
+        [
+          "cost savings",
+          "成本节约"
+        ],
+        [
+          "energy savings",
+          "节能"
+        ],
+        [
+          "life savings",
+          "毕生积蓄"
+        ],
+        [
+          "a saving of time",
+          "时间上的节省"
+        ]
+      ],
+      "sentences": [
+        [
+          "The new system brings significant cost savings to the company.",
+          "新系统为公司带来了显著的成本节约。"
+        ],
+        [
+          "Her life savings were invested in the small business.",
+          "她的毕生积蓄被投入了这家小企业。"
+        ]
+      ],
+      "forms": [
+        "save（v. 节省；挽救；储蓄）",
+        "savings（n. 储蓄；存款）",
+        "savingly（adv. 节约地，少用）"
+      ],
+      "confusables": [
+        [
+          "saving",
+          "economy",
+          "saving 强调节省下来的资源或金额；economy 可指节约，也可指经济体系"
+        ]
+      ]
+    },
+    "scale": {
+      "pos": "noun / verb",
+      "meanings": [
+        "规模；范围；程度",
+        "等级；比例尺",
+        "天平；刻度",
+        "攀登；按比例缩放"
+      ],
+      "phrases": [
+        [
+          "on a large scale",
+          "大规模地"
+        ],
+        [
+          "the scale of the problem",
+          "问题的规模"
+        ],
+        [
+          "scale up production",
+          "扩大生产规模"
+        ],
+        [
+          "scale down costs",
+          "缩减成本"
+        ]
+      ],
+      "sentences": [
+        [
+          "The policy was introduced on a national scale.",
+          "这项政策在全国范围内推行。"
+        ],
+        [
+          "Researchers are trying to scale up the experiment.",
+          "研究人员正尝试扩大实验规模。"
+        ]
+      ],
+      "forms": [
+        "scalable（adj. 可扩展的）",
+        "scalability（n. 可扩展性）",
+        "scaled（adj. 按比例缩放的）"
+      ],
+      "confusables": [
+        [
+          "scale",
+          "scope",
+          "scale 强调大小、程度或数量级；scope 强调范围或涉及的领域"
+        ]
+      ]
+    },
+    "scene": {
+      "pos": "noun",
+      "meanings": [
+        "场景；情景；现场",
+        "景色；景象",
+        "活动领域；界面（常用 the scene）"
+      ],
+      "phrases": [
+        [
+          "at the scene of the accident",
+          "在事故现场"
+        ],
+        [
+          "behind the scenes",
+          "在幕后；暗中"
+        ],
+        [
+          "a familiar scene",
+          "熟悉的场景"
+        ],
+        [
+          "the political scene",
+          "政治舞台；政治局势"
+        ]
+      ],
+      "sentences": [
+        [
+          "Police arrived at the scene shortly after the accident.",
+          "事故发生后不久，警察便赶到了现场。"
+        ],
+        [
+          "Important decisions are sometimes made behind the scenes.",
+          "重要决定有时是在幕后作出的。"
+        ]
+      ],
+      "forms": [
+        "scenery（n. 风景；舞台布景）",
+        "scenic（adj. 风景优美的）",
+        "scene-setting（n. 背景铺陈）"
+      ],
+      "confusables": [
+        [
+          "scene",
+          "scenery",
+          "scene 指具体场景或现场；scenery 指自然风景或舞台布景"
+        ]
+      ]
+    },
+    "scenery": {
+      "pos": "noun",
+      "meanings": [
+        "风景；景色（通常不可数）",
+        "舞台布景"
+      ],
+      "phrases": [
+        [
+          "beautiful natural scenery",
+          "美丽的自然风光"
+        ],
+        [
+          "mountain scenery",
+          "山景"
+        ],
+        [
+          "enjoy the scenery",
+          "欣赏风景"
+        ],
+        [
+          "scenery around the lake",
+          "湖周围的景色"
+        ]
+      ],
+      "sentences": [
+        [
+          "Tourism can bring income to regions with attractive natural scenery.",
+          "旅游业能够为自然风光优美的地区带来收入。"
+        ],
+        [
+          "The train offers passengers views of spectacular mountain scenery.",
+          "乘坐这趟列车，乘客可以欣赏壮丽的山景。"
+        ]
+      ],
+      "forms": [
+        "scene（n. 场景；现场）",
+        "scenic（adj. 风景优美的）",
+        "scenically（adv. 在风景方面）"
+      ],
+      "confusables": [
+        [
+          "scenery",
+          "landscape",
+          "scenery 常指所看到的风景整体；landscape 更强调地貌或景观构成"
+        ]
+      ]
+    },
+    "pace": {
+      "pos": "noun / verb",
+      "meanings": [
+        "速度；步伐",
+        "节奏；进度",
+        "踱步；调整速度"
+      ],
+      "phrases": [
+        [
+          "at one's own pace",
+          "按自己的节奏"
+        ],
+        [
+          "keep pace with",
+          "跟上……的步伐"
+        ],
+        [
+          "set the pace",
+          "确定步调；带头"
+        ],
+        [
+          "the pace of change",
+          "变化的速度"
+        ]
+      ],
+      "sentences": [
+        [
+          "Students should be allowed to learn at their own pace.",
+          "应该允许学生按照自己的节奏学习。"
+        ],
+        [
+          "Technology is changing at a pace that challenges existing rules.",
+          "技术正以挑战现有规则的速度发生变化。"
+        ]
+      ],
+      "forms": [
+        "pace（v. 踱步；调整节奏）",
+        "pacing（n. 节奏控制；步速）",
+        "paced（adj. 有……节奏的）"
+      ],
+      "confusables": [
+        [
+          "pace",
+          "speed",
+          "pace 常涉及步调、节奏或进展；speed 主要表示运动或变化的速度"
+        ]
+      ]
+    },
+    "panel": {
+      "pos": "noun",
+      "meanings": [
+        "专门小组；评审团",
+        "面板；控制板",
+        "嵌板；板块",
+        "（广播、电视）讨论节目"
+      ],
+      "phrases": [
+        [
+          "a panel of experts",
+          "专家小组"
+        ],
+        [
+          "panel discussion",
+          "专题讨论会"
+        ],
+        [
+          "control panel",
+          "控制面板"
+        ],
+        [
+          "solar panel",
+          "太阳能电池板"
+        ]
+      ],
+      "sentences": [
+        [
+          "A panel of experts evaluated the proposed research projects.",
+          "专家小组评估了拟议的研究项目。"
+        ],
+        [
+          "The device is operated through a simple control panel.",
+          "这台设备通过一个简单的控制面板操作。"
+        ]
+      ],
+      "forms": [
+        "panelist（n. 专题讨论小组成员）",
+        "panelled / paneled（adj. 镶板的）"
+      ],
+      "confusables": [
+        [
+          "panel",
+          "committee",
+          "panel 常指为特定任务组成的小组或面板；committee 通常指正式委员会"
+        ]
+      ]
+    },
+    "panorama": {
+      "pos": "noun",
+      "meanings": [
+        "全景；全景画",
+        "概览；广阔的景象"
+      ],
+      "phrases": [
+        [
+          "a panoramic view",
+          "全景；全景式视野"
+        ],
+        [
+          "a panorama of the city",
+          "城市全景"
+        ],
+        [
+          "a broad panorama of history",
+          "广阔的历史画卷"
+        ],
+        [
+          "panoramic photography",
+          "全景摄影"
+        ]
+      ],
+      "sentences": [
+        [
+          "The report provides a panorama of recent changes in the labor market.",
+          "这份报告概述了劳动力市场近期的变化。"
+        ],
+        [
+          "Visitors can enjoy a panoramic view from the top of the tower.",
+          "游客可以从塔顶欣赏全景。"
+        ]
+      ],
+      "forms": [
+        "panoramic（adj. 全景的；概观的）",
+        "panoramically（adv. 以全景方式）"
+      ],
+      "confusables": [
+        [
+          "panorama",
+          "overview",
+          "panorama 常强调广阔、全面的景象；overview 强调对主题的概括性介绍"
+        ]
+      ]
+    },
+    "prove": {
+      "pos": "verb",
+      "meanings": [
+        "证明；证实",
+        "证明是；结果是",
+        "展现；显示（能力、价值等）"
+      ],
+      "phrases": [
+        [
+          "prove that",
+          "证明……"
+        ],
+        [
+          "prove to be",
+          "结果是；证明为"
+        ],
+        [
+          "prove one's point",
+          "证明自己的观点"
+        ],
+        [
+          "it is proved that",
+          "事实证明……"
+        ]
+      ],
+      "sentences": [
+        [
+          "The study does not prove that the treatment is effective.",
+          "这项研究并不能证明该疗法有效。"
+        ],
+        [
+          "The new method proved to be more reliable than the old one.",
+          "事实证明，这种新方法比旧方法更可靠。"
+        ]
+      ],
+      "forms": [
+        "proof（n. 证据；证明；校样）",
+        "proven（adj. 已证实的；可靠的）",
+        "provable（adj. 可证明的）",
+        "disprove（v. 证明……不成立）"
+      ],
+      "confusables": [
+        [
+          "prove",
+          "verify",
+          "prove 强调提供证据证明结论；verify 强调核实某事是否准确或真实"
+        ]
+      ]
+    },
+    "provide": {
+      "pos": "verb",
+      "meanings": [
+        "提供；供应",
+        "规定；作出安排（法律或协议中）",
+        "为……提供生计（provide for）"
+      ],
+      "phrases": [
+        [
+          "provide sb. with sth.",
+          "向某人提供某物"
+        ],
+        [
+          "provide sth. for sb.",
+          "为某人提供某物"
+        ],
+        [
+          "provide for one's family",
+          "养家糊口"
+        ],
+        [
+          "provide evidence of",
+          "提供……的证据"
+        ]
+      ],
+      "sentences": [
+        [
+          "Public libraries provide citizens with access to information.",
+          "公共图书馆为市民提供获取信息的渠道。"
+        ],
+        [
+          "The agreement provides for regular reviews of the policy.",
+          "协议规定定期审查该政策。"
+        ]
+      ],
+      "forms": [
+        "provider（n. 提供者；供应商）",
+        "provision（n. 供应；规定；条款）",
+        "provided（conj. 如果；只要）"
+      ],
+      "confusables": [
+        [
+          "provide",
+          "supply",
+          "provide 泛指提供所需之物或服务；supply 常强调持续供应物资"
+        ]
+      ]
+    },
+    "provided": {
+      "pos": "conjunction / adjective",
+      "meanings": [
+        "如果；只要（provided that）",
+        "在……条件下；假如",
+        "提供了的；已备有的（过去分词用法）"
+      ],
+      "phrases": [
+        [
+          "provided that",
+          "只要；如果"
+        ],
+        [
+          "provided with",
+          "配备有；提供了"
+        ],
+        [
+          "unless otherwise provided",
+          "除非另有规定"
+        ],
+        [
+          "as provided by law",
+          "按照法律规定"
+        ]
+      ],
+      "sentences": [
+        [
+          "The plan can succeed provided that sufficient resources are available.",
+          "只要有足够的资源，这项计划就能够成功。"
+        ],
+        [
+          "The service is free, provided that users register in advance.",
+          "只要用户提前注册，这项服务就是免费的。"
+        ]
+      ],
+      "forms": [
+        "provide（v. 提供；规定）",
+        "provision（n. 供应；条款）",
+        "provider（n. 提供者）"
+      ],
+      "confusables": [
+        [
+          "provided that",
+          "providing that",
+          "两者都可表示“只要”；provided that 在正式书面语中更常见"
         ]
       ]
     }
