@@ -45,6 +45,9 @@
         #main-screen{height:100%;margin-left:var(--sidebar-width);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;position:relative}
         .word-card{width:90%;max-width:800px;padding:20px}
         .word-line{font-size:72px;font-weight:800;margin-bottom:8px;letter-spacing:-1px}
+        #dw[role="button"]{cursor:pointer;display:inline-block;outline-offset:8px}
+        #dw[role="button"]:hover{color:var(--accent);text-shadow:0 5px 18px rgba(66,107,143,.12)}
+        #dw[role="button"]:active{transform:scale(.985)}
         .pronunciation-bar{display:flex;justify-content:center;gap:10px;margin:12px 0 20px}
         .pronunciation-btn{border:1px solid rgba(192,57,43,.18);background:#fff;color:var(--primary);border-radius:22px;padding:8px 16px;font-size:13px;font-weight:650;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:6px}
         .pronunciation-btn:hover{background:var(--primary-light);border-color:rgba(192,57,43,.35);transform:translateY(-1px)}
@@ -279,7 +282,7 @@ body.study-card-revealed #dd{display:block!important}
 </div>
 <div id="main-screen">
     <div class="word-card">
-        <div class="word-line" id="dw">Loading...</div>
+        <div class="word-line" id="dw" role="button" tabindex="0" aria-label="点击单词播放美式发音" title="点击单词即可听发音" onclick="speakCurrentWord(event)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();speakCurrentWord(event)}">Loading...</div>
 <div class="study-mode-switch" id="study-mode-switch" onclick="event.stopPropagation()">
 <button class="study-mode-btn active" data-mode="card" onclick="setStudyMode('card')">🃏 卡片背诵</button>
 <button class="study-mode-btn" data-mode="spell" onclick="setStudyMode('spell')">✍️ 单词拼写</button>
@@ -341,24 +344,50 @@ function buildQ(fr=false){
     renderW();updateFUI();
 }
 
-// Youdao dictionary pronunciation: type=1 British English, type=2 American English.
+// Browser-native pronunciation: type=1 British English, type=2 American English.
 let pronunciationAudio=null;
+let activeUtterance=null;
+function stopPronunciation(){
+    if(pronunciationAudio){pronunciationAudio.pause();pronunciationAudio=null;}
+    if('speechSynthesis' in window){window.speechSynthesis.cancel();}
+    activeUtterance=null;
+}
 function playPronunciation(type,event){
     if(event)event.stopPropagation();
-    if(!Q.length)return;
-    const word=Q[C]?.w;
+    const word=Q.length?Q[C]?.w:null;
     if(!word)return;
     const status=document.getElementById('pronunciation-status');
     const buttons=[document.getElementById('uk-audio'),document.getElementById('us-audio')];
-    if(pronunciationAudio){pronunciationAudio.pause();pronunciationAudio=null}
-    buttons.forEach(b=>b.disabled=true);
-    status.textContent=type===1?'正在播放英音…':'正在播放美音…';
+    stopPronunciation();
+    buttons.forEach(b=>{if(b)b.disabled=true;});
+    const accent=type===1?'en-GB':'en-US';
+    status.textContent=type===1?'正在播放英式发音…':'正在播放美式发音…';
+    const finish=()=>{buttons.forEach(b=>{if(b)b.disabled=false;});};
+    if('speechSynthesis' in window && 'SpeechSynthesisUtterance' in window){
+        const utterance=new SpeechSynthesisUtterance(String(word));
+        utterance.lang=accent;
+        utterance.rate=0.86;
+        const voices=window.speechSynthesis.getVoices();
+        const voice=voices.find(v=>v.lang.toLowerCase()===accent.toLowerCase())
+          ||voices.find(v=>v.lang.toLowerCase().startsWith(type===1?'en-gb':'en-us'))
+          ||voices.find(v=>v.lang.toLowerCase().startsWith('en'));
+        if(voice)utterance.voice=voice;
+        utterance.onend=()=>{if(activeUtterance===utterance){activeUtterance=null;status.textContent='';finish();}};
+        utterance.onerror=()=>{if(activeUtterance===utterance){activeUtterance=null;status.textContent='系统语音不可用，正在尝试在线发音…';playRemotePronunciation(word,type,status,finish);}};
+        activeUtterance=utterance;
+        try{window.speechSynthesis.speak(utterance);return;}
+        catch(error){activeUtterance=null;}
+    }
+    playRemotePronunciation(word,type,status,finish);
+}
+function playRemotePronunciation(word,type,status,finish){
     const audio=new Audio('https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(word)+'&type='+type);
     pronunciationAudio=audio;
-    audio.onended=()=>{buttons.forEach(b=>b.disabled=false);status.textContent=''};
-    audio.onerror=()=>{buttons.forEach(b=>b.disabled=false);status.textContent='发音加载失败，请检查网络后重试'};
-    audio.play().then(()=>{}).catch(()=>{buttons.forEach(b=>b.disabled=false);status.textContent='浏览器未能播放音频，请再次点击按钮'});
+    audio.onended=()=>{if(pronunciationAudio===audio)pronunciationAudio=null;status.textContent='';finish();};
+    audio.onerror=()=>{if(pronunciationAudio===audio)pronunciationAudio=null;status.textContent='发音暂不可用，请检查浏览器语音设置或网络';finish();};
+    audio.play().catch(()=>{if(pronunciationAudio===audio)pronunciationAudio=null;status.textContent='浏览器未能播放音频，请再次点击';finish();});
 }
+function speakCurrentWord(event){playPronunciation(2,event);}
 function renderW(){
     if(!Q.length)return;
     const w=Q[C];
@@ -366,7 +395,7 @@ function renderW(){
     const audioButtons=[document.getElementById('uk-audio'),document.getElementById('us-audio')];
     audioButtons.forEach(b=>b.disabled=false);
     document.getElementById('pronunciation-status').textContent='';
-    if(pronunciationAudio){pronunciationAudio.pause();pronunciationAudio=null}
+    stopPronunciation();
     document.getElementById('dd').innerHTML=w.d.split(/[;；]/).map(d=>'<div class="def-item">'+d.trim()+'</div>').join('');
     document.getElementById('dp').innerText=w.p?'📖 '+w.p:'';
     document.getElementById('fav-btn').className=FV[w.w]?'active':'';
