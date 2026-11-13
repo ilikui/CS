@@ -1,0 +1,57 @@
+name: Import 2027 RedBook vocabulary
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/import_redbook_apkg.py"
+      - ".github/workflows/import-redbook-vocabulary.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: import-redbook-vocabulary
+  cancel-in-progress: false
+
+jobs:
+  import-redbook:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout importer
+        uses: actions/checkout@v4
+      - name: Checkout Cloudflare Pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: cloudflare-pages
+          path: site
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download official 2027 RedBook APKG
+        run: |
+          curl --fail --location --retry 3 --retry-delay 2 \
+            "https://github.com/CHNragdoll/anki-pipeline/releases/download/redbook-2027.10.06/2027-RedBook-Full-Unified-Inline-Examples-20261024.apkg" \
+            --output /tmp/redbook-2027.apkg
+          echo "Downloaded $(stat -c%s /tmp/redbook-2027.apkg) bytes"
+      - name: Convert APKG to searchable static JSON
+        run: |
+          python scripts/import_redbook_apkg.py \
+            --apkg /tmp/redbook-2027.apkg \
+            --output-dir site/public/english/recite/redbook-2027
+      - name: Publish data to Cloudflare Pages branch
+        working-directory: site
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/english/recite/redbook-2027
+          if git diff --cached --quiet; then
+            echo "No vocabulary data changes."
+            exit 0
+          fi
+          git commit -m "data: import verified CHNragdoll 2027 RedBook vocabulary"
+          git push origin HEAD:cloudflare-pages
