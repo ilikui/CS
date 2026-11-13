@@ -116,11 +116,30 @@ async function load(){
  }
 }
 function rawAsset(path,src){if(/^(https?:|data:|blob:|\/\/|#|\/)/i.test(src))return src;const base=path.split('/').slice(0,-1).join('/');const joined=(base?base+'/':'')+src;const stack=[];for(const part of joined.split('/')){if(part==='..')stack.pop();else if(part!=='.'&&part!=='')stack.push(part)}return 'https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/'+stack.map(encodeURIComponent).join('/')}
+function renderMarkdown(md){
+ const tokens=[
+  [/\\\\\\(/g,'CSMATHINLINEOPEN9F31'],
+  [/\\\\\\)/g,'CSMATHINLINECLOSE9F31'],
+  [/\\\\\\[/g,'CSMATHDISPLAYOPEN9F31'],
+  [/\\\\\\]/g,'CSMATHDISPLAYCLOSE9F31']
+ ];
+ let protectedMarkdown=md;
+ for(const [pattern,token] of tokens)protectedMarkdown=protectedMarkdown.replace(pattern,token);
+ let html=marked.parse(protectedMarkdown);
+ const restore=[
+  ['CSMATHINLINEOPEN9F31','&#92;('],
+  ['CSMATHINLINECLOSE9F31','&#92;)'],
+  ['CSMATHDISPLAYOPEN9F31','&#92;['],
+  ['CSMATHDISPLAYCLOSE9F31','&#92;]']
+ ];
+ for(const [token,delimiter] of restore)html=html.split(token).join(delimiter);
+ return html;
+}
 async function openDoc(path){
  selected=path;$('#crumb').textContent='CS / '+path;$('#tree').querySelectorAll('[data-path]').forEach(b=>b.classList.toggle('active',b.dataset.path===path));$('#content').innerHTML='<p class="empty">正在加载文档…</p>';
  try{
  const url='https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/'+path.split('/').map(encodeURIComponent).join('/');
- const r=await fetch(url);if(!r.ok)throw Error('文档读取失败 '+r.status);const md=await r.text();marked.setOptions({gfm:true,breaks:false});$('#content').innerHTML=marked.parse(md);
+ const r=await fetch(url);if(!r.ok)throw Error('文档读取失败 '+r.status);const md=await r.text();marked.setOptions({gfm:true,breaks:false});$('#content').innerHTML=renderMarkdown(md);
  $('#content').querySelectorAll('img').forEach(img=>{img.src=rawAsset(path,img.getAttribute('src')||'');img.loading='lazy';img.onerror=()=>{img.alt=(img.alt||'图片')+'（资源暂不可用）';}});
  $('#content').querySelectorAll('a').forEach(a=>{const href=a.getAttribute('href')||'';if(href&&!/^(https?:|mailto:|#|\/)/i.test(href)){const target=rawAsset(path,href);a.href=target.endsWith('.md')?'https://github.com/'+OWNER+'/'+REPO+'/blob/'+BRANCH+'/'+target.replace('https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/',''):target;}a.target='_blank';a.rel='noopener'});
  if(window.CSRender?.enhance)await window.CSRender.enhance($('#content'));
@@ -176,7 +195,7 @@ load().then(()=>{const m=location.hash.match(/^#doc=(.+)$/);if(m){const path=dec
      let response=await fetch(raw,{cache:'no-store'});
      if(!response.ok)throw new Error('原始文件读取失败（HTTP '+response.status+'）');
      const md=await response.text();
-     if(window.marked?.parse){window.marked.setOptions({gfm:true,breaks:false});content.innerHTML=window.marked.parse(md);}
+     if(window.marked?.parse){window.marked.setOptions({gfm:true,breaks:false});content.innerHTML=renderMarkdown(md);}
      else content.innerHTML='<pre class="markdown-fallback"></pre>',content.querySelector('pre').textContent=md;
      const base=path.split('/').slice(0,-1).join('/');
      content.querySelectorAll('img').forEach(img=>{
@@ -187,7 +206,27 @@ load().then(()=>{const m=location.hash.match(/^#doc=(.+)$/);if(m){const path=dec
        }
        img.loading='lazy';
      });
-     const slash=String.fromCharCode(92); if(window.renderMathInElement)window.renderMathInElement(content,{delimiters:[{left:'$$',right:'$$',display:true},{left:slash+'[',right:slash+']',display:true},{left:'$',right:'$',display:false},{left:slash+'(',right:slash+')',display:false}],throwOnError:false});
+     if(window.CSRender?.enhance)await window.CSRender.enhance(content); else if(window.renderMathInElement){const slash=String.fromCharCode(92);window.renderMathInElement(content,{delimiters:[{left:'$',right:'$',display:true},{left:slash+'[',right:slash+']',display:true},{left:'
+     history.replaceState(null,'','#doc='+encodeURIComponent(path));
+     content.scrollIntoView({behavior:'smooth',block:'start'});
+   }catch(err){
+     content.innerHTML='<p class="empty">'+String(err.message||err)+'</p><p><a target="_blank" rel="noopener" href="'+a.href+'">改为打开 GitHub 原文 ↗</a></p>';
+   }
+ });
+ try{apply();root.dataset.readerApplied='true';}catch(err){root.dataset.readerError=String(err&&err.message||err);}
+} catch(err) { const root=document.querySelector('.static-index'); if(root)root.dataset.readerError=String(err&&err.message||err); } })();
+</script><script src="/render-enhance.js" defer></script>
+</body></html>,right:'
+     history.replaceState(null,'','#doc='+encodeURIComponent(path));
+     content.scrollIntoView({behavior:'smooth',block:'start'});
+   }catch(err){
+     content.innerHTML='<p class="empty">'+String(err.message||err)+'</p><p><a target="_blank" rel="noopener" href="'+a.href+'">改为打开 GitHub 原文 ↗</a></p>';
+   }
+ });
+ try{apply();root.dataset.readerApplied='true';}catch(err){root.dataset.readerError=String(err&&err.message||err);}
+} catch(err) { const root=document.querySelector('.static-index'); if(root)root.dataset.readerError=String(err&&err.message||err); } })();
+</script><script src="/render-enhance.js" defer></script>
+</body></html>,display:false},{left:slash+'(',right:slash+')',display:false}],throwOnError:false});}
      history.replaceState(null,'','#doc='+encodeURIComponent(path));
      content.scrollIntoView({behavior:'smooth',block:'start'});
    }catch(err){
