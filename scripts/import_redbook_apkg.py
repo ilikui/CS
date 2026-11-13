@@ -225,7 +225,7 @@ def convert(apkg: Path, out_dir: Path):
         if not meaning:
             meaning = next((f["text"] for f in fields if f["text"] != word and re.search(r"[\u4e00-\u9fff]", f["text"])), "")
         collocations = first_match(fields, [r"collocation", r"phrase", r"搭配", r"短语"])
-        family = first_match(fields, [r"etymology", r"root", r"word.?family", r"词根", r"词源", r"派生", r"词形"])
+        family = first_match(fields, [r"etymology", r"root", r"word.?family", r"word.?forms", r"\\bforms\\b", r"词根", r"词源", r"派生", r"词形"])
         example = first_match(fields, [r"example", r"sentence", r"真题", r"例句", r"语境", r"原文"])
         translation = first_match(fields, [r"translation", r"译文", r"翻译"])
         source = first_match(fields, [r"source", r"出处", r"年份", r"考试"])
