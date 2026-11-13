@@ -60,4 +60,4 @@ document.querySelectorAll('.subject').forEach(el=>el.addEventListener('click',()
 document.querySelectorAll('[data-action]').forEach(el=>el.addEventListener('click',()=>{const links={practice:'https://github.com/ilikui/CS/issues',plan:'https://github.com/ilikui/CS/tree/main/Project/Artificial%20Intelligence/00_%E8%80%83%E7%A0%94%E8%AE%A1%E5%88%92',issues:'https://github.com/ilikui/CS/issues',repo:'https://github.com/ilikui/CS'};location.href=links[el.dataset.action];}));
 $('#home').addEventListener('click',e=>{e.preventDefault();$('#dashboard').scrollIntoView({behavior:'smooth'});});
 load().then(()=>{const m=location.hash.match(/^#doc=(.+)$/);if(m)openDoc(decodeURIComponent(m[1]));});
-</script></body></html>
+</script><script src="/render-enhance.js" defer></script>\n</body></html>
