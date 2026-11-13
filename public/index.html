@@ -117,14 +117,15 @@ async function load(){
 }
 function rawAsset(path,src){if(/^(https?:|data:|blob:|\/\/|#|\/)/i.test(src))return src;const base=path.split('/').slice(0,-1).join('/');const joined=(base?base+'/':'')+src;const stack=[];for(const part of joined.split('/')){if(part==='..')stack.pop();else if(part!=='.'&&part!=='')stack.push(part)}return 'https://raw.githubusercontent.com/'+OWNER+'/'+REPO+'/'+BRANCH+'/'+stack.map(encodeURIComponent).join('/')}
 function renderMarkdown(md){
+ const slash=String.fromCharCode(92);
  const tokens=[
-  [/\\\\\\(/g,'CSMATHINLINEOPEN9F31'],
-  [/\\\\\\)/g,'CSMATHINLINECLOSE9F31'],
-  [/\\\\\\[/g,'CSMATHDISPLAYOPEN9F31'],
-  [/\\\\\\]/g,'CSMATHDISPLAYCLOSE9F31']
+  [slash+'(','CSMATHINLINEOPEN9F31'],
+  [slash+')','CSMATHINLINECLOSE9F31'],
+  [slash+'[','CSMATHDISPLAYOPEN9F31'],
+  [slash+']','CSMATHDISPLAYCLOSE9F31']
  ];
  let protectedMarkdown=md;
- for(const [pattern,token] of tokens)protectedMarkdown=protectedMarkdown.replace(pattern,token);
+ for(const [delimiter,token] of tokens)protectedMarkdown=protectedMarkdown.split(delimiter).join(token);
  let html=marked.parse(protectedMarkdown);
  const restore=[
   ['CSMATHINLINEOPEN9F31','&#92;('],
