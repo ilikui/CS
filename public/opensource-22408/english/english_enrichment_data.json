@@ -6252,66 +6252,63 @@
     "catch": {
       "pos": "verb / noun",
       "meanings": [
-        "抓住；接住；捕获",
-        "赶上（交通工具）；及时发现",
-        "感染（疾病）；引起注意",
-        "陷阱；捕获量"
+        "抓住；接住",
+        "赶上（车、机会等）",
+        "感染（疾病）；引起注意"
       ],
       "phrases": [
         [
-          "catch a cold",
-          "感冒"
+          "catch a bus",
+          "赶公交车"
         ],
         [
           "catch one's attention",
-          "引起某人的注意"
+          "吸引某人的注意"
         ],
         [
           "catch up with",
           "赶上；追上"
         ],
         [
-          "catch sight of",
-          "看见；瞥见"
+          "catch a cold",
+          "患感冒"
         ]
       ],
       "sentences": [
         [
-          "The campaign was designed to catch the attention of young consumers.",
-          "这项活动旨在吸引年轻消费者的注意。"
+          "The campaign caught the attention of young consumers.",
+          "这场宣传吸引了年轻消费者的注意。"
         ],
         [
-          "It is difficult for wages to catch up with rising living costs.",
-          "工资很难赶上不断上涨的生活成本。"
+          "Workers must adapt quickly to catch up with technological change.",
+          "劳动者必须迅速适应，才能跟上技术变革。"
         ]
       ],
       "forms": [
-        "caught（v. catch 的过去式和过去分词）",
-        "catching（adj. 引人注目的）",
-        "catcher（n. 捕手；捕捉者）"
+        "catching（adj. 引人注意的）",
+        "catcher（n. 捕手）"
       ],
       "confusables": [
         [
-          "catch",
-          "capture",
-          "catch 常指抓住或赶上；capture 强调控制、夺取或记录"
+          "catch / capture",
+          "catch 常指抓住、赶上；capture 强调控制、记录或夺取",
+          ""
         ]
       ]
     },
     "category": {
       "pos": "noun",
       "meanings": [
-        "类别；种类",
-        "范畴；类型"
+        "类别；种类"
       ],
       "phrases": [
         [
           "a broad category",
-          "广泛的类别"
+          "宽泛的类别"
         ],
         [
-          "fall into a category",
-          "归入某一类别"
+          "belong to a category",
+          "属于某一类别"
         ],
         [
           "category of goods",
@@ -6319,64 +6316,63 @@
         ],
         [
           "social category",
-          "社会范畴"
+          "社会类别"
         ]
       ],
       "sentences": [
         [
-          "The researchers divided the responses into several categories.",
-          "研究人员将回答分成了几个类别。"
+          "The products fall into several distinct categories.",
+          "这些产品可分为几个不同类别。"
         ],
         [
-          "Age is only one category of difference among individuals.",
-          "年龄只是个体差异的一个类别。"
+          "Age is only one factor used to define a social category.",
+          "年龄只是界定社会类别的一个因素。"
         ]
       ],
       "forms": [
-        "categorize / categorise（v. 分类）",
-        "categorical（adj. 明确的；绝对的）",
-        "categorically（adv. 断然地）"
+        "categorize（v. 分类）",
+        "categorical（adj. 明确的；绝对的）"
       ],
       "confusables": [
         [
-          "category",
-          "classification",
-          "category 指类别本身；classification 指分类的过程或体系"
+          "category / class",
+          "category 指分类类别；class 还可指等级、班级或社会阶层",
+          ""
         ]
       ]
     },
     "cater": {
       "pos": "verb",
       "meanings": [
-        "满足；迎合（需求、兴趣）",
-        "提供饮食服务；承办餐饮"
+        "提供饮食；承办餐饮",
+        "满足；迎合（需求或兴趣）"
       ],
       "phrases": [
         [
-          "cater for sb.'s needs",
-          "满足某人的需求"
+          "cater for sb.",
+          "为某人提供服务"
         ],
         [
           "cater to demand",
           "迎合需求"
         ],
         [
-          "cater for a conference",
-          "为会议提供餐饮"
+          "cater for a wedding",
+          "承办婚宴"
         ],
         [
-          "cater to all tastes",
-          "迎合各种喜好"
+          "cater to different needs",
+          "满足不同需求"
         ]
       ],
       "sentences": [
         [
-          "Public services should cater for the needs of disadvantaged groups.",
-          "公共服务应满足弱势群体的需求。"
+          "Public services should cater to the needs of all citizens.",
+          "公共服务应满足所有公民的需求。"
         ],
         [
-          "Some universities have expanded their courses to cater to changing job markets.",
-          "一些大学扩大了课程设置，以适应不断变化的就业市场。"
+          "Some media outlets cater to audiences seeking sensational stories.",
+          "一些媒体迎合寻求轰动性故事的受众。"
         ]
       ],
       "forms": [
@@ -6385,9 +6381,9 @@
       ],
       "confusables": [
         [
-          "cater for",
-          "cater to",
-          "两者都可表示满足需求；cater for 常指提供所需服务，cater to 常带有迎合意味"
+          "cater / satisfy",
+          "cater to 强调提供适配服务；satisfy 强调使需求得到满足",
+          ""
         ]
       ]
     },
@@ -6395,8 +6391,8 @@
       "pos": "noun / verb",
       "meanings": [
         "原因；起因",
-        "事业；目标；主张",
-        "引起；导致"
+        "事业；主张",
+        "导致；引起"
       ],
       "phrases": [
         [
@@ -6404,39 +6400,38 @@
           "因果关系"
         ],
         [
-          "the root cause of",
-          "……的根本原因"
+          "the cause of a problem",
+          "问题的原因"
         ],
         [
-          "cause damage to",
-          "对……造成损害"
+          "cause damage",
+          "造成损害"
         ],
         [
-          "a worthy cause",
-          "值得支持的事业"
+          "for a good cause",
+          "为了正当事业"
         ]
       ],
       "sentences": [
         [
-          "Researchers are trying to identify the root causes of social inequality.",
-          "研究人员正试图找出社会不平等的根本原因。"
+          "Researchers are trying to identify the causes of the decline.",
+          "研究人员正试图找出下降的原因。"
         ],
         [
-          "Air pollution can cause serious damage to public health.",
-          "空气污染会严重损害公共健康。"
+          "Unfair policies may cause lasting damage to public trust.",
+          "不公平的政策可能对公众信任造成持久损害。"
         ]
       ],
       "forms": [
         "causal（adj. 因果关系的）",
         "causality（n. 因果关系）",
-        "causative（adj. 引起……的）",
-        "causation（n. 因果关系；起因）"
+        "causative（adj. 引起……的）"
       ],
       "confusables": [
         [
-          "cause",
-          "reason",
-          "cause 强调导致结果的根本因素；reason 强调解释或理由"
+          "cause / reason",
+          "cause 是产生结果的原因；reason 常指解释或理由",
+          ""
         ]
       ]
     },
@@ -6444,8 +6439,7 @@
       "pos": "noun / verb",
       "meanings": [
         "谨慎；小心",
-        "警告；告诫",
-        "使警惕；提醒"
+        "警告；提醒"
       ],
       "phrases": [
         [
@@ -6458,21 +6452,21 @@
         ],
         [
           "a word of caution",
-          "一句提醒"
+          "提醒；警告"
         ],
         [
-          "caution against doing sth.",
-          "告诫不要做某事"
+          "caution sb. against doing sth.",
+          "告诫某人不要做某事"
         ]
       ],
       "sentences": [
         [
-          "The results should be interpreted with caution.",
-          "这些结果应谨慎解读。"
+          "Experts urge consumers to exercise caution when sharing personal data.",
+          "专家敦促消费者分享个人数据时保持谨慎。"
         ],
         [
-          "Experts caution against relying on a single source of information.",
-          "专家告诫人们不要依赖单一信息来源。"
+          "The report cautions against drawing conclusions from limited evidence.",
+          "报告提醒人们不要依据有限证据得出结论。"
         ]
       ],
       "forms": [
@@ -6482,17 +6476,16 @@
       ],
       "confusables": [
         [
-          "caution",
-          "warning",
-          "caution 强调谨慎或提醒；warning 通常是对危险或不良后果的明确警告"
+          "caution / warning",
+          "caution 强调谨慎提醒；warning 通常是更明确的危险警告",
+          ""
         ]
       ]
     },
     "cautious": {
       "pos": "adjective",
       "meanings": [
-        "谨慎的；小心的",
-        "慎重的；不轻易表态的"
+        "谨慎的；小心的；慎重的"
       ],
       "phrases": [
         [
@@ -6504,12 +6497,12 @@
           "谨慎的方法"
         ],
         [
-          "cautiously optimistic",
-          "谨慎乐观的"
-        ],
-        [
           "be cautious in doing sth.",
           "做某事时谨慎"
+        ],
+        [
+          "cautious optimism",
+          "谨慎的乐观"
         ]
       ],
       "sentences": [
@@ -6518,8 +6511,8 @@
           "投资者对不确定的经济前景仍持谨慎态度。"
         ],
         [
-          "A cautious approach is needed when interpreting limited evidence.",
-          "解释有限证据时需要采取谨慎的方法。"
+          "A cautious approach is needed when interpreting the survey results.",
+          "解读调查结果时需要采取谨慎的方法。"
         ]
       ],
       "forms": [
@@ -6529,17 +6522,16 @@
       ],
       "confusables": [
         [
-          "cautious",
-          "careful",
-          "cautious 更强调规避风险；careful 更强调认真细致"
+          "cautious / careful",
+          "cautious 更强调防范风险；careful 更强调认真细致",
+          ""
         ]
       ]
     },
     "cease": {
-      "pos": "verb / noun",
+      "pos": "verb",
       "meanings": [
-        "停止；终止",
-        "结束；中止"
+        "停止；终止；中止"
       ],
       "phrases": [
         [
@@ -6555,30 +6547,29 @@
           "停止运营"
         ],
         [
-          "cease fire",
-          "停火"
+          "without cease",
+          "不停地"
         ]
       ],
       "sentences": [
         [
           "The company was forced to cease operations after years of losses.",
-          "多年亏损后，这家公司被迫停止运营。"
+          "多年亏损后，该公司被迫停止运营。"
         ],
         [
-          "Some traditional practices have ceased to exist in modern society.",
-          "一些传统做法在现代社会已经不复存在。"
+          "The policy aims to ensure that discrimination ceases.",
+          "这项政策旨在确保歧视现象停止。"
         ]
       ],
       "forms": [
-        "ceaseless（adj. 不停的；持续的）",
-        "ceaselessly（adv. 不停地）",
+        "ceaseless（adj. 不停的）",
         "cessation（n. 停止；中止）"
       ],
       "confusables": [
         [
-          "cease",
-          "stop",
-          "cease 较正式，常指活动或状态终止；stop 是更常用的普通表达"
+          "cease / stop",
+          "cease 较正式，常用于活动、状态或制度的终止",
+          ""
         ]
       ]
     },
@@ -6586,56 +6577,54 @@
       "pos": "verb",
       "meanings": [
         "庆祝；庆贺",
-        "赞扬；颂扬",
-        "举行纪念活动"
+        "赞扬；颂扬"
       ],
       "phrases": [
         [
-          "celebrate an anniversary",
-          "庆祝周年纪念"
+          "celebrate an achievement",
+          "庆祝一项成就"
         ],
         [
-          "celebrate success",
-          "庆祝成功"
-        ],
-        [
-          "celebrate diversity",
-          "颂扬多样性"
+          "celebrate a festival",
+          "庆祝节日"
         ],
         [
           "widely celebrated",
           "广受赞誉的"
+        ],
+        [
+          "celebrate diversity",
+          "颂扬多样性"
         ]
       ],
       "sentences": [
         [
-          "The event celebrates the contribution of women to scientific research.",
-          "这项活动旨在颂扬女性对科学研究的贡献。"
+          "The event celebrates the achievements of local volunteers.",
+          "这项活动旨在赞扬当地志愿者的成就。"
         ],
         [
-          "Communities gather to celebrate their cultural traditions.",
-          "社区成员聚集起来庆祝自己的文化传统。"
+          "Many communities celebrate cultural diversity through public festivals.",
+          "许多社区通过公共节日活动来颂扬文化多样性。"
         ]
       ],
       "forms": [
-        "celebration（n. 庆祝；庆典）",
+        "celebration（n. 庆祝）",
         "celebratory（adj. 庆祝的）",
-        "celebrated（adj. 著名的；受赞誉的）",
-        "celebrity（n. 名人）"
+        "celebrated（adj. 著名的）"
       ],
       "confusables": [
         [
-          "celebrate",
-          "commemorate",
-          "celebrate 可庆祝喜事或成就；commemorate 侧重纪念重要人物或历史事件"
+          "celebrate / congratulate",
+          "celebrate 庆祝事件或成就；congratulate 向某人道贺",
+          ""
         ]
       ]
     },
     "celebrity": {
       "pos": "noun",
       "meanings": [
-        "名人；名流",
-        "名声；名望（较正式）"
+        "名人；名流；明星",
+        "名声；名望"
       ],
       "phrases": [
         [
@@ -6651,30 +6640,29 @@
           "名人地位"
         ],
         [
-          "celebrity endorsement",
-          "名人代言"
+          "instant celebrity",
+          "一夜成名"
         ]
       ],
       "sentences": [
         [
-          "Social media have changed the relationship between celebrities and their audiences.",
-          "社交媒体改变了名人与受众之间的关系。"
+          "Social media has changed the way celebrity is created and maintained.",
+          "社交媒体改变了名声的形成和维持方式。"
         ],
         [
-          "Celebrity endorsement does not always guarantee product quality.",
-          "名人代言并不总能保证产品质量。"
+          "Celebrity culture can influence public attitudes toward consumption.",
+          "名人文化可能影响公众的消费态度。"
         ]
       ],
       "forms": [
-        "celebrate（v. 庆祝；赞扬）",
-        "celebration（n. 庆祝）",
-        "celebrated（adj. 著名的）"
+        "celebrated（adj. 著名的）",
+        "celebrate（v. 庆祝；赞扬）"
       ],
       "confusables": [
         [
-          "celebrity",
-          "fame",
-          "celebrity 指名人或名望；fame 指成名状态或声誉"
+          "celebrity / fame",
+          "celebrity 常指名人或名望；fame 主要指声誉、名气",
+          ""
         ]
       ]
     },
@@ -6682,7 +6670,7 @@
       "pos": "noun",
       "meanings": [
         "典礼；仪式",
-        "礼节；礼貌（常用于 without ceremony）"
+        "礼节；客套"
       ],
       "phrases": [
         [
@@ -6690,145 +6678,139 @@
           "开幕式"
         ],
         [
-          "award ceremony",
-          "颁奖典礼"
-        ],
-        [
           "graduation ceremony",
           "毕业典礼"
         ],
         [
+          "official ceremony",
+          "官方仪式"
+        ],
+        [
           "without ceremony",
-          "不拘礼节地；直接地"
+          "不拘礼节地"
         ]
       ],
       "sentences": [
         [
-          "The opening ceremony reflected the country's cultural traditions.",
-          "开幕式体现了这个国家的文化传统。"
+          "The opening ceremony attracted visitors from around the world.",
+          "开幕式吸引了来自世界各地的游客。"
         ],
         [
-          "The agreement was signed in a formal ceremony.",
-          "这项协议在正式仪式上签署。"
+          "In some cultures, formal ceremonies strengthen social bonds.",
+          "在一些文化中，正式仪式能够加强社会联系。"
         ]
       ],
       "forms": [
-        "ceremonial（adj. 仪式的；礼仪的）",
-        "ceremonially（adv. 按仪式地）",
-        "ceremonious（adj. 讲究礼节的）"
+        "ceremonial（adj. 仪式的）",
+        "ceremonially（adv. 仪式上）"
       ],
       "confusables": [
         [
-          "ceremony",
-          "ritual",
-          "ceremony 常指正式典礼；ritual 强调按固定规则重复进行的仪式或行为"
+          "ceremony / ritual",
+          "ceremony 多指正式典礼；ritual 更强调按惯例重复的仪式或程序",
+          ""
         ]
       ]
     },
     "certain": {
       "pos": "adjective / pronoun",
       "meanings": [
-        "确定的；确信的",
-        "某个；某些（不具体指明）",
-        "必然的；不可避免的"
+        "确定的；肯定的",
+        "必然的；无疑的",
+        "某个；某些（未明确指出）"
       ],
       "phrases": [
         [
-          "be certain of",
-          "确信……"
+          "be certain of/about",
+          "确信；对……确定"
         ],
         [
           "make certain that",
-          "确保……"
+          "确保"
         ],
         [
-          "for certain",
-          "确切地；肯定地"
+          "to a certain extent",
+          "在某种程度上"
         ],
         [
           "a certain degree of",
-          "某种程度的"
+          "一定程度的"
         ]
       ],
       "sentences": [
         [
-          "It is not certain whether the policy will produce the expected results.",
-          "这项政策是否会产生预期结果尚不确定。"
+          "It is not certain whether the new measure will reduce inequality.",
+          "尚不确定这项新措施是否会减少不平等。"
         ],
         [
-          "A certain degree of flexibility is necessary in a changing environment.",
-          "在不断变化的环境中，一定程度的灵活性是必要的。"
+          "To a certain extent, education reflects the values of society.",
+          "在某种程度上，教育反映了社会价值观。"
         ]
       ],
       "forms": [
-        "certainty（n. 确定；确实）",
+        "certainty（n. 确定性）",
         "certainly（adv. 当然；确定地）",
-        "uncertain（adj. 不确定的）",
-        "uncertainty（n. 不确定性）"
+        "uncertain（adj. 不确定的）"
       ],
       "confusables": [
         [
-          "certain",
-          "sure",
-          "certain 较正式，可表示某事确定；sure 更常用于表达个人确信"
+          "certain / sure",
+          "certain 较正式，可指客观确定；sure 常表示说话者主观确信",
+          ""
         ]
       ]
     },
     "certainty": {
       "pos": "noun",
       "meanings": [
-        "确定；确实",
-        "必然发生的事",
-        "确信；把握"
+        "确定；确实；肯定",
+        "必然发生的事"
       ],
       "phrases": [
+        [
+          "a degree of certainty",
+          "确定程度"
+        ],
         [
           "with certainty",
           "确定无疑地"
         ],
         [
-          "a degree of certainty",
-          "一定程度的确定性"
+          "scientific certainty",
+          "科学上的确定性"
         ],
         [
-          "moral certainty",
-          "道德上的确信"
-        ],
-        [
-          "absolute certainty",
-          "绝对确定"
+          "for certain",
+          "肯定；确切地"
         ]
       ],
       "sentences": [
         [
-          "Scientific conclusions are rarely established with complete certainty.",
-          "科学结论很少能够被完全确定地确立。"
+          "The evidence does not allow us to reach a conclusion with certainty.",
+          "这些证据不足以让我们得出确定无疑的结论。"
         ],
         [
-          "The uncertainty of the future makes long-term planning difficult.",
-          "未来的不确定性使长期规划变得困难。"
+          "Absolute certainty is rare in scientific research.",
+          "在科学研究中，绝对确定性十分罕见。"
         ]
       ],
       "forms": [
         "certain（adj. 确定的）",
-        "certainly（adv. 确定地）",
-        "uncertain（adj. 不确定的）",
-        "uncertainty（n. 不确定性）"
+        "certainly（adv. 当然；确定地）",
+        "uncertain（adj. 不确定的）"
       ],
       "confusables": [
         [
-          "certainty",
-          "confidence",
-          "certainty 强调事实或结果确定；confidence 强调人的信心或信任"
+          "certainty / confidence",
+          "certainty 指确定这一状态；confidence 指信心或信任",
+          ""
         ]
       ]
     },
     "certificate": {
-      "pos": "noun / verb",
+      "pos": "noun",
       "meanings": [
-        "证书；证明书",
-        "执照；合格证明",
-        "发给证书；证明合格"
+        "证书；证明书；执照"
       ],
       "phrases": [
         [
@@ -6836,8 +6818,8 @@
           "出生证明"
         ],
         [
-          "certificate of qualification",
-          "资格证书"
+          "degree certificate",
+          "学位证书"
         ],
         [
           "medical certificate",
@@ -6850,24 +6832,24 @@
       ],
       "sentences": [
         [
-          "Applicants must provide a certificate of professional qualification.",
-          "申请人必须提供职业资格证书。"
+          "Applicants must provide a certificate proving their qualifications.",
+          "申请人必须提供证明其资历的证书。"
         ],
         [
-          "A certificate alone does not necessarily demonstrate practical competence.",
-          "仅凭证书并不一定能证明实际能力。"
+          "A digital certificate can help verify the identity of a website.",
+          "数字证书有助于验证网站的身份。"
         ]
       ],
       "forms": [
         "certify（v. 证明；认证）",
-        "certification（n. 认证；证明）",
+        "certification（n. 认证）",
         "certified（adj. 经认证的）"
       ],
       "confusables": [
         [
-          "certificate",
-          "diploma",
-          "certificate 常指证明资格或完成某项要求的证书；diploma 常指学校颁发的文凭"
+          "certificate / diploma",
+          "certificate 泛指证明文件；diploma 常指完成课程或学业后获得的文凭",
+          ""
         ]
       ]
     },
@@ -6875,8 +6857,7 @@
       "pos": "verb",
       "meanings": [
         "证明；证实",
-        "颁发证书；认证",
-        "正式确认（某人符合标准）"
+        "颁发合格证书；认证"
       ],
       "phrases": [
         [
@@ -6884,12 +6865,12 @@
           "证明……"
         ],
         [
-          "certify a document",
-          "证明文件真实有效"
+          "be certified as",
+          "获认证为"
         ],
         [
-          "be certified as",
-          "获得……认证"
+          "certify a document",
+          "证明文件属实"
         ],
         [
           "certified public accountant",
@@ -6898,38 +6879,37 @@
       ],
       "sentences": [
         [
-          "The laboratory is certified to conduct safety tests.",
-          "该实验室获得了进行安全测试的认证。"
+          "The laboratory certified that the samples were safe.",
+          "实验室证明这些样本是安全的。"
         ],
         [
-          "The organization must certify that its products meet national standards.",
-          "该组织必须证明其产品符合国家标准。"
+          "Products must be independently certified before entering the market.",
+          "产品进入市场前必须经过独立认证。"
         ]
       ],
       "forms": [
         "certificate（n. 证书）",
         "certification（n. 认证）",
-        "certified（adj. 经认证的）",
-        "certifier（n. 认证机构；证明人）"
+        "certified（adj. 经认证的）"
       ],
       "confusables": [
         [
-          "certify",
-          "verify",
-          "certify 强调正式证明或认证；verify 强调核实信息是否准确"
+          "certify / verify",
+          "certify 常指正式证明或认证；verify 强调核实真实性",
+          ""
         ]
       ]
     },
     "decrease": {
       "pos": "verb / noun",
       "meanings": [
-        "减少；下降",
+        "减少；降低；下降",
         "减少量；降幅"
       ],
       "phrases": [
         [
           "decrease by 10 percent",
-          "下降百分之十"
+          "减少百分之十"
         ],
         [
           "decrease in demand",
@@ -6946,45 +6926,45 @@
       ],
       "sentences": [
         [
-          "The new policy led to a decrease in energy consumption.",
-          "新政策使能源消耗有所下降。"
+          "The policy led to a decrease in household energy consumption.",
+          "这项政策使家庭能源消耗减少。"
         ],
         [
-          "Regular exercise can decrease the risk of several chronic diseases.",
-          "规律运动能够降低多种慢性疾病的风险。"
+          "Regular exercise can decrease the risk of several diseases.",
+          "规律锻炼能够降低多种疾病的风险。"
         ]
       ],
       "forms": [
-        "decreasing（adj. 逐渐减少的）",
-        "decreased（adj. 减少了的）",
-        "decreasingly（adv. 越来越少地）"
+        "decreasing（adj. 递减的）",
+        "decreased（adj. 减少的）",
+        "decrease（过去式同形）"
       ],
       "confusables": [
         [
-          "decrease",
-          "decline",
-          "decrease 中性地表示数量减少；decline 常暗示持续下降或衰退"
+          "decrease / reduce",
+          "decrease 可作不及物或及物动词；reduce 通常强调主动减少某物",
+          ""
         ]
       ]
     },
     "decree": {
       "pos": "noun / verb",
       "meanings": [
-        "法令；政令；判决",
+        "法令；政令；裁定",
         "颁布法令；裁定"
       ],
       "phrases": [
-        [
-          "by decree",
-          "通过法令；依照命令"
-        ],
         [
           "issue a decree",
           "颁布法令"
         ],
         [
-          "a royal decree",
-          "王室法令"
+          "by royal decree",
+          "根据王室法令"
+        ],
+        [
+          "a court decree",
+          "法院裁定"
         ],
         [
           "decree that",
@@ -6993,77 +6973,76 @@
       ],
       "sentences": [
         [
-          "The reform was introduced by government decree.",
-          "这项改革是通过政府法令推行的。"
+          "The government issued a decree to protect historical buildings.",
+          "政府颁布了一项保护历史建筑的法令。"
         ],
         [
-          "The court decreed that the agreement was invalid.",
-          "法院裁定这项协议无效。"
+          "The court decreed that the contract was invalid.",
+          "法院裁定该合同无效。"
         ]
       ],
       "forms": [
-        "decree（过去式/过去分词 decreed）",
-        "decreeing（现在分词）"
+        "decreed（v. 颁布；裁定）",
+        "decreeing（v. 正在颁布）"
       ],
       "confusables": [
         [
-          "decree",
-          "regulation",
-          "decree 通常指权威机构颁布的正式命令；regulation 指具体规则或管理条例"
+          "decree / law",
+          "decree 常指由权力机构发布的正式命令；law 是更广义的法律",
+          ""
         ]
       ]
     },
     "deem": {
       "pos": "verb",
       "meanings": [
-        "认为；视为；认定（正式）"
+        "认为；视为；认定"
       ],
       "phrases": [
-        [
-          "be deemed to be",
-          "被认为是……"
-        ],
         [
           "deem it necessary",
           "认为有必要"
         ],
         [
-          "be deemed eligible",
-          "被认定符合资格"
+          "be deemed to be",
+          "被认为是"
         ],
         [
           "deem sth. appropriate",
-          "认为某事恰当"
+          "认为某事合适"
+        ],
+        [
+          "widely deemed",
+          "普遍被认为"
         ]
       ],
       "sentences": [
         [
-          "The practice is widely deemed harmful to the environment.",
-          "这种做法普遍被认为有害于环境。"
+          "The measure was deemed necessary to protect public health.",
+          "这项措施被认为是保护公众健康所必需的。"
         ],
         [
-          "Applicants deemed suitable will be invited for an interview.",
-          "被认为合适的申请人将获邀参加面试。"
+          "Applicants who fail to respond may be deemed to have withdrawn.",
+          "未作出回应的申请人可能被视为已经退出。"
         ]
       ],
       "forms": [
-        "deemed（v. deem 的过去式和过去分词）",
-        "deeming（v. deem 的现在分词）"
+        "deemed（v. 认为；视为）",
+        "deeming（v. 认为）"
       ],
       "confusables": [
         [
-          "deem",
-          "consider",
-          "deem 较正式，常用于制度、法律或评估语境；consider 用法更广泛"
+          "deem / consider",
+          "deem 较正式，常用于被动语态；consider 更常用于一般表达",
+          ""
         ]
       ]
     },
     "dedicate": {
       "pos": "verb",
       "meanings": [
-        "献身；致力于",
-        "把（时间、精力、资源）用于",
-        "题献；把作品献给"
+        "致力于；献身于",
+        "把（作品、时间等）献给"
       ],
       "phrases": [
         [
@@ -7071,73 +7050,72 @@
           "致力于；献身于"
         ],
         [
-          "dedicate time to",
-          "把时间用于"
+          "dedicate time to doing sth.",
+          "投入时间做某事"
         ],
         [
           "be dedicated to",
-          "致力于；专注于"
+          "致力于"
         ],
         [
-          "dedicate a book to",
-          "把一本书献给"
+          "dedicate a book to sb.",
+          "把一本书献给某人"
         ]
       ],
       "sentences": [
         [
-          "The organization is dedicated to improving access to education.",
-          "该组织致力于改善教育机会。"
+          "Many scientists dedicate their lives to improving public health.",
+          "许多科学家毕生致力于改善公共健康。"
         ],
         [
-          "Researchers dedicate considerable time to collecting reliable evidence.",
-          "研究人员投入大量时间收集可靠证据。"
+          "The research team dedicated considerable time to collecting reliable data.",
+          "研究团队投入了大量时间收集可靠数据。"
         ]
       ],
       "forms": [
         "dedication（n. 奉献；献词）",
         "dedicated（adj. 专注的；专用的）",
-        "dedicator（n. 题献者）"
+        "dedicatory（adj. 题献的）"
       ],
       "confusables": [
         [
-          "dedicate",
-          "devote",
-          "dedicate 常用于正式表达献身或专门用途；devote 更常见于 devote time/energy to"
+          "dedicate / devote",
+          "dedicate 强调郑重投入或献身；devote 更常用于时间、精力的投入",
+          ""
         ]
       ]
     },
     "deduce": {
       "pos": "verb",
       "meanings": [
-        "推论；推断；演绎",
-        "根据证据得出结论"
+        "推断；演绎；推论"
       ],
       "phrases": [
         [
-          "deduce from",
-          "从……推断出"
+          "deduce from evidence",
+          "从证据推断"
         ],
         [
           "deduce that",
-          "推断……"
-        ],
-        [
-          "deduce a conclusion",
-          "得出结论"
+          "推断出……"
         ],
         [
           "logically deduce",
-          "逻辑推演"
+          "逻辑推导"
+        ],
+        [
+          "deduce a conclusion",
+          "推导结论"
         ]
       ],
       "sentences": [
         [
-          "The researchers deduced the cause of the problem from the available evidence.",
-          "研究人员根据现有证据推断出了问题的原因。"
+          "Scientists deduced the age of the artifact from its surrounding materials.",
+          "科学家根据文物周围的材料推断出它的年代。"
         ],
         [
-          "Readers can deduce the author's attitude from the choice of words.",
-          "读者可以从用词中推断作者的态度。"
+          "We cannot deduce causation from correlation alone.",
+          "我们不能仅凭相关性推断因果关系。"
         ]
       ],
       "forms": [
@@ -7147,22 +7125,21 @@
       ],
       "confusables": [
         [
-          "deduce",
-          "infer",
-          "deduce 强调依据证据或逻辑推导；infer 强调从信息中推断含义，常从读者视角使用"
+          "deduce / infer",
+          "deduce 强调根据证据或逻辑推导；infer 强调从信息中得出含蓄结论",
+          ""
         ]
       ]
     },
     "deduct": {
       "pos": "verb",
       "meanings": [
-        "扣除；减去",
-        "（从总数中）减去某项"
+        "扣除；减去"
       ],
       "phrases": [
         [
-          "deduct from",
-          "从……中扣除"
+          "deduct from salary",
+          "从工资中扣除"
         ],
         [
           "deduct tax",
@@ -7173,18 +7150,18 @@
           "扣除费用"
         ],
         [
-          "deduct points",
-          "扣分"
+          "deduct A from B",
+          "从B中扣除A"
         ]
       ],
       "sentences": [
         [
-          "Travel expenses can be deducted from taxable income under certain conditions.",
-          "在特定条件下，差旅费用可以从应税收入中扣除。"
+          "Employers are required to deduct income tax from salaries.",
+          "雇主必须从工资中扣除所得税。"
         ],
         [
-          "The school deducted points for incomplete answers.",
-          "学校因答案不完整而扣分。"
+          "Travel expenses may be deducted from taxable income.",
+          "差旅费用可以从应税收入中扣除。"
         ]
       ],
       "forms": [
@@ -7194,57 +7171,57 @@
       ],
       "confusables": [
         [
-          "deduct",
-          "subtract",
-          "deduct 常用于费用、税款或分数扣除；subtract 多用于数学计算中减去数值"
+          "deduct / subtract",
+          "deduct 常用于费用、税款扣除；subtract 多用于数学计算",
+          ""
         ]
       ]
     },
     "fashion": {
       "pos": "noun / verb",
       "meanings": [
-        "时尚；流行式样",
-        "方式；样式",
-        "使形成；塑造（较正式）"
+        "时尚；流行款式",
+        "方式；形式",
+        "制作；塑造"
       ],
       "phrases": [
         [
           "in fashion",
-          "流行；时髦"
+          "流行的"
         ],
         [
-          "out of fashion",
-          "过时"
+          "fashion industry",
+          "时尚产业"
         ],
         [
           "after a fashion",
           "勉强；不太熟练地"
         ],
         [
-          "in a similar fashion",
-          "以类似的方式"
+          "fashion a solution",
+          "设计出一种解决方案"
         ]
       ],
       "sentences": [
         [
-          "Consumer preferences change as fashion and social values evolve.",
-          "随着时尚和社会价值观的演变，消费者偏好也会改变。"
+          "Consumer preferences are constantly changing in the fashion industry.",
+          "消费者偏好在时尚产业中不断变化。"
         ],
         [
-          "The information was presented in a clear and accessible fashion.",
-          "这些信息以清晰易懂的方式呈现。"
+          "The community fashioned a practical solution to the local problem.",
+          "社区为当地问题设计出一个切实可行的解决方案。"
         ]
       ],
       "forms": [
-        "fashionable（adj. 时髦的）",
+        "fashionable（adj. 时尚的）",
         "fashionably（adv. 时髦地）",
-        "fashioning（n./v. 塑造；制作）"
+        "fashioning（n. 塑造）"
       ],
       "confusables": [
         [
-          "fashion",
-          "style",
-          "fashion 强调某一时期流行的风格；style 强调个人或事物的独特风格"
+          "fashion / style",
+          "fashion 常指某一时期的流行趋势；style 强调个人或事物的风格",
+          ""
         ]
       ]
     },
@@ -7252,46 +7229,46 @@
       "pos": "adjective",
       "meanings": [
         "流行的；时髦的",
-        "符合时尚的；受欢迎的"
+        "受时尚人士欢迎的"
       ],
       "phrases": [
-        [
-          "a fashionable trend",
-          "流行趋势"
-        ],
         [
           "fashionable clothes",
           "时髦服装"
         ],
         [
-          "a fashionable area",
-          "时尚街区；热门地区"
+          "a fashionable district",
+          "时尚街区"
         ],
         [
           "become fashionable",
           "变得流行"
+        ],
+        [
+          "fashionable opinion",
+          "流行观点"
         ]
       ],
       "sentences": [
         [
-          "Buying fashionable products does not necessarily lead to greater happiness.",
-          "购买时髦产品并不一定会带来更多幸福感。"
+          "Cycling has become fashionable among urban professionals.",
+          "骑行已成为城市专业人士中流行的活动。"
         ],
         [
-          "The district has become fashionable among young professionals.",
-          "这个地区已经成为年轻专业人士青睐的热门区域。"
+          "A fashionable idea is not necessarily supported by evidence.",
+          "一种流行观点未必有证据支持。"
         ]
       ],
       "forms": [
-        "fashion（n. 时尚；方式）",
+        "fashion（n. 时尚）",
         "fashionably（adv. 时髦地）",
         "unfashionable（adj. 不时髦的）"
       ],
       "confusables": [
         [
-          "fashionable",
-          "popular",
-          "fashionable 强调符合流行风尚；popular 强调受到许多人喜爱"
+          "fashionable / popular",
+          "fashionable 强调符合当下潮流；popular 强调受欢迎",
+          ""
         ]
       ]
     },
@@ -7300,8 +7277,7 @@
       "meanings": [
         "帮助；恩惠",
         "赞同；支持",
-        "偏爱；偏袒",
-        "有利于；更喜欢（英式拼写）"
+        "偏爱；有利于"
       ],
       "phrases": [
         [
@@ -7313,8 +7289,8 @@
           "赞成；支持"
         ],
         [
-          "favourable conditions",
-          "有利条件"
+          "favour one option over another",
+          "偏爱一种选择"
         ],
         [
           "find favour with",
@@ -7323,34 +7299,34 @@
       ],
       "sentences": [
         [
-          "The evidence is in favour of a more flexible working arrangement.",
-          "证据支持采取更灵活的工作安排。"
+          "The committee voted in favour of the proposed changes.",
+          "委员会投票支持所提议的变革。"
         ],
         [
-          "Public opinion may favour policies that reduce inequality.",
-          "公众舆论可能支持减少不平等的政策。"
+          "Current tax rules may favour large companies over small businesses.",
+          "现行税收规则可能使大公司比小企业更受益。"
         ]
       ],
       "forms": [
-        "favourable（adj. 有利的；赞同的）",
-        "favourite（adj./n. 最喜欢的）",
+        "favourable（adj. 有利的；赞成的）",
         "favourably（adv. 有利地）",
+        "favourite（adj. 最喜欢的）",
         "favouritism（n. 偏袒）"
       ],
       "confusables": [
         [
-          "favour",
-          "favor",
-          "英式英语拼作 favour，美式英语拼作 favor，含义相同"
+          "favour / support",
+          "favour 可表示偏爱或有利于；support 强调支持某人或某观点",
+          ""
         ]
       ]
     },
     "favourable": {
       "pos": "adjective",
       "meanings": [
-        "有利的；有帮助的",
-        "赞同的；支持的",
-        "给人好印象的；令人满意的"
+        "赞成的；支持的",
+        "有利的；良好的",
+        "讨人喜欢的"
       ],
       "phrases": [
         [
@@ -7358,38 +7334,38 @@
           "有利条件"
         ],
         [
-          "favourable response",
+          "a favourable response",
           "积极回应"
-        ],
-        [
-          "favourable impression",
-          "良好印象"
         ],
         [
           "be favourable to",
           "有利于；赞成"
+        ],
+        [
+          "favourable impression",
+          "良好印象"
         ]
       ],
       "sentences": [
         [
-          "A stable political environment is favourable to long-term investment.",
-          "稳定的政治环境有利于长期投资。"
+          "The economic environment is becoming more favourable to investment.",
+          "经济环境正变得更有利于投资。"
         ],
         [
           "The proposal received a favourable response from local residents.",
-          "这项提议得到了当地居民的积极回应。"
+          "该提案得到了当地居民的积极回应。"
         ]
       ],
       "forms": [
-        "favour（n./v. 恩惠；支持）",
-        "favourably（adv. 有利地；赞同地）",
+        "favour（n./v. 帮助；偏爱）",
+        "favourably（adv. 有利地）",
         "unfavourable（adj. 不利的）"
       ],
       "confusables": [
         [
-          "favourable",
-          "beneficial",
-          "favourable 强调条件或态度有利；beneficial 强调带来实际益处"
+          "favourable / beneficial",
+          "favourable 指条件或态度良好；beneficial 强调实际有益",
+          ""
         ]
       ]
     },
@@ -7397,57 +7373,55 @@
       "pos": "adjective / noun",
       "meanings": [
         "最喜欢的；特别喜爱的",
-        "最受欢迎的人或事物",
-        "最有希望获胜者"
+        "最喜欢的人或事物；热门人选"
       ],
       "phrases": [
         [
-          "a favourite subject",
-          "最喜欢的科目"
-        ],
-        [
-          "personal favourite",
-          "个人最喜欢的事物"
-        ],
-        [
-          "favourite among readers",
-          "最受读者欢迎的"
+          "favourite subject",
+          "最喜欢的学科"
         ],
         [
           "a firm favourite",
           "备受喜爱的事物"
+        ],
+        [
+          "favourite among readers",
+          "深受读者喜爱"
+        ],
+        [
+          "the favourite to win",
+          "最有希望获胜者"
         ]
       ],
       "sentences": [
         [
-          "Reading remains a favourite leisure activity for many people.",
-          "阅读仍然是许多人最喜爱的休闲活动。"
+          "Reading remains a favourite activity among many older adults.",
+          "阅读仍是许多老年人喜爱的活动。"
         ],
         [
-          "The method has become a favourite among teachers because of its flexibility.",
-          "由于灵活性，这种方法已成为教师们青睐的选择。"
+          "The candidate was considered the favourite to win the election.",
+          "这位候选人被认为是最有希望赢得选举的人。"
         ]
       ],
       "forms": [
-        "favour（n./v. 支持；偏爱）",
-        "favourable（adj. 有利的）",
-        "favouritism（n. 偏袒）"
+        "favour（n./v. 偏爱）",
+        "favourably（adv. 有利地）",
+        "favourite（英式拼写；美式常写favorite）"
       ],
       "confusables": [
         [
-          "favourite",
-          "preferred",
-          "favourite 强调最喜爱的对象；preferred 强调经过选择后更倾向的选项"
+          "favourite / preferred",
+          "favourite 指最喜欢的；preferred 指经过选择后更倾向的",
+          ""
         ]
       ]
     },
     "sit": {
-      "pos": "verb / noun",
+      "pos": "verb",
       "meanings": [
         "坐；就座",
         "坐落；位于",
-        "参加考试；担任（委员会成员）",
-        "（会议、议会）开会"
+        "担任（职务）；参加（考试）"
       ],
       "phrases": [
         [
@@ -7455,90 +7429,85 @@
           "坐下"
         ],
         [
-          "sit an exam",
-          "参加考试（英式）"
-        ],
-        [
           "sit on a committee",
           "担任委员会成员"
         ],
         [
-          "sit still",
-          "坐着不动"
+          "sit an exam",
+          "参加考试（英式）"
         ],
         [
-          "sit in judgment on",
-          "评判；审判"
+          "sit in the centre of",
+          "位于……中心"
         ]
       ],
       "sentences": [
         [
-          "The new research center sits near the university campus.",
-          "新的研究中心坐落在大学校园附近。"
+          "The museum sits in the centre of the historic district.",
+          "这座博物馆坐落在历史街区的中心。"
         ],
         [
-          "She was invited to sit on the committee responsible for the review.",
-          "她受邀担任负责审查工作的委员会成员。"
+          "Students are required to sit a final examination at the end of the course.",
+          "学生必须在课程结束时参加期末考试。"
         ]
       ],
       "forms": [
-        "sat（v. sit 的过去式和过去分词）",
-        "sitting（n. 会议；就座；adj. 在任的）",
-        "sitter（n. 坐着的人；临时照看者）"
+        "sitting（n. 就座；会议）",
+        "sitter（n. 看护者；模特）",
+        "seated（adj. 就座的）"
       ],
       "confusables": [
         [
-          "sit",
-          "seat",
-          "sit 是不及物动词，表示坐下；seat 是及物动词，表示使某人就座"
+          "sit / seat",
+          "sit 通常是不及物动词，表示坐；seat 是及物动词，表示使就座",
+          ""
         ]
       ]
     },
     "site": {
       "pos": "noun / verb",
       "meanings": [
-        "地点；场所；遗址",
-        "网站；站点",
-        "为……选址；设置"
+        "地点；场所；工地",
+        "网站",
+        "使坐落于；为……选址"
       ],
       "phrases": [
         [
           "construction site",
-          "建筑工地"
+          "施工现场"
         ],
         [
           "on site",
           "在现场"
         ],
         [
-          "a historic site",
-          "历史遗址"
-        ],
-        [
           "website / web site",
           "网站"
+        ],
+        [
+          "site a factory",
+          "为工厂选址"
         ]
       ],
       "sentences": [
         [
-          "The factory site was chosen for its access to transport networks.",
-          "这家工厂的选址考虑了其交通网络的便利性。"
+          "The researchers collected samples at the construction site.",
+          "研究人员在施工现场采集了样本。"
         ],
         [
-          "Researchers visited the site to collect environmental samples.",
-          "研究人员前往现场采集环境样本。"
+          "The new hospital will be sited near the railway station.",
+          "新医院将建在火车站附近。"
         ]
       ],
       "forms": [
         "siting（n. 选址）",
-        "sited（adj. 坐落于……的）",
-        "website（n. 网站）"
+        "siting decision（n. 选址决定）"
       ],
       "confusables": [
         [
-          "site",
-          "sight",
-          "site 指地点或网站；sight 指视力、景象或看见的东西"
+          "site / location",
+          "site 常指特定用途的场地；location 泛指位置或地点",
+          ""
         ]
       ]
     },
@@ -7546,8 +7515,7 @@
       "pos": "verb",
       "meanings": [
         "使位于；使坐落于",
-        "使处于某种背景或情境中",
-        "确定……的位置"
+        "使处于某种环境或背景中"
       ],
       "phrases": [
         [
@@ -7559,22 +7527,22 @@
           "把某事置于某种背景中"
         ],
         [
-          "situate the problem",
-          "确定问题所处的情境"
+          "be ideally situated",
+          "位置理想"
         ],
         [
-          "strategically situated",
-          "处于战略位置"
+          "situate a problem",
+          "界定问题所处的背景"
         ]
       ],
       "sentences": [
         [
-          "The village is situated in a mountainous region.",
-          "这个村庄位于山区。"
+          "The village is situated in a narrow valley.",
+          "这个村庄坐落在一条狭窄的山谷中。"
         ],
         [
-          "The author situates the debate within a broader historical context.",
-          "作者将这场争论置于更广阔的历史背景之中。"
+          "Researchers must situate their findings within the wider debate.",
+          "研究人员必须将其研究发现置于更广泛的讨论背景中。"
         ]
       ],
       "forms": [
@@ -7584,9 +7552,9 @@
       ],
       "confusables": [
         [
-          "situate",
-          "locate",
-          "situate 常强调地理位置或背景语境；locate 强调确定或指出具体位置"
+          "situate / locate",
+          "situate 常强调位置或背景；locate 更直接表示确定或设定位置",
+          ""
         ]
       ]
     },
@@ -7594,104 +7562,100 @@
       "pos": "noun",
       "meanings": [
         "情况；形势；局面",
-        "处境；境况",
         "位置；环境",
-        "职位；工作（较旧用法）"
+        "工作；职位"
       ],
       "phrases": [
         [
-          "in a difficult situation",
-          "处于困境"
+          "under the circumstances / situation",
+          "在这种情况下"
+        ],
+        [
+          "a difficult situation",
+          "困难局面"
         ],
         [
           "the current situation",
           "当前形势"
         ],
         [
-          "under the circumstances",
-          "在这种情况下"
-        ],
-        [
-          "a win-win situation",
-          "双赢局面"
+          "be in a situation where",
+          "处于……的情形"
         ]
       ],
       "sentences": [
         [
-          "The current economic situation requires careful policy decisions.",
-          "当前经济形势需要谨慎的政策决策。"
+          "The situation requires cooperation between governments and businesses.",
+          "这种局面需要政府与企业之间开展合作。"
         ],
         [
-          "Education can help individuals improve their social situation.",
-          "教育能够帮助个人改善社会处境。"
+          "People in this situation may have limited access to public services.",
+          "处于这种境况的人可能难以获得公共服务。"
         ]
       ],
       "forms": [
-        "situate（v. 使位于；置于背景中）",
+        "situate（v. 使位于）",
         "situated（adj. 位于……的）",
         "situational（adj. 情境的）"
       ],
       "confusables": [
         [
-          "situation",
-          "condition",
-          "situation 指整体局面或处境；condition 指具体状态或条件"
+          "situation / circumstance",
+          "situation 指整体局面；circumstance 常指构成处境的具体条件",
+          ""
         ]
       ]
     },
     "skeleton": {
-      "pos": "noun / verb",
+      "pos": "noun",
       "meanings": [
         "骨骼；骨架",
-        "框架；梗概",
-        "骨瘦如柴的人",
-        "使骨架化；剥去……的外层"
+        "框架；梗概；基本结构"
       ],
       "phrases": [
         [
-          "the human skeleton",
+          "human skeleton",
           "人体骨骼"
+        ],
+        [
+          "a skeleton staff",
+          "精简的员工队伍"
         ],
         [
           "skeleton structure",
           "骨架结构"
         ],
         [
-          "a skeleton staff",
-          "最低限度的工作人员"
-        ],
-        [
-          "skeleton outline",
-          "提纲；框架"
+          "a skeleton outline",
+          "提纲；概要"
         ]
       ],
       "sentences": [
         [
-          "The report provides a skeleton outline of the proposed reforms.",
-          "这份报告给出了拟议改革的基本框架。"
+          "The skeleton provides support and protection for the human body.",
+          "骨骼为人体提供支撑和保护。"
         ],
         [
-          "Only a skeleton staff remained during the holiday period.",
-          "假期期间只留下了最低限度的工作人员。"
+          "The report offers only a skeleton outline of the proposed reforms.",
+          "这份报告仅提供了拟议改革的基本纲要。"
         ]
       ],
       "forms": [
-        "skeletal（adj. 骨骼的；骨架的）",
-        "skeletally（adv. 在骨骼方面）"
+        "skeletal（adj. 骨骼的；骨瘦如柴的）",
+        "skeletonize（v. 使成骨架状）"
       ],
       "confusables": [
         [
-          "skeleton",
-          "framework",
-          "skeleton 可指生物骨骼或基本框架；framework 强调系统、理论或结构框架"
+          "skeleton / framework",
+          "skeleton 强调基本骨架或最简结构；framework 强调组织和运作框架",
+          ""
         ]
       ]
     },
     "skeptical": {
       "pos": "adjective",
       "meanings": [
-        "怀疑的；持怀疑态度的",
-        "不轻信的；持审慎态度的"
+        "怀疑的；持怀疑态度的"
       ],
       "phrases": [
         [
@@ -7703,83 +7667,82 @@
           "仍持怀疑态度"
         ],
         [
-          "a skeptical view",
-          "怀疑的观点"
+          "a skeptical attitude",
+          "怀疑态度"
         ],
         [
           "skeptical of the claim",
-          "对这一说法表示怀疑"
+          "怀疑这一说法"
         ]
       ],
       "sentences": [
         [
-          "Readers should be skeptical about claims that lack reliable evidence.",
-          "对于缺乏可靠证据的说法，读者应持怀疑态度。"
+          "Consumers are increasingly skeptical about exaggerated environmental claims.",
+          "消费者越来越怀疑夸大的环保宣传。"
         ],
         [
-          "Scientists remain skeptical of explanations that cannot be tested.",
-          "科学家对无法检验的解释仍持怀疑态度。"
+          "Scientists remain skeptical until the results can be independently verified.",
+          "在结果得到独立验证之前，科学家仍持怀疑态度。"
         ]
       ],
       "forms": [
         "skeptic（n. 怀疑论者）",
-        "skepticism（n. 怀疑态度；怀疑论）",
+        "skepticism（n. 怀疑态度）",
         "skeptically（adv. 怀疑地）"
       ],
       "confusables": [
         [
-          "skeptical",
-          "doubtful",
-          "skeptical 强调主动审视证据、不轻信；doubtful 强调不确定或认为不太可能"
+          "skeptical / doubtful",
+          "skeptical 强调审慎质疑；doubtful 可表示不确定或不太可能",
+          ""
         ]
       ]
     },
     "sketch": {
       "pos": "noun / verb",
       "meanings": [
-        "素描；草图",
-        "概述；概要",
-        "简要描述；勾勒",
-        "草拟；绘制草图"
+        "素描；草图；示意图",
+        "概述；梗概",
+        "概述；简要描述"
       ],
       "phrases": [
         [
           "a rough sketch",
-          "草图；粗略构想"
+          "草图"
         ],
         [
           "sketch out a plan",
-          "草拟计划"
+          "拟定计划概要"
         ],
         [
           "a brief sketch of",
-          "对……的简要概述"
+          "对……的简要介绍"
         ],
         [
-          "sketch the main features",
-          "勾勒主要特征"
+          "sketch the main points",
+          "概述要点"
         ]
       ],
       "sentences": [
         [
-          "The introduction sketches the historical background of the debate.",
-          "引言简要勾勒了这场争论的历史背景。"
+          "The architect prepared a rough sketch of the proposed building.",
+          "建筑师绘制了拟建建筑的草图。"
         ],
         [
-          "The team sketched out several possible solutions before choosing one.",
-          "团队在作出选择前草拟了几种可能的解决方案。"
+          "The article sketches the main arguments for educational reform.",
+          "这篇文章概述了支持教育改革的主要论点。"
         ]
       ],
       "forms": [
         "sketchy（adj. 粗略的；不完整的）",
-        "sketchily（adv. 粗略地）",
-        "sketchbook（n. 素描本）"
+        "sketchbook（n. 素描本）",
+        "sketcher（n. 素描者）"
       ],
       "confusables": [
         [
-          "sketch",
-          "outline",
-          "sketch 强调简要勾勒或初步构思；outline 强调按逻辑列出主要部分"
+          "sketch / outline",
+          "sketch 可指图画或简要描述；outline 强调列出主要结构和要点",
+          ""
         ]
       ]
     }
