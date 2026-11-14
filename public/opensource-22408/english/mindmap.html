@@ -61,7 +61,7 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
 </style>
 </head>
 <body>
-<header><a href="./">← 返回英语二词库</a>　<a href="./reading.html" style="font-weight:700">📚 真题阅读地图 ↗</a><h1>英语词汇思维网络</h1><p>从一个单词出发，沿着词形、词根词缀、语义线索和真实用法触类旁通。点击任意关联词，即可切换中心词，逐步建立自己的词汇网络。</p></header>
+<header><a href="./">← 返回英语二词库</a>　<a href="./review.html" style="font-weight:700">🧠 统一间隔复习 ↗</a>　<a href="./reading.html" style="font-weight:700">📚 真题阅读地图 ↗</a><h1>英语词汇思维网络</h1><p>从一个单词出发，沿着词形、词根词缀、语义线索和真实用法触类旁通。点击任意关联词，即可切换中心词，逐步建立自己的词汇网络。</p></header>
 <main>
 <div class="statrow"><div class="stat"><b id="total">—</b>词条纳入网络</div><div class="stat"><b id="masteredCount">0</b>已掌握</div><div class="stat"><b id="dueCount">0</b>待复习</div><div class="stat"><b>词形关联</b>派生与拼写线索</div><div class="stat"><b>语义联想</b>按中文释义聚类</div></div>
 <section class="theme-panel" aria-label="主题词汇群">
@@ -327,10 +327,12 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
  const reviewKey='cs-english-mindmap-review-v2',legacyKey='cs-english-mindmap-known-v1';
  let review={};try{review=JSON.parse(localStorage.getItem(reviewKey)||'{}');}catch(e){review={};}
  try{const old=JSON.parse(localStorage.getItem(legacyKey)||'[]');old.forEach(w=>{if(!review[w])review[w]={level:3,due:Date.now()+7*86400000,reps:3};});}catch(e){}
+ const unifiedKey='cs-english-unified-review-v1';let unified={};try{unified=JSON.parse(localStorage.getItem(unifiedKey)||'{}');}catch(e){unified={};}
+ Object.entries(unified).forEach(([id,r])=>{if(id.startsWith('word:'))review[id.slice(5)]={level:r.level||0,due:r.due||Date.now(),reps:r.reps||0,last:r.last||null};});
  const DAY=86400000,MIN=60000;
  const dueWords=()=>words.filter(w=>review[w.w.toLowerCase()]&&review[w.w.toLowerCase()].due<=Date.now());
  const masteredCount=()=>Object.values(review).filter(x=>x.level>=3).length;
- function saveReview(){try{localStorage.setItem(reviewKey,JSON.stringify(review));}catch(e){}}
+ function saveReview(){try{localStorage.setItem(reviewKey,JSON.stringify(review));Object.entries(review).forEach(([word,r])=>{unified['word:'+word]={level:r.level||0,due:r.due||Date.now(),reps:r.reps||0,last:r.last||null,lapses:r.level===0?1:0,source:'英语词汇思维网络'};});localStorage.setItem(unifiedKey,JSON.stringify(unified));}catch(e){}}
  function updateStats(){document.getElementById('masteredCount').textContent=masteredCount();document.getElementById('dueCount').textContent=dueWords().length;}
  updateStats();
  let session=[],sessionIndex=0,reverseMode=false,sessionMode='new';
