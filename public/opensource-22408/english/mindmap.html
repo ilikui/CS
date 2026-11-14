@@ -135,7 +135,7 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
    const [enrichment,exam1,exam2,exam3,exam4,polysemy,longSentences]=await Promise.all([
     load('./english_enrichment_data.json'),load('./english2_exam_index.json'),load('./english2_exam_index_02.json'),load('./english2_exam_index_03.json'),load('./english2_exam_index_04.json'),load('./english2_polysemy_data.json'),load('./english2_long_sentence_data.json')
    ]);
-   const exam={};[exam1,exam2,exam3,exam4].forEach(part=>Object.assign(exam,part.words||{}));
+   const exam={};[exam1,exam2,exam3,exam4].forEach(part=>Object.entries(part.words||{}).forEach(([key,value])=>{const old=exam[key];exam[key]={exampleCount:Math.max(old?.exampleCount||0,value.exampleCount||0),sources:[...new Set([...(old?.sources||[]),...(value.sources||[])])]};}));
    return {enrichment:enrichment.entries||{},exam,polysemy:polysemy.entries||{},longSentences:longSentences.items||[]};
   })().catch(err=>{contextCache=null;throw err;});
   return contextCache;
