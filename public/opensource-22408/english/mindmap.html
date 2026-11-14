@@ -31,6 +31,17 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
 .theme-words{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
 .theme-word{padding:7px 10px;border:1px solid #dce8f3;background:#f6f9fd;border-radius:9px;font-size:12px}
 .theme-word small{display:block;color:var(--muted);max-width:190px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.context-block{margin-top:14px;border-top:1px solid var(--line);padding-top:13px}
+.context-block h3{font-size:13px;margin:0 0 8px;color:#405875}
+.context-card{background:#f7f9fc;border:1px solid #e4ebf3;border-radius:11px;padding:11px;margin:8px 0}
+.context-card b{display:block;font-size:13px;margin-bottom:5px}
+.context-card p{font-size:12px;line-height:1.75;margin:4px 0;color:#405875}
+.source-list{display:grid;gap:6px;margin-top:8px}
+.source-item{font-size:12px;line-height:1.6;padding:7px 9px;background:#f7f9fc;border-radius:8px;color:#405875}
+.context-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}
+.context-actions a{display:inline-block;padding:8px 10px;border-radius:9px;background:#edf4fc;color:#315e8d;text-decoration:none;font-size:12px;border:1px solid #dce8f3}
+.context-label{display:inline-block;font-size:10px;color:#8a5a20;background:#fff3df;border-radius:99px;padding:2px 7px;margin-left:5px}
+
 @media(max-width:900px){.theme-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:520px){.theme-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .stat{background:white;border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-size:12px;color:var(--muted)}.stat b{color:var(--ink);font-size:15px;margin-right:4px}
@@ -115,6 +126,46 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
   {id:'politics',name:'政治与文化',keys:['政治','政府','国家','政策','法律','权利','民主','选举','议会','官员','文化','艺术','历史','传统','价值观','信仰','宗教','制度','公民','政治的','法律的']}
  ];
  function topicsFor(word){const d=(word.d+' '+word.w).toLowerCase();return topicThemes.filter(t=>t.keys.some(k=>d.includes(k))).map(t=>t.id);}
+
+ let contextCache=null;
+ async function getContextCache(){
+  if(contextCache)return contextCache;
+  contextCache=(async()=>{
+   const load=async file=>{const r=await fetch(file);if(!r.ok)throw new Error('无法加载 '+file);return r.json();};
+   const [enrichment,exam1,exam2,exam3,exam4,polysemy,longSentences]=await Promise.all([
+    load('./english_enrichment_data.json'),load('./english2_exam_index.json'),load('./english2_exam_index_02.json'),load('./english2_exam_index_03.json'),load('./english2_exam_index_04.json'),load('./english2_polysemy_data.json'),load('./english2_long_sentence_data.json')
+   ]);
+   const exam={};[exam1,exam2,exam3,exam4].forEach(part=>Object.assign(exam,part.words||{}));
+   return {enrichment:enrichment.entries||{},exam,polysemy:polysemy.entries||{},longSentences:longSentences.items||[]};
+  })().catch(err=>{contextCache=null;throw err;});
+  return contextCache;
+ }
+ function renderWordContext(w,data){
+  const host=document.getElementById('wordContext');if(!host||!data)return;
+  const key=w.w.toLowerCase(),extra=data.enrichment[key],poly=data.polysemy[key],exam=data.exam[key];
+  const refs=(exam?.sources||[]).slice(0,8),themes=topicsFor(w);
+  const sentences=data.longSentences.filter(x=>themes.includes(x.theme)).slice(0,1);
+  let html='<div class="context-block"><h3>📚 英语二真题出处关联</h3>';
+  if(exam){
+   html+='<p class="tip">红宝书索引记录：该词共 '+(exam.exampleCount||0)+' 条跨考试真题例句记录；下方列出英语二出处（按原卡包索引）。出处不是原句全文。</p><div class="source-list">'+refs.map(x=>'<div class="source-item">'+esc(x)+'</div>').join('')+'</div>';
+   if((exam.sources||[]).length>refs.length)html+='<p class="tip">另有 '+((exam.sources||[]).length-refs.length)+' 条出处未展开。</p>';
+  }else html+='<p class="tip">当前红宝书公开索引未匹配到该词的英语二出处；不代表历年真题中一定未出现。</p>';
+  html+='<div class="context-actions"><a href="../../english/recite/?word='+encodeURIComponent(w.w)+'" target="_blank" rel="noopener">背诵室定位该词 ↗</a><a href="https://github.com/CHNragdoll/anki-pipeline/releases/tag/redbook-2027.10.06" target="_blank" rel="noopener">正版红宝书卡包 ↗</a></div>';
+  if(poly){
+   html+='<div class="context-card"><b>熟词僻义 / 语境义</b><p><strong>核心义：</strong>'+esc(poly.core)+'</p><p><strong>考研语境：</strong>'+esc(poly.context)+'</p><p><strong>辨析：</strong>'+esc(poly.note)+'</p><p><strong>例句（自编）：</strong>'+esc(poly.example)+'</p><p><strong>译文：</strong>'+esc(poly.translation)+'</p></div>';
+  }else if(extra?.meanings?.length>1){
+   html+='<div class="context-card"><b>多义词义项</b>'+extra.meanings.map((x,i)=>'<p>'+(i+1)+'. '+esc(x)+'</p>').join('')+'</div>';
+  }
+  if(extra?.phrases?.length)html+='<div class="context-card"><b>高频短语 / 固定搭配</b>'+extra.phrases.map(x=>'<p><strong>'+esc(x[0])+'</strong> — '+esc(x[1])+'</p>').join('')+'</div>';
+  if(extra?.sentences?.length)html+='<div class="context-card"><b>例句语境 <span class="context-label">自编例句，非真题原句</span></b>'+extra.sentences.slice(0,2).map(x=>'<p>'+esc(x[0])+'</p><p>'+esc(x[1])+'</p>').join('')+'</div>';
+  if(sentences.length){
+   const x=sentences[0];
+   html+='<div class="context-card"><b>长难句精读 · '+esc(x.title)+' <span class="context-label">自编仿真练习</span></b><p>'+esc(x.sentence)+'</p><p><strong>译文：</strong>'+esc(x.translation)+'</p><p><strong>结构：</strong>'+esc(x.structure)+'</p><p><strong>重点：</strong>'+esc(x.focus)+'</p></div>';
+  }
+  html+='<p class="tip">版权与来源说明：公开索引仅展示真题年份、题型和篇章定位，不转载红宝书原句全文。上方自编例句和长难句仅用于训练，不标注为历年真题。</p></div>';
+  host.innerHTML=html;
+ }
+
  function renderTopics(){
   const grid=document.getElementById('themeGrid'),box=document.getElementById('themeWords');
   grid.innerHTML='';box.innerHTML='';
@@ -127,6 +178,12 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
     box.innerHTML='';
     const summary=document.createElement('div');summary.className='tip';summary.textContent=t.name+' · '+list.length+' 个词。按释义关键词自动归类，可能存在跨主题或误分类；可点击词条查看完整释义与关联。';box.append(summary);
     const practiceTopic=document.createElement('button');practiceTopic.type='button';practiceTopic.className='primary';practiceTopic.textContent='⚡ 练习本主题 20 词';practiceTopic.addEventListener('click',()=>{const fresh=list.filter(w=>!review[w.w.toLowerCase()]||review[w.w.toLowerCase()].level<3);startSession(fresh.length?fresh:list,'topic');});box.append(practiceTopic);
+    getContextCache().then(data=>{
+     const matched=list.filter(w=>data.exam[w.w.toLowerCase()]?.sources?.length);
+     const stat=document.createElement('div');stat.className='tip';stat.textContent='已关联英语二真题出处：'+matched.length+' / '+list.length+' 个词。点击单词可查看具体年份、题型和篇章定位。';box.append(stat);
+     const sentence=data.longSentences.find(x=>x.theme===t.id);
+     if(sentence){const card=document.createElement('div');card.className='context-card';card.style.flexBasis='100%';card.innerHTML='<b>'+esc(sentence.title)+' <span class="context-label">自编长难句练习</span></b><p>'+esc(sentence.sentence)+'</p><p>'+esc(sentence.translation)+'</p><p><strong>结构：</strong>'+esc(sentence.structure)+'</p>';box.append(card);}
+    }).catch(()=>{});
     const shown=list.slice(0,80);
     shown.forEach(w=>{
      const x=document.createElement('button');x.className='theme-word';x.type='button';
@@ -211,8 +268,9 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
   nodes.forEach((n,i)=>{if(!i)return;const line=document.createElementNS(ns,'line');line.setAttribute('x1',cx);line.setAttribute('y1',cy);line.setAttribute('x2',n.x);line.setAttribute('y2',n.y);line.setAttribute('class','edge');svg.append(line);});
   nodes.forEach((n,i)=>{const g=document.createElementNS(ns,'g');g.setAttribute('class','node '+n.type);g.setAttribute('transform','translate('+n.x+','+n.y+')');const width=Math.max(118,Math.min(205,n.label.length*12+28));const rect=document.createElementNS(ns,'rect');rect.setAttribute('x',-width/2);rect.setAttribute('y',-31);rect.setAttribute('width',width);rect.setAttribute('height',62);rect.setAttribute('rx',13);g.append(rect);const t=document.createElementNS(ns,'text');t.setAttribute('y',n.sub?-4:5);t.textContent=n.label;g.append(t);if(n.sub){const st=document.createElementNS(ns,'text');st.setAttribute('y',17);st.setAttribute('style','font-size:10px;fill:'+(n.type==='center'?'#dbe8f6':'#6d7f93'));st.textContent=n.sub.length>25?n.sub.slice(0,25)+'…':n.sub;g.append(st);}if(n.word){g.addEventListener('click',()=>draw(n.word));g.setAttribute('tabindex','0');g.setAttribute('role','button');g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();draw(n.word);}});}svg.append(g);});
   const parts=w.d.split(/[;；]/).map(x=>x.trim()).filter(Boolean).slice(0,4);
-  document.getElementById('detail').innerHTML='<div class="word-title">'+esc(w.w)+'</div><div class="phonetic">'+esc(w.g+' · '+w.u)+'</div><div class="meaning">'+parts.map(x=>'<div>• '+esc(x)+'</div>').join('')+'</div><div class="section"><h3>词形关联（自动匹配候选）</h3><div class="rel-list">'+(fam.length?fam.map(x=>'<button class="rel" data-word="'+esc(x.w)+'"><b>'+esc(x.w)+'</b><small>'+esc(x.d.slice(0,36))+'</small></button>').join(''):'<span class="tip">暂未找到可靠的同词形候选，可尝试前后缀或语义联想。</span>')+'</div></div><div class="section"><h3>词根 / 词缀线索</h3><p class="tip">'+(prefix?esc(prefix[0]+'：'+prefix[1]+'。例：'+prefix[2]):'当前词形未匹配到常见前后缀规则。可先记忆完整词形，再用词典核验词源。')+'</p></div><div class="section"><h3>语义联想</h3><div class="rel-list">'+(sg.length?sg.map(x=>'<span class="chip">'+esc(x)+'</span>').join(''):'<span class="tip">释义暂未匹配到主题词，可从中文释义自行建立画面。</span>')+'</div></div><div class="section"><h3>近义词 / 反义词（人工整理）</h3><p class="tip">近义词要结合语境辨析，反义词用于建立对照记忆。点击词条可继续探索词汇网络。</p><div class="rel-list">近义：'+(lexical.syn.length?lexical.syn.map(x=>x.word?'<button class="rel" data-word="'+esc(x.label)+'"><b>'+esc(x.label)+'</b><small>近义关联</small></button>':'<span class="chip">'+esc(x.label)+'</span>').join(''):'<span class="tip">暂无核对关系</span>')+'</div><div class="rel-list" style="margin-top:8px">反义：'+(lexical.ant.length?lexical.ant.map(x=>x.word?'<button class="rel" data-word="'+esc(x.label)+'"><b>'+esc(x.label)+'</b><small>反义关联</small></button>':'<span class="chip">'+esc(x.label)+'</span>').join(''):'<span class="tip">暂无核对关系</span>')+'</div></div><div class="section"><h3>常见搭配提示</h3><div class="rel-list">'+(coll.length?coll.map(x=>'<span class="chip">'+esc(x)+'</span>').join(''):'<span class="tip">本词未配置固定搭配示例；请结合原词库例句和真题语境补充。</span>')+'</div></div><div class="section"><button id="speak">🔊 点击发音</button> <button id="toSource">在原词库中查找</button></div>';
+  document.getElementById('detail').innerHTML='<div class="word-title">'+esc(w.w)+'</div><div class="phonetic">'+esc(w.g+' · '+w.u)+'</div><div class="meaning">'+parts.map(x=>'<div>• '+esc(x)+'</div>').join('')+'</div><div class="section"><h3>词形关联（自动匹配候选）</h3><div class="rel-list">'+(fam.length?fam.map(x=>'<button class="rel" data-word="'+esc(x.w)+'"><b>'+esc(x.w)+'</b><small>'+esc(x.d.slice(0,36))+'</small></button>').join(''):'<span class="tip">暂未找到可靠的同词形候选，可尝试前后缀或语义联想。</span>')+'</div></div><div class="section"><h3>词根 / 词缀线索</h3><p class="tip">'+(prefix?esc(prefix[0]+'：'+prefix[1]+'。例：'+prefix[2]):'当前词形未匹配到常见前后缀规则。可先记忆完整词形，再用词典核验词源。')+'</p></div><div class="section"><h3>语义联想</h3><div class="rel-list">'+(sg.length?sg.map(x=>'<span class="chip">'+esc(x)+'</span>').join(''):'<span class="tip">释义暂未匹配到主题词，可从中文释义自行建立画面。</span>')+'</div></div><div class="section"><h3>近义词 / 反义词（人工整理）</h3><p class="tip">近义词要结合语境辨析，反义词用于建立对照记忆。点击词条可继续探索词汇网络。</p><div class="rel-list">近义：'+(lexical.syn.length?lexical.syn.map(x=>x.word?'<button class="rel" data-word="'+esc(x.label)+'"><b>'+esc(x.label)+'</b><small>近义关联</small></button>':'<span class="chip">'+esc(x.label)+'</span>').join(''):'<span class="tip">暂无核对关系</span>')+'</div><div class="rel-list" style="margin-top:8px">反义：'+(lexical.ant.length?lexical.ant.map(x=>x.word?'<button class="rel" data-word="'+esc(x.label)+'"><b>'+esc(x.label)+'</b><small>反义关联</small></button>':'<span class="chip">'+esc(x.label)+'</span>').join(''):'<span class="tip">暂无核对关系</span>')+'</div></div><div class="section"><h3>常见搭配提示</h3><div class="rel-list">'+(coll.length?coll.map(x=>'<span class="chip">'+esc(x)+'</span>').join(''):'<span class="tip">本词未配置固定搭配示例；请结合原词库例句和真题语境补充。</span>')+'</div></div><div id="wordContext"><p class="tip">正在加载真题出处、短语和语境义……</p></div><div class="section"><button id="speak">🔊 点击发音</button> <button id="toSource">在原词库中查找</button></div>';
   document.querySelectorAll('[data-word]').forEach(b=>b.addEventListener('click',()=>draw(byWord.get(b.dataset.word.toLowerCase()))));
+  getContextCache().then(data=>{if(current&&current.w.toLowerCase()===w.w.toLowerCase())renderWordContext(w,data);}).catch(()=>{const host=document.getElementById('wordContext');if(host)host.innerHTML='<p class="tip">关联数据暂时无法加载，请稍后刷新。</p>';});
   document.getElementById('speak').addEventListener('click',()=>{const a=new Audio('https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(w.w)+'&type=2');a.play().catch(()=>{});});
   document.getElementById('toSource').addEventListener('click',()=>{location.href='./';});
  }
