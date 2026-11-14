@@ -61,16 +61,17 @@ Node *bst_search(Node *root, int key) {
     return root;
 }
 
-Node *bst_insert(Node *root, int key) {
-    if (!root) {
-        Node *p = (Node *)malloc(sizeof(*p));
-        if (!p) return NULL;
-        p->key = key; p->left = p->right = NULL;
-        return p;
+int bst_insert(Node **root, int key) {
+    while (*root) {
+        if (key == (*root)->key) return 1; /* 不插入重复关键字 */
+        if (key < (*root)->key) root = &(*root)->left;
+        else root = &(*root)->right;
     }
-    if (key < root->key) root->left = bst_insert(root->left, key);
-    else if (key > root->key) root->right = bst_insert(root->right, key);
-    return root;
+    Node *p = (Node *)malloc(sizeof(*p));
+    if (!p) return 0; /* 分配失败，原树结构不变 */
+    p->key = key; p->left = p->right = NULL;
+    *root = p;
+    return 1;
 }
 
 Node *bst_delete(Node *root, int key) {
@@ -92,7 +93,7 @@ Node *bst_delete(Node *root, int key) {
 }
 ```
 
-**工程注意**：上面的插入函数在内存分配失败时返回 NULL，简单递归写法可能把原子树指针覆盖为 NULL。严谨工程接口应返回状态码并通过二级指针修改根，或在递归中保留原子树指针；考试理解重点是插入位置与 BST 性质。实际使用时还需提供后序释放整棵树的函数。
+**工程注意**：上面的插入函数在内存分配失败时返回 NULL，简单递归写法可能把原子树指针覆盖为 NULL。严谨工程接口应返回状态码并通过二级指针修改根，或在递归中保留原子树指针；考试理解重点是插入位置与 BST 性质。插入接口使用二级指针，内存分配失败时不会覆盖原有子树；返回 1 表示插入成功或关键字已存在，返回 0 表示分配失败。实际使用时还需提供后序释放整棵树的函数。
 
 ### 删除三种情况
 
