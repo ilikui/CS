@@ -10,7 +10,9 @@ main{max-width:1240px;margin:auto;padding:20px 16px 50px}.stats{display:flex;gap
 .columns{display:grid;grid-template-columns:330px minmax(0,1fr);gap:14px;align-items:start}.panel{padding:14px}.panel h2{font-size:15px;margin:0 0 10px}.yearlist{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.yearbtn{font-size:13px}.yearbtn.active,.passage.active{border-color:var(--blue);background:#f0f6fc}.muted{color:var(--muted);font-size:12px;line-height:1.7}.list{display:grid;gap:8px}.passage{padding:12px;text-align:left;width:100%}.passage b{display:block;font-size:14px;margin-bottom:5px}.passage small{color:var(--muted);line-height:1.6}
 .detail-head{display:flex;justify-content:space-between;align-items:start;gap:12px;flex-wrap:wrap}.detail-head h2{font-size:20px;margin:0 0 6px}.tag{display:inline-block;padding:4px 8px;margin:3px;border-radius:99px;background:#edf3f9;color:#355c83;font-size:11px}
 .wordgrid{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.word{border:1px solid #dce6f0;background:#f8fbfe;border-radius:9px;padding:7px 9px;text-align:left}.word strong{display:block;font-size:13px}.word small{display:block;color:var(--muted);font-size:11px;margin-top:3px}
-.source{padding:12px;background:#f7f9fc;border:1px solid #e5ecf3;border-radius:10px;margin-top:12px;font-size:13px;line-height:1.8}.empty{padding:30px;text-align:center;color:var(--muted)}
+.source{padding:12px;background:#f7f9fc;border:1px solid #e5ecf3;border-radius:10px;margin-top:12px;font-size:13px;line-height:1.8}
+.study-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}.study-card{border:1px solid var(--line);border-radius:12px;padding:13px;background:#fff;min-width:0}.study-card h3{font-size:14px;margin:0 0 9px}.study-card p,.study-card li{font-size:13px;line-height:1.75}.study-card ul{padding-left:19px;margin:8px 0}.study-card .answer{background:#f5f8fc;border-radius:8px;padding:9px;margin-top:8px}.study-card button{font-size:12px;padding:7px 9px}.study-card textarea{width:100%;min-height:100px;resize:vertical;margin-top:8px}.study-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.method{display:inline-block;background:#eef4fa;color:#315f91;border-radius:7px;padding:4px 7px;font-size:11px;margin:2px}.sentence-practice{padding:10px 0;border-top:1px dashed var(--line)}.sentence-practice:first-of-type{border-top:0}.word-list{display:flex;gap:6px;flex-wrap:wrap}.word-list button{background:#f7faff}
+@media(max-width:650px){.study-grid{grid-template-columns:1fr}}.empty{padding:30px;text-align:center;color:var(--muted)}
 @media(max-width:800px){.columns{grid-template-columns:1fr}.filters{grid-template-columns:1fr 1fr}.filters input{grid-column:1/-1}}@media(max-width:420px){.yearlist{grid-template-columns:repeat(2,1fr)}}
 </style></head><body>
 <header><a href="./mindmap.html">← 返回词汇思维网络</a><h1>📚 英语二真题阅读地图</h1><p>按年份与篇章聚合英语二词汇出处，建立“主题词群 → 真题年份 → Text 篇章 → 词汇复习”的路径。这里展示的是词条出处索引，不是阅读原文；点击单词可回到词汇网络查看释义、短语、熟词僻义和关联长难句。</p></header>
@@ -49,7 +51,13 @@ function parseSource(src){
  return {key,year:y,section:sec,part:part||'',text:text||'',title,source:src};
 }
 try{
- const shards=await Promise.all(files.map(async f=>{const r=await fetch('./'+f);if(!r.ok)throw Error('加载失败：'+f);return r.json()}));
+ const [shards,enrichmentData,polysemyData,longSentenceData]=await Promise.all([
+ Promise.all(files.map(async f=>{const r=await fetch('./'+f);if(!r.ok)throw Error('加载失败：'+f);return r.json()})),
+ fetch('./english_enrichment_data.json').then(r=>{if(!r.ok)throw Error('拓展短语数据加载失败');return r.json()}),
+ fetch('./english2_polysemy_data.json').then(r=>{if(!r.ok)throw Error('熟词僻义数据加载失败');return r.json()}),
+ fetch('./english2_long_sentence_data.json').then(r=>{if(!r.ok)throw Error('长难句数据加载失败');return r.json()})
+ ]);
+ const enrichment=enrichmentData.entries||{},polysemy=polysemyData.entries||{},longSentences=longSentenceData.items||[];
  shards.forEach(shard=>Object.entries(shard.words||{}).forEach(([w,m])=>{
   const old=words[w]||{word:w,definition:wordDefs.get(w.toLowerCase())||'',exampleCount:0,sources:new Set()};
   old.exampleCount=Math.max(old.exampleCount,m.exampleCount||0);(m.sources||[]).forEach(src=>old.sources.add(src));words[w]=old;
@@ -64,7 +72,39 @@ try{
  $('years').querySelectorAll('button').forEach(b=>b.onclick=()=>{$('year').value=b.dataset.year;renderList()});
  function filtered(){const y=$('year').value,sec=$('section').value,theme=$('theme').value,q=$('search').value.trim().toLowerCase();return [...groups.values()].filter(g=>(y==='all'||g.year===y)&&(sec==='all'||g.section===sec)&&(theme==='all'||[...g.words.keys()].some(w=>themesFor(w).includes(theme)))&&(!q||(g.year+' '+g.title+' '+[...g.words.keys()].join(' ')).toLowerCase().includes(q))).sort((a,b)=>b.year-a.year||a.title.localeCompare(b.title,'en'))}
  function renderList(){const list=filtered();$('years').querySelectorAll('button').forEach(b=>b.classList.toggle('active',$('year').value===b.dataset.year));$('detail').innerHTML='<div class="detail-head"><div><h2>真题篇章索引</h2><p class="muted">当前筛选 '+list.length+' 个出处定位。选择篇章查看关联词汇。</p></div></div><div class="list" id="passages">'+list.map(g=>'<button class="passage" data-key="'+esc(g.key)+'"><b>'+esc(g.year)+' 年 · '+esc(g.title)+'</b><small>'+g.words.size+' 个关联词条 · '+g.sources.size+' 条原始定位</small></button>').join('')+'</div>'+(list.length?'':'<div class="empty">没有匹配的篇章定位。试试清空关键词或切换题型。</div>');$('detail').querySelectorAll('[data-key]').forEach(b=>b.onclick=()=>renderDetail(groups.get(b.dataset.key)))}
- function renderDetail(g){selected=g.key;$('detail').innerHTML='<div class="detail-head"><div><h2>'+esc(g.year)+' 年 · '+esc(g.title)+'</h2><p class="muted">关联 '+g.words.size+' 个词条；按词条出处关联，不代表该篇章词频。</p></div><button id="backList">← 返回篇章列表</button></div><div><span class="tag">'+esc(g.section)+'</span>'+(g.part?'<span class="tag">'+esc(g.part)+'</span>':'')+(g.text?'<span class="tag">'+esc(g.text)+'</span>':'')+'</div><div class="wordgrid">'+[...g.words.values()].sort((a,b)=>b.sources.size-a.sources.size||a.word.localeCompare(b.word)).map(w=>'<button class="word" data-word="'+esc(w.word)+'"><strong>'+esc(w.word)+'</strong><small>'+esc(w.definition||'暂无中文释义')+' · '+w.sources.size+' 条出处</small></button>').join('')+'</div><div class="source"><strong>原始出处定位</strong><br>'+[...g.sources].map(esc).join('<br>')+'</div><p class="muted">点击任一单词进入词汇思维网络。真题原文请对照授权/正版资料；本页不复制完整受版权保护的阅读文章。</p>';$('backList').onclick=renderList;$('detail').querySelectorAll('[data-word]').forEach(b=>b.onclick=()=>window.open('./mindmap.html?word='+encodeURIComponent(b.dataset.word),'_blank','noopener'))}
+ function renderDetail(g){
+ selected=g.key;
+ const vocab=[...g.words.values()].sort((a,b)=>b.sources.size-a.sources.size||a.word.localeCompare(b.word,'en'));
+ const wordSet=new Set(vocab.map(w=>w.word.toLowerCase()));
+ const phrases=[];
+ vocab.forEach(w=>(enrichment[w.word.toLowerCase()]?.phrases||[]).forEach(p=>phrases.push({word:w.word,phrase:p[0],meaning:p[1]})));
+ const polyRows=vocab.map(w=>({word:w.word,...(polysemy[w.word.toLowerCase()]||{})})).filter(x=>x.core||x.context);
+ const themeCounts={};vocab.forEach(w=>themesFor(w.word).forEach(t=>themeCounts[t]=(themeCounts[t]||0)+1));
+ const theme=Object.entries(themeCounts).sort((a,b)=>b[1]-a[1])[0]?.[0]||'';
+ const longRows=longSentences.map(x=>({...x,overlap:(x.vocab||[]).filter(w=>wordSet.has(w.toLowerCase())).length})).filter(x=>x.overlap>0).sort((a,b)=>b.overlap-a.overlap).slice(0,3);
+ const themeNames={education:'教育与学习',technology:'科技与创新',economy:'经济与商业',society:'社会与生活',environment:'环境与生态',psychology:'心理与认知',politics:'政治与文化'};
+ const noteKey='cs-english-reading-note-v1:'+g.key;
+ const wordRows=vocab.slice(0,12);
+ $('detail').innerHTML=
+ '<div class="detail-head"><div><h2>'+esc(g.year)+' 年 · '+esc(g.title)+'</h2><p class="muted">关联 '+g.words.size+' 个词条；按词条出处关联，不代表该篇章词频。</p></div><button id="backList">← 返回篇章列表</button></div>'+
+ '<div><span class="tag">'+esc(g.section)+'</span>'+(g.part?'<span class="tag">'+esc(g.part)+'</span>':'')+(g.text?'<span class="tag">'+esc(g.text)+'</span>':'')+(theme?'<span class="tag">主题倾向：'+esc(themeNames[theme]||theme)+'</span>':'')+'</div>'+
+ '<div class="wordgrid">'+vocab.map(w=>'<button class="word" data-word="'+esc(w.word)+'"><strong>'+esc(w.word)+'</strong><small>'+esc(w.definition||'暂无中文释义')+' · '+w.sources.size+' 条出处</small></button>').join('')+'</div>'+
+ '<div class="source"><strong>原始出处定位</strong><br>'+[...g.sources].map(esc).join('<br>')+'</div>'+
+ '<div class="study-grid">'+
+ '<article class="study-card"><h3>🧭 本篇精读路线</h3><p>当前页面掌握的是该篇章的词汇出处索引，不含阅读原文。请打开你持有的真题资料，按下面步骤完成原文精读。</p><ol><li><b>预读（SQ3R）</b>：先看标题、首尾段和题干，预测文章议题。</li><li><b>结构（西蒙学习法）</b>：每段只提炼一个核心命题，标注转折、因果、举例和让步。</li><li><b>复述（费曼）</b>：合上原文，用三句话讲清作者问题、论证和结论。</li><li><b>复盘（康奈尔）</b>：左栏记关键词/疑问，右栏记证据与解释，底部写段落总结。</li><li><b>番茄节奏</b>：25 分钟精读 + 5 分钟闭卷回忆，错词进入复习队列。</li></ol><div class="study-actions"><span class="method">SQ3R</span><span class="method">西蒙</span><span class="method">费曼</span><span class="method">康奈尔</span><span class="method">番茄</span></div></article>'+
+ '<article class="study-card"><h3>📝 段落结构记录模板</h3><p><b>第 1 段：</b>话题引入 / 背景 / 作者立场</p><p><b>第 2 段：</b>核心论点 / 解释 / 例证</p><p><b>第 3 段：</b>转折 / 争议 / 反方观点</p><p><b>第 4 段：</b>结论 / 建议 / 影响（按原文实际段落调整）</p><p class="muted">提示：不要机械套四段式；以原文段落数量和逻辑为准。</p></article>'+
+ '<article class="study-card"><h3>🔗 本篇关联短语</h3>'+(phrases.length?'<ul>'+phrases.slice(0,18).map(p=>'<li><b>'+esc(p.phrase)+'</b> — '+esc(p.meaning)+' <span class="muted">('+esc(p.word)+')</span></li>').join('')+'</ul>':'<p class="muted">当前篇章关联词暂未命中已整理的拓展短语，后续可按词条持续补充。</p>')+'</article>'+
+ '<article class="study-card"><h3>🧩 熟词僻义 / 语境辨析</h3>'+(polyRows.length?polyRows.slice(0,10).map(p=>'<div class="sentence-practice"><b>'+esc(p.word)+' · '+esc(p.core||'核心义')+'</b><p>'+esc(p.context||'')+'</p><p class="muted">辨析：'+esc(p.note||'结合上下文判断词义。')+'</p><p class="muted">自编例句：'+esc(p.example||'')+' '+esc(p.translation||'')+'</p></div>').join(''):'<p class="muted">当前篇章暂未匹配到独立整理的熟词僻义条目。</p>')+'</article>'+
+ '<article class="study-card"><h3>📖 长难句拆解练习</h3>'+(longRows.length?longRows.map((x,i)=>'<div class="sentence-practice"><b>'+esc(x.title)+' <span class="muted">自编仿真练习，非真题原句</span></b><p>'+esc(x.sentence)+'</p><button type="button" data-reveal="sentence-'+i+'">展开译文与结构</button><div class="answer" id="sentence-'+i+'" hidden><p><b>译文：</b>'+esc(x.translation)+'</p><p><b>结构：</b>'+esc(x.structure)+'</p><p><b>考点：</b>'+esc(x.focus)+'</p></div></div>').join(''):'<p class="muted">当前篇章词汇与已整理长难句没有直接交集。可先用下方词汇回忆练习。</p>')+'</article>'+
+ '<article class="study-card"><h3>⚡ 闭卷主动回忆</h3><p class="muted">先看英文尝试说出中文义，再展开答案；这些词均来自当前篇章出处索引。</p>'+wordRows.map((w,i)=>'<div class="sentence-practice"><b>'+esc(w.word)+'</b><br><button type="button" data-reveal="word-'+i+'">显示释义</button><div class="answer" id="word-'+i+'" hidden>'+esc(w.definition||'请结合词典补充释义')+'</div></div>').join('')+'</article>'+
+ '<article class="study-card"><h3>📓 我的康奈尔笔记</h3><p class="muted">记录主旨、段落逻辑、错题原因和待复习词。内容保存在当前浏览器。</p><textarea id="readingNote" placeholder="主旨：\n段落逻辑：\n作者态度：\n生词与熟词僻义：\n错题复盘："></textarea><div class="study-actions"><button id="saveNote">保存本篇笔记</button><span class="muted" id="noteStatus"></span></div></article>'+
+ '</div><p class="muted" style="margin-top:14px">说明：短语来自词库人工拓展数据；熟词僻义和长难句示例为自编教学材料，已明确标注，不能当作该年份真题原句。真题原文请以授权资料为准。</p>';
+ $('backList').onclick=renderList;
+ $('detail').querySelectorAll('[data-word]').forEach(b=>b.onclick=()=>window.open('./mindmap.html?word='+encodeURIComponent(b.dataset.word),'_blank','noopener'));
+ $('detail').querySelectorAll('[data-reveal]').forEach(b=>b.onclick=()=>{const panel=$(b.dataset.reveal);if(panel){panel.hidden=!panel.hidden;b.textContent=panel.hidden?(b.dataset.reveal.startsWith('word-')?'显示释义':'展开译文与结构'):'收起答案'}});
+ const note=$('readingNote');try{note.value=localStorage.getItem(noteKey)||''}catch(_){}
+ $('saveNote').onclick=()=>{try{localStorage.setItem(noteKey,note.value);$('noteStatus').textContent='已保存在本机浏览器';}catch(_){$('noteStatus').textContent='浏览器存储不可用，请复制备份笔记。'}};
+ }
  ['year','section','theme'].forEach(id=>$(id).onchange=renderList);$('search').oninput=renderList;$('reset').onclick=()=>{$('year').value='all';$('section').value='all';$('theme').value='all';$('search').value='';renderList()};const params=new URLSearchParams(location.search);if(params.has('theme')&&topicThemes.some(t=>t.id===params.get('theme'))){$('theme').value=params.get('theme');}if(params.has('word'))$('search').value=params.get('word');renderList();
 }catch(e){$('detail').innerHTML='<div class="empty">索引加载失败：'+esc(e.message)+'。请刷新页面后重试。</div>'}
 })();
