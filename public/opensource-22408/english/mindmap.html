@@ -20,7 +20,20 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
 .side{padding:17px}.word-title{font-size:30px;font-weight:800;letter-spacing:.2px}.phonetic{color:var(--muted);margin:5px 0 10px}.meaning{font-size:15px;line-height:1.8}.chip{display:inline-block;border-radius:99px;padding:4px 9px;background:#edf4fc;color:#315e8d;font-size:12px;margin:3px 4px 3px 0}
 .section{border-top:1px solid var(--line);padding:13px 0}.section h3{font-size:13px;margin:0 0 8px;color:#405875}.rel-list{display:flex;flex-wrap:wrap;gap:7px}.rel{background:#f5f8fc;border:1px solid #e1e9f2;border-radius:9px;padding:7px 9px;text-align:left}.rel b{display:block}.rel small{color:var(--muted)}
 .tip{font-size:12px;color:var(--muted);line-height:1.7}.search-results{display:none;position:absolute;z-index:10;top:48px;left:0;right:0;background:#fff;border:1px solid var(--line);border-radius:12px;max-height:260px;overflow:auto;box-shadow:0 12px 24px #142a451c}.search-wrap{position:relative}.search-results button{display:block;width:100%;border:0;border-radius:0;text-align:left}.search-results button:hover{background:#f0f5fb}
-.statrow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.stat{background:white;border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-size:12px;color:var(--muted)}.stat b{color:var(--ink);font-size:15px;margin-right:4px}
+.statrow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.theme-panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;margin:0 0 16px}
+.theme-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.theme-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.theme-btn{padding:10px 8px;text-align:left;border:1px solid var(--line);border-radius:11px;background:#fbfdff;min-width:0}
+.theme-btn.active{border-color:var(--blue);background:#edf4fc;box-shadow:inset 0 0 0 1px var(--blue)}
+.theme-btn b{display:block;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.theme-btn small{display:block;color:var(--muted);font-size:11px;margin-top:4px}
+.theme-words{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.theme-word{padding:7px 10px;border:1px solid #dce8f3;background:#f6f9fd;border-radius:9px;font-size:12px}
+.theme-word small{display:block;color:var(--muted);max-width:190px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:900px){.theme-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:520px){.theme-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:white;border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-size:12px;color:var(--muted)}.stat b{color:var(--ink);font-size:15px;margin-right:4px}
 @media(max-width:850px){.layout{grid-template-columns:1fr}#map{height:440px}.toolbar{grid-template-columns:1fr 1fr}.search-wrap{grid-column:1/-1}}
 @media(prefers-reduced-motion:reduce){.edge{animation:none}}
 .practice{margin-top:16px;padding:18px;background:#fff;border:1px solid var(--line);border-radius:18px}
@@ -40,6 +53,11 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
 <header><a href="./">← 返回英语二词库</a><h1>英语词汇思维网络</h1><p>从一个单词出发，沿着词形、词根词缀、语义线索和真实用法触类旁通。点击任意关联词，即可切换中心词，逐步建立自己的词汇网络。</p></header>
 <main>
 <div class="statrow"><div class="stat"><b id="total">—</b>词条纳入网络</div><div class="stat"><b id="masteredCount">0</b>已掌握</div><div class="stat"><b id="dueCount">0</b>待复习</div><div class="stat"><b>词形关联</b>派生与拼写线索</div><div class="stat"><b>语义联想</b>按中文释义聚类</div></div>
+<section class="theme-panel" aria-label="主题词汇群">
+ <div class="theme-head"><strong>🧭 考研英语主题词群</strong><span class="tip">根据原词库中文释义关键词归类 · 点击主题查看词汇</span></div>
+ <div class="theme-grid" id="themeGrid"></div>
+ <div class="theme-words" id="themeWords"><span class="tip">选择一个主题，查看相关词汇并点击单词进入思维网络。</span></div>
+</section>
 <div class="toolbar">
 <div class="search-wrap"><input id="search" placeholder="搜索英文单词或中文释义，例如 observe / 观察" autocomplete="off"><div id="results" class="search-results"></div></div>
 <select id="group"><option value="all">全部词库</option><option>必考词</option><option>基础词</option><option>简单基础词</option><option>超纲词</option></select>
@@ -86,6 +104,41 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
  function affix(word){const w=word.w.toLowerCase();return affixInfo.find(([a])=>a.startsWith('-')?w.endsWith(a.slice(1))&&w.length>a.length+2:w.startsWith(a)&&w.length>a.length+3)||null;}
  const semantic=[['观察 / 认知',['观察','注意','观察到','意识','认识','理解','发现','识别','看法','观点']],['变化 / 发展',['变化','改变','发展','增长','减少','增加','改善','转变','进步','衰退']],['沟通 / 表达',['表达','说明','解释','交流','沟通','传播','媒体','语言','陈述','描述']],['社会 / 群体',['社会','社区','群体','公众','人民','人口','成员','文化','政治','制度']],['行为 / 影响',['导致','影响','造成','产生','引起','促使','阻止','促进','实现','执行']],['评价 / 判断',['评价','判断','批评','赞扬','价值','重要','质量','标准','合理','正确']],['法律 / 规则',['法律','规则','法规','权利','义务','责任','司法','政策','制度','规范']],['数量 / 程度',['数量','程度','规模','巨大','多数','部分','水平','比例','范围','有限']]];
  function semanticGroup(word){const d=word.d;return semantic.filter(([name,keys])=>keys.some(k=>d.includes(k))).map(x=>x[0]).slice(0,2);}
+
+ const topicThemes=[
+  {id:'education',name:'教育与学习',keys:['教育','学习','教学','学校','学生','教师','课程','知识','阅读','考试','大学','研究','培训','课堂','学术','学者','学习者']},
+  {id:'technology',name:'科技与创新',keys:['科学','技术','科技','数据','计算机','网络','人工智能','机器','数字','信息','实验','设备','创新','算法','电子','自动化','机器人','软件','互联网','技术的']},
+  {id:'economy',name:'经济与商业',keys:['经济','金融','市场','贸易','商业','价格','成本','收入','消费','生产','企业','公司','资本','投资','产业','资源','贫困','财富','就业','工资','税收','经济的']},
+  {id:'society',name:'社会与生活',keys:['社会','社区','公共','人口','群体','家庭','工作','就业','城市','人类','民众','居民','关系','家庭的','社会的','移民','劳动','职业','福利','健康']},
+  {id:'environment',name:'环境与生态',keys:['环境','污染','气候','生态','能源','自然','野生','森林','海洋','水资源','空气','可持续','保护','物种','生物','动物','植物','环境的','全球变暖','碳排放']},
+  {id:'psychology',name:'心理与认知',keys:['心理','认知','情绪','感情','思维','记忆','注意','意识','行为','动机','态度','压力','焦虑','人格','感知','判断','决策','心理学','情感','信念','偏见']},
+  {id:'politics',name:'政治与文化',keys:['政治','政府','国家','政策','法律','权利','民主','选举','议会','官员','文化','艺术','历史','传统','价值观','信仰','宗教','制度','公民','政治的','法律的']}
+ ];
+ function topicsFor(word){const d=(word.d+' '+word.w).toLowerCase();return topicThemes.filter(t=>t.keys.some(k=>d.includes(k))).map(t=>t.id);}
+ function renderTopics(){
+  const grid=document.getElementById('themeGrid'),box=document.getElementById('themeWords');
+  grid.innerHTML='';box.innerHTML='';
+  topicThemes.forEach(t=>{
+   const list=words.filter(w=>topicsFor(w).includes(t.id));
+   const b=document.createElement('button');b.className='theme-btn';b.type='button';
+   b.innerHTML='<b>'+esc(t.name)+'</b><small>'+list.length.toLocaleString('en-US')+' 个候选词</small>';
+   b.addEventListener('click',()=>{
+    grid.querySelectorAll('.theme-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');
+    box.innerHTML='';
+    const summary=document.createElement('div');summary.className='tip';summary.textContent=t.name+' · '+list.length+' 个词。按释义关键词自动归类，可能存在跨主题或误分类；可点击词条查看完整释义与关联。';box.append(summary);
+    const shown=list.slice(0,80);
+    shown.forEach(w=>{
+     const x=document.createElement('button');x.className='theme-word';x.type='button';
+     x.innerHTML='<b>'+esc(w.w)+'</b><small>'+esc(w.d.slice(0,54))+'</small>';
+     x.addEventListener('click',()=>{draw(w);window.scrollTo({top:document.querySelector('.layout').offsetTop-12,behavior:'smooth'});});
+     box.append(x);
+    });
+    if(list.length>shown.length){const more=document.createElement('span');more.className='tip';more.textContent='当前先展示前 80 个候选词；可用上方搜索框继续查找该主题中的其他词。';box.append(more);}
+   });
+   grid.append(b);
+  });
+ }
+
 
  // 人工整理的明确语义关系；不是通过拼写相似度推断。
  const lexicalRelations={
@@ -235,6 +288,7 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
  document.getElementById('markAgain').addEventListener('click',()=>nextPractice('again'));
  document.getElementById('markKnown').addEventListener('click',()=>nextPractice('known'));
  document.getElementById('closePractice').addEventListener('click',()=>practiceEl.hidden=true);
+ renderTopics();
  const params=new URLSearchParams(location.search),initial=params.get('word');draw((initial&&byWord.get(initial.toLowerCase()))||words[0]);
 })();
 </script>
