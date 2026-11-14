@@ -341,6 +341,7 @@ static void test_btree(void) {
     }
     assert(tree.root == NULL && tree.size == 0);
     assert(!tree_delete(&tree, 100));
+    node_free(tree.root);
     puts("[PASS] B-tree: search, split, predecessor/successor, borrow, merge, root shrink, range traversal");
 }
 
