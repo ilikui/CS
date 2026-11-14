@@ -37,3 +37,56 @@ AVL 高度为 O(log n)，查找、插入、删除为 O(log n)。旋转只改变�
 3. AVL 查找最坏时间复杂度是多少？
 
 **答案**：1. LL，右旋；2. 两次，先左旋左孩子，再右旋失衡结点；3. O(log n)。
+
+## C 语言核心操作：高度更新与旋转
+
+约定空树高度为 0、叶结点高度为 1，平衡因子 `BF=height(left)-height(right)`。
+
+```c
+#include <stdlib.h>
+typedef struct AVLNode {
+    int key, height;
+    struct AVLNode *left, *right;
+} AVLNode;
+
+static int h(AVLNode *p) { return p ? p->height : 0; }
+static int max2(int a, int b) { return a > b ? a : b; }
+static void update(AVLNode *p) {
+    p->height = 1 + max2(h(p->left), h(p->right));
+}
+
+static AVLNode *rotate_right(AVLNode *y) {
+    AVLNode *x = y->left, *t = x->right;
+    x->right = y; y->left = t;
+    update(y); update(x);
+    return x;
+}
+static AVLNode *rotate_left(AVLNode *x) {
+    AVLNode *y = x->right, *t = y->left;
+    y->left = x; x->right = t;
+    update(x); update(y);
+    return y;
+}
+```
+
+旋转只负责局部结构调整；插入/删除后还要从受影响结点向上更新高度、计算 BF 并选择 LL/RR/LR/RL。单旋后更新高度的顺序应先更新下沉结点，再更新新的子树根。
+
+| 类型 | 失衡特征 | 调整 |
+|---|---|---|
+| LL | 左孩子的左子树更高 | 对失衡结点右旋 |
+| RR | 右孩子的右子树更高 | 对失衡结点左旋 |
+| LR | 左孩子的右子树更高 | 先左旋左孩子，再右旋失衡结点 |
+| RL | 右孩子的左子树更高 | 先右旋右孩子，再左旋失衡结点 |
+
+### 旋转前后校验
+
+LL 插入序列 `30,20,10`：旋转前局部中序为 `10,20,30`，右旋后仍为 `10,20,30`。旋转改变形态，不改变 BST 中序次序。
+
+**边界提醒**：BF 正负号取决于教材约定；本卡固定使用左高减右高。删除操作可能让多个祖先结点连续失衡，不能照搬“插入只需修复首个失衡点”的简化结论。
+
+### 五法强化任务
+- **费曼**：不看图讲出四种失衡对应的旋转顺序。
+- **西蒙**：拆为高度定义、BF、旋转指针、更新高度、向上回溯。
+- **SQ3R**：先画四种失衡树，提问“中序为什么不变”，精读旋转后复画。
+- **番茄**：25 分钟手画四种旋转并计算高度，休息 5 分钟交叉检查。
+- **康奈尔**：左栏写 LL/RR/LR/RL，右栏画旋转前后结构，页底总结单旋/双旋规律。
