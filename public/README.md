@@ -28,3 +28,11 @@ python -m http.server 8080
 ## 自动部署
 
 Cloudflare Pages 已连接该分支；推送到 `cloudflare-pages` 会触发生产部署。
+
+## Cloudflare Pages 部署
+
+- 生产分支：`main`
+- 项目根目录：`/public`
+- 构建命令：无需构建，直接发布静态文件
+- 输出目录：`.`
+- 线上入口：<https://cs.likui.space>
