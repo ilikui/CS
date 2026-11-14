@@ -126,6 +126,7 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
     grid.querySelectorAll('.theme-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');
     box.innerHTML='';
     const summary=document.createElement('div');summary.className='tip';summary.textContent=t.name+' · '+list.length+' 个词。按释义关键词自动归类，可能存在跨主题或误分类；可点击词条查看完整释义与关联。';box.append(summary);
+    const practiceTopic=document.createElement('button');practiceTopic.type='button';practiceTopic.className='primary';practiceTopic.textContent='⚡ 练习本主题 20 词';practiceTopic.addEventListener('click',()=>{const fresh=list.filter(w=>!review[w.w.toLowerCase()]||review[w.w.toLowerCase()].level<3);startSession(fresh.length?fresh:list,'topic');});box.append(practiceTopic);
     const shown=list.slice(0,80);
     shown.forEach(w=>{
      const x=document.createElement('button');x.className='theme-word';x.type='button';
