@@ -102,8 +102,15 @@ try{
  $('backList').onclick=renderList;
  $('detail').querySelectorAll('[data-word]').forEach(b=>b.onclick=()=>window.open('./mindmap.html?word='+encodeURIComponent(b.dataset.word),'_blank','noopener'));
  $('detail').querySelectorAll('[data-reveal]').forEach(b=>b.onclick=()=>{const panel=$(b.dataset.reveal);if(panel){panel.hidden=!panel.hidden;b.textContent=panel.hidden?(b.dataset.reveal.startsWith('word-')?'显示释义':'展开译文与结构'):'收起答案'}});
- const note=$('readingNote');try{note.value=localStorage.getItem(noteKey)||''}catch(_){}
- $('saveNote').onclick=()=>{try{localStorage.setItem(noteKey,note.value);$('noteStatus').textContent='已保存在本机浏览器';}catch(_){$('noteStatus').textContent='浏览器存储不可用，请复制备份笔记。'}};
+ const note=$('readingNote');
+ const fields=['questionStem','optionAnalysis','wrongReview'];
+ const paragraphFields=[...$('detail').querySelectorAll('[data-paragraph],[data-paragraph-summary]')];
+ const loadField=id=>{try{return localStorage.getItem(noteKey+':'+id)||''}catch(_){return ''}};
+ const saveField=(id,value)=>{try{localStorage.setItem(noteKey+':'+id,value);return true}catch(_){return false}};
+ try{note.value=loadField('cornell');fields.forEach(id=>{if($(id))$(id).value=loadField(id)});paragraphFields.forEach(el=>{const id=el.hasAttribute('data-paragraph')?'paragraph-'+el.dataset.paragraph:'summary-'+el.dataset.paragraphSummary;el.value=loadField(id)})}catch(_){}
+ $('saveNote').onclick=()=>{let ok=saveField('cornell',note.value);fields.forEach(id=>{if($(id))ok=saveField(id,$(id).value)&&ok});paragraphFields.forEach(el=>{const id=el.hasAttribute('data-paragraph')?'paragraph-'+el.dataset.paragraph:'summary-'+el.dataset.paragraphSummary;ok=saveField(id,el.value)&&ok});$('noteStatus').textContent=ok?'本篇精读记录已保存在本机浏览器':'部分内容无法保存，请复制备份笔记。'};
+ $('openMindmap').onclick=()=>window.open('./mindmap.html','_blank','noopener');
+ $('copyPassageIndex').onclick=()=>{const text=g.year+' 年 · '+g.title+'\\n'+[...g.sources].join('\\n')+'\\n关联词汇：'+vocab.map(x=>x.word).join(', ');if(navigator.clipboard?.writeText)navigator.clipboard.writeText(text).then(()=>alert('本篇索引已复制')).catch(()=>alert('复制失败，请手动选择索引内容'));else alert(text)};
  }
  ['year','section','theme'].forEach(id=>$(id).onchange=renderList);$('search').oninput=renderList;$('reset').onclick=()=>{$('year').value='all';$('section').value='all';$('theme').value='all';$('search').value='';renderList()};const params=new URLSearchParams(location.search);if(params.has('theme')&&topicThemes.some(t=>t.id===params.get('theme'))){$('theme').value=params.get('theme');}if(params.has('word'))$('search').value=params.get('word');renderList();
 }catch(e){$('detail').innerHTML='<div class="empty">索引加载失败：'+esc(e.message)+'。请刷新页面后重试。</div>'}
