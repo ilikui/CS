@@ -1,8 +1,8 @@
 {
   "repository": "ilikui/CS",
   "branch": "main",
-  "generatedAt": "2026-11-14T11:30:00+08:00",
-  "count": 147,
+  "generatedAt": "2026-11-14T12:00:00+08:00",
+  "count": 149,
   "files": [
     {
       "path": "Doc/Books/ReadMe.md",
@@ -20,9 +20,24 @@
       "size": 2369
     },
     {
+      "path": "Project/Artificial Intelligence/00_考研计划/ReadMe.md",
+      "sha": "ee20e4301a8b22cffa44c4c7831103a5e071b163",
+      "size": 5288
+    },
+    {
       "path": "Project/Artificial Intelligence/00_考研计划/备考总计划/ReadMe.md",
       "sha": "4b8f3085c31251b06d4bbd38471e74813780d74f",
       "size": 5015
+    },
+    {
+      "path": "Project/Artificial Intelligence/00_考研计划/招生政策与报考经验/ReadMe.md",
+      "sha": "f175ddea915d7483aa054ece5d5f1532e5d74066",
+      "size": 2972
+    },
+    {
+      "path": "Project/Artificial Intelligence/00_考研计划/每周学习计划/ReadMe.md",
+      "sha": "2dc4aed691d66517eec2e396dc8f1b15fedfc57e",
+      "size": 3390
     },
     {
       "path": "Project/Artificial Intelligence/00_考研计划/每日打卡/2026-11-01_至_2026-11-13-历史练习归档.md",
@@ -110,24 +125,69 @@
       "size": 4240
     },
     {
-      "path": "Project/Artificial Intelligence/00_考研计划/每周学习计划/ReadMe.md",
-      "sha": "2dc4aed691d66517eec2e396dc8f1b15fedfc57e",
-      "size": 3390
+      "path": "Project/Artificial Intelligence/01_数学二/历年真题/ReadMe.md",
+      "sha": "c4b0b6247b2fb547f7435306c3e8c4b139847faf",
+      "size": 89
     },
     {
-      "path": "Project/Artificial Intelligence/00_考研计划/招生政策与报考经验/ReadMe.md",
-      "sha": "f175ddea915d7483aa054ece5d5f1532e5d74066",
-      "size": 2972
+      "path": "Project/Artificial Intelligence/01_数学二/章节练习/ReadMe.md",
+      "sha": "c4b0b6247b2fb547f7435306c3e8c4b139847faf",
+      "size": 89
     },
     {
-      "path": "Project/Artificial Intelligence/00_考研计划/ReadMe.md",
-      "sha": "ee20e4301a8b22cffa44c4c7831103a5e071b163",
-      "size": 5288
+      "path": "Project/Artificial Intelligence/01_数学二/线性代数/ReadMe.md",
+      "sha": "e45a044b1f97cec700474f69fe4e23367d5a2a83",
+      "size": 4476
+    },
+    {
+      "path": "Project/Artificial Intelligence/01_数学二/线性代数/知识卡片/ReadMe.md",
+      "sha": "1778d2ecab3bfa378eb278adb7e42a1627c2d32a",
+      "size": 13632
+    },
+    {
+      "path": "Project/Artificial Intelligence/01_数学二/线性代数/第01章-行列式.md",
+      "sha": "4b723b3447d2dbc7128acbd0796083a30367bee1",
+      "size": 6711
+    },
+    {
+      "path": "Project/Artificial Intelligence/01_数学二/线性代数/第02章-矩阵.md",
+      "sha": "57b6b22b0596d7320b79aa9e40a23bed0467efe7",
+      "size": 5861
+    },
+    {
+      "path": "Project/Artificial Intelligence/01_数学二/线性代数/第03章-向量组.md",
+      "sha": "f7c87a13c9aaa125f947710fa82d922fa29fd307",
+      "size": 5071
+    },
+    {
+      "path": "Project/Artificial Intelligence/01_数学二/线性代数/第04章-线性方程组.md",
+      "sha": "a9172696424c2913493921ad4c5770761e364a2c",
+      "size": 4217
+    },
+    {
+      "path": "Project/Artificial Intelligence/01_数学二/线性代数/第05章-特征值与特征向量.md",
+      "sha": "6d1b70f6c54ca30b93db59a1aaec088924042d2e",
+      "size": 4730
+    },
+    {
+      "path": "Project/Artificial Intelligence/01_数学二/线性代数/第06章-二次型.md",
+      "sha": "a809c23f8a02b10321a61b3cf5402c2d6770f5ad",
+      "size": 4628
     },
     {
       "path": "Project/Artificial Intelligence/01_数学二/错题集/ReadMe.md",
       "sha": "c4b0b6247b2fb547f7435306c3e8c4b139847faf",
       "size": 89
+    },
+    {
+      "path": "Project/Artificial Intelligence/01_数学二/高等数学/ReadMe.md",
+      "sha": "ea1d348143f7d4a5f763726a10ae3139d27043e8",
+      "size": 5892
+    },
+    {
+      "path": "Project/Artificial Intelligence/01_数学二/高等数学/知识卡片/ReadMe.md",
+      "sha": "0bcd0b506f97d1a29853b682e9841d8d435f5385",
+      "size": 18907
     },
     {
       "path": "Project/Artificial Intelligence/01_数学二/高等数学/第01章-函数极限与连续.md",
@@ -170,54 +230,39 @@
       "size": 5114
     },
     {
-      "path": "Project/Artificial Intelligence/01_数学二/高等数学/ReadMe.md",
-      "sha": "156ccbb993766b4e43fe2225c63400dbc10bcc71",
-      "size": 5677
+      "path": "Project/Artificial Intelligence/02_408/Bilibili课程索引.md",
+      "sha": "007db18a87df8280c78b7c4165730a018d8b57e3",
+      "size": 1907
     },
     {
-      "path": "Project/Artificial Intelligence/01_数学二/历年真题/ReadMe.md",
-      "sha": "c4b0b6247b2fb547f7435306c3e8c4b139847faf",
-      "size": 89
+      "path": "Project/Artificial Intelligence/02_408/CS408.md",
+      "sha": "ade3570084b5df0302f2cae1ffa7e4d3aaa1261c",
+      "size": 4607
     },
     {
-      "path": "Project/Artificial Intelligence/01_数学二/线性代数/第01章-行列式.md",
-      "sha": "4b723b3447d2dbc7128acbd0796083a30367bee1",
-      "size": 6711
+      "path": "Project/Artificial Intelligence/02_408/五大经典学习法-408统一模板.md",
+      "sha": "d2ac8b454285a773949e9f8f73151a138ffaa275",
+      "size": 2388
     },
     {
-      "path": "Project/Artificial Intelligence/01_数学二/线性代数/第02章-矩阵.md",
-      "sha": "57b6b22b0596d7320b79aa9e40a23bed0467efe7",
-      "size": 5861
+      "path": "Project/Artificial Intelligence/02_408/历年真题/ReadMe.md",
+      "sha": "6e0f6391b76a59d272cec27bb7d0cebc960dd386",
+      "size": 264
     },
     {
-      "path": "Project/Artificial Intelligence/01_数学二/线性代数/第03章-向量组.md",
-      "sha": "f7c87a13c9aaa125f947710fa82d922fa29fd307",
-      "size": 5071
+      "path": "Project/Artificial Intelligence/02_408/操作系统/ReadMe.md",
+      "sha": "02346f80aa4509b025d919781495493801b21ec2",
+      "size": 3173
     },
     {
-      "path": "Project/Artificial Intelligence/01_数学二/线性代数/第04章-线性方程组.md",
-      "sha": "a9172696424c2913493921ad4c5770761e364a2c",
-      "size": 4217
+      "path": "Project/Artificial Intelligence/02_408/操作系统/五大经典学习法应用指南.md",
+      "sha": "c652c4adf14204831f59353a687589555bc4d116",
+      "size": 2535
     },
     {
-      "path": "Project/Artificial Intelligence/01_数学二/线性代数/第05章-特征值与特征向量.md",
-      "sha": "6d1b70f6c54ca30b93db59a1aaec088924042d2e",
-      "size": 4730
-    },
-    {
-      "path": "Project/Artificial Intelligence/01_数学二/线性代数/第06章-二次型.md",
-      "sha": "a809c23f8a02b10321a61b3cf5402c2d6770f5ad",
-      "size": 4628
-    },
-    {
-      "path": "Project/Artificial Intelligence/01_数学二/线性代数/ReadMe.md",
-      "sha": "6f02b98ee33865357bf37092d33e301ebb101979",
-      "size": 4292
-    },
-    {
-      "path": "Project/Artificial Intelligence/01_数学二/章节练习/ReadMe.md",
-      "sha": "c4b0b6247b2fb547f7435306c3e8c4b139847faf",
-      "size": 89
+      "path": "Project/Artificial Intelligence/02_408/操作系统/基础概念与核心术语.md",
+      "sha": "1c13f891c8e7fc1edf461a69cd2bb552a935ad80",
+      "size": 4905
     },
     {
       "path": "Project/Artificial Intelligence/02_408/操作系统/第01章-操作系统概述与运行环境.md",
@@ -250,149 +295,19 @@
       "size": 4583
     },
     {
-      "path": "Project/Artificial Intelligence/02_408/操作系统/基础概念与核心术语.md",
-      "sha": "1c13f891c8e7fc1edf461a69cd2bb552a935ad80",
-      "size": 4905
+      "path": "Project/Artificial Intelligence/02_408/数据结构/ReadMe.md",
+      "sha": "73bab7123e652f6274fc5de0527b06ae363ce9b5",
+      "size": 3124
     },
     {
-      "path": "Project/Artificial Intelligence/02_408/操作系统/五大经典学习法应用指南.md",
-      "sha": "c652c4adf14204831f59353a687589555bc4d116",
-      "size": 2535
+      "path": "Project/Artificial Intelligence/02_408/数据结构/五大经典学习法应用指南.md",
+      "sha": "5b598e552953ca7d696bbc3fbf6d213a854893af",
+      "size": 2807
     },
     {
-      "path": "Project/Artificial Intelligence/02_408/操作系统/ReadMe.md",
-      "sha": "02346f80aa4509b025d919781495493801b21ec2",
-      "size": 3173
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机网络/第01章-计算机网络体系结构.md",
-      "sha": "474430bdf5d5d8d92d1d88e9a6645a58c7230ffc",
-      "size": 8045
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机网络/第02章-物理层.md",
-      "sha": "45f752efbe24341751c521d4e171058fbb444b2a",
-      "size": 4755
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机网络/第03章-数据链路层.md",
-      "sha": "7ba70c0a6b471659ca89f700f857f8a6a603396b",
-      "size": 4816
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机网络/第04章-网络层.md",
-      "sha": "dc92b6eaff8bdc602baf3b9668b19bef5ab6cc41",
-      "size": 5130
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机网络/第05章-传输层.md",
-      "sha": "a7739ff10dc742089eaaa72fad2c96bdce404316",
-      "size": 5038
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机网络/第06章-应用层.md",
-      "sha": "a3d5b1d6fdbee06726322479f81508bb3aab10fb",
-      "size": 4700
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机网络/基础概念与核心术语.md",
-      "sha": "163f6bffaef4039423349f69b5c85cd8b51e2ab5",
-      "size": 4848
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机网络/五大经典学习法应用指南.md",
-      "sha": "55943782bb2a70e9595a307c45ef6a3d621eddd3",
-      "size": 2489
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机网络/ReadMe.md",
-      "sha": "cf577019081d4dd5b86c511e4d661efd6a660b9b",
-      "size": 3422
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/第01章-计算机系统概述.md",
-      "sha": "67b8ce384539477032d4dbe9803ee20b9018c20e",
-      "size": 5758
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/第02章-数据的表示与运算.md",
-      "sha": "bc7a53cc7379043d635a680356fb88398893c342",
-      "size": 5188
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/第03章-存储器层次结构.md",
-      "sha": "0fbb9ebee1ec231221d6b7b8409b08e9ae62332f",
-      "size": 6208
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/第04章-指令系统.md",
-      "sha": "d2bc53e49d592c1922aa6d67a7848c77a1e67192",
-      "size": 4022
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/第05章-CPU.md",
-      "sha": "b78d5768cd2798ab2d6eeabe2013e655695a204e",
-      "size": 4570
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/第06章-总线与I-O.md",
-      "sha": "ade34c20837849442ac719bba17b35cbceab46c2",
-      "size": 4204
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/基础概念与核心术语.md",
-      "sha": "2806941311916016c916cae5bc420003334b0344",
-      "size": 5357
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/五大经典学习法应用指南.md",
-      "sha": "7741cb772ec1f59188e7ab048a61c5b70b303b1f",
-      "size": 2490
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/ReadMe.md",
-      "sha": "9109a028cc74abad2ca6b9b448b03941d2aeb58d",
-      "size": 3233
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/历年真题/ReadMe.md",
-      "sha": "6e0f6391b76a59d272cec27bb7d0cebc960dd386",
-      "size": 264
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/数据结构/第01章-绪论与算法分析.md",
-      "sha": "62e74032145715b91f3440313499ec8444f08180",
-      "size": 12830
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/数据结构/第02章-线性表.md",
-      "sha": "beb66e06a173ae0790f07f0183e5bc7fe7a6b942",
-      "size": 23642
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/数据结构/第03章-栈队列与数组.md",
-      "sha": "fa5174bfb25689a44de93ad5c905f944642b7240",
-      "size": 22870
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/数据结构/第04章-树与二叉树.md",
-      "sha": "16954d0a4c516b4584396ccf20b1ddc14ce1770d",
-      "size": 26810
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/数据结构/第05章-图.md",
-      "sha": "7f0e5f5969b8d51a41e88172eaa91fb6c07c0e59",
-      "size": 12196
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/数据结构/第06章-查找.md",
-      "sha": "307368f8d7d754e133853a72971a7c049e3fbfb1",
-      "size": 25631
-    },
-    {
-      "path": "Project/Artificial Intelligence/02_408/数据结构/第07章-排序.md",
-      "sha": "e75aeb93c1a6cdf9b946806a8d5aa6f4036a61fb",
-      "size": 20398
+      "path": "Project/Artificial Intelligence/02_408/数据结构/基础概念与核心术语.md",
+      "sha": "a671119721e08e005e39ede0b5067c0dce2d0389",
+      "size": 5011
     },
     {
       "path": "Project/Artificial Intelligence/02_408/数据结构/概念卡/01-数据结构基本概念与ADT.md",
@@ -580,44 +495,149 @@
       "size": 5036
     },
     {
-      "path": "Project/Artificial Intelligence/02_408/数据结构/基础概念与核心术语.md",
-      "sha": "a671119721e08e005e39ede0b5067c0dce2d0389",
-      "size": 5011
+      "path": "Project/Artificial Intelligence/02_408/数据结构/第01章-绪论与算法分析.md",
+      "sha": "62e74032145715b91f3440313499ec8444f08180",
+      "size": 12830
     },
     {
-      "path": "Project/Artificial Intelligence/02_408/数据结构/五大经典学习法应用指南.md",
-      "sha": "5b598e552953ca7d696bbc3fbf6d213a854893af",
-      "size": 2807
+      "path": "Project/Artificial Intelligence/02_408/数据结构/第02章-线性表.md",
+      "sha": "beb66e06a173ae0790f07f0183e5bc7fe7a6b942",
+      "size": 23642
     },
     {
-      "path": "Project/Artificial Intelligence/02_408/数据结构/ReadMe.md",
-      "sha": "73bab7123e652f6274fc5de0527b06ae363ce9b5",
-      "size": 3124
+      "path": "Project/Artificial Intelligence/02_408/数据结构/第03章-栈队列与数组.md",
+      "sha": "fa5174bfb25689a44de93ad5c905f944642b7240",
+      "size": 22870
     },
     {
-      "path": "Project/Artificial Intelligence/02_408/五大经典学习法-408统一模板.md",
-      "sha": "d2ac8b454285a773949e9f8f73151a138ffaa275",
-      "size": 2388
+      "path": "Project/Artificial Intelligence/02_408/数据结构/第04章-树与二叉树.md",
+      "sha": "16954d0a4c516b4584396ccf20b1ddc14ce1770d",
+      "size": 26810
     },
     {
-      "path": "Project/Artificial Intelligence/02_408/Bilibili课程索引.md",
-      "sha": "007db18a87df8280c78b7c4165730a018d8b57e3",
-      "size": 1907
+      "path": "Project/Artificial Intelligence/02_408/数据结构/第05章-图.md",
+      "sha": "7f0e5f5969b8d51a41e88172eaa91fb6c07c0e59",
+      "size": 12196
     },
     {
-      "path": "Project/Artificial Intelligence/02_408/CS408.md",
-      "sha": "ade3570084b5df0302f2cae1ffa7e4d3aaa1261c",
-      "size": 4607
+      "path": "Project/Artificial Intelligence/02_408/数据结构/第06章-查找.md",
+      "sha": "307368f8d7d754e133853a72971a7c049e3fbfb1",
+      "size": 25631
     },
     {
-      "path": "Project/Artificial Intelligence/03_英语二/翻译与新题型/专项训练.md",
-      "sha": "5bf35150e1e991b95d31e52db0ff1dcfeec845aa",
-      "size": 1490
+      "path": "Project/Artificial Intelligence/02_408/数据结构/第07章-排序.md",
+      "sha": "e75aeb93c1a6cdf9b946806a8d5aa6f4036a61fb",
+      "size": 20398
     },
     {
-      "path": "Project/Artificial Intelligence/03_英语二/翻译与新题型/ReadMe.md",
-      "sha": "c70f4779e24c98c8338f2858d96ea4ffc8f77632",
-      "size": 2395
+      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/ReadMe.md",
+      "sha": "9109a028cc74abad2ca6b9b448b03941d2aeb58d",
+      "size": 3233
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/五大经典学习法应用指南.md",
+      "sha": "7741cb772ec1f59188e7ab048a61c5b70b303b1f",
+      "size": 2490
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/基础概念与核心术语.md",
+      "sha": "2806941311916016c916cae5bc420003334b0344",
+      "size": 5357
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/第01章-计算机系统概述.md",
+      "sha": "67b8ce384539477032d4dbe9803ee20b9018c20e",
+      "size": 5758
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/第02章-数据的表示与运算.md",
+      "sha": "bc7a53cc7379043d635a680356fb88398893c342",
+      "size": 5188
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/第03章-存储器层次结构.md",
+      "sha": "0fbb9ebee1ec231221d6b7b8409b08e9ae62332f",
+      "size": 6208
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/第04章-指令系统.md",
+      "sha": "d2bc53e49d592c1922aa6d67a7848c77a1e67192",
+      "size": 4022
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/第05章-CPU.md",
+      "sha": "b78d5768cd2798ab2d6eeabe2013e655695a204e",
+      "size": 4570
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机组成原理/第06章-总线与I-O.md",
+      "sha": "ade34c20837849442ac719bba17b35cbceab46c2",
+      "size": 4204
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机网络/ReadMe.md",
+      "sha": "cf577019081d4dd5b86c511e4d661efd6a660b9b",
+      "size": 3422
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机网络/五大经典学习法应用指南.md",
+      "sha": "55943782bb2a70e9595a307c45ef6a3d621eddd3",
+      "size": 2489
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机网络/基础概念与核心术语.md",
+      "sha": "163f6bffaef4039423349f69b5c85cd8b51e2ab5",
+      "size": 4848
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机网络/第01章-计算机网络体系结构.md",
+      "sha": "474430bdf5d5d8d92d1d88e9a6645a58c7230ffc",
+      "size": 8045
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机网络/第02章-物理层.md",
+      "sha": "45f752efbe24341751c521d4e171058fbb444b2a",
+      "size": 4755
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机网络/第03章-数据链路层.md",
+      "sha": "7ba70c0a6b471659ca89f700f857f8a6a603396b",
+      "size": 4816
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机网络/第04章-网络层.md",
+      "sha": "dc92b6eaff8bdc602baf3b9668b19bef5ab6cc41",
+      "size": 5130
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机网络/第05章-传输层.md",
+      "sha": "a7739ff10dc742089eaaa72fad2c96bdce404316",
+      "size": 5038
+    },
+    {
+      "path": "Project/Artificial Intelligence/02_408/计算机网络/第06章-应用层.md",
+      "sha": "a3d5b1d6fdbee06726322479f81508bb3aab10fb",
+      "size": 4700
+    },
+    {
+      "path": "Project/Artificial Intelligence/03_英语二/ReadMe.md",
+      "sha": "e4fade1f3e0d354912205eb18771d9312dde599c",
+      "size": 3228
+    },
+    {
+      "path": "Project/Artificial Intelligence/03_英语二/写作/ReadMe.md",
+      "sha": "0aa2a4e35a1e3d28dadb675ffd408ebbc3cabe63",
+      "size": 2537
+    },
+    {
+      "path": "Project/Artificial Intelligence/03_英语二/写作/模板与范文.md",
+      "sha": "7237b25de6017e345c3080b36f014234f7953cca",
+      "size": 1971
+    },
+    {
+      "path": "Project/Artificial Intelligence/03_英语二/完形填空/ReadMe.md",
+      "sha": "a7a74174c49745cf38e640f61164b3fda9495218",
+      "size": 2013
     },
     {
       "path": "Project/Artificial Intelligence/03_英语二/核心词汇/ReadMe.md",
@@ -635,34 +655,14 @@
       "size": 26755
     },
     {
-      "path": "Project/Artificial Intelligence/03_英语二/完形填空/ReadMe.md",
-      "sha": "a7a74174c49745cf38e640f61164b3fda9495218",
-      "size": 2013
+      "path": "Project/Artificial Intelligence/03_英语二/翻译与新题型/ReadMe.md",
+      "sha": "c70f4779e24c98c8338f2858d96ea4ffc8f77632",
+      "size": 2395
     },
     {
-      "path": "Project/Artificial Intelligence/03_英语二/写作/模板与范文.md",
-      "sha": "7237b25de6017e345c3080b36f014234f7953cca",
-      "size": 1971
-    },
-    {
-      "path": "Project/Artificial Intelligence/03_英语二/写作/ReadMe.md",
-      "sha": "0aa2a4e35a1e3d28dadb675ffd408ebbc3cabe63",
-      "size": 2537
-    },
-    {
-      "path": "Project/Artificial Intelligence/03_英语二/阅读理解/题型专项训练.md",
-      "sha": "c97bc608a47011e915ccf3d235899a91f0465dbd",
-      "size": 1352
-    },
-    {
-      "path": "Project/Artificial Intelligence/03_英语二/阅读理解/ReadMe.md",
-      "sha": "caab9c21ab8fc52090e9424e1695d80098171e18",
-      "size": 2717
-    },
-    {
-      "path": "Project/Artificial Intelligence/03_英语二/长难句/基础句法框架.md",
-      "sha": "7675569f369d65e85a15828b6ca40aa0bee6e6ba",
-      "size": 2019
+      "path": "Project/Artificial Intelligence/03_英语二/翻译与新题型/专项训练.md",
+      "sha": "5bf35150e1e991b95d31e52db0ff1dcfeec845aa",
+      "size": 1490
     },
     {
       "path": "Project/Artificial Intelligence/03_英语二/长难句/ReadMe.md",
@@ -670,27 +670,27 @@
       "size": 2811
     },
     {
-      "path": "Project/Artificial Intelligence/03_英语二/ReadMe.md",
-      "sha": "e4fade1f3e0d354912205eb18771d9312dde599c",
-      "size": 3228
+      "path": "Project/Artificial Intelligence/03_英语二/长难句/基础句法框架.md",
+      "sha": "7675569f369d65e85a15828b6ca40aa0bee6e6ba",
+      "size": 2019
+    },
+    {
+      "path": "Project/Artificial Intelligence/03_英语二/阅读理解/ReadMe.md",
+      "sha": "caab9c21ab8fc52090e9424e1695d80098171e18",
+      "size": 2717
+    },
+    {
+      "path": "Project/Artificial Intelligence/03_英语二/阅读理解/题型专项训练.md",
+      "sha": "c97bc608a47011e915ccf3d235899a91f0465dbd",
+      "size": 1352
+    },
+    {
+      "path": "Project/Artificial Intelligence/04_思想政治/ReadMe.md",
+      "sha": "e3bff38b9eca081f06fcec961b49763fe3c44024",
+      "size": 1426
     },
     {
       "path": "Project/Artificial Intelligence/04_思想政治/历纲/ReadMe.md",
-      "sha": "c4b0b6247b2fb547f7435306c3e8c4b139847faf",
-      "size": 89
-    },
-    {
-      "path": "Project/Artificial Intelligence/04_思想政治/马原/ReadMe.md",
-      "sha": "c4b0b6247b2fb547f7435306c3e8c4b139847faf",
-      "size": 89
-    },
-    {
-      "path": "Project/Artificial Intelligence/04_思想政治/毛中特/ReadMe.md",
-      "sha": "c4b0b6247b2fb547f7435306c3e8c4b139847faf",
-      "size": 89
-    },
-    {
-      "path": "Project/Artificial Intelligence/04_思想政治/时政/ReadMe.md",
       "sha": "c4b0b6247b2fb547f7435306c3e8c4b139847faf",
       "size": 89
     },
@@ -700,17 +700,17 @@
       "size": 89
     },
     {
-      "path": "Project/Artificial Intelligence/04_思想政治/ReadMe.md",
-      "sha": "e3bff38b9eca081f06fcec961b49763fe3c44024",
-      "size": 1426
-    },
-    {
-      "path": "Project/Artificial Intelligence/05_模拟考试与复盘/考前总结/ReadMe.md",
+      "path": "Project/Artificial Intelligence/04_思想政治/时政/ReadMe.md",
       "sha": "c4b0b6247b2fb547f7435306c3e8c4b139847faf",
       "size": 89
     },
     {
-      "path": "Project/Artificial Intelligence/05_模拟考试与复盘/模拟成绩/ReadMe.md",
+      "path": "Project/Artificial Intelligence/04_思想政治/毛中特/ReadMe.md",
+      "sha": "c4b0b6247b2fb547f7435306c3e8c4b139847faf",
+      "size": 89
+    },
+    {
+      "path": "Project/Artificial Intelligence/04_思想政治/马原/ReadMe.md",
       "sha": "c4b0b6247b2fb547f7435306c3e8c4b139847faf",
       "size": 89
     },
@@ -720,7 +720,17 @@
       "size": 89
     },
     {
+      "path": "Project/Artificial Intelligence/05_模拟考试与复盘/模拟成绩/ReadMe.md",
+      "sha": "c4b0b6247b2fb547f7435306c3e8c4b139847faf",
+      "size": 89
+    },
+    {
       "path": "Project/Artificial Intelligence/05_模拟考试与复盘/真题成绩/ReadMe.md",
+      "sha": "c4b0b6247b2fb547f7435306c3e8c4b139847faf",
+      "size": 89
+    },
+    {
+      "path": "Project/Artificial Intelligence/05_模拟考试与复盘/考前总结/ReadMe.md",
       "sha": "c4b0b6247b2fb547f7435306c3e8c4b139847faf",
       "size": 89
     },
