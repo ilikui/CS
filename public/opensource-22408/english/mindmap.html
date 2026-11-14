@@ -332,7 +332,7 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
  const DAY=86400000,MIN=60000;
  const dueWords=()=>words.filter(w=>review[w.w.toLowerCase()]&&review[w.w.toLowerCase()].due<=Date.now());
  const masteredCount=()=>Object.values(review).filter(x=>x.level>=3).length;
- function saveReview(){try{localStorage.setItem(reviewKey,JSON.stringify(review));Object.entries(review).forEach(([word,r])=>{unified['word:'+word]={level:r.level||0,due:r.due||Date.now(),reps:r.reps||0,last:r.last||null,lapses:r.level===0?1:0,source:'英语词汇思维网络'};});localStorage.setItem(unifiedKey,JSON.stringify(unified));}catch(e){}}
+ function saveReview(){try{localStorage.setItem(reviewKey,JSON.stringify(review));Object.entries(review).forEach(([word,r])=>{const id='word:'+word,prior=unified[id]||{};unified[id]={...prior,level:r.level||0,due:r.due||Date.now(),reps:r.reps||0,last:r.last||null,lapses:(prior.lapses||0)+((r.level===0&&prior.last!==r.last)?1:0),source:'英语词汇思维网络'};});localStorage.setItem(unifiedKey,JSON.stringify(unified));}catch(e){}}
  function updateStats(){document.getElementById('masteredCount').textContent=masteredCount();document.getElementById('dueCount').textContent=dueWords().length;}
  updateStats();
  let session=[],sessionIndex=0,reverseMode=false,sessionMode='new';
