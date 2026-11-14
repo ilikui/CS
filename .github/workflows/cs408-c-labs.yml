@@ -42,3 +42,12 @@ jobs:
 
       - name: Run searching lab assertions
         run: /tmp/search_lab
+
+      - name: Compile B-tree lab
+        run: |
+          cc -std=c11 -Wall -Wextra -Wpedantic -Werror -O2 \
+            "Project/Artificial Intelligence/02_408/数据结构/实验代码/btree_lab.c" \
+            -o /tmp/btree_lab
+
+      - name: Run B-tree assertions
+        run: /tmp/btree_lab
