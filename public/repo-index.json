@@ -1,8 +1,8 @@
 {
   "repository": "ilikui/CS",
   "branch": "main",
-  "generatedAt": "2026-11-14T11:30:00+08:00",
-  "count": 147,
+  "generatedAt": "2026-11-14T12:15:00+08:00",
+  "count": 149,
   "files": [
     {
       "path": "Doc/Books/ReadMe.md",
@@ -131,8 +131,8 @@
     },
     {
       "path": "Project/Artificial Intelligence/01_数学二/高等数学/第01章-函数极限与连续.md",
-      "sha": "b824af94d4484ae8759c6f6a76eccbd8e818e0dd",
-      "size": 13654
+      "sha": "5e398d82346216d05e671b158b6ced7788a8587e",
+      "size": 13326
     },
     {
       "path": "Project/Artificial Intelligence/01_数学二/高等数学/第02章-导数与微分.md",
@@ -171,8 +171,13 @@
     },
     {
       "path": "Project/Artificial Intelligence/01_数学二/高等数学/ReadMe.md",
-      "sha": "156ccbb993766b4e43fe2225c63400dbc10bcc71",
-      "size": 5677
+      "sha": "ea1d348143f7d4a5f763726a10ae3139d27043e8",
+      "size": 5892
+    },
+    {
+      "path": "Project/Artificial Intelligence/01_数学二/高等数学/知识卡片/ReadMe.md",
+      "sha": "97e29f479e945b33d0be88231f09f073461a4bf3",
+      "size": 19018
     },
     {
       "path": "Project/Artificial Intelligence/01_数学二/历年真题/ReadMe.md",
@@ -211,8 +216,13 @@
     },
     {
       "path": "Project/Artificial Intelligence/01_数学二/线性代数/ReadMe.md",
-      "sha": "6f02b98ee33865357bf37092d33e301ebb101979",
-      "size": 4292
+      "sha": "e45a044b1f97cec700474f69fe4e23367d5a2a83",
+      "size": 4476
+    },
+    {
+      "path": "Project/Artificial Intelligence/01_数学二/线性代数/知识卡片/ReadMe.md",
+      "sha": "bd8570e72f493bff2f26d250e1b32252b6d6e37a",
+      "size": 13661
     },
     {
       "path": "Project/Artificial Intelligence/01_数学二/章节练习/ReadMe.md",
