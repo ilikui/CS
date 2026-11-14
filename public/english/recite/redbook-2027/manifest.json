@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "source": "CHNragdoll/anki-pipeline · 2027 红宝书完整真题例句版",
+  "sourceRepository": "https://github.com/CHNragdoll/anki-pipeline",
+  "release": "redbook-2027.10.06",
+  "asset": "redbook-2027.apkg",
+  "sha256": "fb1756f2c37dc332b1a5bf7f015d969297be2976db6d3aca8869091e8f91ee58",
+  "total": 6531,
+  "sentenceTotal": 135982,
+  "publicContentScope": "Word headwords, IPA, level, word forms, and source/count index only. Copyrighted definitions, example sentences, translations, and audio are not redistributed.",
+  "skippedNonWordNotes": 1,
+  "chunkSize": 300,
+  "chunks": [
+    {
+      "file": "words-001.json",
+      "count": 300,
+      "bytes": 749811
+    },
+    {
+      "file": "words-002.json",
+      "count": 300,
+      "bytes": 713988
+    },
+    {
+      "file": "words-003.json",
+      "count": 300,
+      "bytes": 734338
+    },
+    {
+      "file": "words-004.json",
+      "count": 300,
+      "bytes": 694391
+    },
+    {
+      "file": "words-005.json",
+      "count": 300,
+      "bytes": 664333
+    },
+    {
+      "file": "words-006.json",
+      "count": 300,
+      "bytes": 740768
+    },
+    {
+      "file": "words-007.json",
+      "count": 300,
+      "bytes": 539852
+    },
+    {
+      "file": "words-008.json",
+      "count": 300,
+      "bytes": 473097
+    },
+    {
+      "file": "words-009.json",
+      "count": 300,
+      "bytes": 457238
+    },
+    {
+      "file": "words-010.json",
+      "count": 300,
+      "bytes": 460632
+    },
+    {
+      "file": "words-011.json",
+      "count": 300,
+      "bytes": 462600
+    },
+    {
+      "file": "words-012.json",
+      "count": 300,
+      "bytes": 464601
+    },
+    {
+      "file": "words-013.json",
+      "count": 300,
+      "bytes": 503464
+    },
+    {
+      "file": "words-014.json",
+      "count": 300,
+      "bytes": 447582
+    },
+    {
+      "file": "words-015.json",
+      "count": 300,
+      "bytes": 519662
+    },
+    {
+      "file": "words-016.json",
+      "count": 300,
+      "bytes": 545898
+    },
+    {
+      "file": "words-017.json",
+      "count": 300,
+      "bytes": 563107
+    },
+    {
+      "file": "words-018.json",
+      "count": 300,
+      "bytes": 877481
+    },
+    {
+      "file": "words-019.json",
+      "count": 300,
+      "bytes": 604550
+    },
+    {
+      "file": "words-020.json",
+      "count": 300,
+      "bytes": 373857
+    },
+    {
+      "file": "words-021.json",
+      "count": 300,
+      "bytes": 368368
+    },
+    {
+      "file": "words-022.json",
+      "count": 231,
+      "bytes": 285627
+    }
+  ],
+  "generatedAt": "2026-11-13T14:00:18.462008+00:00",
+  "notice": "公开网页仅发布单词索引、音标、等级、词形和真题出处/数量索引；不转载红宝书释义、真题例句全文、译文或音频。请通过正版 Anki 卡包查阅完整原卡片。"
+}
