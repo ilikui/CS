@@ -15,7 +15,7 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
 .panel{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 30px #213b5a0a}
 .panel-head{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;align-items:center}.panel-head strong{font-size:15px}.panel-head small{color:var(--muted)}
 #map{width:100%;height:560px;display:block;background:radial-gradient(ellipse at center,#f7fbff 0%,#fff 68%);border-radius:0 0 18px 18px}
-.edge{stroke:#c4d5e8;stroke-width:2;stroke-dasharray:5 5;animation:dash 12s linear infinite}.node{cursor:pointer}.node rect{fill:#fff;stroke:#9bb6d4;stroke-width:1.6;filter:drop-shadow(0 4px 5px #27496b14)}.node text{font-size:13px;fill:#284361;text-anchor:middle;pointer-events:none}.node.center rect{fill:#244f80;stroke:#244f80}.node.center text{fill:white;font-weight:700;font-size:17px}.node.affix rect{fill:#fff4e8;stroke:#e4b47e}.node.semantic rect{fill:#eaf5f0;stroke:#9acbb8}.node.family rect{fill:#edf4fc;stroke:#9bb6d4}.node:hover rect{stroke:#e28c42;stroke-width:3}
+.edge{stroke:#c4d5e8;stroke-width:2;stroke-dasharray:5 5;animation:dash 12s linear infinite}.node{cursor:pointer}.node rect{fill:#fff;stroke:#9bb6d4;stroke-width:1.6;filter:drop-shadow(0 4px 5px #27496b14)}.node text{font-size:13px;fill:#284361;text-anchor:middle;pointer-events:none}.node.center rect{fill:#244f80;stroke:#244f80}.node.center text{fill:white;font-weight:700;font-size:17px}.node.affix rect{fill:#fff4e8;stroke:#e4b47e}.node.semantic rect{fill:#eaf5f0;stroke:#9acbb8}.node.family rect{fill:#edf4fc;stroke:#9bb6d4}.node.synonym rect{fill:#eaf5f0;stroke:#82bba5}.node.antonym rect{fill:#fff0ed;stroke:#d9a39a}.node:hover rect{stroke:#e28c42;stroke-width:3}
 @keyframes dash{to{stroke-dashoffset:-100}}
 .side{padding:17px}.word-title{font-size:30px;font-weight:800;letter-spacing:.2px}.phonetic{color:var(--muted);margin:5px 0 10px}.meaning{font-size:15px;line-height:1.8}.chip{display:inline-block;border-radius:99px;padding:4px 9px;background:#edf4fc;color:#315e8d;font-size:12px;margin:3px 4px 3px 0}
 .section{border-top:1px solid var(--line);padding:13px 0}.section h3{font-size:13px;margin:0 0 8px;color:#405875}.rel-list{display:flex;flex-wrap:wrap;gap:7px}.rel{background:#f5f8fc;border:1px solid #e1e9f2;border-radius:9px;padding:7px 9px;text-align:left}.rel b{display:block}.rel small{color:var(--muted)}
@@ -86,25 +86,78 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
  function affix(word){const w=word.w.toLowerCase();return affixInfo.find(([a])=>a.startsWith('-')?w.endsWith(a.slice(1))&&w.length>a.length+2:w.startsWith(a)&&w.length>a.length+3)||null;}
  const semantic=[['观察 / 认知',['观察','注意','观察到','意识','认识','理解','发现','识别','看法','观点']],['变化 / 发展',['变化','改变','发展','增长','减少','增加','改善','转变','进步','衰退']],['沟通 / 表达',['表达','说明','解释','交流','沟通','传播','媒体','语言','陈述','描述']],['社会 / 群体',['社会','社区','群体','公众','人民','人口','成员','文化','政治','制度']],['行为 / 影响',['导致','影响','造成','产生','引起','促使','阻止','促进','实现','执行']],['评价 / 判断',['评价','判断','批评','赞扬','价值','重要','质量','标准','合理','正确']],['法律 / 规则',['法律','规则','法规','权利','义务','责任','司法','政策','制度','规范']],['数量 / 程度',['数量','程度','规模','巨大','多数','部分','水平','比例','范围','有限']]];
  function semanticGroup(word){const d=word.d;return semantic.filter(([name,keys])=>keys.some(k=>d.includes(k))).map(x=>x[0]).slice(0,2);}
+
+ // 人工整理的明确语义关系；不是通过拼写相似度推断。
+ const lexicalRelations={
+ accept:{syn:['admit','approve'],ant:['reject','refuse']},
+ accurate:{syn:['precise','exact'],ant:['inaccurate','wrong']},
+ advantage:{syn:['benefit','merit'],ant:['disadvantage','drawback']},
+ appear:{syn:['emerge','arise'],ant:['disappear','vanish']},
+ artificial:{syn:['synthetic','man-made'],ant:['natural','genuine']},
+ benefit:{syn:['advantage','profit'],ant:['harm','damage']},
+ complex:{syn:['complicated','intricate'],ant:['simple','plain']},
+ construct:{syn:['build','establish'],ant:['destroy','demolish']},
+ decrease:{syn:['decline','reduce'],ant:['increase','grow']},
+ encourage:{syn:['promote','support'],ant:['discourage','deter']},
+ expand:{syn:['enlarge','extend'],ant:['shrink','contract']},
+ flexible:{syn:['adaptable','adjustable'],ant:['rigid','inflexible']},
+ ignore:{syn:['neglect','overlook'],ant:['notice','attend']},
+ include:{syn:['contain','involve'],ant:['exclude','omit']},
+ major:{syn:['main','primary'],ant:['minor','secondary']},
+ optimistic:{syn:['hopeful','positive'],ant:['pessimistic','negative']},
+ permanent:{syn:['lasting','enduring'],ant:['temporary','brief']},
+ promote:{syn:['encourage','advance'],ant:['hinder','discourage']},
+ relevant:{syn:['related','pertinent'],ant:['irrelevant','unrelated']},
+ significant:{syn:['important','notable'],ant:['insignificant','trivial']},
+ strengthen:{syn:['reinforce','enhance'],ant:['weaken','undermine']},
+ succeed:{syn:['achieve','accomplish'],ant:['fail','fall short']},
+ valid:{syn:['sound','legitimate'],ant:['invalid','unsound']},
+ visible:{syn:['apparent','noticeable'],ant:['invisible','hidden']},
+ establish:{syn:['found','set up'],ant:['dissolve','abolish']},
+ maintain:{syn:['preserve','sustain'],ant:['neglect','abandon']},
+ generous:{syn:['giving','charitable'],ant:['stingy','selfish']},
+ scarce:{syn:['rare','limited'],ant:['abundant','plentiful']},
+ abundant:{syn:['plentiful','ample'],ant:['scarce','limited']},
+ temporary:{syn:['brief','short-term'],ant:['permanent','lasting']},
+ reject:{syn:['refuse','decline'],ant:['accept','approve']},
+ refuse:{syn:['reject','decline'],ant:['accept','agree']},
+ reduce:{syn:['decrease','lessen'],ant:['increase','raise']},
+ increase:{syn:['grow','rise'],ant:['decrease','decline']},
+ simple:{syn:['easy','plain'],ant:['complex','complicated']},
+ difficult:{syn:['hard','challenging'],ant:['easy','simple']},
+ improve:{syn:['enhance','upgrade'],ant:['worsen','deteriorate']},
+ worsen:{syn:['deteriorate','decline'],ant:['improve','enhance']},
+ protect:{syn:['defend','safeguard'],ant:['attack','endanger']},
+ create:{syn:['produce','generate'],ant:['destroy','eliminate']}
+ };
+ function lexicalFor(word){
+  const r=lexicalRelations[word.w.toLowerCase()]||{};
+  const pick=list=>(list||[]).map(x=>({label:x,word:byWord.get(x.toLowerCase())||null}));
+  return {syn:pick(r.syn),ant:pick(r.ant)};
+ }
+
  const collocations={
  observe:['observe a phenomenon','closely observe','observe the rules'],object:['object to a proposal','the object of study','objective evidence'],maintain:['maintain stability','maintain a relationship','maintain that…'],significant:['significant impact','highly significant','significant difference'],cause:['cause damage','cause and effect','the root cause'],effect:['have an effect on','take effect','side effect'],approach:['an approach to learning','approach a problem','a new approach'],issue:['raise an issue','address an issue','a key issue'],develop:['develop a skill','economic development','develop an interest'],provide:['provide evidence','provide access to','provide support'],achieve:['achieve a goal','achieve success','achieve progress'],account:['account for','take into account','on account of'],apply:['apply for a job','apply a method','application form'],benefit:['benefit from','mutual benefit','for the benefit of'],consider:['consider doing','take into consideration','all things considered'],establish:['establish a relationship','establish a system','well-established']
  };
  let current=null;
  function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
  function getGroup(){return groupEl.value;}
- function relatedFor(w){const fam=family(w);const prefix=affix(w);const sg=semanticGroup(w);const coll=collocations[w.w.toLowerCase()]||[];return {fam,prefix,sg,coll};}
+ function relatedFor(w){const fam=family(w);const prefix=affix(w);const sg=semanticGroup(w);const coll=collocations[w.w.toLowerCase()]||[];const lexical=lexicalFor(w);return {fam,prefix,sg,coll,lexical};}
  function draw(w){
-  current=w;const {fam,prefix,sg,coll}=relatedFor(w);const svg=document.getElementById('map');svg.innerHTML='';
+  current=w;const {fam,prefix,sg,coll,lexical}=relatedFor(w);const svg=document.getElementById('map');svg.innerHTML='';
   const cx=450,cy=275;const nodes=[{label:w.w,sub:'中心词',type:'center',x:cx,y:cy,word:w}];
   if(prefix)nodes.push({label:prefix[0]+' '+prefix[1],sub:prefix[2],type:'affix',x:450,y:85,word:null});
   fam.slice(0,5).forEach((x,i)=>nodes.push({label:x.w,sub:x.d.slice(0,22),type:'family',x:180+i*135,y:165,word:x}));
   sg.slice(0,3).forEach((x,i)=>nodes.push({label:x,type:'semantic',sub:'释义主题线索',x:190+i*260,y:405,word:null}));
   coll.slice(0,3).forEach((x,i)=>nodes.push({label:x,sub:'常见搭配示例',type:'affix',x:210+i*240,y:500,word:null}));
+  lexical.syn.slice(0,2).forEach((x,i)=>nodes.push({label:x.label,sub:'近义词 · 人工整理',type:'synonym',x:190+i*220,y:65,word:x.word}));
+  lexical.ant.slice(0,2).forEach((x,i)=>nodes.push({label:x.label,sub:'反义词 · 人工整理',type:'antonym',x:190+i*220,y:485,word:x.word}));
+
   const ns='http://www.w3.org/2000/svg';
   nodes.forEach((n,i)=>{if(!i)return;const line=document.createElementNS(ns,'line');line.setAttribute('x1',cx);line.setAttribute('y1',cy);line.setAttribute('x2',n.x);line.setAttribute('y2',n.y);line.setAttribute('class','edge');svg.append(line);});
   nodes.forEach((n,i)=>{const g=document.createElementNS(ns,'g');g.setAttribute('class','node '+n.type);g.setAttribute('transform','translate('+n.x+','+n.y+')');const width=Math.max(118,Math.min(205,n.label.length*12+28));const rect=document.createElementNS(ns,'rect');rect.setAttribute('x',-width/2);rect.setAttribute('y',-31);rect.setAttribute('width',width);rect.setAttribute('height',62);rect.setAttribute('rx',13);g.append(rect);const t=document.createElementNS(ns,'text');t.setAttribute('y',n.sub?-4:5);t.textContent=n.label;g.append(t);if(n.sub){const st=document.createElementNS(ns,'text');st.setAttribute('y',17);st.setAttribute('style','font-size:10px;fill:'+(n.type==='center'?'#dbe8f6':'#6d7f93'));st.textContent=n.sub.length>25?n.sub.slice(0,25)+'…':n.sub;g.append(st);}if(n.word){g.addEventListener('click',()=>draw(n.word));g.setAttribute('tabindex','0');g.setAttribute('role','button');g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();draw(n.word);}});}svg.append(g);});
   const parts=w.d.split(/[;；]/).map(x=>x.trim()).filter(Boolean).slice(0,4);
-  document.getElementById('detail').innerHTML='<div class="word-title">'+esc(w.w)+'</div><div class="phonetic">'+esc(w.g+' · '+w.u)+'</div><div class="meaning">'+parts.map(x=>'<div>• '+esc(x)+'</div>').join('')+'</div><div class="section"><h3>词形关联（自动匹配候选）</h3><div class="rel-list">'+(fam.length?fam.map(x=>'<button class="rel" data-word="'+esc(x.w)+'"><b>'+esc(x.w)+'</b><small>'+esc(x.d.slice(0,36))+'</small></button>').join(''):'<span class="tip">暂未找到可靠的同词形候选，可尝试前后缀或语义联想。</span>')+'</div></div><div class="section"><h3>词根 / 词缀线索</h3><p class="tip">'+(prefix?esc(prefix[0]+'：'+prefix[1]+'。例：'+prefix[2]):'当前词形未匹配到常见前后缀规则。可先记忆完整词形，再用词典核验词源。')+'</p></div><div class="section"><h3>语义联想</h3><div class="rel-list">'+(sg.length?sg.map(x=>'<span class="chip">'+esc(x)+'</span>').join(''):'<span class="tip">释义暂未匹配到主题词，可从中文释义自行建立画面。</span>')+'</div></div><div class="section"><h3>常见搭配提示</h3><div class="rel-list">'+(coll.length?coll.map(x=>'<span class="chip">'+esc(x)+'</span>').join(''):'<span class="tip">本词未配置固定搭配示例；请结合原词库例句和真题语境补充。</span>')+'</div></div><div class="section"><button id="speak">🔊 点击发音</button> <button id="toSource">在原词库中查找</button></div>';
+  document.getElementById('detail').innerHTML='<div class="word-title">'+esc(w.w)+'</div><div class="phonetic">'+esc(w.g+' · '+w.u)+'</div><div class="meaning">'+parts.map(x=>'<div>• '+esc(x)+'</div>').join('')+'</div><div class="section"><h3>词形关联（自动匹配候选）</h3><div class="rel-list">'+(fam.length?fam.map(x=>'<button class="rel" data-word="'+esc(x.w)+'"><b>'+esc(x.w)+'</b><small>'+esc(x.d.slice(0,36))+'</small></button>').join(''):'<span class="tip">暂未找到可靠的同词形候选，可尝试前后缀或语义联想。</span>')+'</div></div><div class="section"><h3>词根 / 词缀线索</h3><p class="tip">'+(prefix?esc(prefix[0]+'：'+prefix[1]+'。例：'+prefix[2]):'当前词形未匹配到常见前后缀规则。可先记忆完整词形，再用词典核验词源。')+'</p></div><div class="section"><h3>语义联想</h3><div class="rel-list">'+(sg.length?sg.map(x=>'<span class="chip">'+esc(x)+'</span>').join(''):'<span class="tip">释义暂未匹配到主题词，可从中文释义自行建立画面。</span>')+'</div></div><div class="section"><h3>近义词 / 反义词（人工整理）</h3><p class="tip">近义词要结合语境辨析，反义词用于建立对照记忆。点击词条可继续探索词汇网络。</p><div class="rel-list">近义：'+(lexical.syn.length?lexical.syn.map(x=>x.word?'<button class="rel" data-word="'+esc(x.label)+'"><b>'+esc(x.label)+'</b><small>近义关联</small></button>':'<span class="chip">'+esc(x.label)+'</span>').join(''):'<span class="tip">暂无核对关系</span>')+'</div><div class="rel-list" style="margin-top:8px">反义：'+(lexical.ant.length?lexical.ant.map(x=>x.word?'<button class="rel" data-word="'+esc(x.label)+'"><b>'+esc(x.label)+'</b><small>反义关联</small></button>':'<span class="chip">'+esc(x.label)+'</span>').join(''):'<span class="tip">暂无核对关系</span>')+'</div></div><div class="section"><h3>常见搭配提示</h3><div class="rel-list">'+(coll.length?coll.map(x=>'<span class="chip">'+esc(x)+'</span>').join(''):'<span class="tip">本词未配置固定搭配示例；请结合原词库例句和真题语境补充。</span>')+'</div></div><div class="section"><button id="speak">🔊 点击发音</button> <button id="toSource">在原词库中查找</button></div>';
   document.querySelectorAll('[data-word]').forEach(b=>b.addEventListener('click',()=>draw(byWord.get(b.dataset.word.toLowerCase()))));
   document.getElementById('speak').addEventListener('click',()=>{const a=new Audio('https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(w.w)+'&type=2');a.play().catch(()=>{});});
   document.getElementById('toSource').addEventListener('click',()=>{location.href='./';});
