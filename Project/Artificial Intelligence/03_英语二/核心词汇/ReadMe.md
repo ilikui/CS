@@ -62,3 +62,15 @@
 word、phonetic、pos、meaning / definition、collocations、family / wordforms、level、example / examples、translation、source / meta。
 
 导入的个人词条和复习进度保存在当前浏览器本地，不会上传到网站服务器；更换浏览器或设备前，请使用「导出进度」备份。该功能不等同于 Anki 原生同步。
+
+## 主题词群 × 英语二真题语境
+
+交互入口：[英语词汇思维网络](https://cs.likui.space/opensource-22408/english/mindmap)。
+
+- **真题出处索引：**从 2027 红宝书公开索引整理英语二出处，覆盖 3,587 个词头、21,373 条年份/题型/篇章定位记录。词条点击后可查看对应年份、Section、Part、Text 与题号（若原索引提供）。
+- **高频短语与词族：**调用本仓库 190 个离线拓展词条，展示固定搭配、词形变化、例句和中文解释。
+- **熟词僻义：**首批人工整理 31 个高频多义词，重点解释 address、case、claim、concern、cover、deliver、employ、figure、issue、maintain、observe、present、serve、subject、while 等语境义。
+- **长难句：**按教育、科技、经济、社会、环境、心理、政治七类主题提供精读练习，逐句展示译文、主干/从句结构和重点表达。该批句子均为自编仿真练习，不冒充历年真题。
+- **原句查看：**公开站点只展示真题出处索引，不转载红宝书原句全文。请通过[正版红宝书 APKG 发行页](https://github.com/CHNragdoll/anki-pipeline/releases/tag/redbook-2027.10.06)获取有权使用的原卡片；可在背诵室导入个人授权的 CSV/JSON，再通过词条链接定位同一个单词。
+
+> 来源标签必须区分：真题出处索引 ≠ 真题原句；自编例句 ≠ 真题例句。后续补录原句时保留年份、题型、篇章和来源字段，避免无出处的句子混入真题库。
