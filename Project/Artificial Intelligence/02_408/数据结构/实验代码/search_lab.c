@@ -135,6 +135,52 @@ static Avl *avl_insert(Avl *root, int key) {
     }
     return root;
 }
+static Avl *avl_min_node(Avl *root) {
+    while (root && root->left) root = root->left;
+    return root;
+}
+
+/* Rebalance after either insertion or deletion. Deletion must also handle
+ * a heavy child's balance factor == 0 (single rotation, not double). */
+static Avl *avl_rebalance(Avl *root) {
+    if (!root) return NULL;
+    avl_update(root);
+    int balance = avl_height(root->left) - avl_height(root->right);
+    if (balance > 1) {
+        int child_balance = avl_height(root->left->left) -
+                            avl_height(root->left->right);
+        if (child_balance < 0) root->left = rotate_left(root->left);
+        return rotate_right(root);
+    }
+    if (balance < -1) {
+        int child_balance = avl_height(root->right->left) -
+                            avl_height(root->right->right);
+        if (child_balance > 0) root->right = rotate_right(root->right);
+        return rotate_left(root);
+    }
+    return root;
+}
+
+/* Delete one key; each recursive return rechecks every ancestor on the path. */
+static Avl *avl_delete(Avl *root, int key) {
+    if (!root) return NULL;
+    if (key < root->key) {
+        root->left = avl_delete(root->left, key);
+    } else if (key > root->key) {
+        root->right = avl_delete(root->right, key);
+    } else {
+        if (!root->left || !root->right) {
+            Avl *child = root->left ? root->left : root->right;
+            free(root);
+            return child;
+        }
+        Avl *successor = avl_min_node(root->right);
+        root->key = successor->key;
+        root->right = avl_delete(root->right, successor->key);
+    }
+    return avl_rebalance(root);
+}
+
 static bool avl_valid(Avl *root, long long low, long long high, int *height) {
     if (!root) { *height = 0; return true; }
     if (root->key <= low || root->key >= high) return false;
@@ -233,19 +279,59 @@ static void test_bst(void) {
     bst_free(root);
     puts("[PASS] BST: search, duplicate policy, leaf/one-child/two-child deletion");
 }
+static void assert_avl_valid(Avl *root) {
+    int h = 0;
+    assert(avl_valid(root, -2147483649LL, 2147483648LL, &h));
+}
 static void test_avl(void) {
     const int cases[4][3] = {{30, 20, 10}, {10, 20, 30},
                              {30, 10, 20}, {10, 30, 20}};
     for (size_t c = 0; c < 4; ++c) {
         Avl *root = NULL;
         for (size_t i = 0; i < 3; ++i) root = avl_insert(root, cases[c][i]);
-        int h = 0;
         assert(root && root->key == 20);
-        assert(avl_valid(root, -2147483649LL, 2147483648LL, &h));
+        assert_avl_valid(root);
         assert(avl_find(root, 10) && avl_find(root, 30));
         avl_free(root);
     }
-    puts("[PASS] AVL: LL, RR, LR, RL rotations and height/balance invariants");
+
+    /* Deletion-triggered LL/RR with a zero-balance heavy child. */
+    const int ll[] = {4, 2, 5, 1, 3};
+    const int rr[] = {2, 1, 4, 3, 5};
+    /* Deletion-triggered LR/RL. */
+    const int lr[] = {4, 2, 5, 3};
+    const int rl[] = {2, 1, 4, 3};
+    const int *sequences[] = {ll, rr, lr, rl};
+    const size_t lengths[] = {5, 5, 4, 4};
+    const int removed[] = {5, 1, 5, 1};
+    for (size_t c = 0; c < 4; ++c) {
+        Avl *root = NULL;
+        for (size_t i = 0; i < lengths[c]; ++i)
+            root = avl_insert(root, sequences[c][i]);
+        root = avl_delete(root, removed[c]);
+        assert_avl_valid(root);
+        assert(!avl_find(root, removed[c]));
+        for (size_t i = 0; i < lengths[c]; ++i)
+            if (sequences[c][i] != removed[c])
+                assert(avl_find(root, sequences[c][i]));
+        avl_free(root);
+    }
+
+    /* Exercise repeated upward rebalancing and deletion of all node shapes. */
+    Avl *root = NULL;
+    const int many[] = {40, 20, 60, 10, 30, 50, 70, 5, 15, 25, 35,
+                        45, 55, 65, 75, 1, 8, 12, 18};
+    for (size_t i = 0; i < sizeof(many) / sizeof(many[0]); ++i) {
+        root = avl_insert(root, many[i]);
+        assert_avl_valid(root);
+    }
+    for (size_t i = 0; i < sizeof(many) / sizeof(many[0]); ++i) {
+        root = avl_delete(root, many[i]);
+        assert(!avl_find(root, many[i]));
+        assert_avl_valid(root);
+    }
+    assert(root == NULL);
+    puts("[PASS] AVL: four insertion rotations; deletion LL/RR/LR/RL, zero-child-BF and cascading rebalance");
 }
 static void test_hash(void) {
     Slot table[HASH_CAPACITY] = {{0}};
