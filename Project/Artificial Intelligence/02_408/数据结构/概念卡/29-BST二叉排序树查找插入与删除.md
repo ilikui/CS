@@ -43,3 +43,72 @@ BST 是满足左子树关键字小于根、右子树关键字大于根（重复�
 3. 删除有两个孩子的结点时，常用哪两个替代结点？
 
 **答案**：1. 关键字递增（互异时严格递增）；2. 右斜单支树；3. 中序前驱或中序后继。
+
+## C 语言实现：BST 查找、插入与删除
+
+以下约定关键字互异；重复关键字策略由具体题目决定。
+
+```c
+#include <stdlib.h>
+typedef struct Node {
+    int key;
+    struct Node *left, *right;
+} Node;
+
+Node *bst_search(Node *root, int key) {
+    while (root && root->key != key)
+        root = key < root->key ? root->left : root->right;
+    return root;
+}
+
+Node *bst_insert(Node *root, int key) {
+    if (!root) {
+        Node *p = (Node *)malloc(sizeof(*p));
+        if (!p) return NULL;
+        p->key = key; p->left = p->right = NULL;
+        return p;
+    }
+    if (key < root->key) root->left = bst_insert(root->left, key);
+    else if (key > root->key) root->right = bst_insert(root->right, key);
+    return root;
+}
+
+Node *bst_delete(Node *root, int key) {
+    if (!root) return NULL;
+    if (key < root->key) root->left = bst_delete(root->left, key);
+    else if (key > root->key) root->right = bst_delete(root->right, key);
+    else {
+        if (!root->left || !root->right) {
+            Node *child = root->left ? root->left : root->right;
+            free(root);
+            return child;
+        }
+        Node *s = root->right;              /* 中序后继 */
+        while (s->left) s = s->left;
+        root->key = s->key;
+        root->right = bst_delete(root->right, s->key);
+    }
+    return root;
+}
+```
+
+**工程注意**：上面的插入函数在内存分配失败时返回 NULL，简单递归写法可能把原子树指针覆盖为 NULL。严谨工程接口应返回状态码并通过二级指针修改根，或在递归中保留原子树指针；考试理解重点是插入位置与 BST 性质。实际使用时还需提供后序释放整棵树的函数。
+
+### 删除三种情况
+
+| 目标结点 | 操作 | 必须保持的性质 |
+|---|---|---|
+| 叶结点 | 父指针置空并释放 | 其余结点次序不变 |
+| 仅一个孩子 | 父结点直接接上孩子 | 子树整体上移 |
+| 两个孩子 | 用中序后继/前驱替换，再删除替代结点 | 中序序列仍有序 |
+
+### 跟踪练习
+
+依次插入 `50, 30, 70, 20, 40, 60, 80`，删除 50：中序后继为 60。根关键字替换为 60 后，原结点 60 从右子树中删除。最终中序序列为 `20,30,40,60,70,80`。
+
+### 五法强化任务
+- **费曼**：解释 BST 的左小右大规则如何指导每次比较。
+- **西蒙**：拆为查找、插入落点、三类删除、释放内存、复杂度五块。
+- **SQ3R**：浏览删除图，提出“双孩子为什么不能直接删”，精读后继替换后手画。
+- **番茄**：25 分钟完成三种删除指针图，休息 5 分钟复写递归逻辑。
+- **康奈尔**：左栏列三类删除，右栏记录指针变化，页底写 O(h) 及退化成 O(n) 的条件。
