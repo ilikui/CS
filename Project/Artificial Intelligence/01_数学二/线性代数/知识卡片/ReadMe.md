@@ -616,8 +616,9 @@ $A=\begin{pmatrix}1&2&0\\0&1&1\\2&0&1\end{pmatrix}$ 的行列式，并判断 $A$
 **解题过程：**
 
 1. 按第一行展开：
-   $|A|=1\begin{vmatrix}1&1\\0&1\end{vmatrix}
-   -2\begin{vmatrix}0&1\\2&1\end{vmatrix}$。
+   $
+   |A|=1\begin{vmatrix}1&1\\0&1\end{vmatrix}-2\begin{vmatrix}0&1\\2&1\end{vmatrix}。
+   $
 2. 两个二阶行列式分别为 $1$ 和 $-2$。
 3. 所以 $|A|=1-2(-2)=5$。
 4. $|A|=5\ne0$，故 $A$ 可逆，且齐次方程组 $Ax=0$ 只有零解。
