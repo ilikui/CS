@@ -308,14 +308,12 @@ static void test_btree(void) {
         assert(tree_insert(&tree, insert_order[i]));
         assert(!tree_insert(&tree, insert_order[i]));
         assert_valid(&tree);
-        for (int key = 1; key <= 30; ++key)
-            assert(contains(tree.root, key) ==
-                   (key <= 30 && ({
-                       bool found = false;
-                       for (size_t j = 0; j <= i; ++j)
-                           if (insert_order[j] == key) found = true;
-                       found;
-                   })));
+        for (int key = 1; key <= 30; ++key) {
+            bool expected = false;
+            for (size_t j = 0; j <= i; ++j)
+                if (insert_order[j] == key) expected = true;
+            assert(contains(tree.root, key) == expected);
+        }
     }
 
     int values[30];
