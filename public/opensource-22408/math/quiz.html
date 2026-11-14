@@ -3,7 +3,25 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>数学二｜三级进阶题库</title>
-<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']]},startup:{typeset:false}};</script>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [["$","$"], ["\\\\(","\\\\)"]],
+    displayMath: [["$$","$$"], ["\\\\[","\\\\]"]]
+  },
+  startup: {
+    typeset: false,
+    ready: () => {
+      MathJax.startup.defaultReady();
+      MathJax.startup.promise.then(() => {
+        document.dispatchEvent(new Event("mathjax-ready"));
+        MathJax.typesetPromise();
+      });
+    }
+  }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-chtml.js'"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <style>
 :root{--ink:#252a31;--muted:#68717d;--line:#e7e9ed;--paper:#f6f7f9;--red:#b83b32;--green:#21845b;--amber:#a96816;--blue:#3569a8}
@@ -87,6 +105,9 @@ function showAnswer(id){const q=bank.find(x=>x.id===id),fb=document.getElementBy
 ["search","subject","level","state"].forEach(id=>document.getElementById(id).addEventListener(id==="search"?"input":"change",render));
 document.getElementById("export").onclick=()=>{const blob=new Blob([JSON.stringify({exportedAt:new Date().toISOString(),records},null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="math2-tiered-quiz-records.json";a.click();URL.revokeObjectURL(a.href)};
 document.getElementById("reset").onclick=()=>{if(confirm("确定清空本地所有答题记录吗？此操作不可撤销。")){records={};persist();render()}};
+document.addEventListener("mathjax-ready", () => {
+  if (window.MathJax?.typesetPromise) MathJax.typesetPromise([document.getElementById("list")]);
+});
 render();
 </script>
 </body></html>
