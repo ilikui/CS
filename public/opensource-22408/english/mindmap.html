@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>考研英语词汇思维网络｜触类旁通</title>
+<style>
+:root{--ink:#172b4d;--muted:#66758b;--line:#dce5f0;--paper:#f5f8fc;--blue:#3569a8;--orange:#d9863b;--green:#34866d}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+header{padding:22px clamp(16px,4vw,54px);background:#fff;border-bottom:1px solid var(--line)}header a{color:var(--blue);text-decoration:none;font-size:13px}h1{font-size:clamp(23px,3vw,34px);margin:12px 0 6px}header p{color:var(--muted);margin:0;line-height:1.7}
+main{max-width:1440px;margin:auto;padding:22px clamp(12px,3vw,36px) 48px}
+.toolbar{display:grid;grid-template-columns:minmax(220px,1fr) 190px auto;gap:10px;margin-bottom:16px}
+input,select,button{font:inherit;border:1px solid var(--line);border-radius:11px;padding:11px 13px;background:white;color:var(--ink)}
+button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+.layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.8fr);gap:16px;align-items:start}
+.panel{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 8px 30px #213b5a0a}
+.panel-head{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;align-items:center}.panel-head strong{font-size:15px}.panel-head small{color:var(--muted)}
+#map{width:100%;height:560px;display:block;background:radial-gradient(ellipse at center,#f7fbff 0%,#fff 68%);border-radius:0 0 18px 18px}
+.edge{stroke:#c4d5e8;stroke-width:2;stroke-dasharray:5 5;animation:dash 12s linear infinite}.node{cursor:pointer}.node rect{fill:#fff;stroke:#9bb6d4;stroke-width:1.6;filter:drop-shadow(0 4px 5px #27496b14)}.node text{font-size:13px;fill:#284361;text-anchor:middle;pointer-events:none}.node.center rect{fill:#244f80;stroke:#244f80}.node.center text{fill:white;font-weight:700;font-size:17px}.node.affix rect{fill:#fff4e8;stroke:#e4b47e}.node.semantic rect{fill:#eaf5f0;stroke:#9acbb8}.node.family rect{fill:#edf4fc;stroke:#9bb6d4}.node:hover rect{stroke:#e28c42;stroke-width:3}
+@keyframes dash{to{stroke-dashoffset:-100}}
+.side{padding:17px}.word-title{font-size:30px;font-weight:800;letter-spacing:.2px}.phonetic{color:var(--muted);margin:5px 0 10px}.meaning{font-size:15px;line-height:1.8}.chip{display:inline-block;border-radius:99px;padding:4px 9px;background:#edf4fc;color:#315e8d;font-size:12px;margin:3px 4px 3px 0}
+.section{border-top:1px solid var(--line);padding:13px 0}.section h3{font-size:13px;margin:0 0 8px;color:#405875}.rel-list{display:flex;flex-wrap:wrap;gap:7px}.rel{background:#f5f8fc;border:1px solid #e1e9f2;border-radius:9px;padding:7px 9px;text-align:left}.rel b{display:block}.rel small{color:var(--muted)}
+.tip{font-size:12px;color:var(--muted);line-height:1.7}.search-results{display:none;position:absolute;z-index:10;top:48px;left:0;right:0;background:#fff;border:1px solid var(--line);border-radius:12px;max-height:260px;overflow:auto;box-shadow:0 12px 24px #142a451c}.search-wrap{position:relative}.search-results button{display:block;width:100%;border:0;border-radius:0;text-align:left}.search-results button:hover{background:#f0f5fb}
+.statrow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.stat{background:white;border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-size:12px;color:var(--muted)}.stat b{color:var(--ink);font-size:15px;margin-right:4px}
+@media(max-width:850px){.layout{grid-template-columns:1fr}#map{height:440px}.toolbar{grid-template-columns:1fr 1fr}.search-wrap{grid-column:1/-1}}
+@media(prefers-reduced-motion:reduce){.edge{animation:none}}
+</style>
+</head>
+<body>
+<header><a href="./">← 返回英语二词库</a><h1>英语词汇思维网络</h1><p>从一个单词出发，沿着词形、词根词缀、语义线索和真实用法触类旁通。点击任意关联词，即可切换中心词，逐步建立自己的词汇网络。</p></header>
+<main>
+<div class="statrow"><div class="stat"><b id="total">—</b>词条纳入网络</div><div class="stat"><b>词形关联</b>派生与拼写线索</div><div class="stat"><b>语义联想</b>按中文释义聚类</div><div class="stat"><b>主动回忆</b>从释义反推单词</div></div>
+<div class="toolbar">
+<div class="search-wrap"><input id="search" placeholder="搜索英文单词或中文释义，例如 observe / 观察" autocomplete="off"><div id="results" class="search-results"></div></div>
+<select id="group"><option value="all">全部词库</option><option>必考词</option><option>基础词</option><option>简单基础词</option><option>超纲词</option></select>
+<button class="primary" id="random">随机抽词</button>
+</div>
+<div class="layout">
+<section class="panel"><div class="panel-head"><strong>🧠 词汇关系图</strong><small>点击节点继续探索 · 拖动/缩放待后续扩展</small></div><svg id="map" viewBox="0 0 900 560" role="img" aria-label="单词思维导图"></svg></section>
+<aside class="panel side">
+<div id="detail"><div class="tip">正在加载词库…</div></div>
+<div class="section"><h3>背诵建议</h3><p class="tip">① 先看中心词，尝试说出词义；② 顺着词形关联词，比较词性与含义变化；③ 用语义线索建立画面；④ 合上释义，反向回忆英文；⑤ 用原词库的发音和例句继续巩固。</p></div>
+<div class="section"><h3>重要说明</h3><p class="tip">系统会把共享词干、常见前后缀识别为“词形关联候选”，并不把拼写相似直接等同于同源词。词源关系、近反义词和固定搭配应以词典及具体语境核实，避免错误联想。</p></div>
+</aside>
+</div>
+</main>
+<script src="english_data.js"></script>
+<script>
+(function(){
+ const groups=window.WD||WD; const groupEl=document.getElementById('group');
+ const words=[]; for(const [g,units] of Object.entries(groups)){for(const [u,list] of Object.entries(units)){for(const item of list){if(Array.isArray(item)&&item[0])words.push({w:item[0],d:item[1]||'',g,u});}}}
+ const byWord=new Map(words.map(x=>[x.w.toLowerCase(),x])); document.getElementById('total').textContent=words.length.toLocaleString('en-US');
+ const suffixes=['ization','isation','ational','fulness','ousness','iveness','ability','ibility','ically','ments','ment','ation','ition','sion','ingly','edly','ness','less','ful','able','ible','ally','ical','ious','ious','ive','ize','ise','ify','ing','ied','ies','ed','er','or','ist','ism','ity','ty','al','ly','es','s'];
+ const prefixes=['un','re','dis','mis','pre','post','inter','trans','sub','super','over','under','anti','non','co','con','com','de','in','im','ir','il','en','em','ex'];
+ function stem(w){let x=w.toLowerCase();for(const p of prefixes){if(x.startsWith(p)&&x.length-p.length>=5){x=x.slice(p.length);break;}}for(const s of suffixes){if(x.endsWith(s)&&x.length-s.length>=4){x=x.slice(0,-s.length);break;}}return x;}
+ function family(word){const key=stem(word.w);return words.filter(x=>x.w.toLowerCase()!==word.w.toLowerCase()&&stem(x.w)===key).slice(0,12);}
+ const affixInfo=[
+ ['un','否定 / 相反','un- + happy → unhappy'],['re','再次 / 回返','re- + build → rebuild'],['dis','否定 / 分离','dis- + agree → disagree'],['mis','错误 / 不当','mis- + understand → misunderstand'],['pre','之前','pre- + view → preview'],['inter','相互 / 之间','inter- + act → interact'],['trans','跨越 / 转移','trans- + form → transform'],['sub','下 / 次级','sub- + title → subtitle'],['over','过度 / 在上','over- + estimate → overestimate'],['under','不足 / 在下','under- + estimate → underestimate'],['-tion','行为 / 结果名词','inform → information'],['-ment','行为 / 结果名词','develop → development'],['-ness','性质 / 状态','kind → kindness'],['-able','能够…的','accept → acceptable'],['-ive','具有…性质的','act → active'],['-ly','副词常见后缀','quick → quickly'],['-ize','使…化 / 使成为','modern → modernize'],['-ist','从事者 / 专家','science → scientist']
+ ];
+ function affix(word){const w=word.w.toLowerCase();return affixInfo.find(([a])=>a.startsWith('-')?w.endsWith(a.slice(1))&&w.length>a.length+2:w.startsWith(a)&&w.length>a.length+3)||null;}
+ const semantic=[['观察 / 认知',['观察','注意','观察到','意识','认识','理解','发现','识别','看法','观点']],['变化 / 发展',['变化','改变','发展','增长','减少','增加','改善','转变','进步','衰退']],['沟通 / 表达',['表达','说明','解释','交流','沟通','传播','媒体','语言','陈述','描述']],['社会 / 群体',['社会','社区','群体','公众','人民','人口','成员','文化','政治','制度']],['行为 / 影响',['导致','影响','造成','产生','引起','促使','阻止','促进','实现','执行']],['评价 / 判断',['评价','判断','批评','赞扬','价值','重要','质量','标准','合理','正确']],['法律 / 规则',['法律','规则','法规','权利','义务','责任','司法','政策','制度','规范']],['数量 / 程度',['数量','程度','规模','巨大','多数','部分','水平','比例','范围','有限']]];
+ function semanticGroup(word){const d=word.d;return semantic.filter(([name,keys])=>keys.some(k=>d.includes(k))).map(x=>x[0]).slice(0,2);}
+ const collocations={
+ observe:['observe a phenomenon','closely observe','observe the rules'],object:['object to a proposal','the object of study','objective evidence'],maintain:['maintain stability','maintain a relationship','maintain that…'],significant:['significant impact','highly significant','significant difference'],cause:['cause damage','cause and effect','the root cause'],effect:['have an effect on','take effect','side effect'],approach:['an approach to learning','approach a problem','a new approach'],issue:['raise an issue','address an issue','a key issue'],develop:['develop a skill','economic development','develop an interest'],provide:['provide evidence','provide access to','provide support'],achieve:['achieve a goal','achieve success','achieve progress'],account:['account for','take into account','on account of'],apply:['apply for a job','apply a method','application form'],benefit:['benefit from','mutual benefit','for the benefit of'],consider:['consider doing','take into consideration','all things considered'],establish:['establish a relationship','establish a system','well-established']
+ };
+ let current=null;
+ function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+ function getGroup(){return groupEl.value;}
+ function relatedFor(w){const fam=family(w);const prefix=affix(w);const sg=semanticGroup(w);const coll=collocations[w.w.toLowerCase()]||[];return {fam,prefix,sg,coll};}
+ function draw(w){
+  current=w;const {fam,prefix,sg,coll}=relatedFor(w);const svg=document.getElementById('map');svg.innerHTML='';
+  const cx=450,cy=275;const nodes=[{label:w.w,sub:'中心词',type:'center',x:cx,y:cy,word:w}];
+  if(prefix)nodes.push({label:prefix[0]+' '+prefix[1],sub:prefix[2],type:'affix',x:450,y:85,word:null});
+  fam.slice(0,5).forEach((x,i)=>nodes.push({label:x.w,sub:x.d.slice(0,22),type:'family',x:180+i*135,y:165,word:x}));
+  sg.slice(0,3).forEach((x,i)=>nodes.push({label:x,type:'semantic',sub:'释义主题线索',x:190+i*260,y:405,word:null}));
+  coll.slice(0,3).forEach((x,i)=>nodes.push({label:x,sub:'常见搭配示例',type:'affix',x:210+i*240,y:500,word:null}));
+  const ns='http://www.w3.org/2000/svg';
+  nodes.forEach((n,i)=>{if(!i)return;const line=document.createElementNS(ns,'line');line.setAttribute('x1',cx);line.setAttribute('y1',cy);line.setAttribute('x2',n.x);line.setAttribute('y2',n.y);line.setAttribute('class','edge');svg.append(line);});
+  nodes.forEach((n,i)=>{const g=document.createElementNS(ns,'g');g.setAttribute('class','node '+n.type);g.setAttribute('transform','translate('+n.x+','+n.y+')');const width=Math.max(118,Math.min(205,n.label.length*12+28));const rect=document.createElementNS(ns,'rect');rect.setAttribute('x',-width/2);rect.setAttribute('y',-31);rect.setAttribute('width',width);rect.setAttribute('height',62);rect.setAttribute('rx',13);g.append(rect);const t=document.createElementNS(ns,'text');t.setAttribute('y',n.sub?-4:5);t.textContent=n.label;g.append(t);if(n.sub){const st=document.createElementNS(ns,'text');st.setAttribute('y',17);st.setAttribute('style','font-size:10px;fill:'+(n.type==='center'?'#dbe8f6':'#6d7f93'));st.textContent=n.sub.length>25?n.sub.slice(0,25)+'…':n.sub;g.append(st);}if(n.word){g.addEventListener('click',()=>draw(n.word));g.setAttribute('tabindex','0');g.setAttribute('role','button');g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();draw(n.word);}});}svg.append(g);});
+  const parts=w.d.split(/[;；]/).map(x=>x.trim()).filter(Boolean).slice(0,4);
+  document.getElementById('detail').innerHTML='<div class="word-title">'+esc(w.w)+'</div><div class="phonetic">'+esc(w.g+' · '+w.u)+'</div><div class="meaning">'+parts.map(x=>'<div>• '+esc(x)+'</div>').join('')+'</div><div class="section"><h3>词形关联（自动匹配候选）</h3><div class="rel-list">'+(fam.length?fam.map(x=>'<button class="rel" data-word="'+esc(x.w)+'"><b>'+esc(x.w)+'</b><small>'+esc(x.d.slice(0,36))+'</small></button>').join(''):'<span class="tip">暂未找到可靠的同词形候选，可尝试前后缀或语义联想。</span>')+'</div></div><div class="section"><h3>词根 / 词缀线索</h3><p class="tip">'+(prefix?esc(prefix[0]+'：'+prefix[1]+'。例：'+prefix[2]):'当前词形未匹配到常见前后缀规则。可先记忆完整词形，再用词典核验词源。')+'</p></div><div class="section"><h3>语义联想</h3><div class="rel-list">'+(sg.length?sg.map(x=>'<span class="chip">'+esc(x)+'</span>').join(''):'<span class="tip">释义暂未匹配到主题词，可从中文释义自行建立画面。</span>')+'</div></div><div class="section"><h3>常见搭配提示</h3><div class="rel-list">'+(coll.length?coll.map(x=>'<span class="chip">'+esc(x)+'</span>').join(''):'<span class="tip">本词未配置固定搭配示例；请结合原词库例句和真题语境补充。</span>')+'</div></div><div class="section"><button id="speak">🔊 点击发音</button> <button id="toSource">在原词库中查找</button></div>';
+  document.querySelectorAll('[data-word]').forEach(b=>b.addEventListener('click',()=>draw(byWord.get(b.dataset.word.toLowerCase()))));
+  document.getElementById('speak').addEventListener('click',()=>{const a=new Audio('https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(w.w)+'&type=2');a.play().catch(()=>{});});
+  document.getElementById('toSource').addEventListener('click',()=>{location.href='./?word='+encodeURIComponent(w.w);});
+ }
+ const search=document.getElementById('search'),results=document.getElementById('results');
+ search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();results.innerHTML='';if(!q){results.style.display='none';return;}const found=words.filter(x=>getGroup()==='all'||x.g===getGroup()).filter(x=>x.w.toLowerCase().includes(q)||x.d.toLowerCase().includes(q)).slice(0,16);found.forEach(w=>{const b=document.createElement('button');b.textContent=w.w+' — '+w.d.slice(0,55);b.onclick=()=>{draw(w);search.value=w.w;results.style.display='none';};results.append(b);});results.style.display=found.length?'block':'none';});
+ document.addEventListener('click',e=>{if(!e.target.closest('.search-wrap'))results.style.display='none';});
+ groupEl.addEventListener('change',()=>{if(current){const replacement=words.find(x=>x.w.toLowerCase()===current.w.toLowerCase()&&(getGroup()==='all'||x.g===getGroup()));if(replacement)draw(replacement);}});
+ document.getElementById('random').addEventListener('click',()=>{const list=words.filter(x=>getGroup()==='all'||x.g===getGroup());draw(list[Math.floor(Math.random()*list.length)]);});
+ const params=new URLSearchParams(location.search),initial=params.get('word');draw((initial&&byWord.get(initial.toLowerCase()))||words[0]);
+})();
+</script>
+</body></html>
