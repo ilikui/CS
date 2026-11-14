@@ -23,6 +23,17 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
 .statrow{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.stat{background:white;border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-size:12px;color:var(--muted)}.stat b{color:var(--ink);font-size:15px;margin-right:4px}
 @media(max-width:850px){.layout{grid-template-columns:1fr}#map{height:440px}.toolbar{grid-template-columns:1fr 1fr}.search-wrap{grid-column:1/-1}}
 @media(prefers-reduced-motion:reduce){.edge{animation:none}}
+.practice{margin-top:16px;padding:18px;background:#fff;border:1px solid var(--line);border-radius:18px}
+.practice-head{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}
+.practice-card{margin:16px auto;max-width:760px;min-height:190px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(135deg,#f7fbff,#fff);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px}
+.practice-word{font-size:clamp(30px,5vw,48px);font-weight:800;letter-spacing:.4px}
+.practice-answer{font-size:19px;line-height:1.8;color:#385777;margin-top:14px}
+.practice-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.practice-actions button{min-width:130px}
+.practice-progress{height:8px;background:#edf2f7;border-radius:99px;overflow:hidden;margin:12px 0}
+.practice-progress span{display:block;height:100%;background:#4b8b73;width:0;transition:width .2s}
+.practice-meta{font-size:12px;color:var(--muted);text-align:center}
+
 </style>
 </head>
 <body>
@@ -32,7 +43,7 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
 <div class="toolbar">
 <div class="search-wrap"><input id="search" placeholder="搜索英文单词或中文释义，例如 observe / 观察" autocomplete="off"><div id="results" class="search-results"></div></div>
 <select id="group"><option value="all">全部词库</option><option>必考词</option><option>基础词</option><option>简单基础词</option><option>超纲词</option></select>
-<button class="primary" id="random">随机抽词</button>
+<button class="primary" id="random">随机抽词</button><button id="startPractice">⚡ 20词快速背诵</button>
 </div>
 <div class="layout">
 <section class="panel"><div class="panel-head"><strong>🧠 词汇关系图</strong><small>点击节点继续探索 · 拖动/缩放待后续扩展</small></div><svg id="map" viewBox="0 0 900 560" role="img" aria-label="单词思维导图"></svg></section>
@@ -42,6 +53,22 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
 <div class="section"><h3>重要说明</h3><p class="tip">系统会把共享词干、常见前后缀识别为“词形关联候选”，并不把拼写相似直接等同于同源词。词源关系、近反义词和固定搭配应以词典及具体语境核实，避免错误联想。</p></div>
 </aside>
 </div>
+<section class="practice" id="practice" hidden>
+ <div class="practice-head"><strong>⚡ 20 词快速记忆</strong><span class="tip" id="practiceCount">准备开始</span></div>
+ <div class="practice-progress"><span id="practiceBar"></span></div>
+ <div class="practice-card">
+  <div class="practice-meta" id="practiceDirection">看英文，回忆中文释义</div>
+  <div class="practice-word" id="practiceWord">—</div>
+  <div class="practice-answer" id="practiceAnswer" hidden></div>
+ </div>
+ <div class="practice-actions">
+  <button id="revealAnswer" class="primary">显示答案</button>
+  <button id="markAgain" disabled>↻ 再复习</button>
+  <button id="markKnown" disabled>✓ 已掌握</button>
+  <button id="closePractice">收起练习</button>
+ </div>
+ <p class="practice-meta" id="practiceHint">先主动回忆，再显示答案；不确定就选“再复习”。掌握记录保存在当前浏览器。</p>
+</section>
 </main>
 <script src="english_data.js"></script>
 <script>
@@ -80,13 +107,65 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
   document.getElementById('detail').innerHTML='<div class="word-title">'+esc(w.w)+'</div><div class="phonetic">'+esc(w.g+' · '+w.u)+'</div><div class="meaning">'+parts.map(x=>'<div>• '+esc(x)+'</div>').join('')+'</div><div class="section"><h3>词形关联（自动匹配候选）</h3><div class="rel-list">'+(fam.length?fam.map(x=>'<button class="rel" data-word="'+esc(x.w)+'"><b>'+esc(x.w)+'</b><small>'+esc(x.d.slice(0,36))+'</small></button>').join(''):'<span class="tip">暂未找到可靠的同词形候选，可尝试前后缀或语义联想。</span>')+'</div></div><div class="section"><h3>词根 / 词缀线索</h3><p class="tip">'+(prefix?esc(prefix[0]+'：'+prefix[1]+'。例：'+prefix[2]):'当前词形未匹配到常见前后缀规则。可先记忆完整词形，再用词典核验词源。')+'</p></div><div class="section"><h3>语义联想</h3><div class="rel-list">'+(sg.length?sg.map(x=>'<span class="chip">'+esc(x)+'</span>').join(''):'<span class="tip">释义暂未匹配到主题词，可从中文释义自行建立画面。</span>')+'</div></div><div class="section"><h3>常见搭配提示</h3><div class="rel-list">'+(coll.length?coll.map(x=>'<span class="chip">'+esc(x)+'</span>').join(''):'<span class="tip">本词未配置固定搭配示例；请结合原词库例句和真题语境补充。</span>')+'</div></div><div class="section"><button id="speak">🔊 点击发音</button> <button id="toSource">在原词库中查找</button></div>';
   document.querySelectorAll('[data-word]').forEach(b=>b.addEventListener('click',()=>draw(byWord.get(b.dataset.word.toLowerCase()))));
   document.getElementById('speak').addEventListener('click',()=>{const a=new Audio('https://dict.youdao.com/dictvoice?audio='+encodeURIComponent(w.w)+'&type=2');a.play().catch(()=>{});});
-  document.getElementById('toSource').addEventListener('click',()=>{location.href='./?word='+encodeURIComponent(w.w);});
+  document.getElementById('toSource').addEventListener('click',()=>{location.href='./';});
  }
  const search=document.getElementById('search'),results=document.getElementById('results');
  search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();results.innerHTML='';if(!q){results.style.display='none';return;}const found=words.filter(x=>getGroup()==='all'||x.g===getGroup()).filter(x=>x.w.toLowerCase().includes(q)||x.d.toLowerCase().includes(q)).slice(0,16);found.forEach(w=>{const b=document.createElement('button');b.textContent=w.w+' — '+w.d.slice(0,55);b.onclick=()=>{draw(w);search.value=w.w;results.style.display='none';};results.append(b);});results.style.display=found.length?'block':'none';});
  document.addEventListener('click',e=>{if(!e.target.closest('.search-wrap'))results.style.display='none';});
  groupEl.addEventListener('change',()=>{if(current){const replacement=words.find(x=>x.w.toLowerCase()===current.w.toLowerCase()&&(getGroup()==='all'||x.g===getGroup()));if(replacement)draw(replacement);}});
  document.getElementById('random').addEventListener('click',()=>{const list=words.filter(x=>getGroup()==='all'||x.g===getGroup());draw(list[Math.floor(Math.random()*list.length)]);});
+
+ // 20-word active-recall session; mastery is stored locally and never changes the source word bank.
+ const practiceEl=document.getElementById('practice');
+ const knownKey='cs-english-mindmap-known-v1';
+ let known=new Set();try{known=new Set(JSON.parse(localStorage.getItem(knownKey)||'[]'));}catch(e){}
+ let session=[],sessionIndex=0,reverseMode=false;
+ function saveKnown(){try{localStorage.setItem(knownKey,JSON.stringify([...known]));}catch(e){}}
+ function renderPractice(){
+  const item=session[sessionIndex];if(!item)return;
+  document.getElementById('practiceWord').textContent=reverseMode?(item.d.split(/[;；]/)[0]||item.d):item.w;
+  document.getElementById('practiceDirection').textContent=reverseMode?'看中文，回忆英文拼写':'看英文，回忆中文释义';
+  document.getElementById('practiceAnswer').hidden=true;
+  document.getElementById('practiceAnswer').textContent=reverseMode?item.w:item.d;
+  document.getElementById('practiceCount').textContent=(sessionIndex+1)+' / '+session.length+' · 已掌握 '+known.size+' 词';
+  document.getElementById('practiceBar').style.width=(sessionIndex/session.length*100)+'%';
+  document.getElementById('revealAnswer').disabled=false;
+  document.getElementById('markAgain').disabled=true;
+  document.getElementById('markKnown').disabled=true;
+ }
+ function nextPractice(mark){
+  const item=session[sessionIndex];
+  if(mark==='known')known.add(item.w.toLowerCase());
+  if(mark==='again')known.delete(item.w.toLowerCase());
+  saveKnown();sessionIndex++;
+  if(sessionIndex>=session.length){
+   document.getElementById('practiceCount').textContent='本轮完成 · 已掌握 '+known.size+' 词';
+   document.getElementById('practiceBar').style.width='100%';
+   document.getElementById('practiceWord').textContent='完成！';
+   document.getElementById('practiceDirection').textContent='本轮 20 词已练习';
+   document.getElementById('practiceAnswer').hidden=false;
+   document.getElementById('practiceAnswer').textContent='点击“20词快速背诵”再来一轮；优先复习未掌握词。';
+   ['revealAnswer','markAgain','markKnown'].forEach(id=>document.getElementById(id).disabled=true);
+   return;
+  }
+  renderPractice();
+ }
+ document.getElementById('startPractice').addEventListener('click',()=>{
+  const pool=words.filter(x=>(getGroup()==='all'||x.g===getGroup())&&!known.has(x.w.toLowerCase()));
+  const source=pool.length>=20?pool:words.filter(x=>getGroup()==='all'||x.g===getGroup());
+  const shuffled=[...source].sort(()=>Math.random()-.5);
+  session=shuffled.slice(0,Math.min(20,shuffled.length));sessionIndex=0;
+  reverseMode=Math.random()<.35;practiceEl.hidden=false;renderPractice();
+  practiceEl.scrollIntoView({behavior:'smooth',block:'start'});
+ });
+ document.getElementById('revealAnswer').addEventListener('click',()=>{
+  document.getElementById('practiceAnswer').hidden=false;
+  document.getElementById('markAgain').disabled=false;document.getElementById('markKnown').disabled=false;
+ });
+ document.getElementById('markAgain').addEventListener('click',()=>nextPractice('again'));
+ document.getElementById('markKnown').addEventListener('click',()=>nextPractice('known'));
+ document.getElementById('closePractice').addEventListener('click',()=>practiceEl.hidden=true);
+
  const params=new URLSearchParams(location.search),initial=params.get('word');draw((initial&&byWord.get(initial.toLowerCase()))||words[0]);
 })();
 </script>
