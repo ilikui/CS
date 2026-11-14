@@ -88,7 +88,7 @@ try{
  const noteKey='cs-english-reading-note-v1:'+g.key;
  const wordRows=vocab.slice(0,12);
  $('detail').innerHTML=
- '<div class="detail-head"><div><h2>'+esc(g.year)+' 年 · '+esc(g.title)+'</h2><p class="muted">关联 '+g.words.size+' 个词条；按词条出处关联，不代表该篇章词频。</p></div><button id="backList">← 返回篇章列表</button></div><div class="study-actions"><button id="completePassage">✓ 标记精读完成</button><button id="reviewPassage">完成一次复习</button><span class="muted" id="passageProgressLabel"></span></div>'+
+ '<div class="detail-head"><div><h2>'+esc(g.year)+' 年 · '+esc(g.title)+'</h2><p class="muted">关联 '+g.words.size+' 个词条；按词条出处关联，不代表该篇章词频。</p></div><button id="backList">← 返回篇章列表</button></div><div class="study-actions"><button id="completePassage">✓ 标记精读完成</button><button id="reviewPassage">完成一次复习</button><button id="addUnifiedReview">＋ 加入统一复习</button><span class="muted" id="passageProgressLabel"></span></div>'+
  '<div><span class="tag">'+esc(g.section)+'</span>'+(g.part?'<span class="tag">'+esc(g.part)+'</span>':'')+(g.text?'<span class="tag">'+esc(g.text)+'</span>':'')+(theme?'<span class="tag">主题倾向：'+esc(themeNames[theme]||theme)+'</span>':'')+'</div>'+
  '<div class="wordgrid">'+vocab.map(w=>'<button class="word" data-word="'+esc(w.word)+'"><strong>'+esc(w.word)+'</strong><small>'+esc(w.definition||'暂无中文释义')+' · '+w.sources.size+' 条出处</small></button>').join('')+'</div>'+
  '<div class="source"><strong>原始出处定位</strong><br>'+[...g.sources].map(esc).join('<br>')+'</div>'+
@@ -109,6 +109,10 @@ try{
  $('completePassage').onclick=()=>{const p=getProgress(g.key)||{stage:0};if(p.completed){saveProgress({completed:false,stage:0,nextReviewAt:null});}else{const next=new Date();next.setDate(next.getDate()+1);saveProgress({completed:true,stage:0,completedAt:new Date().toISOString(),nextReviewAt:localDateKey(next)});}};
  $('reviewPassage').onclick=()=>{const p=getProgress(g.key);if(!p?.completed){progressLabel.textContent='请先标记完成精读，再开始间隔复习';return;}const intervals=[1,3,7,14];const stage=Math.min((p.stage||0)+1,4);if(stage>=4){saveProgress({...p,stage:4,nextReviewAt:null,lastReviewedAt:new Date().toISOString(),mastered:true});progressLabel.textContent='已完成 1/3/7/14 天复习阶梯！';}else{const next=new Date();next.setDate(next.getDate()+intervals[stage]);saveProgress({...p,stage,lastReviewedAt:new Date().toISOString(),nextReviewAt:localDateKey(next)});}};
  renderProgress();
+ const unifiedKey='cs-english-unified-review-v1',unifiedId='reading:'+g.key;
+ const refreshUnifiedButton=()=>{try{const data=JSON.parse(localStorage.getItem(unifiedKey)||'{}');$('addUnifiedReview').textContent=data[unifiedId]?'✓ 已加入统一复习':'＋ 加入统一复习'}catch(_){$('addUnifiedReview').textContent='＋ 加入统一复习'}};
+ refreshUnifiedButton();
+ $('addUnifiedReview').onclick=()=>{try{const data=JSON.parse(localStorage.getItem(unifiedKey)||'{}');if(!data[unifiedId])data[unifiedId]={level:0,reps:0,lapses:0,due:Date.now(),source:'英语二真题出处索引'};localStorage.setItem(unifiedKey,JSON.stringify(data));refreshUnifiedButton();progressLabel.textContent='已加入统一复习队列，可在复习中心开始练习';}catch(_){progressLabel.textContent='浏览器存储不可用，无法加入统一复习'}};
  $('backList').onclick=renderList;
  $('detail').querySelectorAll('[data-word]').forEach(b=>b.onclick=()=>window.open('./mindmap.html?word='+encodeURIComponent(b.dataset.word),'_blank','noopener'));
  $('detail').querySelectorAll('[data-reveal]').forEach(b=>b.onclick=()=>{const panel=$(b.dataset.reveal);if(panel){panel.hidden=!panel.hidden;b.textContent=panel.hidden?(b.dataset.reveal.startsWith('word-')?'显示释义':'展开译文与结构'):'收起答案'}});
