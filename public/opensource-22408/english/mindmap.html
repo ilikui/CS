@@ -190,6 +190,7 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
     box.innerHTML='';
     const summary=document.createElement('div');summary.className='tip';summary.style.flexBasis='100%';summary.textContent=t.name+' · '+list.length+' 个词。主题词由词库释义关键词匹配；真题出处来自红宝书索引；短语和熟词僻义来自人工拓展数据。';box.append(summary);
     const practiceTopic=document.createElement('button');practiceTopic.type='button';practiceTopic.className='primary';practiceTopic.textContent='⚡ 练习本主题 20 词';practiceTopic.addEventListener('click',()=>{const fresh=list.filter(w=>!review[w.w.toLowerCase()]||review[w.w.toLowerCase()].level<3);startSession(fresh.length?fresh:list,'topic');});box.append(practiceTopic);
+    const readingTopic=document.createElement('a');readingTopic.href='./reading.html?theme='+encodeURIComponent(t.id);readingTopic.className='context-actions';readingTopic.textContent='📚 查看本主题对应的年份 / Text 真题篇章 ↗';box.append(readingTopic);
     getContextCache().then(data=>{
      const matched=list.filter(w=>data.exam[w.w.toLowerCase()]?.sources?.length);
      const sorted=matched.slice().sort((a,b)=>(data.exam[b.w.toLowerCase()].sources.length-data.exam[a.w.toLowerCase()].sources.length)||(data.exam[b.w.toLowerCase()].exampleCount-data.exam[a.w.toLowerCase()].exampleCount));
@@ -204,7 +205,7 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
       item.style.cursor='pointer';item.title='点击查看该词的真题出处、短语和语境义';item.addEventListener('click',()=>{draw(w);window.scrollTo({top:document.querySelector('.layout').offsetTop-12,behavior:'smooth'});});examSection.append(item);
      });
      if(!sorted.length)examSection.insertAdjacentHTML('beforeend','<p class="tip">当前词群暂无匹配到的英语二出处索引。</p>');
-     const packLink=document.createElement('a');packLink.href='https://github.com/CHNragdoll/anki-pipeline/releases/tag/redbook-2027.10.06';packLink.target='_blank';packLink.rel='noopener';packLink.className='context-actions';packLink.textContent='打开正版红宝书 Anki 卡包，按上方年份与篇章查看原句 ↗';examSection.append(packLink);
+     const packLink=document.createElement('a');packLink.href='https://github.com/CHNragdoll/anki-pipeline/releases/tag/redbook-2027.10.06';packLink.target='_blank';packLink.rel='noopener';packLink.className='context-actions';packLink.textContent='打开上游 Anki 卡包，按上方年份与篇章核对原句 ↗';examSection.append(packLink);
      const phraseRows=[];
      list.forEach(w=>{const e=data.enrichment[w.w.toLowerCase()];(e?.phrases||[]).forEach(p=>phraseRows.push({word:w.w,phrase:p[0],meaning:p[1]}));});
      const phraseSection=section('🔗 主题高频短语与固定搭配');
