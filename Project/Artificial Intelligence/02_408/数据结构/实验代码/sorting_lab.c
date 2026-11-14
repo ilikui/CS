@@ -147,7 +147,6 @@ static void merge_sort(Record *a, size_t n) {
 
 /* LSD radix sort: this teaching implementation accepts nonnegative keys only. */
 static void radix_sort(Record *a, size_t n) {
-    if (n < 2) return;
     int max_key = 0;
     for (size_t i = 0; i < n; ++i) {
         if (a[i].key < 0) {
@@ -156,6 +155,7 @@ static void radix_sort(Record *a, size_t n) {
         }
         if (a[i].key > max_key) max_key = a[i].key;
     }
+    if (n < 2) return;
 
     Record *out = malloc(n * sizeof(*out));
     if (!out) {
