@@ -143,11 +143,11 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
  function renderWordContext(w,data){
   const host=document.getElementById('wordContext');if(!host||!data)return;
   const key=w.w.toLowerCase(),extra=data.enrichment[key],poly=data.polysemy[key],exam=data.exam[key];
-  const refs=(exam?.sources||[]).slice(0,8),themes=topicsFor(w);
+  const refs=(exam?.sources||[]).slice(0,12),themes=topicsFor(w);
   const sentences=data.longSentences.filter(x=>themes.includes(x.theme)).slice(0,1);
   let html='<div class="context-block"><h3>📚 英语二真题出处关联</h3>';
   if(exam){
-   html+='<p class="tip">红宝书索引记录：该词共 '+(exam.exampleCount||0)+' 条跨考试真题例句记录；下方列出英语二出处（按原卡包索引）。出处不是原句全文。</p><div class="source-list">'+refs.map(x=>'<div class="source-item">'+esc(x)+'</div>').join('')+'</div>';
+   html+='<p class="tip">英语二真题索引记录：该词在词库索引中对应 '+(exam.sources||[]).length+' 条出处定位；下方列出年份、题型和篇章位置。该数字是出处条目数，不等同于独立原句数量。</p><div class="source-list">'+refs.map(x=>'<div class="source-item">'+esc(x)+'</div>').join('')+'</div>';
    if((exam.sources||[]).length>refs.length)html+='<p class="tip">另有 '+((exam.sources||[]).length-refs.length)+' 条出处未展开。</p>';
   }else html+='<p class="tip">当前红宝书公开索引未匹配到该词的英语二出处；不代表历年真题中一定未出现。</p>';
   html+='<div class="context-actions"><a href="../../english/recite/?word='+encodeURIComponent(w.w)+'" target="_blank" rel="noopener">背诵室定位该词 ↗</a><a href="https://github.com/CHNragdoll/anki-pipeline/releases/tag/redbook-2027.10.06" target="_blank" rel="noopener">正版红宝书卡包 ↗</a></div>';
@@ -176,22 +176,45 @@ button{cursor:pointer}button.primary{background:var(--blue);color:#fff;border-co
    b.addEventListener('click',()=>{
     grid.querySelectorAll('.theme-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');
     box.innerHTML='';
-    const summary=document.createElement('div');summary.className='tip';summary.textContent=t.name+' · '+list.length+' 个词。按释义关键词自动归类，可能存在跨主题或误分类；可点击词条查看完整释义与关联。';box.append(summary);
+    const summary=document.createElement('div');summary.className='tip';summary.textContent=t.name+' · '+list.length+' 个词。主题候选词按中文释义关键词匹配；真题出处来自独立索引，短语和熟词僻义来自人工编写拓展数据。';box.append(summary);
     const practiceTopic=document.createElement('button');practiceTopic.type='button';practiceTopic.className='primary';practiceTopic.textContent='⚡ 练习本主题 20 词';practiceTopic.addEventListener('click',()=>{const fresh=list.filter(w=>!review[w.w.toLowerCase()]||review[w.w.toLowerCase()].level<3);startSession(fresh.length?fresh:list,'topic');});box.append(practiceTopic);
     getContextCache().then(data=>{
      const matched=list.filter(w=>data.exam[w.w.toLowerCase()]?.sources?.length);
-     const stat=document.createElement('div');stat.className='tip';stat.textContent='已关联英语二真题出处：'+matched.length+' / '+list.length+' 个词。点击单词可查看具体年份、题型和篇章定位。';box.append(stat);
+     const sorted=matched.slice().sort((a,b)=>(data.exam[b.w.toLowerCase()].sources.length-data.exam[a.w.toLowerCase()].sources.length)||(data.exam[b.w.toLowerCase()].exampleCount-data.exam[a.w.toLowerCase()].exampleCount));
+     const stat=document.createElement('div');stat.className='tip';stat.style.flexBasis='100%';stat.textContent='真题出处覆盖：'+matched.length+' / '+list.length+' 个主题候选词；以下按出处条目数排序（不等同于考频统计）。';box.append(stat);
+     const section=(title)=>{const h=document.createElement('div');h.className='context-block';h.style.flexBasis='100%';h.innerHTML='<h3>'+title+'</h3>';box.append(h);return h;};
+     const examSection=section('🎯 英语二真题高关联词 · 出处索引');
+     sorted.slice(0,12).forEach(w=>{
+      const meta=data.exam[w.w.toLowerCase()];
+      const item=document.createElement('div');item.className='source-item';
+      item.innerHTML='<strong>'+esc(w.w)+'</strong> · '+meta.sources.length+' 条出处定位<br><span>'+esc(meta.sources.slice(0,2).join('；'))+'</span>';
+      item.style.cursor='pointer';item.title='点击查看该词的详细出处';item.addEventListener('click',()=>{draw(w);window.scrollTo({top:document.querySelector('.layout').offsetTop-12,behavior:'smooth'});});examSection.append(item);
+     });
+     if(!sorted.length)examSection.insertAdjacentHTML('beforeend','<p class="tip">当前词群暂无匹配到的英语二出处索引。</p>');
+     const phraseRows=[];
+     list.forEach(w=>{const e=data.enrichment[w.w.toLowerCase()];(e?.phrases||[]).forEach(p=>phraseRows.push({word:w.w,phrase:p[0],meaning:p[1]}));});
+     const phraseSection=section('🔗 主题高频短语与固定搭配');
+     phraseRows.slice(0,16).forEach(p=>{const item=document.createElement('div');item.className='source-item';item.innerHTML='<strong>'+esc(p.phrase)+'</strong> — '+esc(p.meaning)+' <span class="context-label">'+esc(p.word)+'</span>';phraseSection.append(item);});
+     if(!phraseRows.length)phraseSection.insertAdjacentHTML('beforeend','<p class="tip">本主题暂未收录拓展短语；可从具体词条继续补充。</p>');
+     const polyRows=list.filter(w=>data.polysemy[w.w.toLowerCase()]);
+     const polySection=section('🧩 熟词僻义 / 语境义');
+     polyRows.slice(0,6).forEach(w=>{const p=data.polysemy[w.w.toLowerCase()];const item=document.createElement('div');item.className='context-card';item.innerHTML='<b>'+esc(w.w)+' · '+esc(p.core)+'</b><p>'+esc(p.context)+'</p><p><strong>辨析：</strong>'+esc(p.note)+'</p><p class="tip">例句为自编语境练习，非历年真题原句。</p>';polySection.append(item);});
+     if(!polyRows.length)polySection.insertAdjacentHTML('beforeend','<p class="tip">本主题暂无单独标注的熟词僻义条目。</p>');
      const sentence=data.longSentences.find(x=>x.theme===t.id);
-     if(sentence){const card=document.createElement('div');card.className='context-card';card.style.flexBasis='100%';card.innerHTML='<b>'+esc(sentence.title)+' <span class="context-label">自编长难句练习</span></b><p>'+esc(sentence.sentence)+'</p><p>'+esc(sentence.translation)+'</p><p><strong>结构：</strong>'+esc(sentence.structure)+'</p>';box.append(card);}
-    }).catch(()=>{});
-    const shown=list.slice(0,80);
-    shown.forEach(w=>{
+     const sentenceSection=section('📖 长难句精读');
+     if(sentence){
+      const card=document.createElement('div');card.className='context-card';card.innerHTML='<b>'+esc(sentence.title)+' <span class="context-label">自编仿真练习 · 非真题原句</span></b><p>'+esc(sentence.sentence)+'</p><p><strong>译文：</strong>'+esc(sentence.translation)+'</p><p><strong>结构：</strong>'+esc(sentence.structure)+'</p><p><strong>考点：</strong>'+esc(sentence.focus)+'</p><div class="rel-list">'+sentence.vocab.map(v=>'<span class="chip">'+esc(v)+'</span>').join('')+'</div>';sentenceSection.append(card);
+     }else sentenceSection.insertAdjacentHTML('beforeend','<p class="tip">该主题长难句正在补充中。</p>');
+     const notice=document.createElement('p');notice.className='tip';notice.style.flexBasis='100%';notice.textContent='真题原句全文不在公开索引中转载。这里提供可核验的年份、题型、篇章定位；完整原句请通过正版红宝书 Anki 卡包查看。自编例句与仿真长难句均已明确标注。';box.append(notice);
+    }).catch(err=>{const msg=document.createElement('p');msg.className='tip';msg.style.flexBasis='100%';msg.textContent='主题关联数据加载失败：'+err.message;box.append(msg);});
+    const wordSection=document.createElement('div');wordSection.className='context-block';wordSection.style.flexBasis='100%';wordSection.innerHTML='<h3>📚 主题词汇浏览</h3>';box.append(wordSection);
+    list.slice(0,80).forEach(w=>{
      const x=document.createElement('button');x.className='theme-word';x.type='button';
      x.innerHTML='<b>'+esc(w.w)+'</b><small>'+esc(w.d.slice(0,54))+'</small>';
      x.addEventListener('click',()=>{draw(w);window.scrollTo({top:document.querySelector('.layout').offsetTop-12,behavior:'smooth'});});
-     box.append(x);
+     wordSection.append(x);
     });
-    if(list.length>shown.length){const more=document.createElement('span');more.className='tip';more.textContent='当前先展示前 80 个候选词；可用上方搜索框继续查找该主题中的其他词。';box.append(more);}
+    if(list.length>80){const more=document.createElement('span');more.className='tip';more.textContent='当前先展示前 80 个候选词；可用上方搜索框继续查找其他词。';wordSection.append(more);}
    });
    grid.append(b);
   });
