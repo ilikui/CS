@@ -190,8 +190,9 @@ function renderQuestions() {
             answerHtml += `<div class="q-body">${q.answerHtml}</div>`;
         }
 
-        const linkedTopic = Object.entries(window.CARD_QUESTION_MAP || {}).find(([, item]) => Number(item.year) === Number(q.year) && Number(item.index) === Number(q.index));
-        const knowledgeLink = linkedTopic ? `<a class="q-knowledge-link" href="./cards.html?year=${q.year}&index=${q.index}">定位关联知识卡 →</a>` : '';
+        const linkedTopics = Object.entries(window.CARD_QUESTION_MAP || {}).filter(([, item]) => Number(item.year) === Number(q.year) && Number(item.index) === Number(q.index));
+        const linkedCards = linkedTopics.map(([topic]) => ({ topic, card: (window.CARD_EXAM_TOPIC_MAP || {})[topic] })).filter(x => x.card);
+        const knowledgeLink = linkedCards.length ? linkedCards.map(({card}) => `<a class="q-knowledge-link" href="./cards.html?card=${encodeURIComponent(card)}">${card} →</a>`).join('') : '';
         return `<div id="q-${q.year}-${q.index}" class="q-card ${targetIndex ? 'target-question' : ''}">
             <div class="q-header">
                 <div class="q-meta">
