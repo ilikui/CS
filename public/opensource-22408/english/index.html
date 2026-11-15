@@ -542,7 +542,7 @@ window.onload=function(){
    const entry=data?.ec?.word?.[0]||data?.ec?.word||data?.word?.[0]||{};
    const uk=String(entry.ukphone||entry.ukPhonetic||entry.phonetic||'').trim();
    const us=String(entry.usphone||entry.usPhonetic||'').trim();
-   const wrap=(label,value)=>value?'<span class="ipa-item"><span class="ipa-label">'+label+'</span><span class="ipa-value">/'+safe(value.replace(/^\\/+|\\/+$/g,''))+'/</span></span>':'';
+   const wrap=(label,value)=>value?'<span class="ipa-item"><span class="ipa-label">'+label+'</span><span class="ipa-value">/'+safe(value.replaceAll('/',''))+'/</span></span>':'';
    const html=wrap('UK',uk)+wrap('US',us);
    el.innerHTML=html||'<span class="ipa-empty">暂未获取到该词的国际音标；可点击英音/美音按钮听发音。</span>';
    if(html){ipaCache[word.toLowerCase()]={uk,us,updated:Date.now()};try{localStorage.setItem(IPA_CACHE_KEY,JSON.stringify(ipaCache))}catch(_){}}
