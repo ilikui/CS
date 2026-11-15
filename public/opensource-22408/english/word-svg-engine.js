@@ -351,7 +351,7 @@ function matchSenseScene(word,meaning){
 function senseVariants(word,meaning){
  var entries=multiSenseScenes[String(word||'').toLowerCase()];
  if(!entries)return [];
- var parts=String(meaning||'').normalize('NFKC').split(/[；;。，,/、。]+/),out=[],seen={};
+ var parts=String(meaning||'').normalize('NFKC').split(/[；;。，,/、。]+|\\s+(?=(?:vi|vt|adj|adv|n|det|ord|vlink|pref|int)\\.\\s*)/),out=[],seen={};
  for(var p=0;p<parts.length;p++){
   var part=parts[p].trim();if(!part)continue;
   for(var i=0;i<entries.length;i++){
