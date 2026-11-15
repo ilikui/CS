@@ -258,7 +258,7 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-06-C"
     ],
     "secondary": [
-      "CAL-06-C"
+      "CAL-06-B"
     ],
     "rationale": "绕 x 轴旋转体体积用圆盘法 V=π∫y²dx。",
     "methods": "定积分、三角幂积分。",
@@ -390,7 +390,7 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-06-C"
     ],
     "secondary": [
-      "CAL-06-C"
+      "CAL-06-A"
     ],
     "rationale": "设定积分为常数，代回积分方程求常数，再恢复 f(x)。",
     "methods": "定积分线性性质。",
