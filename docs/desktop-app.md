@@ -2,37 +2,26 @@
 
 CS Study Desktop packages the existing static CS learning workspace in `public/` as a Windows desktop application using Tauri 2.
 
-## Product goals
-
-- Keep the current web learning content and page routes; do not fork or rewrite the course material.
-- Store learner state in a local SQLite database under the operating system's application-data directory, never beside the installed executable.
-- Keep learning content (Markdown, question banks, vocabulary, images) separate from personal learning state.
-- Support explicit JSON backup/restore and signed application updates.
-- Preserve the browser-based website as an independent way to access the learning content.
-
 ## Local data
 
-Database file: `cs-study.sqlite3`
+The SQLite file is stored in the operating system's application-data directory, never beside the installed executable. The first schema uses:
+- `learning_store(key, value, updated_at)`: compatibility store for existing localStorage-based pages.
+- `app_meta(key, value)`: schema and migration metadata.
 
-Initial table:
-- `learning_store(key, value, updated_at)`: compatibility key/value store for existing page state.
-- `app_meta(key, value)`: schema version and future migration metadata.
+A Rust document-start script is injected before the existing pages' scripts on every local navigation. It preserves the synchronous localStorage API and mirrors writes/removals into SQLite. At startup, the bootstrap page hydrates localStorage from SQLite before opening the existing `public/index.html`. Learning content remains in the repository and is not copied into the personal database.
 
-The desktop bootstrap hydrates the WebView's localStorage from SQLite before opening the existing `public/index.html`. The Rust commands expose transactional SQLite reads/writes and JSON backup/restore. The WebView storage bridge must be injected before page scripts on every local navigation; it mirrors localStorage mutations into SQLite while retaining synchronous browser storage semantics for the existing pages.
+## Backup and migration
 
-## Backup format
+JSON format identifier: `cs-study-backup`. The backup contains `schema_version`, `created_at`, and all local learning key/value data. Desktop backup and restore are available from the floating **CS 桌面版 · 数据与更新** control. Restore replaces the current local data after confirmation.
 
-JSON format identifier: `cs-study-backup`
+To move learning progress from the browser website into the desktop app, first export the browser's localStorage using `/desktop-export.html` on the website, then import that JSON file in the desktop app. This export is read-only and does not delete browser data.
 
-The backup contains `schema_version`, `created_at`, and the complete key/value learning state. Restoring a backup replaces the current learning state, so the UI asks for confirmation first. Keep backups outside the installation directory.
+## Releases and updates
 
-## Versioning and release
-
-- Update `desktop/src-tauri/tauri.conf.json` and `desktop/src-tauri/Cargo.toml` together for each release.
-- Tag releases as `desktop-vX.Y.Z`, or dispatch the workflow with a version.
-- GitHub Actions builds a Windows NSIS installer and attaches it to GitHub Releases.
-- Tauri updater artifacts must be signed. Generate a key pair with `npm run tauri signer generate`; store the private key and password as GitHub Actions secrets `TAURI_SIGNING_PRIVATE_KEY` and `TAURI_SIGNING_PRIVATE_KEY_PASSWORD`, and put the matching public key in `tauri.conf.json`.
-- The workflow publishes `latest.json` for the Tauri updater when signing secrets are configured.
+- Keep `desktop/src-tauri/tauri.conf.json` and `desktop/src-tauri/Cargo.toml` versions aligned.
+- Publish tags as `desktop-vX.Y.Z`, or manually dispatch the release workflow with a version.
+- GitHub Actions builds a Windows NSIS installer and a signed updater archive, then attaches them to GitHub Releases and publishes `latest.json`.
+- Before the first signed release, generate a Tauri updater key pair with `npm run tauri signer generate` from the `desktop/` directory. Put the private key and password into repository Actions secrets named `TAURI_SIGNING_PRIVATE_KEY` and `TAURI_SIGNING_PRIVATE_KEY_PASSWORD`; replace `REPLACE_WITH_TAURI_UPDATER_PUBLIC_KEY` in `tauri.conf.json` with the matching public key. Do not commit the private key.
 
 ## Development
 
@@ -45,6 +34,6 @@ npm run dev
 npm run build:windows
 ```
 
-## Current implementation boundary
+## Release readiness
 
-The compatibility database layer and bootstrap are the foundation. Before calling a release production-ready, finish and test the document-start localStorage bridge on every page navigation, validate import/export against the website's existing browser data, add schema migrations, and test update/rollback with a signed release. Do not delete browser-side data during migration.
+The source scaffold is committed on a feature branch. A Windows build and real-world migration test are still required before calling the installer production-ready. In particular, verify that every page's localStorage changes are committed to SQLite before closing, test restore against a fresh profile, and test a signed update while confirming that the SQLite file remains unchanged. Add explicit SQLite schema migrations before changing the storage schema.
