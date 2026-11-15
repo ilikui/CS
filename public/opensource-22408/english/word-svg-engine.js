@@ -495,7 +495,7 @@ multiSenseScenes['bear']=[
  [/熊/,['nature','熊：森林中的大型野生动物','<circle cx="250" cy="105" r="28" fill="A4"/><circle cx="390" cy="105" r="28" fill="A4"/><circle cx="320" cy="165" r="92" fill="A3" stroke="A2" stroke-width="9"/><ellipse cx="320" cy="205" rx="48" ry="32" fill="#fff"/><circle cx="285" cy="155" r="8" fill="A2"/><circle cx="355" cy="155" r="8" fill="A2"/><path d="M305 205q15 13 30 0" stroke="A2" stroke-width="7" fill="none"/>']]
 ];
 multiSenseScenes['concern']=[
- [/担.{0,1}心/,['emotion','担忧：人物头顶浮现忧虑气泡','<circle cx="300" cy="170" r="70" fill="A3"/><path d="M250 285q0-75 70-75t70 75" fill="A3" stroke="A2" stroke-width="8"/><path d="M365 80q55-35 85 10 25 45-20 75l-20 28-20-28q-55-35-25-85Z" fill="#fff" stroke="A2" stroke-width="8"/><path d="M410 105v35m0 18v4" stroke="A4" stroke-width="10" stroke-linecap="round"/>']],
+ [/担.{0,1}[心⼼]/,['emotion','担忧：人物头顶浮现忧虑气泡','<circle cx="300" cy="170" r="70" fill="A3"/><path d="M250 285q0-75 70-75t70 75" fill="A3" stroke="A2" stroke-width="8"/><path d="M365 80q55-35 85 10 25 45-20 75l-20 28-20-28q-55-35-25-85Z" fill="#fff" stroke="A2" stroke-width="8"/><path d="M410 105v35m0 18v4" stroke="A4" stroke-width="10" stroke-linecap="round"/>']],
  [/关心|重要的事|关于|涉及|影响/,['speech','关联事项：线索连接到相关主题','<circle cx="210" cy="170" r="42" fill="A4"/><circle cx="430" cy="170" r="42" fill="A3"/><rect x="285" y="115" width="70" height="110" rx="12" fill="#fff" stroke="A2" stroke-width="8"/><path d="M252 170h33m70 0h33" stroke="A2" stroke-width="10"/><path d="M270 155l15 15-15 15m90-30-15 15 15 15" stroke="A4" stroke-width="8" fill="none"/>']]
 ];
 multiSenseScenes['cover']=[
