@@ -1,3 +1,4 @@
+// Audit source identity, target card existence, and candidate coverage; never auto-promote candidates.
 const fs = require('fs');
 const vm = require('vm');
 
