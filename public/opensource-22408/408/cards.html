@@ -374,7 +374,7 @@ function renderDemo(box){
   stage.innerHTML=d.a.map((v,i)=>'<span class="demo-cell '+(d.done?'done':type==='quick'&&i===d.j?'active':type==='heap'&&i<d.n?'active':'')+'">'+v+'</span>').join('')+(type==='quick'?'<div style="width:100%;text-align:center;font-size:12px">当前区间：['+d.p+','+d.q+'] · 枢轴位置：'+d.j+'</div>':'<div style="width:100%;text-align:center;font-size:12px">当前堆区间长度：'+d.n+' · 右侧为已排序后缀</div>');
  }else if(type==='merge'){
   stage.innerHTML=d.a.map((part,i)=>'<div style="display:flex;gap:4px;justify-content:center;flex-wrap:wrap;width:100%">'+part.map(v=>'<span class="demo-cell '+(d.done?'done':'')+'">'+v+'</span>').join('')+'</div>').join('');
- }else if(type==='topo){
+ }else if(type==='topo'){
   stage.innerHTML='<div style="display:flex;gap:7px;flex-wrap:wrap;justify-content:center;width:100%">'+['A','B','C','D','E'].map((v,i)=>'<div style="text-align:center"><span class="demo-node '+(d.v.includes(v)?'visited':'')+'">'+v+'</span><small>入度 '+d.ind[i]+'</small></div>').join('')+'</div>';
  }else if(type==='dijkstra'){
   stage.innerHTML='<div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;width:100%">'+['A','B','C','D'].map((v,i)=>'<div style="text-align:center"><span class="demo-node '+(v===d.cur?'active':d.done.includes(v)?'visited':'')+'">'+v+'</span><small>dist='+d.dist[i]+'</small></div>').join('')+'</div>';
