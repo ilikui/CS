@@ -1,11 +1,50 @@
 use rusqlite::{params, Connection};
 use serde::{Deserialize, Serialize};
-use serde_json::{json, Map, Value};
 use std::{collections::HashMap, fs, path::PathBuf};
-use tauri::{AppHandle, Manager};
+use tauri::{
+    webview::{WebviewUrl, WebviewWindowBuilder},
+    AppHandle, Manager,
+};
 
 const DB_FILE: &str = "cs-study.sqlite3";
 const BACKUP_FORMAT: &str = "cs-study-backup";
+
+// Runs before every local page's own scripts. It preserves the synchronous
+// localStorage API used throughout the existing static learning pages while
+// mirroring each mutation into SQLite asynchronously and in order.
+const STORAGE_BRIDGE: &str = r#"
+(() => {
+  if (!window.__TAURI__?.core?.invoke || window.__CS_SQLITE_BRIDGE__) return;
+  window.__CS_SQLITE_BRIDGE__ = true;
+  const invoke = window.__TAURI__.core.invoke;
+  const proto = Storage.prototype;
+  const originalSet = proto.setItem;
+  const originalRemove = proto.removeItem;
+  const originalClear = proto.clear;
+  let queue = Promise.resolve();
+  const enqueue = (command, args) => {
+    queue = queue.then(() => invoke(command, args)).catch((error) => {
+      console.error('[CS Study] SQLite persistence failed:', error);
+    });
+  };
+  proto.setItem = function(key, value) {
+    const result = originalSet.call(this, key, value);
+    if (this === window.localStorage) enqueue('save_learning_item', { key: String(key), value: String(value) });
+    return result;
+  };
+  proto.removeItem = function(key) {
+    const result = originalRemove.call(this, key);
+    if (this === window.localStorage) enqueue('remove_learning_item', { key: String(key) });
+    return result;
+  };
+  proto.clear = function() {
+    const result = originalClear.call(this);
+    if (this === window.localStorage) enqueue('clear_learning_store');
+    return result;
+  };
+  window.addEventListener('pagehide', () => { queue.catch(() => {}); });
+})();
+"#;
 
 fn database_path(app: &AppHandle) -> Result<PathBuf, String> {
     let dir = app.path().app_data_dir().map_err(|e| e.to_string())?;
@@ -82,12 +121,11 @@ struct BackupFile {
 
 #[tauri::command]
 fn export_learning_backup(app: AppHandle) -> Result<String, String> {
-    let data = load_learning_store(app)?;
     let backup = BackupFile {
         format: BACKUP_FORMAT.to_string(),
         schema_version: 1,
         created_at: chrono::Utc::now().to_rfc3339(),
-        data,
+        data: load_learning_store(app)?,
     };
     serde_json::to_string_pretty(&backup).map_err(|e| e.to_string())
 }
@@ -127,6 +165,17 @@ fn main() {
         .plugin(tauri_plugin_process::init())
         .setup(|app| {
             open_database(&app.handle())?;
+            WebviewWindowBuilder::new(
+                app,
+                "main",
+                WebviewUrl::App("desktop-bootstrap.html".into()),
+            )
+            .title("CS Study · 2028 考研学习工作台")
+            .inner_size(1440.0, 920.0)
+            .min_inner_size(980.0, 680.0)
+            .center()
+            .initialization_script(STORAGE_BRIDGE)
+            .build()?;
             Ok(())
         })
         .invoke_handler(tauri::generate_handler![
