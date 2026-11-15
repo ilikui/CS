@@ -2,8 +2,8 @@ use rusqlite::{params, Connection};
 use serde::{Deserialize, Serialize};
 use std::{collections::HashMap, fs, path::PathBuf};
 use tauri::{
-    webview::{WebviewUrl, WebviewWindowBuilder},
-    AppHandle, Manager,
+    webview::WebviewWindowBuilder,
+    AppHandle, Manager, WebviewUrl,
 };
 
 const DB_FILE: &str = "cs-study.sqlite3";
