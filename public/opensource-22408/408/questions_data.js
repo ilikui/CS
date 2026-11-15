@@ -1,5 +1,5 @@
 // 408 原创基础练习题（非历年真题）。题目与解析为本项目原创整理，后续持续扩充。
-const QUESTIONS_DATA = [
+window.QUESTIONS_DATA = [
   {
     "id": "ds-001",
     "subject": "data-structure",
