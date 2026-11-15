@@ -183,6 +183,18 @@ body.study-mode-spell #dd,body.study-mode-quiz #dd{display:none}
 #bc .bgt{padding:12px 10px;border-radius:9px;background:#f8fafc}
 #bc .bw-slow{border:1px solid #dce7ef;border-radius:7px;background:#f7fafc;color:#416987;padding:4px 8px;font-size:11px;cursor:pointer}#bc .bw-ipa{display:flex;gap:6px;flex-wrap:wrap;margin:7px 0;color:#315e82;font-size:12px}#bc .bw-ipa-item{padding:4px 7px;border:1px solid #e3ebf1;border-radius:7px;background:#f7fafc}#bc .bw-ipa-label{font-size:10px;color:#8495a4;margin-right:4px;font-weight:700}#bc .bw-ipa-loading,#bc .bw-ipa-empty{font-size:11px;color:#9aa6b2}#bc .bw-audio{display:flex;gap:6px;margin:6px 0 8px}#bc .bw-audio button{border:1px solid #dce7ef;border-radius:7px;background:#f7fafc;color:#416987;padding:4px 8px;font-size:11px;cursor:pointer}#bc .bw-audio button:hover{background:#eaf2f8}
 @media(max-width:768px){#browse-toolbar{margin:-16px -16px 14px;padding:12px}#browse-toolbar .browse-toolbar-title{width:100%}#browse-toolbar button{flex:1}}
+
+<style id="syllable-guide-style">
+.syllable-guide{margin:8px 0 10px;padding:9px 11px;border:1px solid #e4ebf1;border-radius:10px;background:#f8fafc}
+.syllable-row{display:flex;align-items:baseline;gap:3px;flex-wrap:wrap;color:#536a7e;font-size:14px}
+.syllable{padding:3px 5px;border-radius:5px;background:#edf2f6}
+.syllable.stressed{background:#e3edf7;color:#24577e;font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.syllable.stressed sup{font-size:10px;color:#b66b4b;margin-left:2px}
+.syllable-dot{font-style:normal;color:#9aa9b7}
+.syllable-meta{margin-top:5px;color:#8292a1;font-size:10px;line-height:1.5}
+#bc .syllable-guide{margin:6px 0 8px;padding:7px 9px}
+#bc .syllable-row{font-size:12px}
+</style>
 </style>
 <style id="english-page-redesign">
 :root{--ink:#202a35;--muted:#718096;--line:#e8edf2;--paper:#f4f7fb;--accent:#426b8f;--accent-soft:#eaf2f8;--warm:#b66b4b}
@@ -786,5 +798,6 @@ window.onload=function(){
 </script>
 <style id="word-svg-memory-style">#word-enrichment .word-svg-memory{width:100%;margin:0 0 18px;padding:16px;border:1px solid rgba(65,105,85,.15);border-radius:20px;background:linear-gradient(145deg,#fff,#f3f7f1);box-shadow:0 8px 26px rgba(45,75,55,.06)}.word-svg-heading{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;color:#365b46;font-size:13px;font-weight:750}.word-svg-kind{padding:4px 10px;border-radius:99px;background:#e8f0e8;color:#54745c;font-size:11px;white-space:nowrap}.word-svg-art{overflow:hidden;border-radius:14px;background:#f5f7f1}.word-svg-art svg{display:block;width:100%;height:auto;max-height:300px}.word-svg-caption{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-top:12px}.word-svg-caption strong{font-size:20px;color:#263d2e}.word-svg-caption span{font-size:13px;color:#68766b}.word-svg-tip{margin-top:8px;color:#849087;font-size:11px;line-height:1.6}@media(max-width:600px){#word-enrichment .word-svg-memory{padding:12px}.word-svg-art svg{max-height:220px}}</style>
 <script src="/opensource-22408/english/word-svg-engine.js" defer></script>
-<script src="/render-enhance.js" defer></script>\n</body>
+<script src="/render-enhance.js" defer></script>
+<script src="/opensource-22408/english/pronunciation-guide.js" defer></script>\n</body>
 </html>
