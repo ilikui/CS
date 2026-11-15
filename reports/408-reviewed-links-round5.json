@@ -1,0 +1,33 @@
+{
+  "count": 4,
+  "items": [
+    {
+      "topic": "中断I_O与DMA的CPU时间占比",
+      "card": "计算机性能指标 CPI 与 CPU 时间",
+      "year": 2009,
+      "index": 43,
+      "kind": "application"
+    },
+    {
+      "topic": "Cache缺失与突发总线事务时延",
+      "card": "计算机性能指标 CPI 与 CPU 时间",
+      "year": 2013,
+      "index": 43,
+      "kind": "application"
+    },
+    {
+      "topic": "SR最大窗口与超时重传",
+      "card": "SR 选择重传协议",
+      "year": 2024,
+      "index": 37,
+      "kind": "choice"
+    },
+    {
+      "topic": "传输层下层的路由功能",
+      "card": "分层体系结构与封装",
+      "year": 2021,
+      "index": 33,
+      "kind": "choice"
+    }
+  ]
+}
