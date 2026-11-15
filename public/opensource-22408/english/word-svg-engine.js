@@ -340,6 +340,38 @@ Object.assign(multiSenseScenes,{
  change:[[/改变|变化|变换|不同|转换|替代|互换/,makeExtraSense('change','改变：状态或内容发生变化','change')],[/换衣服|换乘/,makeExtraSense('transition','更换：从一种选择切换到另一种','shift')],[/零钱/,makeExtraSense('money','零钱：交易后的零散货币','money')]]
 });
 
+/* 62 curated dictionary-matched English-II sense rules across 31 high-value headwords. */
+multiSenseScenes['deal']=[[/大量|很多|交易|协议/,['economy','交易与数量',art.economy]],[/处理|对付|做生意|涉及|发牌|贩毒/,['person','处理事务',art.person]]];
+multiSenseScenes['fair']=[[/公平|按照规则|合理/,['law','公平裁决',art.law]],[/展销会|集市|露天游乐场|浅色|晴朗|美丽|不错|相当大/,['nature','集市与晴朗',art.nature]]];
+multiSenseScenes['gift']=[[/礼物|赠送/,['growth','包装礼物',art.growth]],[/天赋|才能/,['idea','天赋能力',art.idea]]];
+multiSenseScenes['tend']=[[/往往会|倾向于/,['travel','倾向与方向',art.travel]],[/照顾|照料|管理|打点/,['person','照料管理',art.person]]];
+multiSenseScenes['operate']=[[/操作|使运行|运转|工作/,['science','机器运转',art.science]],[/动手术|经营|使用/,['person','手术与经营',art.person]]];
+multiSenseScenes['current']=[[/当前|现在|流行/,['time','当前时刻',art.time]],[/水流|气流|电流|思潮/,['nature','流动与电流',art.nature]]];
+multiSenseScenes['average']=[[/平均|平均数|均值|平均水平/,['science','平均值计算',art.science]],[/中等|普通|数量/,['observe','普通水平对照',art.observe]]];
+multiSenseScenes['suit']=[[/西服|套装/,['person','西装套装',art.person]],[/诉讼|起诉|适合|相配|合身/,['law','适合与诉讼',art.law]]];
+multiSenseScenes['feature']=[[/特征|特点|五官/,['observe','面部特征',art.observe]],[/特写|专题|特色|起重要作用/,['knowledge','专题报道',art.knowledge]]];
+multiSenseScenes['claim']=[[/声称|声明|认为/,['speech','提出主张',art.speech]],[/要求拥有|认领|获得|索取|索赔|夺去|生命/,['law','所有权与索赔',art.law]]];
+multiSenseScenes['apply']=[[/申请|适用/,['knowledge','提交申请',art.knowledge]],[/应用|运用|涂抹|按|踩/,['person','实际应用',art.person]]];
+multiSenseScenes['approach']=[[/接近|靠近|路径/,['travel','逐步接近',art.travel]],[/接洽|要求|处理|对付|方法|态度/,['speech','方法与交涉',art.speech]]];
+multiSenseScenes['process']=[[/过程|流程|工序/,['time','流程步骤',art.time]],[/加工|处理|审阅|审核/,['science','加工与审核',art.science]]];
+multiSenseScenes['expect']=[[/预计|猜想/,['observe','预测未来',art.observe]],[/盼望|要求|期望/,['emotion','期待与盼望',art.emotion]]];
+multiSenseScenes['run']=[[/奔跑|跑|赛跑/,['person','奔跑动作',art.person]],[/管理|经营|运转|操作|刊登|包含|连续上演|流淌|行驶|发生|变成/,['science','运营与持续运行',art.science]]];
+multiSenseScenes['work']=[[/工作|干活|职业|劳动/,['person','工作场景',art.person]],[/奏效|运转|管理|经营|操作|作品|成果|争取/,['science','成果与有效运作',art.science]]];
+multiSenseScenes['file']=[[/文件夹|文件|档案|归档/,['knowledge','文件归档',art.knowledge]],[/提起|诉讼|提交|申请|发送|报道|纵队|锉/,['law','正式提交与诉讼',art.law]]];
+multiSenseScenes['cross']=[[/越过|渡过|相交|交叉|十字架|叉号/,['travel','交叉与跨越',art.travel]],[/反对|恼怒|生气/,['emotion','反对与恼怒',art.emotion]]];
+multiSenseScenes['handle']=[[/处理|应付|驾驭/,['science','处理复杂事务',art.science]],[/把手|柄|触|拿/,['person','握住把手',art.person]]];
+multiSenseScenes['tackle']=[[/难题|交涉|处理|抓获/,['science','攻克难题',art.science]],[/抢球|抢断|擒抱|阻截|体育器材/,['person','球场抢断',art.person]]];
+multiSenseScenes['mirror']=[[/镜子|映照|反射/,['observe','镜面反射',art.observe]],[/写照|反映|相似/,['observe','现实映照',art.observe]]];
+multiSenseScenes['counter']=[[/柜台|料理台/,['economy','服务柜台',art.economy]],[/计算器|反驳|驳斥|抵制|抵消|逆向|反对/,['law','反向抵消与反驳',art.law]]];
+multiSenseScenes['silence']=[[/寂静|无声|安静/,['nature','安静无声',art.nature]],[/沉默|缄口|压制|反对意见/,['speech','保持沉默',art.speech]]];
+multiSenseScenes['echo']=[[/回声|回音|回响/,['nature','山谷回声',art.nature]],[/相似|附和|重复|充满回声/,['speech','重复与附和',art.speech]]];
+multiSenseScenes['bay']=[[/海湾|湾|水域/,['nature','海湾地形',art.nature]],[/隔间|月桂|栗色马|长嗥|强烈要求|棕红色/,['observe','bay的其他义项',art.observe]]];
+multiSenseScenes['manual']=[[/人⼒|体⼒|手动|人力|体力/,['person','手动操作',art.person]],[/手册|说明书|使用手册/,['knowledge','使用手册',art.knowledge]]];
+multiSenseScenes['facility']=[[/设备|设施/,['science','设备设施',art.science]],[/功能|天资|才能/,['idea','特殊功能与天资',art.idea]]];
+multiSenseScenes['represent']=[[/代表|象征|体现/,['person','代表与象征',art.person]],[/表示|描绘|意味着|相当于/,['knowledge','图示表达含义',art.knowledge]]];
+multiSenseScenes['plus']=[[/加|外加|加号/,['science','加法运算',art.science]],[/优势|长处|零上|优点|此外|况且|多的/,['growth','额外优势',art.growth]]];
+multiSenseScenes['extra']=[[/额外|附加|另外|特别|格外/,['growth','额外增加',art.growth]],[/另外收费|临时演员/,['person','临时演员与附加收费',art.person]]];
+multiSenseScenes['overhead']=[[/头顶|空中/,['nature','头顶上方',art.nature]],[/经营开支|经营开⽀|开支|开⽀/,['economy','企业经营开支',art.economy]]];
 function matchSenseScene(word,meaning){
  var entries=multiSenseScenes[String(word||'').toLowerCase()];
  if(!entries)return null;
