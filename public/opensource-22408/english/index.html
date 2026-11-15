@@ -98,7 +98,19 @@
             .nav-btns{bottom:100px}
             .nav-btn{width:48px;height:48px;font-size:18px}
         }
-    </style>
+    
+/* SVG memory illustrations for phrases and example sentences */
+.enrich-phrase-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-top:12px}
+.enrich-phrase-card{min-width:0;border:1px solid var(--line,#e5e7eb);border-radius:14px;overflow:hidden;background:var(--card,#fff)}
+.enrich-visual{width:100%;overflow:hidden;border-radius:10px;background:#f3f6f8}
+.enrich-visual svg{display:block;width:100%;height:auto}
+.enrich-phrase-card .enrich-visual{border-radius:0}
+.enrich-phrase-text{display:flex;flex-direction:column;gap:4px;padding:10px 12px}
+.enrich-sentence-visual{display:grid;grid-template-columns:minmax(112px,180px) 1fr;gap:12px;align-items:center}
+.enrich-sentence-visual .enrich-visual{max-width:180px}
+.enrich-sentence-copy{min-width:0}
+@media(max-width:560px){.enrich-sentence-visual{grid-template-columns:1fr}.enrich-sentence-visual .enrich-visual{max-width:100%}}
+</style>
 
 <style id="study-card-enhancements">
 #dd{display:none!important}
@@ -560,8 +572,9 @@ window.onload=function(){
  function renderResult(word,phrases,sentences,extra){
    const el=document.getElementById('enrich-content');if(!el)return;
    let html='';
-   if(phrases.length)html+='<div class="enrich-section"><h3>常见词组与固定搭配</h3><div class="enrich-tags">'+phrases.map(p=>'<span class="enrich-tag"><b>'+safe(p.en)+'</b>'+(p.zh?'<br><span class="enrich-zh">'+safe(p.zh)+'</span>':'')+'</span>').join('')+'</div></div>';
-   if(sentences.length)html+='<div class="enrich-section"><h3>双语短句 · 在语境中理解单词</h3>'+sentences.map(s=>'<div class="enrich-sentence"><div class="enrich-en">'+safe(s.en)+'</div>'+(s.zh?'<div class="enrich-zh">'+safe(s.zh)+'</div>':'<div class="enrich-zh">暂未取得该例句的中文翻译</div>')+'</div>').join('')+'</div>';
+   const visual=(en,zh)=>window.createWordMemorySvg?'<div class="enrich-visual" aria-label="词组联想插画">'+window.createWordMemorySvg(en,zh||word)+'</div>':'';
+   if(phrases.length)html+='<div class="enrich-section"><h3>常见词组与固定搭配 · 图像联想</h3><div class="enrich-phrase-grid">'+phrases.map(p=>'<article class="enrich-phrase-card">'+visual(p.en,p.zh)+'<div class="enrich-phrase-text"><b>'+safe(p.en)+'</b>'+(p.zh?'<span class="enrich-zh">'+safe(p.zh)+'</span>':'')+'</div></article>').join('')+'</div></div>';
+   if(sentences.length)html+='<div class="enrich-section"><h3>双语短句 · 在语境中理解单词</h3>'+sentences.map(s=>'<article class="enrich-sentence enrich-sentence-visual">'+visual(s.en,s.zh||word)+'<div class="enrich-sentence-copy"><div class="enrich-en">'+safe(s.en)+'</div>'+(s.zh?'<div class="enrich-zh">'+safe(s.zh)+'</div>':'<div class="enrich-zh">暂未取得该例句的中文翻译</div>')+'</div></article>').join('')+'</div>';
    if(extra.length)html+='<div class="enrich-section"><h3>补充英文释义</h3>'+extra.map(x=>'<div class="enrich-tag">'+safe(x)+'</div>').join('')+'</div>';
    if(!html)html='<div class="enrich-error">在线词典暂未返回该词的词组或例句。你仍可使用上方原始中文释义和拼写练习。</div>';
    html+='<div class="enrich-note">在线补充内容来自第三方词典接口，网络或接口不可用时不会影响本地词库与背诵功能；例句翻译缺失时会明确标注，不自动编造。</div>';
