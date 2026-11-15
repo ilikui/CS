@@ -53,13 +53,19 @@
   const EXAM_CARD_TITLES = {
     
   };
+  const GENERIC_MATCH_TERMS = new Set(['导数','积分','数列','矩阵','行列式','秩','极限','连续','函数','方程','向量','面积']);
   function getRelatedKnowledgeCards(q) {
-    const body = String(q[3] || '') + ' ' + String(q[5] || '');
+    const question = String(q[3] || '');
+    const solution = String(q[5] || '');
+    const body = question + ' ' + solution;
     return Object.entries(EXAM_TOPIC_TERMS).map(([id, words]) => {
-      const hits = words.filter(word => body.includes(word));
-      return { id, hits, score: hits.length };
-    }).filter(item => item.score > 0)
-      .sort((a, b) => b.score - a.score || a.id.localeCompare(b.id))
+      const hits = words.filter(word => word && !GENERIC_MATCH_TERMS.has(word) && body.includes(word));
+      const questionHits = hits.filter(word => question.includes(word));
+      const score = hits.reduce((sum, word) => sum + (word.length >= 4 ? 3 : word.length === 3 ? 2 : 1), 0)
+        + questionHits.length * 2;
+      return { id, hits, score, questionHits: questionHits.length };
+    }).filter(item => item.score >= 2)
+      .sort((a, b) => b.score - a.score || b.questionHits - a.questionHits || a.id.localeCompare(b.id))
       .slice(0, 5);
   }
   function renderKnowledgeLinks(q) {
