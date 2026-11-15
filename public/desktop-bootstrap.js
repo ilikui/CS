@@ -44,6 +44,8 @@ async function boot() {
     panel.querySelector("#cs-tools-toggle").addEventListener("click", () => { menu.hidden = !menu.hidden; });
     panel.querySelector('[data-action="backup"]').addEventListener("click", async () => {
       try {
+        const snapshot = Object.fromEntries(Object.keys(localStorage).map(key => [key, localStorage.getItem(key) ?? ""]));
+        await invoke("save_learning_snapshot", { data: snapshot });
         const json = await invoke("export_learning_backup");
         const blob = new Blob([json], { type: "application/json" });
         const url = URL.createObjectURL(blob);
@@ -61,9 +63,6 @@ async function boot() {
       if (!confirm("恢复备份会替换当前客户端中的学习数据。建议先导出当前备份，确定继续吗？")) return;
       try {
         const count = await invoke("import_learning_backup", { content: await file.text() });
-        const data = await invoke("load_learning_store");
-        localStorage.clear();
-        for (const [key, value] of Object.entries(data || {})) localStorage.setItem(key, value);
         message.textContent = `已恢复 ${count} 项数据，正在刷新页面…`;
         setTimeout(() => location.reload(), 700);
       } catch (error) { message.textContent = `恢复失败：${String(error)}`; }
