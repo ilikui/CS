@@ -96,18 +96,35 @@
     })).filter(item => Object.prototype.hasOwnProperty.call(EXAM_TOPIC_TERMS, item.id));
   }
   function renderKnowledgeLinks(q) {
+    const questionIndex = EXAM_DATA.indexOf(q);
+    const verified = window.EXAM_KNOWLEDGE_MAP && window.EXAM_KNOWLEDGE_MAP[questionIndex];
+    const questionId = [q[0], q[1], q[2], questionIndex].join('-');
+    if (verified && verified.status === 'verified') {
+      const primary = verified.primary || [];
+      const secondary = verified.secondary || [];
+      const ids = [...new Set([...primary, ...secondary])];
+      const link = id => '<a href="./cards.html#card-' + encodeURIComponent(id) + '">' + id + '</a>';
+      const esc = value => String(value || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      return '<div class="q-knowledge-links q-knowledge-verified">' +
+        '<b>人工核验考点：</b><div><strong>核心考点：</strong>' + primary.map(link).join(' ') +
+        '</div><div><strong>次级考点：</strong>' + secondary.map(link).join(' ') +
+        '</div><details><summary>核验依据与解题提示</summary>' +
+        '<p><strong>判定依据：</strong>' + esc(verified.rationale) + '</p>' +
+        '<p><strong>解题方法：</strong>' + esc(verified.methods) + '</p>' +
+        '<p><strong>易错点：</strong>' + esc(verified.pitfalls) + '</p></details>' +
+        '<button type="button" class="q-add-review" data-card-ids="' + ids.join(',') +
+        '" data-question-id="' + questionId.replace(/"/g,'&quot;') + '">做错了 · 加入知识卡复习</button></div>';
+    }
     const related = getRelatedKnowledgeCards(q);
     const ids = related.map(item => item.id);
-    const questionId = [q[0], q[1], q[2]].join('-');
     const fallback = related.some(item => item.source === 'rule-fallback');
-    return '<div class="q-knowledge-links"><b>关联知识卡（' +
-      (fallback ? '规则补充候选，待人工核验' : '关键词候选，待人工核验') + '）：</b>' +
+    return '<div class="q-knowledge-links"><b>自动候选关联（待人工核验）：</b>' +
       related.map(item => '<a href="./cards.html#card-' + encodeURIComponent(item.id) +
         '" title="' + (item.hits.length ? '命中关键词：' + item.hits.slice(0, 3).join('、') : '按题目表达式与题型规则补充的候选关联') +
         '">' + item.id + '</a>').join('') +
+      '<small>' + (fallback ? '按规则补充的候选考点，尚未人工确认。' : '按题干与解析关键词匹配，尚未人工确认。') + '</small>' +
       '<button type="button" class="q-add-review" data-card-ids="' + ids.join(',') +
-      '" data-question-id="' + questionId.replace(/"/g,'&quot;') + '">做错了 · 加入知识卡复习</button>' +
-      '<small>每道真题均提供知识卡入口；关键词或规则补充均为候选关联，不能等同于人工核验考点。</small></div>';
+      '" data-question-id="' + questionId.replace(/"/g,'&quot;') + '">做错了 · 加入知识卡复习</button></div>';
   }
   function addQuestionCardsToReview(button) {
     const key = 'math2_card_review_v1';
