@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2027考研</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, sans-serif;
+            background: #050505;
+            color: #e8e4de;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ===== Animated Background Grid ===== */
+        .bg-grid {
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ===== Spotlight Effect (cursor-following glow) ===== */
+        .spotlight {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,200,100,0.06) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+            transform: translate(-50%, -50%);
+            transition: left 0.3s ease-out, top 0.3s ease-out;
+        }
+
+        /* ===== Main Content ===== */
+        .page {
+            position: relative;
+            z-index: 2;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 48px;
+        }
+
+        /* ===== Header with Text Generate Effect ===== */
+        .header {
+            margin-bottom: 60px;
+        }
+        .header-sub {
+            font-size: 12px;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: #8a8477;
+            margin-bottom: 12px;
+        }
+        .header-title {
+            font-size: clamp(40px, 7vw, 80px);
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -2px;
+            color: #f5f0e8;
+        }
+        .header-title .char {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(30px) rotateX(40deg);
+            animation: charIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        @keyframes charIn {
+            to { opacity: 1; transform: translateY(0) rotateX(0); }
+        }
+
+        /* ===== Countdown ===== */
+        .countdown {
+            margin-bottom: 48px;
+            display: flex;
+            align-items: flex-end;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .cd-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cd-num {
+            font-size: clamp(48px, 7vw, 80px);
+            font-weight: 900;
+            line-height: 1;
+            letter-spacing: -3px;
+            font-variant-numeric: tabular-nums;
+            background: linear-gradient(180deg, #f5f0e8 20%, #8a8477 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+        .cd-num::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 2px;
+            background: rgba(212, 165, 116, 0.3);
+            border-radius: 1px;
+        }
+        .cd-label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #7a756d;
+            margin-top: 10px;
+        }
+        .cd-sep {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 300;
+            color: #6b6560;
+            line-height: 1;
+            padding-bottom: 28px;
+            animation: cdBlink 1s step-end infinite;
+        }
+        @keyframes cdBlink {
+            50% { opacity: 0.2; }
+        }
+        .cd-tag {
+            font-size: 13px;
+            color: #8a8477;
+            padding-bottom: 28px;
+            letter-spacing: 1px;
+        }
+
+        /* ===== Bento Grid ===== */
+        .bento {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 20px;
+            flex: 1;
+        }
+
+        /* ===== Card Base with Moving Border ===== */
+        .card {
+            position: relative;
+            border-radius: 24px;
+            padding: 48px 44px;
+            text-decoration: none;
+            color: inherit;
+            overflow: hidden;
+            background: #0a0a0a;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card:hover { transform: translateY(-4px); }
+
+        /* Moving border glow */
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            padding: 1px;
+            background: conic-gradient(from var(--angle, 0deg), transparent 40%, var(--border-color) 50%, transparent 60%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: rotateBorder 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .card:hover::before { opacity: 1; }
+
+        @property --angle {
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
+        }
+        @keyframes rotateBorder {
+            to { --angle: 360deg; }
+        }
+
+        /* Card inner glow */
+        .card::after {
+            content: '';
+            position: absolute;
+            inset: 1px;
+            border-radius: 23px;
+            background: #0a0a0a;
+            z-index: -1;
+        }
+
+        /* Math card */
+        .card-math { --border-color: rgba(212, 165, 116, 0.6); }
+        .card-math .glow {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 165, 116, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* English card */
+        .card-eng { --border-color: rgba(106, 190, 130, 0.6); }
+        .card-eng .glow {
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(106, 190, 130, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Small info card */
+        .card-info {
+            --border-color: rgba(150, 150, 150, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+        }
+
+        /* Politics card - warm red */
+        .card-pol { --border-color: rgba(192, 57, 43, 0.6); }
+        .card-pol .glow {
+            position: absolute;
+            top: -60px;
+            left: -60px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(192, 57, 43, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* ===== Card Content ===== */
+        .card-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        .card-math .card-label { color: #c4956a; }
+        .card-eng .card-label { color: #6abe82; }
+        .card-pol .card-label { color: #e74c3c; }
+
+        .card-title {
+            font-size: clamp(32px, 4vw, 52px);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        .card-math .card-title { color: #f5ede0; }
+        .card-eng .card-title { color: #e0f5e6; }
+        .card-pol .card-title { color: #f5dede; }
+
+        .card-desc {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #9a9590;
+            margin-bottom: 32px;
+            max-width: 400px;
+        }
+
+        .card-stats {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .stat {
+            font-size: 13px;
+            font-weight: 600;
+            position: relative;
+            padding-left: 14px;
+        }
+        .stat::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+        .card-math .stat { color: #b08860; }
+        .card-math .stat::before { background: #c4956a; }
+        .card-eng .stat { color: #5a9a6a; }
+        .card-eng .stat::before { background: #6abe82; }
+        .card-pol .stat { color: #c0392b; }
+        .card-pol .stat::before { background: #e74c3c; }
+
+        .card-arrow {
+            position: absolute;
+            right: 40px;
+            bottom: 40px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-math .card-arrow { background: rgba(196, 149, 106, 0.1); color: #c4956a; }
+        .card-eng .card-arrow { background: rgba(106, 190, 130, 0.1); color: #6abe82; }
+        .card-pol .card-arrow { background: rgba(192, 57, 43, 0.1); color: #e74c3c; }
+        .card:hover .card-arrow { transform: translate(4px, -4px); }
+        .card-math:hover .card-arrow { background: rgba(196, 149, 106, 0.2); }
+        .card-eng:hover .card-arrow { background: rgba(106, 190, 130, 0.2); }
+        .card-pol:hover .card-arrow { background: rgba(192, 57, 43, 0.2); }
+        .card-arrow svg { width: 20px; height: 20px; }
+
+        /* Decorative large character */
+        .deco-char {
+            position: absolute;
+            font-size: 200px;
+            font-weight: 900;
+            opacity: 0.03;
+            pointer-events: none;
+            line-height: 1;
+        }
+        .card-math .deco-char { right: 20px; bottom: -20px; color: #c4956a; }
+        .card-eng .deco-char { right: 30px; top: -10px; color: #6abe82; font-size: 140px; }
+        .card-pol .deco-char { left: 20px; bottom: -10px; color: #e74c3c; font-size: 160px; }
+
+        .card-408 { --border-color: rgba(52, 152, 219, 0.6); }
+        .card-408 .glow {
+            position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(52,152,219,0.08) 0%, transparent 50%);
+            opacity: 0; transition: opacity 0.6s;
+        }
+        .card-408:hover .glow { opacity: 1; }
+        .card-408 .card-label { color: #3498db; }
+        .card-408 .card-title { color: #ddeeff; }
+        .card-408 .stat { color: #2980b9; }
+        .card-408 .stat::before { background: #3498db; }
+        .card-408 .card-arrow { background: rgba(52, 152, 219, 0.1); color: #3498db; }
+        .card-408:hover .card-arrow { background: rgba(52, 152, 219, 0.2); }
+        .card-408 .deco-char { left: 20px; bottom: -10px; color: #3498db; font-size: 160px; }
+
+        /* ===== Sparkle Particles ===== */
+        .sparkles {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .sparkle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            animation: sparkleFloat linear infinite;
+            opacity: 0;
+        }
+        @keyframes sparkleFloat {
+            0% { opacity: 0; transform: translateY(0) scale(0); }
+            15% { opacity: 1; transform: translateY(-20px) scale(1); }
+            85% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(-100px) scale(0); }
+        }
+
+        /* ===== Info Card Content ===== */
+        .info-text {
+            font-size: 14px;
+            color: #8a8477;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .info-text strong { color: #aaa; }
+
+        /* ===== Bottom ===== */
+        .bottom {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .bottom-hint {
+            font-size: 12px;
+            color: #7a756d;
+            letter-spacing: 1px;
+        }
+        .bottom-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #c4956a;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.3); }
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 768px) {
+            .page { padding: 28px 20px; }
+            .bento { grid-template-columns: 1fr; }
+            .card-math { grid-row: auto; }
+            .card { padding: 32px 28px; }
+            .card-title { font-size: 28px; }
+            .header { margin-bottom: 24px; }
+            .deco-char { font-size: 100px; }
+            .countdown { gap: 16px; margin-bottom: 32px; }
+            .cd-sep { padding-bottom: 20px; }
+            .cd-tag { padding-bottom: 20px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-grid"></div>
+    <div class="spotlight" id="spotlight"></div>
+
+    <div class="page">
+        <div class="header">
+            <div class="header-sub">graduate entrance exam</div>
+            <div class="header-title" id="title"></div>
+        </div>
+
+        <div class="countdown" id="countdown">
+            <div class="cd-block"><div class="cd-num" id="cd-d">--</div><div class="cd-label">天</div></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><div class="cd-num" id="cd-h">--</div><div class="cd-label">时</div></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><div class="cd-num" id="cd-m">--</div><div class="cd-label">分</div></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-block"><div class="cd-num" id="cd-s">--</div><div class="cd-label">秒</div></div>
+            <div class="cd-tag">距 2027 考研初试</div>
+        </div>
+
+        <div class="bento">
+            <a href="math/index.html" class="card card-math">
+                <div class="glow"></div>
+                <div class="sparkles" id="sparkles-math"></div>
+                <div class="deco-char">∫</div>
+                <div class="card-label">数学二</div>
+                <div class="card-title">四十年真题<br>一道道过</div>
+                <div class="card-desc">1987 到 2026 的全部真题在这里。按年份挑，按题型筛，答案解析都带。知识点脑图和公式速查也塞进去了，翻起来快。</div>
+                <div class="card-stats">
+                    <span class="stat">771 道真题</span>
+                    <span class="stat">1987-2026</span>
+                    <span class="stat">分页不卡</span>
+                </div>
+                <div class="card-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </div>
+            </a>
+
+            <a href="english/index.html" class="card card-eng">
+                <div class="glow"></div>
+                <div class="sparkles" id="sparkles-eng"></div>
+                <div class="deco-char">Aa</div>
+                <div class="card-label">英语</div>
+                <div class="card-title">考研词汇</div>
+                <div class="card-desc">6500 多个词，按必考和基础分好类了。搜单词、查释义都行，看到哪自动存，下次接着来。</div>
+                <div class="card-stats">
+                    <span class="stat">6551 词</span>
+                    <span class="stat">59 单元</span>
+                </div>
+                <div class="card-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </div>
+            </a>
+
+            <a href="408/index.html" class="card card-408">
+                <div class="glow"></div>
+                <div class="sparkles" id="sparkles-408"></div>
+                <div class="deco-char">408</div>
+                <div class="card-label">408 计算机</div>
+                <div class="card-title">学四门<br>拿150</div>
+                <div class="card-desc">数据结构、计组、操作系统、计网四合一。知识点幻灯片复习，17年真题799道在线刷。</div>
+                <div class="card-stats">
+                    <span class="stat">4 门课 114 卡片</span>
+                    <span class="stat">799 道真题</span>
+                </div>
+                <div class="card-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </div>
+            </a>
+
+            <a href="politics/index.html" class="card card-pol">
+                <div class="glow"></div>
+                <div class="sparkles" id="sparkles-pol"></div>
+                <div class="deco-char">政</div>
+                <div class="card-label">政治</div>
+                <div class="card-title">背考点<br>刷真题</div>
+                <div class="card-desc">马原、毛中特、史纲、思法、形策五大板块全覆盖。知识点整理好了，选择题分析题都有，看完直接刷。</div>
+                <div class="card-stats">
+                    <span class="stat">5 大板块</span>
+                    <span class="stat">知识库 + 题库</span>
+                </div>
+                <div class="card-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </div>
+            </a>
+        </div>
+
+        <div class="bottom">
+            <div class="bottom-hint">四门一起冲，别偏科</div>
+            <div class="bottom-dot"></div>
+        </div>
+    </div>
+
+    <script>
+    // ===== Text Generate Effect (character by character) =====
+    const titleEl = document.getElementById('title');
+    const titleText = '2027 考研';
+    titleText.split('').forEach((char, i) => {
+        const span = document.createElement('span');
+        span.className = 'char';
+        span.textContent = char === ' ' ? ' ' : char;
+        span.style.animationDelay = `${i * 0.06}s`;
+        titleEl.appendChild(span);
+    });
+
+    // ===== Countdown Timer =====
+    // 2027考研初试：2026年12月第三个周末（预估12月19-20日）
+    const EXAM_DATE = new Date('2026-12-19T08:30:00+08:00');
+    const cdD = document.getElementById('cd-d');
+    const cdH = document.getElementById('cd-h');
+    const cdM = document.getElementById('cd-m');
+    const cdS = document.getElementById('cd-s');
+
+    function updateCountdown() {
+        const now = new Date();
+        const diff = EXAM_DATE - now;
+        if (diff <= 0) {
+            cdD.textContent = '00';
+            cdH.textContent = '00';
+            cdM.textContent = '00';
+            cdS.textContent = '00';
+            document.querySelector('.cd-tag').textContent = '考试已开始';
+            return;
+        }
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        cdD.textContent = String(d).padStart(2, '0');
+        cdH.textContent = String(h).padStart(2, '0');
+        cdM.textContent = String(m).padStart(2, '0');
+        cdS.textContent = String(s).padStart(2, '0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ===== Spotlight (cursor-following glow) =====
+    const spotlight = document.getElementById('spotlight');
+    document.addEventListener('mousemove', (e) => {
+        spotlight.style.left = e.clientX + 'px';
+        spotlight.style.top = e.clientY + 'px';
+    });
+
+    // ===== Sparkle Particles =====
+    function createSparkles(containerId, color) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        for (let i = 0; i < 12; i++) {
+            const s = document.createElement('div');
+            s.className = 'sparkle';
+            s.style.left = Math.random() * 100 + '%';
+            s.style.top = Math.random() * 100 + '%';
+            s.style.background = color;
+            s.style.animationDuration = (2 + Math.random() * 3) + 's';
+            s.style.animationDelay = Math.random() * 3 + 's';
+            container.appendChild(s);
+        }
+    }
+    createSparkles('sparkles-math', '#c4956a');
+    createSparkles('sparkles-eng', '#6abe82');
+    createSparkles('sparkles-pol', '#e74c3c');
+    createSparkles('sparkles-408', '#3498db');
+
+    // ===== 3D Card Tilt Effect =====
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width - 0.5;
+            const y = (e.clientY - rect.top) / rect.height - 0.5;
+            card.style.transform = `translateY(-4px) perspective(800px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg)`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+    </script>
+</body>
+</html>

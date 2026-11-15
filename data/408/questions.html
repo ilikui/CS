@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>408 真题题库</title>
+    <style>
+        :root{--sidebar-width:260px;--primary:#c0392b;--primary-light:rgba(192,57,43,0.08);--bg:#f8f6f3;--text:#2c2c2c;--text-secondary:#777;--border:rgba(0,0,0,0.06)}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body,html{height:100%;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);overflow:hidden}
+        .sidebar{position:fixed;top:0;left:0;bottom:0;width:var(--sidebar-width);background:rgba(255,255,255,0.85);backdrop-filter:blur(16px);border-right:1px solid var(--border);overflow-y:auto;z-index:100;padding:16px 0;transition:transform .3s cubic-bezier(0.16,1,0.3,1)}
+        .sidebar::-webkit-scrollbar{width:4px}
+        .sidebar::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.08);border-radius:4px}
+        .sidebar-section{padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.04)}
+        .sidebar-section:last-child{border-bottom:none}
+        .sidebar-title{font-size:10px;text-transform:uppercase;letter-spacing:3px;color:var(--primary);font-weight:800;padding:0 18px;margin-bottom:6px}
+        .sidebar-back{display:flex;align-items:center;gap:6px;padding:8px 18px;color:var(--text-secondary);text-decoration:none;font-size:13px;font-weight:500;transition:.2s}
+        .sidebar-back:hover{color:var(--primary)}
+        .sidebar .pill{display:block;margin:4px 12px;width:calc(100% - 24px);text-align:left;padding:6px 12px;border-radius:8px;font-size:13px;cursor:pointer;border:1px solid transparent;background:transparent;color:var(--text-secondary);transition:.2s}
+        .sidebar .pill:hover{background:rgba(192,57,43,0.04);color:var(--primary)}
+        .sidebar .pill.active{background:var(--primary-light);color:var(--primary);border-color:rgba(192,57,43,0.15);font-weight:600}
+        .sidebar .pill .count{font-size:11px;color:#999;margin-left:4px}
+        .menu-toggle{display:none;position:fixed;top:12px;left:12px;z-index:150;background:rgba(255,255,255,0.85);backdrop-filter:blur(16px);border:1px solid var(--border);border-radius:10px;padding:8px 12px;font-size:18px;cursor:pointer;color:var(--text)}
+        .sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.3);z-index:90}
+        .sidebar-overlay.show{display:block}
+        #content{margin-left:var(--sidebar-width);height:100%;overflow-y:auto;padding:32px 40px}
+        .tag{font-size:13px;font-weight:bold;color:#999;background:rgba(0,0,0,0.03);padding:5px 10px;border-radius:8px;display:inline-block;margin-bottom:16px}
+        .q-card{background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:12px;padding:24px;margin-bottom:16px;transition:.2s}
+        .q-card:hover{border-color:rgba(192,57,43,0.15)}
+        .q-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px}
+        .q-meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+        .q-badge{font-size:11px;padding:3px 8px;border-radius:6px;font-weight:600}
+        .q-badge.type-1{background:#e8f5e9;color:#2e7d32}
+        .q-badge.type-2{background:#fff3e0;color:#e65100}
+        .q-badge.type-3{background:#e3f2fd;color:#1565c0}
+        .q-badge.subject{background:rgba(192,57,43,0.08);color:var(--primary)}
+        .q-score{font-size:12px;color:#999}
+        .q-body{font-size:14px;line-height:1.8;color:#333}
+        .q-body .content{margin-bottom:12px}
+        .q-body .option{padding:6px 0;display:flex;gap:8px}
+        .q-body .opt-label{font-weight:600;color:var(--primary);min-width:24px}
+        .q-body .opt-content{flex:1}
+        .q-body code{font-family:"SF Mono",Consolas,monospace;background:rgba(0,0,0,0.04);padding:1px 5px;border-radius:3px;font-size:13px}
+        .q-body pre{background:#1e1e2e;color:#cdd6f4;padding:12px;border-radius:6px;overflow-x:auto;font-size:12px;line-height:1.5;margin:8px 0;font-family:"SF Mono",Consolas,monospace}
+        .q-body pre code{background:none;padding:0;color:inherit}
+        .q-body table{width:100%;border-collapse:collapse;margin:8px 0;font-size:13px}
+        .q-body th,.q-body td{border:1px solid rgba(0,0,0,0.08);padding:6px 10px;text-align:left}
+        .q-body th{background:rgba(0,0,0,0.02);font-weight:600}
+        .q-body blockquote{border-left:3px solid var(--primary);padding:8px 12px;margin:8px 0;background:rgba(192,57,43,0.02);border-radius:0 6px 6px 0}
+        .q-answer{margin-top:12px;padding-top:12px;border-top:1px dashed rgba(0,0,0,0.08)}
+        .q-answer-toggle{cursor:pointer;font-size:13px;color:var(--primary);font-weight:600;user-select:none}
+        .q-answer-content{display:none;margin-top:8px;font-size:14px;line-height:1.8;color:#444}
+        .q-answer-content.show{display:block}
+        .pagination{display:flex;justify-content:center;gap:8px;margin-top:24px;padding-bottom:24px}
+        .pagination button{padding:6px 14px;border:1px solid var(--border);border-radius:8px;background:#fff;cursor:pointer;font-size:13px;transition:.2s}
+        .pagination button:hover{border-color:var(--primary);color:var(--primary)}
+        .pagination button.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+        .pagination button:disabled{opacity:0.4;cursor:not-allowed}
+        .empty{text-align:center;padding:60px 20px;color:#999;font-size:15px}
+        @media(max-width:768px){
+            .sidebar{transform:translateX(-100%);width:280px}
+            .sidebar.open{transform:translateX(0)}
+            .menu-toggle{display:block}
+            #content{margin-left:0;padding:20px 16px;padding-top:56px}
+        }
+    </style>
+</head>
+<body>
+<div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+<button class="menu-toggle" id="menu-toggle" onclick="toggleSidebar()">&#9776;</button>
+<div class="sidebar" id="sidebar">
+    <a href="index.html" class="sidebar-back">← 返回</a>
+    <div class="sidebar-section">
+        <div class="sidebar-title">科目</div>
+        <div class="pill active" data-subject="all" onclick="setSubject('all')">全部科目</div>
+        <div class="pill" data-subject="data-structure" onclick="setSubject('data-structure')">📖 数据结构</div>
+        <div class="pill" data-subject="computer-organization" onclick="setSubject('computer-organization')">🔧 计算机组成原理</div>
+        <div class="pill" data-subject="operating-system" onclick="setSubject('operating-system')">⚙️ 操作系统</div>
+        <div class="pill" data-subject="computer-network" onclick="setSubject('computer-network')">🌐 计算机网络</div>
+    </div>
+    <div class="sidebar-section">
+        <div class="sidebar-title">题型</div>
+        <div class="pill active" data-type="all" onclick="setType('all')">全部题型</div>
+        <div class="pill" data-type="1" onclick="setType('1')">选择题</div>
+        <div class="pill" data-type="2" onclick="setType('2')">应用题</div>
+        <div class="pill" data-type="3" onclick="setType('3')">算法题</div>
+    </div>
+    <div class="sidebar-section">
+        <div class="sidebar-title">年份</div>
+        <div id="year-list"></div>
+    </div>
+    <div class="sidebar-section">
+        <div class="sidebar-title" id="stats-title">统计</div>
+        <div id="stats" style="padding:0 18px;font-size:12px;color:#999;line-height:1.8"></div>
+    </div>
+</div>
+<div id="content">
+    <div id="progress" class="tag">0 / 0</div>
+    <div id="questions"></div>
+    <div class="pagination" id="pagination"></div>
+</div>
+<script src="questions_data.js"></script>
+<script>
+const PAGE_SIZE = 20;
+let filters = { subject: 'all', type: 'all', year: 'all' };
+let currentPage = 1;
+let filtered = [];
+
+const SUBJECT_MAP = {
+    'data-structure': '数据结构',
+    'computer-organization': '计算机组成原理',
+    'operating-system': '操作系统',
+    'computer-network': '计算机网络'
+};
+
+function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('sidebar-overlay').classList.toggle('show');
+}
+
+function setSubject(s) {
+    filters.subject = s;
+    currentPage = 1;
+    document.querySelectorAll('[data-subject]').forEach(p => p.classList.toggle('active', p.dataset.subject === s));
+    applyFilters();
+    if (window.innerWidth <= 768) toggleSidebar();
+}
+
+function setType(t) {
+    filters.type = t;
+    currentPage = 1;
+    document.querySelectorAll('[data-type]').forEach(p => p.classList.toggle('active', p.dataset.type === t));
+    applyFilters();
+    if (window.innerWidth <= 768) toggleSidebar();
+}
+
+function setYear(y) {
+    filters.year = y;
+    currentPage = 1;
+    document.querySelectorAll('#year-list .pill').forEach(p => p.classList.toggle('active', p.dataset.year === y));
+    applyFilters();
+    if (window.innerWidth <= 768) toggleSidebar();
+}
+
+function applyFilters() {
+    filtered = QUESTIONS_DATA.filter(q => {
+        if (filters.subject !== 'all' && q.subject !== filters.subject) return false;
+        if (filters.type !== 'all' && q.type !== parseInt(filters.type)) return false;
+        if (filters.year !== 'all' && q.year !== parseInt(filters.year)) return false;
+        return true;
+    });
+    renderQuestions();
+    renderPagination();
+    updateStats();
+}
+
+function renderQuestions() {
+    const container = document.getElementById('questions');
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const page = filtered.slice(start, start + PAGE_SIZE);
+
+    if (!page.length) {
+        container.innerHTML = '<div class="empty">暂无匹配题目</div>';
+        document.getElementById('progress').textContent = '0 / 0';
+        return;
+    }
+
+    document.getElementById('progress').textContent = `${start + 1}-${Math.min(start + PAGE_SIZE, filtered.length)} / ${filtered.length}`;
+
+    container.innerHTML = page.map(q => {
+        const typeName = {1:'选择题',2:'应用题',3:'算法题'}[q.type] || '选择题';
+        const typeClass = 'type-' + q.type;
+        const subjName = SUBJECT_MAP[q.subject] || q.subject;
+        const ansId = 'ans-' + q.id;
+
+        let answerHtml = '';
+        if (q.answer) answerHtml += `<div style="margin-bottom:8px"><strong>答案：</strong><span style="color:var(--primary);font-weight:700;font-size:16px">${q.answer}</span></div>`;
+        if (q.analysisHtml) {
+            answerHtml += `<div class="q-body">${q.analysisHtml}</div>`;
+        } else if (q.answerHtml) {
+            answerHtml += `<div class="q-body">${q.answerHtml}</div>`;
+        }
+
+        return `<div class="q-card">
+            <div class="q-header">
+                <div class="q-meta">
+                    <span class="q-badge ${typeClass}">${typeName}</span>
+                    <span class="q-badge subject">${subjName}</span>
+                    <span class="q-score">${q.year}年 · 第${q.index}题 · ${q.score}分</span>
+                </div>
+            </div>
+            <div class="q-body">${q.question || '<div style="color:#999">题目内容加载中...</div>'}</div>
+            ${answerHtml ? `<div class="q-answer">
+                <div class="q-answer-toggle" onclick="toggleAnswer('${ansId}')">查看答案与解析 ▾</div>
+                <div class="q-answer-content" id="${ansId}">${answerHtml}</div>
+            </div>` : ''}
+        </div>`;
+    }).join('');
+}
+
+function toggleAnswer(id) {
+    const el = document.getElementById(id);
+    if (el) {
+        el.classList.toggle('show');
+        const toggle = el.previousElementSibling;
+        if (toggle) toggle.textContent = el.classList.contains('show') ? '收起答案与解析 ▴' : '查看答案与解析 ▾';
+    }
+}
+
+function renderPagination() {
+    const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+    const container = document.getElementById('pagination');
+    if (totalPages <= 1) { container.innerHTML = ''; return; }
+
+    let html = '';
+    html += `<button ${currentPage===1?'disabled':''} onclick="goPage(${currentPage-1})">上一页</button>`;
+
+    const range = 2;
+    let start = Math.max(1, currentPage - range);
+    let end = Math.min(totalPages, currentPage + range);
+    if (start > 1) html += `<button onclick="goPage(1)">1</button>`;
+    if (start > 2) html += `<button disabled>...</button>`;
+    for (let i = start; i <= end; i++) {
+        html += `<button class="${i===currentPage?'active':''}" onclick="goPage(${i})">${i}</button>`;
+    }
+    if (end < totalPages - 1) html += `<button disabled>...</button>`;
+    if (end < totalPages) html += `<button onclick="goPage(${totalPages})">${totalPages}</button>`;
+
+    html += `<button ${currentPage===totalPages?'disabled':''} onclick="goPage(${currentPage+1})">下一页</button>`;
+    container.innerHTML = html;
+}
+
+function goPage(p) {
+    currentPage = p;
+    renderQuestions();
+    renderPagination();
+    document.getElementById('content').scrollTop = 0;
+}
+
+function updateStats() {
+    const stats = document.getElementById('stats');
+    const total = filtered.length;
+    const mc = filtered.filter(q => q.type === 1).length;
+    const app = filtered.filter(q => q.type === 2).length;
+    const algo = filtered.filter(q => q.type === 3).length;
+    stats.innerHTML = `共 ${total} 题<br>选择 ${mc} · 应用 ${app} · 算法 ${algo}`;
+}
+
+function renderYears() {
+    const years = [...new Set(QUESTIONS_DATA.map(q => q.year))].sort((a,b) => b-a);
+    const list = document.getElementById('year-list');
+    list.innerHTML = `<div class="pill active" data-year="all" onclick="setYear('all')">全部年份</div>` +
+        years.map(y => {
+            const count = QUESTIONS_DATA.filter(q => q.year === y).length;
+            return `<div class="pill" data-year="${y}" onclick="setYear('${y}')">${y}年 <span class="count">${count}题</span></div>`;
+        }).join('');
+}
+
+// Init
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.getElementById('sidebar').classList.remove('open');
+        document.getElementById('sidebar-overlay').classList.remove('show');
+    }
+});
+
+renderYears();
+applyFilters();
+</script>
+</body>
+</html>

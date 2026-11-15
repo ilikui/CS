@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>408 计算机学科专业基础综合</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{min-height:100vh;background:#f8f6f3;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#2c2c2c;display:flex;flex-direction:column;align-items:center;padding:40px 20px}
+        .back{position:fixed;top:20px;left:20px;color:#999;text-decoration:none;font-size:14px;transition:.2s}
+        .back:hover{color:#c0392b}
+        .header{text-align:center;margin-bottom:48px}
+        .header h1{font-size:36px;font-weight:800;margin-bottom:8px}
+        .header p{font-size:16px;color:#777}
+        .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:900px;width:100%}
+        .card{background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:16px;padding:32px;cursor:pointer;transition:.3s cubic-bezier(0.16,1,0.3,1);text-decoration:none;color:inherit}
+        .card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.08);border-color:rgba(192,57,43,0.2)}
+        .card-icon{font-size:48px;margin-bottom:16px}
+        .card h2{font-size:22px;font-weight:700;margin-bottom:8px}
+        .card p{font-size:14px;color:#777;line-height:1.6}
+        .card .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:16px}
+        .card .tag{font-size:12px;padding:4px 10px;border-radius:12px;background:rgba(192,57,43,0.06);color:#c0392b;font-weight:500}
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back">← 返回</a>
+    <div class="header">
+        <h1>💻 408 计算机学科专业基础综合</h1>
+        <p>满分150分 · 数据结构45分 · 计组45分 · 操作系统35分 · 计网25分</p>
+    </div>
+    <div class="cards">
+        <a href="review.html" class="card">
+            <div class="card-icon">📚</div>
+            <h2>知识点复习</h2>
+            <p>4门课 114个知识卡片，覆盖全部考纲知识点。侧边栏导航，代码高亮，对比表格。</p>
+            <div class="tags">
+                <span class="tag">数据结构</span>
+                <span class="tag">计算机组成原理</span>
+                <span class="tag">操作系统</span>
+                <span class="tag">计算机网络</span>
+            </div>
+        </a>
+        <a href="questions.html" class="card">
+            <div class="card-icon">📝</div>
+            <h2>真题题库</h2>
+            <p>2009-2025年共799道真题，按年份、题型、科目筛选，含答案解析。</p>
+            <div class="tags">
+                <span class="tag">17年真题</span>
+                <span class="tag">选择题</span>
+                <span class="tag">应用题</span>
+                <span class="tag">算法题</span>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
