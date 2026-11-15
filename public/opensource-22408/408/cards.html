@@ -89,6 +89,10 @@ function flowVisual(card){
  [/三次握手|四次挥手/,['SYN / 初始序号','ACK 确认','FIN / 状态迁移'],'按时间轴追踪连接建立与双向关闭。','handshake'],
  [/距离向量|链路状态/,['邻居距离 / 拓扑','路由算法计算','下一跳与收敛'],'距离向量更新邻居距离，链路状态计算全局最短路径。','routing']
  ];
+ rules.push(
+  [/循环队列/,['front / rear 指针','模 MaxSize 更新','判空 / 判满判定'],'队头队尾指针通过模运算循环移动，判空判满必须匹配具体实现约定。','circular-queue'],
+  [/系统调用/,['用户态发起请求','陷入内核态处理','返回用户态继续执行'],'系统调用通过受控入口请求内核服务；模式切换不等于进程切换。','syscall']
+ );
  for(const [re,s,d,k] of rules){if(re.test(title)){stages=s;detail=d;kind=k;break}}
  const x=[28,268,508],w=184;
  const nodes=stages.map((label,i)=>'<g class="stage stage-'+i+'"><rect class="node '+(i===1?'mid':'')+'" x="'+x[i]+'" y="34" width="'+w+'" height="76" rx="13"/><text x="'+(x[i]+w/2)+'" y="66">'+safe(label)+'</text><text class="subtext" x="'+(x[i]+w/2)+'" y="88">'+['对象 / 初态','关键变化','结果 / 判定'][i]+'</text></g>').join('');
