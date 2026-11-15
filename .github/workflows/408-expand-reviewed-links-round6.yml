@@ -1,0 +1,29 @@
+name: 408 apply source-backed links round 6
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/408-expand-reviewed-links-round6.js'
+      - '.github/workflows/408-expand-reviewed-links-round6.yml'
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Generate source-linked cache and performance solutions
+        run: node scripts/408-expand-reviewed-links-round6.js
+      - name: Commit generated mapping
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/opensource-22408/408/cards-questions.js reports/408-reviewed-links-round6.json
+          git diff --cached --quiet || git commit -m "feat(408): add cache and performance application solutions"
+          git pull --rebase origin main
+          git push
