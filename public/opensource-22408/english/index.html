@@ -700,7 +700,12 @@ window.onload=function(){
      const data={uk:entry.ukphone||entry.ukPhonetic||entry.phonetic||'',us:entry.usphone||entry.usPhonetic||''};
      paint(el,data);el.dataset.loaded='1';
      if(data.uk||data.us){const all=cache();all[word.toLowerCase()]={...data,updated:Date.now()};try{localStorage.setItem(KEY,JSON.stringify(all))}catch(_){}}
-   }catch(_){el.innerHTML='<span class="bw-ipa-empty">音标加载失败，可稍后重试</span>';el.dataset.failed='1';}
+   }catch(_){
+     // 在线词典请求失败时，仍尝试读取本地已校验音标；不要把网络错误伪装成无限加载。
+     paint(el,{});
+     if(!el.textContent.includes('/'))el.innerHTML='<span class="bw-ipa-empty">在线词典暂不可用；该词尚无本地音标数据，可点击发音按钮收听。</span>';
+     el.dataset.failed='1';
+   }
    finally{el.dataset.loading='0';}
  }
  window.observeBrowseIPA=function(){
