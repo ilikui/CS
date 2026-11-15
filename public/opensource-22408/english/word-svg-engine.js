@@ -198,7 +198,17 @@ function buildSvg(word,meaning){
  var artSvg=(exact?exact[2]:art[kind]).replace(/A([2-4])/g,function(_,n){return p[Number(n)-1]});
  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="'+esc(word)+'：'+esc(meaning)+'"><title>'+esc(word)+' — '+esc(meaning)+'</title><defs><linearGradient id="'+gid+'" x1="0" y1="0" x2="1" y2="1"><stop stop-color="'+p[0]+'"/><stop offset="1" stop-color="#fff"/></linearGradient></defs><rect width="640" height="360" rx="28" fill="url(#'+gid+')"/><circle cx="540" cy="68" r="38" fill="'+p[2]+'" opacity=".65"/><circle cx="92" cy="294" r="58" fill="'+p[2]+'" opacity=".35"/>'+artSvg+'</svg>';
 }
-window.createWordMemorySvg=function(word,meaning){return buildSvg(String(word||''),String(meaning||''))};
+function buildMultiSenseSvg(word,meaning){
+ var variants=senseVariants(word,meaning);
+ if(variants.length<2)return buildSvg(word,meaning);
+ var cols=2,rows=Math.ceil(variants.length/cols),parts='';
+ for(var i=0;i<variants.length;i++){
+  var full=buildSvg(word,variants[i].meaning),start=full.indexOf('>')+1,end=full.lastIndexOf('</svg>'),x=(i%cols)*320,y=Math.floor(i/cols)*180;
+  parts+='<svg x="'+x+'" y="'+y+'" width="320" height="180" viewBox="0 0 640 360">'+full.slice(start,end)+'</svg>';
+ }
+ return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 '+(rows*180)+'" role="img" aria-label="'+esc(word)+' 的多义词场景"><title>'+esc(word)+'：多义词场景</title>'+parts+'</svg>';
+}
+window.createWordMemorySvg=function(word,meaning){return buildMultiSenseSvg(String(word||''),String(meaning||''))};
 function render(word){
  var el=$('word-enrichment');if(!el)return;
  var q=Array.isArray(window.Q)&&window.Q.length?window.Q[window.C]:null;
