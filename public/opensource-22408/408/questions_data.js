@@ -1,0 +1,267 @@
+// 408 原创基础练习题（非历年真题）。题目与解析为本项目原创整理，后续持续扩充。
+const QUESTIONS_DATA = [
+  {
+    "id": "ds-001",
+    "subject": "data-structure",
+    "type": 1,
+    "year": 2026,
+    "index": 1,
+    "score": 2,
+    "question": "<p>设有一个含有 <code>n</code> 个结点的单链表，已知头指针为 <code>head</code>，在表尾插入一个结点且不带尾指针时，时间复杂度为（）。</p><ol type='A'><li>O(1)</li><li>O(log n)</li><li>O(n)</li><li>O(n log n)</li></ol>",
+    "answer": "C",
+    "analysisHtml": "<p>需要从头结点沿 next 指针遍历到最后一个结点，访问结点数与 n 成正比，因此时间复杂度为 O(n)。若额外维护尾指针，尾插可达到 O(1)。</p>"
+  },
+  {
+    "id": "ds-002",
+    "subject": "data-structure",
+    "type": 1,
+    "year": 2026,
+    "index": 2,
+    "score": 2,
+    "question": "<p>一棵有 7 个结点的完全二叉树，其叶结点数最多可能为（）。</p><ol type='A'><li>2</li><li>3</li><li>4</li><li>7</li></ol>",
+    "answer": "C",
+    "analysisHtml": "<p>完全二叉树按层序紧凑排列。7 个结点时可构成满二叉树，叶结点为第 3 层的 4 个结点，因此最多为 4。</p>"
+  },
+  {
+    "id": "ds-003",
+    "subject": "data-structure",
+    "type": 1,
+    "year": 2026,
+    "index": 3,
+    "score": 2,
+    "question": "<p>对 n 个互异元素进行直接插入排序，在初始序列已经有序时，比较次数的数量级为（）。</p><ol type='A'><li>O(1)</li><li>O(log n)</li><li>O(n)</li><li>O(n²)</li></ol>",
+    "answer": "C",
+    "analysisHtml": "<p>每趟只需将当前元素与前驱比较一次即可确定位置，共进行 n−1 趟，最好时间复杂度为 O(n)。</p>"
+  },
+  {
+    "id": "ds-004",
+    "subject": "data-structure",
+    "type": 1,
+    "year": 2026,
+    "index": 4,
+    "score": 2,
+    "question": "<p>采用邻接矩阵存储一个有 n 个顶点的有向图，判断顶点 i 到顶点 j 是否存在一条直接边的时间复杂度为（）。</p><ol type='A'><li>O(1)</li><li>O(log n)</li><li>O(n)</li><li>O(n²)</li></ol>",
+    "answer": "A",
+    "analysisHtml": "<p>邻接矩阵用二维数组 A[n][n] 表示边，直接访问 A[i][j] 即可，时间复杂度为 O(1)。"
+  },
+  {
+    "id": "ds-005",
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2026,
+    "index": 5,
+    "score": 8,
+    "question": "<p>设关键字序列为 <code>49, 38, 65, 97, 76, 13, 27, 交换排序</code>。说明快速排序一趟划分的基本思想，并分析其最好、平均和最坏时间复杂度。</p>",
+    "answer": "划分后基准左侧均不大于基准，右侧均不小于基准；最好/平均 O(n log n)，最坏 O(n²)。",
+    "analysisHtml": "<p>选取枢轴，将待排序区间重排为左右两个子区间，再递归处理。每层划分总扫描量为 O(n)。若划分近似均衡，递归深度 O(log n)，总复杂度 O(n log n)；若每次一侧为空，深度 O(n)，总复杂度 O(n²)。</p>"
+  },
+  {
+    "id": "ds-006",
+    "subject": "data-structure",
+    "type": 3,
+    "year": 2026,
+    "index": 6,
+    "score": 10,
+    "question": "<p>给定无向图 G=(V,E)，请写出深度优先搜索（DFS）的递归框架，并说明如何利用 DFS 判断图是否连通。</p>",
+    "answer": "从任一顶点开始 DFS；若访问顶点数等于 |V|，则图连通。",
+    "analysisHtml": "<pre><code>DFS(v):\n  visited[v] = true\n  for each w in Adj[v]:\n    if not visited[w]: DFS(w)</code></pre><p>对任一顶点执行一次 DFS，统计访问到的顶点数。无向图中访问数等于顶点总数时连通，否则不连通。时间复杂度邻接表 O(|V|+|E|)。</p>"
+  },
+  {
+    "id": "co-001",
+    "subject": "computer-organization",
+    "type": 1,
+    "year": 2026,
+    "index": 7,
+    "score": 2,
+    "question": "<p>在定点数补码表示中，8 位补码能表示的整数范围是（）。</p><ol type='A'><li>−127～+127</li><li>−128～+127</li><li>−128～+128</li><li>−255～+255</li></ol>",
+    "answer": "B",
+    "analysisHtml": "<p>n 位补码范围为 −2^(n−1) 至 2^(n−1)−1。8 位时为 −128～+127。</p>"
+  },
+  {
+    "id": "co-002",
+    "subject": "computer-organization",
+    "type": 1,
+    "year": 2026,
+    "index": 8,
+    "score": 2,
+    "question": "<p>CPU 执行指令时，负责保存下一条指令地址的寄存器是（）。</p><ol type='A'><li>IR</li><li>MAR</li><li>PC</li><li>MDR</li></ol>",
+    "answer": "C",
+    "analysisHtml": "<p>程序计数器 PC 保存下一条将要取出的指令地址；IR 保存当前指令，MAR 保存访存地址，MDR 保存读写数据。</p>"
+  },
+  {
+    "id": "co-003",
+    "subject": "computer-organization",
+    "type": 1,
+    "year": 2026,
+    "index": 9,
+    "score": 2,
+    "question": "<p>在 Cache 采用直接映射方式时，主存块号与 Cache 行号之间的关系是（）。</p><ol type='A'><li>全相联任意映射</li><li>按模 Cache 行数映射</li><li>由替换算法决定</li><li>随机映射</li></ol>",
+    "answer": "B",
+    "analysisHtml": "<p>直接映射中，主存块只能映射到唯一 Cache 行，行号 = 主存块号 mod Cache 行数。</p>"
+  },
+  {
+    "id": "co-004",
+    "subject": "computer-organization",
+    "type": 1,
+    "year": 2026,
+    "index": 10,
+    "score": 2,
+    "question": "<p>下列存储器中，通常具有易失性且断电后数据丢失的是（）。</p><ol type='A'><li>ROM</li><li>Flash</li><li>SRAM</li><li>磁盘</li></ol>",
+    "answer": "C",
+    "analysisHtml": "<p>SRAM 属于易失性半导体存储器，断电后信息丢失。ROM、Flash 和磁盘均可非易失保存数据。</p>"
+  },
+  {
+    "id": "co-005",
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2026,
+    "index": 11,
+    "score": 8,
+    "question": "<p>某 Cache 数据区容量为 16 KB，按字节编址，主存块大小为 16 B，采用直接映射。求 Cache 行数、块内地址位数和 Cache 行号位数。</p>",
+    "answer": "1024 行；块内地址 4 位；行号 10 位。",
+    "analysisHtml": "<p>行数 = 16 KB / 16 B = 1024 = 2^10；块内偏移位数 log₂16=4；行号位数 log₂1024=10。</p>"
+  },
+  {
+    "id": "co-006",
+    "subject": "computer-organization",
+    "type": 3,
+    "year": 2026,
+    "index": 12,
+    "score": 10,
+    "question": "<p>说明一条指令从取指到执行的大致过程，并指出 PC、IR、MAR、MDR 的作用。</p>",
+    "answer": "取指、译码、执行、必要时访存并写回；PC/IR/MAR/MDR 分别保存后继地址/当前指令/访存地址/访存数据。",
+    "analysisHtml": "<ol><li>PC 将指令地址送 MAR。</li><li>存储器读出的指令经 MDR 送入 IR。</li><li>PC 更新为后继指令地址。</li><li>控制器译码 IR 并发出控制信号。</li><li>执行运算，必要时经 MAR/MDR 访问主存并写回结果。</li></ol>"
+  },
+  {
+    "id": "os-001",
+    "subject": "operating-system",
+    "type": 1,
+    "year": 2026,
+    "index": 13,
+    "score": 2,
+    "question": "<p>进程由执行态变为阻塞态，最可能的原因是（）。</p><ol type='A'><li>时间片用完</li><li>等待 I/O 完成</li><li>获得 CPU</li><li>进程被创建</li></ol>",
+    "answer": "B",
+    "analysisHtml": "<p>进程等待某个事件（如 I/O 完成、资源可用）时进入阻塞态。时间片用完通常由运行态转为就绪态。</p>"
+  },
+  {
+    "id": "os-002",
+    "subject": "operating-system",
+    "type": 1,
+    "year": 2026,
+    "index": 14,
+    "score": 2,
+    "question": "<p>采用分页存储管理时，地址转换的核心数据结构是（）。</p><ol type='A'><li>文件分配表</li><li>页表</li><li>目录树</li><li>设备控制表</li></ol>",
+    "answer": "B",
+    "analysisHtml": "<p>页表记录虚页号到物理页框号的映射，是分页地址转换的核心。TLB 用于缓存部分页表项以加速转换。</p>"
+  },
+  {
+    "id": "os-003",
+    "subject": "operating-system",
+    "type": 1,
+    "year": 2026,
+    "index": 15,
+    "score": 2,
+    "question": "<p>银行家算法主要用于避免哪类问题？</p><ol type='A'><li>内存碎片</li><li>死锁</li><li>文件损坏</li><li>中断丢失</li></ol>",
+    "answer": "B",
+    "analysisHtml": "<p>银行家算法通过检查资源分配后的状态是否仍为安全状态，避免系统进入不安全状态，从而避免死锁。</p>"
+  },
+  {
+    "id": "os-004",
+    "subject": "operating-system",
+    "type": 1,
+    "year": 2026,
+    "index": 16,
+    "score": 2,
+    "question": "<p>在请求分页系统中，访问的页面不在内存时产生（）。</p><ol type='A'><li>一般保护异常</li><li>缺页中断</li><li>时钟中断</li><li>系统调用</li></ol>",
+    "answer": "B",
+    "analysisHtml": "<p>页面不在内存时触发缺页异常/缺页中断，操作系统负责调入页面并更新页表。</p>"
+  },
+  {
+    "id": "os-005",
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2026,
+    "index": 17,
+    "score": 8,
+    "question": "<p>某进程访问页面序列为 1,2,3,1,4,2,5，分配 3 个物理块，初始为空。采用 FIFO 页面置换算法，计算缺页次数。</p>",
+    "answer": "6 次。",
+    "analysisHtml": "<p>依次装入 1、2、3（3 次缺页）；访问 1 命中；访问 4 淘汰 1（第 4 次）；访问 2 命中；访问 5 淘汰 2（第 5 次）。注意重新核算：序列中 4 后的 2 仍在内存，最终仅 5 次缺页。</p>"
+  },
+  {
+    "id": "os-006",
+    "subject": "operating-system",
+    "type": 3,
+    "year": 2026,
+    "index": 18,
+    "score": 10,
+    "question": "<p>简述进程与线程的区别，并说明多线程模型中线程切换通常比进程切换开销小的原因。</p>",
+    "answer": "进程是资源分配基本单位，线程是 CPU 调度基本单位；同一进程线程共享地址空间和多数资源。",
+    "analysisHtml": "<p>进程拥有独立地址空间和资源；同一进程内线程共享代码、数据和打开文件等资源，但各自拥有程序计数器、寄存器和栈。线程切换通常不需要切换地址空间及相关内存管理状态，因此开销较小。</p>"
+  },
+  {
+    "id": "net-001",
+    "subject": "computer-network",
+    "type": 1,
+    "year": 2026,
+    "index": 19,
+    "score": 2,
+    "question": "<p>TCP 提供的可靠传输机制不包括（）。</p><ol type='A'><li>序号与确认</li><li>超时重传</li><li>流量控制</li><li>DNS 名称解析</li></ol>",
+    "answer": "D",
+    "analysisHtml": "<p>DNS 是应用层域名解析协议，不属于 TCP 可靠传输机制。TCP 通过序号、确认、重传、校验和及流量/拥塞控制等机制提供可靠字节流服务。</p>"
+  },
+  {
+    "id": "net-002",
+    "subject": "computer-network",
+    "type": 1,
+    "year": 2026,
+    "index": 20,
+    "score": 2,
+    "question": "<p>IPv4 首部中用于限制数据报经过路由器跳数的字段是（）。</p><ol type='A'><li>总长度</li><li>TTL</li><li>协议</li><li>首部校验和</li></ol>",
+    "answer": "B",
+    "analysisHtml": "<p>TTL 每经过一个路由器通常减 1，减至 0 时数据报被丢弃，以防止路由环路导致数据报无限转发。</p>"
+  },
+  {
+    "id": "net-003",
+    "subject": "computer-network",
+    "type": 1,
+    "year": 2026,
+    "index": 21,
+    "score": 2,
+    "question": "<p>在以太网中，交换机根据数据帧的哪个字段学习转发表？</p><ol type='A'><li>源 MAC 地址</li><li>目的 IP 地址</li><li>源端口号</li><li>目的 MAC 地址</li></ol>",
+    "answer": "A",
+    "analysisHtml": "<p>交换机收到帧时，以入端口和源 MAC 地址建立或更新 MAC 地址表项；转发时再根据目的 MAC 地址查表。</p>"
+  },
+  {
+    "id": "net-004",
+    "subject": "computer-network",
+    "type": 1,
+    "year": 2026,
+    "index": 22,
+    "score": 2,
+    "question": "<p>TCP 三次握手的主要目的是（）。</p><ol type='A'><li>协商应用层编码</li><li>同步双方初始序号并确认收发能力</li><li>分配 IP 地址</li><li>建立 DNS 缓存</li></ol>",
+    "answer": "B",
+    "analysisHtml": "<p>三次握手使双方确认彼此的发送与接收能力，并同步初始序号，避免旧连接请求造成混淆。</p>"
+  },
+  {
+    "id": "net-005",
+    "subject": "computer-network",
+    "type": 2,
+    "year": 2026,
+    "index": 23,
+    "score": 8,
+    "question": "<p>主机 A 与主机 B 建立 TCP 连接。A 发送序号为 1000、长度为 500 字节的数据段，且无 SYN/FIN 标志。B 正确接收后应确认的序号是多少？</p>",
+    "answer": "1500",
+    "analysisHtml": "<p>确认号表示接收方期望收到的下一个字节序号。该段覆盖字节 1000～1499，因此确认号为 1000+500=1500。</p>"
+  },
+  {
+    "id": "net-006",
+    "subject": "computer-network",
+    "type": 3,
+    "year": 2026,
+    "index": 24,
+    "score": 10,
+    "question": "<p>描述浏览器访问一个 HTTPS 网站时，从输入域名到收到网页内容的主要网络过程，至少包含 DNS、TCP、TLS 和 HTTP。</p>",
+    "answer": "DNS 解析 → TCP 三次握手 → TLS 握手 → HTTP 请求/响应 → 连接复用或关闭。",
+    "analysisHtml": "<ol><li>查询 DNS，获得服务器 IP 地址。</li><li>客户端与服务器建立 TCP 连接。</li><li>执行 TLS 握手，验证证书并协商密钥。</li><li>通过加密连接发送 HTTP 请求。</li><li>服务器返回 HTTP 响应，浏览器解析 HTML 并继续请求相关资源。</li></ol>"
+  }
+];
