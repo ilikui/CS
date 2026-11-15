@@ -284,7 +284,8 @@ function examEscape(value){return String(value??'').replace(/&/g,'&amp;').replac
 function renderExamLinks(id,title,parent,scope='atom'){
  const rows=Array.isArray(EXAM_DATA)?EXAM_DATA:[];
  const exact=scope==='chapter'?(EXAM_PARENT_TERMS[parent]||[]):(EXAM_TOPIC_TERMS[id]||EXAM_PARENT_TERMS[parent]||[]);
- const scoreRows=(words)=>rows.map(q=>{const body=String(q[3]||'')+' '+String(q[5]||'');const hits=words.filter(w=>body.includes(w));return {q,hits,score:hits.length};}).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||Number(b.q[0])-Number(a.q[0])||Number(a.q[2])-Number(b.q[2]));
+ const generic=new Set(['导数','积分','数列','矩阵','行列式','秩','极限','连续','函数','方程','向量','面积']);
+ const scoreRows=(words)=>rows.map(q=>{const question=String(q[3]||''),solution=String(q[5]||''),body=question+' '+solution;const hits=words.filter(w=>w&&!generic.has(w)&&body.includes(w));const questionHits=hits.filter(w=>question.includes(w));const score=hits.reduce((n,w)=>n+(w.length>=4?3:w.length===3?2:1),0)+questionHits.length*2;return {q,hits,score,questionHits:questionHits.length};}).filter(x=>x.score>=2).sort((a,b)=>b.score-a.score||b.questionHits-a.questionHits||Number(b.q[0])-Number(a.q[0])||Number(a.q[2])-Number(b.q[2]));
  const matches=scoreRows(exact);
  const years=[...new Set(matches.map(x=>String(x.q[0])))].sort();
  const byType={};matches.forEach(x=>{const t=String(x.q[1]||'其他');byType[t]=(byType[t]||0)+1;});
