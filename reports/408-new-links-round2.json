@@ -1,0 +1,98 @@
+{
+  "addedCount": 11,
+  "added": [
+    {
+      "topic": "单周期处理器数据通路",
+      "card": "CPU 指令执行过程",
+      "year": 2016,
+      "index": 20,
+      "id": 349,
+      "answer": "A"
+    },
+    {
+      "topic": "系统调用接口",
+      "card": "系统调用与用户态内核态",
+      "year": 2010,
+      "index": 23,
+      "id": 70,
+      "answer": "A"
+    },
+    {
+      "topic": "磁盘I_O系统调用流程",
+      "card": "系统调用与用户态内核态",
+      "year": 2011,
+      "index": 26,
+      "id": 120,
+      "answer": "B"
+    },
+    {
+      "topic": "GBN协议吞吐率计算",
+      "card": "GBN 后退 N 帧协议",
+      "year": 2014,
+      "index": 36,
+      "id": 271,
+      "answer": "C"
+    },
+    {
+      "topic": "SR选择重传超时处理",
+      "card": "SR 选择重传协议",
+      "year": 2011,
+      "index": 35,
+      "id": 129,
+      "answer": "B"
+    },
+    {
+      "topic": "TCP累计确认序号计算",
+      "card": "TCP 序号确认与累计确认",
+      "year": 2009,
+      "index": 38,
+      "id": 38,
+      "answer": "D"
+    },
+    {
+      "topic": "TCP发送窗口受限计算",
+      "card": "TCP 接收窗口与滑动窗口",
+      "year": 2010,
+      "index": 39,
+      "id": 86,
+      "answer": "A"
+    },
+    {
+      "topic": "慢开始与接收窗口共同限制",
+      "card": "TCP 拥塞控制",
+      "year": 2015,
+      "index": 39,
+      "id": 321,
+      "answer": "A"
+    },
+    {
+      "topic": "TCP拥塞窗口与接收窗口计算",
+      "card": "TCP 拥塞控制",
+      "year": 2025,
+      "index": 38,
+      "id": 790,
+      "answer": "A"
+    },
+    {
+      "topic": "DHCP请求报文广播地址",
+      "card": "DHCP 地址租约过程",
+      "year": 2025,
+      "index": 36,
+      "id": 788,
+      "answer": "C"
+    },
+    {
+      "topic": "NAT源地址转换",
+      "card": "NAT 与端口映射",
+      "year": 2023,
+      "index": 38,
+      "id": 696,
+      "answer": "A"
+    }
+  ],
+  "retargeted": {
+    "topic": "顺序表折半查找比较次数",
+    "from": "线性表与顺序表",
+    "to": "查找算法与散列表"
+  }
+}
