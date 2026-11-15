@@ -66,10 +66,32 @@ afford:['economy','负担得起：预算允许的支出','<rect x="215" y="105" 
 agree:['speech','同意：双方握手达成一致','<path d="M180 170l70-45 70 42 55-22 85 50-70 70-70-38-55 30-85-45Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M260 190l60 35 60-42" stroke="A4" stroke-width="13" fill="none"/>'],
 amount:['economy','数量、总额：衡量多少','<path d="M320 75v170m-115-100h230M205 145l-35 85h70Zm230 0-35 85h70Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M250 265h140" stroke="A4" stroke-width="11"/>']
 };
-function sceneFor(word){return semanticScenes[String(word||'').toLowerCase()]||null;}
+function sceneFor(word,meaning){
+ var key=String(word||'').toLowerCase(),exact=semanticScenes[key];
+ if(exact)return exact;
+ var gloss=String(meaning||''),kind='idea',label='抽象概念与联想';
+ for(var i=0;i<rules.length;i++){if(rules[i][0].test(gloss+' '+key)){kind=rules[i][1];label=rules[i][2];break}}
+ /* Each headword gets a deterministic, meaning-aware composition. Exact hand-drawn scenes above always win. */
+ var seed=hash(key+'|'+gloss),x=150+(seed%341),y=82+((seed>>>7)%190),r=13+((seed>>>13)%22),variant=(seed>>>19)%12;
+ var motifs=[
+ '<path d="M'+(x-38)+' '+y+'h76m-19-19 19 19-19 19" fill="none" stroke="A4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>',
+ '<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="none" stroke="A4" stroke-width="9"/><circle cx="'+x+'" cy="'+y+'" r="'+Math.max(5,r/2)+'" fill="A4"/>',
+ '<path d="M'+(x-28)+' '+(y+24)+'l28 -48 28 48Z" fill="A4" stroke="A2" stroke-width="5"/>',
+ '<path d="M'+(x-32)+' '+(y-18)+'q32 -30 64 0t0 36q-32 30-64 0" fill="none" stroke="A4" stroke-width="10"/>',
+ '<path d="M'+(x-32)+' '+(y+20)+'l20 -40 20 40 20 -40" fill="none" stroke="A4" stroke-width="9" stroke-linejoin="round"/>',
+ '<path d="M'+x+' '+(y-32)+'v64m-32-32h64" stroke="A4" stroke-width="10" stroke-linecap="round"/>',
+ '<path d="M'+(x-34)+' '+(y-12)+'h68m-34-25v75" stroke="A4" stroke-width="8"/><circle cx="'+x+'" cy="'+y+'" r="10" fill="A2"/>',
+ '<path d="M'+(x-30)+' '+(y+24)+'q-10-45 30-50 40 5 30 50" fill="none" stroke="A4" stroke-width="10"/><circle cx="'+x+'" cy="'+(y-24)+'" r="9" fill="A4"/>',
+ '<path d="M'+(x-28)+' '+(y+25)+'l28-50 28 50" fill="none" stroke="A4" stroke-width="10" stroke-linecap="round"/>',
+ '<path d="M'+(x-35)+' '+y+'q35-45 70 0-35 45-70 0Z" fill="none" stroke="A4" stroke-width="8"/><circle cx="'+x+'" cy="'+y+'" r="9" fill="A4"/>',
+ '<path d="M'+(x-25)+' '+(y-25)+'l50 50m0-50-50 50" stroke="A4" stroke-width="10" stroke-linecap="round"/>',
+ '<path d="M'+(x-30)+' '+(y+20)+'h60m-48-18 18-22 18 22" fill="none" stroke="A4" stroke-width="9" stroke-linecap="round"/>'
+ ];
+ return [kind,label+' · '+key,(art[kind]||art.idea)+motifs[variant]];
+}
 
 function buildSvg(word,meaning){
- var exact=sceneFor(word),kind=exact?exact[0]:'idea';
+ var exact=sceneFor(word,meaning),kind=exact?exact[0]:'idea';
  if(!exact){for(var i=0;i<rules.length;i++){if(rules[i][0].test(meaning||'')){kind=rules[i][1];break}}}
  var seed=hash(word.toLowerCase()+'|'+meaning),p=palettes[seed%palettes.length],gid='wg'+seed.toString(36);
  var artSvg=(exact?exact[2]:art[kind]).replace(/A([2-4])/g,function(_,n){return p[Number(n)-1]});
@@ -80,7 +102,7 @@ function render(word){
  var el=$('word-enrichment');if(!el)return;
  var q=Array.isArray(window.Q)&&window.Q.length?window.Q[window.C]:null;
  var meaning=q&&q.w===word?q.d:'';
- var exact=sceneFor(word),kind=exact?exact[0]:'idea',label=exact?exact[1]:'概念联想';
+ var exact=sceneFor(word,meaning),kind=exact?exact[0]:'idea',label=exact?exact[1]:'概念联想';
  if(!exact){for(var i=0;i<rules.length;i++){if(rules[i][0].test(meaning||'')){kind=rules[i][1];label=rules[i][2];break}}}
  var svg=buildSvg(word,meaning);
  var old=el.querySelector('.word-svg-memory');if(old)old.remove();
