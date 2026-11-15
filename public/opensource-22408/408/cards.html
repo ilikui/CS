@@ -261,8 +261,8 @@ function flowVisual(card){
  if(kind==='replacement')return interactiveDemo('pages',title); if(kind==='replacement')return interactiveDemo('pages',title)+interactiveDemo('page-compare',title);
  if(['tlb','pagetable','pagefault'].includes(kind))return interactiveDemo('pages',title); if(['tlb','pagetable','pagefault'].includes(kind))return interactiveDemo('pages',title)+interactiveDemo('page-compare',title);
  if(['tcp-seq','rwnd','retransmit'].includes(kind))return interactiveDemo('tcp-window',title); if(['tcp-seq','rwnd','retransmit'].includes(kind))return interactiveDemo('tcp-window',title)+interactiveDemo('tcp-loss',title);
- if(kind==='congestion')return interactiveDemo('tcp-congestion',title);
- if(['tcp','handshake'].includes(kind))return interactiveDemo('tcp',title);
+ if(kind==='congestion')return interactiveDemo('tcp-congestion',title)+interactiveDemo('tcp-loss',title);
+ if(['tcp','handshake'].includes(kind))return interactiveDemo('tcp',title)+interactiveDemo('tcp-loss',title);
  const x=[28,268,508],w=184;
  const nodes=stages.map((label,i)=>'<g class="stage stage-'+i+'"><rect class="node '+(i===1?'mid':'')+'" x="'+x[i]+'" y="34" width="'+w+'" height="76" rx="13"/><text x="'+(x[i]+w/2)+'" y="66">'+safe(label)+'</text><text class="subtext" x="'+(x[i]+w/2)+'" y="88">'+['对象 / 初态','关键变化','结果 / 判定'][i]+'</text></g>').join('');
  return '<section class="visual-box" data-visual="'+kind+'"><div class="visual-title">动态原理演示｜'+safe(title)+'</div><svg class="visual-svg" viewBox="0 0 720 145" role="img" aria-label="'+safe(stages.join('，'))+'"><defs><marker id="arrow-'+kind+'" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="#679bd0"/></marker></defs><path class="flow" d="M212 72 H260 M452 72 H500" marker-end="url(#arrow-'+kind+')"/>'+nodes+'<circle class="pulse" cx="35" cy="72" r="6"/></svg><p class="visual-caption">'+safe(detail)+'</p><div class="visual-controls"><button type="button" class="visual-replay">重新播放</button><span>动画按「对象 → 关键变化 → 结果」循环演示</span></div></section>';
