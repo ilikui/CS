@@ -275,16 +275,18 @@ function showDataError(message) {
 }
 function loadQuestionData(sources, index = 0) {
     if (index >= sources.length) {
-        showDataError('题库数据加载失败：本地 questions_data.js 未成功加载。请检查静态资源请求状态。');
+        showDataError('题库数据加载失败：未能读取 data/408/questions_data.js。请检查 GitHub 原始文件访问状态。');
         return;
     }
     const script = document.createElement('script');
-    script.src = sources[index] + '?v=20261115-2';
+    script.src = sources[index] + '?v=20261115-3';
     script.async = true;
     script.onload = function () {
         let data;
         try {
-            data = window.QUESTIONS_DATA;
+            data = (typeof QUESTIONS_DATA !== 'undefined' && Array.isArray(QUESTIONS_DATA))
+                ? QUESTIONS_DATA
+                : window.QUESTIONS_DATA;
         } catch (e) {}
         if (!Array.isArray(data) || data.length === 0) {
             script.remove();
@@ -303,8 +305,7 @@ function loadQuestionData(sources, index = 0) {
     document.head.appendChild(script);
 }
 loadQuestionData([
-    '/opensource-22408/408/questions_data.js',
-    './questions_data.js'
+    'https://raw.githubusercontent.com/ilikui/CS/main/data/408/questions_data.js'
 ]);
 </script>
 <script src="/render-enhance.js" defer></script>\n</body>
