@@ -54,32 +54,60 @@
     
   };
   const GENERIC_MATCH_TERMS = new Set(['导数','积分','数列','矩阵','行列式','秩','极限','连续','函数','方程','向量','面积']);
+  function getFallbackKnowledgeCards(body) {
+    const text = String(body || '');
+    const has = pattern => pattern.test(text);
+    // 规则补充只保证每道真题都有可追溯的知识卡入口；它不是人工核验结论。
+    if (has(/\\\\boldsymbol|\\\\begin\\{pmatrix\\}|\\\\begin\\{bmatrix\\}|矩阵|\\bA\\^|\\bA\\^\\{/i)) {
+      if (has(/特征值|特征向量|\\\\lambda|对角化|相似矩阵/)) return ['LA-05-A','LA-05-B'];
+      if (has(/向量组|线性无关|线性相关|极大线性无关组|基础解系/)) return ['LA-03-A','LA-03-B','LA-03-C'];
+      if (has(/方程组|增广矩阵|齐次|非齐次/)) return ['LA-04-A','LA-04-B','LA-04-C'];
+      return ['LA-02-A','LA-02-B','LA-02-C'];
+    }
+    if (has(/\\\\int|积分|\\\\mathrm\\{d\\}x|\\\\,d[xxt]/)) {
+      if (has(/\\\\int_\\{|\\\\int\\^|定积分|面积|体积|弧长|平均值/)) return ['CAL-06-C','CAL-06-E'];
+      if (has(/分部|\\\\ln|\\\\sqrt|\\\\sin|\\\\cos|换元/)) return ['CAL-06-B','CAL-06-A'];
+      return ['CAL-06-A','CAL-06-B'];
+    }
+    if (has(/y'|y\\\\^{\\\\prime}|y''|y\\\\^{\\\\prime\\\\prime}|微分方程|初值|通解|特解/)) return ['CAL-07-A','CAL-07-B','CAL-07-D'];
+    if (has(/\\\\lim|\\\\to|极限|无穷小|无穷大|\\\\infty/)) return ['CAL-02-B','CAL-02-C','CAL-02-E'];
+    if (has(/切线|法线|\\\\frac\\{dy\\}|\\\\mathrm\\{d\\}y|导数|可导|\\\\prime|\\\\tan/)) return ['CAL-04-A','CAL-04-B','CAL-04-C'];
+    if (has(/\\\\sum|数列|n\\\\to|n→|级数|递推/)) return ['CAL-02-A','CAL-02-E'];
+    if (has(/凹凸|拐点|单调|极值|最值|渐近线|零点|根的个数/)) return ['CAL-05-B','CAL-05-C','CAL-05-E'];
+    if (has(/函数|\\\\ln|\\\\sin|\\\\cos|\\\\arctan|\\\\sqrt|\\\\exp/)) return ['CAL-01-A','CAL-02-C','CAL-04-B'];
+    return ['CAL-01-A','CAL-02-B'];
+  }
   function getRelatedKnowledgeCards(q) {
     const question = String(q[3] || '');
     const solution = String(q[5] || '');
     const body = question + ' ' + solution;
-    return Object.entries(EXAM_TOPIC_TERMS).map(([id, words]) => {
+    const matched = Object.entries(EXAM_TOPIC_TERMS).map(([id, words]) => {
       const hits = words.filter(word => word && !GENERIC_MATCH_TERMS.has(word) && body.includes(word));
       const questionHits = hits.filter(word => question.includes(word));
       const score = hits.reduce((sum, word) => sum + (word.length >= 4 ? 3 : word.length === 3 ? 2 : 1), 0)
         + questionHits.length * 2;
-      return { id, hits, score, questionHits: questionHits.length };
+      return { id, hits, score, questionHits: questionHits.length, source: 'keyword' };
     }).filter(item => item.score >= 2)
       .sort((a, b) => b.score - a.score || b.questionHits - a.questionHits || a.id.localeCompare(b.id))
       .slice(0, 5);
+    if (matched.length) return matched;
+    return getFallbackKnowledgeCards(body).map(id => ({
+      id, hits: [], score: 1, questionHits: 0, source: 'rule-fallback'
+    })).filter(item => Object.prototype.hasOwnProperty.call(EXAM_TOPIC_TERMS, item.id));
   }
   function renderKnowledgeLinks(q) {
     const related = getRelatedKnowledgeCards(q);
-    if (!related.length) return '<div class="q-knowledge-links"><b>关联知识卡：</b><span>暂未匹配到候选知识点</span></div>';
     const ids = related.map(item => item.id);
     const questionId = [q[0], q[1], q[2]].join('-');
-    return '<div class="q-knowledge-links"><b>关联知识卡（关键词候选）：</b>' +
+    const fallback = related.some(item => item.source === 'rule-fallback');
+    return '<div class="q-knowledge-links"><b>关联知识卡（' +
+      (fallback ? '规则补充候选，待人工核验' : '关键词候选，待人工核验') + '）：</b>' +
       related.map(item => '<a href="./cards.html#card-' + encodeURIComponent(item.id) +
-        '" title="命中关键词：' + item.hits.slice(0, 3).join('、').replace(/&/g,'&amp;').replace(/"/g,'&quot;') +
+        '" title="' + (item.hits.length ? '命中关键词：' + item.hits.slice(0, 3).join('、') : '按题目表达式与题型规则补充的候选关联') +
         '">' + item.id + '</a>').join('') +
       '<button type="button" class="q-add-review" data-card-ids="' + ids.join(',') +
       '" data-question-id="' + questionId.replace(/"/g,'&quot;') + '">做错了 · 加入知识卡复习</button>' +
-      '<small>依据题干与解析关键词匹配，建议结合题目人工复核；加入复习后会把这些候选知识卡标记为易错。</small></div>';
+      '<small>每道真题均提供知识卡入口；关键词或规则补充均为候选关联，不能等同于人工核验考点。</small></div>';
   }
   function addQuestionCardsToReview(button) {
     const key = 'math2_card_review_v1';
