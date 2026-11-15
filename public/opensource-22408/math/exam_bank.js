@@ -65,11 +65,30 @@
   function renderKnowledgeLinks(q) {
     const related = getRelatedKnowledgeCards(q);
     if (!related.length) return '<div class="q-knowledge-links"><b>关联知识卡：</b><span>暂未匹配到候选知识点</span></div>';
+    const ids = related.map(item => item.id);
+    const questionId = [q[0], q[1], q[2]].join('-');
     return '<div class="q-knowledge-links"><b>关联知识卡（关键词候选）：</b>' +
       related.map(item => '<a href="./cards.html#card-' + encodeURIComponent(item.id) +
         '" title="命中关键词：' + item.hits.slice(0, 3).join('、').replace(/&/g,'&amp;').replace(/"/g,'&quot;') +
         '">' + item.id + '</a>').join('') +
-      '<small>依据题干与解析关键词匹配，建议结合题目人工复核。</small></div>';
+      '<button type="button" class="q-add-review" data-card-ids="' + ids.join(',') +
+      '" data-question-id="' + questionId.replace(/[^\w-]/g,'') + '">做错了 · 加入知识卡复习</button>' +
+      '<small>依据题干与解析关键词匹配，建议结合题目人工复核；加入复习后会把这些候选知识卡标记为易错。</small></div>';
+  }
+  function addQuestionCardsToReview(button) {
+    const key = 'math2_card_review_v1';
+    let records = {};
+    try { records = JSON.parse(localStorage.getItem(key) || '{}') || {}; } catch (_) {}
+    const now = new Date();
+    const today = [now.getFullYear(), String(now.getMonth()+1).padStart(2,'0'), String(now.getDate()).padStart(2,'0')].join('-');
+    const next = new Date(now); next.setDate(next.getDate()+1);
+    const due = [next.getFullYear(), String(next.getMonth()+1).padStart(2,'0'), String(next.getDate()).padStart(2,'0')].join('-');
+    const questionId = button.dataset.questionId || '';
+    const ids = (button.dataset.cardIds || '').split(',').filter(Boolean);
+    ids.forEach(id => { records[id] = {...(records[id] || {}), level:'error', last:today, due, sourceQuestion:questionId}; });
+    localStorage.setItem(key, JSON.stringify(records));
+    button.textContent = '已加入 ' + ids.length + ' 张知识卡';
+    button.disabled = true;
   }
 
   function renderExamQuestions() {
@@ -139,6 +158,9 @@
     }
 
     container.innerHTML = html;
+    container.querySelectorAll('.q-add-review').forEach(button => {
+      button.addEventListener('click', () => addQuestionCardsToReview(button));
+    });
 
     if (window.MathJax && MathJax.typesetPromise) {
       MathJax.typesetPromise([container]).catch(() => {});
