@@ -1,0 +1,23 @@
+{
+  "count": 3,
+  "items": [
+    {
+      "topic": "直接映射Cache行号与循环访问命中率",
+      "card": "Cache 映射与命中率",
+      "year": 2010,
+      "index": 44
+    },
+    {
+      "topic": "请求分页与组相联Cache循环访问",
+      "card": "Cache 映射与命中率",
+      "year": 2023,
+      "index": 43
+    },
+    {
+      "topic": "Cache缺失率与主存带宽计算",
+      "card": "计算机性能指标 CPI 与 CPU 时间",
+      "year": 2012,
+      "index": 43
+    }
+  ]
+}
