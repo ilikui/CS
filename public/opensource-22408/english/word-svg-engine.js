@@ -184,6 +184,21 @@ form:'<path d="M170 250q0-120 150-120t150 120" fill="none" stroke="A3" stroke-wi
 conduct:'<circle cx="320" cy="110" r="32" fill="A4"/><path d="M320 145v115m-75-75 75-40 75 40m-75 75-55 45m55-45 55 45" fill="none" stroke="A2" stroke-width="12" stroke-linecap="round"/><path d="M175 95q-30 80 0 160m290-160q30 80 0 160" fill="none" stroke="A3" stroke-width="9"/>'
 };
 function makeExtraSense(kind,label,shape){return [kind,label,extraSenseArt[shape]]}
+
+Object.assign(extraSenseArt,{
+turn:'<path d="M180 175h280m-45-35 45 35-45 35" stroke="A2" stroke-width="12" fill="none"/><path d="M320 80a95 95 0 1 1-80 145" fill="none" stroke="A3" stroke-width="15"/>',
+flood:'<path d="M120 190q50-45 100 0t100 0 100 0 100 0M120 245q50-45 100 0t100 0 100 0 100 0" fill="none" stroke="A3" stroke-width="18"/><path d="M180 100h280" stroke="A2" stroke-width="9"/>',
+walk:'<circle cx="320" cy="85" r="27" fill="A4"/><path d="m320 115-30 75 65 30m-65-30-55 65m55-65 75-35m-10 65 55 60" fill="none" stroke="A2" stroke-width="13" stroke-linecap="round"/><path d="M150 285h340" stroke="A3" stroke-width="9"/>',
+target:'<circle cx="320" cy="175" r="105" fill="none" stroke="A2" stroke-width="9"/><circle cx="320" cy="175" r="65" fill="none" stroke="A3" stroke-width="13"/><circle cx="320" cy="175" r="23" fill="A4"/><path d="m405 90 55-45m-55 45 8-45m-8 45 45 8" stroke="A2" stroke-width="8"/>',
+slow:'<circle cx="320" cy="175" r="100" fill="#fff" stroke="A2" stroke-width="9"/><path d="M320 95v85l60 35" stroke="A3" stroke-width="12" fill="none"/><path d="M175 285h290" stroke="A4" stroke-width="10"/>',
+person:'<circle cx="320" cy="105" r="38" fill="A4"/><path d="M235 280q0-110 85-110t85 110Z" fill="A3" stroke="A2" stroke-width="8"/>',
+level:'<path d="M165 235h310" stroke="A2" stroke-width="12"/><rect x="205" y="145" width="230" height="70" rx="10" fill="A3"/><path d="M320 145V95m-45 0h90" stroke="A4" stroke-width="10"/>',
+nature:'<path d="M120 270 245 95l75 105 65-80 125 150Z" fill="A3" stroke="A2" stroke-width="8"/><circle cx="450" cy="95" r="30" fill="A4"/>',
+character:'<rect x="205" y="85" width="230" height="210" rx="14" fill="#fff" stroke="A2" stroke-width="9"/><circle cx="320" cy="145" r="35" fill="A4"/><path d="M255 255q0-65 65-65t65 65" fill="A3"/>',
+speech:'<path d="M145 85h350v165H275l-65 55v-55h-65Z" fill="#fff" stroke="A2" stroke-width="9"/><path d="M205 135h230m-230 45h175" stroke="A3" stroke-width="11"/>',
+knowledge:'<path d="M165 105q78-25 155 20v165q-77-45-155-20Zm310 0q-78-25-155 20v165q77-45 155-20Z" fill="#fff" stroke="A2" stroke-width="8"/><path d="M320 125v165" stroke="A3" stroke-width="9"/>'
+});
+
 Object.assign(multiSenseScenes,{
  deal:[[/交易|协议|做生意|买卖|发牌|毒品/,makeExtraSense('economy','交易 / 买卖：双方交换价值','trade')],[/处理|对付|涉及/,makeExtraSense('idea','处理 / 对付：着手应对事务','handle')],[/大量|很多|待遇/,makeExtraSense('economy','大量 / 待遇：数量或受到的对待','money')]],
  fair:[[/公平|合理|按照规则/,makeExtraSense('law','公平：遵循同一规则','fair')],[/浅色|晴朗|美丽/,makeExtraSense('nature','浅色 / 晴朗：明亮的外观','water')],[/展销会|游乐场|集市/,makeExtraSense('travel','集市：人群聚集交易','trade')]],
