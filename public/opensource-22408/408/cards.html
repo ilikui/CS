@@ -253,14 +253,14 @@ function flowVisual(card){
  if(kind==='merge-sort')return interactiveDemo('merge',title)+interactiveDemo('sort-compare',title);
  if(['heap-sort','heap-build'].includes(kind))return interactiveDemo('heap',title)+interactiveDemo('sort-compare',title);
  if(kind==='search')return interactiveDemo('search',title);
- if(kind==='graph')return interactiveDemo('graph',title);
+ if(kind==='graph')return interactiveDemo('graph',title); if(kind==='graph')return interactiveDemo('graph',title)+interactiveDemo('graph-compare',title);
  if(kind==='toposort')return interactiveDemo('topo',title);
  if(kind==='critical-path')return interactiveDemo('topo',title);
- if(kind==='routing')return interactiveDemo('dijkstra',title);
- if(kind==='union-find')return interactiveDemo('mst',title);
- if(kind==='replacement')return interactiveDemo('pages',title);
- if(['tlb','pagetable','pagefault'].includes(kind))return interactiveDemo('pages',title);
- if(['tcp-seq','rwnd','retransmit'].includes(kind))return interactiveDemo('tcp-window',title);
+ if(kind==='routing')return interactiveDemo('dijkstra',title); if(kind==='routing')return interactiveDemo('dijkstra',title)+interactiveDemo('graph-compare',title);
+ if(kind==='union-find')return interactiveDemo('mst',title); if(kind==='union-find')return interactiveDemo('mst',title)+interactiveDemo('graph-compare',title);
+ if(kind==='replacement')return interactiveDemo('pages',title); if(kind==='replacement')return interactiveDemo('pages',title)+interactiveDemo('page-compare',title);
+ if(['tlb','pagetable','pagefault'].includes(kind))return interactiveDemo('pages',title); if(['tlb','pagetable','pagefault'].includes(kind))return interactiveDemo('pages',title)+interactiveDemo('page-compare',title);
+ if(['tcp-seq','rwnd','retransmit'].includes(kind))return interactiveDemo('tcp-window',title); if(['tcp-seq','rwnd','retransmit'].includes(kind))return interactiveDemo('tcp-window',title)+interactiveDemo('tcp-loss',title);
  if(kind==='congestion')return interactiveDemo('tcp-congestion',title);
  if(['tcp','handshake'].includes(kind))return interactiveDemo('tcp',title);
  const x=[28,268,508],w=184;
@@ -270,7 +270,18 @@ function flowVisual(card){
 
 
 function interactiveDemo(type,title){
- if(type==='sort-compare'){
+ if(type==='graph-compare'){
+  stage.innerHTML='<div style="width:100%;display:flex;justify-content:space-between;flex-wrap:wrap"><b>'+d.alg+'</b><span>已确定/访问：'+d.visited.join(' → ')+'</span></div><div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;width:100%">'+['A','B','C','D','E'].map(v=>'<span class="demo-node '+(d.visited.includes(v)?'visited':'')+'">'+v+'</span>').join('')+'</div><div style="width:100%;text-align:center">待处理：'+(d.frontier.join(' → ')||'空')+'</div>'+(d.extra?'<small style="width:100%;text-align:center">'+d.extra+'</small>':'');
+ }else if(type==='page-compare'){
+  stage.innerHTML='<div style="width:100%;text-align:center"><b>'+d.alg+'</b> · 访问页面 '+d.page+' · '+(d.hit?'命中':'缺页')+'</div><div style="display:flex;gap:8px;justify-content:center;width:100%">'+Array.from({length:3},(_,i)=>'<div style="text-align:center"><span class="demo-cell '+(d.frames[i]===d.page?'active':'')+'">'+(d.frames[i]??'—')+'</span><small>页框 '+(i+1)+'</small></div>').join('')+'</div><div style="width:100%;text-align:center">累计缺页 '+d.faults+' 次'+(d.evicted!==null?' · 淘汰 '+d.evicted:'')+'</div>';
+ }else if(type==='tcp-loss'){
+  stage.innerHTML='<div style="width:100%;text-align:center"><b>'+d.phase+'</b></div><div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;width:100%"><span class="demo-cell">Seq '+d.seq+'</span><span class="demo-cell">ACK '+d.ack+'</span><span class="demo-cell">cwnd '+d.cwnd+' MSS</span></div>';
+ }else if(type==='sort-compare'){ 
+ if(type==='graph-compare'||type==='page-compare'||type==='tcp-loss'){
+  const labels={'graph-compare':'图算法真实对比实验','page-compare':'页面置换算法真实对比实验','tcp-loss':'TCP 丢包与重传实验'};
+  return '<section class="demo-panel" data-demo="'+type+'" data-step="0"><div class="demo-heading">可交互动态演示｜'+labels[type]+' · '+title+'</div><div class="demo-stage"></div><p class="demo-caption"></p><div class="demo-controls"><button type="button" class="demo-prev">上一步</button><button type="button" class="demo-next">下一步</button><button type="button" class="demo-reset">重置</button><span class="demo-status"></span></div></section>';
+ }
+
   const labels={'sort-compare':'排序算法真实对比实验'};
   return '<section class="demo-panel" data-demo="sort-compare" data-step="0"><div class="demo-heading">可交互动态演示｜'+labels[type]+' · '+title+'</div><div class="demo-stage"></div><p class="demo-caption"></p><div class="demo-controls"><button type="button" class="demo-prev">上一步</button><button type="button" class="demo-next">下一步</button><button type="button" class="demo-reset">重置</button><span class="demo-status"></span></div></section>';
  }
@@ -398,8 +409,61 @@ function buildSortCompareTrace(){
  return out;
 }
 const sortCompareData=buildSortCompareTrace();
+function buildGraphCompareTrace(){
+ const edges=[['A','B',2],['A','C',5],['B','C',1],['B','D',4],['C','D',2],['C','E',3],['D','E',1]];
+ const adj={A:['B','C'],B:['A','C','D'],C:['A','B','D','E'],D:['B','C','E'],E:['C','D']};
+ const out=[];
+ const push=(alg,visited,frontier,detail,extra='')=>out.push({alg,visited:visited.slice(),frontier:frontier.slice(),detail,extra});
+ for(const alg of ['BFS','DFS']){
+  const seen=new Set(['A']),order=[],work=['A'];push(alg,order,work,'从 A 开始，标记起点并加入'+(alg==='BFS'?'队列':'栈')+'。');
+  while(work.length){const v=alg==='BFS'?work.shift():work.pop();order.push(v);const ns=alg==='BFS'?adj[v]:adj[v].slice().reverse();for(const w of ns)if(!seen.has(w)){seen.add(w);work.push(w);}push(alg,order,work,'访问 '+v+'，发现尚未访问的相邻顶点。');}
+  push(alg,order,[],'遍历完成，访问序列：'+order.join(' → '));
+ }
+ const dist={A:0,B:Infinity,C:Infinity,D:Infinity,E:Infinity},done=[];
+ push('Dijkstra',done,[], '初始化源点 A=0，其余距离为无穷大。',JSON.stringify(dist));
+ while(done.length<5){let v=Object.keys(dist).filter(x=>!done.includes(x)).sort((a,b)=>dist[a]-dist[b])[0];if(dist[v]===Infinity)break;done.push(v);for(const [a,b,w] of edges){const to=a===v?b:b===v?a:null;if(to&&!done.includes(to)&&dist[v]+w<dist[to])dist[to]=dist[v]+w;}push('Dijkstra',done,[], '确定 '+v+'，并松弛其相邻边。',JSON.stringify(dist));}
+ const mst=(alg)=>{
+  const parent={A:'A',B:'B',C:'C',D:'D',E:'E'},find=x=>parent[x]===x?x:(parent[x]=find(parent[x]));
+  const chosen=[];let cost=0;
+  for(const [a,b,w] of edges.slice().sort((x,y)=>x[2]-y[2])){const ra=find(a),rb=find(b);if(ra!==rb){parent[ra]=rb;chosen.push(a+'-'+b+'('+w+')');cost+=w;push(alg,chosen,[], '选择连接不同连通分量的边 '+a+'-'+b+'，累计权值 '+cost+'.','总权值 '+cost);if(chosen.length===4)break;}else push(alg,chosen,[], '跳过会形成环的边 '+a+'-'+b+'.','总权值 '+cost);}
+ };
+ mst('Kruskal');
+ const primChosen=[],used=new Set(['A']);let primCost=0;
+ push('Prim',primChosen,[...used],'从顶点 A 开始扩展生成树。','总权值 0');
+ while(used.size<5){const candidates=edges.filter(([a,b])=>used.has(a)!==used.has(b)).sort((x,y)=>x[2]-y[2]);const [a,b,w]=candidates[0];const to=used.has(a)?b:a;used.add(to);primChosen.push(a+'-'+b+'('+w+')');primCost+=w;push('Prim',primChosen,[...used],'选择跨越已访问与未访问集合的最小边 '+a+'-'+b+'.','总权值 '+primCost);}
+ return out;
+}
+function buildPageCompareTrace(){
+ const refs=[7,0,1,2,0,3,0,4],capacity=3,out=[];
+ for(const alg of ['FIFO','LRU','OPT']){
+  let frames=[],queue=[],last={},faults=0;
+  refs.forEach((page,i)=>{
+   const hit=frames.includes(page);let evicted=null;
+   if(!hit){faults++;if(frames.length<capacity)frames.push(page);else{
+    let victim;
+    if(alg==='FIFO'){victim=queue.shift();}else if(alg==='LRU'){victim=frames.slice().sort((a,b)=>(last[a]??-1)-(last[b]??-1))[0];}else{victim=frames.slice().sort((a,b)=>{const na=refs.slice(i+1).indexOf(a),nb=refs.slice(i+1).indexOf(b);return (na<0?Infinity:na)-(nb<0?Infinity:nb);}).at(-1);}
+    evicted=victim;frames[frames.indexOf(victim)]=page;
+   }}
+   if(alg==='FIFO'&&!hit)queue.push(page);
+   last[page]=i;
+   out.push({alg,frames:frames.slice(),page,hit,faults,evicted,detail:'访问页面 '+page+'：'+(hit?'命中，无需置换。':'缺页'+(evicted===null?'，装入空页框。':'，淘汰 '+evicted+'。'))});
+  });
+ }
+ return out;
+}
+function buildTcpLossTrace(){
+ return [
+ {phase:'发送',seq:'1000–1099',ack:'等待',cwnd:4,detail:'发送端发送 100 字节数据段，序号范围 1000–1099。'},
+ {phase:'丢包',seq:'1000–1099',ack:'未收到',cwnd:4,detail:'该数据段在网络中丢失，接收端无法确认这段数据。'},
+ {phase:'重复确认',seq:'1100',ack:'ACK 1000 × 3',cwnd:4,detail:'后续数据到达接收端，因缺少起始段而产生重复 ACK。'},
+ {phase:'快速重传',seq:'1000–1099',ack:'重传',cwnd:2,detail:'收到 3 个重复 ACK，触发快速重传；示意性地降低拥塞窗口。'},
+ {phase:'累计确认',seq:'1100',ack:'ACK 1200',cwnd:2,detail:'缺失段补齐后，接收端累计确认连续收到的字节。'}
+ ];
+}
+const graphCompareData=buildGraphCompareTrace(),pageCompareData=buildPageCompareTrace(),tcpLossData=buildTcpLossTrace();
+
 function renderDemo(box){
- const type=box.dataset.demo,steps=type==='sort-compare'?sortCompareData:demoData[type],n=Math.max(0,Math.min(+box.dataset.step||0,steps.length-1)),d=steps[n],stage=box.querySelector('.demo-stage');
+ const type=box.dataset.demo,steps=type==='sort-compare'?sortCompareData:type==='graph-compare'?graphCompareData:type==='page-compare'?pageCompareData:type==='tcp-loss'?tcpLossData:demoData[type],n=Math.max(0,Math.min(+box.dataset.step||0,steps.length-1)),d=steps[n],stage=box.querySelector('.demo-stage');
  box.dataset.step=n;
  if(type==='sort-compare'){
   stage.innerHTML='<div style="width:100%;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><b>'+d.alg+'</b><span>比较次数 '+d.comparisons+' · 写入/交换次数 '+d.writes+'</span></div>'+d.a.map(v=>'<span class="demo-cell">'+v+'</span>').join('')+'<small style="width:100%;text-align:center">固定输入：8、3、7、1、6、2；逐步观察三种算法的真实执行轨迹</small>';
@@ -430,7 +494,7 @@ function renderDemo(box){
   stage.innerHTML='<div style="display:flex;align-items:center;justify-content:space-around;width:100%;gap:8px"><div class="demo-cell">客户端</div><div style="text-align:center;flex:1"><b style="color:#d1842d">'+d.msg+'</b><div style="border-top:2px dashed #7ea6cf;margin:12px 0"></div><small>'+d.a+' → '+d.b+'</small></div><div class="demo-cell">服务器</div></div>';
  }
  box.querySelector('.demo-caption').textContent=d.t;
- box.querySelector('.demo-status').textContent=(n+1)+' / '+steps.length+(type==='sort-compare'?' · '+d.alg:'');
+ box.querySelector('.demo-status').textContent=(n+1)+' / '+steps.length+(d.alg?' · '+d.alg:'')+(type==='sort-compare'?' · '+d.alg:'');
  box.querySelector('.demo-prev').disabled=n===0;
  box.querySelector('.demo-next').disabled=n===steps.length-1;
 }
