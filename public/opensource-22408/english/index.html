@@ -181,6 +181,7 @@ body.study-mode-spell #dd,body.study-mode-quiz #dd{display:none}
 #browse-toolbar button:hover{background:#eaf2f8;border-color:#b9ccda}
 #bc .bg{scroll-margin-top:76px}
 #bc .bgt{padding:12px 10px;border-radius:9px;background:#f8fafc}
+#bc .bw-ipa{display:flex;gap:6px;flex-wrap:wrap;margin:7px 0;color:#315e82;font-size:12px}#bc .bw-ipa-item{padding:4px 7px;border:1px solid #e3ebf1;border-radius:7px;background:#f7fafc}#bc .bw-ipa-label{font-size:10px;color:#8495a4;margin-right:4px;font-weight:700}#bc .bw-ipa-loading,#bc .bw-ipa-empty{font-size:11px;color:#9aa6b2}#bc .bw-audio{display:flex;gap:6px;margin:6px 0 8px}#bc .bw-audio button{border:1px solid #dce7ef;border-radius:7px;background:#f7fafc;color:#416987;padding:4px 8px;font-size:11px;cursor:pointer}#bc .bw-audio button:hover{background:#eaf2f8}
 @media(max-width:768px){#browse-toolbar{margin:-16px -16px 14px;padding:12px}#browse-toolbar .browse-toolbar-title{width:100%}#browse-toolbar button{flex:1}}
 </style>
 <style id="english-page-redesign">
@@ -503,10 +504,11 @@ function renderB(){
     let h='';
     for(const[g,cd]of(Object.entries(WD))){
         for(const[p,ws]of(Object.entries(cd))){
-            h+='<div class="bg"><div class="bgt hid" onclick="this.classList.toggle(\'hid\');this.nextElementSibling.classList.toggle(\'hid\')"><span>'+p+' <span class="ct">('+ws.length+'词)</span></span><span class="ar">▼</span></div><div class="bw-grid hid">'+ws.map(w=>'<div class="bw-item" onclick="goW(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,&apos;'+p.replace(/'/g,"&apos;")+'&apos;)"><div class="bw-visual" style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:10px;margin-bottom:8px;background:#f3f6f8">'+(window.createWordMemorySvg?window.createWordMemorySvg(w[0],w[1]):'')+'</div><div class="bw-w" role="button" tabindex="0" title="点击单词播放发音" onclick="speakBrowseWord(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,event)" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();speakBrowseWord(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,event)}">'+w[0]+' <span class="bw-sound" aria-hidden="true">🔊</span></div><div class="bw-d">'+w[1]+'</div></div>').join('')+'</div></div>'
+            h+='<div class="bg"><div class="bgt hid" onclick="this.classList.toggle(\'hid\');this.nextElementSibling.classList.toggle(\'hid\')"><span>'+p+' <span class="ct">('+ws.length+'词)</span></span><span class="ar">▼</span></div><div class="bw-grid hid">'+ws.map(w=>'<div class="bw-item" onclick="goW(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,&apos;'+p.replace(/'/g,"&apos;")+'&apos;)"><div class="bw-visual" style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:10px;margin-bottom:8px;background:#f3f6f8">'+(window.createWordMemorySvg?window.createWordMemorySvg(w[0],w[1]):'')+'</div><div class="bw-w" role="button" tabindex="0" title="点击单词播放美音" onclick="speakBrowseWord(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,event)" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();speakBrowseWord(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,event)}">'+w[0]+' <span class="bw-sound" aria-hidden="true">🔊</span></div><div class="bw-ipa" data-word="'+w[0].replace(/"/g,'&quot;')+'"><span class="bw-ipa-loading">音标待加载</span></div><div class="bw-audio"><button type="button" onclick="event.stopPropagation();playPronunciation(1,event,&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;)">英音 UK</button><button type="button" onclick="event.stopPropagation();playPronunciation(2,event,&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;)">美音 US</button></div><div class="bw-d">'+w[1]+'</div></div>').join('')+'</div></div>'
         }
     }
     document.getElementById('bc').innerHTML=h;
+    if(window.observeBrowseIPA)window.observeBrowseIPA();
 }
 
 // Init
@@ -634,6 +636,43 @@ window.onload=function(){
  const base=window.renderW;
  if(typeof base==='function')window.renderW=function(){base();const w=Array.isArray(Q)&&Q.length?Q[C]:null;if(w){window.loadWordPhonetics(w.w);window.loadWordEnrichment(w.w);}};
  document.addEventListener('DOMContentLoaded',function(){const w=Array.isArray(Q)&&Q.length?Q[C]:null;if(w)window.loadWordPhonetics(w.w);});
+})();
+</script>
+
+<script id="browse-ipa-engine">
+(function(){
+ 'use strict';
+ const KEY='english_word_ipa_v1';
+ function cache(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(_){return {}}}
+ function paint(el,entry){
+   const uk=String(entry?.ukphone||entry?.ukPhonetic||'').replaceAll('/','').trim();
+   const us=String(entry?.usphone||entry?.usPhonetic||'').replaceAll('/','').trim();
+   const one=(label,value)=>value?'<span class="bw-ipa-item"><span class="bw-ipa-label">'+label+'</span>/'+value+'</span>':'';
+   const html=one('UK',uk)+one('US',us);
+   el.innerHTML=html||'<span class="bw-ipa-empty">暂无音标</span>';
+ }
+ async function load(el){
+   if(el.dataset.loaded==='1'||el.dataset.loading==='1')return;
+   const word=el.dataset.word;if(!word)return;
+   const saved=cache()[word.toLowerCase()];
+   if(saved&&(saved.uk||saved.us)){paint(el,saved);el.dataset.loaded='1';return;}
+   el.dataset.loading='1';el.innerHTML='<span class="bw-ipa-loading">正在获取音标…</span>';
+   try{
+     const r=await fetch('https://dict.youdao.com/jsonapi?doctype=json&jsonversion=2&client=web&q='+encodeURIComponent(word),{mode:'cors',credentials:'omit'});
+     if(!r.ok)throw new Error('lookup failed');
+     const d=await r.json(),entry=d?.ec?.word?.[0]||d?.ec?.word||{};
+     const data={uk:entry.ukphone||entry.ukPhonetic||'',us:entry.usphone||entry.usPhonetic||''};
+     paint(el,data);el.dataset.loaded='1';
+     if(data.uk||data.us){const all=cache();all[word.toLowerCase()]={...data,updated:Date.now()};try{localStorage.setItem(KEY,JSON.stringify(all))}catch(_){}}
+   }catch(_){el.innerHTML='<span class="bw-ipa-empty">音标暂不可用</span>';}
+   finally{el.dataset.loading='0';}
+ }
+ window.observeBrowseIPA=function(){
+   const els=document.querySelectorAll('#bc .bw-ipa[data-word]');
+   if(!('IntersectionObserver'in window)){els.forEach(load);return;}
+   const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){load(e.target);observer.unobserve(e.target)}}),{root:null,rootMargin:'240px'});
+   els.forEach(el=>observer.observe(el));
+ };
 })();
 </script>
 
