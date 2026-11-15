@@ -3,6 +3,7 @@
 // Refresh audit after the third batch of source-backed associations.
 // Re-run after application-question solutions and status-label corrections.
 // Refresh audit after round-five source-backed question links.
+const fs = require('fs');
 const vm = require('vm');
 
 function extractArray(source, marker) {
