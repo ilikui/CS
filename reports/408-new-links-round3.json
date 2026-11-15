@@ -1,0 +1,125 @@
+{
+  "addedCount": 15,
+  "added": [
+    {
+      "topic": "单循环链表删除首元结点",
+      "card": "循环链表与双向循环链表",
+      "year": 2021,
+      "index": 1,
+      "id": 565,
+      "answer": "D"
+    },
+    {
+      "topic": "简单选择排序移动次数",
+      "card": "冒泡排序与简单选择排序",
+      "year": 2025,
+      "index": 10,
+      "id": 762,
+      "answer": "D"
+    },
+    {
+      "topic": "ALU执行寄存器间接加法",
+      "card": "ALU 算术逻辑单元",
+      "year": 2019,
+      "index": 17,
+      "id": 487,
+      "answer": "B"
+    },
+    {
+      "topic": "DRAM刷新机制",
+      "card": "SRAM 与 DRAM",
+      "year": 2015,
+      "index": 17,
+      "id": 299,
+      "answer": "B"
+    },
+    {
+      "topic": "冯诺依曼结构基本思想",
+      "card": "冯·诺依曼结构与存储程序",
+      "year": 2019,
+      "index": 12,
+      "id": 482,
+      "answer": "C"
+    },
+    {
+      "topic": "页面分配与置换策略组合",
+      "card": "页面分配策略与驻留集",
+      "year": 2015,
+      "index": 30,
+      "id": 312,
+      "answer": "C"
+    },
+    {
+      "topic": "SCAN磁盘调度访问序列",
+      "card": "SCAN 与 C-SCAN 磁盘调度",
+      "year": 2009,
+      "index": 29,
+      "id": 29,
+      "answer": "A"
+    },
+    {
+      "topic": "网络层数据报服务",
+      "card": "数据报与虚电路服务",
+      "year": 2011,
+      "index": 33,
+      "id": 127,
+      "answer": "A"
+    },
+    {
+      "topic": "分组交换存储转发时延",
+      "card": "电路交换、报文交换与分组交换",
+      "year": 2010,
+      "index": 34,
+      "id": 81,
+      "answer": "C"
+    },
+    {
+      "topic": "报文交换与分组交换时延比较",
+      "card": "电路交换、报文交换与分组交换",
+      "year": 2013,
+      "index": 35,
+      "id": 223,
+      "answer": "D"
+    },
+    {
+      "topic": "三种交换方式总时延比较",
+      "card": "电路交换、报文交换与分组交换",
+      "year": 2025,
+      "index": 33,
+      "id": 785,
+      "answer": "B"
+    },
+    {
+      "topic": "DNS使用UDP传输",
+      "card": "DNS 与 HTTP",
+      "year": 2018,
+      "index": 33,
+      "id": 456,
+      "answer": "B"
+    },
+    {
+      "topic": "数据链路层相邻结点流量控制",
+      "card": "数据链路层与差错检测",
+      "year": 2022,
+      "index": 33,
+      "id": 644,
+      "answer": "B"
+    },
+    {
+      "topic": "RIP_OSPF_BGP封装协议",
+      "card": "分层体系结构与封装",
+      "year": 2017,
+      "index": 37,
+      "id": 413,
+      "answer": "D"
+    },
+    {
+      "topic": "Web访问不使用SMTP",
+      "card": "FTP 与电子邮件协议",
+      "year": 2014,
+      "index": 40,
+      "id": 275,
+      "answer": "D"
+    }
+  ]
+}

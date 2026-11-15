@@ -2179,6 +2179,413 @@ window.CARD_QUESTION_MAP = {
       "status": "source-linked-answer-key",
       "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
     }
+  },
+  "单循环链表删除首元结点": {
+    "year": 2021,
+    "index": 1,
+    "id": 565,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "D",
+    "question": "已知头指针 h 指向一个带头结点的非空单循环链表，结点结构为  data next 其中 next 是指向直接后继结点的指针， p 是尾指针， q 是临时指针。现要删除该链表的第一个元素，正确的语句序列是（ ）。 A. h->next = h->next->next; q = h->next; free(q); B. q = h->next; h->next = h->next->next; free(q); C. q = h->next; h->next = q->next; if (p != q) p = h; free(q); D. q = h->next; h->next = q->next; if (p == q) p = h; free(q);",
+    "analysis": "删除首元结点时先保存原首元结点q，再令头结点指向q的后继；若被删结点同时是尾结点（p==q），还需将尾指针改为头结点，最后释放q。",
+    "steps": [
+      "q保存原首元结点。",
+      "头结点next指向q->next。",
+      "若p==q说明链表原来只有一个数据结点，尾指针p应改为头结点h。",
+      "释放q，选D。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "数据结构",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "q保存原首元结点。",
+      "头结点next指向q->next。",
+      "若p==q说明链表原来只有一个数据结点，尾指针p应改为头结点h。",
+      "释放q，选D。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
+    }
+  },
+  "简单选择排序移动次数": {
+    "year": 2025,
+    "index": 10,
+    "id": 762,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "D",
+    "question": "下列排序算法中，最坏情况下元素移动最少的是（ ）。 A. 冒泡排序 B. 直接插入排序 C. 快速排序 D. 简单选择排序",
+    "analysis": "简单选择排序每趟只需将最小元素与当前首位交换，最多进行n−1次元素交换，移动次数为O(n)。冒泡和直接插入在最坏情况下需要O(n²)级别的元素移动，因此最坏情况下简单选择排序移动最少，选D。",
+    "steps": [
+      "区分比较次数与元素移动次数。",
+      "简单选择排序每趟最多交换一次，共至多n−1次交换。",
+      "最坏情况下移动次数为线性量级，选D。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "数据结构",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "区分比较次数与元素移动次数。",
+      "简单选择排序每趟最多交换一次，共至多n−1次交换。",
+      "最坏情况下移动次数为线性量级，选D。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
+    }
+  },
+  "ALU执行寄存器间接加法": {
+    "year": 2019,
+    "index": 17,
+    "id": 487,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "B",
+    "question": "某指令功能为 R[r2] ← R[r1] + M[R[r0]] ，其两个源操作数分别采用寄存器、寄存器间接寻址方式。对于下列给定部件，该指令在取数及执行过程中需要用到的是（ ）。 I.通用寄存器组（GPRs） II. 算术逻辑单元（ALU） II.存储器（Memory） IV. 指令译码器（ID） A. 仅 I、II B. 仅 I、II、III C. 仅 II、III、IV D. 仅 I、III、IV",
+    "analysis": "指令R[r2]←R[r1]+M[R[r0]]需要通用寄存器组读取r0、r1并写回r2；通过ALU完成地址/加法运算；还需访问存储器读取M[R[r0]]。因此需要I、II、III，不需要把指令译码器列入题目所问的取数及执行部件集合，选B。",
+    "steps": [
+      "寄存器组提供r0、r1并接收r2写回。",
+      "ALU完成有效地址计算和加法。",
+      "存储器提供间接寻址操作数；对应I、II、III，选B。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机组成原理",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "寄存器组提供r0、r1并接收r2写回。",
+      "ALU完成有效地址计算和加法。",
+      "存储器提供间接寻址操作数；对应I、II、III，选B。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
+    }
+  },
+  "DRAM刷新机制": {
+    "year": 2015,
+    "index": 17,
+    "id": 299,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "B",
+    "question": "下列存储器中，在工作期间需要刷新的是（ ）。 A. SRAM B. SDRAM C. ROM D. FLASH",
+    "analysis": "DRAM利用电容存储信息，电荷会随时间泄漏，因此工作期间需要周期性刷新；SRAM由双稳态触发器保存信息，不需要刷新。SDRAM属于同步DRAM，选B。",
+    "steps": [
+      "区分SRAM与DRAM的存储单元。",
+      "DRAM以电容存储电荷，存在泄漏。",
+      "需要周期性刷新的是SDRAM，选B。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机组成原理",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "区分SRAM与DRAM的存储单元。",
+      "DRAM以电容存储电荷，存在泄漏。",
+      "需要周期性刷新的是SDRAM，选B。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
+    }
+  },
+  "冯诺依曼结构基本思想": {
+    "year": 2019,
+    "index": 12,
+    "id": 482,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "C",
+    "question": "下列关于冯·诺依曼结构计算机基本思想的叙述中，错误的是（ ）。 A. 程序的功能都通过中央处理器执行指令实现 B. 指令和数据都用二进制表示，形式上无差别 C. 指令按地址访问，数据都在指令中直接给出 D. 程序执行前，指令和数据需预先存放在存储器中",
+    "analysis": "冯·诺依曼结构采用存储程序思想，指令和数据以二进制形式存放在存储器中，由CPU取指并执行。指令按地址访问，但数据并不都在指令中直接给出，还可能通过寄存器、直接或间接寻址等方式获得，因此C错误。",
+    "steps": [
+      "程序和数据预先存放在存储器中。",
+      "指令与数据均以二进制表示。",
+      "数据可以在寄存器或存储器中，并可通过多种寻址方式取得，不是都直接写在指令中，选C。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机组成原理",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "程序和数据预先存放在存储器中。",
+      "指令与数据均以二进制表示。",
+      "数据可以在寄存器或存储器中，并可通过多种寻址方式取得，不是都直接写在指令中，选C。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
+    }
+  },
+  "页面分配与置换策略组合": {
+    "year": 2015,
+    "index": 30,
+    "id": 312,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "C",
+    "question": "在请求分页系统中，页面分配策略与页面置换策略不能组合使用的是（ ）。 A. 可变分配，全局置换 B. 可变分配，局部置换 C. 固定分配，全局置换 D. 固定分配，局部置换",
+    "analysis": "固定分配意味着每个进程的页框数固定；全局置换允许从其他进程的页框中选择置换对象，会改变进程占有的页框数，因此二者不能组合。固定分配应与局部置换配合，选C。",
+    "steps": [
+      "固定分配要求进程驻留集/页框数保持固定。",
+      "全局置换可能从其他进程回收页框，破坏固定分配约束。",
+      "因此固定分配+全局置换不可组合，选C。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "操作系统",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "固定分配要求进程驻留集/页框数保持固定。",
+      "全局置换可能从其他进程回收页框，破坏固定分配约束。",
+      "因此固定分配+全局置换不可组合，选C。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
+    }
+  },
+  "SCAN磁盘调度访问序列": {
+    "year": 2009,
+    "index": 29,
+    "id": 29,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "A",
+    "question": "假设磁头当前位于第 105 道，正在向磁道序号增加的方向移动。现有一个磁道访问请求序列为 35，45，12，68，110，180，170，195，采用 SCAN 调度（电梯调度）算法得到的磁道访问序列是（）。 A. 110,170,180,195,68,45,35,12 B. 110,68,45,35,12,170,180,195 C. 110,170,180,195,12,35,45,68 D. 12,35,45,68,110,170,180,195",
+    "analysis": "磁头位于105道并向磁道号增加方向移动，先按升序服务大于105的请求110、170、180、195；到达当前方向最远请求后反向，再按降序服务68、45、35、12，选A。",
+    "steps": [
+      "先服务当前方向上大于105的请求：110、170、180、195。",
+      "到达该方向最后一个请求后反向移动。",
+      "再依次服务68、45、35、12，选A。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "操作系统",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "先服务当前方向上大于105的请求：110、170、180、195。",
+      "到达该方向最后一个请求后反向移动。",
+      "再依次服务68、45、35、12，选A。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
+    }
+  },
+  "网络层数据报服务": {
+    "year": 2011,
+    "index": 33,
+    "id": 127,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "A",
+    "question": "TCP/IP 参考模型的网络层提供的是（ ）。 A. 无连接不可靠的数据报服务 B. 无连接可靠的数据报服务 C. 有连接不可靠的虚电路服务 D. 有连接可靠的虚电路服务",
+    "analysis": "TCP/IP网络层采用无连接的数据报服务。每个IP分组独立寻址和转发，网络层本身不保证可靠交付、顺序或无差错，因此选A。",
+    "steps": [
+      "识别TCP/IP网络层的核心协议IP。",
+      "IP按数据报方式独立转发分组，不建立网络层虚电路。",
+      "IP提供尽力而为服务，不保证可靠性，选A。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "识别TCP/IP网络层的核心协议IP。",
+      "IP按数据报方式独立转发分组，不建立网络层虚电路。",
+      "IP提供尽力而为服务，不保证可靠性，选A。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
+    }
+  },
+  "分组交换存储转发时延": {
+    "year": 2010,
+    "index": 34,
+    "id": 81,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "C",
+    "question": "在下图所示的采用 “存储-转发” 方式的分组交换网络中，所有链路的数据传输速率为 100 Mbps，分组大小为 1000 B，其中分组头大小为 20 B。若主机 H1 向主机 H2 发送一个大小为 980 000 B 的文件，则在不考虑分组拆装时间和传播延迟的情况下，从 H1 发送开始到 H2 接收完为止，需要的时间至少是（ ）。  H1 H2 A. 80 ms B. 80.08 ms C. 80.16 ms D. 80.24 ms",
+    "analysis": "图示路径包含3段链路。文件980000B，每个分组总长1000B、有效载荷980B，因此共有1000个分组。每个分组在100Mbps链路上的发送时间为0.08ms；存储转发流水线总时间为(1000+3−1)×0.08ms=80.16ms，选C。",
+    "steps": [
+      "每个分组承载980B，文件共需980000/980=1000个分组。",
+      "单个分组发送时间=1000×8/100Mbps=0.08ms。",
+      "3段链路存储转发流水线总时间=(1000+2)×0.08=80.16ms，选C。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "每个分组承载980B，文件共需980000/980=1000个分组。",
+      "单个分组发送时间=1000×8/100Mbps=0.08ms。",
+      "3段链路存储转发流水线总时间=(1000+2)×0.08=80.16ms，选C。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
+    }
+  },
+  "报文交换与分组交换时延比较": {
+    "year": 2013,
+    "index": 35,
+    "id": 223,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "D",
+    "question": "主机甲通过 1 个路由器（存储转发方式）与主机乙互联，两段链路的数据传输速率均为 10Mbps，主机甲分别采用报文交换和分组大小为 10kb 的分组交换向主机乙发送 1 个大小为 8 Mb（1M = 10⁶ ）的报文。若忽略链路传播延迟、分组头开销和分组拆装时间，则两种交换方式完成该报文传输所需的总时间分别为（ ）。 A. 800 ms、1600 ms B. 801 ms、1600 ms C. 1600 ms、800 ms D. 1600 ms、801 ms",
+    "analysis": "报文交换需要完整报文在每一跳存储转发，8Mb报文在两段10Mbps链路上共需约1.6s。分组交换将报文切成10kb分组，流水线传输约(800+1)×1ms=801ms，因此分别为1600ms和801ms，选D。",
+    "steps": [
+      "报文交换整份8Mb报文每跳发送时间为8Mb/10Mbps=0.8s，两跳约1.6s。",
+      "分组数=8Mb/10kb=800，每个分组发送时间1ms。",
+      "两段链路流水线总时间约(800+1)×1ms=801ms，选D。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "报文交换整份8Mb报文每跳发送时间为8Mb/10Mbps=0.8s，两跳约1.6s。",
+      "分组数=8Mb/10kb=800，每个分组发送时间1ms。",
+      "两段链路流水线总时间约(800+1)×1ms=801ms，选D。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
+    }
+  },
+  "三种交换方式总时延比较": {
+    "year": 2025,
+    "index": 33,
+    "id": 785,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "B",
+    "question": "如下图所示，主机 H1 向 H2 发送一个 2MB（1MB = 1 0 6 B）文件有三种方式：① 电路交换，建立时间为 32us，速度为 10Mbps；② 分组交换，分组长度为 400B，忽略首部；③ 报文交换。电路交换的时间为 T cs ​ ，报文交换的时间为 T m s ​ ，分组交换的时间为 T p s ​ ，则三者的大小关系是（ ）。  H1 H2 R1 R2 10 Mbps 100 Mbps 1000 Mbps A. T cs ​ > T m s ​ > T p s ​ B. T m s ​ > T p s ​ > T cs ​ C. T m s ​ > T cs ​ > T p s ​ D. T p s ​ > T m s ​ > T cs ​",
+    "analysis": "电路交换只需建立连接后连续传输，约为文件发送时间加32μs；分组交换采用流水线，首包经过各跳后其余分组可流水传送，时间略大于电路交换；报文交换需整份报文逐跳存储转发，时延最大。因此Tms>Tps>Tcs，选B。",
+    "steps": [
+      "电路交换建立后连续传输，时延约为1.6s加建立时间。",
+      "分组交换按小分组流水线传送，整体时延略高于电路交换。",
+      "报文交换整份报文逐跳存储转发，时延最大，选B。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "电路交换建立后连续传输，时延约为1.6s加建立时间。",
+      "分组交换按小分组流水线传送，整体时延略高于电路交换。",
+      "报文交换整份报文逐跳存储转发，时延最大，选B。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
+    }
+  },
+  "DNS使用UDP传输": {
+    "year": 2018,
+    "index": 33,
+    "id": 456,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "B",
+    "question": "下列 TCP/IP 应用层协议中，可以使用传输层无连接服务的是（ ）。 A. FTP B. DNS C. SMTP D. HTTP",
+    "analysis": "常规DNS查询通常使用UDP端口53，以减少连接建立开销；FTP、SMTP和传统HTTP通常使用TCP提供的可靠字节流服务。故可以使用传输层无连接服务的是DNS，选B。",
+    "steps": [
+      "FTP、SMTP、HTTP的传统传输通常基于TCP。",
+      "普通DNS查询通常通过UDP端口53发送。",
+      "选B。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "FTP、SMTP、HTTP的传统传输通常基于TCP。",
+      "普通DNS查询通常通过UDP端口53发送。",
+      "选B。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
+    }
+  },
+  "数据链路层相邻结点流量控制": {
+    "year": 2022,
+    "index": 33,
+    "id": 644,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "B",
+    "question": "在 ISO/OSI 参考模型中，实现两个相邻结点间流量控制功能的是（ ）。 A. 物理层 B. 数据链路层 C. 网络层 D. 传输层",
+    "analysis": "相邻结点之间的流量控制属于数据链路层功能；传输层负责端到端流量控制。题目强调相邻结点，因此选数据链路层B。",
+    "steps": [
+      "先判断作用范围：相邻结点还是端到端。",
+      "相邻结点间的流量控制由数据链路层完成。",
+      "选B。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "先判断作用范围：相邻结点还是端到端。",
+      "相邻结点间的流量控制由数据链路层完成。",
+      "选B。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
+    }
+  },
+  "RIP_OSPF_BGP封装协议": {
+    "year": 2017,
+    "index": 37,
+    "id": 413,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "D",
+    "question": "直接封装 RIP、OSPF、BGP 报文的协议分别是（ ）。 A. TCP、UDP、IP B. TCP、IP、UDP C. UDP、TCP、IP D. UDP、IP、TCP",
+    "analysis": "RIP使用UDP承载，OSPF直接封装在IP数据报中，BGP使用TCP承载。因此依次为UDP、IP、TCP，选D。",
+    "steps": [
+      "RIP使用UDP端口520。",
+      "OSPF直接使用IP协议号89，不通过TCP/UDP端口。",
+      "BGP使用TCP端口179，顺序为UDP、IP、TCP，选D。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "RIP使用UDP端口520。",
+      "OSPF直接使用IP协议号89，不通过TCP/UDP端口。",
+      "BGP使用TCP端口179，顺序为UDP、IP、TCP，选D。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
+    }
+  },
+  "Web访问不使用SMTP": {
+    "year": 2014,
+    "index": 40,
+    "id": 275,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "D",
+    "question": "使用浏览器访问某大学 Web 网站主页时，不可能使用到的协议是（ ）。 A. PPP B. ARP C. UDP D. SMTP",
+    "analysis": "浏览器访问Web主页涉及HTTP/HTTPS及其下层协议，也可能使用DNS、ARP、PPP等；SMTP用于电子邮件传输，不是访问Web主页所必需的协议，选D。",
+    "steps": [
+      "浏览器访问Web页面主要使用HTTP/HTTPS。",
+      "DNS、ARP、PPP可在名称解析或链路接入过程中使用。",
+      "SMTP是邮件传输协议，不用于普通Web页面访问，选D。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "浏览器访问Web页面主要使用HTTP/HTTPS。",
+      "DNS、ARP、PPP可在名称解析或链路接入过程中使用。",
+      "SMTP是邮件传输协议，不用于普通Web页面访问，选D。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
+    }
   }
 };
 
@@ -2278,5 +2685,20 @@ window.CARD_EXAM_TOPIC_MAP = {
   "慢开始与接收窗口共同限制": "TCP 拥塞控制",
   "TCP拥塞窗口与接收窗口计算": "TCP 拥塞控制",
   "DHCP请求报文广播地址": "DHCP 地址租约过程",
-  "NAT源地址转换": "NAT 与端口映射"
+  "NAT源地址转换": "NAT 与端口映射",
+  "单循环链表删除首元结点": "循环链表与双向循环链表",
+  "简单选择排序移动次数": "冒泡排序与简单选择排序",
+  "ALU执行寄存器间接加法": "ALU 算术逻辑单元",
+  "DRAM刷新机制": "SRAM 与 DRAM",
+  "冯诺依曼结构基本思想": "冯·诺依曼结构与存储程序",
+  "页面分配与置换策略组合": "页面分配策略与驻留集",
+  "SCAN磁盘调度访问序列": "SCAN 与 C-SCAN 磁盘调度",
+  "网络层数据报服务": "数据报与虚电路服务",
+  "分组交换存储转发时延": "电路交换、报文交换与分组交换",
+  "报文交换与分组交换时延比较": "电路交换、报文交换与分组交换",
+  "三种交换方式总时延比较": "电路交换、报文交换与分组交换",
+  "DNS使用UDP传输": "DNS 与 HTTP",
+  "数据链路层相邻结点流量控制": "数据链路层与差错检测",
+  "RIP_OSPF_BGP封装协议": "分层体系结构与封装",
+  "Web访问不使用SMTP": "FTP 与电子邮件协议"
 };
