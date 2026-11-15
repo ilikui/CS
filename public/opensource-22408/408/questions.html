@@ -27,6 +27,8 @@
         .tag{font-size:13px;font-weight:bold;color:#999;background:rgba(0,0,0,0.03);padding:5px 10px;border-radius:8px;display:inline-block;margin-bottom:16px}
         .q-card{background:#fff;border:1px solid rgba(0,0,0,0.06);border-radius:12px;padding:24px;margin-bottom:16px;transition:.2s}
         .q-card:hover{border-color:rgba(192,57,43,0.15)}
+        .q-card.target-question{border:2px solid #6d9a70;box-shadow:0 8px 28px rgba(64,112,70,.12)}
+        .q-knowledge-link{font-size:12px;font-weight:700;color:#47764d;text-decoration:none}.q-knowledge-link:hover{text-decoration:underline}
         .q-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px}
         .q-meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
         .q-badge{font-size:11px;padding:3px 8px;border-radius:6px;font-weight:600}
@@ -100,11 +102,16 @@
     <div class="pagination" id="pagination"></div>
 </div>
 <div id="data-status" class="tag" style="display:block;color:#a33">正在连接 408 真题数据源…</div>
+<script src="./cards-questions.js"></script>
 <script>
 const PAGE_SIZE = 20;
 let filters = { subject: 'all', type: 'all', year: 'all' };
 let currentPage = 1;
 let filtered = [];
+const queryParams = new URLSearchParams(window.location.search);
+const targetYear = queryParams.get('year');
+const targetIndex = Number(queryParams.get('index')) || null;
+if (targetYear) filters.year = targetYear;
 
 const SUBJECT_MAP = {
     'data-structure': '数据结构',
@@ -147,6 +154,7 @@ function applyFilters() {
         if (filters.subject !== 'all' && q.subject !== filters.subject) return false;
         if (filters.type !== 'all' && q.type !== parseInt(filters.type)) return false;
         if (filters.year !== 'all' && q.year !== parseInt(filters.year)) return false;
+        if (targetIndex && q.index !== targetIndex) return false;
         return true;
     });
     renderQuestions();
@@ -181,12 +189,15 @@ function renderQuestions() {
             answerHtml += `<div class="q-body">${q.answerHtml}</div>`;
         }
 
-        return `<div class="q-card">
+        const linkedTopic = Object.entries(window.CARD_QUESTION_MAP || {}).find(([, item]) => Number(item.year) === Number(q.year) && Number(item.index) === Number(q.index));
+        const knowledgeLink = linkedTopic ? `<a class="q-knowledge-link" href="./cards.html?year=${q.year}&index=${q.index}">定位关联知识卡 →</a>` : '';
+        return `<div id="q-${q.year}-${q.index}" class="q-card ${targetIndex ? 'target-question' : ''}">
             <div class="q-header">
                 <div class="q-meta">
                     <span class="q-badge ${typeClass}">${typeName}</span>
                     <span class="q-badge subject">${subjName}</span>
                     <span class="q-score">${q.year}年 · 第${q.index}题 · ${q.score}分</span>
+                    ${knowledgeLink}
                 </div>
             </div>
             <div class="q-body">${q.question || '<div style="color:#999">题目内容加载中...</div>'}</div>
@@ -275,7 +286,7 @@ function showDataError(message) {
 }
 function loadQuestionData(sources, index = 0) {
     if (index >= sources.length) {
-        showDataError('题库数据加载失败：已尝试本站静态资源与备用数据源。请检查浏览器网络请求中的 questions_data.js 状态码。');
+        showDataError('权威历年真题加载失败：已尝试 GitHub Raw 与 jsDelivr。为避免把原创练习题误当历年真题，本页不会回退到占位数据。');
         return;
     }
     const script = document.createElement('script');
@@ -291,7 +302,7 @@ function loadQuestionData(sources, index = 0) {
         } catch (e) {
             console.error('[408题库] 数据变量读取异常：', e);
         }
-        if (!Array.isArray(data) || data.length === 0) {
+        if (!Array.isArray(data) || data.length < 700) {
             console.error('[408题库] 数据脚本已返回，但未发现 QUESTIONS_DATA 数组：', script.src);
             script.remove();
             loadQuestionData(sources, index + 1);
@@ -300,7 +311,9 @@ function loadQuestionData(sources, index = 0) {
         document.getElementById('data-status').style.display = 'none';
         document.getElementById('progress').textContent = '题库加载完成：' + data.length + ' 题';
         renderYears();
+        if (filters.year !== 'all') document.querySelectorAll('#year-list .pill').forEach(p => p.classList.toggle('active', p.dataset.year === filters.year));
         applyFilters();
+        if (targetIndex) document.getElementById(`q-${filters.year}-${targetIndex}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
     script.onerror = function () {
         console.error('[408题库] 数据脚本请求失败：', script.src);
@@ -310,9 +323,8 @@ function loadQuestionData(sources, index = 0) {
     document.head.appendChild(script);
 }
 loadQuestionData([
-    '/opensource-22408/408/questions_data.js',
-    './questions_data.js',
-    'https://raw.githubusercontent.com/ilikui/CS/main/data/408/questions_data.js'
+    'https://raw.githubusercontent.com/ilikui/CS/main/data/408/questions_data.js',
+    'https://cdn.jsdelivr.net/gh/ilikui/CS@main/data/408/questions_data.js'
 ]);
 </script>
 <script src="/render-enhance.js" defer></script>\n</body>
