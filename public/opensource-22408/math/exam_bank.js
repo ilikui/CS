@@ -72,7 +72,7 @@
         '" title="命中关键词：' + item.hits.slice(0, 3).join('、').replace(/&/g,'&amp;').replace(/"/g,'&quot;') +
         '">' + item.id + '</a>').join('') +
       '<button type="button" class="q-add-review" data-card-ids="' + ids.join(',') +
-      '" data-question-id="' + questionId.replace(/[^\w-]/g,'') + '">做错了 · 加入知识卡复习</button>' +
+      '" data-question-id="' + questionId.replace(/"/g,'&quot;') + '">做错了 · 加入知识卡复习</button>' +
       '<small>依据题干与解析关键词匹配，建议结合题目人工复核；加入复习后会把这些候选知识卡标记为易错。</small></div>';
   }
   function addQuestionCardsToReview(button) {
