@@ -103,7 +103,7 @@
 </div>
 <div id="data-status" class="tag" style="display:block;color:#a33">正在连接 408 真题数据源…</div>
 <script src="./cards-questions.js"></script>
-<script src="/opensource-22408/408/questions_data.js" onerror="window.__408_QUESTION_DATA_ERROR__=true"></script>
+<script src="./questions_data.js?v=408-real-20261115-2" onload="window.__408_QUESTION_DATA_LOADED__=true" onerror="window.__408_QUESTION_DATA_ERROR__=true"></script>
 <script>
 const PAGE_SIZE = 20;
 let filters = { subject: 'all', type: 'all', year: 'all' };
@@ -291,7 +291,7 @@ const loadedQuestionData =
         : window.QUESTIONS_DATA;
 
 if (window.__408_QUESTION_DATA_ERROR__ || !Array.isArray(loadedQuestionData) || loadedQuestionData.length === 0) {
-    showDataError('题库数据文件未能正常执行。请确认 questions_data.js 已成功发布；若持续失败，请反馈给维护者。');
+    showDataError(window.__408_QUESTION_DATA_ERROR__ ? '408 真题数据文件请求失败：本站 questions_data.js 无法下载。' : '408 真题数据文件已请求，但未生成 QUESTIONS_DATA 数组。请检查数据文件格式或浏览器控制台中的脚本错误。');
 } else {
     document.getElementById('data-status').style.display = 'none';
     document.getElementById('progress').textContent = '题库加载完成：' + loadedQuestionData.length + ' 题';
