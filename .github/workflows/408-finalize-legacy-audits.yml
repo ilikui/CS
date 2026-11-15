@@ -1,0 +1,29 @@
+name: 408 finalize legacy mapping audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/408-finalize-legacy-audits.js'
+      - '.github/workflows/408-finalize-legacy-audits.yml'
+permissions:
+  contents: write
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Verify and label legacy source mappings
+        run: node scripts/408-finalize-legacy-audits.js
+      - name: Commit audit labels
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/opensource-22408/408/cards-questions.js reports/408-legacy-audit-finalized.json
+          git diff --cached --quiet || git commit -m "chore(408): finalize source identity and answer-key audit"
+          git pull --rebase origin main
+          git push
