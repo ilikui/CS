@@ -162,7 +162,6 @@ fn get_desktop_data_path(app: AppHandle) -> Result<String, String> {
 fn main() {
     tauri::Builder::default()
         .plugin(tauri_plugin_updater::Builder::new().build())
-        .plugin(tauri_plugin_process::init())
         .setup(|app| {
             open_database(&app.handle())?;
             WebviewWindowBuilder::new(
