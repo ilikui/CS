@@ -1,0 +1,29 @@
+name: 408 add application question solutions
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/408-add-application-solutions.js'
+      - '.github/workflows/408-add-application-solutions.yml'
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Add source-linked application solutions
+        run: node scripts/408-add-application-solutions.js
+      - name: Commit application solutions
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/opensource-22408/408/cards-questions.js reports/408-application-solutions.json
+          git diff --cached --quiet || git commit -m "feat(408): add source-linked application solutions"
+          git pull --rebase origin main
+          git push
