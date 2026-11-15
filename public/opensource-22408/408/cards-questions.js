@@ -51,7 +51,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "数据结构",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "循环队列判空判满": {
     "year": 2011,
@@ -68,7 +72,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "数据结构",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "KMP next 数组": {
     "year": 2015,
@@ -86,7 +94,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "数据结构",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "二叉树遍历": {
     "year": 2011,
@@ -104,7 +116,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "数据结构",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "AVL 平衡调整": {
     "year": 2010,
@@ -121,7 +137,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "数据结构",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "双链表删除": {
     "year": 2016,
@@ -137,7 +157,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "数据结构",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "表达式求值": {
     "year": 2012,
@@ -156,7 +180,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "数据结构",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "完全二叉树性质": {
     "year": 2009,
@@ -174,7 +202,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "数据结构",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "哈夫曼树与 WPL": {
     "year": 2019,
@@ -190,7 +222,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "数据结构",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "邻接矩阵与邻接表": {
     "year": 2011,
@@ -210,7 +246,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "数据结构",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "拓扑排序": {
     "year": 2010,
@@ -227,7 +267,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "数据结构",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "关键路径": {
     "year": 2019,
@@ -246,7 +290,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "数据结构",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "堆的调整与堆排序": {
     "year": 2009,
@@ -265,7 +313,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "数据结构",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "原码、反码与补码": {
     "year": 2018,
@@ -285,7 +337,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机组成原理",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "IEEE 754 单精度": {
     "year": 2011,
@@ -306,7 +362,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机组成原理",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "Cache 地址映射": {
     "year": 2009,
@@ -324,7 +384,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机组成原理",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "五段流水线与冒险": {
     "year": 2016,
@@ -343,7 +407,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机组成原理",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "微程序控制器": {
     "year": 2009,
@@ -364,7 +432,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机组成原理",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "存储器容量扩展": {
     "year": 2009,
@@ -381,7 +453,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机组成原理",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "中断优先级与屏蔽": {
     "year": 2011,
@@ -398,7 +474,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机组成原理",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "寻址方式与有效地址": {
     "year": 2011,
@@ -418,7 +498,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机组成原理",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "浮点规格化与舍入": {
     "year": 2015,
@@ -436,7 +520,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机组成原理",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "Cache 写策略": {
     "year": 2015,
@@ -452,7 +540,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机组成原理",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "I/O 控制方式": {
     "year": 2009,
@@ -506,7 +598,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机组成原理",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "进程状态与转换": {
     "year": 2014,
@@ -523,7 +619,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "操作系统",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "进程与线程区别": {
     "year": 2012,
@@ -540,7 +640,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "操作系统",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "临界区与互斥": {
     "year": 2016,
@@ -560,7 +664,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "操作系统",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "信号量 P/V 操作": {
     "year": 2011,
@@ -611,7 +719,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "操作系统",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "分页地址转换": {
     "year": 2010,
@@ -628,7 +740,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "操作系统",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "FCFS 与 SJF 调度": {
     "year": 2009,
@@ -646,7 +762,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "操作系统",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "死锁处理策略": {
     "year": 2015,
@@ -667,7 +787,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "操作系统",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "索引分配": {
     "year": 2009,
@@ -684,7 +808,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "操作系统",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "磁盘调度": {
     "year": 2009,
@@ -702,7 +830,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "操作系统",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "工作集与抖动": {
     "year": 2016,
@@ -720,7 +852,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "操作系统",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "页面置换与缺页": {
     "year": 2014,
@@ -736,7 +872,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "操作系统",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "OSI 与 TCP/IP 分层": {
     "year": 2009,
@@ -754,7 +894,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机网络",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "奈奎斯特与香农定理": {
     "year": 2009,
@@ -771,7 +915,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机网络",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "CRC 循环冗余校验": {
     "year": 2023,
@@ -789,7 +937,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机网络",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "以太网 CSMA/CD": {
     "year": 2010,
@@ -874,7 +1026,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机网络",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "TCP 序号与累计确认": {
     "year": 2013,
@@ -892,7 +1048,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机网络",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "TCP 慢开始与拥塞避免": {
     "year": 2009,
@@ -910,7 +1070,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机网络",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "DNS 递归与迭代": {
     "year": 2010,
@@ -927,7 +1091,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机网络",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "以太网帧格式": {
     "year": 2011,
@@ -981,7 +1149,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机网络",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "TCP 四次挥手": {
     "year": 2021,
@@ -998,7 +1170,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机网络",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "TCP 三次握手": {
     "year": 2011,
@@ -1016,7 +1192,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机网络",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "顺序查找与平均查找长度": {
     "year": 2013,
@@ -1069,7 +1249,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机组成原理",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "总线带宽计算": {
     "year": 2009,
@@ -1086,7 +1270,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机组成原理",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "DMA 传输过程": {
     "year": 2017,
@@ -1105,7 +1293,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "计算机组成原理",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "银行家算法与安全状态": {
     "year": 2013,
@@ -1123,7 +1315,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "操作系统",
-    "matchKind": "关联考点"
+    "matchKind": "关联考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "文件控制块与访问控制": {
     "year": 2009,
@@ -1140,7 +1336,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "操作系统",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "多级反馈队列调度题": {
     "year": 2019,
@@ -1158,7 +1358,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "操作系统",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "内核态与用户态转换": {
     "year": 2023,
@@ -1179,7 +1383,11 @@ window.CARD_QUESTION_MAP = {
     ],
     "stepsSource": "source",
     "topic": "操作系统",
-    "matchKind": "直接考点"
+    "matchKind": "直接考点",
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
+    }
   },
   "顺序表折半查找比较次数": {
     "year": 2010,

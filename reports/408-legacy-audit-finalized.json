@@ -1,0 +1,421 @@
+{
+  "finalizedCount": 52,
+  "finalized": [
+    {
+      "topic": "栈的入栈与出栈",
+      "year": 2010,
+      "index": 1,
+      "id": 48,
+      "answer": "D",
+      "card": "栈与队列"
+    },
+    {
+      "topic": "循环队列判空判满",
+      "year": 2011,
+      "index": 3,
+      "id": 97,
+      "answer": "B",
+      "card": "循环队列判空与判满"
+    },
+    {
+      "topic": "KMP next 数组",
+      "year": 2015,
+      "index": 8,
+      "id": 290,
+      "answer": "C",
+      "card": "KMP 模式匹配与 next 数组"
+    },
+    {
+      "topic": "二叉树遍历",
+      "year": 2011,
+      "index": 5,
+      "id": 99,
+      "answer": "C",
+      "card": "二叉树遍历与性质"
+    },
+    {
+      "topic": "AVL 平衡调整",
+      "year": 2010,
+      "index": 4,
+      "id": 51,
+      "answer": "C",
+      "card": "AVL 树平衡调整"
+    },
+    {
+      "topic": "双链表删除",
+      "year": 2016,
+      "index": 2,
+      "id": 331,
+      "answer": "D",
+      "card": "单链表与双链表"
+    },
+    {
+      "topic": "表达式求值",
+      "year": 2012,
+      "index": 2,
+      "id": 143,
+      "answer": "A",
+      "card": "中缀表达式求值"
+    },
+    {
+      "topic": "完全二叉树性质",
+      "year": 2009,
+      "index": 5,
+      "id": 5,
+      "answer": "C",
+      "card": "完全二叉树与编号性质"
+    },
+    {
+      "topic": "哈夫曼树与 WPL",
+      "year": 2019,
+      "index": 3,
+      "id": 473,
+      "answer": "C",
+      "card": "哈夫曼树与带权路径长度"
+    },
+    {
+      "topic": "邻接矩阵与邻接表",
+      "year": 2011,
+      "index": 8,
+      "id": 102,
+      "answer": "C",
+      "card": "邻接矩阵与邻接表"
+    },
+    {
+      "topic": "拓扑排序",
+      "year": 2010,
+      "index": 8,
+      "id": 55,
+      "answer": "B",
+      "card": "拓扑排序与 AOV 网"
+    },
+    {
+      "topic": "关键路径",
+      "year": 2019,
+      "index": 5,
+      "id": 475,
+      "answer": "C",
+      "card": "关键路径与 AOE 网"
+    },
+    {
+      "topic": "堆的调整与堆排序",
+      "year": 2009,
+      "index": 9,
+      "id": 9,
+      "answer": "A",
+      "card": "堆排序与优先队列"
+    },
+    {
+      "topic": "原码、反码与补码",
+      "year": 2018,
+      "index": 13,
+      "id": 436,
+      "answer": "C",
+      "card": "数据表示与补码"
+    },
+    {
+      "topic": "IEEE 754 单精度",
+      "year": 2011,
+      "index": 13,
+      "id": 107,
+      "answer": "A",
+      "card": "IEEE 754 单精度字段"
+    },
+    {
+      "topic": "Cache 地址映射",
+      "year": 2009,
+      "index": 14,
+      "id": 14,
+      "answer": "C",
+      "card": "Cache 直接映射与组相联"
+    },
+    {
+      "topic": "五段流水线与冒险",
+      "year": 2016,
+      "index": 19,
+      "id": 348,
+      "answer": "B",
+      "card": "流水线结构冒险与数据冒险"
+    },
+    {
+      "topic": "微程序控制器",
+      "year": 2009,
+      "index": 17,
+      "id": 17,
+      "answer": "A",
+      "card": "RISC 与 CISC"
+    },
+    {
+      "topic": "存储器容量扩展",
+      "year": 2009,
+      "index": 15,
+      "id": 15,
+      "answer": "D",
+      "card": "存储芯片容量扩展"
+    },
+    {
+      "topic": "中断优先级与屏蔽",
+      "year": 2011,
+      "index": 21,
+      "id": 115,
+      "answer": "D",
+      "card": "中断屏蔽与优先级"
+    },
+    {
+      "topic": "寻址方式与有效地址",
+      "year": 2011,
+      "index": 16,
+      "id": 110,
+      "answer": "A",
+      "card": "立即数与直接间接寻址"
+    },
+    {
+      "topic": "浮点规格化与舍入",
+      "year": 2015,
+      "index": 14,
+      "id": 296,
+      "answer": "D",
+      "card": "浮点数表示与规格化"
+    },
+    {
+      "topic": "Cache 写策略",
+      "year": 2015,
+      "index": 16,
+      "id": 298,
+      "answer": "B",
+      "card": "Cache 替换与写策略"
+    },
+    {
+      "topic": "存储器层次与局部性",
+      "year": 2010,
+      "index": 17,
+      "id": 64,
+      "answer": "D",
+      "card": "存储器层次与主存组织"
+    },
+    {
+      "topic": "进程状态与转换",
+      "year": 2014,
+      "index": 26,
+      "id": 261,
+      "answer": "A",
+      "card": "进程状态与 PCB"
+    },
+    {
+      "topic": "进程与线程区别",
+      "year": 2012,
+      "index": 31,
+      "id": 172,
+      "answer": "A",
+      "card": "进程与线程"
+    },
+    {
+      "topic": "临界区与互斥",
+      "year": 2016,
+      "index": 27,
+      "id": 356,
+      "answer": "B",
+      "card": "临界区互斥访问原则"
+    },
+    {
+      "topic": "银行家算法安全性",
+      "year": 2011,
+      "index": 27,
+      "id": 121,
+      "answer": "D",
+      "card": "银行家算法安全性检查"
+    },
+    {
+      "topic": "分页地址转换",
+      "year": 2010,
+      "index": 29,
+      "id": 76,
+      "answer": "B",
+      "card": "页表结构与地址转换"
+    },
+    {
+      "topic": "FCFS 与 SJF 调度",
+      "year": 2009,
+      "index": 24,
+      "id": 24,
+      "answer": "D",
+      "card": "进程调度算法"
+    },
+    {
+      "topic": "死锁处理策略",
+      "year": 2015,
+      "index": 26,
+      "id": 308,
+      "answer": "B",
+      "card": "死锁必要条件与处理"
+    },
+    {
+      "topic": "索引分配",
+      "year": 2009,
+      "index": 28,
+      "id": 28,
+      "answer": "B",
+      "card": "文件物理分配方式"
+    },
+    {
+      "topic": "磁盘调度",
+      "year": 2009,
+      "index": 29,
+      "id": 29,
+      "answer": "A",
+      "card": "SCAN 与 C-SCAN 磁盘调度"
+    },
+    {
+      "topic": "工作集与抖动",
+      "year": 2016,
+      "index": 29,
+      "id": 358,
+      "answer": "A",
+      "card": "工作集与抖动"
+    },
+    {
+      "topic": "页面置换与缺页",
+      "year": 2014,
+      "index": 30,
+      "id": 265,
+      "answer": "A",
+      "card": "FIFO、LRU 与 OPT 页面置换"
+    },
+    {
+      "topic": "OSI 与 TCP/IP 分层",
+      "year": 2009,
+      "index": 33,
+      "id": 33,
+      "answer": "B",
+      "card": "OSI 与 TCP/IP 参考模型"
+    },
+    {
+      "topic": "奈奎斯特与香农定理",
+      "year": 2009,
+      "index": 34,
+      "id": 34,
+      "answer": "B",
+      "card": "奈奎斯特与香农信道容量"
+    },
+    {
+      "topic": "CRC 循环冗余校验",
+      "year": 2023,
+      "index": 37,
+      "id": 695,
+      "answer": "D",
+      "card": "CRC 检错与生成多项式"
+    },
+    {
+      "topic": "路由器最长前缀匹配",
+      "year": 2015,
+      "index": 38,
+      "id": 320,
+      "answer": "C",
+      "card": "路由选择与转发表"
+    },
+    {
+      "topic": "TCP 序号与累计确认",
+      "year": 2013,
+      "index": 39,
+      "id": 227,
+      "answer": "B",
+      "card": "TCP 序号确认与累计确认"
+    },
+    {
+      "topic": "TCP 慢开始与拥塞避免",
+      "year": 2009,
+      "index": 39,
+      "id": 39,
+      "answer": "C",
+      "card": "TCP 拥塞控制四阶段"
+    },
+    {
+      "topic": "DNS 递归与迭代",
+      "year": 2010,
+      "index": 40,
+      "id": 87,
+      "answer": "A",
+      "card": "DNS 递归与迭代查询"
+    },
+    {
+      "topic": "IPv4 分片与重组",
+      "year": 2021,
+      "index": 36,
+      "id": 600,
+      "answer": "B",
+      "card": "IPv4 首部与分片"
+    },
+    {
+      "topic": "TCP 四次挥手",
+      "year": 2021,
+      "index": 38,
+      "id": 602,
+      "answer": "B",
+      "card": "TCP 三次握手与四次挥手"
+    },
+    {
+      "topic": "TCP 三次握手",
+      "year": 2011,
+      "index": 39,
+      "id": 133,
+      "answer": "C",
+      "card": "TCP 三次握手与四次挥手"
+    },
+    {
+      "topic": "浮点数加法与对阶",
+      "year": 2009,
+      "index": 13,
+      "id": 13,
+      "answer": "D",
+      "card": "浮点数表示与规格化"
+    },
+    {
+      "topic": "总线带宽计算",
+      "year": 2009,
+      "index": 20,
+      "id": 20,
+      "answer": "B",
+      "card": "总线带宽与突发传输"
+    },
+    {
+      "topic": "DMA 传输过程",
+      "year": 2017,
+      "index": 32,
+      "id": 408,
+      "answer": "B",
+      "card": "DMA 工作过程与总线占用"
+    },
+    {
+      "topic": "银行家算法与安全状态",
+      "year": 2013,
+      "index": 32,
+      "id": 220,
+      "answer": "B",
+      "card": "银行家算法安全性检查"
+    },
+    {
+      "topic": "文件控制块与访问控制",
+      "year": 2009,
+      "index": 30,
+      "id": 30,
+      "answer": "A",
+      "card": "索引结点 inode 与文件控制块"
+    },
+    {
+      "topic": "多级反馈队列调度题",
+      "year": 2019,
+      "index": 27,
+      "id": 497,
+      "answer": "C",
+      "card": "多级反馈队列调度"
+    },
+    {
+      "topic": "内核态与用户态转换",
+      "year": 2023,
+      "index": 26,
+      "id": 684,
+      "answer": "D",
+      "card": "内核态与用户态特权级"
+    }
+  ]
+}
