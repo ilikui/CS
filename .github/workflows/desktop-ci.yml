@@ -42,9 +42,7 @@ jobs:
 
       - name: Build unsigned Windows installer for CI
         working-directory: desktop
-        env:
-          TAURI_CONFIG: '{"bundle":{"createUpdaterArtifacts":false}}'
-        run: npm run build:windows
+        run: npx tauri build --bundles nsis --config src-tauri/tauri.release.unsigned.conf.json
 
       - name: Upload Windows installer
         uses: actions/upload-artifact@v4
