@@ -52,6 +52,8 @@ function grade(id,g){const x=state[id]||{};state[id]={...x,level:g==='bad'?'erro
 function method(c){return '<details class="method-card"><summary>本卡五大学习法训练</summary><ol><li><b>费曼：</b>不用看答案，用自己的话讲清“'+c[1]+'”，并举反例。</li><li><b>西蒙：</b>拆分定义、条件、公式/结构、步骤和易错点，逐项复述。</li><li><b>SQ3R：</b>先浏览本卡，再提出一个问题，精读后合上页面复述，隔日回顾。</li><li><b>番茄：</b>25 分钟独立完成一道变式题，5 分钟记录卡点。</li><li><b>康奈尔：</b>左栏写提示问题，右栏写解释，底部总结核心结论。</li></ol></details>'}
 
 function flowVisual(card){
+ if(/排序算法对比|排序对比实验/.test(card[1]))return interactiveDemo('sort-compare',card[1]);
+
  const title=card[1], safe=x=>String(x||'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
  let stages=['输入 / 条件','关系 / 推理','输出 / 验证'],detail='观察对象如何变化，并用定义与适用条件验证结论。',kind='flow';
  const rules=[
@@ -268,6 +270,11 @@ function flowVisual(card){
 
 
 function interactiveDemo(type,title){
+ if(type==='sort-compare'){
+  const labels={'sort-compare':'排序算法真实对比实验'};
+  return '<section class="demo-panel" data-demo="sort-compare" data-step="0"><div class="demo-heading">可交互动态演示｜'+labels[type]+' · '+title+'</div><div class="demo-stage"></div><p class="demo-caption"></p><div class="demo-controls"><button type="button" class="demo-prev">上一步</button><button type="button" class="demo-next">下一步</button><button type="button" class="demo-reset">重置</button><span class="demo-status"></span></div></section>';
+ }
+
  const labels={sort:'冒泡排序演示',quick:'快速排序分区演示',merge:'归并排序合并演示',heap:'堆排序演示',search:'折半查找演示',graph:'广度优先搜索 BFS 演示',topo:'拓扑排序演示',dijkstra:'Dijkstra 最短路径演示',mst:'最小生成树演示',pages:'页面置换演示',tcp:'TCP 握手、数据传输与释放', 'tcp-window':'TCP 滑动窗口演示','tcp-congestion':'TCP 拥塞控制演示'};
  return '<section class="demo-panel" data-demo="'+type+'" data-step="0"><div class="demo-heading">可交互动态演示｜'+labels[type]+' · '+title+'</div><div class="demo-stage"></div><p class="demo-caption"></p><div class="demo-controls"><button type="button" class="demo-prev">上一步</button><button type="button" class="demo-next">下一步</button><button type="button" class="demo-reset">重置</button><span class="demo-status"></span></div></section>';
 }
@@ -373,10 +380,30 @@ const demoData={
   {a:'客户端',b:'服务器',msg:'ACK',t:'⑨ 最后 ACK 确认关闭。主动关闭方进入 TIME_WAIT，之后连接完全释放。',done:true}
  ]
 };
+function buildSortCompareTrace(){
+ const input=[8,3,7,1,6,2],out=[];
+ const add=(alg,a,pass,op,comparisons,writes)=>out.push({alg,a:a.slice(),pass,op,comparisons,writes,t:alg+'：'+op+'；当前序列 '+a.join('、')+'。'});
+ for(const alg of ['冒泡排序','插入排序','选择排序']){
+  const a=input.slice();let comparisons=0,writes=0;
+  add(alg,a,0,'初始序列',comparisons,writes);
+  if(alg==='冒泡排序'){
+   for(let i=0;i<a.length-1;i++){let changed=false;for(let j=0;j<a.length-1-i;j++){comparisons++;if(a[j]>a[j+1]){[a[j],a[j+1]]=[a[j+1],a[j]];writes+=2;changed=true;}add(alg,a,i+1,'第 '+(i+1)+' 趟比较相邻位置 '+j+' 与 '+(j+1),comparisons,writes);}if(!changed)break;}
+  }else if(alg==='插入排序'){
+   for(let i=1;i<a.length;i++){const key=a[i];let j=i-1;while(j>=0){comparisons++;if(a[j]>key){a[j+1]=a[j];writes++;j--;add(alg,a,i,'将元素后移，为 '+key+' 腾出位置',comparisons,writes);}else break;}a[j+1]=key;writes++;add(alg,a,i,'插入 '+key+' 到有序前缀',comparisons,writes);}
+  }else{
+   for(let i=0;i<a.length-1;i++){let min=i;for(let j=i+1;j<a.length;j++){comparisons++;if(a[j]<a[min])min=j;}if(min!==i){[a[i],a[min]]=[a[min],a[i]];writes+=2;}add(alg,a,i+1,'第 '+(i+1)+' 趟将未排序区间最小值放到位置 '+i,comparisons,writes);}
+  }
+  add(alg,a,a.length,'排序完成',comparisons,writes);
+ }
+ return out;
+}
+const sortCompareData=buildSortCompareTrace();
 function renderDemo(box){
- const type=box.dataset.demo,steps=demoData[type],n=Math.max(0,Math.min(+box.dataset.step||0,steps.length-1)),d=steps[n],stage=box.querySelector('.demo-stage');
+ const type=box.dataset.demo,steps=type==='sort-compare'?sortCompareData:demoData[type],n=Math.max(0,Math.min(+box.dataset.step||0,steps.length-1)),d=steps[n],stage=box.querySelector('.demo-stage');
  box.dataset.step=n;
- if(type==='sort'){
+ if(type==='sort-compare'){
+  stage.innerHTML='<div style="width:100%;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap"><b>'+d.alg+'</b><span>比较次数 '+d.comparisons+' · 写入/交换次数 '+d.writes+'</span></div>'+d.a.map(v=>'<span class="demo-cell">'+v+'</span>').join('')+'<small style="width:100%;text-align:center">固定输入：8、3、7、1、6、2；逐步观察三种算法的真实执行轨迹</small>';
+ }else if(type==='sort'){
   stage.innerHTML=d.a.map((v,i)=>'<span class="demo-cell '+(d.done?'done':d.i.includes(i)?'active':'')+'">'+v+'</span>').join('');
  }else if(['quick','heap'].includes(type)){
   stage.innerHTML=d.a.map((v,i)=>'<span class="demo-cell '+(d.done?'done':type==='quick'&&i===d.j?'active':type==='heap'&&i<d.n?'active':'')+'">'+v+'</span>').join('')+(type==='quick'?'<div style="width:100%;text-align:center;font-size:12px">当前区间：['+d.p+','+d.q+'] · 枢轴位置：'+d.j+'</div>':'<div style="width:100%;text-align:center;font-size:12px">当前堆区间长度：'+d.n+' · 右侧为已排序后缀</div>');
@@ -403,7 +430,7 @@ function renderDemo(box){
   stage.innerHTML='<div style="display:flex;align-items:center;justify-content:space-around;width:100%;gap:8px"><div class="demo-cell">客户端</div><div style="text-align:center;flex:1"><b style="color:#d1842d">'+d.msg+'</b><div style="border-top:2px dashed #7ea6cf;margin:12px 0"></div><small>'+d.a+' → '+d.b+'</small></div><div class="demo-cell">服务器</div></div>';
  }
  box.querySelector('.demo-caption').textContent=d.t;
- box.querySelector('.demo-status').textContent=(n+1)+' / '+steps.length;
+ box.querySelector('.demo-status').textContent=(n+1)+' / '+steps.length+(type==='sort-compare'?' · '+d.alg:'');
  box.querySelector('.demo-prev').disabled=n===0;
  box.querySelector('.demo-next').disabled=n===steps.length-1;
 }
