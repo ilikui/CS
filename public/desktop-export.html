@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CS Study · 浏览器学习数据迁移</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f7f6f2;color:#252720;font:15px/1.75 system-ui,"Microsoft YaHei",sans-serif}
+main{width:min(820px,calc(100% - 32px));margin:7vh auto;background:#fff;border:1px solid #e9e7e0;border-radius:18px;padding:clamp(20px,4vw,38px);box-shadow:0 18px 60px #26251f0d}
+h1{font-size:27px;letter-spacing:-.04em;margin:0 0 8px}.muted{color:#777a73}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:22px 0}
+.stat{background:#faf9f6;border:1px solid #eeece5;border-radius:12px;padding:14px}.stat b{display:block;font-size:24px}
+button{border:0;border-radius:10px;padding:12px 18px;background:#252720;color:white;font:inherit;font-weight:700;cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}td,th{text-align:left;padding:9px;border-bottom:1px solid #eeece5}td:last-child,th:last-child{text-align:right}
+.notice{padding:13px 15px;background:#f8f3e8;border-radius:10px;color:#765b28;font-size:13px;margin:18px 0}
+#status{min-height:24px;color:#557b63;font-size:13px;margin-top:12px}
+</style>
+</head>
+<body>
+<main>
+  <a class="muted" href="./index.html">← 返回 CS Study</a>
+  <h1>浏览器学习数据迁移</h1>
+  <p class="muted">把当前浏览器中 cs.likui.space 的学习记录导出为 CS Study Desktop 可直接导入的 JSON 文件。</p>
+  <div class="stats">
+    <div class="stat"><b id="keyCount">0</b><span class="muted">本地存储项目</span></div>
+    <div class="stat"><b id="totalSize">0 KB</b><span class="muted">数据大小（估算）</span></div>
+  </div>
+  <div class="notice">这是只读导出：不会删除、修改或清空浏览器里的任何学习记录。请在保存文件后，打开桌面客户端，点击「CS 桌面版 · 数据与更新」→「从备份恢复」。</div>
+  <button id="export">导出学习数据 JSON</button>
+  <p id="status" role="status"></p>
+  <h2 style="font-size:16px;margin-top:28px">将导出的数据包含在内</h2>
+  <table><thead><tr><th>存储键</th><th>大小</th></tr></thead><tbody id="keys"></tbody></table>
+</main>
+<script>
+(() => {
+  const entries = Object.keys(localStorage).sort().map(key => [key, localStorage.getItem(key) ?? ""]);
+  const bytes = new Blob(entries.map(([key,value]) => key + value)).size;
+  document.querySelector("#keyCount").textContent = entries.length;
+  document.querySelector("#totalSize").textContent = (bytes / 1024).toFixed(1) + " KB";
+  const tbody = document.querySelector("#keys");
+  if (!entries.length) tbody.innerHTML = '<tr><td colspan="2">当前站点没有可导出的本地学习数据。</td></tr>';
+  for (const [key,value] of entries) {
+    const tr = document.createElement("tr");
+    const name = document.createElement("td");
+    const size = document.createElement("td");
+    name.textContent = key;
+    size.textContent = (new Blob([value]).size / 1024).toFixed(2) + " KB";
+    tr.append(name,size);
+    tbody.append(tr);
+  }
+  document.querySelector("#export").addEventListener("click", () => {
+    const data = Object.fromEntries(entries);
+    const backup = {
+      format: "cs-study-backup",
+      schema_version: 1,
+      created_at: new Date().toISOString(),
+      source: location.origin,
+      data
+    };
+    const blob = new Blob([JSON.stringify(backup,null,2)], {type:"application/json"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "cs-study-browser-migration-" + new Date().toISOString().slice(0,10) + ".json";
+    a.click();
+    URL.revokeObjectURL(url);
+    document.querySelector("#status").textContent = "导出完成。浏览器原始数据仍然保留。";
+  });
+})();
+</script>
+</body>
+</html>

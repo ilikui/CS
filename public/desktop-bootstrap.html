@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>CS Study 正在启动</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f7f6f2;color:#252720;font:15px/1.7 system-ui,"Microsoft YaHei",sans-serif}
+    main{width:min(460px,calc(100% - 36px));padding:34px;background:#fff;border:1px solid #e9e7e0;border-radius:18px;box-shadow:0 18px 60px #26251f0d;text-align:center}
+    .logo{font-size:28px;font-weight:850;letter-spacing:-.06em}.logo span{color:#c94b3b}.muted{color:#777a73;font-size:13px}
+    .bar{height:6px;border-radius:99px;background:#efeee9;overflow:hidden;margin:22px 0 12px}.bar i{display:block;width:40%;height:100%;background:#c94b3b;border-radius:99px;animation:load 1.2s ease-in-out infinite alternate}
+    @keyframes load{to{width:90%}}#status{min-height:24px;font-size:13px}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="logo">CS<span>.</span> STUDY</div>
+    <p class="muted">正在准备本地学习空间</p>
+    <div class="bar"><i></i></div>
+    <div id="status">正在读取 SQLite 学习数据…</div>
+    <p class="muted">首次启动会初始化本地数据库；后续升级不会覆盖学习记录。</p>
+  </main>
+  <script type="module" src="./desktop-bootstrap.js"></script>
+</body>
+</html>

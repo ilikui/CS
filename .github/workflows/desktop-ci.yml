@@ -1,0 +1,53 @@
+name: CS Study Desktop CI
+
+on:
+  pull_request:
+    paths:
+      - "desktop/**"
+      - "public/desktop-*.html"
+      - "public/desktop-*.js"
+      - ".github/workflows/desktop-*.yml"
+  push:
+    branches:
+      - "feat/desktop-sqlite-release"
+    paths:
+      - "desktop/**"
+      - "public/desktop-*.html"
+      - "public/desktop-*.js"
+      - ".github/workflows/desktop-*.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  windows-check:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-pc-windows-msvc
+
+      - name: Install desktop dependencies
+        working-directory: desktop
+        run: npm install
+
+      - name: Check Rust desktop application
+        run: cargo check --manifest-path desktop/src-tauri/Cargo.toml --target x86_64-pc-windows-msvc
+
+      - name: Build unsigned Windows installer for CI
+        working-directory: desktop
+        run: npx tauri build --bundles nsis --config src-tauri/tauri.release.unsigned.conf.json
+
+      - name: Upload Windows installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: cs-study-windows-installer
+          path: desktop/src-tauri/target/release/bundle/nsis/*.exe
+          if-no-files-found: error
+          retention-days: 14
