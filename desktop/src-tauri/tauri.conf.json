@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "CS Study",
+  "version": "0.1.0",
+  "identifier": "space.likui.cs-study",
+  "build": {
+    "frontendDist": "../../public",
+    "devUrl": "http://localhost:1420"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "CS Study · 2028 考研学习工作台",
+        "width": 1440,
+        "height": 920,
+        "minWidth": 980,
+        "minHeight": 680,
+        "center": true,
+        "url": "desktop-bootstrap.html"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "createUpdaterArtifacts": true,
+    "category": "Education",
+    "shortDescription": "2028 考研五科离线学习工作台",
+    "longDescription": "CS Study 桌面学习客户端，支持本地 SQLite 学习数据、备份恢复和版本升级。",
+    "windows": {
+      "nsis": {
+        "displayLanguageSelector": false,
+        "languages": ["SimpChinese"],
+        "installerIcon": null
+      }
+    }
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "REPLACE_WITH_TAURI_UPDATER_PUBLIC_KEY",
+      "endpoints": [
+        "https://github.com/ilikui/CS/releases/latest/download/latest.json"
+      ],
+      "windows": {
+        "installMode": "passive"
+      }
+    }
+  }
+}
