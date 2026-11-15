@@ -248,10 +248,10 @@ function flowVisual(card){
  if(/滑动窗口|接收窗口|TCP 序号确认|TCP 超时重传/.test(title))kind='tcp-seq';
  if(/拥塞控制|拥塞窗口/.test(title))kind='congestion';
 
- if(['sort','basic-sort'].includes(kind))return interactiveDemo('sort',title);
- if(kind==='quick-sort')return interactiveDemo('quick',title);
- if(kind==='merge-sort')return interactiveDemo('merge',title);
- if(['heap-sort','heap-build'].includes(kind))return interactiveDemo('heap',title);
+ if(['sort','basic-sort'].includes(kind))return interactiveDemo('sort',title)+interactiveDemo('sort-compare',title);
+ if(kind==='quick-sort')return interactiveDemo('quick',title)+interactiveDemo('sort-compare',title);
+ if(kind==='merge-sort')return interactiveDemo('merge',title)+interactiveDemo('sort-compare',title);
+ if(['heap-sort','heap-build'].includes(kind))return interactiveDemo('heap',title)+interactiveDemo('sort-compare',title);
  if(kind==='search')return interactiveDemo('search',title);
  if(kind==='graph')return interactiveDemo('graph',title);
  if(kind==='toposort')return interactiveDemo('topo',title);
