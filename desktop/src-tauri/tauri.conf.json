@@ -4,23 +4,10 @@
   "version": "0.1.0",
   "identifier": "space.likui.cs-study",
   "build": {
-    "frontendDist": "../../public",
-    "devUrl": "http://localhost:1420"
+    "frontendDist": "../../public"
   },
   "app": {
     "withGlobalTauri": true,
-    "windows": [
-      {
-        "label": "main",
-        "title": "CS Study · 2028 考研学习工作台",
-        "width": 1440,
-        "height": 920,
-        "minWidth": 980,
-        "minHeight": 680,
-        "center": true,
-        "url": "desktop-bootstrap.html"
-      }
-    ],
     "security": {
       "csp": null
     }
@@ -35,8 +22,7 @@
     "windows": {
       "nsis": {
         "displayLanguageSelector": false,
-        "languages": ["SimpChinese"],
-        "installerIcon": null
+        "languages": ["SimpChinese"]
       }
     }
   },
