@@ -481,244 +481,484 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "换元系数 1/8 错误；漏算边界项。"
   },
   "40": {
-    "status": "pending",
-    "questionKey": "1989-选择题-1",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-05-C"
+    ],
+    "secondary": [
+      "CAL-02-C"
+    ],
+    "rationale": "考查 x→∞ 的水平渐近线及 x→0+ 时是否存在铅直渐近线。",
+    "methods": "分别计算无穷远极限和定义域边界极限。",
+    "pitfalls": "只检查 x→∞ 而漏掉 x→0+。"
   },
   "41": {
-    "status": "pending",
-    "questionKey": "1989-选择题-2",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-05-A"
+    ],
+    "rationale": "导数恒正使多项式严格递增，再结合两端极限异号确定唯一实根。",
+    "methods": "导数符号、介值定理与单调性。",
+    "pitfalls": "只证明单调而未证明至少有根。"
   },
   "42": {
-    "status": "pending",
-    "questionKey": "1989-选择题-3",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "旋转体体积用圆盘法 V=π∫y²dx。",
+    "methods": "三角函数平方积分。",
+    "pitfalls": "漏乘 π 或错误平方。"
   },
   "43": {
-    "status": "pending",
-    "questionKey": "1989-选择题-4",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "两个函数各自极大不保证乘积极大，需看函数值符号并构造反例。",
+    "methods": "乘积求导、极值定义与反例。",
+    "pitfalls": "把两个局部极大直接传递给乘积。"
   },
   "44": {
-    "status": "pending",
-    "questionKey": "1989-选择题-5",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-B"
+    ],
+    "rationale": "二阶常系数非齐次方程中，右端 e^x 与齐次解共振，特解需乘 x；常数项另设常数特解。",
+    "methods": "特征方程、待定系数法。",
+    "pitfalls": "忽略共振导致特解形式错误。"
   },
   "45": {
-    "status": "pending",
-    "questionKey": "1989-选择题-6",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-04-A"
+    ],
+    "secondary": [
+      "CAL-02-B"
+    ],
+    "rationale": "选项 D 经变量替换后正是导数定义的左差商，极限存在可推出可导。",
+    "methods": "导数定义、极限变量替换。",
+    "pitfalls": "把 h→+∞ 误当作 h→0；误判对称差商充分性。"
   },
   "46": {
-    "status": "pending",
-    "questionKey": "1990-填空题-1",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "参数曲线先求 dy/dx，再取负倒数求法线斜率。",
+    "methods": "参数求导、点斜式。",
+    "pitfalls": "把切线斜率直接当法线斜率。"
   },
   "47": {
-    "status": "pending",
-    "questionKey": "1990-填空题-2",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-04-B"
+    ],
+    "secondary": [
+      "CAL-04-C"
+    ],
+    "rationale": "指数与三角函数复合，连续使用链式法则并处理 1/x 的导数。",
+    "methods": "指数函数、三角函数求导。",
+    "pitfalls": "漏掉 −1/x² 或 sec²(1/x)。"
   },
   "48": {
-    "status": "pending",
-    "questionKey": "1990-填空题-3",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-A"
+    ],
+    "rationale": "令 t=√(1−x) 换元，转化为多项式定积分。",
+    "methods": "定积分换元、基本积分。",
+    "pitfalls": "换元后上下限方向与负号处理错误。"
   },
   "49": {
-    "status": "pending",
-    "questionKey": "1990-填空题-4",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-03-C"
+    ],
+    "rationale": "在整个积分区间上比较被积函数大小，再使用定积分保序性。",
+    "methods": "定积分保序性质。",
+    "pitfalls": "只比较某一点函数值；忽略区间内处处大小关系。"
   },
   "50": {
-    "status": "pending",
-    "questionKey": "1990-填空题-5",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-01-A"
+    ],
+    "secondary": [
+      "CAL-01-C"
+    ],
+    "rationale": "函数值 f(x) 只取 0 或 1，继续代入 f 的定义即可判断复合函数恒为 1。",
+    "methods": "复合函数与函数值域。",
+    "pitfalls": "未先求内层函数的值域。"
   },
   "51": {
-    "status": "pending",
-    "questionKey": "1990-选择题-1",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-02-B"
+    ],
+    "secondary": [
+      "CAL-02-C"
+    ],
+    "rationale": "多项式除法化简有理式，令其极限为零以比较 x 项和常数项。",
+    "methods": "无穷远处极限、主导项比较。",
+    "pitfalls": "只比较最高次项，漏掉常数余项。"
   },
   "52": {
-    "status": "pending",
-    "questionKey": "1990-选择题-2",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-06-A"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "不定积分表示原函数族，对其求微分得到 f(x)dx。",
+    "methods": "原函数定义、微分与积分互逆。",
+    "pitfalls": "把微分结果写成 f(x) 而漏 dx。"
   },
   "53": {
-    "status": "pending",
-    "questionKey": "1990-选择题-3",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-04-B"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "由 f'=f² 递推求高阶导数，观察并归纳 n! f^(n+1) 的规律。",
+    "methods": "乘积求导、数学归纳。",
+    "pitfalls": "递推时阶乘或幂次少一阶。"
   },
   "54": {
-    "status": "pending",
-    "questionKey": "1990-选择题-4",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "变上、下限同时变化，使用莱布尼茨公式并对上限求导、下限项取负。",
+    "methods": "链式法则。",
+    "pitfalls": "下限项漏负号或漏乘上限导数。"
   },
   "55": {
-    "status": "pending",
-    "questionKey": "1990-选择题-5",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-03-B"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "由导数定义可知 x→0 时 F(x) 的极限为 f'(0)≠0，但 F(0)=0，故为可去间断。",
+    "methods": "导数定义与间断点分类。",
+    "pitfalls": "把极限非零误认为连续；忽略题目另定义的 F(0)。"
   },
   "56": {
-    "status": "pending",
-    "questionKey": "1990-解答题-1",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-02-B"
+    ],
+    "rationale": "将底数写成 1+2a/(x−a)，套用指数型重要极限得到 e^(2a)。",
+    "methods": "重要极限、指数化简。",
+    "pitfalls": "指数与分母渐近比例系数漏算 2。"
   },
   "57": {
-    "status": "pending",
-    "questionKey": "1990-解答题-2",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "对隐式方程两边微分，整理 dx、dy 项求出 dy。",
+    "methods": "隐函数求导与全微分。",
+    "pitfalls": "对 (x−y)ln(x−y) 使用乘积法则漏项。"
   },
   "58": {
-    "status": "pending",
-    "questionKey": "1990-解答题-3",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-05-C"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "求二阶导数并检查凹凸性变号，确定拐点坐标。",
+    "methods": "二阶导数、符号分析。",
+    "pitfalls": "只令 y''=0 不检查变号。"
   },
   "59": {
-    "status": "pending",
-    "questionKey": "1990-解答题-4",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-A"
+    ],
+    "rationale": "对 ln x/(1−x)² 使用分部积分，再拆分有理函数积分。",
+    "methods": "分部积分、部分分式。",
+    "pitfalls": "分部积分负号及对数绝对值遗漏。"
   },
   "60": {
-    "status": "pending",
-    "questionKey": "1990-解答题-5",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-07-B"
+    ],
+    "secondary": [
+      "CAL-07-A"
+    ],
+    "rationale": "整理为一阶线性方程，积分因子为 ln x，再用初值确定常数。",
+    "methods": "积分因子、初值条件。",
+    "pitfalls": "积分因子漏乘或常数求错。"
   },
   "61": {
-    "status": "pending",
-    "questionKey": "1991-填空题-1",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-04-B"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "对数函数复合指数函数，求导得到 dy=y'dx。",
+    "methods": "链式法则、指数函数求导。",
+    "pitfalls": "把 3^(−x) 导数写错符号或漏 ln3。"
   },
   "62": {
-    "status": "pending",
-    "questionKey": "1991-填空题-2",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-05-C"
+    ],
+    "secondary": [
+      "CAL-05-B"
+    ],
+    "rationale": "求二阶导数并解 y''<0 的区间，判断曲线凹凸区间。",
+    "methods": "二阶导数符号表。",
+    "pitfalls": "把 y''=0 的点直接当成区间端点而不检查符号。"
   },
   "63": {
-    "status": "pending",
-    "questionKey": "1991-填空题-3",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "广义积分用分部积分并计算无穷端点极限。",
+    "methods": "分部积分、广义积分收敛。",
+    "pitfalls": "忽略边界项在无穷远处的极限。"
   },
   "64": {
-    "status": "pending",
-    "questionKey": "1991-填空题-4",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "路程等于速度绝对值的积分；题给区间速度非负，因此直接积分并换元。",
+    "methods": "定积分换元、运动学路程。",
+    "pitfalls": "将路程与位移混淆；未检查速度符号。"
   },
   "65": {
-    "status": "pending",
-    "questionKey": "1991-填空题-5",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-02-B"
+    ],
+    "rationale": "分子分母同除以 e^(1/x)，利用指数衰减 e^(−1/x)→0。",
+    "methods": "无穷小与极限四则运算。",
+    "pitfalls": "直接处理两个无穷大而未同除主导项。"
   },
   "66": {
-    "status": "pending",
-    "questionKey": "1991-选择题-1",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "两曲线在同一点相切，先代点确定参数关系，再隐函数求导比较斜率。",
+    "methods": "隐函数求导、切线斜率。",
+    "pitfalls": "只代点不比较斜率；隐函数求导符号错误。"
   },
   "67": {
-    "status": "pending",
-    "questionKey": "1991-选择题-2",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-03-A"
+    ],
+    "rationale": "按 x 所在区间拆分变上限积分，逐段计算并核对分界点连续。",
+    "methods": "定积分可加性、连续性。",
+    "pitfalls": "分段积分漏掉前一段累计值。"
   },
   "68": {
-    "status": "pending",
-    "questionKey": "1991-选择题-3",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-01-A"
+    ],
+    "rationale": "极大值点经自变量反射与函数值取负的组合变换，极大变为极小。",
+    "methods": "函数图像变换、极值定义。",
+    "pitfalls": "只反射自变量或只改变函数值符号。"
   },
   "69": {
-    "status": "pending",
-    "questionKey": "1991-选择题-4",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-05-C"
+    ],
+    "secondary": [
+      "CAL-02-B"
+    ],
+    "rationale": "分别考察 x→±∞ 与 x→0，确定水平渐近线和铅直渐近线。",
+    "methods": "函数极限与渐近线判定。",
+    "pitfalls": "只检查无穷远渐近线，漏掉分母为零的点。"
   },
   "70": {
-    "status": "pending",
-    "questionKey": "1991-选择题-5",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "把细杆分割为微元，写出微元引力并在杆区间上积分。",
+    "methods": "定积分建模、微元法。",
+    "pitfalls": "距离表达式或积分区间方向错误。"
   },
   "71": {
-    "status": "pending",
-    "questionKey": "1991-解答题-1",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "参数方程先求一阶导数，再对参数求导并除以 dx/dt 得二阶导数。",
+    "methods": "参数求导、商法则。",
+    "pitfalls": "二阶导数漏除 dx/dt。"
   },
   "72": {
-    "status": "pending",
-    "questionKey": "1991-解答题-2",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "令 t=√x，把根式积分转化为有理函数积分。",
+    "methods": "定积分换元、部分分式。",
+    "pitfalls": "dx=2t dt 后漏掉 t 因子。"
   },
   "73": {
-    "status": "pending",
-    "questionKey": "1991-解答题-3",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-02-B"
+    ],
+    "rationale": "分子分母分别用等价无穷小展开，比较同阶主项。",
+    "methods": "等价无穷小替换。",
+    "pitfalls": "把 x−sin x 错换为 0；忽略三阶主项。"
   },
   "74": {
-    "status": "pending",
-    "questionKey": "1991-解答题-4",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-A"
+    ],
+    "rationale": "利用 sin²x=(1−cos2x)/2，再对 x cos2x 分部积分。",
+    "methods": "三角恒等变形、分部积分。",
+    "pitfalls": "倍角公式或分部积分系数错误。"
   },
   "75": {
-    "status": "pending",
-    "questionKey": "1991-解答题-5",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-07-B"
+    ],
+    "secondary": [
+      "CAL-06-A"
+    ],
+    "rationale": "识别 (xy)'=xy'+y，积分后代入初值求常数。",
+    "methods": "乘积求导、初值条件。",
+    "pitfalls": "漏识别乘积导数；代入 x=1 时漏项。"
   },
   "76": {
-    "status": "pending",
-    "questionKey": "1992-填空题-1",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "参数方程求导时分别对 x(t)、y(t) 求导，再求比值并代 t=0。",
+    "methods": "链式法则。",
+    "pitfalls": "把 dy/dx 误写成 dy/dt。"
   },
   "77": {
-    "status": "pending",
-    "questionKey": "1992-填空题-2",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-05-A"
+    ],
+    "rationale": "闭区间上求最大值需比较驻点与端点值。",
+    "methods": "导数判单调、中值/极值方法。",
+    "pitfalls": "只比较驻点，不检查端点。"
   },
   "78": {
-    "status": "pending",
-    "questionKey": "1992-填空题-3",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-02-B"
+    ],
+    "rationale": "分子有理化后用二阶小量，分母 e^x−cos x 的主项为 x。",
+    "methods": "泰勒/等价无穷小。",
+    "pitfalls": "误以为分母首项为 x²，漏掉 e^x 的一次项。"
   },
   "79": {
-    "status": "pending",
-    "questionKey": "1992-填空题-4",
-    "primary": [],
-    "secondary": []
+    "status": "verified",
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "广义积分拆成两个基本积分或合并后求无穷端点极限。",
+    "methods": "部分分式、广义积分。",
+    "pitfalls": "分开处理发散项而未保留抵消结构。"
   },
   "80": {
     "status": "pending",
