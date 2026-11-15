@@ -633,6 +633,7 @@ window.onload=function(){
  window.loadWordEnrichment=function(word){if(!word)return;activeWord=word;requestToken++;shell(word);};
  const base=window.renderW;
  if(typeof base==='function')window.renderW=function(){base();const w=Array.isArray(Q)&&Q.length?Q[C]:null;if(w){window.loadWordPhonetics(w.w);window.loadWordEnrichment(w.w);}};
+ document.addEventListener('DOMContentLoaded',function(){const w=Array.isArray(Q)&&Q.length?Q[C]:null;if(w)window.loadWordPhonetics(w.w);});
 })();
 </script>
 
