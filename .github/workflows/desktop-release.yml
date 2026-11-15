@@ -17,6 +17,9 @@ permissions:
 jobs:
   windows:
     runs-on: windows-latest
+    env:
+      TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+      TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
     defaults:
       run:
         working-directory: desktop
@@ -40,14 +43,11 @@ jobs:
       # A signing key enables updater bundles. Without it, still build and publish
       # the normal NSIS installer so users can install the desktop app.
       - name: Build signed Windows installer and updater bundle
-        if: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY != '' }}
-        env:
-          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
-          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
+        if: ${{ env.TAURI_SIGNING_PRIVATE_KEY != '' }}
         run: npm run build:windows
 
       - name: Build unsigned Windows installer (no updater artifact)
-        if: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY == '' }}
+        if: ${{ env.TAURI_SIGNING_PRIVATE_KEY == '' }}
         run: npx tauri build --bundles nsis --config src-tauri/tauri.release.unsigned.conf.json
 
       - name: Collect installer and optional updater bundle
@@ -71,7 +71,7 @@ jobs:
           files: desktop/release/*
 
       - name: Publish updater manifest
-        if: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY != '' }}
+        if: ${{ env.TAURI_SIGNING_PRIVATE_KEY != '' }}
         shell: pwsh
         run: |
           $archive = Get-ChildItem release/*.nsis.zip | Select-Object -First 1
