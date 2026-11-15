@@ -466,6 +466,44 @@ multiSenseScenes['overhead']=[
  [/经营开支|经营开⽀|开支|开⽀/,['idea','经营开支：账本记录固定成本项目',`<rect x='135' y='65' width='370' height='245' rx='12' fill='#fff' stroke='A2' stroke-width='9'/><path d='M185 125h260m-260 50h160m-160 45h125' stroke='A3' stroke-width='11'/><circle cx='410' cy='245' r='38' fill='A4'/><path d='M410 220v50m-18-35h36' stroke='#fff' stroke-width='8'/>`]]
 ];
 
+
+multiSenseScenes['regulate']=[
+ [/规章|管理|约束/,['law','规章管理：规则约束组织运行','<path d="M145 105h350M180 105v165m280-165v165M145 270h350" stroke="A2" stroke-width="10" fill="none"/><rect x="245" y="145" width="150" height="82" rx="12" fill="A3" stroke="A2" stroke-width="7"/><path d="M275 185h90m-45-24v48" stroke="A4" stroke-width="10"/>']],
+ [/调整|调节/,['science','调节：旋钮改变仪器输出','<circle cx="320" cy="180" r="105" fill="#fff" stroke="A2" stroke-width="10"/><circle cx="320" cy="180" r="65" fill="A3"/><path d="M320 180l54-58" stroke="A4" stroke-width="15" stroke-linecap="round"/><circle cx="320" cy="180" r="14" fill="#fff"/><path d="M250 275h140" stroke="A2" stroke-width="9"/>']]
+];
+multiSenseScenes['administer']=[
+ [/管理|公司/,['law','管理：负责人统筹组织与人员','<rect x="205" y="75" width="230" height="90" rx="12" fill="A3" stroke="A2" stroke-width="8"/><circle cx="320" cy="205" r="28" fill="A4"/><circle cx="220" cy="270" r="22" fill="A4"/><circle cx="420" cy="270" r="22" fill="A4"/><path d="M320 165v40m0 0-100 45m100-45 100 45" stroke="A2" stroke-width="9" fill="none"/>']],
+ [/给予|药|执行|实施/,['science','施用药物：按剂量注入药液','<path d="M255 80h130v45H255Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M275 125v115q0 35 45 35t45-35V125" fill="#fff" stroke="A2" stroke-width="8"/><path d="M275 205h90v35q0 35-45 35t-45-35Z" fill="A4"/><path d="M320 275v42m-15-15 15 15 15-15" stroke="A2" stroke-width="8" fill="none"/>']]
+];
+multiSenseScenes['ask']=[
+ [/问|询问/,['speech','询问：向对方提出问题','<path d="M135 85h350q25 0 25 25v130q0 25-25 25H290l-70 48v-48h-85Z" fill="#fff" stroke="A2" stroke-width="9"/><path d="M300 130q-5-35 28-35 34 0 31 31-2 19-28 34v17m0 24v4" stroke="A4" stroke-width="13" fill="none" stroke-linecap="round"/>']],
+ [/要求|请求|邀请|期望/,['idea','请求：递出写有事项的信封','<path d="M165 115h310v190H165Z" fill="#fff" stroke="A2" stroke-width="9"/><path d="m165 125 155 115 155-115" fill="none" stroke="A3" stroke-width="10"/><path d="M250 165h140" stroke="A4" stroke-width="10" stroke-linecap="round"/><circle cx="420" cy="85" r="28" fill="A4"/>']],
+ [/要价|索价/,['economy','索价：商品旁标出价格标签','<path d="M180 125h170l100 100-105 105-165-165Z" fill="A3" stroke="A2" stroke-width="9"/><circle cx="225" cy="170" r="13" fill="#fff"/><path d="M275 190l65 65m-40-80 35 35" stroke="A4" stroke-width="10"/>']]
+];
+multiSenseScenes['rub']=[
+ [/擦|搓|揉|摩擦/,['person','摩擦：双手来回搓擦物体','<path d="M180 210q25-45 70-30l55 30 45-25q50-28 85 12l-45 65H235Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M245 120l-30-25m75 20-10-35m65 40 10-35" stroke="A4" stroke-width="10" stroke-linecap="round"/><path d="M200 285h240" stroke="A2" stroke-width="8"/>']],
+ [/涂|抹/,['idea','涂抹：颜料被均匀抹在表面','<rect x="170" y="105" width="300" height="180" rx="12" fill="#fff" stroke="A2" stroke-width="9"/><path d="M210 230q55-95 110-20t110-25" fill="none" stroke="A4" stroke-width="28" stroke-linecap="round"/><path d="M225 95h150l-35 55H260Z" fill="A3" stroke="A2" stroke-width="7"/>']],
+ [/问题|困难/,['travel','难点：道路中央出现障碍','<path d="M105 265h430" stroke="A2" stroke-width="12"/><path d="M175 265l70-105 75 105 70-105 75 105" fill="none" stroke="A3" stroke-width="15"/><path d="M300 115l20-40 20 40-20 40Z" fill="A4"/>']]
+];
+multiSenseScenes['franchise']=[
+ [/特许经营权|特许企业|特许权/,['economy','特许经营：品牌授权门店开业','<path d="M175 145h290v145H175Z" fill="#fff" stroke="A2" stroke-width="9"/><path d="M155 145l35-65h260l35 65Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M245 290v-85h70v85m45-100h65v55h-65Z" fill="A4" stroke="A2" stroke-width="7"/>']],
+ [/选举权/,['law','选举权：选民把选票投入票箱','<rect x="220" y="165" width="200" height="130" rx="12" fill="A3" stroke="A2" stroke-width="9"/><path d="M260 165v-28h120v28" stroke="A2" stroke-width="9" fill="none"/><path d="M270 65h110v75H270Z" fill="#fff" stroke="A2" stroke-width="7" transform="rotate(-12 325 102)"/><path d="M320 83v38m-17-18 17 18 17-18" stroke="A4" stroke-width="8" fill="none"/>']]
+];
+multiSenseScenes['bear']=[
+ [/承受|忍受|承担|支撑/,['person','承担重担：肩膀扛起沉重负荷','<circle cx="320" cy="100" r="32" fill="A4"/><path d="M245 270q0-120 75-120t75 120" fill="A3" stroke="A2" stroke-width="8"/><path d="M195 145h250v45H195Z" fill="A4" stroke="A2" stroke-width="8"/><path d="M225 145v-38h190v38" fill="none" stroke="A2" stroke-width="8"/>']],
+ [/带有|生孩子|结果实/,['nature','结果：枝头结出成熟果实','<path d="M320 285V105m0 95q-80-5-95-80 85-5 95 80m0-45q20-80 100-75-5 70-100 75" fill="A3" stroke="A2" stroke-width="8"/><circle cx="280" cy="155" r="22" fill="A4"/><circle cx="365" cy="130" r="24" fill="A4"/>']],
+ [/熊/,['nature','熊：森林中的大型野生动物','<circle cx="250" cy="105" r="28" fill="A4"/><circle cx="390" cy="105" r="28" fill="A4"/><circle cx="320" cy="165" r="92" fill="A3" stroke="A2" stroke-width="9"/><ellipse cx="320" cy="205" rx="48" ry="32" fill="#fff"/><circle cx="285" cy="155" r="8" fill="A2"/><circle cx="355" cy="155" r="8" fill="A2"/><path d="M305 205q15 13 30 0" stroke="A2" stroke-width="7" fill="none"/>']]
+];
+multiSenseScenes['concern']=[
+ [/担心/,['emotion','担忧：人物头顶浮现忧虑气泡','<circle cx="300" cy="170" r="70" fill="A3"/><path d="M250 285q0-75 70-75t70 75" fill="A3" stroke="A2" stroke-width="8"/><path d="M365 80q55-35 85 10 25 45-20 75l-20 28-20-28q-55-35-25-85Z" fill="#fff" stroke="A2" stroke-width="8"/><path d="M410 105v35m0 18v4" stroke="A4" stroke-width="10" stroke-linecap="round"/>']],
+ [/关心|重要的事|关于|涉及|影响/,['speech','关联事项：线索连接到相关主题','<circle cx="210" cy="170" r="42" fill="A4"/><circle cx="430" cy="170" r="42" fill="A3"/><rect x="285" y="115" width="70" height="110" rx="12" fill="#fff" stroke="A2" stroke-width="8"/><path d="M252 170h33m70 0h33" stroke="A2" stroke-width="10"/><path d="M270 155l15 15-15 15m90-30-15 15 15 15" stroke="A4" stroke-width="8" fill="none"/>']]
+];
+multiSenseScenes['cover']=[
+ [/遮盖|覆盖|遮掩/,['nature','遮盖：伞面挡住落下的雨滴','<path d="M145 175q175-190 350 0Z" fill="A3" stroke="A2" stroke-width="9"/><path d="M320 175v95q0 35 35 20" fill="none" stroke="A2" stroke-width="10"/><path d="M205 70l-12-25m90 10-5-30m110 30 5-30m80 55 12-25" stroke="A4" stroke-width="8" stroke-linecap="round"/>']],
+ [/包括/,['knowledge','包含：大框内收纳多个不同元素','<rect x="150" y="75" width="340" height="225" rx="20" fill="#fff" stroke="A2" stroke-width="10"/><circle cx="235" cy="150" r="28" fill="A3"/><rect x="300" y="120" width="115" height="55" rx="8" fill="A4"/><path d="M210 225h220" stroke="A2" stroke-width="10" stroke-linecap="round"/><circle cx="255" cy="225" r="12" fill="A4"/><circle cx="320" cy="225" r="12" fill="A3"/><circle cx="385" cy="225" r="12" fill="A4"/>']],
+ [/够付/,['economy','够付：收入金额覆盖账单','<rect x="165" y="95" width="210" height="180" rx="14" fill="#fff" stroke="A2" stroke-width="8"/><path d="M205 145h130m-130 40h90" stroke="A3" stroke-width="10"/><circle cx="420" cy="210" r="65" fill="A4" stroke="A2" stroke-width="8"/><path d="M420 165v90m-25-65h50m-50 40h50" stroke="#fff" stroke-width="9"/>']]
+];
+
 function matchSenseScene(word,meaning){
  var entries=multiSenseScenes[String(word||'').toLowerCase()];
  if(!entries)return null;
