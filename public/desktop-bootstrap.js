@@ -1,6 +1,5 @@
 const { invoke } = window.__TAURI__.core;
 const { check } = window.__TAURI__.updater;
-const { relaunch } = window.__TAURI__.process;
 
 const status = document.querySelector("#status");
 const setStatus = (message) => { status.textContent = message; };
@@ -78,7 +77,7 @@ async function boot() {
         if (!confirm(`发现新版本 ${update.version}，现在下载并安装吗？`)) return;
         message.textContent = "正在下载并安装更新…";
         await update.downloadAndInstall();
-        await relaunch();
+        message.textContent = "更新安装程序已启动，客户端将退出完成升级。";
       } catch (error) {
         message.textContent = `更新检查失败：${String(error)}。请前往 GitHub Releases 手动下载。`;
       }
