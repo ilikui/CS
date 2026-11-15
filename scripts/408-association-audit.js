@@ -1,5 +1,5 @@
 // Audit source identity, target card existence, and candidate coverage; never auto-promote candidates.
-// Re-run after round-two source-backed mappings were added.
+// Re-run after latest source-backed question mappings.
 // Refresh audit after the third batch of source-backed associations.
 // Re-run after application-question solutions and status-label corrections.
 // Refresh audit after round-five source-backed question links.
