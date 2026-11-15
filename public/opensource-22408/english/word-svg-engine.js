@@ -36,15 +36,21 @@ person:'<circle cx="320" cy="105" r="43" fill="A4"/><path d="M235 278q3-111 85-1
 nature:'<path d="M320 70q-105 95-100 172 50 48 100 18 50 30 100-18 5-77-100-172Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M320 95v180m0-85-50-42m50 72 50-46" stroke="A2" stroke-width="8" fill="none" stroke-linecap="round"/>',
 idea:'<path d="M320 74c-74 0-117 53-102 116 10 43 47 55 56 88h92c9-33 46-45 56-88 15-63-28-116-102-116Z" fill="A4"/><path d="M280 279h80m-70 23h60m-30-196v41m-60-10 27 28m93-28-27 28" stroke="A2" stroke-width="9" stroke-linecap="round"/><circle cx="320" cy="192" r="25" fill="#fff" opacity=".75"/>'
 };
+function buildSvg(word,meaning){
+ var s=(word+' '+meaning).toLowerCase(),kind='idea';
+ for(var i=0;i<rules.length;i++){if(rules[i][0].test(s)){kind=rules[i][1];break}}
+ var seed=hash(word.toLowerCase()+'|'+meaning),p=palettes[seed%palettes.length];
+ var artSvg=art[kind].replace(/A([2-4])/g,function(_,n){return p[Number(n)-1]});
+ return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="'+esc(word)+'：'+esc(meaning)+'"><title>'+esc(word)+' — '+esc(meaning)+'</title><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="'+p[0]+'"/><stop offset="1" stop-color="#fff"/></linearGradient></defs><rect width="640" height="360" rx="28" fill="url(#bg)"/><circle cx="540" cy="68" r="38" fill="'+p[2]+'" opacity=".65"/><circle cx="92" cy="294" r="58" fill="'+p[2]+'" opacity=".35"/>'+artSvg+'</svg>';
+}
+window.createWordMemorySvg=function(word,meaning){return buildSvg(String(word||''),String(meaning||''))};
 function render(word){
  var el=$('word-enrichment');if(!el)return;
  var q=Array.isArray(window.Q)&&window.Q.length?window.Q[window.C]:null;
  var meaning=q&&q.w===word?q.d:'';
  var s=(word+' '+meaning).toLowerCase(),kind='idea',label='概念联想';
  for(var i=0;i<rules.length;i++){if(rules[i][0].test(s)){kind=rules[i][1];label=rules[i][2];break}}
- var seed=hash(word.toLowerCase()+'|'+meaning),p=palettes[seed%palettes.length];
- var artSvg=art[kind].replace(/A([2-4])/g,function(_,n){return p[Number(n)-1]});
- var svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="'+esc(word)+'：'+esc(meaning)+'"><title>'+esc(word)+' — '+esc(meaning)+'</title><defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="'+p[0]+'"/><stop offset="1" stop-color="#fff"/></linearGradient></defs><rect width="640" height="360" rx="28" fill="url(#bg)"/><circle cx="540" cy="68" r="38" fill="'+p[2]+'" opacity=".65"/><circle cx="92" cy="294" r="58" fill="'+p[2]+'" opacity=".35"/>'+artSvg+'</svg>';
+ var svg=buildSvg(word,meaning);
  var old=el.querySelector('.word-svg-memory');if(old)old.remove();
  var card=document.createElement('section');card.className='word-svg-memory';
  card.innerHTML='<div class="word-svg-heading"><span>视觉记忆 · 本地 SVG 插画</span><span class="word-svg-kind">'+esc(label)+'</span></div><div class="word-svg-art">'+svg+'</div><div class="word-svg-caption"><strong>'+esc(word)+'</strong><span>'+esc(meaning||'观察画面，联想单词含义')+'</span></div><div class="word-svg-tip">先看图回忆词义，再翻开下方卡片核对。插画由本地 SVG 规则生成，无需联网。</div>';
