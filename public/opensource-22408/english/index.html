@@ -149,7 +149,7 @@ body.study-card-revealed #dd{display:block}
 body.study-mode-spell #dd,body.study-mode-quiz #dd{display:none}
 .word-card{width:min(92%,820px);padding:clamp(20px,4vw,42px);margin:18px auto 10px;background:linear-gradient(145deg,#fff 0%,#fffaf7 100%);border:1px solid #eee5de;border-radius:28px;box-shadow:0 18px 55px rgba(65,42,30,.08)}
 .word-line{font-size:clamp(42px,7vw,76px);letter-spacing:-2px;color:#302722;line-height:1.08;margin:10px 0 14px}
-.word-ipa{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:10px auto 18px;color:#526b80;font-size:14px}.word-ipa .ipa-item{display:inline-flex;align-items:center;gap:6px;padding:7px 11px;border:1px solid #e2eaf0;border-radius:10px;background:#f7fafc}.word-ipa .ipa-label{font-size:11px;color:#8a9aaa;font-weight:700}.word-ipa .ipa-value{font-family:"Arial",sans-serif;font-size:16px;color:#315e82}.word-ipa .ipa-empty{color:#9aa6b2;font-size:12px}@media(max-width:600px){.word-ipa{gap:8px}.word-ipa .ipa-item{padding:6px 9px}}\n#dd{max-width:690px;margin:18px auto 4px;padding:18px 22px;border-radius:18px;background:#f8f3ee;text-align:left}
+.word-ipa{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:10px auto 18px;color:#526b80;font-size:14px}.word-ipa .ipa-item{display:inline-flex;align-items:center;gap:6px;padding:7px 11px;border:1px solid #e2eaf0;border-radius:10px;background:#f7fafc}.word-ipa .ipa-label{font-size:11px;color:#8a9aaa;font-weight:700}.word-ipa .ipa-value{font-family:"Arial",sans-serif;font-size:16px;color:#315e82}.word-ipa .ipa-empty{color:#9aa6b2;font-size:12px}.ipa-guide{margin:-8px auto 14px;text-align:center;color:#8493a1;font-size:11px}.ipa-guide b{color:#426b8f;font-size:14px}@media(max-width:600px){.word-ipa{gap:8px}.word-ipa .ipa-item{padding:6px 9px}}\n#dd{max-width:690px;margin:18px auto 4px;padding:18px 22px;border-radius:18px;background:#f8f3ee;text-align:left}
 #dd .def-item{font-size:clamp(16px,2vw,20px);line-height:1.85;margin:0;padding:5px 0;color:#51443c}
 #dp{font-size:13px;color:#9b7163;letter-spacing:.3px;margin-top:14px}
 .study-mode-switch{position:sticky;top:8px;z-index:5;width:fit-content;max-width:calc(100% - 24px);margin:20px auto 16px;padding:6px;background:rgba(255,255,255,.9);border:1px solid #eee6df;border-radius:999px;box-shadow:0 8px 24px rgba(54,39,30,.07);backdrop-filter:blur(12px)}
@@ -181,7 +181,7 @@ body.study-mode-spell #dd,body.study-mode-quiz #dd{display:none}
 #browse-toolbar button:hover{background:#eaf2f8;border-color:#b9ccda}
 #bc .bg{scroll-margin-top:76px}
 #bc .bgt{padding:12px 10px;border-radius:9px;background:#f8fafc}
-#bc .bw-ipa{display:flex;gap:6px;flex-wrap:wrap;margin:7px 0;color:#315e82;font-size:12px}#bc .bw-ipa-item{padding:4px 7px;border:1px solid #e3ebf1;border-radius:7px;background:#f7fafc}#bc .bw-ipa-label{font-size:10px;color:#8495a4;margin-right:4px;font-weight:700}#bc .bw-ipa-loading,#bc .bw-ipa-empty{font-size:11px;color:#9aa6b2}#bc .bw-audio{display:flex;gap:6px;margin:6px 0 8px}#bc .bw-audio button{border:1px solid #dce7ef;border-radius:7px;background:#f7fafc;color:#416987;padding:4px 8px;font-size:11px;cursor:pointer}#bc .bw-audio button:hover{background:#eaf2f8}
+#bc .bw-slow{border:1px solid #dce7ef;border-radius:7px;background:#f7fafc;color:#416987;padding:4px 8px;font-size:11px;cursor:pointer}#bc .bw-ipa{display:flex;gap:6px;flex-wrap:wrap;margin:7px 0;color:#315e82;font-size:12px}#bc .bw-ipa-item{padding:4px 7px;border:1px solid #e3ebf1;border-radius:7px;background:#f7fafc}#bc .bw-ipa-label{font-size:10px;color:#8495a4;margin-right:4px;font-weight:700}#bc .bw-ipa-loading,#bc .bw-ipa-empty{font-size:11px;color:#9aa6b2}#bc .bw-audio{display:flex;gap:6px;margin:6px 0 8px}#bc .bw-audio button{border:1px solid #dce7ef;border-radius:7px;background:#f7fafc;color:#416987;padding:4px 8px;font-size:11px;cursor:pointer}#bc .bw-audio button:hover{background:#eaf2f8}
 @media(max-width:768px){#browse-toolbar{margin:-16px -16px 14px;padding:12px}#browse-toolbar .browse-toolbar-title{width:100%}#browse-toolbar button{flex:1}}
 </style>
 <style id="english-page-redesign">
@@ -323,7 +323,9 @@ body.study-card-revealed #dd{display:block!important}
             <button class="pronunciation-btn" id="uk-audio" type="button" onclick="playPronunciation(1,event)" title="播放英式发音">🔊 英音 UK</button>
             <button class="pronunciation-btn" id="us-audio" type="button" onclick="playPronunciation(2,event)" title="播放美式发音">🔊 美音 US</button>
         </div>
+        <button class="pronunciation-btn" id="slow-audio" type="button" onclick="playPronunciation(2,event,null,0.62)" title="使用浏览器语音以较慢速度播放">🐢 慢速跟读</button>
         <div class="pronunciation-status" id="pronunciation-status" aria-live="polite"></div>
+        <div class="ipa-guide">音标重音提示：<b>ˈ</b> 主重音 · <b>ˌ</b> 次重音；音节划分以可靠词典标注为准</div>
         <div class="word-ipa" id="word-ipa" aria-live="polite"><span class="ipa-loading">音标加载中…</span></div>
         <div id="dd"></div>
         <div class="study-panel" id="study-panel" onclick="event.stopPropagation()"></div>
@@ -384,7 +386,7 @@ function stopPronunciation(){
     if('speechSynthesis' in window){window.speechSynthesis.cancel();}
     activeUtterance=null;
 }
-function playPronunciation(type,event,wordOverride){
+function playPronunciation(type,event,wordOverride,rate){
     if(event)event.stopPropagation();
     const word=wordOverride||(Q.length?Q[C]?.w:null);
     if(!word)return;
@@ -393,19 +395,19 @@ function playPronunciation(type,event,wordOverride){
     stopPronunciation();
     buttons.forEach(b=>{if(b)b.disabled=true;});
     const accent=type===1?'en-GB':'en-US';
-    status.textContent=type===1?'正在播放英式发音…':'正在播放美式发音…';
+    status.textContent=(type===1?'正在播放英式发音':'正在播放美式发音')+(rate&&rate<0.8?' · 慢速跟读…':'…');
     const finish=()=>{buttons.forEach(b=>{if(b)b.disabled=false;});};
     if('speechSynthesis' in window && 'SpeechSynthesisUtterance' in window){
         const utterance=new SpeechSynthesisUtterance(String(word));
         utterance.lang=accent;
-        utterance.rate=0.86;
+        utterance.rate=rate||0.86;
         const voices=window.speechSynthesis.getVoices();
         const voice=voices.find(v=>v.lang.toLowerCase()===accent.toLowerCase())
           ||voices.find(v=>v.lang.toLowerCase().startsWith(type===1?'en-gb':'en-us'))
           ||voices.find(v=>v.lang.toLowerCase().startsWith('en'));
         if(voice)utterance.voice=voice;
         utterance.onend=()=>{if(activeUtterance===utterance){activeUtterance=null;status.textContent='';finish();}};
-        utterance.onerror=()=>{if(activeUtterance===utterance){activeUtterance=null;status.textContent='系统语音不可用，正在尝试在线发音…';playRemotePronunciation(word,type,status,finish);}};
+        utterance.onerror=()=>{if(activeUtterance===utterance){activeUtterance=null;status.textContent=rate&&rate<0.8?'系统语音不支持慢速，改用在线原速发音…':'系统语音不可用，正在尝试在线发音…';playRemotePronunciation(word,type,status,finish);}};
         activeUtterance=utterance;
         try{window.speechSynthesis.speak(utterance);return;}
         catch(error){activeUtterance=null;}
@@ -504,7 +506,7 @@ function renderB(){
     let h='';
     for(const[g,cd]of(Object.entries(WD))){
         for(const[p,ws]of(Object.entries(cd))){
-            h+='<div class="bg"><div class="bgt hid" onclick="this.classList.toggle(\'hid\');this.nextElementSibling.classList.toggle(\'hid\')"><span>'+p+' <span class="ct">('+ws.length+'词)</span></span><span class="ar">▼</span></div><div class="bw-grid hid">'+ws.map(w=>'<div class="bw-item" onclick="goW(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,&apos;'+p.replace(/'/g,"&apos;")+'&apos;)"><div class="bw-visual" style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:10px;margin-bottom:8px;background:#f3f6f8">'+(window.createWordMemorySvg?window.createWordMemorySvg(w[0],w[1]):'')+'</div><div class="bw-w" role="button" tabindex="0" title="点击单词播放美音" onclick="speakBrowseWord(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,event)" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();speakBrowseWord(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,event)}">'+w[0]+' <span class="bw-sound" aria-hidden="true">🔊</span></div><div class="bw-ipa" data-word="'+w[0].replace(/"/g,'&quot;')+'"><span class="bw-ipa-loading">音标待加载</span></div><div class="bw-audio"><button type="button" onclick="event.stopPropagation();playPronunciation(1,event,&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;)">英音 UK</button><button type="button" onclick="event.stopPropagation();playPronunciation(2,event,&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;)">美音 US</button></div><div class="bw-d">'+w[1]+'</div></div>').join('')+'</div></div>'
+            h+='<div class="bg"><div class="bgt hid" onclick="this.classList.toggle(\'hid\');this.nextElementSibling.classList.toggle(\'hid\')"><span>'+p+' <span class="ct">('+ws.length+'词)</span></span><span class="ar">▼</span></div><div class="bw-grid hid">'+ws.map(w=>'<div class="bw-item" onclick="goW(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,&apos;'+p.replace(/'/g,"&apos;")+'&apos;)"><div class="bw-visual" style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:10px;margin-bottom:8px;background:#f3f6f8">'+(window.createWordMemorySvg?window.createWordMemorySvg(w[0],w[1]):'')+'</div><div class="bw-w" role="button" tabindex="0" title="点击单词播放美音" onclick="speakBrowseWord(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,event)" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();speakBrowseWord(&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,event)}">'+w[0]+' <span class="bw-sound" aria-hidden="true">🔊</span></div><div class="bw-ipa" data-word="'+w[0].replace(/"/g,'&quot;')+'"><span class="bw-ipa-loading">音标待加载</span></div><div class="bw-audio"><button type="button" onclick="event.stopPropagation();playPronunciation(1,event,&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;)">英音 UK</button><button type="button" onclick="event.stopPropagation();playPronunciation(2,event,&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;)">美音 US</button><button class="bw-slow" type="button" onclick="event.stopPropagation();playPronunciation(2,event,&apos;'+w[0].replace(/'/g,"&apos;")+'&apos;,0.62)">🐢 慢速</button></div><div class="bw-d">'+w[1]+'</div></div>').join('')+'</div></div>'
         }
     }
     document.getElementById('bc').innerHTML=h;
