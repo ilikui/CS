@@ -149,6 +149,23 @@ function matchSenseScene(word,meaning){
  for(var i=0;i<entries.length;i++){if(entries[i][0].test(gloss))return entries[i][1]}
  return null;
 }
+
+function senseVariants(word,meaning){
+ var entries=multiSenseScenes[String(word||'').toLowerCase()];
+ if(!entries)return [];
+ var parts=String(meaning||'').split(/[；;。]/),out=[],seen={};
+ for(var p=0;p<parts.length;p++){
+  var part=parts[p].trim();if(!part)continue;
+  for(var i=0;i<entries.length;i++){
+   if(entries[i][0].test(part)){
+    var scene=entries[i][1],key=scene[1];
+    if(!seen[key]){seen[key]=true;out.push({meaning:part,scene:scene})}
+    break;
+   }
+  }
+ }
+ return out;
+}
 function sceneFor(word,meaning){
  var key=String(word||'').toLowerCase(),sense=matchSenseScene(key,meaning),exact=semanticScenes[key];
  if(sense)return sense;
@@ -188,10 +205,19 @@ function render(word){
  var meaning=q&&q.w===word?q.d:'';
  var exact=sceneFor(word,meaning),kind=exact?exact[0]:'idea',label=exact?exact[1]:'概念联想';
  if(!exact){for(var i=0;i<rules.length;i++){if(rules[i][0].test(meaning||'')){kind=rules[i][1];label=rules[i][2];break}}}
- var svg=buildSvg(word,meaning);
- var old=el.querySelector('.word-svg-memory');if(old)old.remove();
+ var variants=senseVariants(word,meaning),old=el.querySelector('.word-svg-memory');if(old)old.remove();
  var card=document.createElement('section');card.className='word-svg-memory';
- card.innerHTML='<div class="word-svg-heading"><span>视觉记忆 · 本地 SVG 插画</span><span class="word-svg-kind">'+esc(label)+'</span></div><div class="word-svg-art">'+svg+'</div><div class="word-svg-caption"><strong>'+esc(word)+'</strong><span>'+esc(meaning||'观察画面，联想单词含义')+'</span></div><div class="word-svg-tip">先看图回忆词义，再翻开下方卡片核对。插画由本地 SVG 规则生成，无需联网。</div>';
+ var artHtml='';
+ if(variants.length>1){
+  for(var v=0;v<variants.length;v++){
+   var scene=variants[v].scene,svg=buildSvg(word,variants[v].meaning);
+   artHtml+='<div class="word-svg-sense"><div class="word-svg-heading"><span>词义场景 '+(v+1)+'</span><span class="word-svg-kind">'+esc(scene[1])+'</span></div><div class="word-svg-art">'+svg+'</div><div class="word-svg-caption"><strong>'+esc(word)+'</strong><span>'+esc(variants[v].meaning)+'</span></div></div>';
+  }
+ }else{
+  var svg=buildSvg(word,meaning);
+  artHtml='<div class="word-svg-heading"><span>视觉记忆 · 本地 SVG 插画</span><span class="word-svg-kind">'+esc(label)+'</span></div><div class="word-svg-art">'+svg+'</div><div class="word-svg-caption"><strong>'+esc(word)+'</strong><span>'+esc(meaning||'观察画面，联想单词含义')+'</span></div>';
+ }
+ card.innerHTML=artHtml+'<div class="word-svg-tip">同一单词的不同词义分别展示对应场景。先看图回忆词义，再核对释义；插画由本地 SVG 生成，无需联网。</div>';
  el.insertBefore(card,el.firstChild);
 }
 var original=window.loadWordEnrichment;
