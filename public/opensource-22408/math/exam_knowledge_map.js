@@ -1480,244 +1480,524 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "因式分解漏系数；部分分式积分的对数绝对值或常数项错误。"
   },
   "120": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1994-解答题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-03-C"
+    ],
+    "rationale": "比较直线梯形面积与曲边梯形面积，关键是把两者写成关于 a 的代数式并比较比值。",
+    "methods": "分别计算 D 与 D₁，化简 D/D₁，再利用 a²>0 比较分式。",
+    "pitfalls": "面积表达式漏掉矩形/三角形部分；不等式方向判断错误。"
   },
   "121": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-填空题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-B"
+    ],
+    "secondary": [
+      "CAL-08-B"
+    ],
+    "rationale": "函数是 cos(x²) 与 sin²(1/x) 的乘积，求导需同时使用乘积法则和复合函数链式法则。",
+    "methods": "分别求两因子的导数，利用 2sin(1/x)cos(1/x)=sin(2/x) 化简。",
+    "pitfalls": "漏掉内层 1/x 的导数负号或 x² 的 2x 因子。"
   },
   "122": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-填空题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "二阶常系数非齐次线性方程，齐次特征根为 ±i，右端 −2x 可用一次多项式特解。",
+    "methods": "先解特征方程，再设 yp=ax+b 代入确定系数。",
+    "pitfalls": "把非齐次特解漏掉；齐次解中正弦余弦频率写错。"
   },
   "123": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-填空题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "参数曲线切线斜率由 (dy/dt)/(dx/dt) 求得，在 t=2 处确定切点与斜率。",
+    "methods": "计算 x(2)、y(2)，求 dy/dx=3t/2，再写点斜式。",
+    "pitfalls": "误用 dy/dt 作为斜率；切点坐标代入错误。"
   },
   "124": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-填空题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-A"
+    ],
+    "secondary": [
+      "CAL-01-I"
+    ],
+    "rationale": "和式为随 n 变化的正项和，可用分母上下界夹逼，结合 1+…+n=n(n+1)/2 得极限。",
+    "methods": "对每项分母 n²+n+k 用 n²+n+1 与 n²+2n 夹逼，求两端极限。",
+    "pitfalls": "上下界分母取值方向弄反；求和分子漏掉 n(n+1)/2。"
   },
   "125": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-填空题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-H"
+    ],
+    "secondary": [
+      "CAL-02-C"
+    ],
+    "rationale": "x²e^(−x²) 在 x→±∞ 均趋于 0，因此有水平渐近线 y=0。",
+    "methods": "计算函数在正、负无穷处的极限，确认同一水平渐近线。",
+    "pitfalls": "只检查 x→+∞；把函数趋于 0 误认为曲线与 x 轴相交。"
   },
   "126": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-03-B"
+    ],
+    "secondary": [
+      "CAL-03-A"
+    ],
+    "rationale": "若 φ/f 连续且 f 连续，则 φ=f·(φ/f) 连续，与 φ 有间断点矛盾；又 f 处处非零保证商有定义。",
+    "methods": "使用连续函数四则运算的逆否思路，逐项辨析复合、平方是否必保留间断。",
+    "pitfalls": "把连续函数复合不连续函数必不连续当成普遍结论。"
   },
   "127": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-03-C"
+    ],
+    "rationale": "被积曲线在 (0,1) 位于 x 轴下方、(1,2) 位于上方，面积必须按零点分段取绝对值积分。",
+    "methods": "解零点 0、1、2，判断每段符号，分别将负面积取相反数。",
+    "pitfalls": "直接计算整个区间定积分，导致正负面积抵消。"
   },
   "128": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "f 严格递增则 f(−x) 严格递减，取负后 −f(−x) 严格递增；严格递增不保证处处导数严格为正。",
+    "methods": "利用复合函数单调性逐层判断，并构造导数可为零的递增函数排除 A。",
+    "pitfalls": "把函数严格递增等同于导数处处大于零。"
   },
   "129": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A"
+    ],
+    "secondary": [
+      "CAL-05-C"
+    ],
+    "rationale": "f″>0 使 f′严格递增；由拉格朗日中值定理，f(1)−f(0)=f′(c)，其中 c∈(0,1)。",
+    "methods": "先应用中值定理将函数增量表示为某点导数，再用 f′单调性比较。",
+    "pitfalls": "误将区间平均变化量与端点导数大小关系倒置。"
   },
   "130": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-A"
+    ],
+    "secondary": [
+      "CAL-03-A"
+    ],
+    "rationale": "因 |sin x| 在 0 处左右导数符号相反，乘积 F 在 0 可导要求尖点项系数 f(0) 消失。",
+    "methods": "分别计算 F 的左右导数，比较 f′(0)−f(0) 与 f′(0)+f(0)。",
+    "pitfalls": "仅对 x≠0 使用乘积求导，忽略 |sin x| 在 0 的不可导性。"
   },
   "131": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-解答题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-01-G"
+    ],
+    "rationale": "分子 1−√cos x 的主阶为 x²/4，分母 x(1−cos√x) 的主阶为 x²/2，极限为 1/2。",
+    "methods": "有理化分子，使用 1−cos u~u²/2 分别比较主阶。",
+    "pitfalls": "把 1−cos√x 的主阶误写成 x²；漏掉有理化因子。"
   },
   "132": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-解答题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "对 xe^{f(y)}=e^y 取对数得到 ln x+f(y)=y，隐式求导两次得到 y″。",
+    "methods": "先求 y′=1/[x(1−f′(y))]，再对 x 求导并用链式法则处理 f′(y)。",
+    "pitfalls": "对数等式移项符号错误；二次求导漏掉 f″(y)y′。"
   },
   "133": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-解答题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-01-C"
+    ],
+    "secondary": [
+      "CAL-06-A"
+    ],
+    "rationale": "先由 f(x²−1) 的表达式换元确定 f，再由 f(φ(x))=ln x 解出 φ，最后积分有理函数。",
+    "methods": "令 u=x²−1 求 f(u)，再解对数方程并作部分分式/拆项积分。",
+    "pitfalls": "换元时把 x² 当成自变量本身；解 φ 时指数化或定义域处理错误。"
   },
   "134": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-解答题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-03-A"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "需先用导数定义求 f′(0)，再比较 x≠0 时 f′(x) 的极限与该值。",
+    "methods": "对 x≠0 求导，利用 arctan(1/x²)→π/2 且第二项趋零；再计算点导数。",
+    "pitfalls": "误以为 f′在原函数连续就自动成立；漏算 f′(0) 的定义。"
   },
   "135": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-解答题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-04-C"
+    ],
+    "rationale": "参数曲线弧长由 ∫√[(x′(t))²+(y′(t))²]dt 给出，化简为 2|sin(t/2)|。",
+    "methods": "求 x′、y′，代入弧长公式，并在 0≤t≤2π 上处理绝对值。",
+    "pitfalls": "将参数弧长误当作 y 对 x 的积分；绝对值符号处理错误。"
   },
   "136": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1995-解答题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-A"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "阻力与速度成正比给出 v′=−v，解指数衰减方程后以速度条件确定时间，再积分速度求路程。",
+    "methods": "分离变量求 v(t)，令 v=v₀/3 解 t，再计算 ∫₀ᵗv(s)ds。",
+    "pitfalls": "把路程误写为末速度乘时间；阻力方向符号错误。"
   },
   "137": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-填空题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-B"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "幂函数复合指数函数，使用链式法则求导并在 x=0 代入。",
+    "methods": "对 (g(x))^(2/3) 求导，g=x+e^(−x/2)，计算 g(0)=1、g′(0)=1/2。",
+    "pitfalls": "指数 −x/2 的导数漏掉 −1/2；代入时幂次计算错误。"
   },
   "138": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-填空题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-03-C"
+    ],
+    "rationale": "展开平方后交叉项 2x√(1−x²) 为奇函数，在对称区间积分为零，其余两项合并为常数 1。",
+    "methods": "展开被积函数，利用奇函数在 [−1,1] 上积分为零。",
+    "pitfalls": "没有展开平方；把根式项误判为奇函数。"
   },
   "139": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-填空题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "特征方程 λ²+2λ+5=0 的根为 −1±2i，对应指数衰减乘正弦余弦的齐次通解。",
+    "methods": "解特征方程，按共轭复根通解公式写出实数形式。",
+    "pitfalls": "虚部频率写成 1；指数因子符号错误。"
   },
   "140": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-填空题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-05-A"
+    ],
+    "rationale": "两个对数自变量均趋于 1，正弦差可用中值定理化为 cosξ 乘对数差，最终得到 2。",
+    "methods": "应用正弦函数中值定理，再用 ln(1+a/x) 的一阶展开或对数差化简。",
+    "pitfalls": "忽略中值点 ξ 的趋向；对数差展开时常数差漏算。"
   },
   "141": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-填空题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-05-B"
+    ],
+    "rationale": "曲线与 y=2 的交点满足 x+1/x=2，即 x=1（另一根重合），在 [1,2] 上曲线位于直线上方。",
+    "methods": "解交点确定积分限，计算 ∫₁²(x+1/x−2)dx。",
+    "pitfalls": "漏掉交点；面积上下函数顺序或积分限错误。"
   },
   "142": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-02-E"
+    ],
+    "rationale": "eˣ 的二阶麦克劳林展开为 1+x+x²/2+o(x²)，要使差为比 x² 高阶，x 与 x² 系数都必须消失。",
+    "methods": "展开到二阶，比较一次项系数 b 与二次项系数 a。",
+    "pitfalls": "只匹配 x² 系数而忽略一次项必须为零。"
   },
   "143": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-A"
+    ],
+    "secondary": [
+      "CAL-03-A"
+    ],
+    "rationale": "由 |f(x)|≤x² 得 f(0)=0，且差商绝对值 |f(x)/x|≤|x|→0，所以 f′(0)=0。",
+    "methods": "先代 x=0 确定函数值，再用导数定义夹逼差商。",
+    "pitfalls": "仅由函数连续性推断可导；没有使用差商定义。"
   },
   "144": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A"
+    ],
+    "secondary": [
+      "CAL-05-B"
+    ],
+    "rationale": "若 f′(x)→+∞，则充分大 x 有 f′(x)>1，利用中值定理可推出 f(x)最终至少线性增长趋于 +∞。",
+    "methods": "选取固定充分大的 X，对 x>X 用拉格朗日中值定理建立 f(x)−f(X)>x−X。",
+    "pitfalls": "误认为函数趋于无穷必然导数趋于无穷；忽略导数下界只对充分大 x 成立。"
   },
   "145": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-03-C"
+    ],
+    "rationale": "方程左侧构成偶函数；在正半轴其零点只需考察 [0,1]，端点异号且区间单调递增，故正半轴唯一零点并由偶性得到两个根。",
+    "methods": "利用偶性缩小范围，证明单调性并用介值定理确认唯一零点。",
+    "pitfalls": "只用介值定理证明存在而未证明唯一；漏掉负半轴对称根。"
   },
   "146": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-08-C"
+    ],
+    "rationale": "绕 y=m 旋转时外半径 m−g(x)、内半径 m−f(x)，体积微元为圆环面积。",
+    "methods": "用垫片法写 π[(m−g)²−(m−f)²]dx 并展开因式分解。",
+    "pitfalls": "内外半径顺序颠倒；误用圆柱壳法或漏掉平方。"
   },
   "147": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-解答题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-I"
+    ],
+    "rationale": "令 t=√(1−e^(−2x))，将根式积分化为有理函数积分，原区间有限且可用换元处理。",
+    "methods": "由 e^(−2x)=1−t² 求 dx= t/(1−t²)dt，调整积分上下限后拆分。",
+    "pitfalls": "换元求 dx 时漏掉 t 因子；积分上限 t(ln2) 算错。"
   },
   "148": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-解答题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-A"
+    ],
+    "rationale": "乘以 1−sin x 有理化，积分拆为 sec²x−sec x tan x。",
+    "methods": "将 1/(1+sin x) 乘以 (1−sin x)/(1−sin x)，再逐项积分。",
+    "pitfalls": "有理化后分子分母化简错误；sec x 的积分项符号弄错。"
   },
   "149": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-解答题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-08-B"
+    ],
+    "rationale": "参数关系中 x′(t)=f(t²)，先求 dy/dx，再按 d/dx=(1/x′(t))d/dt 再求一次。",
+    "methods": "计算 x′、y′，求 y′(x)，再对 t 求导并除以 x′。",
+    "pitfalls": "把 d²y/dx² 当成对 t 的二阶导；漏除 x′(t)。"
   },
   "150": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-解答题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-02-E"
+    ],
+    "rationale": "要求 n 阶麦克劳林式及拉格朗日余项，可将函数改写为 −1+2/(1+x)，利用几何级数结构或求导公式写余项。",
+    "methods": "展开 1/(1+x) 到 n 阶，并用拉格朗日型余项表达 n+1 阶导数在 θx 处的值。",
+    "pitfalls": "常数项符号错误；余项阶数、系数或 θ 区间写错。"
   },
   "151": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-解答题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "齐次特征根为 0、−1，非齐次项 x² 取三次多项式特解，代入确定系数。",
+    "methods": "先解齐次方程，再设 yp=ax³+bx²+cx，代回比较系数。",
+    "pitfalls": "特征根 0 对应常数项漏掉；特解多项式次数或系数错误。"
   },
   "152": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1996-解答题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-08-C"
+    ],
+    "rationale": "楔形体可按 y 方向切片，椭圆底面给出截面宽度，斜平面高度随 x 线性变化，形成三角形截面。",
+    "methods": "由椭圆方程求 x(y)，建立截面三角形面积 A(y)，再在 [−b,b] 积分。",
+    "pitfalls": "截面面积误当矩形；三角形面积的 1/2 或 tanα 因子遗漏。"
   },
   "153": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1997-填空题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-03-A"
+    ],
+    "secondary": [
+      "CAL-02-C"
+    ],
+    "rationale": "连续性要求 a 等于 (cos x)^(1/x²) 在 0 处的极限，取对数后化为 ln(cos x)/x²。",
+    "methods": "设极限为 L，取 ln 得 lim ln(cos x)/x²=−1/2，再指数还原。",
+    "pitfalls": "忘记连续值等于极限；取对数后忘记最后取指数。"
   },
   "154": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1997-填空题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-B"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "对数化简后 y=1/2[ln(1−x)−ln(1+x²)]，连续求两次导数并代 x=0。",
+    "methods": "先利用对数性质拆项，求 y′、y″，再代入 0。",
+    "pitfalls": "平方根带来的 1/2 系数遗漏；第二项求二阶导数错误。"
   },
   "155": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1997-填空题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-A"
+    ],
+    "rationale": "积分分母 x(4−x) 可通过 x=u² 化为标准反三角函数积分。",
+    "methods": "令 u=√x，dx=2u du，约去 u 后积分 2/√(4−u²)。",
+    "pitfalls": "换元后 dx 系数 2 漏掉；反三角函数参数与系数错误。"
   },
   "156": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1997-填空题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "上限为正无穷，属于反常积分；配方后成为反正切型积分并计算端点极限。",
+    "methods": "配方 x²+4x+8=(x+2)²+4，使用 arctan 原函数并令上限趋于无穷。",
+    "pitfalls": "忘记写反常积分极限；反正切原函数前系数 1/2 错误。"
   },
   "157": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1997-填空题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-03-C"
+    ],
+    "secondary": [
+      "LA-02-B"
+    ],
+    "rationale": "三个四维向量组成的向量组秩为 2，需由矩阵初等变换或三阶子式全为零确定参数。",
+    "methods": "将向量作为列组成矩阵，检查秩为 2 的条件并求参数 t。",
+    "pitfalls": "仅令一个子式为零而未确认存在非零二阶子式。"
   },
   "158": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1997-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-05-D"
+    ],
+    "rationale": "tan x−x 的首个非零项为 x³/3，指数函数差 e^(tan x)−eˣ 因而为三阶无穷小。",
+    "methods": "提取 eˣ，将 e^(tan x−x)−1 化为 tan x−x 的等价无穷小。",
+    "pitfalls": "把 tan x−x 误判为二阶；忽略指数差中的高阶展开。"
   },
   "159": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1997-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-C"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "f′<0 使右端点矩形面积 S₂ 小于积分；f″>0 表明函数凸，曲线位于端点连线下方，故梯形面积 S₃ 大于积分。",
+    "methods": "分别用单调性比较 S₂ 与 S₁，用凸函数弦线性质比较 S₁ 与 S₃。",
+    "pitfalls": "把凸函数图像与弦线的位置关系弄反；混淆梯形面积和积分面积。"
   },
   "160": {
     "status": "pending",
