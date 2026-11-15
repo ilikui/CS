@@ -111,6 +111,23 @@ fn clear_learning_store(app: AppHandle) -> Result<(), String> {
     Ok(())
 }
 
+#[tauri::command]
+fn save_learning_snapshot(app: AppHandle, data: HashMap<String, String>) -> Result<(), String> {
+    let mut conn = open_database(&app)?;
+    let tx = conn.transaction().map_err(|e| e.to_string())?;
+    tx.execute("DELETE FROM learning_store", []).map_err(|e| e.to_string())?;
+    {
+        let mut stmt = tx.prepare(
+            "INSERT INTO learning_store(key, value, updated_at) VALUES (?1, ?2, CURRENT_TIMESTAMP)"
+        ).map_err(|e| e.to_string())?;
+        for (key, value) in &data {
+            stmt.execute(params![key, value]).map_err(|e| e.to_string())?;
+        }
+    }
+    tx.commit().map_err(|e| e.to_string())?;
+    Ok(())
+}
+
 #[derive(Serialize, Deserialize)]
 struct BackupFile {
     format: String,
@@ -182,6 +199,7 @@ fn main() {
             save_learning_item,
             remove_learning_item,
             clear_learning_store,
+            save_learning_snapshot,
             export_learning_backup,
             import_learning_backup,
             get_desktop_data_path
