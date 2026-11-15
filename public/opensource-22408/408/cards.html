@@ -304,9 +304,9 @@ function renderDemo(box){
   stage.innerHTML=d.a.map((v,i)=>'<span class="demo-cell '+(d.done?'done':d.i.includes(i)?'active':'')+'">'+v+'</span>').join('');
  }else if(type==='search'){
   stage.innerHTML=[3,7,11,15,19,23,27].map((v,i)=>'<span class="demo-cell '+(i===d.m?'active':i<d.l||i>d.r?'':'')+'">'+v+'</span>').join('');
-  stage.innerHTML+='<span class="demo-status">查找目标：19 · low='+d.l+' · high='+d.r+' · mid='+d.m+'</span>';
+  stage.innerHTML+='<span class="search-meta">查找目标：19 · low='+d.l+' · high='+d.r+' · mid='+d.m+'</span>';
  }else if(type==='graph'){
-  stage.innerHTML='<div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:center">'+['A','B','C','D','E'].map(v=>'<span class="demo-node '+(v===d.cur?'active':d.v.includes(v)?'visited':'')+'">'+v+'</span>').join('')+'</div><div style="width:100%;text-align:center;font-size:12px;color:#526b86">队列：'+(d.q.join(' → ')||'空')+'　|　已访问：'+d.v.join(' → ')+'</div><svg class="demo-svg" viewBox="0 0 500 65"><g stroke="#9bb8d6" stroke-width="3"><path d="M90 22 L190 22 L290 22 L390 22 M190 22 L290 52"/></g><g fill="#24466f" font-size="11"><text x="135" y="15">边</text><text x="240" y="15">边</text><text x="340" y="15">边</text></g></svg>';
+  stage.innerHTML='<svg class="demo-svg" viewBox="0 0 500 150"><g stroke="#9bb8d6" stroke-width="3"><path d="M250 30 L130 90 M250 30 L370 90 M130 90 L130 135 M370 90 L370 135"/></g>'+[['A',250,30],['B',130,90],['C',370,90],['D',130,135],['E',370,135]].map(([v,x,y])=>'<circle cx="'+x+'" cy="'+y+'" r="19" fill="'+(v===d.cur?'#ffe6b8':d.v.includes(v)?'#dff2e4':'#fff')+'" stroke="'+(v===d.cur?'#d78a2d':d.v.includes(v)?'#6da77a':'#83a9d0')+'" stroke-width="3"/><text x="'+x+'" y="'+(y+4)+'" text-anchor="middle">'+v+'</text>').join('')+'</svg><div style="width:100%;text-align:center;font-size:12px;color:#526b86">队列：'+(d.q.join(' → ')||'空')+'　|　已访问：'+d.v.join(' → ')+'</div>';
  }else if(type==='pages'){
   stage.innerHTML='<div style="width:100%;text-align:center;font-size:13px;color:#526b86">访问序列：7 → 0 → 1 → 2 → 0 → 3 → 0 → 4</div><div style="display:flex;gap:12px;justify-content:center;align-items:center;width:100%">'+d.f.map((v,i)=>'<div style="text-align:center"><div class="demo-cell '+(i===d.p?'active':'')+'">'+v+'</div><small>页框 '+(i+1)+'</small></div>').join('')+'</div><div style="font-size:12px">当前策略：FIFO（先进先出）</div>';
  }else{
