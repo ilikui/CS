@@ -142,6 +142,89 @@ var multiSenseScenes={
   [/箱|盒/,['observe','箱子：装载物品的容器','<path d="M190 145 320 80l130 65v125l-130 65-130-65Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M190 145l130 70 130-70M320 215v120" fill="none" stroke="A2" stroke-width="8"/>']]
  ]
 };
+
+/* Expanded high-frequency exam vocabulary: distinct visual metaphors for each gloss. */
+var extraSenseArt={
+money:'<circle cx="320" cy="175" r="82" fill="A3" stroke="A2" stroke-width="9"/><path d="M350 125q-45-35-72 0-25 30 35 48t35 48q-30 35-75 0m38-115v145" fill="none" stroke="A4" stroke-width="11"/>',
+trade:'<path d="M150 145h310m-35-30 35 30-35 30M490 215H180m35-30-35 30 35 30" fill="none" stroke="A2" stroke-width="12" stroke-linecap="round"/><rect x="260" y="145" width="120" height="70" rx="12" fill="A3"/>',
+fair:'<path d="M320 75v185m-105-135h210M250 125l-48 95h96Zm140 0-48 95h96Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M255 275h130" stroke="A4" stroke-width="12"/>',
+gift:'<rect x="205" y="145" width="230" height="135" rx="12" fill="A3" stroke="A2" stroke-width="8"/><path d="M320 145v135M205 190h230" stroke="#fff" stroke-width="12"/><path d="M320 145q-90-15-65-65 45-25 65 65 25-90 65-65 25 50-65 65Z" fill="A4"/>',
+care:'<path d="M320 270s-115-75-115-145c0-65 80-85 115-25 35-60 115-40 115 25 0 70-115 145-115 145Z" fill="A4" stroke="A2" stroke-width="8"/>',
+machine:'<rect x="205" y="105" width="230" height="155" rx="18" fill="A3" stroke="A2" stroke-width="9"/><circle cx="270" cy="180" r="30" fill="#fff" stroke="A2" stroke-width="8"/><path d="M320 150h80m-80 35h80m-80 35h55" stroke="A4" stroke-width="10" stroke-linecap="round"/>',
+water:'<path d="M120 205q50-55 100 0t100 0 100 0 100 0M120 255q50-55 100 0t100 0 100 0 100 0" fill="none" stroke="A3" stroke-width="18" stroke-linecap="round"/><path d="M320 75c-55 75-65 95-65 125a65 65 0 0 0 130 0c0-30-10-50-65-125Z" fill="A4"/>',
+average:'<path d="M180 250h280M215 250v-90h55v90m45 0v-90h55v90m45 0v-90h55v90" fill="A3" stroke="A2" stroke-width="8"/><path d="M180 125h280" stroke="A4" stroke-width="12" stroke-dasharray="12 10"/>',
+clothes:'<path d="M245 90 190 125l35 65 35-20v110h120V170l35 20 35-65-55-35-45 30h-60Z" fill="A3" stroke="A2" stroke-width="9" stroke-linejoin="round"/>',
+claim:'<path d="M155 95h330v155H280l-65 55v-55h-60Z" fill="#fff" stroke="A2" stroke-width="9"/><path d="M220 140h200m-200 45h145" stroke="A3" stroke-width="12" stroke-linecap="round"/>',
+apply:'<rect x="205" y="85" width="190" height="210" rx="14" fill="#fff" stroke="A2" stroke-width="9"/><path d="M245 145h110m-110 42h110m-110 42h70" stroke="A3" stroke-width="11"/><path d="m380 220 45 45 65-85" fill="none" stroke="A4" stroke-width="13" stroke-linecap="round"/>',
+approach:'<path d="M130 245h380M175 205l-45 40 45 40M465 205l45 40-45 40" fill="none" stroke="A2" stroke-width="10"/><circle cx="320" cy="170" r="75" fill="A3"/><path d="M320 95v150m-75-75h150" stroke="A4" stroke-width="9"/>',
+process:'<rect x="95" y="130" width="115" height="90" rx="12" fill="A3"/><rect x="265" y="130" width="115" height="90" rx="12" fill="A4"/><rect x="435" y="130" width="115" height="90" rx="12" fill="A3"/><path d="M210 175h55m-18-18 18 18-18 18m115-18h55m-18-18 18 18-18 18" stroke="A2" stroke-width="9" fill="none"/>',
+'run':'<path d="M130 250q85-100 170 0t170 0" fill="none" stroke="A3" stroke-width="16"/><circle cx="320" cy="100" r="30" fill="A4"/><path d="m320 135-35 65 65 25m-65-25-55 55m55-55 65-15 55 45" stroke="A2" stroke-width="12" fill="none" stroke-linecap="round"/>',
+work:'<path d="M175 130h290v165H175Z" fill="#fff" stroke="A2" stroke-width="9"/><path d="M245 130v-35h150v35M220 180h200m-200 45h150" fill="none" stroke="A3" stroke-width="12"/><circle cx="420" cy="255" r="25" fill="A4"/>',
+file:'<rect x="175" y="115" width="290" height="185" rx="12" fill="#fff" stroke="A2" stroke-width="9"/><path d="M175 155h290m-230-40v-25h115v25M220 195h200m-200 42h155" stroke="A3" stroke-width="11"/>',
+cross:'<path d="M170 95 470 275M470 95 170 275" stroke="A3" stroke-width="30" stroke-linecap="round"/><path d="M320 65v240" stroke="A2" stroke-width="8" stroke-dasharray="10 12"/>',
+handle:'<path d="M220 150v-30q0-35 35-35h130q35 0 35 35v30" fill="none" stroke="A2" stroke-width="13"/><rect x="175" y="145" width="290" height="150" rx="16" fill="A3"/><path d="M250 205h140" stroke="A4" stroke-width="13"/>',
+mirror:'<rect x="220" y="75" width="200" height="230" rx="100" fill="#fff" stroke="A2" stroke-width="10"/><path d="M270 255 370 125" stroke="A4" stroke-width="16" stroke-linecap="round"/><circle cx="320" cy="190" r="38" fill="A3" opacity=".6"/>',
+counter:'<path d="M150 165h340v115H150Z" fill="A3" stroke="A2" stroke-width="9"/><path d="M205 165v-70h230v70" fill="none" stroke="A2" stroke-width="9"/><path d="m250 120 55 55m-55 0 55-55" stroke="A4" stroke-width="10"/>',
+echo:'<path d="M260 130q-70 45 0 90m40-125q-100 80 0 160m45-195q-130 115 0 230" fill="none" stroke="A3" stroke-width="12" stroke-linecap="round"/><circle cx="210" cy="175" r="20" fill="A4"/>',
+manual:'<path d="M170 95h145q35 0 35 35v170H205q-35 0-35-35Z M470 95H325q-35 0-35 35v170h145q35 0 35-35Z" fill="#fff" stroke="A2" stroke-width="8"/><path d="M215 150h90m-90 40h90m70-40h55m-55 40h55" stroke="A3" stroke-width="10"/>',
+facility:'<path d="M145 275V135l85-55 85 55v140Zm170 0V115l85-45 85 45v160Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M195 190h70m-35-35v70m145-35h70" stroke="A4" stroke-width="12"/>',
+plus:'<circle cx="320" cy="175" r="100" fill="A3"/><path d="M320 105v140m-70-70h140" stroke="#fff" stroke-width="20" stroke-linecap="round"/>',
+extra:'<rect x="190" y="115" width="260" height="175" rx="14" fill="#fff" stroke="A2" stroke-width="9"/><path d="M320 75v170m-85-85h170" stroke="A4" stroke-width="15" stroke-linecap="round"/>',
+protest:'<path d="M205 285V105l190 50-190 50" fill="A4" stroke="A2" stroke-width="9"/><path d="M205 285h-35" stroke="A2" stroke-width="12"/><circle cx="420" cy="120" r="25" fill="A3"/><path d="M420 65v-25m45 80h25" stroke="A2" stroke-width="8"/>',
+sort:'<path d="M175 110h290m-290 65h220m-220 65h150" stroke="A3" stroke-width="20" stroke-linecap="round"/><path d="m390 220 35 35 55-75" fill="none" stroke="A4" stroke-width="13"/>',
+advocate:'<path d="M150 90h340v155H280l-65 55v-55h-65Z" fill="#fff" stroke="A2" stroke-width="9"/><path d="M220 145h200m-200 45h150" stroke="A3" stroke-width="11"/><path d="m410 245 30 30 55-65" fill="none" stroke="A4" stroke-width="12"/>',
+discipline:'<path d="M320 70 455 120v85q0 75-135 125Q185 280 185 205v-85Z" fill="A3" stroke="A2" stroke-width="9"/><path d="m260 200 40 40 85-95" fill="none" stroke="A4" stroke-width="15"/>',
+assume:'<circle cx="320" cy="175" r="95" fill="#fff" stroke="A2" stroke-width="9"/><path d="m270 175 35 35 75-85" fill="none" stroke="A4" stroke-width="15"/><path d="M320 55v-25m0 290v-25" stroke="A3" stroke-width="10"/>',
+attack:'<path d="m170 250 115-115 65 65 120-120" fill="none" stroke="A2" stroke-width="18" stroke-linecap="round"/><path d="m425 80 45-5-5 45" fill="none" stroke="A4" stroke-width="13"/>',
+attend:'<circle cx="320" cy="105" r="34" fill="A4"/><path d="M245 280q0-105 75-105t75 105Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M155 290h330" stroke="A2" stroke-width="9"/>',
+interpret:'<path d="M150 90h340v150H280l-65 50v-50h-65Z" fill="#fff" stroke="A2" stroke-width="9"/><path d="M220 135h190m-190 45h145" stroke="A3" stroke-width="11"/><path d="m360 245 35 30 55-65" fill="none" stroke="A4" stroke-width="12"/>',
+pose:'<circle cx="320" cy="100" r="30" fill="A4"/><path d="M320 135 270 210l70 30 45-65m-115 35-45 55m115-25 45 35" fill="none" stroke="A2" stroke-width="13" stroke-linecap="round"/>',
+treat:'<path d="M320 70c-55 75-65 95-65 125a65 65 0 0 0 130 0c0-30-10-50-65-125Z" fill="A4"/><path d="M170 265h300m-250-35 35 35-35 35m150-70-35 35 35 35" stroke="A2" stroke-width="9" fill="none"/>',
+form:'<path d="M170 250q0-120 150-120t150 120" fill="none" stroke="A3" stroke-width="20"/><path d="M220 245h200m-160-45h120" stroke="A2" stroke-width="11"/><circle cx="320" cy="105" r="25" fill="A4"/>',
+conduct:'<circle cx="320" cy="110" r="32" fill="A4"/><path d="M320 145v115m-75-75 75-40 75 40m-75 75-55 45m55-45 55 45" fill="none" stroke="A2" stroke-width="12" stroke-linecap="round"/><path d="M175 95q-30 80 0 160m290-160q30 80 0 160" fill="none" stroke="A3" stroke-width="9"/>'
+};
+function makeExtraSense(kind,label,shape){return [kind,label,extraSenseArt[shape]]}
+Object.assign(multiSenseScenes,{
+ deal:[[/交易|协议|做生意|买卖|发牌|毒品/,makeExtraSense('economy','交易 / 买卖：双方交换价值','trade')],[/处理|对付|涉及/,makeExtraSense('idea','处理 / 对付：着手应对事务','handle')],[/大量|很多|待遇/,makeExtraSense('economy','大量 / 待遇：数量或受到的对待','money')]],
+ fair:[[/公平|合理|按照规则/,makeExtraSense('law','公平：遵循同一规则','fair')],[/浅色|晴朗|美丽/,makeExtraSense('nature','浅色 / 晴朗：明亮的外观','water')],[/展销会|游乐场|集市/,makeExtraSense('travel','集市：人群聚集交易','trade')]],
+ gift:[[/礼物/,makeExtraSense('growth','礼物：包装后赠送的物品','gift')],[/天赋|才能/,makeExtraSense('person','天赋：与生俱来的能力','care')],[/赠送/,makeExtraSense('speech','赠送：把物品交给他人','gift')]],
+ tend:[[/往往|倾向/,makeExtraSense('idea','倾向：行为方向或概率','approach')],[/照顾|照料/,makeExtraSense('person','照料：照看他人','care')],[/管理|打点/,makeExtraSense('economy','管理：照管经营事务','work')]],
+ operate:[[/操作|使运行|运转|使用/,makeExtraSense('science','操作 / 运转：机器按指令工作','machine')],[/手术/,makeExtraSense('person','动手术：医疗操作','treat')],[/经营/,makeExtraSense('economy','经营：持续管理业务','work')]],
+ current:[[/当前|现在|流行/,makeExtraSense('time','当前：此时此刻','approach')],[/水流|气流/,makeExtraSense('nature','水流 / 气流：流动的介质','water')],[/电流/,makeExtraSense('science','电流：电荷定向移动','machine')],[/思潮/,makeExtraSense('idea','思潮：群体中的思想流动','echo')]],
+ average:[[/平均数|均值|平均数是|计算出/,makeExtraSense('science','平均数：总量均分','average')],[/中等|普通/,makeExtraSense('idea','普通：处于常见水平','sort')]],
+ suit:[[/西服|套装/,makeExtraSense('person','套装：穿着的衣服','clothes')],[/诉讼|起诉/,makeExtraSense('law','诉讼：法律程序','claim')],[/适合|相配|合身/,makeExtraSense('idea','适合：彼此匹配','form')]],
+ feature:[[/特征|特点|五官/,makeExtraSense('observe','特征：可辨认的特点','mirror')],[/特写|专题/,makeExtraSense('knowledge','专题：集中呈现一个主题','manual')],[/以.*为特色|重要作用/,makeExtraSense('idea','特色 / 作用：突出价值','plus')]],
+ claim:[[/声称|申明/,makeExtraSense('speech','声称：公开表达主张','claim')],[/要求拥有|认领|所有权/,makeExtraSense('law','认领：主张权利归属','assume')],[/夺去|生命/,makeExtraSense('person','夺去生命：造成生命损失','attack')],[/索赔|索取|要求/,makeExtraSense('law','索赔：提出权利要求','claim')]],
+ apply:[[/申请/,makeExtraSense('knowledge','申请：递交申请材料','apply')],[/适用/,makeExtraSense('law','适用：规则用于具体情形','form')],[/应用|运用/,makeExtraSense('science','应用：把方法用于实践','machine')],[/涂抹|按|踩/,makeExtraSense('person','施加：把力量或物质作用于表面','treat')]],
+ approach:[[/接近|靠近/,makeExtraSense('travel','接近：逐步缩短距离','approach')],[/接洽|要求/,makeExtraSense('speech','接洽：主动联系沟通','claim')],[/处理|对付/,makeExtraSense('idea','处理：采用办法应对','handle')],[/方法|态度|路径/,makeExtraSense('knowledge','方法 / 路径：通往目标的方式','process')]],
+ process:[[/过程|流程|工序/,makeExtraSense('science','过程：按步骤推进','process')],[/加工|处理/,makeExtraSense('machine','加工：对原料进行处理','machine')],[/审阅|审核/,makeExtraSense('knowledge','审阅：检查文件内容','file')]],
+ run:[[/奔跑|跑|赛跑/,makeExtraSense('person','奔跑：身体快速移动','run')],[/行驶|移动|流淌/,makeExtraSense('travel','流动 / 行驶：沿路径移动','water')],[/管理|经营/,makeExtraSense('economy','经营：负责组织运营','work')],[/运转|操作/,makeExtraSense('science','运转：机器持续工作','machine')],[/发生|变成|包含|刊登|连续上演|一段时光/,makeExtraSense('time','发生 / 持续：事件展开','process')]],
+ work:[[/工作|干活|职业/,makeExtraSense('person','工作：投入劳动','work')],[/奏效|运转/,makeExtraSense('science','奏效 / 运转：产生预期效果','machine')],[/管理|经营|操作/,makeExtraSense('economy','管理 / 操作：组织事务','handle')],[/成果|作品/,makeExtraSense('knowledge','成果 / 作品：完成的产出','file')]],
+ file:[[/文件夹|文件|档案/,makeExtraSense('knowledge','文件 / 档案：保存的信息','file')],[/归档/,makeExtraSense('knowledge','归档：分类保存资料','sort')],[/报道|发送/,makeExtraSense('speech','发送报道：向外发布信息','claim')],[/诉讼|申请|提交/,makeExtraSense('law','提交申请：递交正式文件','apply')],[/锉/,makeExtraSense('science','锉削：磨平材料表面','machine')]],
+ cross:[[/越过|渡过/,makeExtraSense('travel','越过：穿过边界','approach')],[/相交|交叉/,makeExtraSense('science','相交：两条路径交汇','cross')],[/反对/,makeExtraSense('speech','反对：提出异议','protest')],[/叉号|十字架/,makeExtraSense('idea','交叉符号：两线相交','cross')],[/恼怒|生气/,makeExtraSense('emotion','恼怒：负面情绪','care')]],
+ handle:[[/处理|应付|驾驭/,makeExtraSense('idea','处理 / 应付：掌控问题','handle')],[/触|拿/,makeExtraSense('person','触碰 / 拿取：用手接触','care')],[/把手|柄/,makeExtraSense('science','把手：供抓握的部件','machine')]],
+ tackle:[[/处理|难题|交涉|抓获/,makeExtraSense('idea','处理难题：主动解决问题','handle')],[/抢球|抢断|擒抱|阻截/,makeExtraSense('person','抢断：比赛中的身体对抗','attack')],[/体育器材/,makeExtraSense('science','器材：用于运动的装备','machine')]],
+ mirror:[[/镜子/,makeExtraSense('observe','镜子：反射影像的表面','mirror')],[/反映|相似|映照|反射/,makeExtraSense('idea','反映：呈现相似特征','echo')]],
+ counter:[[/柜台|料理台/,makeExtraSense('economy','柜台：服务与交易台面','counter')],[/计算器/,makeExtraSense('science','计算器：执行数字计算','average')],[/反驳|驳斥/,makeExtraSense('speech','反驳：用论据回应观点','claim')],[/抵制|抵消|逆向|反对/,makeExtraSense('idea','抵制 / 抵消：产生相反作用','cross')]],
+ echo:[[/回声|回音|回响/,makeExtraSense('nature','回声：声音反射后返回','echo')],[/相似的东西/,makeExtraSense('idea','相似回响：与原物相似的回应','mirror')],[/附和|重复/,makeExtraSense('speech','附和：重复他人的表达','claim')]],
+ manual:[[/人力|体力|手动/,makeExtraSense('person','手动：由人力直接操作','handle')],[/手册|说明书/,makeExtraSense('knowledge','说明书：指导操作的文档','manual')]],
+ facility:[[/设备|设施/,makeExtraSense('science','设施：支持活动的设备','facility')],[/特色功能/,makeExtraSense('idea','特色功能：系统提供的能力','machine')],[/天资/,makeExtraSense('person','天资：自然具备的能力','gift')]],
+ plus:[[/加|和|外加/,makeExtraSense('science','加法：数量相加','plus')],[/优势|长处|优点/,makeExtraSense('idea','优势：额外的有利条件','extra')],[/零上的|多的/,makeExtraSense('science','正数 / 超出：高于零或基准','average')],[/此外|况且/,makeExtraSense('speech','此外：补充另一项信息','claim')]],
+ extra:[[/额外|附加|另外|特别|格外/,makeExtraSense('idea','额外：超出常规部分','extra')],[/另外收费/,makeExtraSense('economy','额外收费：附加成本','money')],[/临时演员/,makeExtraSense('person','临时演员：临时出演者','attend')]],
+ protest:[[/抗议|反对/,makeExtraSense('speech','抗议：公开表达反对','protest')],[/申辩|申明/,makeExtraSense('law','申辩：正式说明立场','claim')]],
+ sort:[[/种类|类别/,makeExtraSense('knowledge','类别：按共同特征分组','sort')],[/分类|整理|排序/,makeExtraSense('science','分类排序：将项目组织起来','sort')],[/妥善处理/,makeExtraSense('idea','妥善处理：把问题安排妥当','handle')]],
+ advocate:[[/提倡|主张/,makeExtraSense('speech','提倡：公开支持某种主张','advocate')],[/拥护者|提倡者/,makeExtraSense('person','拥护者：支持某种理念的人','attend')],[/辩护律师/,makeExtraSense('law','辩护律师：在法律程序中辩护','fair')]],
+ discipline:[[/纪律|自制|训练方法/,makeExtraSense('idea','纪律 / 自制：约束并管理行为','discipline')],[/学科/,makeExtraSense('knowledge','学科：系统知识领域','manual')],[/处罚|训导|管教/,makeExtraSense('law','处罚 / 管教：纠正行为','fair')]],
+ assume:[[/假设/,makeExtraSense('science','假设：暂时接受一个前提','assume')],[/承担|取得/,makeExtraSense('person','承担：接下责任或任务','handle')],[/呈现出/,makeExtraSense('observe','呈现：显露某种特征','mirror')],[/假装/,makeExtraSense('person','假装：表现出并非真实的样子','pose')]],
+ attack:[[/攻击|袭击|进攻/,makeExtraSense('person','攻击：主动发起进攻','attack')],[/抨击/,makeExtraSense('speech','抨击：用言辞批评','protest')],[/疾病|发作/,makeExtraSense('science','发作：疾病突然出现','treat')],[/破坏|侵蚀/,makeExtraSense('nature','侵蚀：逐渐造成损坏','water')],[/解决|问题/,makeExtraSense('idea','攻克问题：主动着手解决','handle')]],
+ attend:[[/出席|参加/,makeExtraSense('person','出席：到场参与活动','attend')],[/学校/,makeExtraSense('knowledge','上学：进入学校学习','manual')],[/陪同|伴随/,makeExtraSense('person','陪同：与他人同行','care')],[/注意|专心/,makeExtraSense('observe','注意：集中观察与关注','mirror')],[/照顾/,makeExtraSense('person','照顾：留意并照料他人','care')]],
+ interpret:[[/解释|说明|理解为/,makeExtraSense('speech','解释：说明含义','interpret')],[/口译/,makeExtraSense('speech','口译：在语言之间即时转换','echo')]],
+ pose:[[/造成|威胁|问题|提出/,makeExtraSense('idea','造成 / 提出：带来问题或议题','claim')],[/摆姿势|姿势/,makeExtraSense('person','摆姿势：调整身体姿态','pose')],[/佯装|假扮/,makeExtraSense('person','假扮：表现成另一种身份','mirror')]],
+ treat:[[/对待/,makeExtraSense('person','对待：与人相处的方式','care')],[/治疗/,makeExtraSense('science','治疗：医疗干预','treat')],[/处理/,makeExtraSense('idea','处理：对事务采取行动','handle')],[/款待/,makeExtraSense('person','款待：热情招待客人','gift')]],
+ form:[[/类型|形式|表格|形状/,makeExtraSense('knowledge','形式 / 表格：组织信息的结构','manual')],[/体能/,makeExtraSense('person','体能：身体状态与能力','run')],[/形成|出现|建立|组成|成形|塑造/,makeExtraSense('science','形成：从部分构成整体','form')]],
+ conduct:[[/实施|执行|办法/,makeExtraSense('science','实施：按计划执行行动','process')],[/表现|行为|举止/,makeExtraSense('person','行为：人的举止表现','attend')],[/传导/,makeExtraSense('science','传导：能量或信号传递','machine')],[/引导|指挥/,makeExtraSense('person','引导 / 指挥：带领行动方向','conduct')]]
+});
+
 function matchSenseScene(word,meaning){
  var entries=multiSenseScenes[String(word||'').toLowerCase()];
  if(!entries)return null;
@@ -153,7 +236,7 @@ function matchSenseScene(word,meaning){
 function senseVariants(word,meaning){
  var entries=multiSenseScenes[String(word||'').toLowerCase()];
  if(!entries)return [];
- var parts=String(meaning||'').split(/[；;。]/),out=[],seen={};
+ var parts=String(meaning||'').normalize('NFKC').split(/[；;。，,/、。]+/),out=[],seen={};
  for(var p=0;p<parts.length;p++){
   var part=parts[p].trim();if(!part)continue;
   for(var i=0;i<entries.length;i++){
