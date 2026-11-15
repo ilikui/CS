@@ -237,11 +237,11 @@ function flowVisual(card){
  );
  for(const [re,s,d,k] of rules){if(re.test(title)){stages=s;detail=d;kind=k;break}}
 
- if(['sort','insert-sort','basic-sort','shell-sort','quick-sort','merge-sort','radix-sort','external-sort','heap-sort'].includes(kind))return interactiveDemo('sort',title);
- if(['search','kmp'].includes(kind))return interactiveDemo('search',title);
- if(['graph','graph-store','graph-links','toposort','critical-path'].includes(kind))return interactiveDemo('graph',title);
- if(['replacement','memory','pagefault','working-set','page-allocation','tlb','pagetable'].includes(kind))return interactiveDemo('pages',title);
- if(['tcp','tcp-seq','retransmit','rwnd','congestion','handshake'].includes(kind))return interactiveDemo('tcp',title);
+ if(['sort','basic-sort'].includes(kind))return interactiveDemo('sort',title);
+ if(kind==='search')return interactiveDemo('search',title);
+ if(kind==='graph')return interactiveDemo('graph',title);
+ if(kind==='replacement')return interactiveDemo('pages',title);
+ if(['tcp','handshake'].includes(kind))return interactiveDemo('tcp',title);
  const x=[28,268,508],w=184;
  const nodes=stages.map((label,i)=>'<g class="stage stage-'+i+'"><rect class="node '+(i===1?'mid':'')+'" x="'+x[i]+'" y="34" width="'+w+'" height="76" rx="13"/><text x="'+(x[i]+w/2)+'" y="66">'+safe(label)+'</text><text class="subtext" x="'+(x[i]+w/2)+'" y="88">'+['对象 / 初态','关键变化','结果 / 判定'][i]+'</text></g>').join('');
  return '<section class="visual-box" data-visual="'+kind+'"><div class="visual-title">动态原理演示｜'+safe(title)+'</div><svg class="visual-svg" viewBox="0 0 720 145" role="img" aria-label="'+safe(stages.join('，'))+'"><defs><marker id="arrow-'+kind+'" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="#679bd0"/></marker></defs><path class="flow" d="M212 72 H260 M452 72 H500" marker-end="url(#arrow-'+kind+')"/>'+nodes+'<circle class="pulse" cx="35" cy="72" r="6"/></svg><p class="visual-caption">'+safe(detail)+'</p><div class="visual-controls"><button type="button" class="visual-replay">重新播放</button><span>动画按「对象 → 关键变化 → 结果」循环演示</span></div></section>';
@@ -249,7 +249,7 @@ function flowVisual(card){
 
 
 function interactiveDemo(type,title){
- const labels={sort:'排序过程实验室',search:'查找过程实验室',graph:'图算法过程实验室',pages:'页面置换实验室',tcp:'TCP 通信时序实验室'};
+ const labels={sort:'冒泡排序演示',search:'折半查找演示',graph:'广度优先搜索 BFS 演示',pages:'FIFO 页面置换演示',tcp:'TCP 握手、数据传输与释放'};
  return '<section class="demo-panel" data-demo="'+type+'" data-step="0"><div class="demo-heading">可交互动态演示｜'+labels[type]+' · '+title+'</div><div class="demo-stage"></div><p class="demo-caption"></p><div class="demo-controls"><button type="button" class="demo-prev">上一步</button><button type="button" class="demo-next">下一步</button><button type="button" class="demo-reset">重置</button><span class="demo-status"></span></div></section>';
 }
 const demoData={
