@@ -349,17 +349,24 @@ function matchSenseScene(word,meaning){
 }
 
 function senseVariants(word,meaning){
- var entries=multiSenseScenes[String(word||'').toLowerCase()];
+ var key=String(word||'').toLowerCase(),entries=multiSenseScenes[key];
  if(!entries)return [];
  var parts=String(meaning||'').normalize('NFKC').split(/[；;。，,/、。]+|\\s+(?=(?:vi|vt|adj|adv|n|det|ord|vlink|pref|int)\\.\\s*)/),out=[],seen={};
  for(var p=0;p<parts.length;p++){
-  var part=parts[p].trim();if(!part)continue;
+  var part=parts[p].replace(/^(?:(?:vi|vt|adj|adv|n|det|ord|vlink|pref|int)\\.\\s*)+/i,'').trim();
+  if(!part)continue;
+  var matched=false;
   for(var i=0;i<entries.length;i++){
    if(entries[i][0].test(part)){
-    var scene=entries[i][1],key=scene[1];
-    if(!seen[key]){seen[key]=true;out.push({meaning:part,scene:scene})}
-    break;
+    var scene=entries[i][1],sceneKey=scene[1]+'|'+part;
+    if(!seen[sceneKey]){seen[sceneKey]=true;out.push({meaning:part,scene:[scene[0],scene[1]+'：'+part,scene[2]]})}
+    matched=true;break;
    }
+  }
+  /* Every remaining dictionary gloss still receives its own deterministic meaning-aware SVG. */
+  if(!matched){
+   var fallback=sceneFor('sense-'+key,part),fallbackKey=fallback[1]+'|'+part;
+   if(!seen[fallbackKey]){seen[fallbackKey]=true;out.push({meaning:part,scene:[fallback[0],fallback[1]+'：'+part,fallback[2]]})}
   }
  }
  return out;
