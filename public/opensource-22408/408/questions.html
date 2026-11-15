@@ -275,16 +275,16 @@ function showDataError(message) {
 }
 function loadQuestionData(sources, index = 0) {
     if (index >= sources.length) {
-        showDataError('题库数据加载失败：CDN 请求失败或数据脚本无法解析。');
+        showDataError('题库数据加载失败：本地 questions_data.js 未成功加载。请检查静态资源请求状态。');
         return;
     }
     const script = document.createElement('script');
-    script.src = sources[index] + '?v=20261115';
+    script.src = sources[index] + '?v=20261115-2';
     script.async = true;
     script.onload = function () {
         let data;
         try {
-            data = typeof QUESTIONS_DATA !== 'undefined' ? QUESTIONS_DATA : window.QUESTIONS_DATA;
+            data = window.QUESTIONS_DATA;
         } catch (e) {}
         if (!Array.isArray(data) || data.length === 0) {
             script.remove();
@@ -296,6 +296,7 @@ function loadQuestionData(sources, index = 0) {
         applyFilters();
     };
     script.onerror = function () {
+        console.error('[408题库] 数据脚本加载失败：', script.src);
         script.remove();
         loadQuestionData(sources, index + 1);
     };
