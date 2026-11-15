@@ -39,3 +39,17 @@ jobs:
 
       - name: Check Rust desktop application
         run: cargo check --manifest-path desktop/src-tauri/Cargo.toml --target x86_64-pc-windows-msvc
+
+      - name: Build unsigned Windows installer for CI
+        working-directory: desktop
+        env:
+          TAURI_CONFIG: '{"bundle":{"createUpdaterArtifacts":false}}'
+        run: npm run build:windows
+
+      - name: Upload Windows installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: cs-study-windows-installer
+          path: desktop/src-tauri/target/release/bundle/nsis/*.exe
+          if-no-files-found: error
+          retention-days: 14
