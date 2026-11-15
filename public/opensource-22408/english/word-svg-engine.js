@@ -66,8 +66,92 @@ afford:['economy','负担得起：预算允许的支出','<rect x="215" y="105" 
 agree:['speech','同意：双方握手达成一致','<path d="M180 170l70-45 70 42 55-22 85 50-70 70-70-38-55 30-85-45Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M260 190l60 35 60-42" stroke="A4" stroke-width="13" fill="none"/>'],
 amount:['economy','数量、总额：衡量多少','<path d="M320 75v170m-115-100h230M205 145l-35 85h70Zm230 0-35 85h70Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M250 265h140" stroke="A4" stroke-width="11"/>']
 };
+/* Sense-specific scenes: one headword can map to several genuinely different meanings. */
+var multiSenseScenes={
+ object:[
+  [/物体|物品|东西|对象|宾语/,['observe','物体 / 对象：可被指向的具体事物','<rect x="220" y="105" width="200" height="150" rx="18" fill="A3" stroke="A2" stroke-width="9"/><circle cx="320" cy="180" r="35" fill="A4"/><path d="M250 275h140" stroke="A2" stroke-width="9"/>']],
+  [/目标|目的/,['travel','目标：行动要抵达的终点','<circle cx="320" cy="175" r="100" fill="#fff" stroke="A2" stroke-width="9"/><circle cx="320" cy="175" r="62" fill="none" stroke="A3" stroke-width="14"/><circle cx="320" cy="175" r="22" fill="A4"/><path d="M320 175l115-95" stroke="A2" stroke-width="10"/>']],
+  [/不同意|反对/,['speech','反对：明确表达异议','<path d="M145 90h350v155H275l-65 50v-50h-65Z" fill="#fff" stroke="A2" stroke-width="9"/><path d="M235 130l170 75m0-75-170 75" stroke="A4" stroke-width="16" stroke-linecap="round"/>']]
+ ],
+ figure:[
+  [/数字|算术|计算/,['science','数字 / 计算：用数字进行运算','<rect x="235" y="75" width="170" height="220" rx="18" fill="#fff" stroke="A2" stroke-width="9"/><rect x="260" y="105" width="120" height="48" rx="8" fill="A3"/><g fill="A4"><circle cx="280" cy="190" r="13"/><circle cx="320" cy="190" r="13"/><circle cx="360" cy="190" r="13"/><circle cx="280" cy="235" r="13"/><circle cx="320" cy="235" r="13"/><circle cx="360" cy="235" r="13"/></g>']],
+  [/人物|人影|身材|塑像/,['person','人物 / 身影：一个人的形象','<circle cx="320" cy="105" r="43" fill="A4"/><path d="M235 280q3-110 85-110t85 110Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M270 205h100" stroke="A2" stroke-width="8"/>']],
+  [/图表|图形/,['science','图表：用图形呈现数据','<path d="M205 275V95M205 275h245" stroke="A2" stroke-width="10"/><rect x="245" y="205" width="38" height="70" fill="A3"/><rect x="310" y="155" width="38" height="120" fill="A4"/><rect x="375" y="110" width="38" height="165" fill="A3"/><path d="M245 175l65-45 65 15 70-65" fill="none" stroke="A2" stroke-width="8"/>']],
+  [/认为|以为|弄懂|弄清楚/,['idea','理解 / 认为：脑中形成判断','<path d="M320 65c-75 0-115 55-100 118 10 42 45 55 55 88h90c10-33 45-46 55-88 15-63-25-118-100-118Z" fill="A4"/><path d="M270 185l35 35 75-85" fill="none" stroke="A2" stroke-width="13" stroke-linecap="round"/>']]
+ ],
+ present:[
+  [/礼物/,['growth','礼物：被包装并送出的东西','<rect x="205" y="145" width="230" height="135" rx="12" fill="A3" stroke="A2" stroke-width="8"/><path d="M320 145v135M205 190h230" stroke="#fff" stroke-width="12"/><path d="M320 145q-90-15-65-65 45-25 65 65 25-90 65-65 25 50-65 65Z" fill="A4" stroke="A2" stroke-width="6"/>']],
+  [/目前|现在|当前|当前的/,['time','当前：时间轴上的此刻','<path d="M165 180h310" stroke="A2" stroke-width="10"/><circle cx="320" cy="180" r="38" fill="A4" stroke="A2" stroke-width="8"/><path d="M320 180V95m0 85 55 30" stroke="A2" stroke-width="9" fill="none"/><circle cx="190" cy="180" r="12" fill="A3"/><circle cx="450" cy="180" r="12" fill="A3"/>']],
+  [/在场|出席|存在/,['person','在场：人物出现在现场','<circle cx="320" cy="110" r="35" fill="A4"/><path d="M250 280q0-115 70-115t70 115Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M175 290h290" stroke="A2" stroke-width="9"/>']],
+  [/授予|提交|展现|呈现|使经历/,['speech','呈交 / 展示：把内容递交出来','<rect x="225" y="95" width="170" height="190" rx="12" fill="#fff" stroke="A2" stroke-width="8"/><path d="M260 145h100m-100 40h100m-100 40h65" stroke="A3" stroke-width="10"/><path d="M390 215l55 0m-20-20 20 20-20 20" stroke="A4" stroke-width="10" fill="none"/>']]
+ ],
+ issue:[
+  [/议题|问题/,['idea','议题 / 问题：需要讨论解决的焦点','<path d="M150 90h340v160H280l-65 55v-55h-65Z" fill="#fff" stroke="A2" stroke-width="9"/><circle cx="320" cy="165" r="34" fill="A4"/><path d="M320 145v28m0 18v4" stroke="#fff" stroke-width="9" stroke-linecap="round"/>']],
+  [/一期|期号|出版|发行|发放|签发|宣布/,['knowledge','刊物 / 发布：一期内容被正式发布','<rect x="220" y="75" width="200" height="220" rx="12" fill="#fff" stroke="A2" stroke-width="9"/><rect x="245" y="100" width="150" height="72" fill="A3"/><path d="M250 200h140m-140 32h115m-115 32h85" stroke="A2" stroke-width="9" stroke-linecap="round"/>']]
+ ],
+ charge:[
+  [/费用|要价|收费|账上/,['economy','费用 / 收费：支付金钱','<rect x="210" y="100" width="220" height="170" rx="18" fill="#fff" stroke="A2" stroke-width="9"/><circle cx="320" cy="185" r="48" fill="A3"/><path d="M338 155q-20-17-39 0-16 18 20 31t18 34q-18 18-42 0m22-80v95" stroke="A4" stroke-width="8" fill="none"/>']],
+  [/指控|指责|控告/,['law','指控：法庭提出控诉','<path d="M320 75v185M220 110h200M250 110l-40 90h80Zm140 0-40 90h80Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M245 270h150" stroke="A4" stroke-width="12"/>']],
+  [/电荷|充电/,['science','电荷 / 充电：电能与电流','<path d="M345 65 230 200h80l-15 100 120-155h-82Z" fill="A4" stroke="A2" stroke-width="8" stroke-linejoin="round"/><path d="M175 115h45m-22-22v45m225 110h45m-22-22v45" stroke="A3" stroke-width="9"/>']],
+  [/掌管|负责/,['person','掌管：负责管理一项事务','<circle cx="320" cy="105" r="36" fill="A4"/><path d="M245 280q0-105 75-105t75 105Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M270 225h100m-50-45v85" stroke="A2" stroke-width="8"/>']]
+ ],
+ account:[
+  [/账户|账目/,['economy','账户 / 账目：记录收支余额','<rect x="210" y="95" width="220" height="175" rx="16" fill="#fff" stroke="A2" stroke-width="9"/><path d="M210 145h220" stroke="A2" stroke-width="9"/><circle cx="270" cy="205" r="24" fill="A4"/><path d="M315 190h75m-75 32h55" stroke="A3" stroke-width="10" stroke-linecap="round"/>']],
+  [/叙述|说明|解释/,['speech','叙述 / 解释：把事情讲清楚','<path d="M145 85h350v165H275l-65 55v-55h-65Z" fill="#fff" stroke="A2" stroke-width="9"/><path d="M205 135h230m-230 42h180m-180 42h125" stroke="A3" stroke-width="10" stroke-linecap="round"/>']],
+  [/认为是|视为/,['idea','认为 / 视为：形成一种判断','<circle cx="320" cy="170" r="90" fill="#fff" stroke="A2" stroke-width="9"/><path d="M270 170l35 35 75-85" stroke="A4" stroke-width="16" fill="none" stroke-linecap="round"/>']]
+ ],
+ address:[
+  [/地址|网址/,['travel','地址 / 网址：定位一个地点或网页','<path d="M320 285s-95-100-95-165a95 95 0 1 1 190 0c0 65-95 165-95 165Z" fill="A3" stroke="A2" stroke-width="8"/><circle cx="320" cy="120" r="32" fill="A4"/><path d="M180 300h280" stroke="A2" stroke-width="9"/>']],
+  [/演讲|讲话/,['speech','演讲：面向听众表达观点','<path d="M180 95h240v130H180Z" fill="#fff" stroke="A2" stroke-width="8"/><path d="M300 225v55m-40 0h80" stroke="A2" stroke-width="9"/><circle cx="220" cy="275" r="15" fill="A4"/><circle cx="300" cy="275" r="15" fill="A4"/><circle cx="380" cy="275" r="15" fill="A4"/>']],
+  [/处理/,['science','处理问题：面对问题并着手解决','<path d="M180 115h280v170H180Z" fill="#fff" stroke="A2" stroke-width="8"/><path d="M225 200l45 42 95-100" stroke="A4" stroke-width="15" fill="none" stroke-linecap="round"/>']]
+ ],
+ subject:[
+  [/主题/,['idea','主题：讨论或文章围绕的中心','<circle cx="320" cy="175" r="95" fill="A4" opacity=".35"/><circle cx="320" cy="175" r="58" fill="A3"/><circle cx="320" cy="175" r="20" fill="#fff"/><path d="M320 55v45m0 150v45m-120-120h45m150 0h45" stroke="A2" stroke-width="9"/>']],
+  [/学科/,['knowledge','学科：系统学习的一门知识','<path d="M165 105q78-25 155 20v165q-77-45-155-20Zm310 0q-78-25-155 20v165q77-45 155-20Z" fill="#fff" stroke="A2" stroke-width="8"/><path d="M320 125v165" stroke="A3" stroke-width="9"/>']],
+  [/对象|主语/,['observe','语法对象 / 主语：句子中的成分','<rect x="155" y="125" width="125" height="80" rx="12" fill="A3"/><rect x="360" y="125" width="125" height="80" rx="12" fill="A4"/><path d="M280 165h80m-20-20 20 20-20 20" stroke="A2" stroke-width="9" fill="none"/><path d="M165 235h310" stroke="A2" stroke-width="8"/>']],
+  [/易遭|取决于|受.*支配/,['law','受制于：处于条件或规则约束下','<rect x="220" y="100" width="200" height="170" rx="12" fill="#fff" stroke="A2" stroke-width="9"/><path d="M250 145h140m-140 45h140m-140 45h95" stroke="A3" stroke-width="11"/><path d="M320 65v35" stroke="A4" stroke-width="12"/>']]
+ ],
+ field:[
+  [/田|地|运动场/,['nature','田野 / 场地：开阔的地面空间','<path d="M150 265 250 105l90 160 70-110 80 110Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M180 285h280" stroke="A2" stroke-width="9"/>']],
+  [/领域/,['knowledge','领域：某一专业范围','<circle cx="320" cy="175" r="105" fill="none" stroke="A2" stroke-width="9"/><circle cx="320" cy="175" r="65" fill="A3"/><circle cx="320" cy="175" r="25" fill="A4"/>']],
+  [/实地|处理|应付/,['science','实地处理：到现场调查应对','<path d="M180 105h280v180H180Z" fill="#fff" stroke="A2" stroke-width="8"/><path d="M220 245l55-75 45 40 75-95" fill="none" stroke="A4" stroke-width="12"/><circle cx="395" cy="115" r="12" fill="A3"/>']]
+ ],
+ mean:[
+  [/意思是/,['speech','意思是：用语言表达含义','<path d="M150 90h340v150H280l-65 50v-50h-65Z" fill="#fff" stroke="A2" stroke-width="9"/><path d="M220 135h190m-190 45h145" stroke="A3" stroke-width="11"/>']],
+  [/打算|意图/,['idea','打算：心中形成计划','<circle cx="320" cy="150" r="65" fill="A4"/><path d="M320 215v65m-75-20h150" stroke="A2" stroke-width="10"/><path d="M285 150l25 25 50-55" stroke="#fff" stroke-width="10" fill="none"/>']],
+  [/小气|刻薄/,['person','刻薄 / 小气：不愿分享的态度','<circle cx="320" cy="110" r="34" fill="A4"/><path d="M250 280q0-105 70-105t70 105Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M280 150l25 15m55-15-25 15" stroke="A2" stroke-width="8"/>']],
+  [/平均/,['science','平均数：把总量均分','<path d="M190 250h260M220 250v-70h55v70m35 0v-70h55v70m35 0v-70h55v70" fill="A3" stroke="A2" stroke-width="8"/><path d="M190 145h260" stroke="A4" stroke-width="10"/>']]
+ ],
+ nature:[
+  [/自然/,['nature','自然：山川、植物与环境','<path d="M130 270 255 95l75 105 55-75 125 145Z" fill="A3" stroke="A2" stroke-width="8"/><circle cx="450" cy="95" r="34" fill="A4"/><path d="M320 280v-90m0 45-35-28m35 48 35-28" stroke="A2" stroke-width="9"/>']],
+  [/天性|性格|本质/,['person','天性 / 本质：事物内在的特征','<circle cx="320" cy="175" r="95" fill="#fff" stroke="A2" stroke-width="9"/><circle cx="320" cy="175" r="48" fill="A3"/><circle cx="320" cy="175" r="18" fill="A4"/>']]
+ ],
+ character:[
+  [/性格|特点|名誉/,['person','性格 / 特点：一个人的内在特征','<circle cx="320" cy="105" r="40" fill="A4"/><path d="M235 280q0-110 85-110t85 110Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M290 135q30 20 60 0" stroke="A2" stroke-width="8" fill="none"/>']],
+  [/角色/,['speech','角色：故事中的人物身份','<path d="M250 90h140v190H250Z" fill="#fff" stroke="A2" stroke-width="8"/><circle cx="320" cy="145" r="30" fill="A4"/><path d="M275 245q0-65 45-65t45 65Z" fill="A3"/>']],
+  [/字符/,['knowledge','字符：文字系统中的单个符号','<rect x="210" y="95" width="220" height="175" rx="15" fill="#fff" stroke="A2" stroke-width="8"/><path d="M265 225l55-105 55 105m-85-38h60" stroke="A4" stroke-width="13" fill="none"/>']]
+ ],
+ function:[
+  [/函数/,['science','函数：输入经过规则映射为输出','<rect x="250" y="115" width="140" height="120" rx="18" fill="A3" stroke="A2" stroke-width="8"/><path d="M155 175h95m-25-20 25 20-25 20m140 0h95m-25-20 25 20-25 20" stroke="A2" stroke-width="9" fill="none"/><circle cx="185" cy="175" r="15" fill="A4"/><circle cx="455" cy="175" r="15" fill="A4"/>']],
+  [/功能|职能|作用/,['idea','功能：某物承担的用途','<circle cx="320" cy="175" r="70" fill="A3"/><path d="M320 75v55m0 90v55m-100-100h55m90 0h55" stroke="A2" stroke-width="12"/><circle cx="320" cy="175" r="24" fill="A4"/>']],
+  [/宴会/,['person','宴会：人们聚集参加活动','<circle cx="245" cy="125" r="25" fill="A4"/><circle cx="395" cy="125" r="25" fill="A4"/><path d="M195 265q0-95 50-95t50 95m50 0q0-95 50-95t50 95" fill="A3" stroke="A2" stroke-width="8"/><path d="M285 215h70" stroke="A4" stroke-width="9"/>']]
+ ],
+ case:[
+  [/案件|诉讼/,['law','案件：进入司法程序的案子','<path d="M220 85h200v205H220Z" fill="#fff" stroke="A2" stroke-width="9"/><path d="M255 135h130m-130 42h130m-130 42h90" stroke="A3" stroke-width="10"/><path d="M280 70h80" stroke="A4" stroke-width="12"/>']],
+  [/情况|事例|论据/,['idea','情况 / 事例：用一个实例说明观点','<rect x="205" y="90" width="230" height="190" rx="15" fill="#fff" stroke="A2" stroke-width="8"/><circle cx="270" cy="150" r="22" fill="A4"/><path d="M315 145h85m-130 55h130m-130 35h95" stroke="A3" stroke-width="10"/>']],
+  [/箱|盒/,['observe','箱子：装载物品的容器','<path d="M190 145 320 80l130 65v125l-130 65-130-65Z" fill="A3" stroke="A2" stroke-width="8"/><path d="M190 145l130 70 130-70M320 215v120" fill="none" stroke="A2" stroke-width="8"/>']]
+ ]
+};
+function matchSenseScene(word,meaning){
+ var entries=multiSenseScenes[String(word||'').toLowerCase()];
+ if(!entries)return null;
+ var gloss=String(meaning||'');
+ for(var i=0;i<entries.length;i++){if(entries[i][0].test(gloss))return entries[i][1]}
+ return null;
+}
 function sceneFor(word,meaning){
- var key=String(word||'').toLowerCase(),exact=semanticScenes[key];
+ var key=String(word||'').toLowerCase(),sense=matchSenseScene(key,meaning),exact=semanticScenes[key];
+ if(sense)return sense;
  if(exact)return exact;
  var gloss=String(meaning||''),kind='idea',label='抽象概念与联想';
  for(var i=0;i<rules.length;i++){if(rules[i][0].test(gloss+' '+key)){kind=rules[i][1];label=rules[i][2];break}}
