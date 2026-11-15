@@ -1,4 +1,4 @@
-/* 真题题干/原解析摘录自 data/408/questions_data.js；answer/audit 为逐题复核结果，teachingSteps 为教学拆解。 */
+/* 真题题干与答案来自 data/408/questions_data.js；教学解析为补充内容，核验状态见 audit。 */
 window.CARD_QUESTION_MAP = {
   "单链表指针操作": {
     "year": 2012,
@@ -1180,6 +1180,708 @@ window.CARD_QUESTION_MAP = {
     "stepsSource": "source",
     "topic": "操作系统",
     "matchKind": "直接考点"
+  },
+  "顺序表折半查找比较次数": {
+    "year": 2010,
+    "index": 9,
+    "id": 56,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "B",
+    "question": "已知一个长度为 16 的顺序表 L，其元素按关键字有序排列。若采用折半查找法查找一个 L 中不存在的元素，则关键字的比较次数最多是（ ）。 A. 4 B. 5 C. 6 D. 7",
+    "analysis": "长度为16的有序表进行折半查找，最深的失败查找路径最多比较5次。也可按折半判定树高度计算，结果为5次，因此选B。",
+    "steps": [
+      "折半查找每次将当前区间缩小到约一半。",
+      "对16个元素，最坏路径需要 ceil(log2(16+1))=5 次关键字比较。",
+      "因此最多比较5次，选B。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "数据结构",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "折半查找每次将当前区间缩小到约一半。",
+      "对16个元素，最坏路径需要 ceil(log2(16+1))=5 次关键字比较。",
+      "因此最多比较5次，选B。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "最小生成树性质判断": {
+    "year": 2012,
+    "index": 8,
+    "id": 149,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "A",
+    "question": "下列关于最小生成树的叙述中，正确的是（）。 Ⅰ．最小生成树的代价唯一 Ⅱ．所有权值最小的边一定会出现在所有的最小生成树中 Ⅲ．使用普里姆（Prim）算法从不同顶点开始得到的最小生成树一定相同 Ⅳ．使用普里姆算法和克鲁斯卡尔（Kruskal）算法得到的最小生成树总不相同 A. 仅Ⅰ B. 仅Ⅱ C. 仅Ⅰ、Ⅲ D. 仅Ⅱ、Ⅳ",
+    "analysis": "最小生成树的总权值（代价）相同，但边集不一定唯一。Prim从不同起点可能得到不同的最小生成树；Prim与Kruskal也可能得到同一棵树。因此只有Ⅰ正确，选A。",
+    "steps": [
+      "最小生成树的最小总代价是唯一的。",
+      "权值相同或存在替代边时，最小生成树的边集可能不唯一。",
+      "Prim起点不同或算法不同，不保证生成相同边集；只有Ⅰ正确。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "数据结构",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "最小生成树的最小总代价是唯一的。",
+      "权值相同或存在替代边时，最小生成树的边集可能不唯一。",
+      "Prim起点不同或算法不同，不保证生成相同边集；只有Ⅰ正确。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "Kruskal算法构造最小生成树": {
+    "year": 2020,
+    "index": 7,
+    "id": 524,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "A",
+    "question": "已知无向图 G 如下所示，使用克鲁斯卡尔（Kruskal）算法求图 G 的最小生成树，加入到最小生成树中的边依次是（ ）。  a c b d e f 12 20 18 6 5 7 14 10 9 11 A. (b,f)(b,d)(a,e)(c,e)(b,e) B. (b,f)(b,d)(b,e)(a,e)(e,c) C. (a,e)(b,e)(c,e)(b,d)(b,f) D. (a,e)(c,e)(b,e)(b,f)(b,d)",
+    "analysis": "Kruskal算法按边权从小到大考察边，只有连接两个不同连通分量且不会形成回路的边才加入生成树。按题图边权排序并逐条用并查集判环，可得到选项A的加入顺序。",
+    "steps": [
+      "将所有边按权值升序排列。",
+      "依次选择当前最小且不会形成回路的边。",
+      "用并查集维护连通分量，直到选出 n−1 条边；对应A。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "数据结构",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "将所有边按权值升序排列。",
+      "依次选择当前最小且不会形成回路的边。",
+      "用并查集维护连通分量，直到选出 n−1 条边；对应A。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "每趟排序确定最终位置": {
+    "year": 2012,
+    "index": 10,
+    "id": 151,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "A",
+    "question": "在内部排序过程中，对尚未确定最终位置的所有元素进行一遍处理称为一趟排序。下列排序方法中，每一趟排序结束都至少能够确定一个元素最终位置的方法是（ ）。 Ⅰ．简单选择排序 Ⅱ．希尔排序 Ⅲ．快速排序 Ⅳ．堆排序 Ⅴ．二路归并排序 A. 仅Ⅰ、Ⅲ、Ⅳ B. 仅Ⅰ、Ⅲ、Ⅴ C. 仅Ⅱ、Ⅲ、Ⅳ D. 仅Ⅲ、Ⅳ、Ⅴ",
+    "analysis": "简单选择排序每趟将最小（或最大）元素放到最终位置；快速排序每趟确定枢轴位置；堆排序每趟确定堆顶元素的最终位置。希尔排序和二路归并排序不保证每趟都确定至少一个元素的最终位置。",
+    "steps": [
+      "简单选择排序每趟确定一个极值元素的位置。",
+      "快速排序每趟确定枢轴元素的最终位置。",
+      "堆排序每趟输出堆顶极值并放到最终位置；Ⅰ、Ⅲ、Ⅳ正确，选A。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "数据结构",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "简单选择排序每趟确定一个极值元素的位置。",
+      "快速排序每趟确定枢轴元素的最终位置。",
+      "堆排序每趟输出堆顶极值并放到最终位置；Ⅰ、Ⅲ、Ⅳ正确，选A。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "排序算法选择因素": {
+    "year": 2019,
+    "index": 7,
+    "id": 477,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "D",
+    "question": "选择一个排序算法时，除算法的时空效率外，下列因素中，还需要考虑的是（ ）。 Ⅰ.数据的规模 Ⅱ.数据的存储方式 Ⅲ.算法的稳定性 Ⅳ.数据的初始状态 A. 仅Ⅲ B. 仅Ⅰ、Ⅱ C. 仅Ⅱ、Ⅲ、Ⅳ D. Ⅰ、Ⅱ、Ⅲ、Ⅳ",
+    "analysis": "选择排序算法时，除时间和空间效率外，还应综合考虑数据规模、数据存储方式、稳定性以及初始状态。四项均属于算法选择因素，选D。",
+    "steps": [
+      "数据规模影响算法复杂度和常数开销。",
+      "存储方式影响随机访问、移动和辅助空间成本。",
+      "稳定性及初始状态也会影响业务正确性与实际性能；Ⅰ至Ⅳ均应考虑。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "数据结构",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "数据规模影响算法复杂度和常数开销。",
+      "存储方式影响随机访问、移动和辅助空间成本。",
+      "稳定性及初始状态也会影响业务正确性与实际性能；Ⅰ至Ⅳ均应考虑。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "突发总线事务": {
+    "year": 2014,
+    "index": 20,
+    "id": 255,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "C",
+    "question": "一次总线事务中，主设备只需给出一个首地址，从设备就能从首地址开始的若干连续单元读出或写入多个数据。这种总线事务方式称为（ ）。 A. 并行传输 B. 串行传输 C. 突发传输 D. 同步传输",
+    "analysis": "主设备只给出首地址，随后从设备自动访问连续多个单元并连续传输多个数据，这种一次启动、连续传输的总线事务称为突发传输。",
+    "steps": [
+      "识别“给出一个首地址”。",
+      "识别“连续多个单元读出或写入多个数据”。",
+      "这正是突发传输（Burst Transfer），选C。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机组成原理",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "识别“给出一个首地址”。",
+      "识别“连续多个单元读出或写入多个数据”。",
+      "这正是突发传输（Burst Transfer），选C。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "直接寻址范围计算": {
+    "year": 2020,
+    "index": 16,
+    "id": 533,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "A",
+    "question": "某计算机采用 16 位定长指令字格式，操作码位数和寻址方式位数固定，指令系统有 48 条指令，支持直接、间接、立即、相对 4 种寻址方式，单地址指令中直接寻址方式可寻址范围是（ ）。 A. 0 ~ 255； B. 0 ~ 1023； C. -128 ~ 127； D. -512 ~ 511；",
+    "analysis": "48条指令至少需要6位操作码；4种寻址方式需要2位寻址方式字段。16位指令剩余8位作为直接地址，因此可寻址范围为0～255，选A。",
+    "steps": [
+      "操作码位数至少为 ceil(log2 48)=6 位。",
+      "寻址方式字段需要 log2 4=2 位。",
+      "地址字段剩余16−6−2=8位，直接地址范围为0～2^8−1，即0～255。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机组成原理",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "操作码位数至少为 ceil(log2 48)=6 位。",
+      "寻址方式字段需要 log2 4=2 位。",
+      "地址字段剩余16−6−2=8位，直接地址范围为0～2^8−1，即0～255。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "文件系统逻辑格式化": {
+    "year": 2017,
+    "index": 29,
+    "id": 405,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "B",
+    "question": "下列选项中，磁盘逻辑格式化程序所做的工作是（ ）。 Ⅰ. 对磁盘进行分区 Ⅱ. 建立文件系统的根目录 Ⅲ. 确定磁盘扇区校验码所占位数 Ⅳ. 对保存空闲磁盘块信息的数据结构进行初始化 A. 仅Ⅱ B. 仅Ⅱ、Ⅳ C. 仅Ⅲ、Ⅳ D. 仅Ⅰ、Ⅱ、Ⅳ",
+    "analysis": "磁盘逻辑格式化用于建立文件系统的数据结构，包括建立根目录以及初始化空闲磁盘块管理结构。磁盘分区属于更低层的分区操作，扇区校验码位数也不是逻辑格式化的工作。",
+    "steps": [
+      "逻辑格式化建立文件系统的组织结构。",
+      "建立根目录，并初始化空闲空间管理数据结构。",
+      "对应Ⅱ、Ⅳ，选B。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "操作系统",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "逻辑格式化建立文件系统的组织结构。",
+      "建立根目录，并初始化空闲空间管理数据结构。",
+      "对应Ⅱ、Ⅳ，选B。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "定长子网划分计算": {
+    "year": 2010,
+    "index": 37,
+    "id": 84,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "B",
+    "question": "某网络的 IP 地址空间为 192.168.5.0/24，采用定长子网划分，子网掩码为 255.255.255.248，则该网络中的最大子网个数、每个子网内的最大可分配地址个数分别是（ ）。 A. 32, 8 B. 32, 6 C. 8, 32 D. 8, 30",
+    "analysis": "原网络为/24，子网掩码255.255.255.248对应/29。借用5位作为子网号，可划分2^5=32个子网；主机号剩3位，每个子网可分配2^3−2=6个主机地址，选B。",
+    "steps": [
+      "255.255.255.248对应前缀长度/29。",
+      "从/24借用5位作子网号，子网数为2^5=32。",
+      "主机位剩3位，可用地址数为2^3−2=6。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "255.255.255.248对应前缀长度/29。",
+      "从/24借用5位作子网号，子网数为2^5=32。",
+      "主机位剩3位，可用地址数为2^3−2=6。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "CSMA_CA信道预约": {
+    "year": 2018,
+    "index": 35,
+    "id": 458,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "D",
+    "question": "IEEE 802.11 无线局域网的 MAC 协议 CSMA/CA 进行信道预约的方法是（ ）。 A. 发送确认帧 B. 采用二进制指数退避 C. 使用多个 MAC 地址 D. 交换 RTS 与 CTS 帧",
+    "analysis": "IEEE 802.11 的CSMA/CA可通过RTS/CTS帧进行信道预约。发送方先发RTS，接收方响应CTS，其他站点据此设置网络分配向量并延迟发送。",
+    "steps": [
+      "CSMA/CA通过虚拟载波侦听降低隐藏站冲突。",
+      "RTS请求发送，CTS允许发送并公布预约时长。",
+      "因此信道预约方式是交换RTS与CTS，选D。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "CSMA/CA通过虚拟载波侦听降低隐藏站冲突。",
+      "RTS请求发送，CTS允许发送并公布预约时长。",
+      "因此信道预约方式是交换RTS与CTS，选D。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "交换机转发地址": {
+    "year": 2009,
+    "index": 36,
+    "id": 36,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "A",
+    "question": "以太网交换机进行转发决策时使用的 PDU 地址是（）。 A. 目的物理地址 B. 目的 IP 地址 C. 源物理地址 D. 源 IP 地址",
+    "analysis": "以太网交换机依据目的MAC地址查找转发表并决定转发端口；源MAC地址用于学习和更新转发表，IP地址不用于二层交换机的普通转发决策。",
+    "steps": [
+      "区分二层交换与三层路由。",
+      "交换机根据目的物理地址（目的MAC）查表转发。",
+      "源MAC用于地址学习，选A。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "区分二层交换与三层路由。",
+      "交换机根据目的物理地址（目的MAC）查表转发。",
+      "源MAC用于地址学习，选A。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "ICMP拥塞差错报告": {
+    "year": 2010,
+    "index": 36,
+    "id": 83,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "C",
+    "question": "若路由器 R 因为拥塞丢弃 IP 分组，则此时 R 可向发出该 IP 分组的源主机发送的 ICMP 报文类型是（ ）。 A. 路由重定向 B. 目的不可达 C. 源点抑制 D. 超时",
+    "analysis": "按该历年题库所采用的经典ICMP类型，路由器因拥塞丢弃IP分组时对应源点抑制报文（Source Quench），选C。该报文类型后来已被弃用，复习时应区分考试历史口径与现代网络实践。",
+    "steps": [
+      "题目考查经典ICMP差错/控制报文类型。",
+      "拥塞时的历史性反馈类型为源点抑制。",
+      "选C；注意Source Quench已在现代标准中弃用。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "题目考查经典ICMP差错/控制报文类型。",
+      "拥塞时的历史性反馈类型为源点抑制。",
+      "选C；注意Source Quench已在现代标准中弃用。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "TCP快速重传触发条件": {
+    "year": 2019,
+    "index": 38,
+    "id": 508,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "C",
+    "question": "某客户通过一个 TCP 连接向服务器发送数据的部分过程如题 38 图所示。客户在 t 0 ​ 时刻第一次收到确认序列号 ack_seq=100 的段，并发送序列号 seq=100 的段，但发生丢失。若 TCP 支持快速重传，则客户重新发送 seq=100 段的时刻是（ ）。 A. t 1 ​ B. t 2 ​ C. t 3 ​ D. t 4 ​",
+    "analysis": "快速重传通常由连续收到3个重复ACK触发，不必等待重传计时器超时。根据题图，第三个重复确认到达的时刻为t3，因此选C。",
+    "steps": [
+      "发送段丢失后，接收方对后续失序段重复确认同一累计确认号。",
+      "发送方收到3个重复ACK后触发快速重传。",
+      "题图对应t3，选C。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "发送段丢失后，接收方对后续失序段重复确认同一累计确认号。",
+      "发送方收到3个重复ACK后触发快速重传。",
+      "题图对应t3，选C。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "选择重传窗口边界": {
+    "year": 2019,
+    "index": 35,
+    "id": 505,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "B",
+    "question": "对于滑动窗口协议，如果分组序号采用 3 比特编号，发送窗口大小为 5，则接收窗口最大是（ ）。 A. 2 B. 3 C. 4 D. 5",
+    "analysis": "序号空间大小为2^3=8。选择重传协议要求发送窗口与接收窗口之和不超过序号空间，发送窗口已为5，因此接收窗口最大为8−5=3，选B。",
+    "steps": [
+      "3位序号的编号空间为8。",
+      "选择重传为避免新旧帧混淆，发送窗口与接收窗口之和不超过8。",
+      "接收窗口最大为8−5=3，选B。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "3位序号的编号空间为8。",
+      "选择重传为避免新旧帧混淆，发送窗口与接收窗口之和不超过8。",
+      "接收窗口最大为8−5=3，选B。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "NAT下UDP首部字段变化": {
+    "year": 2025,
+    "index": 37,
+    "id": 789,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "B",
+    "question": "假设路由器实现 NAT 功能，内网中主机 H 的 IP 地址为 192.168.1.5/24。若 H 运行某应用向 internet 发送一个 UDP 报文段，则路由器在转发封装该 UDP 报文段的 IP 数据报的过程中，UDP 报文的首部字段会被修改的是（ ）。 I 源端口号 II 目的端口号 III 总长度 IV 校验和 A. 仅 I、III B. 仅 I、IV C. 仅 lI、III D. 仅 II、IV",
+    "analysis": "端口地址转换会修改UDP源端口；由于UDP校验和覆盖UDP首部、数据以及IP伪首部，源地址或端口改变后需要调整校验和。IP总长度不属于UDP首部字段，选B。",
+    "steps": [
+      "区分UDP首部字段与IP首部字段。",
+      "NAPT可能改写源端口号。",
+      "源IP/端口变化会影响UDP校验和；总长度是IP首部字段，选B。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "区分UDP首部字段与IP首部字段。",
+      "NAPT可能改写源端口号。",
+      "源IP/端口变化会影响UDP校验和；总长度是IP首部字段，选B。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "UDP服务特性": {
+    "year": 2014,
+    "index": 39,
+    "id": 274,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "B",
+    "question": "下列关于 UDP 协议的叙述中，正确的是（ ）。 I. 提供无连接服务 II. 提供复用/分用服务 III. 通过差错校验，保障可靠数据传输 A. 仅 I B. 仅 I、II C. 仅 II、III D. I、II、III",
+    "analysis": "UDP提供无连接服务，并通过端口实现复用和分用。UDP校验和用于差错检测，不提供重传、按序交付等可靠传输保障，因此Ⅲ错误，选B。",
+    "steps": [
+      "UDP无连接，不建立连接状态。",
+      "UDP端口支持应用进程复用与分用。",
+      "校验和只能检测差错，不能保证可靠交付；Ⅰ、Ⅱ正确，选B。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "UDP无连接，不建立连接状态。",
+      "UDP端口支持应用进程复用与分用。",
+      "校验和只能检测差错，不能保证可靠交付；Ⅰ、Ⅱ正确，选B。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "UDP分用端口字段": {
+    "year": 2018,
+    "index": 39,
+    "id": 462,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "B",
+    "question": "UDP 协议实现分用 (demultiplexing) 时所依据的头部字段是（ ）。 A. 源端口号 B. 目的端口号 C. 长度 D. 校验和",
+    "analysis": "接收端UDP根据目的端口号将数据报交付给相应的套接字/应用进程；源端口通常用于接收方回复。选B。",
+    "steps": [
+      "UDP接收数据报时需要定位目标应用进程。",
+      "目的端口号用于分用到对应套接字。",
+      "选B。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "UDP接收数据报时需要定位目标应用进程。",
+      "目的端口号用于分用到对应套接字。",
+      "选B。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "FTP控制连接": {
+    "year": 2009,
+    "index": 40,
+    "id": 40,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "A",
+    "question": "FTP 客户和服务器间传递 FTP 命令时，使用的连接是（）。 A. 建立在 TCP 之上的控制连接 B. 建立在 TCP 之上的数据连接 C. 建立在 UDP 之上的控制连接 D. 建立在 UDP 之上的数据连接",
+    "analysis": "FTP使用TCP控制连接传递命令和响应；数据连接用于文件数据传输。控制连接与数据连接用途不同，选A。",
+    "steps": [
+      "FTP同时使用控制连接和数据连接。",
+      "控制连接承载命令与响应，基于TCP。",
+      "选A。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "FTP同时使用控制连接和数据连接。",
+      "控制连接承载命令与响应，基于TCP。",
+      "选A。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "FTP连接管理": {
+    "year": 2017,
+    "index": 40,
+    "id": 416,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "C",
+    "question": "下列关于 FTP 协议的叙述中，错误的是（ ）。 A. 数据连接在每次数据传输完毕后就关闭 B. 控制连接在整个会话期间保持打开状态 C. 服务器与客户端的 TCP 20 端口建立数据连接 D. 客户端与服务器的 TCP 21 端口建立控制连接",
+    "analysis": "FTP控制连接通常使用服务器TCP 21端口；主动模式数据连接由服务器TCP 20端口发起，不能笼统表述为服务器与客户端双方都使用TCP 20端口建立数据连接。按题库答案选C。",
+    "steps": [
+      "控制连接使用服务器TCP 21端口。",
+      "主动模式数据连接由服务器TCP 20端口发起，客户端使用临时端口。",
+      "题干C项对两端端口的描述不正确，选C。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "控制连接使用服务器TCP 21端口。",
+      "主动模式数据连接由服务器TCP 20端口发起，客户端使用临时端口。",
+      "题干C项对两端端口的描述不正确，选C。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "P2P与客户服务器模型": {
+    "year": 2019,
+    "index": 40,
+    "id": 510,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "B",
+    "question": "下列关于网络应用模型的叙述中，错误的是（ ）。 A. 在 P2P 模型中，结点之间具有对等关系 B. 在客户/服务器 (C/S) 模型中，客户与客户之间可以直接通信 C. 在 C/S 模型中，主动发起通信的是客户，被动通信的是服务器 D. 在向多用户分发一个文件时，P2P 模型通常比 CIS 模型所需时间短",
+    "analysis": "客户/服务器模型中客户向服务器发起请求，服务器提供服务；客户之间通常不直接建立该模型定义下的服务关系。P2P节点具有对等性，可同时提供和获取服务，因此B项错误。",
+    "steps": [
+      "C/S模型以服务器为服务提供方、客户为请求方。",
+      "P2P节点之间是对等关系。",
+      "“C/S模型中客户与客户之间可以直接通信”不是该模型的典型定义，选B。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "C/S模型以服务器为服务提供方、客户为请求方。",
+      "P2P节点之间是对等关系。",
+      "“C/S模型中客户与客户之间可以直接通信”不是该模型的典型定义，选B。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "HDLC比特填充": {
+    "year": 2013,
+    "index": 37,
+    "id": 225,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "A",
+    "question": "HDLC 协议对 01111100 01111110 组帧后对应的比特串为（ ）。 A. 01111100 00111110 10 B. 01111100 01111101 01111110 C. 01111100 01111101 0 D. 01111100 01111110 01111101",
+    "analysis": "HDLC使用01111110作为帧定界标志。为避免数据中出现与标志相同的比特模式，发送端在数据字段连续出现5个1后插入0；接收端再删除该0。",
+    "steps": [
+      "识别HDLC标志字段01111110。",
+      "数据字段连续出现5个1时，发送端插入一个0。",
+      "按题目比特串逐位执行填充，结果对应A。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "识别HDLC标志字段01111110。",
+      "数据字段连续出现5个1时，发送端插入一个0。",
+      "按题目比特串逐位执行填充，结果对应A。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "GBN发送窗口序号位数": {
+    "year": 2012,
+    "index": 36,
+    "id": 177,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "B",
+    "question": "两台主机之间的数据链路层采用后退 N 帧协议 (GBN) 传输数据，数据传输速率为 16 kbps，单向传播时延为 270 ms，数据帧长度范围是 128~512 字节，接收方总是以与数据帧等长的帧进行确认。为使信道利用率达到最高，帧序号的比特数至少为（ ）。 A. 5 B. 4 C. 3 D. 2",
+    "analysis": "帧长取最小值128B时，发送时间为1024/16000=64ms；单向传播时延270ms，a=270/64≈4.22。为使窗口足以覆盖管道，需W≥1+2a≈9.44；GBN窗口最大为2^k−1，k=4时最大15，满足要求，选B。",
+    "steps": [
+      "取最小帧长128B，发送时间为64ms。",
+      "a=传播时延/发送时延=270/64≈4.22，满利用率要求W≥1+2a≈9.44。",
+      "GBN最大窗口W=2^k−1，最小满足条件的k为4，选B。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "取最小帧长128B，发送时间为64ms。",
+      "a=传播时延/发送时延=270/64≈4.22，满利用率要求W≥1+2a≈9.44。",
+      "GBN最大窗口W=2^k−1，最小满足条件的k为4，选B。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "CSMA_CA确认机制": {
+    "year": 2011,
+    "index": 36,
+    "id": 130,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "D",
+    "question": "下列选项中，对正确接收到的数据帧进行确认的 MAC 协议是（ ）。 A. CSMA B. CDMA C. CSMA/CD D. CSMA/CA",
+    "analysis": "CSMA/CA在成功接收数据帧后由接收方发送ACK确认；CSMA/CD通过冲突检测和重传机制工作，不使用这种逐帧ACK确认方式。",
+    "steps": [
+      "区分CSMA/CD与CSMA/CA。",
+      "无线局域网CSMA/CA通过ACK确认正确接收的数据帧。",
+      "选D。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "区分CSMA/CD与CSMA/CA。",
+      "无线局域网CSMA/CA通过ACK确认正确接收的数据帧。",
+      "选D。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "广播风暴与网络设备": {
+    "year": 2010,
+    "index": 38,
+    "id": 85,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "D",
+    "question": "下列网络设备中，能够抑制广播风暴的是（ ）。 I. 中继器 II. 集线器 III. 网桥 IV. 路由器 A. 仅 I 和 II B. 仅 III C. 仅 III 和 IV D. 仅 IV",
+    "analysis": "中继器、集线器和网桥不会隔离二层广播域；路由器在三层转发，默认不转发二层广播，因此能够隔离广播域并抑制广播风暴，选D。",
+    "steps": [
+      "中继器和集线器工作在物理层。",
+      "网桥/二层交换机转发广播帧，不能隔离广播域。",
+      "路由器隔离广播域，选D。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "中继器和集线器工作在物理层。",
+      "网桥/二层交换机转发广播帧，不能隔离广播域。",
+      "路由器隔离广播域，选D。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "交换机与网桥关系": {
+    "year": 2015,
+    "index": 37,
+    "id": 319,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "A",
+    "question": "下列关于交换机的叙述中，正确的是（ ）。 A. 以太网交换机本质上是一种多端口网桥 B. 通过交换机互连的一组工作站构成一个冲突域 C. 交换机每个端口所连网络构成一个独立的广播域 D. 以太网交换机可实现采用不同网络层协议的网络互联",
+    "analysis": "以太网交换机本质上是多端口网桥。交换机每个端口隔离冲突域，但同一VLAN内通常仍属于同一广播域，因此B、C错误；二层交换机也不负责不同网络层协议互联。",
+    "steps": [
+      "交换机通过MAC地址表进行二层转发。",
+      "从功能本质看，以太网交换机是多端口网桥。",
+      "端口隔离冲突域，不自动隔离广播域，选A。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "交换机通过MAC地址表进行二层转发。",
+      "从功能本质看，以太网交换机是多端口网桥。",
+      "端口隔离冲突域，不自动隔离广播域，选A。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
+  },
+  "CSMA_CD最小帧长与距离": {
+    "year": 2009,
+    "index": 37,
+    "id": 37,
+    "typeName": "选择题",
+    "score": 2,
+    "answer": "D",
+    "question": "在一个采用 CSMA/CD 协议的网络中，传输介质是一根完整的电缆，传输速率为 1Gbps，电缆中的信号传播速度是 200 000km/s。若最小数据帧长度减少 800 比特，则最远的两个站点之间的距离至少需要（）。 A. 增加 160m B. 增加 80m C. 减少 160m D. 减少 80m",
+    "analysis": "CSMA/CD要求最小帧发送时间不小于往返传播时延。最小帧长度减少800bit、速率1Gbps，对应往返时延减少0.8μs；单向传播时延减少0.4μs，距离变化为200000km/s×0.4μs=80m，因此最远距离至少减少80m，选D。",
+    "steps": [
+      "最小帧长度变化量对应发送时间Δt=800/10^9=0.8μs。",
+      "CSMA/CD约束的是往返传播时延，单程时延变化为0.4μs。",
+      "距离变化量=200000km/s×0.4μs=80m，需减少80m，选D。"
+    ],
+    "stepsSource": "teaching",
+    "topic": "计算机网络",
+    "matchKind": "direct-concept",
+    "teachingSteps": [
+      "最小帧长度变化量对应发送时间Δt=800/10^9=0.8μs。",
+      "CSMA/CD约束的是往返传播时延，单程时延变化为0.4μs。",
+      "距离变化量=200000km/s×0.4μs=80m，需减少80m，选D。"
+    ],
+    "audit": {
+      "status": "source-linked-answer-key",
+      "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
+    }
   }
 };
 
@@ -1242,5 +1944,31 @@ window.CARD_EXAM_TOPIC_MAP = {
   "银行家算法与安全状态": "银行家算法安全性检查",
   "文件控制块与访问控制": "索引结点 inode 与文件控制块",
   "多级反馈队列调度题": "多级反馈队列调度",
-  "内核态与用户态转换": "内核态与用户态特权级"
+  "内核态与用户态转换": "内核态与用户态特权级",
+  "顺序表折半查找比较次数": "线性表与顺序表",
+  "最小生成树性质判断": "最小生成树与最短路径",
+  "Kruskal算法构造最小生成树": "最小生成树与最短路径",
+  "每趟排序确定最终位置": "内部排序与稳定性",
+  "排序算法选择因素": "内部排序与稳定性",
+  "突发总线事务": "总线与总线事务",
+  "直接寻址范围计算": "指令系统与寻址方式",
+  "文件系统逻辑格式化": "文件系统与目录",
+  "定长子网划分计算": "IP 地址与子网划分",
+  "CSMA_CA信道预约": "CSMA/CA 与无线局域网",
+  "交换机转发地址": "交换机自学习与转发",
+  "ICMP拥塞差错报告": "ICMP 差错报告与诊断",
+  "TCP快速重传触发条件": "TCP 超时重传与快速重传",
+  "选择重传窗口边界": "TCP 接收窗口与滑动窗口",
+  "NAT下UDP首部字段变化": "UDP 首部与校验和",
+  "UDP服务特性": "UDP 首部与校验和",
+  "UDP分用端口字段": "UDP 首部与校验和",
+  "FTP控制连接": "FTP 与电子邮件协议",
+  "FTP连接管理": "FTP 与电子邮件协议",
+  "P2P与客户服务器模型": "P2P 与客户服务器模型",
+  "HDLC比特填充": "组帧与透明传输",
+  "GBN发送窗口序号位数": "GBN 后退 N 帧协议",
+  "CSMA_CA确认机制": "CSMA/CA 与无线局域网",
+  "广播风暴与网络设备": "网桥与交换机的冲突域广播域",
+  "交换机与网桥关系": "网桥与交换机的冲突域广播域",
+  "CSMA_CD最小帧长与距离": "以太网 CSMA/CD"
 };

@@ -1,0 +1,213 @@
+{
+  "addedCount": 26,
+  "added": [
+    {
+      "topic": "顺序表折半查找比较次数",
+      "card": "线性表与顺序表",
+      "year": 2010,
+      "index": 9,
+      "id": 56,
+      "answer": "B"
+    },
+    {
+      "topic": "最小生成树性质判断",
+      "card": "最小生成树与最短路径",
+      "year": 2012,
+      "index": 8,
+      "id": 149,
+      "answer": "A"
+    },
+    {
+      "topic": "Kruskal算法构造最小生成树",
+      "card": "最小生成树与最短路径",
+      "year": 2020,
+      "index": 7,
+      "id": 524,
+      "answer": "A"
+    },
+    {
+      "topic": "每趟排序确定最终位置",
+      "card": "内部排序与稳定性",
+      "year": 2012,
+      "index": 10,
+      "id": 151,
+      "answer": "A"
+    },
+    {
+      "topic": "排序算法选择因素",
+      "card": "内部排序与稳定性",
+      "year": 2019,
+      "index": 7,
+      "id": 477,
+      "answer": "D"
+    },
+    {
+      "topic": "突发总线事务",
+      "card": "总线与总线事务",
+      "year": 2014,
+      "index": 20,
+      "id": 255,
+      "answer": "C"
+    },
+    {
+      "topic": "直接寻址范围计算",
+      "card": "指令系统与寻址方式",
+      "year": 2020,
+      "index": 16,
+      "id": 533,
+      "answer": "A"
+    },
+    {
+      "topic": "文件系统逻辑格式化",
+      "card": "文件系统与目录",
+      "year": 2017,
+      "index": 29,
+      "id": 405,
+      "answer": "B"
+    },
+    {
+      "topic": "定长子网划分计算",
+      "card": "IP 地址与子网划分",
+      "year": 2010,
+      "index": 37,
+      "id": 84,
+      "answer": "B"
+    },
+    {
+      "topic": "CSMA_CA信道预约",
+      "card": "CSMA/CA 与无线局域网",
+      "year": 2018,
+      "index": 35,
+      "id": 458,
+      "answer": "D"
+    },
+    {
+      "topic": "交换机转发地址",
+      "card": "交换机自学习与转发",
+      "year": 2009,
+      "index": 36,
+      "id": 36,
+      "answer": "A"
+    },
+    {
+      "topic": "ICMP拥塞差错报告",
+      "card": "ICMP 差错报告与诊断",
+      "year": 2010,
+      "index": 36,
+      "id": 83,
+      "answer": "C"
+    },
+    {
+      "topic": "TCP快速重传触发条件",
+      "card": "TCP 超时重传与快速重传",
+      "year": 2019,
+      "index": 38,
+      "id": 508,
+      "answer": "C"
+    },
+    {
+      "topic": "选择重传窗口边界",
+      "card": "TCP 接收窗口与滑动窗口",
+      "year": 2019,
+      "index": 35,
+      "id": 505,
+      "answer": "B"
+    },
+    {
+      "topic": "NAT下UDP首部字段变化",
+      "card": "UDP 首部与校验和",
+      "year": 2025,
+      "index": 37,
+      "id": 789,
+      "answer": "B"
+    },
+    {
+      "topic": "UDP服务特性",
+      "card": "UDP 首部与校验和",
+      "year": 2014,
+      "index": 39,
+      "id": 274,
+      "answer": "B"
+    },
+    {
+      "topic": "UDP分用端口字段",
+      "card": "UDP 首部与校验和",
+      "year": 2018,
+      "index": 39,
+      "id": 462,
+      "answer": "B"
+    },
+    {
+      "topic": "FTP控制连接",
+      "card": "FTP 与电子邮件协议",
+      "year": 2009,
+      "index": 40,
+      "id": 40,
+      "answer": "A"
+    },
+    {
+      "topic": "FTP连接管理",
+      "card": "FTP 与电子邮件协议",
+      "year": 2017,
+      "index": 40,
+      "id": 416,
+      "answer": "C"
+    },
+    {
+      "topic": "P2P与客户服务器模型",
+      "card": "P2P 与客户服务器模型",
+      "year": 2019,
+      "index": 40,
+      "id": 510,
+      "answer": "B"
+    },
+    {
+      "topic": "HDLC比特填充",
+      "card": "组帧与透明传输",
+      "year": 2013,
+      "index": 37,
+      "id": 225,
+      "answer": "A"
+    },
+    {
+      "topic": "GBN发送窗口序号位数",
+      "card": "GBN 后退 N 帧协议",
+      "year": 2012,
+      "index": 36,
+      "id": 177,
+      "answer": "B"
+    },
+    {
+      "topic": "CSMA_CA确认机制",
+      "card": "CSMA/CA 与无线局域网",
+      "year": 2011,
+      "index": 36,
+      "id": 130,
+      "answer": "D"
+    },
+    {
+      "topic": "广播风暴与网络设备",
+      "card": "网桥与交换机的冲突域广播域",
+      "year": 2010,
+      "index": 38,
+      "id": 85,
+      "answer": "D"
+    },
+    {
+      "topic": "交换机与网桥关系",
+      "card": "网桥与交换机的冲突域广播域",
+      "year": 2015,
+      "index": 37,
+      "id": 319,
+      "answer": "A"
+    },
+    {
+      "topic": "CSMA_CD最小帧长与距离",
+      "card": "以太网 CSMA/CD",
+      "year": 2009,
+      "index": 37,
+      "id": 37,
+      "answer": "D"
+    }
+  ]
+}
