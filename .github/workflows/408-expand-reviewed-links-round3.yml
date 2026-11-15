@@ -1,0 +1,29 @@
+name: 408 apply source-backed links round 3
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/408-expand-reviewed-links-round3.js'
+      - '.github/workflows/408-expand-reviewed-links-round3.yml'
+permissions:
+  contents: write
+jobs:
+  apply-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Generate links from source data and reviewed rules
+        run: node scripts/408-expand-reviewed-links-round3.js
+      - name: Commit generated mapping
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/opensource-22408/408/cards-questions.js reports/408-new-links-round3.json
+          git diff --cached --quiet || git commit -m "feat(408): expand source-backed links round three"
+          git pull --rebase origin main
+          git push
