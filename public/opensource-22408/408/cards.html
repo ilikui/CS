@@ -236,6 +236,15 @@ function flowVisual(card){
   [/系统调用/,['用户态发起请求','陷入内核态处理','返回用户态继续执行'],'系统调用通过受控入口请求内核服务；模式切换不等于进程切换。','syscall']
  );
  for(const [re,s,d,k] of rules){if(re.test(title)){stages=s;detail=d;kind=k;break}}
+ if(/快速排序/.test(title))kind='quick-sort';
+ if(/归并排序/.test(title))kind='merge-sort';
+ if(/堆排序|建堆/.test(title))kind='heap-sort';
+ if(/拓扑排序|关键路径/.test(title))kind='toposort';
+ if(/最短路径|Dijkstra|迪杰斯特拉/.test(title))kind='routing';
+ if(/最小生成树|Prim|Kruskal/.test(title))kind='mst';
+ if(/页面置换|FIFO、LRU|LRU|OPT 算法/.test(title))kind='replacement';
+ if(/滑动窗口|接收窗口|TCP 序号确认|TCP 超时重传/.test(title))kind='tcp-seq';
+ if(/拥塞控制|拥塞窗口/.test(title))kind='congestion';
 
  if(['sort','basic-sort'].includes(kind))return interactiveDemo('sort',title);
  if(kind==='quick-sort')return interactiveDemo('quick',title);
