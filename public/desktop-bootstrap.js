@@ -1,6 +1,6 @@
-import { invoke } from "@tauri-apps/api/core";
-import { check } from "@tauri-apps/plugin-updater";
-import { relaunch } from "@tauri-apps/plugin-process";
+const { invoke } = window.__TAURI__.core;
+const { check } = window.__TAURI__.updater;
+const { relaunch } = window.__TAURI__.process;
 
 const status = document.querySelector("#status");
 const setStatus = (message) => { status.textContent = message; };
@@ -14,7 +14,6 @@ async function boot() {
     localStorage.setItem("cs_desktop_runtime", "1");
     localStorage.setItem("cs_desktop_last_boot", new Date().toISOString());
 
-    // Install a small desktop control panel after the existing CS pages load.
     const panel = document.createElement("div");
     panel.id = "cs-desktop-tools";
     panel.innerHTML = `
@@ -64,7 +63,7 @@ async function boot() {
       try {
         const count = await invoke("import_learning_backup", { content: await file.text() });
         const data = await invoke("load_learning_store");
-        for (const key of Object.keys(localStorage)) localStorage.removeItem(key);
+        localStorage.clear();
         for (const [key, value] of Object.entries(data || {})) localStorage.setItem(key, value);
         message.textContent = `已恢复 ${count} 项数据，正在刷新页面…`;
         setTimeout(() => location.reload(), 700);
