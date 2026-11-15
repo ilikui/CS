@@ -275,11 +275,12 @@ function showDataError(message) {
 }
 function loadQuestionData(sources, index = 0) {
     if (index >= sources.length) {
-        showDataError('题库数据加载失败：本站题库文件未能加载，请刷新页面；若持续失败，请反馈给维护者。');
+        showDataError('题库数据加载失败：已尝试本站静态资源与备用数据源。请检查浏览器网络请求中的 questions_data.js 状态码。');
         return;
     }
     const script = document.createElement('script');
-    script.src = sources[index] + '?v=20261115-3';
+    const source = sources[index];
+    script.src = source + (source.includes('?') ? '&' : '?') + 'v=20261115-4';
     script.async = true;
     script.onload = function () {
         let data;
@@ -287,25 +288,31 @@ function loadQuestionData(sources, index = 0) {
             data = (typeof QUESTIONS_DATA !== 'undefined' && Array.isArray(QUESTIONS_DATA))
                 ? QUESTIONS_DATA
                 : window.QUESTIONS_DATA;
-        } catch (e) {}
+        } catch (e) {
+            console.error('[408题库] 数据变量读取异常：', e);
+        }
         if (!Array.isArray(data) || data.length === 0) {
+            console.error('[408题库] 数据脚本已返回，但未发现 QUESTIONS_DATA 数组：', script.src);
             script.remove();
             loadQuestionData(sources, index + 1);
             return;
         }
         document.getElementById('data-status').style.display = 'none';
+        document.getElementById('progress').textContent = '题库加载完成：' + data.length + ' 题';
         renderYears();
         applyFilters();
     };
     script.onerror = function () {
-        console.error('[408题库] 数据脚本加载失败：', script.src);
+        console.error('[408题库] 数据脚本请求失败：', script.src);
         script.remove();
         loadQuestionData(sources, index + 1);
     };
     document.head.appendChild(script);
 }
 loadQuestionData([
-    './questions_data.js'
+    '/opensource-22408/408/questions_data.js',
+    './questions_data.js',
+    'https://raw.githubusercontent.com/ilikui/CS/main/data/408/questions_data.js'
 ]);
 </script>
 <script src="/render-enhance.js" defer></script>\n</body>
