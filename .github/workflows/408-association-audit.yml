@@ -1,0 +1,29 @@
+name: 408 question-card audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/408-association-audit.js'
+      - 'data/408/questions_data.js'
+      - 'public/opensource-22408/408/cards.html'
+      - 'public/opensource-22408/408/cards-questions.js'
+      - '.github/workflows/408-association-audit.yml'
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build source-backed audit report
+        run: node scripts/408-association-audit.js
+      - name: Commit audit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/408-association-audit.json
+          git diff --cached --quiet || git commit -m "chore(408): refresh source-backed question-card audit"
+          git push
