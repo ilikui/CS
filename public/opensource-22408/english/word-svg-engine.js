@@ -340,38 +340,132 @@ Object.assign(multiSenseScenes,{
  change:[[/改变|变化|变换|不同|转换|替代|互换/,makeExtraSense('change','改变：状态或内容发生变化','change')],[/换衣服|换乘/,makeExtraSense('transition','更换：从一种选择切换到另一种','shift')],[/零钱/,makeExtraSense('money','零钱：交易后的零散货币','money')]]
 });
 
-/* 62 curated dictionary-matched English-II sense rules across 31 high-value headwords. */
-multiSenseScenes['deal']=[[/大量|很多|交易|协议/,['economy','交易与数量',art.economy]],[/处理|对付|做生意|涉及|发牌|贩毒/,['person','处理事务',art.person]]];
-multiSenseScenes['fair']=[[/公平|按照规则|合理/,['law','公平裁决',art.law]],[/展销会|集市|露天游乐场|浅色|晴朗|美丽|不错|相当大/,['nature','集市与晴朗',art.nature]]];
-multiSenseScenes['gift']=[[/礼物|赠送/,['growth','包装礼物',art.growth]],[/天赋|才能/,['idea','天赋能力',art.idea]]];
-multiSenseScenes['tend']=[[/往往会|倾向于/,['travel','倾向与方向',art.travel]],[/照顾|照料|管理|打点/,['person','照料管理',art.person]]];
-multiSenseScenes['operate']=[[/操作|使运行|运转|工作/,['science','机器运转',art.science]],[/动手术|经营|使用/,['person','手术与经营',art.person]]];
-multiSenseScenes['current']=[[/当前|现在|流行/,['time','当前时刻',art.time]],[/水流|气流|电流|思潮/,['nature','流动与电流',art.nature]]];
-multiSenseScenes['average']=[[/平均|平均数|均值|平均水平/,['science','平均值计算',art.science]],[/中等|普通|数量/,['observe','普通水平对照',art.observe]]];
-multiSenseScenes['suit']=[[/西服|套装/,['person','西装套装',art.person]],[/诉讼|起诉|适合|相配|合身/,['law','适合与诉讼',art.law]]];
-multiSenseScenes['feature']=[[/特征|特点|五官/,['observe','面部特征',art.observe]],[/特写|专题|特色|起重要作用/,['knowledge','专题报道',art.knowledge]]];
-multiSenseScenes['claim']=[[/声称|声明|认为/,['speech','提出主张',art.speech]],[/要求拥有|认领|获得|索取|索赔|夺去|生命/,['law','所有权与索赔',art.law]]];
-multiSenseScenes['apply']=[[/申请|适用/,['knowledge','提交申请',art.knowledge]],[/应用|运用|涂抹|按|踩/,['person','实际应用',art.person]]];
-multiSenseScenes['approach']=[[/接近|靠近|路径/,['travel','逐步接近',art.travel]],[/接洽|要求|处理|对付|方法|态度/,['speech','方法与交涉',art.speech]]];
-multiSenseScenes['process']=[[/过程|流程|工序/,['time','流程步骤',art.time]],[/加工|处理|审阅|审核/,['science','加工与审核',art.science]]];
-multiSenseScenes['expect']=[[/预计|猜想/,['observe','预测未来',art.observe]],[/盼望|要求|期望/,['emotion','期待与盼望',art.emotion]]];
-multiSenseScenes['run']=[[/奔跑|跑|赛跑/,['person','奔跑动作',art.person]],[/管理|经营|运转|操作|刊登|包含|连续上演|流淌|行驶|发生|变成/,['science','运营与持续运行',art.science]]];
-multiSenseScenes['work']=[[/工作|干活|职业|劳动/,['person','工作场景',art.person]],[/奏效|运转|管理|经营|操作|作品|成果|争取/,['science','成果与有效运作',art.science]]];
-multiSenseScenes['file']=[[/文件夹|文件|档案|归档/,['knowledge','文件归档',art.knowledge]],[/提起|诉讼|提交|申请|发送|报道|纵队|锉/,['law','正式提交与诉讼',art.law]]];
-multiSenseScenes['cross']=[[/越过|渡过|相交|交叉|十字架|叉号/,['travel','交叉与跨越',art.travel]],[/反对|恼怒|生气/,['emotion','反对与恼怒',art.emotion]]];
-multiSenseScenes['handle']=[[/处理|应付|驾驭/,['science','处理复杂事务',art.science]],[/把手|柄|触|拿/,['person','握住把手',art.person]]];
-multiSenseScenes['tackle']=[[/难题|交涉|处理|抓获/,['science','攻克难题',art.science]],[/抢球|抢断|擒抱|阻截|体育器材/,['person','球场抢断',art.person]]];
-multiSenseScenes['mirror']=[[/镜子|映照|反射/,['observe','镜面反射',art.observe]],[/写照|反映|相似/,['observe','现实映照',art.observe]]];
-multiSenseScenes['counter']=[[/柜台|料理台/,['economy','服务柜台',art.economy]],[/计算器|反驳|驳斥|抵制|抵消|逆向|反对/,['law','反向抵消与反驳',art.law]]];
-multiSenseScenes['silence']=[[/寂静|无声|安静/,['nature','安静无声',art.nature]],[/沉默|缄口|压制|反对意见/,['speech','保持沉默',art.speech]]];
-multiSenseScenes['echo']=[[/回声|回音|回响/,['nature','山谷回声',art.nature]],[/相似|附和|重复|充满回声/,['speech','重复与附和',art.speech]]];
-multiSenseScenes['bay']=[[/海湾|湾|水域/,['nature','海湾地形',art.nature]],[/隔间|月桂|栗色马|长嗥|强烈要求|棕红色/,['observe','bay的其他义项',art.observe]]];
-multiSenseScenes['manual']=[[/人⼒|体⼒|手动|人力|体力/,['person','手动操作',art.person]],[/手册|说明书|使用手册/,['knowledge','使用手册',art.knowledge]]];
-multiSenseScenes['facility']=[[/设备|设施/,['science','设备设施',art.science]],[/功能|天资|才能/,['idea','特殊功能与天资',art.idea]]];
-multiSenseScenes['represent']=[[/代表|象征|体现/,['person','代表与象征',art.person]],[/表示|描绘|意味着|相当于/,['knowledge','图示表达含义',art.knowledge]]];
-multiSenseScenes['plus']=[[/加|外加|加号/,['science','加法运算',art.science]],[/优势|长处|零上|优点|此外|况且|多的/,['growth','额外优势',art.growth]]];
-multiSenseScenes['extra']=[[/额外|附加|另外|特别|格外/,['growth','额外增加',art.growth]],[/另外收费|临时演员/,['person','临时演员与附加收费',art.person]]];
-multiSenseScenes['overhead']=[[/头顶|空中/,['nature','头顶上方',art.nature]],[/经营开支|经营开⽀|开支|开⽀/,['economy','企业经营开支',art.economy]]];
+/* 62 individually composed SVG scenes; no shared art-kind templates. */
+multiSenseScenes['deal']=[
+ [/大量|很多|交易|协议/,['idea','交易市场：货箱、合同与成交箭头',`<path d='M90 255h460l-30 35H120Z' fill='A3'/><path d='M145 230V115h110v115m125 0V80h110v150' fill='none' stroke='A2' stroke-width='12'/><path d='M285 120l35-40 35 40' fill='none' stroke='A4' stroke-width='12'/>`]],
+ [/处理|对付|做生意|涉及|发牌|贩毒/,['idea','处理事务：人物逐项核对待办清单',`<circle cx='175' cy='105' r='28' fill='A4'/><path d='M120 275q0-120 55-120t55 120' fill='A3'/><rect x='290' y='75' width='220' height='205' rx='12' fill='none' stroke='A2' stroke-width='11'/><path d='M325 125h145m-145 48h120m-120 48h85' stroke='A4' stroke-width='11'/>`]]
+];
+multiSenseScenes['fair']=[
+ [/公平|按照规则|合理/,['idea','公平裁决：水平天平两侧等重',`<path d='M320 55v210m-140-135h280M180 130l-48 95h96Zm280 0-48 95h96Z' fill='A3' stroke='A2' stroke-width='9'/><path d='M245 275h150' stroke='A4' stroke-width='14'/>`]],
+ [/展销会|集市|露天游乐场|浅色|晴朗|美丽|不错|相当大/,['idea','露天集市：遮阳棚、摊位与摩天轮',`<path d='M80 155h190l-25-75H105Z' fill='A4' stroke='A2' stroke-width='8'/><path d='M105 155v135m140-135v135M80 290h190' stroke='A2' stroke-width='9'/><circle cx='445' cy='165' r='72' fill='none' stroke='A3' stroke-width='9'/><path d='M445 93v144m-72-72h144m-123-51 102 102m0-102L394 216' stroke='A2' stroke-width='7'/>`]]
+];
+multiSenseScenes['gift']=[
+ [/礼物|赠送/,['idea','礼物盒：缎带交叉与蝴蝶结',`<rect x='175' y='150' width='290' height='145' rx='10' fill='A3' stroke='A2' stroke-width='8'/><path d='M320 150v145M175 198h290' stroke='#fff' stroke-width='15'/><path d='M320 150q-115-25-82-80 52-25 82 80 30-105 82-80 33 55-82 80Z' fill='A4' stroke='A2' stroke-width='6'/>`]],
+ [/天赋|才能/,['idea','天赋：脑部轮廓迸发灵感火花',`<path d='M245 225q-45-45-20-110 25-65 95-55 70-10 95 55 25 65-20 110l-20 35h-110Z' fill='A3' stroke='A2' stroke-width='8'/><path d='M275 270h90m-80 18h70' stroke='A2' stroke-width='9'/><path d='M320 25V5m-95 50-18-18m208 18 18-18m-113 45 18 30 32-8-22 28' fill='none' stroke='A4' stroke-width='11'/>`]]
+];
+multiSenseScenes['tend']=[
+ [/往往会|倾向于/,['idea','倾向：分岔路径中箭头偏向一侧',`<path d='M90 275Q200 275 250 190T520 80' fill='none' stroke='A3' stroke-width='17'/><path d='M90 90Q195 90 250 165' fill='none' stroke='A2' stroke-width='8' stroke-dasharray='12 12'/><path d='M470 72l50 8-18 48' fill='none' stroke='A4' stroke-width='12'/>`]],
+ [/照顾|照料|管理|打点/,['idea','照料：园丁为幼苗浇水',`<path d='M320 280V170' stroke='A2' stroke-width='13'/><path d='M320 210q-95-85-120-10 55 65 120 10m0-35q90-100 130-25-55 75-130 25' fill='A3' stroke='A2' stroke-width='7'/><path d='M160 115q70-55 135 0l-20 30H180Z' fill='A4'/><path d='M190 145l-25 70m25-70 35 65' stroke='A4' stroke-width='8'/>`]]
+];
+multiSenseScenes['operate']=[
+ [/操作|使运行|运转|工作/,['idea','机器运转：齿轮啮合带动传动轴',`<circle cx='235' cy='180' r='78' fill='A3' stroke='A2' stroke-width='10'/><circle cx='235' cy='180' r='26' fill='#fff' stroke='A2' stroke-width='8'/><path d='M235 85v-25m0 215v-25m-95-70h-25m215 0h-25m-137-67-20-20m162 162-20-20m0-122 20-20m-162 162 20-20' stroke='A4' stroke-width='14'/><path d='M335 125h170v110H335Z' fill='none' stroke='A2' stroke-width='10'/>`]],
+ [/动手术|经营|使用/,['idea','外科手术：手术灯照亮操作台',`<path d='M320 35v55m-55-28h110' stroke='A4' stroke-width='12'/><circle cx='320' cy='150' r='45' fill='none' stroke='A2' stroke-width='9'/><path d='M205 290q15-100 115-100t115 100' fill='A3'/><path d='M265 220l-35 55m145-55 35 55' stroke='A2' stroke-width='12'/><path d='M320 130v42m-21-21h42' stroke='A4' stroke-width='10'/>`]]
+];
+multiSenseScenes['current']=[
+ [/当前|现在|流行/,['idea','当前时刻：时间轴上的现在指针',`<path d='M85 190h470' stroke='A2' stroke-width='10'/><path d='M320 65l-28 58h56Z' fill='A4'/><circle cx='320' cy='190' r='34' fill='A3' stroke='A2' stroke-width='8'/><path d='M320 190l58-55' stroke='A2' stroke-width='9'/><circle cx='135' cy='190' r='13' fill='A3'/><circle cx='505' cy='190' r='13' fill='A3'/>`]],
+ [/水流|气流|电流|思潮/,['idea','流动：河流波纹与闪电电流',`<path d='M65 130q55-55 110 0t110 0 110 0 110 0M65 210q55-55 110 0t110 0 110 0 110 0' fill='none' stroke='A3' stroke-width='13'/><path d='M330 55l-38 90h42l-30 100 83-125h-45l28-65Z' fill='A4' stroke='A2' stroke-width='5'/>`]]
+];
+multiSenseScenes['average']=[
+ [/平均|平均数|均值|平均水平/,['idea','平均值：柱状数据与均值基准线',`<path d='M110 280h420' stroke='A2' stroke-width='9'/><rect x='145' y='190' width='58' height='90' fill='A3'/><rect x='235' y='125' width='58' height='155' fill='A4'/><rect x='325' y='165' width='58' height='115' fill='A3'/><rect x='415' y='215' width='58' height='65' fill='A4'/><path d='M125 178h365' stroke='A2' stroke-width='7' stroke-dasharray='10 9'/>`]],
+ [/中等|普通|数量/,['idea','普通水平：刻度尺中央的中间档',`<path d='M320 60v220M170 250h300' stroke='A2' stroke-width='9'/><path d='M205 250v-42m55 42v-80m60 80v-118m60 118v-80m55 80v-42' stroke='A3' stroke-width='18'/><circle cx='320' cy='105' r='19' fill='A4'/>`]]
+];
+multiSenseScenes['suit']=[
+ [/西服|套装/,['idea','西服：翻领、领带与胸前口袋',`<path d='M245 80l75 42 75-42 65 72-45 55-35-25v110H260V182l-35 25-45-55Z' fill='A3' stroke='A2' stroke-width='9'/><path d='M320 122l-32 48 32 25 32-25Z' fill='A4'/><path d='M320 195v97m-75-105 28 12m119-12-28 12' stroke='#fff' stroke-width='8'/>`]],
+ [/诉讼|起诉|适合|相配|合身/,['idea','诉讼裁决：法槌与法院卷宗',`<path d='M220 95l75 75m-95-55 40-40 75 75-40 40Z' fill='A3' stroke='A2' stroke-width='8'/><path d='M290 170l-80 90m80-90 85 90' stroke='A2' stroke-width='12'/><path d='M365 245h115' stroke='A4' stroke-width='15'/><path d='M390 80h105v65H390Z' fill='none' stroke='A4' stroke-width='8'/>`]]
+];
+multiSenseScenes['feature']=[
+ [/特征|特点|五官/,['idea','面部特征：眼睛鼻子嘴巴的细节',`<ellipse cx='320' cy='175' rx='105' ry='125' fill='A3' stroke='A2' stroke-width='8'/><ellipse cx='280' cy='145' rx='17' ry='10' fill='#fff'/><ellipse cx='360' cy='145' rx='17' ry='10' fill='#fff'/><path d='M320 150l-18 55h36m-65 35q47 38 94 0' fill='none' stroke='A2' stroke-width='9'/>`]],
+ [/特写|专题|特色|起重要作用/,['idea','专题特写：摄影镜头对准新闻主体',`<rect x='130' y='80' width='380' height='220' rx='18' fill='none' stroke='A2' stroke-width='10'/><circle cx='320' cy='190' r='78' fill='A3' stroke='A4' stroke-width='12'/><circle cx='320' cy='190' r='29' fill='#fff'/><path d='M160 115h85m-85 35h50m250-35h-40' stroke='A4' stroke-width='9'/>`]]
+];
+multiSenseScenes['claim']=[
+ [/声称|声明|认为/,['idea','提出主张：对话框中的强调陈述',`<path d='M90 75h460v165H285l-80 55v-55H90Z' fill='A3' stroke='A2' stroke-width='9'/><path d='M155 130h325m-325 48h210' stroke='#fff' stroke-width='13' stroke-linecap='round'/><path d='M440 205l20 20 45-60' stroke='A4' stroke-width='12' fill='none'/>`]],
+ [/要求拥有|认领|获得|索取|索赔|夺去|生命/,['idea','索赔所有权：产权凭证与印章',`<path d='M205 65h220v240H205Z' fill='#fff' stroke='A2' stroke-width='9'/><path d='M245 120h140m-140 45h140m-140 45h95' stroke='A3' stroke-width='11'/><circle cx='365' cy='255' r='29' fill='A4'/><path d='M365 235v40m-20-20h40' stroke='#fff' stroke-width='8'/>`]]
+];
+multiSenseScenes['apply']=[
+ [/申请|适用/,['idea','申请表：填写信息并投递申请箱',`<rect x='170' y='55' width='210' height='250' rx='9' fill='#fff' stroke='A2' stroke-width='9'/><path d='M210 115h130m-130 48h130m-130 48h75' stroke='A3' stroke-width='10'/><path d='M280 245l22 22 55-65' stroke='A4' stroke-width='12' fill='none'/><path d='M410 220h100v75H410Z' fill='A3' stroke='A2' stroke-width='8'/>`]],
+ [/应用|运用|涂抹|按|踩/,['idea','涂抹应用：刷子把颜料刷到表面',`<path d='M155 270h330' stroke='A2' stroke-width='13'/><path d='M230 225l100-130q18-22 38-5t5 38L270 258Z' fill='A3' stroke='A2' stroke-width='8'/><path d='M330 95l45-48 58 48-48 50Z' fill='A4' stroke='A2' stroke-width='7'/><path d='M190 290q45-20 90 0t90 0' stroke='A4' stroke-width='9' fill='none'/>`]]
+];
+multiSenseScenes['approach']=[
+ [/接近|靠近|路径/,['idea','接近目标：路线逐步汇聚到目的地',`<circle cx='475' cy='95' r='34' fill='A4'/><path d='M80 275Q175 245 240 190T440 115' fill='none' stroke='A3' stroke-width='17'/><path d='M400 95l55 15-24 48' fill='none' stroke='A2' stroke-width='11'/><path d='M100 90h120m-120 35h75' stroke='A2' stroke-width='7' stroke-dasharray='8 9'/>`]],
+ [/接洽|要求|处理|对付|方法|态度/,['idea','交涉方法：两人在桌前讨论方案',`<circle cx='195' cy='110' r='27' fill='A4'/><circle cx='445' cy='110' r='27' fill='A4'/><path d='M145 250q5-95 50-95t50 95m150 0q5-95 50-95t50 95' fill='A3'/><path d='M225 205h190v28H225Z' fill='A2'/><path d='M275 175l45-28 45 28-45 28Z' fill='A4'/>`]]
+];
+multiSenseScenes['process']=[
+ [/过程|流程|工序/,['idea','流程工序：三个阶段由箭头串联',`<rect x='85' y='130' width='110' height='95' rx='14' fill='A3'/><rect x='265' y='130' width='110' height='95' rx='14' fill='A4'/><rect x='445' y='130' width='110' height='95' rx='14' fill='A3'/><path d='M195 178h70m-20-18 20 18-20 18m110-18h70m-20-18 20 18-20 18' stroke='A2' stroke-width='9' fill='none'/>`]],
+ [/加工|处理|审阅|审核/,['idea','审阅文件：放大镜检查文本细节',`<path d='M140 70h230v235H140Z' fill='#fff' stroke='A2' stroke-width='9'/><path d='M180 125h150m-150 45h130m-130 45h85' stroke='A3' stroke-width='10'/><circle cx='420' cy='220' r='58' fill='none' stroke='A4' stroke-width='13'/><path d='M460 263l55 45' stroke='A2' stroke-width='17' stroke-linecap='round'/>`]]
+];
+multiSenseScenes['expect']=[
+ [/预计|猜想/,['idea','预测未来：望远镜观察远方目标',`<path d='M115 170q205-160 410 0-205 160-410 0Z' fill='none' stroke='A2' stroke-width='9'/><circle cx='320' cy='170' r='55' fill='A3'/><path d='M320 170l92-75' stroke='A4' stroke-width='12'/><circle cx='412' cy='95' r='15' fill='A4'/><path d='M435 75l35-30m-10 55 45-5' stroke='A4' stroke-width='8'/>`]],
+ [/盼望|要求|期望/,['idea','期待：仰望即将出现的星星',`<circle cx='320' cy='245' r='28' fill='A2'/><path d='M250 320q10-100 70-100t70 100' fill='A3'/><path d='M320 55l15 37 40 5-30 27 9 40-34-21-34 21 9-40-30-27 40-5Z' fill='A4'/><path d='M165 100l8 18m-9 0 18-8m270-15 8 18m-9 0 18-8' stroke='A4' stroke-width='7'/>`]]
+];
+multiSenseScenes['run']=[
+ [/奔跑|跑|赛跑/,['idea','奔跑动作：运动员跨步冲刺',`<circle cx='305' cy='85' r='25' fill='A4'/><path d='M300 120l-35 70 65 18 55-55m-115 30-70 45m130-20 65 60m-125-60-20 75' stroke='A2' stroke-width='16' fill='none' stroke-linecap='round'/><path d='M80 125h100m-120 35h85m-60 35h55' stroke='A3' stroke-width='9'/>`]],
+ [/管理|经营|运转|操作|刊登|包含|连续上演|流淌|行驶|发生|变成/,['idea','持续运作：输送带推动货物前进',`<path d='M85 245h470' stroke='A2' stroke-width='12'/><circle cx='145' cy='245' r='27' fill='A4' stroke='A2' stroke-width='7'/><circle cx='495' cy='245' r='27' fill='A4' stroke='A2' stroke-width='7'/><rect x='185' y='150' width='80' height='80' fill='A3'/><rect x='305' y='125' width='80' height='105' fill='A3'/><rect x='425' y='165' width='40' height='65' fill='A4'/><path d='M190 95h260m-25-18 25 18-25 18' stroke='A2' stroke-width='9' fill='none'/>`]]
+];
+multiSenseScenes['work']=[
+ [/工作|干活|职业|劳动/,['idea','工作现场：工人戴安全帽手持工具',`<circle cx='320' cy='115' r='35' fill='A4'/><path d='M245 285q0-115 75-115t75 115' fill='A3'/><path d='M265 82q55-65 110 0v18H265Z' fill='A2'/><path d='M405 200l70 70m-80-60 20-20 80 80-20 20Z' fill='none' stroke='A4' stroke-width='12'/>`]],
+ [/奏效|运转|管理|经营|操作|作品|成果|争取/,['idea','奏效成果：齿轮带动进度曲线到达终点',`<circle cx='205' cy='175' r='62' fill='A3' stroke='A2' stroke-width='9'/><circle cx='205' cy='175' r='20' fill='#fff'/><path d='M205 95V75m0 200v-20m-80-80h-20m200 0h-20' stroke='A4' stroke-width='14'/><rect x='315' y='110' width='220' height='120' rx='12' fill='none' stroke='A2' stroke-width='9'/><path d='M340 195l50-40 42 20 70-55' fill='none' stroke='A4' stroke-width='12'/>`]]
+];
+multiSenseScenes['file']=[
+ [/文件夹|文件|档案|归档/,['idea','文件归档：带标签的文件夹与纸张',`<path d='M85 115h165l35 38h270v150H85Z' fill='A3' stroke='A2' stroke-width='9'/><path d='M135 185h330m-330 42h220' stroke='#fff' stroke-width='12'/><path d='M355 90h125v40H355Z' fill='A4' stroke='A2' stroke-width='7'/>`]],
+ [/提起|诉讼|提交|申请|发送|报道|纵队|锉/,['idea','提交文件：文书递交到法院窗口',`<path d='M110 75h210v230H110Z' fill='#fff' stroke='A2' stroke-width='9'/><path d='M150 125h130m-130 45h130m-130 45h75' stroke='A3' stroke-width='10'/><path d='M355 175h175v115H355Z' fill='A4' stroke='A2' stroke-width='8'/><path d='M395 175v-42h95v42m-48-50V85m-18 18 18-18 18 18' stroke='A2' stroke-width='9' fill='none'/>`]]
+];
+multiSenseScenes['cross']=[
+ [/越过|渡过|相交|交叉|十字架|叉号/,['idea','交叉跨越：两条道路在桥上相交',`<path d='M80 275L510 80M80 80l430 195' stroke='A3' stroke-width='25' stroke-linecap='round'/><circle cx='295' cy='177' r='30' fill='A4' stroke='A2' stroke-width='8'/><path d='M295 55v85m0 75v85' stroke='A2' stroke-width='9' stroke-dasharray='10 9'/>`]],
+ [/反对|恼怒|生气/,['idea','恼怒：皱眉人物双臂交叉',`<circle cx='320' cy='125' r='62' fill='A3' stroke='A2' stroke-width='8'/><path d='M270 105l38 15m62-15-38 15m-15 22-18 24h36' stroke='A2' stroke-width='10' fill='none'/><path d='M220 285q20-110 100-110t100 110' fill='A4'/><path d='M250 210l140 65m-140 0 140-65' stroke='A2' stroke-width='16'/>`]]
+];
+multiSenseScenes['handle']=[
+ [/处理|应付|驾驭/,['idea','处理事务：把分散任务整理成清单',`<rect x='90' y='85' width='110' height='90' rx='12' fill='A3'/><rect x='265' y='85' width='110' height='90' rx='12' fill='A4'/><rect x='440' y='85' width='110' height='90' rx='12' fill='A3'/><path d='M130 225h380m-35-20 35 20-35 20' stroke='A2' stroke-width='11' fill='none'/><path d='M210 275l110-45 110 45' fill='none' stroke='A4' stroke-width='12'/>`]],
+ [/把手|柄|触|拿/,['idea','把手：手掌握住弯曲门把',`<path d='M360 65h90v225h-90Z' fill='A3' stroke='A2' stroke-width='9'/><path d='M360 175h-105q-35 0-35 35t35 35h105' fill='none' stroke='A4' stroke-width='20' stroke-linecap='round'/><path d='M180 175q-35-10-40 25l5 55q5 25 30 20l35-20-5-65Z' fill='A3' stroke='A2' stroke-width='7'/>`]]
+];
+multiSenseScenes['tackle']=[
+ [/难题|交涉|处理|抓获/,['idea','攻克难题：攀登者登上陡峭山峰',`<path d='M75 290l130-195 90 125 75-155 175 225Z' fill='A3' stroke='A2' stroke-width='8'/><path d='M315 175l-25 45 35-8 20 28' stroke='A4' stroke-width='12' fill='none'/><circle cx='405' cy='65' r='20' fill='A4'/><path d='M405 85l-15 35 25 20' stroke='A2' stroke-width='10' fill='none'/>`]],
+ [/抢球|抢断|擒抱|阻截|体育器材/,['idea','抢断动作：球员扑向持球者',`<ellipse cx='320' cy='170' rx='48' ry='28' transform='rotate(-25 320 170)' fill='A4' stroke='A2' stroke-width='8'/><path d='M195 85l70 70-25 45m170-115-65 70 25 45M145 260l115-55m250 55-110-55' stroke='A3' stroke-width='17' stroke-linecap='round'/><path d='M295 150l50 40m-35-55 20 65' stroke='A2' stroke-width='8'/>`]]
+];
+multiSenseScenes['mirror']=[
+ [/镜子|映照|反射/,['idea','镜子：椭圆镜面呈现人物倒影',`<rect x='220' y='50' width='200' height='255' rx='95' fill='A3' stroke='A2' stroke-width='12'/><ellipse cx='320' cy='175' rx='68' ry='95' fill='#fff' opacity='.8'/><path d='M280 145q40-45 80 0m-80 65q40 35 80 0' stroke='A4' stroke-width='10' fill='none'/><path d='M320 305v22m-55 0h110' stroke='A2' stroke-width='10'/>`]],
+ [/写照|反映|相似/,['idea','现实写照：两幅相似画面相互映照',`<path d='M95 105h160v155H95Zm290 0h160v155H385Z' fill='A3' stroke='A2' stroke-width='8'/><path d='M255 185h130m-28-22 28 22-28 22' stroke='A4' stroke-width='12' fill='none'/><circle cx='175' cy='185' r='35' fill='#fff'/><circle cx='465' cy='185' r='35' fill='#fff'/>`]]
+];
+multiSenseScenes['counter']=[
+ [/柜台|料理台/,['idea','服务柜台：柜面、收银终端与窗口',`<path d='M85 165h470v130H85Z' fill='A3' stroke='A2' stroke-width='9'/><path d='M130 165V85h370v80' fill='none' stroke='A2' stroke-width='9'/><rect x='365' y='105' width='100' height='55' rx='8' fill='A4'/><circle cx='415' cy='132' r='12' fill='#fff'/>`]],
+ [/计算器|反驳|驳斥|抵制|抵消|逆向|反对/,['idea','反驳抵消：相反方向的两股力量对冲',`<path d='M75 125h205m-35-30 35 30-35 30M565 235H360m35-30-35 30 35 30' stroke='A3' stroke-width='16' fill='none' stroke-linecap='round'/><path d='M270 130l50 50 50-50m-100 100 50-50 50 50' stroke='A4' stroke-width='14' fill='none'/><circle cx='320' cy='180' r='24' fill='A2'/>`]]
+];
+multiSenseScenes['silence']=[
+ [/寂静|无声|安静/,['idea','寂静：月夜山谷与静止水面',`<path d='M65 230l115-135 80 90 70-105 100 150 105-115' fill='none' stroke='A3' stroke-width='13'/><path d='M80 260q65-15 130 0t130 0 130 0 90 0' stroke='A4' stroke-width='9' fill='none'/><circle cx='475' cy='75' r='29' fill='A4'/><path d='M145 290h345' stroke='A2' stroke-width='7'/>`]],
+ [/沉默|缄口|压制|反对意见/,['idea','缄口沉默：对话气泡被一道斜线封住',`<path d='M90 65h460v175H285l-80 60v-60H90Z' fill='A3' stroke='A2' stroke-width='9'/><path d='M200 145h235' stroke='#fff' stroke-width='13'/><path d='M250 95l145 130' stroke='A4' stroke-width='16'/><circle cx='475' cy='85' r='24' fill='A4'/>`]]
+];
+multiSenseScenes['echo']=[
+ [/回声|回音|回响/,['idea','山谷回声：声波在两侧峭壁间反弹',`<path d='M65 290l115-195 95 130 75-130 105 195' fill='none' stroke='A2' stroke-width='12'/><path d='M170 165q70-65 140 0t140 0M185 205q55-42 110 0t110 0' fill='none' stroke='A4' stroke-width='9'/><circle cx='320' cy='245' r='14' fill='A3'/>`]],
+ [/相似|附和|重复|充满回声/,['idea','附和重复：相同话语在两个气泡中回荡',`<path d='M80 70h270v120H215l-55 42v-42H80Z' fill='A3' stroke='A2' stroke-width='8'/><path d='M290 175h270v120H425l-55 42v-42H290Z' fill='A4' stroke='A2' stroke-width='8'/><path d='M130 125h170m-95 95h170' stroke='#fff' stroke-width='11'/>`]]
+];
+multiSenseScenes['bay']=[
+ [/海湾|湾|水域/,['idea','海湾：弧形海岸环抱一片水域',`<path d='M65 80q130 0 160 110t125 40 120-85 120 75v95H65Z' fill='A3' stroke='A2' stroke-width='8'/><path d='M150 225q65-35 130 0t130 0 110 0' fill='none' stroke='A4' stroke-width='11'/><circle cx='465' cy='75' r='27' fill='A4'/>`]],
+ [/隔间|月桂|栗色马|长嗥|强烈要求|棕红色/,['idea','bay其他义项：马厩隔间与月桂枝叶',`<path d='M95 85h450v205H95Z' fill='none' stroke='A2' stroke-width='9'/><path d='M245 85v205m150-205v205' stroke='A3' stroke-width='10'/><path d='M145 245q-25-80 25-110 30 50 0 110m0-55q50-70 80-25-15 60-80 65m0-35q-15-75 25-85 35 45-25 85' fill='A4' stroke='A2' stroke-width='5'/>`]]
+];
+multiSenseScenes['manual']=[
+ [/人⼒|体⼒|手动|人力|体力/,['idea','手动操作：手掌推动机械控制杆',`<path d='M270 285V150q0-25 22-25t22 25v45-90q0-22 22-22t22 22v90-55q0-20 20-20t20 20v85q0 75-75 75h-15q-60 0-60-45Z' fill='A3' stroke='A2' stroke-width='8'/><path d='M130 260h110m-25-22 25 22-25 22' stroke='A4' stroke-width='10' fill='none'/>`]],
+ [/手册|说明书|使用手册/,['idea','说明书：摊开的双页手册与段落线',`<path d='M80 85q115-40 240 15v200q-125-55-240-15Zm480 0q-115-40-240 15v200q125-55 240-15Z' fill='A3' stroke='A2' stroke-width='9'/><path d='M320 100v200m-195-145h115m-115 40h95m220-40h115m-115 40h95' stroke='#fff' stroke-width='10'/>`]]
+];
+multiSenseScenes['facility']=[
+ [/设备|设施/,['idea','工业设施：厂房、烟囱与设备管线',`<path d='M70 290V165l95-55v55l95-55v180Zm290 0V125h180v165Z' fill='A3' stroke='A2' stroke-width='8'/><path d='M395 125V65h40v60m40 0V45h35v80' fill='none' stroke='A2' stroke-width='9'/><rect x='110' y='210' width='38' height='45' fill='#fff'/><rect x='195' y='210' width='38' height='45' fill='#fff'/>`]],
+ [/功能|天资|才能/,['idea','才能：多种能力汇聚成一项专长',`<circle cx='320' cy='175' r='75' fill='A4' stroke='A2' stroke-width='8'/><path d='M320 55v42m0 156v42M200 175h42m156 0h42m-198-85 30 30m110 110 30 30m0-170-30 30m-110 110-30 30' stroke='A3' stroke-width='15'/><path d='M285 180l25 25 55-65' fill='none' stroke='#fff' stroke-width='12'/>`]]
+];
+multiSenseScenes['represent']=[
+ [/代表|象征|体现/,['idea','代表人物：一人站在群体前方',`<circle cx='320' cy='90' r='30' fill='A4'/><path d='M265 250q0-100 55-100t55 100' fill='A3'/><circle cx='155' cy='160' r='22' fill='A3'/><circle cx='485' cy='160' r='22' fill='A3'/><path d='M110 275q0-70 45-70t45 70m240 0q0-70 45-70t45 70' fill='none' stroke='A2' stroke-width='9'/><path d='M250 130h140' stroke='A4' stroke-width='7' stroke-dasharray='8 8'/>`]],
+ [/表示|描绘|意味着|相当于/,['idea','含义表达：符号与解释文字相互对应',`<rect x='80' y='90' width='155' height='155' rx='18' fill='A3'/><path d='M125 170l32-42 32 42-32 42Z' fill='#fff'/><path d='M235 168h150m-28-22 28 22-28 22' stroke='A2' stroke-width='11' fill='none'/><rect x='385' y='90' width='155' height='155' rx='18' fill='A4'/><path d='M420 145h85m-85 42h60' stroke='#fff' stroke-width='10'/>`]]
+];
+multiSenseScenes['plus']=[
+ [/加|外加|加号/,['idea','加法：两个数块相加形成总量',`<rect x='80' y='125' width='140' height='110' rx='12' fill='A3'/><rect x='420' y='125' width='140' height='110' rx='12' fill='A4'/><path d='M270 180h100m-50-50v100' stroke='A2' stroke-width='18' stroke-linecap='round'/><path d='M285 255h70' stroke='A2' stroke-width='8'/>`]],
+ [/优势|长处|零上|优点|此外|况且|多的/,['idea','额外优势：阶梯领奖台上的领先位置',`<path d='M95 275h130v-65h150v-95h150v160H95Z' fill='A3' stroke='A2' stroke-width='8'/><path d='M320 55l18 38 42 6-30 29 7 42-37-20-37 20 7-42-30-29 42-6Z' fill='A4'/><circle cx='320' cy='190' r='18' fill='#fff'/>`]]
+];
+multiSenseScenes['extra']=[
+ [/额外|附加|另外|特别|格外/,['idea','额外增加：原有行李旁多出一个包裹',`<path d='M75 160h200v130H75Z' fill='A3' stroke='A2' stroke-width='8'/><path d='M365 125h190v165H365Z' fill='A4' stroke='A2' stroke-width='8'/><path d='M175 160v130m-100-85h200m185-80v165m-95-100h190' stroke='#fff' stroke-width='11'/><path d='M460 125q-60-15-45-50 35-20 45 50 20-70 55-50 15 35-55 50Z' fill='A2'/>`]],
+ [/另外收费|临时演员/,['idea','临时演员：舞台侧幕旁等待登场的人物',`<path d='M80 285V85h480v200' fill='none' stroke='A2' stroke-width='10'/><path d='M125 85l60 85-60 85m390-170-60 85 60 85' stroke='A4' stroke-width='10' fill='none'/><circle cx='320' cy='125' r='28' fill='A3'/><path d='M260 270q0-100 60-100t60 100' fill='A3'/><path d='M280 205h80' stroke='#fff' stroke-width='9'/>`]]
+];
+multiSenseScenes['overhead']=[
+ [/头顶|空中/,['idea','头顶上方：飞行器掠过人物头顶',`<circle cx='320' cy='245' r='24' fill='A4'/><path d='M270 315q0-55 50-55t50 55' fill='A3'/><path d='M180 110l140-35 140 35-140 35Z' fill='A3' stroke='A2' stroke-width='8'/><path d='M320 145v65m-25-25 25 25 25-25' stroke='A4' stroke-width='10' fill='none'/>`]],
+ [/经营开支|经营开⽀|开支|开⽀/,['idea','经营开支：账本记录固定成本项目',`<rect x='135' y='65' width='370' height='245' rx='12' fill='#fff' stroke='A2' stroke-width='9'/><path d='M185 125h260m-260 50h160m-160 45h125' stroke='A3' stroke-width='11'/><circle cx='410' cy='245' r='38' fill='A4'/><path d='M410 220v50m-18-35h36' stroke='#fff' stroke-width='8'/>`]]
+];
+
 function matchSenseScene(word,meaning){
  var entries=multiSenseScenes[String(word||'').toLowerCase()];
  if(!entries)return null;
