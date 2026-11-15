@@ -1,4 +1,3 @@
-/* 771 道真题逐题考点映射。index 为 EXAM_DATA 稳定数组序号；pending 不代表无考点。 */
 window.EXAM_KNOWLEDGE_MAP = {
   "0": {
     "status": "verified",
@@ -961,244 +960,524 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "分开处理发散项而未保留抵消结构。"
   },
   "80": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1992-填空题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "两曲线交点为 x=0、1，区间内上方曲线为 ex，面积是两曲线差的定积分。",
+    "methods": "先解交点确定积分限，再判断上下关系，计算 ∫₀¹(ex−xeˣ)dx。",
+    "pitfalls": "把代数积分值直接当面积；未确认上下曲线顺序。"
   },
   "81": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1992-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-01-G"
+    ],
+    "secondary": [
+      "CAL-02-C"
+    ],
+    "rationale": "x−sin x~x³/6，故与 x² 的比值趋于 0，属于高阶无穷小。",
+    "methods": "用 sin x 的麦克劳林展开保留首个非零差项，再比较阶数。",
+    "pitfalls": "误把 x−sin x 与 x 等价；展开阶数不足。"
   },
   "82": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1992-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-01-A"
+    ],
+    "secondary": [
+      "CAL-01-B"
+    ],
+    "rationale": "求 f(−x) 必须按 −x 落入原分段定义域的条件重新划分 x 的区间，并代入对应表达式。",
+    "methods": "分别解 −x≤0 与 −x>0，得到 x≥0 与 x<0，再逐段代入。",
+    "pitfalls": "直接照抄原分段区间，忽略不等号方向反转。"
   },
   "83": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1992-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-B"
+    ],
+    "secondary": [
+      "CAL-02-D"
+    ],
+    "rationale": "约去因子后表达式为 (x+1)e^{1/(x−1)}，左极限为 0、右极限为正无穷，双侧极限不存在。",
+    "methods": "先因式约分，再分别计算分界点两侧的极限。",
+    "pitfalls": "只算一侧；将一侧趋于无穷误判为双侧极限为无穷。"
   },
   "84": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1992-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "变上限积分的上限为 x²，链式法则给出 f((x²)²)·2x。",
+    "methods": "使用微积分基本定理，再对上限函数 x² 求导。",
+    "pitfalls": "漏乘 2x；把 f(x⁴) 误写为 f(x²)。"
   },
   "85": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1992-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-A"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "先由 f′=sin x 得 f=−cos x+C₁，再对 f 积分并选择常数得到一个原函数。",
+    "methods": "连续做两次不定积分，注意每次积分常数可按题意选择。",
+    "pitfalls": "把 f 与 f 的原函数混为一谈；漏掉积分常数。"
   },
   "86": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1992-解答题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-05-D"
+    ],
+    "rationale": "底数可写为 1−3/(x+6)，指数约为 x/2，利用 (1+u)^{1/u} 型极限得到 e^(−3/2)。",
+    "methods": "取对数或直接构造重要极限，计算指数与小量的乘积极限。",
+    "pitfalls": "指数中 x−1 与分母 x+6 的主阶系数处理错误。"
   },
   "87": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1992-解答题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "方程隐式确定 y(x)，需连续两次隐式求导，并在 x=0、y=1 代入。",
+    "methods": "先求 y′，再对含 y′ 的关系再次求导，最后代入初始点。",
+    "pitfalls": "把 y 当常数；二次求导漏掉乘积法则中的项。"
   },
   "88": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1992-解答题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-A"
+    ],
+    "rationale": "被积式含 x³/√(1+x²)，令 u=√(1+x²) 可将根式与 xdx 配对，化为多项式积分。",
+    "methods": "拆出 x²·x dx，作根式换元并回代。",
+    "pitfalls": "换元时遗漏 xdx=u du；回代幂次错误。"
   },
   "89": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1992-解答题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "根式可化为半角三角函数差的绝对值，需在表达式变号点 x=π/2 分段积分。",
+    "methods": "利用平方差恒等式化简根式，确定绝对值符号区间后分别积分。",
+    "pitfalls": "忽略绝对值导致跨越变号点时符号错误。"
   },
   "90": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1992-解答题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-B"
+    ],
+    "secondary": [
+      "CAL-07-A"
+    ],
+    "rationale": "方程整理为一阶线性标准式 y′−y/(2x)=−x²/2，求积分因子可得通解。",
+    "methods": "先化标准形，再求 μ=e^{∫Pdx}，将方程写成 (μy)′=μQ。",
+    "pitfalls": "线性方程系数符号错误；除以 x 时忽略定义区间。"
   },
   "91": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1993-填空题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-02-D"
+    ],
+    "rationale": "x ln x 是 0·(−∞) 型，改写为 ln x/(1/x) 后可用洛必达法则，极限为 0。",
+    "methods": "先变形为商，再检查 0/0 或 ∞/∞ 条件并求导。",
+    "pitfalls": "直接套洛必达；忽略 x→0⁺ 的定义域。"
   },
   "92": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1993-填空题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "方程含 x、y 的复合三角函数和 xy²，逐项对 x 求导并将 y 视为 y(x)。",
+    "methods": "对 sin(x²+y²) 使用链式法则，对 xy² 使用乘积法则，整理 y′。",
+    "pitfalls": "遗漏 2yy′ 或乘积项中的 y′。"
   },
   "93": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1993-填空题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "F′(x)=2−1/√x，导数在 (0,1/4) 为负，故 F 在该区间递减。",
+    "methods": "由变上限积分求导，再解 F′(x)<0。",
+    "pitfalls": "把驻点两侧单调区间写反；忘记 x>0 的定义域。"
   },
   "94": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1993-填空题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-A"
+    ],
+    "rationale": "被积函数可写成 sin x·cos^(−3/2)x，令 u=cos x 后成为幂函数积分。",
+    "methods": "凑微分 du=−sin x dx，处理负号并回代。",
+    "pitfalls": "三角函数幂次化简错误；换元负号丢失。"
   },
   "95": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1993-填空题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-A"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "切线斜率给出 f′(x)，先积分求 f，再用经过点 (0,−1/2) 确定积分常数。",
+    "methods": "对 x ln(1+x²) 作分部积分，代入初值确定常数。",
+    "pitfalls": "只求导数不恢复函数；初值代入错误。"
   },
   "96": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1993-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-01-G"
+    ],
+    "secondary": [
+      "CAL-01-I"
+    ],
+    "rationale": "该表达式沿不同趋零数列分别取 0 与趋于无穷，故无界但不是趋于正无穷的无穷大。",
+    "methods": "构造两列趋于 0 的自变量序列，比较函数值行为。",
+    "pitfalls": "仅凭振荡因子有界判断整体有界；将无界等同于无穷大。"
   },
   "97": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1993-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-03-B"
+    ],
+    "secondary": [
+      "CAL-02-B"
+    ],
+    "rationale": "在 x=1 左右，绝对值分子导致左右极限分别为 −2、2，极限不存在，因此不连续。",
+    "methods": "先去绝对值分段，再求左右极限比较。",
+    "pitfalls": "只计算函数点值；忽略绝对值在 x=1 两侧符号变化。"
   },
   "98": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1993-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-03-A"
+    ],
+    "rationale": "积分上限跨越分段点 1，需分区间按被积函数表达式积分，并保证 F(1)=0。",
+    "methods": "对 x<1、x≥1 分别计算定积分，利用积分方向处理负号。",
+    "pitfalls": "把 ∫₁ˣ 的方向弄反；分段原函数常数未衔接。"
   },
   "99": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1993-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-03-C"
+    ],
+    "rationale": "函数在 x=e 处取得唯一最大值 k>0，且两端趋于负无穷，因此图像与 x 轴有两个交点。",
+    "methods": "求导确定单调区间和最大值，再结合连续性与端点极限判零点个数。",
+    "pitfalls": "只找到一个驻点就断言零点个数；忽略两端极限。"
   },
   "100": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1993-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-05-C"
+    ],
+    "rationale": "奇函数的一阶导数为偶函数、二阶导数为奇函数，故左半轴 f′>0、f″<0。",
+    "methods": "分别对 f(−x)=−f(x) 求导一次和两次，比较奇偶性。",
+    "pitfalls": "把一阶、二阶导数的奇偶性颠倒。"
   },
   "101": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1993-解答题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-B"
+    ],
+    "secondary": [
+      "CAL-04-C"
+    ],
+    "rationale": "复合函数 y=sin(f(x²)) 求二阶导，涉及链式法则和乘积法则。",
+    "methods": "先求 y′，再对 cos(f(x²))、f′(x²) 与 2x 的乘积逐项求导。",
+    "pitfalls": "漏掉 f″ 项或把内层导数 2x 漏乘。"
   },
   "102": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1993-解答题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-02-D"
+    ],
+    "rationale": "x→−∞ 时根式与 x 相消，乘以共轭有理化后得到有限极限 −50。",
+    "methods": "乘共轭将根式差化为常数，再提出 |x| 或按 x<0 处理平方根。",
+    "pitfalls": "把 √(x²) 错写为 x；忽略 x→−∞ 的符号。"
   },
   "103": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1993-解答题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "利用 1+cos2x=2cos²x 将积分化为 (1/2)∫x sec²x dx，再分部积分。",
+    "methods": "先用二倍角公式化简，再取 u=x、dv=sec²x dx。",
+    "pitfalls": "三角恒等式化简系数错误；分部积分边界项遗漏。"
   },
   "104": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1993-解答题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "积分上限为无穷，属于反常积分；拆项后分别求极限，结果收敛为 1/2。",
+    "methods": "写成 lim(R→∞)∫₀ᴿ，再拆为 (x+1)⁻²−(x+1)⁻³ 积分。",
+    "pitfalls": "把无穷上限当普通端点代入；拆项后漏算极限。"
   },
   "105": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1993-解答题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-D"
+    ],
+    "secondary": [
+      "CAL-07-A"
+    ],
+    "rationale": "方程可识别为全微分 d(x²y−sin x−y)=0，积分后利用初值确定常数。",
+    "methods": "展开全微分核对各项，积分得到隐式通解，再代 y(0)=1。",
+    "pitfalls": "全微分项符号错误；代入初值时忽略 x=0。"
   },
   "106": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1994-填空题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-03-A"
+    ],
+    "secondary": [
+      "CAL-02-C"
+    ],
+    "rationale": "连续条件要求 x→0 时分式极限等于定义值 a，利用 sin2x 与 e^(2ax) 的一阶展开解参数。",
+    "methods": "分别展开 sin2x、指数函数，计算分子除以 x 的极限并令其等于 a。",
+    "pitfalls": "只取 sin2x 的极限而漏掉指数项；连续条件方向写反。"
   },
   "107": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1994-填空题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "参数方程的二阶导数需先求 dy/dx，再对参数 t 求导并除以 dx/dt。",
+    "methods": "分别求 x′(t)、y′(t)，形成一阶导后再按参数二阶导公式计算。",
+    "pitfalls": "把 d²y/dx² 误当 y″(t)；漏除 x′(t)。"
   },
   "108": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1994-填空题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "上限为 cos3x，变上限积分求导后乘上限导数 −3sin3x。",
+    "methods": "应用 Φ′(x)=f(φ(x))φ′(x)。",
+    "pitfalls": "漏掉链式法则中的 −3sin3x。"
   },
   "109": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1994-填空题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-A"
+    ],
+    "rationale": "x³e^(x²)dx 可拆成 x²·e^(x²)·x dx，令 t=x² 后再对 t e^t 积分。",
+    "methods": "先换元 t=x²，再用分部积分求 ∫t e^t dt。",
+    "pitfalls": "换元后系数 1/2 遗漏；分部积分符号错误。"
   },
   "110": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1994-填空题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-A"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "方程分离变量后分别积分，得到 y 与 x 的幂函数关系。",
+    "methods": "整理为 dy/y 与 dx/[x(x−4)]，部分分式积分后指数化。",
+    "pitfalls": "部分分式系数或指数化幂次错误；分离时丢失常值解。"
   },
   "111": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1994-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-02-E"
+    ],
+    "rationale": "ln(1+x) 在 0 点的二阶展开与题设极限比较，先令一次项系数抵消，再匹配二次项。",
+    "methods": "写 ln(1+x)=x−x²/2+o(x²)，代入后比较 x 与 x² 系数。",
+    "pitfalls": "只比较二次项而漏掉一次项必须为零。"
   },
   "112": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1994-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-A"
+    ],
+    "secondary": [
+      "CAL-03-A"
+    ],
+    "rationale": "在 x=1 处左导数有限；右侧差商分子趋于非零常数、分母趋于 0⁺，右导数不存在。",
+    "methods": "按导数定义分别计算左右差商，先核对函数点值。",
+    "pitfalls": "把右侧普通导数公式代入分段点；不检查连续性。"
   },
   "113": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1994-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-F"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "由微分方程得 f″(x₀)=e^{sin x₀}>0，且 f′(x₀)=0，二阶导数判别法说明取得极小值。",
+    "methods": "将 x₀ 代入微分方程求二阶导，再应用极值判别。",
+    "pitfalls": "误将正二阶导解释为极大值；忽略驻点条件。"
   },
   "114": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1994-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-H"
+    ],
+    "secondary": [
+      "CAL-05-C"
+    ],
+    "rationale": "分别考察 x→±∞ 与定义域边界；水平渐近线 y=π/4，x=0 为铅直渐近线。",
+    "methods": "计算函数在无穷远的极限及 x→0⁺ 的单侧极限，并排除 x=1、−2。",
+    "pitfalls": "把分母为零直接判为铅直渐近线，不检查函数极限。"
   },
   "115": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1994-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-E"
+    ],
+    "rationale": "M 的被积函数为奇函数积分为 0；N、P 中奇函数部分积分为 0，偶函数部分由对称性比较。",
+    "methods": "先判断奇偶性，再利用对称区间将偶函数积分化为两倍半区间积分。",
+    "pitfalls": "未识别奇函数项抵消；比较大小时符号弄反。"
   },
   "116": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1994-解答题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "y=f(x+y) 是隐式复合关系，二阶求导要同时使用链式法则与乘积/商法则。",
+    "methods": "先对 x 求导解出 y′，再对 f′(x+y)/(1−f′(x+y)) 求导并乘 (1+y′)。",
+    "pitfalls": "二阶导数中遗漏 (1+y′) 因子，或幂次分母错误。"
   },
   "117": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1994-解答题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "先令 u=x²，将积分转为半区间上的 (1−u²)^(3/2)，再作三角代换计算定积分。",
+    "methods": "换元时同步调整积分限，令 u=sin t 后利用 cos⁴t 的标准积分。",
+    "pitfalls": "第一次换元漏掉 1/2；三角换元积分限或幂次错误。"
   },
   "118": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1994-解答题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-05-D"
+    ],
+    "rationale": "底数趋于 1，取对数后利用 tan(π/4+h) 的一阶展开，指数极限为 4，原极限 e⁴。",
+    "methods": "取对数，化为 n·ln tan(π/4+2/n)，再用导数或泰勒展开求极限。",
+    "pitfalls": "误将 tan(π/4+2/n) 直接近似为 1+2/n，系数遗漏。"
   },
   "119": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "1994-解答题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-A"
+    ],
+    "rationale": "分母用二倍角与和差恒等式化简后，令 u=cos x，得到有理函数积分并作部分分式。",
+    "methods": "先因式分解三角分母，再作三角换元和部分分式分解。",
+    "pitfalls": "因式分解漏系数；部分分式积分的对数绝对值或常数项错误。"
   },
   "120": {
     "status": "pending",
