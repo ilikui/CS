@@ -1,4 +1,5 @@
 // Audit source identity, target card existence, and candidate coverage; never auto-promote candidates.
+// Re-run after round-two source-backed mappings were added.
 const fs = require('fs');
 const vm = require('vm');
 
