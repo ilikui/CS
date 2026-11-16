@@ -393,6 +393,27 @@ function atomWorkedExample(a){
  ['分别取极限','当 x→0 时，sin x/x→1，因此 2·(sin x/x)²→2·1²=2。'],
  ['核对等价无穷小使用','也可用 1−cos2x~(2x)²/2=2x²，故原比值趋于 2。这里是乘除型比值，等价替换合法；不能把等价无穷小不加判断地用于两个近似量相减的场景。']
  ],result:'lim(x→0)(1−cos2x)/x²=2。',check:'角度必须使用弧度制；sin(kx)~kx、1−cos(kx)~k²x²/2。等价无穷小通常用于乘除因子，加减结构要先判断主项是否抵消。',variant:'求 lim(x→0)(1−cos3x)/x²：由 1−cos3x~(3x)²/2，极限为 9/2。'};
+ exact['CAL-04-A']={label:'用导数定义求 x² 在任意点的导数',steps:[
+ ['写出导数定义中的差商','f′(a)=lim(h→0)[f(a+h)−f(a)]/h。先分别写出两个函数值，不要直接套求导公式。'],
+ ['代入并展开','f(a+h)=(a+h)²=a²+2ah+h²，f(a)=a²。差商为 [(a²+2ah+h²)−a²]/h。'],
+ ['化简差商','分子为 2ah+h²=h(2a+h)。在 h≠0 的去心邻域内约去 h，得到 2a+h。'],
+ ['求极限','lim(h→0)(2a+h)=2a，所以 f′(a)=2a。a 任意，故导函数为 f′(x)=2x。'],
+ ['联系切线斜率','抛物线 y=x² 在 (a,a²) 处切线斜率为 2a。例如 a=1 时斜率为 2，a=0 时切线水平。']
+ ],result:'f′(a)=2a，故 f′(x)=2x。导数是瞬时变化率，也是曲线在该点的切线斜率。',check:'导数不是函数值：f(a)=a²，而 f′(a)=2a。先化简差商再取极限，不能把 h=0 直接代入。',variant:'用定义求 f(x)=x³：差商化简为 3a²+3ah+h²，令 h→0 得 f′(a)=3a²。'};
+ exact['CAL-04-B']={label:'复合函数链式法则',steps:[
+ ['识别内外层','y=sin(3x²)。设 u=3x²，则 y=sin u。外层为正弦函数，内层为 u(x)=3x²。'],
+ ['求外层导数','把 u 暂作自变量，dy/du=cos u。代回 u=3x²，得到 cos(3x²)。'],
+ ['求内层导数','du/dx=(3x²)′=6x。复合函数求导必须乘上内层导数。'],
+ ['按链式法则相乘','dy/dx=(dy/du)(du/dx)=cos(3x²)·6x=6x cos(3x²)。'],
+ ['理解变化率相乘','x 的微小变化先经 u=3x² 转换，再经 sin u 转换；整体变化率等于两层局部变化率的乘积。']
+ ],result:'y′=6x cos(3x²)。',check:'链式法则是“外层导数乘内层导数”。括号内不是常数，不能只对最外层求导。',variant:'若 y=cos(5x³)，则 y′=−sin(5x³)·15x²=−15x²sin(5x³)。'};
+ exact['CAL-04-C']={label:'隐函数求导与参数方程求导',steps:[
+ ['隐函数两边对 x 求导','由 x²+y²=1 得 2x+2y·y′=0。因为 y 是 x 的函数，对 y² 求导必须乘 y′。'],
+ ['解出 y′','移项得 2y y′=−2x。若 y≠0，得到 y′=−x/y。这是圆在上下半圆可写成 y(x) 的位置处的切线斜率。'],
+ ['检查公式失效位置','当 y=0 时，圆上点为 (1,0)、(−1,0)，切线竖直，斜率不存在。隐函数定理公式要求 F_y=2y≠0，此处条件不满足。'],
+ ['参数方程分别求导','若 x=x(t)、y=y(t)，先分别求 dx/dt、dy/dt。由链式法则 dy/dt=(dy/dx)(dx/dt)。'],
+ ['求参数曲线斜率','当 dx/dt≠0 时，dy/dx=(dy/dt)/(dx/dt)。若 dx/dt=0 且 dy/dt≠0，通常对应竖直切线，不能进行除法。']
+ ],result:'对 x²+y²=1，y′=−x/y（y≠0）；参数方程斜率为 (dy/dt)/(dx/dt)，要求 dx/dt≠0。',check:'隐式求导时 y 视为 y(x)，不可漏乘 y′。用 −F_x/F_y 要检查 F_y≠0；参数式相除要检查 dx/dt≠0。',variant:'圆参数式 x=cos t、y=sin t，则 dy/dx=cos t/(−sin t)=−cot t（sin t≠0），与 −x/y 一致。'};
  const detail=exact[a[0]];
  if(detail)return '<section class="atom-worked"><div class="worked-head"><b>典型例题 · 逐步推导（已展开核算）</b><span>'+esc(a[0])+'</span></div><div class="worked-box"><b>'+esc(detail.label)+'｜题目</b><p>'+esc(a[6])+'</p></div><div class="worked-box"><b>先理解用到的概念</b><p>'+esc(a[3])+'</p><p>'+esc(a[4])+'</p></div><ol class="worked-steps">'+detail.steps.map((s,i)=>'<li><b>'+esc(s[0])+'</b><p>'+esc(s[1])+'</p></li>').join('')+'</ol><div class="worked-box worked-answer"><b>最终结论</b><p>'+esc(detail.result)+'</p></div><div class="worked-box worked-error"><b>易错点与自检</b><p>'+esc(detail.check)+'</p></div><div class="worked-box"><b>举一反三</b><p>'+esc(detail.variant)+'</p></div></section>';
  return '<section class="atom-worked"><div class="worked-head"><b>典型例题 · 完整推导过程</b><span>'+esc(a[0])+'</span></div><div class="worked-box"><b>题目</b><p>'+esc(a[6])+'</p></div><div class="worked-box"><b>定义与推导依据</b><p>'+esc(a[3])+'</p><p>'+esc(a[4])+'</p></div><ol class="worked-steps">'+frame.map((x,i)=>'<li><b>第 '+(i+1)+' 步</b><p>'+esc(x)+'</p></li>').join('')+'</ol><div class="worked-box"><b>本卡解题方法拆解</b><ol>'+actions.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol></div><div class="worked-box worked-answer"><b>结果</b><p>'+esc(a[7])+'</p></div><div class="worked-box worked-error"><b>易错点与自检</b><p>'+esc(a[8])+'</p><p>检查：回到定义和定理前提，逐项核验定义域、运算合法性、区间/维数条件，并将结果代回原题。</p></div></section>';
