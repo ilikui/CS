@@ -9401,244 +9401,545 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "混合偏导系数来自两组链式项；需核对 gxy 中 fuv 系数以及 −6gyy 的贡献。"
   },
   "720": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-解答题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "由已求得 f_uv=1/25，先对 u 积分并用 f_u(u,0)=ue^{-u}确定函数项，再由 f(0,v)确定仅依赖 v 的积分函数。",
+    "methods": "先恢复 f_u，再对 u 积分，最后代入 v=0 的边界条件。",
+    "pitfalls": "积分常数可依赖另一变量；不能把 ψ(v) 当作数值常数。"
   },
   "721": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-解答题-21",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-05-A",
+      "CAL-06-C"
+    ],
+    "rationale": "利用 |f''|≤1 与端点导数相等构造误差函数，得到函数与端点线性插值的误差界；积分后即为梯形公式误差界 1/12。",
+    "methods": "构造 g=f−线性插值±x(1−x)/2，利用二阶导数符号和端点零值证明夹逼，再积分。",
+    "pitfalls": "二阶导数有界要分别构造上下界；积分 x(1−x)/2 得 1/12。"
   },
   "722": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-解答题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-05-A"
+    ],
+    "rationale": "构造 g(x) 后 g(0)=g(1)=0 且 g''=f''+1≥0，凸性推出 g≤0；对另一侧构造函数得反向界。",
+    "methods": "用反证结合两段拉格朗日中值定理，或直接利用凸函数弦线性质。",
+    "pitfalls": "凸函数位于端点连线下方；符号方向要与 g''≥0 对应。"
   },
   "723": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-解答题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-05-D"
+    ],
+    "rationale": "对第 1 问的点态误差不等式在 [0,1] 积分，端点线性插值的积分等于端点函数值平均，误差上界积分为 1/12。",
+    "methods": "对不等式逐项积分并计算 ∫₀¹x(1−x)/2 dx。",
+    "pitfalls": "端点线性插值积分为 (f(0)+f(1))/2，不能遗漏系数 1/2。"
   },
   "724": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-解答题-22",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-06-B"
+    ],
+    "secondary": [
+      "LA-03-A",
+      "LA-02-B"
+    ],
+    "rationale": "两个齐次方程组的解空间包含关系且不相同，结合 A 的秩为 2 可确定堆叠矩阵秩仍为 2，进而求 a、b。",
+    "methods": "把 A 与 Bᵀ 纵向拼接，利用核空间包含关系转化为行空间/秩条件并行化简。",
+    "pitfalls": "注意题干是“Ax=0 的解是 Bᵀx=0 的解”，方向不可颠倒；不同解意味着核空间包含为真包含。"
   },
   "725": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-解答题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-B"
+    ],
+    "secondary": [
+      "LA-03-D",
+      "LA-04-D"
+    ],
+    "rationale": "将 A 与 Bᵀ 纵向拼接后，其行空间不增加，秩仍为 2；行化简给出 a=1、b=2。",
+    "methods": "利用同解条件 r([A;Bᵀ])=r(A)，再对拼接矩阵消元。",
+    "pitfalls": "同解条件不仅是两矩阵秩相等，还需利用原方程组解空间包含关系确定拼接秩。"
   },
   "726": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-解答题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-06-A"
+    ],
+    "secondary": [
+      "LA-05-C",
+      "LA-06-B"
+    ],
+    "rationale": "代入 a=1、b=2 得 BA 为对称秩一矩阵 (1,1,2)ᵀ(1,1,2)，其唯一非零特征值为 6，正交对角化后标准形为 6y₁²。",
+    "methods": "先计算 BA 并识别秩一外积，再构造单位特征向量及其正交补。",
+    "pitfalls": "二次型由 xᵀBAx 决定，需确认 BA 对称；正交矩阵列向量必须单位且两两正交。"
   },
   "727": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-04-D"
+    ],
+    "rationale": "对隐式方程分别关于 x、y 求偏导，积分上限与下限贡献相反符号，相加得到 z_x+z_y=z/(z+1)(e^{-x²}−e^{-y²})。",
+    "methods": "使用隐函数求导和变上限积分求导公式，分别求 z_x、z_y 后相加。",
+    "pitfalls": "对下限 y 求导会带负号；外层方程中 ln z 的导数为 z_y/z。"
   },
   "728": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-F"
+    ],
+    "secondary": [
+      "CAL-05-F",
+      "CAL-05-G"
+    ],
+    "rationale": "f'(0)=0、f''(0)=1>0，故 f 在 0 处取极小；g 的首个非零局部项为 x³/3，故原点为 g 的拐点。",
+    "methods": "用变上限积分求导判断 f 的极值；对 g 求导或作局部展开判断拐点。",
+    "pitfalls": "g''(0)=0 本身不能判定拐点，需确认二阶导数变号或首个非零奇次项。"
   },
   "729": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-06-I"
+    ],
+    "rationale": "特征根均需严格为负，才能保证任意齐次解组合的无穷积分绝对收敛；由根和 2a<0、根积 a+2>0 得 −2<a<0。",
+    "methods": "写特征方程并要求两根实部均为负；本题二阶实系数条件化为根和、根积约束。",
+    "pitfalls": "若有零实部或正实部，存在对应解使积分不收敛；不能只检查根积。"
   },
   "730": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-01-G"
+    ],
+    "secondary": [
+      "CAL-02-E",
+      "CAL-02-C"
+    ],
+    "rationale": "已知 f=o(g)，又 e^g−1∼g，故 f/(e^g−1)=(f/g)·[g/(e^g−1)]→0，只有 C 必然成立。",
+    "methods": "把高阶无穷小定义写成 f/g→0，再使用指数函数在零点的等价无穷小。",
+    "pitfalls": "A 的比值趋于 1 而非 0；D 需要额外控制 g，不能从 f=o(g) 推出 f=o(g²)。"
   },
   "731": {
     "status": "pending",
     "questionKey": "2025-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-E"
+    ],
+    "secondary": [
+      "CAL-08-C"
+    ],
+    "rationale": "原区域为 −2≤x≤2、4−x²≤y≤2，换序后 y 从 0 到 2，且 x 位于两段外侧；需注意题面选项及积分上下限。",
+    "methods": "先画抛物线 y=4−x² 与水平线 y=2 的区域，再按固定 y 分解左右区间。",
+    "pitfalls": "题干给出的积分上限是 2、下限是 4−x²，形式为有向积分；若按通常区域换序，区域应为 y∈[0,2]，而选项写 y∈[0,4]，源题/选项数据疑似错误。"
   },
   "732": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-选择题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "万有引力大小 G/(x²+1)，沿运动方向的分力乘以方向余弦 x/√(x²+1)，故功积分为 ∫₀¹Gx/(x²+1)^{3/2}dx。",
+    "methods": "先写引力矢量大小，再投影到 x 轴方向并对位移积分。",
+    "pitfalls": "功由力在位移方向的分量决定，不能直接积分引力大小；方向余弦为 x/r。"
   },
   "733": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-选择题-7",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-A"
+    ],
+    "secondary": [
+      "CAL-03-A",
+      "CAL-03-B"
+    ],
+    "rationale": "四个极限条件均可借连续性分情形推出 f(0) 正负或为零，再将绝对值在邻域内去掉，或由左右极限一致推出导数存在。",
+    "methods": "分别讨论 f(0)>0、=0、<0，利用连续性固定 |f| 符号；条件③用左右极限比较。",
+    "pitfalls": "条件③中左右商分别为 L 与 −L，极限存在迫使 L=0；不能只用单侧极限。"
   },
   "734": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-选择题-8",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-D"
+    ],
+    "secondary": [
+      "LA-05-C",
+      "LA-06-E"
+    ],
+    "rationale": "矩阵为对称分块矩阵，特征值由 2×2 块与标量 b 构成；2×2 块一正一负要求行列式 a−4<0，再由总惯性指标得 b<0。",
+    "methods": "计算 2×2 主块的特征值符号，利用迹/行列式及整体正负特征值个数确定 a、b。",
+    "pitfalls": "特征值个数是一个正、两个负；不能仅凭 a<4 就忘记 b 必须为负。"
   },
   "735": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-选择题-9",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-B"
+    ],
+    "secondary": [
+      "LA-02-E"
+    ],
+    "rationale": "初等行变换保持行等价，目标矩阵秩为 2 且行空间由两行生成；选项 B 经行变换可得到给定阶梯形矩阵。",
+    "methods": "比较各选项的行秩及行空间，或直接对候选矩阵作初等行变换。",
+    "pitfalls": "初等变换不改变秩；仅秩相同不足以证明行等价，还要确认行空间一致。"
   },
   "736": {
     "status": "pending",
     "questionKey": "2025-选择题-10",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-E"
+    ],
+    "secondary": [
+      "LA-04-A",
+      "LA-04-B"
+    ],
+    "rationale": "由 r(AB)=r(BA)+1 且三阶矩阵可推出 AB 的秩至少为 1，BA 的秩至多为 2；所给构造验证 A、B、C 均非必然，而 D 由 AB 与 BA 的公共零空间结构成立。",
+    "methods": "利用乘积矩阵列空间与零空间关系，结合秩差约束分析 ABAB 与 BABA 的核，再检验选项。",
+    "pitfalls": "题库解析仅用一个反例排除 A、B、C，并未完整证明 D 对所有矩阵成立；此题解答论证不充分，需独立补证后再视为完全核验。"
   },
   "737": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-填空题-11",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "部分分式积分得到 ln|2x/(2x+a)| 的端点差，方程给出 a=2 或 −6；a=−6 会在积分区间内产生奇点，故仅 a=2。",
+    "methods": "拆成 1/x−2/(2x+a)，计算广义积分并排除区间内分母为零的参数。",
+    "pitfalls": "求对数方程时需保留绝对值并检查被积函数在 [1,∞) 的奇点；不能直接只取正根。"
   },
   "738": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-填空题-12",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-H"
+    ],
+    "secondary": [
+      "CAL-05-C"
+    ],
+    "rationale": "对立方根函数计算 y/x→1 且 y−x→−1，得到斜渐近线 y=x−1。",
+    "methods": "用斜渐近线判定公式分别求斜率 a 与截距 b。",
+    "pitfalls": "需检查 x→±∞ 两端；本式两端同样给出斜率 1、截距 −1。"
   },
   "739": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-填空题-13",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-E"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "表达式是 x ln x 在 [0,1] 上的黎曼和，极限等于定积分 ∫₀¹x ln x dx=−1/4。",
+    "methods": "识别 Δx=1/n、采样点 k/n，将和式转成黎曼积分。",
+    "pitfalls": "端点 x=0 处按连续延拓 x ln x→0；求积分可用分部积分或参数积分。"
   },
   "740": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-填空题-14",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-E"
+    ],
+    "secondary": [
+      "CAL-04-C",
+      "CAL-08-B"
+    ],
+    "rationale": "由 x=ln(1+2t) 得 x=0 对应 t=0；隐式方程对 t 求导得 y_t=2e，且 x_t=2，故 dy/dx=e。",
+    "methods": "先求参数对应点，再对隐式积分方程求 t 导数，最后用参数求导公式。",
+    "pitfalls": "上限 y+t² 的导数为 y_t+2t；代入 t=0 后再除以 dx/dt。"
   },
   "741": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-填空题-15",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-A"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "方程齐次，令 u=y/x 得可分离变量方程；积分后得到 5y²−4xy+3x²=C，初值给 C=4。",
+    "methods": "先化为 dy/dx 的齐次函数，令 y=ux，再分离变量并代回。",
+    "pitfalls": "代换时 y'=u+xu'；分离后分母二次式 5u²−4u+3 无实根，积分可写为对数形式。"
   },
   "742": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-填空题-16",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-04-C"
+    ],
+    "secondary": [
+      "LA-04-B",
+      "LA-03-C"
+    ],
+    "rationale": "前三个向量线性无关且 α₄=α₁+α₂−α₃，故列秩为 3、齐次解空间维数为 1；给定特解与基础解系组合成通解。",
+    "methods": "先用向量关系写出 α₄，再验证齐次向量 (1,1,−1,−1)ᵀ 与特解 (1,0,0,4)ᵀ。",
+    "pitfalls": "通解需包含一个特解加齐次通解；参数向量顺序必须与 A 的列顺序一致。"
   },
   "743": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-解答题-17",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-A"
+    ],
+    "rationale": "有理函数分母分解为一次因子与不可约二次因子，部分分式后分别积分为对数项与反正切项，结果 3/10 ln2+π/10。",
+    "methods": "设 A/(1+x)+(Bx+C)/(x²−2x+2)，比较系数后拆分成分母导数项与 arctan 项。",
+    "pitfalls": "二次分母配方为 (x−1)²+1；积分上下限代入时注意对数项的符号。"
   },
   "744": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-解答题-18",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-A"
+    ],
+    "secondary": [
+      "CAL-05-D",
+      "CAL-02-D"
+    ],
+    "rationale": "将分母化为 ln(1−x²)∼−x²，先由连续性求 f(0)=2，再分离出差商并用指数复合展开求出 f'(0)=5。",
+    "methods": "先化简对数分母的二阶等价无穷小，再把分子写成 x[f(x)−f(0)] 加已知光滑项。",
+    "pitfalls": "证明可导的关键是从整体极限存在推出差商极限存在；不能仅凭连续性断言可导。"
   },
   "745": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-解答题-19",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-D"
+    ],
+    "secondary": [
+      "CAL-08-A",
+      "CAL-08-B"
+    ],
+    "rationale": "由全微分读出 fx、fy，积分恢复 f(x,y)=e^{-y}(−x²+y+2)，驻点 (0,−1) 的 Hessian 正定判别式且 fxx<0，故为极大点。",
+    "methods": "先对 x 积分并保留 C(y)，再用 fy 确定 C(y)，最后求驻点和二阶判别。",
+    "pitfalls": "积分“常数”是 y 的函数；极值判别要同时检查 AC−B² 与 fxx 符号。"
   },
   "746": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-解答题-20",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-F"
+    ],
+    "secondary": [
+      "CAL-08-E"
+    ],
+    "rationale": "区域关于 y=x 对称，被积函数 (x−y)² 也对称；取一半区域用极坐标，径向边界 r≤4sinθ，计算得到 12π−112/3。",
+    "methods": "利用交换 x、y 的对称性折半，设 x=r cosθ、y=r sinθ，含雅可比 r 积分。",
+    "pitfalls": "选取 0≤θ≤π/4 的半区域时边界来自 x²+y²≤4y，即 r≤4sinθ；别误用另一圆的边界。"
   },
   "747": {
     "status": "pending",
     "questionKey": "2025-解答题-21",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A"
+    ],
+    "secondary": [
+      "CAL-05-B",
+      "CAL-05-G"
+    ],
+    "rationale": "三点割线斜率严格递增条件与导函数严格递增相联系，必要性由拉格朗日中值定理，充分性需对割线斜率不等式取端点极限。",
+    "methods": "分别用两段区间的拉格朗日中值定理建立割线斜率与导数的比较，再令中间点趋近端点。",
+    "pitfalls": "题库解析充分性部分把开区间端点 a、b 直接代入，未给出端点连续延拓；其证明有逻辑缺口，须补充严谨论证。"
   },
   "748": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-解答题-22",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-06-B"
+    ],
+    "secondary": [
+      "LA-05-C",
+      "LA-06-D"
+    ],
+    "rationale": "A、B 合同保持惯性指标；由 B 的零对角元知 detA=0，求得 a=4，A 特征值为 3、6、0，故 k>0；若正交相似则特征值顺序强制 k=3。",
+    "methods": "先用合同不变量确定参数范围，再用实对称矩阵正交对角化求特征值和正交特征向量。",
+    "pitfalls": "合同只保持正负惯性指数，不保持具体特征值；k=3 是第二问正交相似条件才推出。"
   },
   "749": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-02-E",
+      "CAL-01-G"
+    ],
+    "rationale": "展开 arcsin x=x+x³/6+…，立方根项 (1+x²)^{1/3}−1∼x²/3；匹配等价无穷小先消去一次项得 b=−1，再得 a=1/3。",
+    "methods": "将两边展开到 x² 阶，比较一次项和二次项系数。",
+    "pitfalls": "arcsin x 的二次项系数为零；必须先消掉 x 项，才能比较 x² 系数。"
   },
   "750": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-D"
+    ],
+    "secondary": [
+      "CAL-07-C"
+    ],
+    "rationale": "两个特解的线性组合要成为原非齐次方程解，系数和须为 1；成为对应齐次方程解，系数和须为 0，解得 λ=2/5、μ=1/5。",
+    "methods": "利用非齐次方程特解差为齐次解、齐次解线性组合封闭的结构列两条系数方程。",
+    "pitfalls": "不要把特解的任意线性组合视为特解；系数和为 1 才保持非齐次项。"
   },
   "751": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-04-D"
+    ],
+    "rationale": "对 x−az−e^{y+az}=0 分别隐式求导，得到 z_x=1/[a(1+e^{y+az})]、z_y=−e^{y+az}/[a(1+e^{y+az})]，两者相减为 1/a。",
+    "methods": "设 F(x,y,z)=0，使用 z_x=−F_x/F_z、z_y=−F_y/F_z。",
+    "pitfalls": "F_z=−a(1+e^{y+az})；求 z_y 时分子负号不可漏。"
   },
   "752": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "对称微元的水平引力分量抵消，竖直分量为 Gm dx/(1+x²)^{3/2}，两侧积分得到选项 D。",
+    "methods": "取右半棒微元，先算万有引力，再投影到竖直方向并乘 2。",
+    "pitfalls": "微元引力大小为 Gm dx/(1+x²)，竖直方向余弦为 1/√(1+x²)，不可遗漏投影因子。"
   },
   "753": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-05-G"
+    ],
+    "rationale": "A、B 的单调性与极小值互推均可用在单点修改函数值的反例否定；凹函数的割线斜率性质推出 C，D 的逆命题有反例。",
+    "methods": "逐项使用定义与反例；C 可由凹函数弦斜率随区间位置的单调性证明。",
+    "pitfalls": "单调性只在开区间成立不能控制端点函数值；割线斜率单调的逆推也不足以保证二阶凹性。"
   },
   "754": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-选择题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-F"
+    ],
+    "secondary": [
+      "CAL-01-C",
+      "CAL-04-A"
+    ],
+    "rationale": "f(1)=0，故反函数 g(0)=1；由变上限积分求 f'(1)=3e/2，反函数导数 g'(0)=1/f'(1)=2/(3e)。",
+    "methods": "先求 f(1)，再求 f'(x)，最后套反函数求导公式。",
+    "pitfalls": "反函数导数的自变量对应 f(1)=0，因此应计算 g'(0)，不是 g'(1)。"
   },
   "755": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-选择题-7",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-E"
+    ],
+    "secondary": [
+      "CAL-06-E"
+    ],
+    "rationale": "被积函数满足 f(x,y)=f(y,x)，正方形积分可化为对角线下方三角形积分的两倍；选项 D 的网格面积系数等于该倍数。",
+    "methods": "利用对称性将区域沿 y=x 分成两半，再识别三角形上的黎曼和。",
+    "pitfalls": "网格边长为 1/(2n)，单格面积 1/(4n²)，乘 2 后系数为 1/(2n²)。"
   },
   "756": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-选择题-8",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-D"
+    ],
+    "secondary": [
+      "LA-01-C",
+      "LA-01-E"
+    ],
+    "rationale": "置换矩阵正交，逆矩阵等于转置且仍为置换矩阵；伴随矩阵等于 det(A)A⁻¹，det 可为 ±1，故不总是置换矩阵。",
+    "methods": "使用置换矩阵 AᵀA=I 与伴随矩阵恒等式 A*=det(A)A⁻¹。",
+    "pitfalls": "不能把 A*=A⁻¹ 当恒等式，只有 det(A)=1 时才成立。"
   },
   "757": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-选择题-9",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-04-A"
+    ],
+    "secondary": [
+      "LA-03-A",
+      "LA-02-B"
+    ],
+    "rationale": "AB=C 要求 C 的每一列属于 A 的列空间；分别解两组线性方程得到 a=b=−1。",
+    "methods": "对 C 的两列分别解 Ax=c，利用行约束求末分量。",
+    "pitfalls": "矩阵方程有解等价于逐列方程组有解；不能只检验列向量个数或秩。"
   },
   "758": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-选择题-10",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-A"
+    ],
+    "secondary": [
+      "LA-05-A",
+      "LA-05-E"
+    ],
+    "rationale": "原式等价于 (A−B)²=0，因此差矩阵是平方零幂零矩阵，所有特征值为零，但零特征空间维数不必为 1，故 D 错。",
+    "methods": "移项因式分解得到 (A−B)²=0，再分析幂零矩阵的特征值和零空间。",
+    "pitfalls": "平方为零只能推出特征值全为零，不代表几何重数固定为 1；三阶非零平方零矩阵秩可为 1。"
   },
   "759": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-填空题-11",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-02-E",
+      "CAL-01-G"
+    ],
+    "rationale": "x→0⁺ 时 arctan x∼x，被积函数等价 x^{1−p}，要求 p<2；x→∞ 时 arctan x→π/2，被积函数等价 x^{−p−1}，要求 p>0。",
+    "methods": "分别对 0 与无穷远两端作等价比较，套用 p-积分敛散判别。",
+    "pitfalls": "两端条件需同时满足；p=0 或 p=2 均为对数发散边界。"
   },
   "760": {
     "status": "pending",
