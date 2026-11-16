@@ -5632,244 +5632,604 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "先由 sinα→0 且 |α|<π/2 推出 α→0，再使用 sinα~α；极限 −1/2 表示同阶但不等价。"
   },
   "440": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-C",
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-04-A",
+      "CAL-02-C"
+    ],
+    "rationale": "方程隐式确定 y=f(x)，先在基点求 y 值，再对方程作隐函数求导得到 f'(0)，最后用导数定义型极限。",
+    "methods": "先代 x=0 求 y=1；对 cos(xy)-ln y+x=1 两边求导；代入 (0,1) 求 f'(0)，将 n[f(2/n)-f(0)] 化为 2f'(0)。",
+    "pitfalls": "隐函数求导时乘积 xy 要用乘积法则；ln y 的导数为 y'/y；不要把 n[f(2/n)-f(0)]误当作 f'(0)。"
   },
   "441": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C",
+      "CAL-03-A"
+    ],
+    "secondary": [
+      "CAL-04-A",
+      "CAL-03-B"
+    ],
+    "rationale": "变上限积分函数的连续性与可导性由被积函数在对应点的连续性决定；此题积分累积值连续，但左右被积函数极限不同，导致左右导数不同。",
+    "methods": "分段积分写出 F(x)；分别计算 x→π 左右极限验证连续；用左右导数或积分平均变化率比较导数。",
+    "pitfalls": "被积函数在 π 处跳跃不代表积分函数也跳跃；连续与可导必须分别判断。"
   },
   "442": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I",
+      "CAL-02-E"
+    ],
+    "secondary": [
+      "CAL-06-A",
+      "CAL-02-D"
+    ],
+    "rationale": "无穷区间积分与有限端点瑕积分须分别检验；两段分别化为幂函数型判敛条件，收敛要求同时成立。",
+    "methods": "拆成 (1,e) 与 (e,+∞) 两段；第一段比较 (x-1)^(1-α)，第二段令 u=ln x 得到 ∫u^(-α-1)du；合并 α<2 与 α>0。",
+    "pitfalls": "两端的敛散条件不能只检查一端；幂积分在零点和无穷远处的指数判据方向不同。"
   },
   "443": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-A",
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-04-B",
+      "CAL-04-C"
+    ],
+    "rationale": "表达式含 y/x 与复合变量 xy，需分别对 x、y 求偏导，再按给定线性组合消去 f(xy) 项。",
+    "methods": "固定另一变量求偏导；对 y/x 用商/乘积法则，对 f(xy) 用链式法则；代入组合并合并同类项。",
+    "pitfalls": "偏导时另一变量视为常数；不要漏掉 y/x 对 x 求导产生的负项。"
   },
   "444": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-选择题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-E",
+      "CAL-08-F"
+    ],
+    "secondary": [
+      "CAL-06-C",
+      "CAL-08-C"
+    ],
+    "rationale": "圆域四象限积分适合极坐标；雅可比因子 r 与被积函数中的 r 合并后，符号由各象限角区间决定。",
+    "methods": "令 x=r cosθ、y=r sinθ，dxdy=r drdθ；按四个象限分别积分 sinθ-cosθ，并比较正负。",
+    "pitfalls": "极坐标面积元不能漏掉 r；不能仅凭象限判断 y-x 的符号，因为象限内部还会跨越 y=x。"
   },
   "445": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-选择题-7",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-03-D",
+      "LA-03-E"
+    ],
+    "secondary": [
+      "LA-02-A",
+      "LA-02-C"
+    ],
+    "rationale": "右乘可逆矩阵等价于对列向量组作可逆线性组合，因此 A 与 AB 的列向量组可相互线性表示，列向量组等价。",
+    "methods": "由 C=AB 得 C 的列由 A 的列线性表示；再由 A=CB⁻¹ 得反向表示。",
+    "pitfalls": "右乘影响列向量组；不要误把结论套到行向量组。"
   },
   "446": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-选择题-8",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-B",
+      "LA-05-F"
+    ],
+    "secondary": [
+      "LA-05-A",
+      "LA-05-C"
+    ],
+    "rationale": "相似矩阵具有相同特征多项式；第一矩阵实对称可对角化，比较特征值多重集即可得到参数条件。",
+    "methods": "计算特征多项式并与目标对角矩阵的特征值集合比较；由括号中的二次因式恒等条件解出 a、b。",
+    "pitfalls": "相似要求特征值及代数重数一致；不能只比较迹或行列式，也不能把实对称矩阵的正交对角化条件误用为任意矩阵。"
   },
   "447": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-填空题-9",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C",
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-01-G",
+      "CAL-02-D"
+    ],
+    "rationale": "这是 1^∞ 型极限，取对数后转化为商式；利用 ln(1+u) 与 ln(1+x) 的二阶展开提取二阶项。",
+    "methods": "设极限为 L，取 ln；将底数写成 1+u(x)，再用 ln(1+u)~u；对 ln(1+x) 作展开求极限。",
+    "pitfalls": "不能直接把底数趋于 2 后认为幂极限为 1；关键是底数与指数同时变化，需取对数。"
   },
   "448": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-填空题-10",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-F",
+      "CAL-04-A"
+    ],
+    "secondary": [
+      "CAL-01-C",
+      "CAL-06-C"
+    ],
+    "rationale": "由微积分基本定理求 y'=f'(x)，再用反函数求导公式 dx/dy=1/(dy/dx)，并确定 y=0 对应 x=-1。",
+    "methods": "先由积分下限确定 f(-1)=0；求 f'(x)=√(1-e^x)；在 x=-1 处取倒数。",
+    "pitfalls": "反函数导数要在对应原函数点计算；不要把 y=0 错配为 x=0。"
   },
   "449": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-填空题-11",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-F",
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-08-E",
+      "CAL-02-C"
+    ],
+    "rationale": "极坐标曲线围成面积使用 S=1/2∫r²dθ；对称区间可化简 cos² 的积分。",
+    "methods": "代入 r=cos3θ，使用极坐标面积公式；利用偶函数对称性并用 cos²u=(1+cos2u)/2 积分。",
+    "pitfalls": "面积公式含 1/2 和 r²；确认 θ 区间只描绘一次封闭图形。"
   },
   "450": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-填空题-12",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-E",
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-04-A",
+      "CAL-05-C"
+    ],
+    "rationale": "参数曲线先用 dy/dx=(dy/dt)/(dx/dt) 求切线斜率，再取负倒数得到法线斜率。",
+    "methods": "求 x(t)、y(t) 的导数；在 t=1 求点坐标和切线斜率；法线斜率取负倒数后写点斜式。",
+    "pitfalls": "法线斜率不是切线斜率；参数方程中必须先求导数之比。"
   },
   "451": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-填空题-13",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C",
+      "CAL-07-D"
+    ],
+    "secondary": [
+      "CAL-07-B",
+      "CAL-05-B"
+    ],
+    "rationale": "三个给定解可识别齐次解与一个非齐次特解，通解由两个独立齐次解的线性组合加特解构成，再用初值确定常数。",
+    "methods": "观察 e^(3x)、e^x 为齐次解，-xe^(2x) 为特解；写通解并代入 y(0)、y'(0) 解 C1、C2。",
+    "pitfalls": "非齐次方程通解不能只写齐次解；特解前的符号要保留，两个初值要分别代入。"
   },
   "452": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-填空题-14",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-01-B",
+      "LA-02-D"
+    ],
+    "secondary": [
+      "LA-01-A",
+      "LA-01-C"
+    ],
+    "rationale": "元素与对应代数余子式满足 A_ij=-a_ij，可用行列式按行展开及伴随矩阵恒等式建立 det(A) 的方程。",
+    "methods": "按固定行展开得 detA=-Σa_ij²；由 A^T=-A* 取行列式，结合 det(A*)=(detA)² 解出 detA。",
+    "pitfalls": "伴随矩阵符号与转置关系要准确；非零矩阵保证平方和严格为正，排除 detA=0。"
   },
   "453": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-解答题-15",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C",
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-02-E",
+      "CAL-01-G"
+    ],
+    "rationale": "利用 1-cos(kx)~k²x²/2，乘积差拆成三项，首个非零阶均为 x²，系数相加。",
+    "methods": "按 1-abc=(1-a)+a(1-b)+ab(1-c) 拆开；分别作等价无穷小替换，求出总系数 7。",
+    "pitfalls": "不能把三个余弦因子直接相加；需使用乘积差分解，并确认高阶乘积项不影响二阶主项。"
   },
   "454": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-解答题-16",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C",
+      "CAL-08-E"
+    ],
+    "secondary": [
+      "CAL-08-F",
+      "CAL-06-B"
+    ],
+    "rationale": "绕 x 轴用圆盘法，绕 y 轴用柱壳法，建立两个体积积分后由比例方程求 a。",
+    "methods": "计算 Vx=π∫y²dx；Vy=2π∫x y dx；代入 y=x^(1/3)，令 Vy=10Vx 解 a。",
+    "pitfalls": "旋转轴不同，积分变量与截面公式不同；柱壳法需有额外的半径因子 x。"
   },
   "455": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-解答题-17",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-E",
+      "CAL-08-C"
+    ],
+    "secondary": [
+      "CAL-06-C",
+      "CAL-08-F"
+    ],
+    "rationale": "区域由两条射线和截线围成，需按边界切换点分段建立二重积分；被积函数 x² 对 y 积分可先简化。",
+    "methods": "求直线交点及与 x+y=8 的交点；按 x=2 分段写 y 上下限；分别积分并相加。",
+    "pitfalls": "分段点来自上边界切换；积分限次序与区域几何必须一致。"
   },
   "456": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-解答题-18",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A",
+      "CAL-05-E"
+    ],
+    "secondary": [
+      "CAL-05-B",
+      "CAL-03-C"
+    ],
+    "rationale": "第一问构造 F=f-x，利用奇函数 f(0)=0 和 f(1)=1 得端点相等，应用罗尔定理；第二问构造指数因子辅助函数再次应用罗尔定理。",
+    "methods": "先在 [0,1] 对 F 使用罗尔定理；再利用 f' 为偶函数构造 G=e^x(f'-1)，在 [-ξ,ξ] 使用罗尔定理，并利用对称性把点定位到正半轴。",
+    "pitfalls": "第二问罗尔定理先得到 η∈(-ξ,ξ)，还需借助 G' 的对称/符号论证保证题设结论在 (0,1)；注意原解析在此处存在逻辑跳步，建议标记解析待复核。"
   },
   "457": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-解答题-19",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-D",
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-05-B",
+      "CAL-05-F"
+    ],
+    "rationale": "目标是约束曲线上的距离平方极值，可用拉格朗日乘数法求内部驻点，再结合边界端点比较。",
+    "methods": "令 g=x²+y²，约束 h=x³-xy+y³=1；列 ∇g=λ∇h，结合 x,y≥0 化简候选点；检查边界端点并比较距离。",
+    "pitfalls": "距离与距离平方极值点相同；驻点不能替代边界检查，约束曲线端点也要纳入。"
   },
   "458": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-解答题-20",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B",
+      "CAL-01-J"
+    ],
+    "secondary": [
+      "CAL-05-E",
+      "CAL-05-F"
+    ],
+    "rationale": "先由导数符号确定函数在 (0,1) 递减、(1,+∞) 递增且最小值为 1；再用题设不等式推出数列单调有界，取极限夹逼。",
+    "methods": "求 f'=(x-1)/x²；利用 f(x)≥1 与题设条件确定数列所在区间和单调有界性；设极限 a 并代入连续函数不等式。",
+    "pitfalls": "单调有界定理必须同时证明单调性和有界性；极限代入后得到等号时还要确认等号点唯一。"
   },
   "459": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-解答题-21",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C",
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-05-B",
+      "CAL-08-C"
+    ],
+    "rationale": "弧长由 ∫√(1+y'²)dx 求得；形心横坐标为区域对 y 轴的一次矩除以面积，均转化为定积分。",
+    "methods": "先求 y'=x/2-1/(2x)，识别根式为 x/2+1/(2x)；再分别计算面积 A=∫y dx 与静矩 M_y=∫xy dx，求 M_y/A。",
+    "pitfalls": "弧长根式化简需确认 x≥1；形心分母是面积而不是弧长，且需使用曲线下方区域的正面积。"
   },
   "460": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-解答题-22",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-04-A",
+      "LA-02-B"
+    ],
+    "secondary": [
+      "LA-02-A",
+      "LA-04-C"
+    ],
+    "rationale": "矩阵方程 AC-CA=B 对 C 的四个元素形成线性方程组，存在性等价于方程组相容。",
+    "methods": "设 C=(x1,x2;x3,x4)，逐项比较矩阵元素；对方程组消元，得到 a=-1、b=0，再写通解。",
+    "pitfalls": "矩阵乘法不可交换；展开 AC 和 CA 时要逐项核对，存在性参数条件不能只凭某几行方程判断。"
   },
   "461": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2013-解答题-23",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-06-A",
+      "LA-05-C"
+    ],
+    "secondary": [
+      "LA-06-B",
+      "LA-05-A"
+    ],
+    "rationale": "二次型可写为 xᵀ(2ααᵀ+ββᵀ)x；正交单位向量 α、β 分别成为矩阵特征向量，对应特征值 2、1，剩余正交方向特征值为 0。",
+    "methods": "先把两个线性型平方改写为矩阵二次型；再计算 Aα、Aβ，利用秩不超过 2 得第三特征值为 0，使用正交变换对角化。",
+    "pitfalls": "系数 2 只作用于 ααᵀ 项；正交对角化要求矩阵实对称，标准形还应保留零平方项可省略的说明。"
   },
   "462": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-01-G",
+      "CAL-02-E"
+    ],
+    "secondary": [
+      "CAL-02-C",
+      "CAL-05-D"
+    ],
+    "rationale": "两类无穷小分别等价于常数乘 x^α 和 x^(2/α)，高于 x 阶要求幂指数均大于 1。",
+    "methods": "分别使用 ln(1+2x)~2x、1-cosx~x²/2；比较 α>1 与 2/α>1 的交集。",
+    "pitfalls": "“比 x 高阶”意味着商趋于 0，而不是同阶；注意第二项的幂指数是 1/α。"
   },
   "463": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-H",
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-05-C",
+      "CAL-01-G"
+    ],
+    "rationale": "斜渐近线 y=kx+b 的判定可通过 y/x 与 y-kx 的极限；仅 C 项在 x→∞ 时满足 k=1、b=0。",
+    "methods": "逐项考察 x→∞；C 项有 y/x→1 且 y-x=sin(1/x)→0，故渐近线 y=x。",
+    "pitfalls": "振荡项有界不等于趋于零；斜渐近线要求差值极限存在且有限。"
   },
   "464": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-G",
+      "CAL-05-C"
+    ],
+    "secondary": [
+      "CAL-05-B",
+      "CAL-05-A"
+    ],
+    "rationale": "g(x) 是端点弦线；f''≥0 表示函数凸（图像在弦线下方），故 f≤g。",
+    "methods": "构造 h=f-g；h(0)=h(1)=0 且 h''=f''≥0，由凸函数弦线性质或中值定理推出 h≤0。",
+    "pitfalls": "区分凹凸术语：二阶导数非负表示凸函数；结论是图像位于弦线下方。"
   },
   "465": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-E",
+      "CAL-05-C"
+    ],
+    "secondary": [
+      "CAL-04-C",
+      "CAL-04-B"
+    ],
+    "rationale": "参数曲线曲率半径可先求 y'、y''，再用 R=(1+y'²)^(3/2)/|y''|；题目给定点 t=1。",
+    "methods": "先由 dy/dx=(dy/dt)/(dx/dt) 得 y'=1+2/t；再求 y''=(dy'/dt)/(dx/dt)=-1/t³；代 t=1 求 R。",
+    "pitfalls": "二阶导数需再除以 dx/dt；曲率半径是曲率的倒数，不能把 K 与 R 混淆。"
   },
   "466": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A",
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-02-C",
+      "CAL-05-F"
+    ],
+    "rationale": "由 f(x)=xf'(ξ) 得 f'(ξ)=arctan(x)/x；利用 arctan x 的泰勒展开求 ξ²/x² 的极限。",
+    "methods": "先解出 ξ²=x/arctan x-1；将 arctan x=x-x³/3+o(x³) 代入并化简。",
+    "pitfalls": "注意从 1/(1+ξ²)=arctan x/x 解 ξ² 时的代数变形；展开必须保留三阶项。"
   },
   "467": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-选择题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-D",
+      "CAL-08-A"
+    ],
+    "secondary": [
+      "CAL-08-B",
+      "CAL-05-F"
+    ],
+    "rationale": "闭区域连续函数必取最大最小值；内部驻点处 Hessian 行列式由 u_xx+u_yy=0、u_xy≠0 得负值，因此是鞍点而非极值。",
+    "methods": "先用极值存在定理；若内部有极值则梯度为零，计算 D=u_xx u_yy-u_xy²=-(u_xx²+u_xy²)<0，矛盾，故极值点在边界。",
+    "pitfalls": "需区分全局最大最小值存在性与内部驻点；判别式小于零说明鞍点。"
   },
   "468": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-选择题-7",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-01-B",
+      "LA-01-D"
+    ],
+    "secondary": [
+      "LA-01-A",
+      "LA-01-C"
+    ],
+    "rationale": "利用行列式按第一行展开，两个非零项的余子式进一步按结构化简，最终得到 -(ad-bc)²。",
+    "methods": "按第一行展开并严格保留代数余子式符号；对两个三阶子式再按含零行/列展开。",
+    "pitfalls": "展开时第二项的符号来自 (-1)^(1+3)，不要把两项符号写成相同。"
   },
   "469": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-选择题-8",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-03-B",
+      "LA-03-D"
+    ],
+    "secondary": [
+      "LA-03-C",
+      "LA-02-B"
+    ],
+    "rationale": "若三向量线性无关，则对任意 k,l，前两个向量加上第三向量的倍数后仍线性无关；逆命题可用第三向量为零反例否定。",
+    "methods": "先把两个新向量表示为原向量组乘一个 3×2 矩阵；该矩阵列秩为 2；再构造 α3=0 的反例。",
+    "pitfalls": "题干命题的方向是“对任意 k,l 均无关”；证明充分性时不能只取某一组参数。"
   },
   "470": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-填空题-9",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I",
+      "CAL-06-A"
+    ],
+    "secondary": [
+      "CAL-06-B",
+      "CAL-02-D"
+    ],
+    "rationale": "配方后得到标准反正切型反常积分，利用 arctan 的无穷远极限计算。",
+    "methods": "配方 x²+2x+5=(x+1)²+4；令 u=(x+1)/2，写出原函数并代入上下限极限。",
+    "pitfalls": "无穷下限的 arctan 极限为 -π/2；常数因子 1/2 不要遗漏。"
   },
   "471": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-填空题-10",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-A",
+      "CAL-03-A"
+    ],
+    "secondary": [
+      "CAL-05-B",
+      "CAL-06-C"
+    ],
+    "rationale": "由导数在 [0,2] 上积分得到函数表达式，再结合奇函数与周期为 4 的性质把 f(7) 化到基本区间。",
+    "methods": "积分 f'=2(x-1)，由奇性确定 f(0)=0；先求 f(1)，再用周期 f(7)=f(3)，奇性和周期关系化为 -f(1)。",
+    "pitfalls": "周期平移与奇函数变号要分步处理；不要误把周期 4 当成周期 2。"
   },
   "472": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-填空题-11",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-B",
+      "CAL-08-A"
+    ],
+    "secondary": [
+      "CAL-04-C",
+      "CAL-04-B"
+    ],
+    "rationale": "隐式方程定义 z(x,y)，全微分 dz=z_x dx+z_y dy；通过隐函数求导公式计算两个偏导。",
+    "methods": "先代点求 z=0；对 F(x,y,z)=0 分别求 Fx、Fy、Fz；用 z_x=-Fx/Fz、z_y=-Fy/Fz。",
+    "pitfalls": "计算 Fy 时要包含 2y 项和指数链式项；求偏导时把 z 看作隐函数但先按独立变量求 F 的偏导。"
   },
   "473": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-填空题-12",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-F",
+      "CAL-04-E"
+    ],
+    "secondary": [
+      "CAL-04-C",
+      "CAL-04-A"
+    ],
+    "rationale": "极坐标曲线先转为参数方程 x=θcosθ、y=θsinθ，再求 dy/dx 并在 θ=π/2 处写切线。",
+    "methods": "分别对 x(θ)、y(θ) 求导；求导数之比并代 θ=π/2；确认点坐标后用点斜式。",
+    "pitfalls": "极坐标曲线斜率不能直接用 dr/dθ；必须通过 dx/dθ、dy/dθ 求比值。"
   },
   "474": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-填空题-13",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C",
+      "CAL-06-A"
+    ],
+    "secondary": [
+      "CAL-05-B",
+      "CAL-06-B"
+    ],
+    "rationale": "线密度函数的质心横坐标等于关于原点的一次矩除以总质量，即 ∫xρ(x)dx/∫ρ(x)dx。",
+    "methods": "分别计算质量 M=∫₀¹ρ(x)dx 与力矩 M_y=∫₀¹xρ(x)dx，再求比值。",
+    "pitfalls": "分母是总质量，分子需多乘一个 x；不能把均匀细棒的几何中点直接当质心。"
   },
   "475": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-填空题-14",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-06-D",
+      "LA-06-B"
+    ],
+    "secondary": [
+      "LA-06-A",
+      "LA-06-C"
+    ],
+    "rationale": "配方后得到两个正平方项、一个负平方项和系数 (4-a²) 的第三项；负惯性指数为 1 要求第三项非负。",
+    "methods": "对 x1、x2 配方；按系数正负统计正负惯性指数，考虑第三项为零时秩下降但负指数仍为 1。",
+    "pitfalls": "端点 a=±2 时第三项为零仍满足负惯性指数为 1；不要误写成严格不等式。"
   },
   "476": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-解答题-15",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-D",
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-02-C",
+      "CAL-06-F"
+    ],
+    "rationale": "分母等价于 x；对分子积分与 x 作比使用洛必达，导数化为 x²(e^(1/x)-1)-x，再用指数展开取极限。",
+    "methods": "先用 ln(1+1/x)~1/x；再对 ∫g(t)dt / x 使用洛必达；令 u=1/x，对 e^u 作二阶展开。",
+    "pitfalls": "展开 e^(1/x) 时必须保留 1/(2x²) 项，否则主项 x 抵消后无法得到极限。"
   },
   "477": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-解答题-16",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-A",
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-07-B",
+      "CAL-05-F"
+    ],
+    "rationale": "微分方程可分离变量，积分得到 y 的隐式表达式；再由 y'=(1-x²)/(1+y²) 判断驻点与极值类型。",
+    "methods": "分离 (1+y²)dy=(1-x²)dx 并用初值定常数；令 y'=0 得 x=±1，代回隐式关系求 y，再看导数变号。",
+    "pitfalls": "分母 1+y² 恒正，导数符号由 1-x² 决定；极大/极小值是 y 值，不是 x 坐标。"
   },
   "478": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-解答题-17",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-E",
+      "CAL-08-F"
+    ],
+    "secondary": [
+      "CAL-06-C",
+      "CAL-08-C"
+    ],
+    "rationale": "第一象限四分之一圆环区域适合极坐标；利用 x/(x+y) 与交换 x、y 的对称性，将被积函数化为径向函数的一半。",
+    "methods": "令 I 为原积分，交换 x、y 得到对应积分；两式相加化成 1/2∬sin(πr)；再用 r∈[1,2]、θ∈[0,π/2] 积分。",
+    "pitfalls": "对称性必须建立在区域对 x、y 交换不变；极坐标面积元为 r dr dθ。"
   },
   "479": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2014-解答题-18",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-B",
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-08-A",
+      "CAL-07-D"
+    ],
+    "rationale": "令 u=e^x cos y，计算 z_xx+z_yy 后二阶导数的 u_x²+u_y² 项组合为 e^(2x)，从 PDE 化为关于 f(u) 的二阶常系数非齐次 ODE。",
+    "methods": "先求 u_x、u_y、u_xx、u_yy；利用 u_x²+u_y²=e^(2x)、u_xx+u_yy=0 得 f''(u)e^(2x)；解 f''-4f=u 并代初值。",
+    "pitfalls": "链式法则中的 f'' 项和 f' 项都要计算；本题关键是调和函数性质使 f' 项抵消。"
   },
   "480": {
     "status": "pending",
