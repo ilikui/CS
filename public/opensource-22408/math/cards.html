@@ -333,16 +333,41 @@ default: art='<path d="M28 16V91H294" stroke="currentColor" fill="none"/><path d
 return '<div class="atom-visual" style="margin:12px 0;padding:10px;border:1px solid var(--line,#ddd);border-radius:10px"><div style="font-size:12px;opacity:.75;margin-bottom:4px">动态概念图 · '+title+'</div><svg viewBox="0 0 320 108" role="img" aria-label="'+title+'动态示意" style="display:block;width:100%;height:auto;max-height:140px">'+art+'</svg></div>';
 }
 
+
+function atomWorkedExample(a){
+ const esc=v=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+ const parent=a[2],steps=String(a[5]||'').split(/[；;。]+/).map(x=>x.trim()).filter(Boolean);
+ const frames={
+ 'CAL-01':['明确自变量范围与函数表达式，先列出定义域限制。','分别处理分母非零、偶次根式非负、对数真数为正等条件。','将限制条件取交集，并检查端点是否属于定义域。','把结果代回原表达式，确认每一步运算均有意义。'],
+ 'CAL-02':['明确趋近对象、方向与目标值；必要时分别讨论左右极限。','选择恒等变形、夹逼、重要极限、等价无穷小或洛必达法则，并核验使用条件。','逐步化简到标准极限或比较主导项，保留可能影响结果的高阶项。','检查左右结果是否一致，并确认变形在去心邻域内合法。'],
+ 'CAL-03':['先确定点值是否存在；点值不存在则该点不连续。','分别求左极限和右极限，分段函数必须选取对应分支。','左右极限相等后，再与函数值比较；参数题据此列方程。','按三条件给出连续性结论，并根据极限与点值关系判断间断类型。'],
+ 'CAL-04':['识别所求对象：导数、微分、高阶导数、切线或隐函数导数。','写出定义或求导法则；复合函数逐层使用链式法则，乘积/商使用对应法则。','完成求导后再代入指定点；切线题补上切点坐标并写点斜式。','用导数定义、特值或符号检查结果，确认没有漏掉内层导数。'],
+ 'CAL-05':['逐条核验定理前提：闭区间连续、开区间可导；罗尔定理另需端点函数值相等。','计算端点函数值或平均变化率，明确中值点必须位于开区间。','令导数等于平均变化率（或零），解出候选点并筛选区间内解。','将候选点代回结论核验；极值题还需检查导数符号变化与区间端点。'],
+ 'CAL-06':['先判断不定积分、定积分、变上限积分或几何面积/体积，写清变量和区间。','选择基本公式、换元或分部积分；换元时同步处理微分及上下限。','求原函数并代入上下限；不定积分必须补常数 C。','对原函数求导检查；几何面积按与坐标轴位置分段并取绝对值。'],
+ 'CAL-07':['确定方程阶数、线性/非线性及齐次/非齐次，整理成标准形式。','分离变量或构造积分因子；二阶常系数方程先写特征方程。','求通解时区分异根、重根、共轭根；非齐次方程还需构造特解。','代回原方程核验，再用初值确定常数，避免遗漏特解或初值条件。'],
+ 'CAL-08':['确认变量个数、定义域及所求对象：偏导、全微分、极值或二重积分。','偏导时固定其他变量；复合函数按多元链式法则；极值题先求驻点。','极值题计算二阶偏导判别式；积分题画区域并确定次序或极坐标变换。','检查边界、雅可比因子与区域范围，不能只检查内部驻点。'],
+ 'LA-01':['确定行列式阶数，识别三角形、零行列或可展开结构。','选择行列式性质或按行列展开，逐次记录交换行、提公因子等符号影响。','化为低阶行列式或三角行列式，再完成计算。','核对符号与阶数，并用行列式是否为零判断可逆性。'],
+ 'LA-02':['先检查矩阵维数和运算定义，特别是乘法内维数及顺序。','按定义逐项计算；求秩时用初等行变换化为阶梯形。','记录主元与自由列；求逆可对增广矩阵 (A|I) 行变换。','用维数、乘积顺序、AA⁻¹=I 或秩不变量复核。'],
+ 'LA-03':['将向量按列组成矩阵，确认每个向量的维数。','线性表示转化为 Ax=b；线性相关转化为 Ax=0 是否存在非零解。','高斯消元求主元列、自由变量或系数，写出线性组合关系。','把系数代回原向量核验；主元列应对应原矩阵列向量。'],
+ 'LA-04':['写出系数矩阵 A 与增广矩阵 (A|b)，区分齐次和非齐次判据。','对增广矩阵行变换为阶梯形，标出主元列与自由变量。','比较 r(A) 与 r(A|b) 判断有无解；有解时再比较秩与未知数个数。','将特解和齐次通解代回方程，核验自由参数个数为 n−r(A)。'],
+ 'LA-05':['写出特征方程 det(λI−A)=0，求全部特征值及代数重数。','对每个特征值解 (A−λI)x=0，求特征子空间与线性无关特征向量。','判断是否有 n 个线性无关特征向量；实对称矩阵可正交对角化。','验证 Av=λv，并检查 AP=PΛ 或 P⁻¹AP=Λ。'],
+ 'LA-06':['将二次型写成 xᵀAx，交叉项系数平均分配到对称矩阵对应位置。','按题目要求选配方法、合同变换、特征值或顺序主子式判别。','逐步完成变量变换并记录变换矩阵；正交变换需单位正交特征向量。','用惯性指数、特征值符号或展开原式核验，区分合同与相似。']
+ };
+ const frame=frames[parent]||['提取题设条件、未知量与目标，明确所用定义。','把题目转化为数学表达式，按本卡方法逐步推理。','保留关键中间式并完成运算，写出结论。','将结果代回原条件，检查范围、符号和边界。'];
+ const actions=steps.length?steps:['依据题目条件建立关系式。','按本卡核心结论完成计算并保留中间步骤。'];
+ return '<section class="atom-worked"><div class="worked-head"><b>典型例题 · 完整推导过程</b><span>'+esc(a[0])+'</span></div><div class="worked-box"><b>题目</b><p>'+esc(a[6])+'</p></div><div class="worked-box"><b>定义与推导依据</b><p>'+esc(a[3])+'</p><p>'+esc(a[4])+'</p></div><ol class="worked-steps">'+frame.map((x,i)=>'<li><b>第 '+(i+1)+' 步</b><p>'+esc(x)+'</p></li>').join('')+'</ol><div class="worked-box"><b>本卡解题方法拆解</b><ol>'+actions.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol></div><div class="worked-box worked-answer"><b>结果</b><p>'+esc(a[7])+'</p></div><div class="worked-box worked-error"><b>易错点与自检</b><p>'+esc(a[8])+'</p><p>检查：回到定义和定理前提，逐项核验定义域、运算合法性、区间/维数条件，并将结果代回原题。</p></div></section>';
+}
 function renderAtoms(parent){
  const items=atomicCards.filter(a=>a[2]===parent);
  if(!items.length)return '';
  return '<section class="atomic-section"><h3>原子知识卡｜逐点掌握（'+items.length+' 张）</h3><div class="atomic-grid">'+items.map(a=>{
   const x=state[a[0]]||{},status=statusOf(a[0]);
   const source=x.sourceQuestion?'<p class="atom-source">错题来源：'+x.sourceQuestion+' · 已加入易错复习</p>':'';
-  return '<details class="atomic-card" id="card-'+a[0]+'"><summary><b>'+a[0]+'</b> · '+a[1]+' <span class="atom-status">'+(labels[status]||'未学习')+'</span></summary><div class="atomic-body">'+source+'<h4>定义</h4><p>'+a[3]+'</p><h4>概念与性质</h4><p>'+a[4]+'</p><h4>核心公式 / 结论</h4><p>'+a[5]+'</p><h4>例题</h4><p>'+a[6]+'</p><h4>解答</h4><p>'+a[7]+'</p><h4>易错点</h4><p>'+a[8]+'</p>'+renderExamLinks(a[0],a[1],a[2])+atomVisual(a,parent)+'<h4>五大经典学习法训练</h4><ul><li><b>费曼学习法：</b>合上资料，用自己的话讲清定义、公式含义和一个例子。</li><li><b>西蒙学习法：</b>拆成定义、条件、结论、步骤、边界五个最小单元，逐个掌握后再组合。</li><li><b>SQ3R 阅读法：</b>先浏览标题与公式，提出问题，精读推导，合上资料复述，隔日复习。</li><li><b>番茄工作法：</b>用 25 分钟独立推导并完成例题，休息后不看答案重做。</li><li><b>康奈尔笔记法：</b>左栏写提示问题，右栏记录定义与推导，底部总结适用条件和易错边界。</li></ul><div class="grade atom-grade"><button type="button" class="bad" data-atom-grade="bad" data-atom-id="'+a[0]+'">不会 · 1天后复习</button><button type="button" class="mid" data-atom-grade="mid" data-atom-id="'+a[0]+'">模糊 · 3天后复习</button><button type="button" class="good" data-atom-grade="good" data-atom-id="'+a[0]+'">掌握 · 7天后复习</button></div><small class="meta">上次复习：'+(x.last||'尚未复习')+'　下次复习：'+(x.due||'待安排')+'</small></div></details>';
+  return '<details class="atomic-card" id="card-'+a[0]+'"><summary><b>'+a[0]+'</b> · '+a[1]+' <span class="atom-status">'+(labels[status]||'未学习')+'</span></summary><div class="atomic-body">'+source+'<h4>定义</h4><p>'+a[3]+'</p><h4>概念与性质</h4><p>'+a[4]+'</p><h4>核心公式 / 结论</h4><p>'+a[5]+'</p><h4>例题</h4><p>'+a[6]+'</p><h4>简要答案</h4><p>'+a[7]+'</p>'+atomWorkedExample(a)+'<h4>易错点</h4><p>'+a[8]+'</p>'+renderExamLinks(a[0],a[1],a[2])+atomVisual(a,parent)+'<h4>五大经典学习法训练</h4><ul><li><b>费曼学习法：</b>合上资料，用自己的话讲清定义、公式含义和一个例子。</li><li><b>西蒙学习法：</b>拆成定义、条件、结论、步骤、边界五个最小单元，逐个掌握后再组合。</li><li><b>SQ3R 阅读法：</b>先浏览标题与公式，提出问题，精读推导，合上资料复述，隔日复习。</li><li><b>番茄工作法：</b>用 25 分钟独立推导并完成例题，休息后不看答案重做。</li><li><b>康奈尔笔记法：</b>左栏写提示问题，右栏记录定义与推导，底部总结适用条件和易错边界。</li></ul><div class="grade atom-grade"><button type="button" class="bad" data-atom-grade="bad" data-atom-id="'+a[0]+'">不会 · 1天后复习</button><button type="button" class="mid" data-atom-grade="mid" data-atom-id="'+a[0]+'">模糊 · 3天后复习</button><button type="button" class="good" data-atom-grade="good" data-atom-id="'+a[0]+'">掌握 · 7天后复习</button></div><small class="meta">上次复习：'+(x.last||'尚未复习')+'　下次复习：'+(x.due||'待安排')+'</small></div></details>';
  }).join('')+'</div></section>';
 }
 
+const workedStyle=document.createElement('style');workedStyle.textContent=".atom-worked{margin:14px 0;padding:13px;border:1px solid #d8e5f2;border-radius:12px;background:linear-gradient(145deg,#f7fbff,#fff)}.worked-head{display:flex;justify-content:space-between;gap:8px;color:#28547d}.worked-head span{font-size:10px;color:#71859a}.worked-box{padding:9px 11px;margin:7px 0;border-radius:8px;background:rgba(120,150,180,.07)}.atom-worked p,.atom-worked li{font-size:12px;line-height:1.75;margin:4px 0}.worked-steps{padding-left:23px}.worked-steps li{padding:5px}.worked-steps li::marker{color:#3979ad;font-weight:700}.worked-answer{border-left:3px solid #399879}.worked-error{border-left:3px solid #d28b38}@media(max-width:600px){.atom-worked{padding:9px}.worked-box{padding:8px}}";document.head.appendChild(workedStyle);
 const KEY='math2_card_review_v1';
 const read=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch{return {}}};
 let state=read();
