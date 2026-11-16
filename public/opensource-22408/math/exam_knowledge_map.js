@@ -6377,9 +6377,17 @@ window.EXAM_KNOWLEDGE_MAP = {
     "sourceLabel": "查看2015年原卷第4题图（PDF第1页）"
   },
   "489": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2015-选择题-5",
-    "reason": "已找到原卷扫描：题干确为f(x+y/x,y)=x²−y²。令(u,v)=(1,1)要求x+1/x=1，该方程无实数解，因此(1,1)不在参数映射像集中，无法由题设确定该点处两个偏导数；原卷题面疑有印刷/转录错误。暂不虚构答案或卡片关联。",
+    "primary": [
+      "CAL-08-N18"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "原卷题面为 f(x+y,y/x)=x²−y²。令 u=x+y、v=y/x，可逆变换得 x=u/(1+v)、y=uv/(1+v)，从而 f(u,v)=u²(1−v)/(1+v)。在 (1,1) 处两个偏导依次为 0、−1/2，选 D。",
+    "methods": "先识别两个中间变量并建立 u、v 与 x、y 的反解；代回原函数得到 f(u,v) 的显式表达式，再分别对 u、v 求偏导并代入目标点。",
+    "pitfalls": "不能把题面误读成 f(x+y/x,y)；变量顺序和分式位置会改变可逆性。反解时需由 v=y/x 得 y=vx，再代入 u=x+y，不能错误写成 x=uv/(1+v)。",
     "sourceUrl": "https://math.mnnu.edu.cn/__local/9/6C/06/E40CA58379CB232AEBF10076867_080F66DF_608BF.pdf?e=.pdf#page=2",
     "sourceLabel": "查看2015年原卷第5题（PDF第2页）"
   },
