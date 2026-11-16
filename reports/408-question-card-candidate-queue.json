@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T13:00:22.934Z",
+  "generatedAt": "2026-11-16T13:04:57.240Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -9,7 +9,7 @@
     "questionsNeedingAdditionalCardReview": 799,
     "candidateQuestions": 798,
     "noCandidateQuestions": 1,
-    "cards": 224,
+    "cards": 247,
     "cardsWithFormalLinks": 150,
     "cardsWithoutFormalLinks": [
       {
@@ -307,6 +307,98 @@
       {
         "subject": "计算机网络",
         "title": "热土豆路由与 IGP 出口距离"
+      },
+      {
+        "subject": "数据结构",
+        "title": "后缀极值与区间乘积最大值"
+      },
+      {
+        "subject": "数据结构",
+        "title": "后缀最大值与最小值维护"
+      },
+      {
+        "subject": "数据结构",
+        "title": "AOE网事件最早与最迟发生时间"
+      },
+      {
+        "subject": "数据结构",
+        "title": "关键路径与关键活动"
+      },
+      {
+        "subject": "数据结构",
+        "title": "活动时间余量与并行区间"
+      },
+      {
+        "subject": "计算机组成原理",
+        "title": "Cache组相联映射与地址字段"
+      },
+      {
+        "subject": "计算机组成原理",
+        "title": "VIPT Cache索引与页内偏移"
+      },
+      {
+        "subject": "计算机组成原理",
+        "title": "Cache跨块访问与缺失率"
+      },
+      {
+        "subject": "计算机组成原理",
+        "title": "Cache平均访问时间与缺失损失"
+      },
+      {
+        "subject": "计算机组成原理",
+        "title": "数组跨页与缺页次数"
+      },
+      {
+        "subject": "计算机组成原理",
+        "title": "补码恢复余数除法器"
+      },
+      {
+        "subject": "计算机组成原理",
+        "title": "有符号除法异常与商溢出"
+      },
+      {
+        "subject": "计算机组成原理",
+        "title": "CPU异常响应与现场保护"
+      },
+      {
+        "subject": "操作系统",
+        "title": "生产者消费者与有界缓冲区"
+      },
+      {
+        "subject": "操作系统",
+        "title": "多阶段流水线的信号量同步"
+      },
+      {
+        "subject": "操作系统",
+        "title": "共享铁锹互斥与资源锁"
+      },
+      {
+        "subject": "操作系统",
+        "title": "进程虚拟地址空间与段布局"
+      },
+      {
+        "subject": "操作系统",
+        "title": "全局指针与动态内存分配"
+      },
+      {
+        "subject": "操作系统",
+        "title": "阻塞式I/O与驱动程序调用"
+      },
+      {
+        "subject": "计算机网络",
+        "title": "卫星链路传播时延与文件发送时延"
+      },
+      {
+        "subject": "计算机网络",
+        "title": "GBN信道利用率与发送窗口"
+      },
+      {
+        "subject": "计算机网络",
+        "title": "GBN序号空间与窗口约束"
+      },
+      {
+        "subject": "计算机网络",
+        "title": "IPv4 CIDR与VLSM子网划分"
       }
     ]
   },
@@ -343,6 +435,15 @@
           ]
         },
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 6,
+          "matchedTerms": [
+            "n-1",
+            "写入",
+            "-1"
+          ]
+        },
+        {
           "card": "循环队列判空与判满",
           "score": 6,
           "matchedTerms": [
@@ -354,14 +455,6 @@
           "score": 4,
           "matchedTerms": [
             "an"
-          ]
-        },
-        {
-          "card": "算法五个特性",
-          "score": 4,
-          "matchedTerms": [
-            "输出",
-            "是解决"
           ]
         }
       ]
@@ -407,20 +500,22 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 7,
+          "matchedTerms": [
+            "每个元",
+            "个元素",
+            "每个元素",
+            "最大值"
+          ]
+        },
+        {
           "card": "循环链式队列与空闲结点复用",
           "score": 7,
           "matchedTerms": [
             "为空",
             "初始",
             "队列的"
-          ]
-        },
-        {
-          "card": "抽象数据类型 ADT",
-          "score": 6,
-          "matchedTerms": [
-            "push",
-            "pop"
           ]
         }
       ]
@@ -555,20 +650,19 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "vl",
+            "es"
+          ]
+        },
+        {
           "card": "完全二叉树与编号性质",
           "score": 7,
           "matchedTerms": [
             "二叉树定义",
             "二叉树"
-          ]
-        },
-        {
-          "card": "树的基本术语与性质",
-          "score": 6,
-          "matchedTerms": [
-            "高度",
-            "结点的",
-            "树高度"
           ]
         }
       ]
@@ -817,6 +911,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 3,
+          "matchedTerms": [
+            "es"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 3,
           "matchedTerms": [
@@ -828,13 +929,6 @@
           "score": 2,
           "matchedTerms": [
             "指针"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "关键字"
           ]
         }
       ]
@@ -998,8 +1092,17 @@
       "existingCards": [
         "冯·诺依曼结构与存储程序"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 9,
+          "matchedTerms": [
+            "执行",
+            "es",
+            "确定"
+          ]
+        },
         {
           "card": "循环队列判空与判满",
           "score": 6,
@@ -1024,17 +1127,11 @@
           ]
         },
         {
-          "card": "散列表装填因子与查找终止",
+          "card": "后缀极值与区间乘积最大值",
           "score": 4,
           "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
-          "card": "十字链表与邻接多重表",
-          "score": 4,
-          "matchedTerms": [
-            "的存储"
+            "n-1",
+            "-1"
           ]
         }
       ]
@@ -1053,6 +1150,24 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 8,
+          "matchedTerms": [
+            "n-1",
+            ">0",
+            "=0",
+            "-1"
+          ]
+        },
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "执行",
+            "es"
+          ]
+        },
         {
           "card": "单链表重排与原地逆置",
           "score": 4,
@@ -1073,20 +1188,6 @@
           "matchedTerms": [
             "+f"
           ]
-        },
-        {
-          "card": "最小距离三元组的三指针扫描",
-          "score": 3,
-          "matchedTerms": [
-            "int"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 2,
-          "matchedTerms": [
-            "执行"
-          ]
         }
       ]
     },
@@ -1104,6 +1205,16 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 8,
+          "matchedTerms": [
+            "n-1",
+            "=0",
+            "本身",
+            "-1"
+          ]
+        },
         {
           "card": "单链表重排与原地逆置",
           "score": 6,
@@ -1127,17 +1238,10 @@
           ]
         },
         {
-          "card": "最小正整数缺失值查找",
+          "card": "活动时间余量与并行区间",
           "score": 3,
           "matchedTerms": [
-            "因为"
-          ]
-        },
-        {
-          "card": "堆的定义与建堆",
-          "score": 2,
-          "matchedTerms": [
-            "可直接"
+            "es"
           ]
         }
       ]
@@ -1162,6 +1266,21 @@
           "score": 4,
           "matchedTerms": [
             "an"
+          ]
+        },
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 4,
+          "matchedTerms": [
+            "n-1",
+            "-1"
+          ]
+        },
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 3,
+          "matchedTerms": [
+            "es"
           ]
         },
         {
@@ -1204,6 +1323,14 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 5,
+          "matchedTerms": [
+            "es",
+            "确定"
+          ]
+        },
+        {
           "card": "二次探测法与开放定址散列",
           "score": 4,
           "matchedTerms": [
@@ -1211,26 +1338,18 @@
           ]
         },
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 4,
+          "matchedTerms": [
+            "n-1",
+            "-1"
+          ]
+        },
+        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
             "本题"
-          ]
-        },
-        {
-          "card": "数组行优先与列优先存储",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "外部排序与多路归并",
-          "score": 3,
-          "matchedTerms": [
-            "存容量",
-            "容量的",
-            "存容量的"
           ]
         }
       ]
@@ -1265,6 +1384,14 @@
           ]
         },
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 4,
+          "matchedTerms": [
+            "n-1",
+            "-1"
+          ]
+        },
+        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -1276,13 +1403,6 @@
           "score": 4,
           "matchedTerms": [
             "的值"
-          ]
-        },
-        {
-          "card": "最小距离三元组的三指针扫描",
-          "score": 1,
-          "matchedTerms": [
-            "取一个"
           ]
         }
       ]
@@ -1318,24 +1438,25 @@
           ]
         },
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 4,
+          "matchedTerms": [
+            "n-1",
+            "-1"
+          ]
+        },
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 3,
+          "matchedTerms": [
+            "es"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 3,
           "matchedTerms": [
             "cpu"
-          ]
-        },
-        {
-          "card": "前缀编码与二叉判定树",
-          "score": 2,
-          "matchedTerms": [
-            "因为"
-          ]
-        },
-        {
-          "card": "多路归并与双指针",
-          "score": 1,
-          "matchedTerms": [
-            "一个或"
           ]
         }
       ]
@@ -1354,6 +1475,14 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "执行",
+            "es"
+          ]
+        },
         {
           "card": "最小距离三元组的三指针扫描",
           "score": 7,
@@ -1383,13 +1512,6 @@
           "matchedTerms": [
             "an"
           ]
-        },
-        {
-          "card": "外部排序与多路归并",
-          "score": 3,
-          "matchedTerms": [
-            "cpu"
-          ]
         }
       ]
     },
@@ -1408,11 +1530,27 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "执行",
+            "es"
+          ]
+        },
+        {
           "card": "单链表重排与原地逆置",
           "score": 6,
           "matchedTerms": [
             "an",
             "修改"
+          ]
+        },
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 4,
+          "matchedTerms": [
+            "n-1",
+            "-1"
           ]
         },
         {
@@ -1427,20 +1565,6 @@
           "score": 2,
           "matchedTerms": [
             "对应"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 2,
-          "matchedTerms": [
-            "访问"
-          ]
-        },
-        {
-          "card": "抽象数据类型 ADT",
-          "score": 1,
-          "matchedTerms": [
-            "取决于"
           ]
         }
       ]
@@ -1514,6 +1638,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "执行",
+            "es"
+          ]
+        },
+        {
           "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
@@ -1535,10 +1667,10 @@
           ]
         },
         {
-          "card": "最小正整数缺失值查找",
+          "card": "后缀最大值与最小值维护",
           "score": 2,
           "matchedTerms": [
-            "访问"
+            "题的"
           ]
         }
       ]
@@ -1557,6 +1689,14 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "执行",
+            "es"
+          ]
+        },
         {
           "card": "单链表重排与原地逆置",
           "score": 4,
@@ -1583,13 +1723,6 @@
           "score": 2,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "栈与队列",
-          "score": 2,
-          "matchedTerms": [
-            "下溢"
           ]
         }
       ]
@@ -1776,6 +1909,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 6,
+          "matchedTerms": [
+            "中断"
+          ]
+        },
+        {
           "card": "小端字节序与补码读取",
           "score": 4,
           "matchedTerms": [
@@ -1801,13 +1941,6 @@
           "score": 2,
           "matchedTerms": [
             "中断"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 2,
-          "matchedTerms": [
-            "执行"
           ]
         }
       ]
@@ -1883,6 +2016,13 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 6,
+          "matchedTerms": [
+            "索引"
+          ]
+        },
         {
           "card": "立即数扩展与移位指令",
           "score": 2,
@@ -2106,10 +2246,12 @@
           ]
         },
         {
-          "card": "RISC-V 指令格式与寄存器编码",
+          "card": "CPU异常响应与现场保护",
           "score": 3,
           "matchedTerms": [
-            "使用"
+            "系统调",
+            "统调用",
+            "系统调用"
           ]
         }
       ]
@@ -2376,17 +2518,17 @@
           ]
         },
         {
-          "card": "信号量同步与互斥",
+          "card": "共享铁锹互斥与资源锁",
           "score": 1,
           "matchedTerms": [
             "的信号"
           ]
         },
         {
-          "card": "TLB 与快表命中",
+          "card": "信号量同步与互斥",
           "score": 1,
           "matchedTerms": [
-            "的转换"
+            "的信号"
           ]
         }
       ]
@@ -2703,6 +2845,14 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "执行",
+            "es"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 7,
           "matchedTerms": [
@@ -2723,13 +2873,6 @@
           "score": 4,
           "matchedTerms": [
             "an"
-          ]
-        },
-        {
-          "card": "快速排序分区过程",
-          "score": 4,
-          "matchedTerms": [
-            "平均"
           ]
         }
       ]
@@ -2806,12 +2949,29 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 11,
+          "matchedTerms": [
+            "活动",
+            "ve",
+            "es"
+          ]
+        },
+        {
           "card": "比较计数排序与秩排序",
           "score": 9,
           "matchedTerms": [
             "count",
             "放置",
             "释放"
+          ]
+        },
+        {
+          "card": "关键路径与关键活动",
+          "score": 9,
+          "matchedTerms": [
+            "ve",
+            "活动"
           ]
         },
         {
@@ -2830,24 +2990,6 @@
             "ve",
             "活动"
           ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 7,
-          "matchedTerms": [
-            "if",
-            "count",
-            "=n"
-          ]
-        },
-        {
-          "card": "散列表装填因子与查找终止",
-          "score": 6,
-          "matchedTerms": [
-            "个单元",
-            "空单元",
-            "单元的"
-          ]
         }
       ]
     },
@@ -2865,6 +3007,15 @@
       ],
       "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 10,
+          "matchedTerms": [
+            "执行",
+            "es",
+            "ef"
+          ]
+        },
         {
           "card": "最小距离三元组的三指针扫描",
           "score": 10,
@@ -2898,15 +3049,6 @@
             "为空",
             "初始"
           ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 5,
-          "matchedTerms": [
-            "平均",
-            "得到",
-            "在内存"
-          ]
         }
       ]
     },
@@ -2926,6 +3068,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
@@ -2941,25 +3090,17 @@
           ]
         },
         {
-          "card": "内部排序与稳定性",
+          "card": "后缀极值与区间乘积最大值",
           "score": 3,
           "matchedTerms": [
-            "得到",
-            "/2"
+            "结果为"
           ]
         },
         {
-          "card": "最小距离三元组的三指针扫描",
+          "card": "活动时间余量与并行区间",
           "score": 3,
           "matchedTerms": [
-            "s1"
-          ]
-        },
-        {
-          "card": "归并排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "得到"
+            "es"
           ]
         }
       ]
@@ -3068,10 +3209,11 @@
           ]
         },
         {
-          "card": "散列表装填因子与查找终止",
+          "card": "后缀最大值与最小值维护",
           "score": 4,
           "matchedTerms": [
-            "本题"
+            "个元素",
+            "题的"
           ]
         }
       ]
@@ -3223,6 +3365,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 6,
+          "matchedTerms": [
+            "n-1",
+            "=0",
+            "-1"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 4,
           "matchedTerms": [
@@ -3251,13 +3402,6 @@
           "score": 2,
           "matchedTerms": [
             "结点数"
-          ]
-        },
-        {
-          "card": "邻接矩阵与邻接表",
-          "score": 2,
-          "matchedTerms": [
-            "的度"
           ]
         }
       ]
@@ -3382,6 +3526,13 @@
           ]
         },
         {
+          "card": "关键路径与关键活动",
+          "score": 5,
+          "matchedTerms": [
+            "ve"
+          ]
+        },
+        {
           "card": "树的基本术语与性质",
           "score": 5,
           "matchedTerms": [
@@ -3390,17 +3541,10 @@
           ]
         },
         {
-          "card": "单链表重排与原地逆置",
-          "score": 2,
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 5,
           "matchedTerms": [
-            "个结点"
-          ]
-        },
-        {
-          "card": "链式栈与链式队列",
-          "score": 2,
-          "matchedTerms": [
-            "个结点"
+            "ve"
           ]
         }
       ]
@@ -3430,6 +3574,13 @@
           ]
         },
         {
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 6,
+          "matchedTerms": [
+            "拓扑序"
+          ]
+        },
+        {
           "card": "Kahn拓扑排序与入度维护",
           "score": 6,
           "matchedTerms": [
@@ -3452,13 +3603,6 @@
           "matchedTerms": [
             "得到",
             "序列分"
-          ]
-        },
-        {
-          "card": "算法五个特性",
-          "score": 3,
-          "matchedTerms": [
-            "输出"
           ]
         }
       ]
@@ -3700,17 +3844,17 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 4,
           "matchedTerms": [
             "时间"
-          ]
-        },
-        {
-          "card": "外部排序与多路归并",
-          "score": 3,
-          "matchedTerms": [
-            "cpu"
           ]
         }
       ]
@@ -3744,6 +3888,13 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 2,
+          "matchedTerms": [
+            "题的"
+          ]
+        },
+        {
           "card": "基数排序与桶排序思想",
           "score": 2,
           "matchedTerms": [
@@ -3751,17 +3902,10 @@
           ]
         },
         {
-          "card": "树与森林的存储结构",
+          "card": "后缀极值与区间乘积最大值",
           "score": 1,
           "matchedTerms": [
-            "转换为"
-          ]
-        },
-        {
-          "card": "最小距离三元组的三指针扫描",
-          "score": 1,
-          "matchedTerms": [
-            "的整数"
+            "-1"
           ]
         }
       ]
@@ -3790,6 +3934,15 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 11,
+          "matchedTerms": [
+            "执行",
+            "tf",
+            "ef"
+          ]
+        },
+        {
           "card": "递归算法与递归树",
           "score": 8,
           "matchedTerms": [
@@ -3806,19 +3959,10 @@
           ]
         },
         {
-          "card": "内部排序与稳定性",
+          "card": "关键路径与关键活动",
           "score": 5,
           "matchedTerms": [
-            "if",
-            "得到"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 5,
-          "matchedTerms": [
-            "因为",
-            "答案"
+            "tf"
           ]
         }
       ]
@@ -3990,6 +4134,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 3,
           "matchedTerms": [
@@ -4001,13 +4152,6 @@
           "score": 2,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "循环队列判空与判满",
-          "score": 2,
-          "matchedTerms": [
-            "计数器"
           ]
         }
       ]
@@ -4026,6 +4170,13 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
         {
           "card": "前缀编码与二叉判定树",
           "score": 4,
@@ -4070,8 +4221,17 @@
       "existingCards": [
         "总线与总线事务"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 11,
+          "matchedTerms": [
+            "执行",
+            "ve",
+            "es"
+          ]
+        },
         {
           "card": "关键路径与 AOE 网",
           "score": 5,
@@ -4080,17 +4240,24 @@
           ]
         },
         {
-          "card": "最小距离三元组的三指针扫描",
-          "score": 3,
+          "card": "关键路径与关键活动",
+          "score": 5,
           "matchedTerms": [
-            "s2"
+            "ve"
           ]
         },
         {
-          "card": "红黑树性质与高度",
-          "score": 2,
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 5,
           "matchedTerms": [
-            "执行"
+            "ve"
+          ]
+        },
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 3,
+          "matchedTerms": [
+            "res"
           ]
         }
       ]
@@ -4109,6 +4276,13 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
         {
           "card": "红黑树性质与高度",
           "score": 2,
@@ -4135,13 +4309,6 @@
           "score": 1,
           "matchedTerms": [
             "第一个"
-          ]
-        },
-        {
-          "card": "哈夫曼树与带权路径长度",
-          "score": 1,
-          "matchedTerms": [
-            "完成的"
           ]
         }
       ]
@@ -4195,8 +4362,18 @@
       "existingCards": [
         "系统调用与用户态内核态"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "CPU异常响应与现场保护",
+          "score": 9,
+          "matchedTerms": [
+            "中断",
+            "系统调",
+            "统调用",
+            "系统调用"
+          ]
+        },
         {
           "card": "程序查询与中断驱动 I/O",
           "score": 4,
@@ -4227,13 +4404,6 @@
           "score": 2,
           "matchedTerms": [
             "指令"
-          ]
-        },
-        {
-          "card": "单周期与多周期数据通路",
-          "score": 2,
-          "matchedTerms": [
-            "功能"
           ]
         }
       ]
@@ -4541,6 +4711,17 @@
           ]
         },
         {
+          "card": "数组跨页与缺页次数",
+          "score": 15,
+          "matchedTerms": [
+            "分页",
+            "页内偏移",
+            "页内偏",
+            "内偏移",
+            "页大小"
+          ]
+        },
+        {
           "card": "Cache 直接映射与组相联",
           "score": 13,
           "matchedTerms": [
@@ -4551,30 +4732,21 @@
           ]
         },
         {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 8,
+          "matchedTerms": [
+            "页内偏移",
+            "内偏移",
+            "页内偏"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 7,
           "matchedTerms": [
             "字节",
             "地址",
             "内偏移"
-          ]
-        },
-        {
-          "card": "小端字节序与补码读取",
-          "score": 6,
-          "matchedTerms": [
-            "地址",
-            "字节"
-          ]
-        },
-        {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 5,
-          "matchedTerms": [
-            "页大小",
-            "页内偏",
-            "内偏移",
-            "页内偏移"
           ]
         }
       ]
@@ -4593,6 +4765,17 @@
       ],
       "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 14,
+          "matchedTerms": [
+            "索引",
+            "kb",
+            "地址索",
+            "址索引",
+            "地址索引"
+          ]
+        },
         {
           "card": "指令系统与寻址方式",
           "score": 10,
@@ -4613,24 +4796,18 @@
           ]
         },
         {
-          "card": "虚拟地址分页与页内偏移",
+          "card": "Cache组相联映射与地址字段",
+          "score": 8,
+          "matchedTerms": [
+            "kb",
+            "块大小"
+          ]
+        },
+        {
+          "card": "数组跨页与缺页次数",
           "score": 5,
           "matchedTerms": [
             "kb"
-          ]
-        },
-        {
-          "card": "小端字节序与补码读取",
-          "score": 4,
-          "matchedTerms": [
-            "地址"
-          ]
-        },
-        {
-          "card": "RISC-V 指令格式与寄存器编码",
-          "score": 4,
-          "matchedTerms": [
-            "可表示"
           ]
         }
       ]
@@ -4712,6 +4889,19 @@
             "服务程",
             "务程序",
             "服务程序"
+          ]
+        },
+        {
+          "card": "CPU异常响应与现场保护",
+          "score": 12,
+          "matchedTerms": [
+            "中断",
+            "处理程",
+            "理程序",
+            "处理程序",
+            "系统调",
+            "统调用",
+            "系统调用"
           ]
         },
         {
@@ -5012,17 +5202,17 @@
           ]
         },
         {
+          "card": "多阶段流水线的信号量同步",
+          "score": 1,
+          "matchedTerms": [
+            "量建立"
+          ]
+        },
+        {
           "card": "目录结构与文件路径",
           "score": 1,
           "matchedTerms": [
             "信息的"
-          ]
-        },
-        {
-          "card": "缺页异常处理流程",
-          "score": 1,
-          "matchedTerms": [
-            "在物理"
           ]
         }
       ]
@@ -5204,6 +5394,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "GBN信道利用率与发送窗口",
+          "score": 8,
+          "matchedTerms": [
+            "要求",
+            "min"
+          ]
+        },
+        {
           "card": "交换机自学习与转发",
           "score": 5,
           "matchedTerms": [
@@ -5231,13 +5429,6 @@
           "score": 4,
           "matchedTerms": [
             "cd"
-          ]
-        },
-        {
-          "card": "BGP UPDATE 报文与路由通告",
-          "score": 3,
-          "matchedTerms": [
-            "使用"
           ]
         }
       ]
@@ -5292,11 +5483,11 @@
           ]
         },
         {
-          "card": "IP TTL 与逐跳递减",
+          "card": "GBN序号空间与窗口约束",
           "score": 7,
           "matchedTerms": [
-            "至少",
-            "h+1"
+            "因此",
+            "sr"
           ]
         }
       ]
@@ -5463,6 +5654,23 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 8,
+          "matchedTerms": [
+            "空间",
+            "时间"
+          ]
+        },
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 8,
+          "matchedTerms": [
+            "执行",
+            "ef",
+            "时间最"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 7,
           "matchedTerms": [
@@ -5479,24 +5687,6 @@
             "进先出",
             "先进先",
             "先进先出"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 6,
-          "matchedTerms": [
-            "时间",
-            "访问"
-          ]
-        },
-        {
-          "card": "单链表与双链表",
-          "score": 5,
-          "matchedTerms": [
-            "指针",
-            "物理地",
-            "理地址",
-            "物理地址"
           ]
         }
       ]
@@ -6324,6 +6514,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "快速排序分区过程",
           "score": 4,
           "matchedTerms": [
@@ -6349,13 +6546,6 @@
           "score": 2,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "平均"
           ]
         }
       ]
@@ -6394,6 +6584,13 @@
           "score": 4,
           "matchedTerms": [
             "本题"
+          ]
+        },
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 1,
+          "matchedTerms": [
+            "-1"
           ]
         },
         {
@@ -6470,6 +6667,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
@@ -6495,13 +6699,6 @@
           "score": 2,
           "matchedTerms": [
             "访问"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 1,
-          "matchedTerms": [
-            "到存储"
           ]
         }
       ]
@@ -6689,6 +6886,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 4,
           "matchedTerms": [
@@ -6700,13 +6904,6 @@
           "score": 3,
           "matchedTerms": [
             "cpu"
-          ]
-        },
-        {
-          "card": "比较计数排序与秩排序",
-          "score": 2,
-          "matchedTerms": [
-            "时间"
           ]
         }
       ]
@@ -6784,6 +6981,13 @@
           ]
         },
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 2,
+          "matchedTerms": [
+            "=0"
+          ]
+        },
+        {
           "card": "拓扑排序唯一性判定",
           "score": 2,
           "matchedTerms": [
@@ -6802,13 +7006,6 @@
           "score": 1,
           "matchedTerms": [
             "优先级"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 1,
-          "matchedTerms": [
-            "置1"
           ]
         }
       ]
@@ -6908,8 +7105,8 @@
           ]
         },
         {
-          "card": "指令系统与寻址方式",
-          "score": 2,
+          "card": "Cache跨块访问与缺失率",
+          "score": 4,
           "matchedTerms": [
             "长度"
           ]
@@ -6926,8 +7123,18 @@
       "answer": "A",
       "analysis": "2011-第24题-解析 缺页处理和时钟中断都属于中断，在 内核态 执行；进程调度是操作系统内核进程，无须用户干预，在核心态执行；命令解释程序属于命令接口，是四个选项中唯一能面对用户的，它在 用户态 执行。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "CPU异常响应与现场保护",
+          "score": 9,
+          "matchedTerms": [
+            "中断",
+            "处理程",
+            "理程序",
+            "处理程序"
+          ]
+        },
         {
           "card": "中断响应与异常处理",
           "score": 6,
@@ -6959,14 +7166,6 @@
           "matchedTerms": [
             "执行",
             "和时钟"
-          ]
-        },
-        {
-          "card": "DMA 工作过程与总线占用",
-          "score": 5,
-          "matchedTerms": [
-            "处理",
-            "处理和"
           ]
         }
       ]
@@ -7031,6 +7230,22 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 15,
+          "matchedTerms": [
+            "中断",
+            "处理程",
+            "理程序",
+            "程序进",
+            "处理程序",
+            "理程序进",
+            "处理程序进",
+            "系统调",
+            "统调用",
+            "系统调用"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 11,
           "matchedTerms": [
@@ -7066,15 +7281,6 @@
           "matchedTerms": [
             "处理",
             "设备"
-          ]
-        },
-        {
-          "card": "磁盘结构与平均访问时间",
-          "score": 3,
-          "matchedTerms": [
-            "驱动程",
-            "动程序",
-            "驱动程序"
           ]
         }
       ]
@@ -7140,8 +7346,18 @@
       "answer": "D",
       "analysis": "2011-第28题-解析 缺页中断 产生后，需要在内存中找到空闲页框并分配给需要访问的页（可能涉及页面置换），之后缺页中断处理程序调用设备驱动程序做磁盘/O，将位于外存上的页面调入内存，调入后需要修改页表，将页表中代表该页是否在内存的标志位（或有效位）置为 1，并将物理页框号填入相应位置，若必要还需修改其他相关表项等。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "CPU异常响应与现场保护",
+          "score": 9,
+          "matchedTerms": [
+            "中断",
+            "处理程",
+            "理程序",
+            "处理程序"
+          ]
+        },
         {
           "card": "TLB 组相联映射与 LRU 替换",
           "score": 8,
@@ -7183,16 +7399,6 @@
             "物理页框",
             "理页框号",
             "物理页框号"
-          ]
-        },
-        {
-          "card": "整数溢出检测与异常处理",
-          "score": 6,
-          "matchedTerms": [
-            "标志",
-            "的标志",
-            "标志位",
-            "的标志位"
           ]
         }
       ]
@@ -7239,10 +7445,12 @@
           ]
         },
         {
-          "card": "中断与 DMA",
+          "card": "数组跨页与缺页次数",
           "score": 3,
           "matchedTerms": [
-            "减少"
+            "的页面",
+            "页面数",
+            "的页面数"
           ]
         }
       ]
@@ -7522,6 +7730,13 @@
           "score": 4,
           "matchedTerms": [
             "本题"
+          ]
+        },
+        {
+          "card": "阻塞式I/O与驱动程序调用",
+          "score": 2,
+          "matchedTerms": [
+            "认为"
           ]
         },
         {
@@ -7813,6 +8028,48 @@
           ]
         },
         {
+          "card": "关键路径与关键活动",
+          "score": 28,
+          "matchedTerms": [
+            "关键路径",
+            "ve",
+            "vl",
+            "l-e",
+            "活动",
+            "是关键",
+            "关键路",
+            "键路径"
+          ]
+        },
+        {
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 26,
+          "matchedTerms": [
+            "ve",
+            "vl",
+            "最早发",
+            "早发生",
+            "发生时",
+            "生时间",
+            "最早发生",
+            "早发生时",
+            "发生时间",
+            "最早发生时",
+            "早发生时间",
+            "最迟发"
+          ]
+        },
+        {
+          "card": "后缀最大值与最小值维护",
+          "score": 14,
+          "matchedTerms": [
+            "max",
+            "min",
+            "个元素",
+            "时间"
+          ]
+        },
+        {
           "card": "邻接矩阵与邻接表",
           "score": 14,
           "matchedTerms": [
@@ -7821,39 +8078,6 @@
             "邻接矩阵",
             "个顶点",
             "带权图"
-          ]
-        },
-        {
-          "card": "图的存储与遍历",
-          "score": 11,
-          "matchedTerms": [
-            "时间",
-            "邻接矩",
-            "接矩阵",
-            "维数组",
-            "邻接矩阵",
-            "个顶点",
-            "矩阵对",
-            "带权图",
-            "向带权",
-            "向带权图"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 10,
-          "matchedTerms": [
-            "时间",
-            "数组",
-            "个元素"
-          ]
-        },
-        {
-          "card": "单链表重排与原地逆置",
-          "score": 8,
-          "matchedTerms": [
-            "a1",
-            "a2"
           ]
         }
       ]
@@ -7933,6 +8157,14 @@
           ]
         },
         {
+          "card": "GBN序号空间与窗口约束",
+          "score": 5,
+          "matchedTerms": [
+            "因此",
+            "不同于"
+          ]
+        },
+        {
           "card": "IPv6 地址与首部特点",
           "score": 5,
           "matchedTerms": [
@@ -7953,13 +8185,6 @@
           "matchedTerms": [
             "输入",
             "解析"
-          ]
-        },
-        {
-          "card": "ICMP 差错报告与诊断",
-          "score": 4,
-          "matchedTerms": [
-            "利用"
           ]
         }
       ]
@@ -7983,6 +8208,13 @@
             "标记",
             "之间",
             "访问"
+          ]
+        },
+        {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
           ]
         },
         {
@@ -8010,15 +8242,6 @@
           "matchedTerms": [
             "标记"
           ]
-        },
-        {
-          "card": "单链表与双链表",
-          "score": 3,
-          "matchedTerms": [
-            "物理地",
-            "理地址",
-            "物理地址"
-          ]
         }
       ]
     },
@@ -8034,8 +8257,27 @@
       "existingCards": [
         "进程同步与信号量"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 14,
+          "matchedTerms": [
+            "活动",
+            "ve",
+            "es",
+            "ef"
+          ]
+        },
+        {
+          "card": "关键路径与关键活动",
+          "score": 10,
+          "matchedTerms": [
+            "ve",
+            "活动",
+            "的活动"
+          ]
+        },
         {
           "card": "关键路径与 AOE 网",
           "score": 7,
@@ -8045,31 +8287,18 @@
           ]
         },
         {
-          "card": "AVL 树平衡调整",
+          "card": "后缀极值与区间乘积最大值",
           "score": 5,
           "matchedTerms": [
-            "ll"
+            "res",
+            "=0"
           ]
         },
         {
-          "card": "稀疏矩阵三元组表示",
-          "score": 2,
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 5,
           "matchedTerms": [
-            "开始"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 1,
-          "matchedTerms": [
-            "的过程"
-          ]
-        },
-        {
-          "card": "单链表头插法与尾插法",
-          "score": 1,
-          "matchedTerms": [
-            "的含义"
+            "ve"
           ]
         }
       ]
@@ -8318,10 +8547,10 @@
           ]
         },
         {
-          "card": "栈的顺序存储与共享栈",
+          "card": "活动时间余量与并行区间",
           "score": 2,
           "matchedTerms": [
-            "的典型"
+            "确定"
           ]
         }
       ]
@@ -8611,13 +8840,10 @@
           ]
         },
         {
-          "card": "欧拉路径与欧拉回路",
-          "score": 4,
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 6,
           "matchedTerms": [
-            "题目若",
-            "邻接矩",
-            "接矩阵",
-            "邻接矩阵"
+            "拓扑序"
           ]
         }
       ]
@@ -8671,18 +8897,18 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 3,
+          "matchedTerms": [
+            "ef"
+          ]
+        },
+        {
           "card": "十字链表与邻接多重表",
           "score": 3,
           "matchedTerms": [
             "顶点的",
             "有向图"
-          ]
-        },
-        {
-          "card": "归并排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "得到"
           ]
         }
       ]
@@ -9042,12 +9268,27 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 5,
+          "matchedTerms": [
+            "的最大值",
+            "最大值"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 5,
           "matchedTerms": [
             "int",
             "的最大",
             "最大值"
+          ]
+        },
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
           ]
         },
         {
@@ -9059,20 +9300,6 @@
         },
         {
           "card": "归并排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "得到"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 2,
-          "matchedTerms": [
-            "执行"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
           "score": 2,
           "matchedTerms": [
             "得到"
@@ -9121,10 +9348,10 @@
           ]
         },
         {
-          "card": "空间换时间与辅助数组",
+          "card": "后缀极值与区间乘积最大值",
           "score": 1,
           "matchedTerms": [
-            "正整数"
+            "最大正"
           ]
         }
       ]
@@ -9220,10 +9447,10 @@
           ]
         },
         {
-          "card": "最小正整数缺失值查找",
+          "card": "后缀极值与区间乘积最大值",
           "score": 2,
           "matchedTerms": [
-            "访问"
+            "写入"
           ]
         }
       ]
@@ -9520,6 +9747,16 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 9,
+          "matchedTerms": [
+            "中断",
+            "系统调",
+            "统调用",
+            "系统调用"
+          ]
+        },
+        {
           "card": "虚拟地址分页与页内偏移",
           "score": 4,
           "matchedTerms": [
@@ -9531,13 +9768,6 @@
           "score": 4,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 2,
-          "matchedTerms": [
-            "中断"
           ]
         }
       ]
@@ -9552,8 +9782,19 @@
       "answer": "B",
       "analysis": "2012-第24题-解析 子程序调用只需保存程序断点，即该指令的下一条指令的地址；中断调用子程序不仅要保护断点（PC 的内容），而且要保护程序状态字寄存器的内容 PSW。在中断处理中，最重要的两个寄存器是 PC 和 PSWR。",
       "existingCards": [],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
+        {
+          "card": "CPU异常响应与现场保护",
+          "score": 22,
+          "matchedTerms": [
+            "psw",
+            "中断",
+            "断点",
+            "状态",
+            "需保存"
+          ]
+        },
         {
           "card": "指令系统与寻址方式",
           "score": 16,
@@ -9613,17 +9854,6 @@
             "在中断",
             "指令的",
             "条指令的"
-          ]
-        },
-        {
-          "card": "单周期与多周期数据通路",
-          "score": 10,
-          "matchedTerms": [
-            "pc",
-            "一条指",
-            "条指令",
-            "一条指令",
-            "寄存器"
           ]
         }
       ]
@@ -9699,8 +9929,21 @@
       "answer": "A",
       "analysis": "2012-第26题-解析 设备管理软件一般分为 以下层次：用户层、与设备无关的系统调用处理层、设备驱动程序以及中断处理程序。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "CPU异常响应与现场保护",
+          "score": 12,
+          "matchedTerms": [
+            "中断",
+            "处理程",
+            "理程序",
+            "处理程序",
+            "系统调",
+            "统调用",
+            "系统调用"
+          ]
+        },
         {
           "card": "程序查询与中断驱动 I/O",
           "score": 7,
@@ -9733,16 +9976,6 @@
           "matchedTerms": [
             "处理",
             "设备"
-          ]
-        },
-        {
-          "card": "磁盘结构与平均访问时间",
-          "score": 4,
-          "matchedTerms": [
-            "通常由",
-            "驱动程",
-            "动程序",
-            "驱动程序"
           ]
         }
       ]
@@ -9777,6 +10010,13 @@
           ]
         },
         {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 5,
+          "matchedTerms": [
+            "va"
+          ]
+        },
+        {
           "card": "流水线结构冒险与数据冒险",
           "score": 3,
           "matchedTerms": [
@@ -9788,13 +10028,6 @@
           "score": 3,
           "matchedTerms": [
             "va"
-          ]
-        },
-        {
-          "card": "RISC-V 指令格式与寄存器编码",
-          "score": 3,
-          "matchedTerms": [
-            "r1"
           ]
         }
       ]
@@ -9822,6 +10055,18 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 15,
+          "matchedTerms": [
+            "中断",
+            "cpu",
+            "状态",
+            "系统调",
+            "统调用",
+            "系统调用"
+          ]
+        },
+        {
           "card": "单周期与多周期数据通路",
           "score": 9,
           "matchedTerms": [
@@ -9843,13 +10088,6 @@
           "score": 8,
           "matchedTerms": [
             "字节",
-            "cpu"
-          ]
-        },
-        {
-          "card": "硬布线控制器与微程序控制器",
-          "score": 7,
-          "matchedTerms": [
             "cpu"
           ]
         }
@@ -9922,6 +10160,17 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 6,
+          "matchedTerms": [
+            "并返回",
+            "处理器",
+            "系统调",
+            "统调用",
+            "系统调用"
+          ]
+        },
+        {
           "card": "数组下标寻址与元素宽度",
           "score": 4,
           "matchedTerms": [
@@ -9948,13 +10197,6 @@
           "score": 3,
           "matchedTerms": [
             "处理"
-          ]
-        },
-        {
-          "card": "RISC-V 指令格式与寄存器编码",
-          "score": 3,
-          "matchedTerms": [
-            "使用"
           ]
         }
       ]
@@ -10510,6 +10752,13 @@
           ]
         },
         {
+          "card": "GBN信道利用率与发送窗口",
+          "score": 4,
+          "matchedTerms": [
+            "要求"
+          ]
+        },
+        {
           "card": "热土豆路由与 IGP 出口距离",
           "score": 3,
           "matchedTerms": [
@@ -10523,13 +10772,6 @@
           "matchedTerms": [
             "长度",
             "情况下"
-          ]
-        },
-        {
-          "card": "交换机自学习与转发",
-          "score": 2,
-          "matchedTerms": [
-            "题目"
           ]
         }
       ]
@@ -10795,6 +11037,13 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "数组行优先与列优先存储",
           "score": 6,
           "matchedTerms": [
@@ -10810,13 +11059,6 @@
             "存储空",
             "储空间",
             "存储空间"
-          ]
-        },
-        {
-          "card": "比较计数排序与秩排序",
-          "score": 2,
-          "matchedTerms": [
-            "空间"
           ]
         }
       ]
@@ -10869,10 +11111,11 @@
           ]
         },
         {
-          "card": "单链表重排与原地逆置",
-          "score": 4,
+          "card": "活动时间余量与并行区间",
+          "score": 5,
           "matchedTerms": [
-            "a1"
+            "ef",
+            "确定"
           ]
         }
       ]
@@ -10925,6 +11168,18 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 18,
+          "matchedTerms": [
+            "max",
+            "min",
+            "每个元",
+            "个元素",
+            "每个元素",
+            "时间"
+          ]
+        },
+        {
           "card": "空间换时间与辅助数组",
           "score": 17,
           "matchedTerms": [
@@ -10949,19 +11204,6 @@
             "每个元",
             "每个元素",
             "元素的"
-          ]
-        },
-        {
-          "card": "希尔排序与增量序列",
-          "score": 14,
-          "matchedTerms": [
-            "时间复",
-            "间复杂",
-            "复杂度",
-            "时间复杂",
-            "间复杂度",
-            "时间复杂度",
-            "结束"
           ]
         }
       ]
@@ -11134,11 +11376,10 @@
           ]
         },
         {
-          "card": "前缀编码与二叉判定树",
+          "card": "后缀极值与区间乘积最大值",
           "score": 2,
           "matchedTerms": [
-            "叶结点",
-            "的情形"
+            "=0"
           ]
         }
       ]
@@ -11432,33 +11673,45 @@
           ]
         },
         {
+          "card": "关键路径与关键活动",
+          "score": 19,
+          "matchedTerms": [
+            "关键路径",
+            "活动",
+            "aoe",
+            "工期",
+            "的活动",
+            "关键路",
+            "键路径"
+          ]
+        },
+        {
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 10,
+          "matchedTerms": [
+            "aoe",
+            "活动时",
+            "动时间",
+            "活动时间"
+          ]
+        },
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "活动",
+            "活动时",
+            "动时间",
+            "活动时间"
+          ]
+        },
+        {
           "card": "并查集与路径压缩",
           "score": 6,
           "matchedTerms": [
             "路径上",
             "径上的",
             "路径上的"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 6,
-          "matchedTerms": [
-            "时间"
-          ]
-        },
-        {
-          "card": "AVL 树平衡调整",
-          "score": 5,
-          "matchedTerms": [
-            "bf"
-          ]
-        },
-        {
-          "card": "最小距离三元组的三指针扫描",
-          "score": 4,
-          "matchedTerms": [
-            "时间"
           ]
         }
       ]
@@ -11623,6 +11876,13 @@
           ]
         },
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 2,
+          "matchedTerms": [
+            "=0"
+          ]
+        },
+        {
           "card": "树与森林的存储结构",
           "score": 1,
           "matchedTerms": [
@@ -11728,6 +11988,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "二次探测法与开放定址散列",
           "score": 5,
           "matchedTerms": [
@@ -11755,13 +12022,6 @@
           "score": 4,
           "matchedTerms": [
             "标记"
-          ]
-        },
-        {
-          "card": "链式栈与链式队列",
-          "score": 4,
-          "matchedTerms": [
-            "式存储"
           ]
         }
       ]
@@ -11828,6 +12088,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 3,
           "matchedTerms": [
@@ -11839,6 +12106,13 @@
           "score": 2,
           "matchedTerms": [
             "执行"
+          ]
+        },
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 1,
+          "matchedTerms": [
+            "-1"
           ]
         }
       ]
@@ -11855,6 +12129,14 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "ve",
+            "es"
+          ]
+        },
         {
           "card": "最小距离三元组的三指针扫描",
           "score": 6,
@@ -11878,18 +12160,10 @@
           ]
         },
         {
-          "card": "最小正整数缺失值查找",
+          "card": "关键路径与关键活动",
           "score": 5,
           "matchedTerms": [
-            "之间",
-            "答案"
-          ]
-        },
-        {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
+            "ve"
           ]
         }
       ]
@@ -11930,17 +12204,17 @@
           ]
         },
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 2,
+          "matchedTerms": [
+            "时访问"
+          ]
+        },
+        {
           "card": "前缀编码与二叉判定树",
           "score": 2,
           "matchedTerms": [
             "冲突"
-          ]
-        },
-        {
-          "card": "外部排序与多路归并",
-          "score": 2,
-          "matchedTerms": [
-            "磁盘"
           ]
         }
       ]
@@ -12044,10 +12318,10 @@
           ]
         },
         {
-          "card": "树的基本术语与性质",
+          "card": "活动时间余量与并行区间",
           "score": 4,
           "matchedTerms": [
-            "的基本"
+            "执行"
           ]
         }
       ]
@@ -12123,6 +12397,13 @@
           ]
         },
         {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 6,
+          "matchedTerms": [
+            "索引"
+          ]
+        },
+        {
           "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 4,
           "matchedTerms": [
@@ -12175,6 +12456,19 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 12,
+          "matchedTerms": [
+            "中断",
+            "处理程",
+            "理程序",
+            "处理程序",
+            "系统调",
+            "统调用",
+            "系统调用"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 8,
           "matchedTerms": [
@@ -12199,14 +12493,6 @@
           "score": 6,
           "matchedTerms": [
             "中断处理"
-          ]
-        },
-        {
-          "card": "DMA 工作过程与总线占用",
-          "score": 6,
-          "matchedTerms": [
-            "处理",
-            "设备"
           ]
         }
       ]
@@ -12233,6 +12519,16 @@
           ]
         },
         {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 9,
+          "matchedTerms": [
+            "索引",
+            "地址索",
+            "址索引",
+            "地址索引"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 6,
           "matchedTerms": [
@@ -12248,15 +12544,8 @@
           ]
         },
         {
-          "card": "Cache 直接映射与组相联",
-          "score": 2,
-          "matchedTerms": [
-            "块大小"
-          ]
-        },
-        {
-          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
-          "score": 2,
+          "card": "Cache跨块访问与缺失率",
+          "score": 4,
           "matchedTerms": [
             "长度"
           ]
@@ -12319,8 +12608,19 @@
       "answer": "B",
       "analysis": "2013-第28题-解析 需要在系统 内核态 执行的操作是整数除零操作（需要中断处理）和 read 系统调用函数，sin() 函数调用是在用户态下进行的。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "CPU异常响应与现场保护",
+          "score": 12,
+          "matchedTerms": [
+            "中断",
+            "切换到内核态",
+            "系统调",
+            "统调用",
+            "系统调用"
+          ]
+        },
         {
           "card": "程序查询与中断驱动 I/O",
           "score": 7,
@@ -12353,13 +12653,6 @@
           "matchedTerms": [
             "ea",
             "的操作"
-          ]
-        },
-        {
-          "card": "中断与 DMA",
-          "score": 6,
-          "matchedTerms": [
-            "中断处理"
           ]
         }
       ]
@@ -12436,6 +12729,13 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 6,
+          "matchedTerms": [
+            "中断"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 5,
           "matchedTerms": [
@@ -12449,13 +12749,6 @@
           "matchedTerms": [
             "i2",
             "执行的"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 4,
-          "matchedTerms": [
-            "执行"
           ]
         }
       ]
@@ -12547,6 +12840,20 @@
           ]
         },
         {
+          "card": "Cache组相联映射与地址字段",
+          "score": 2,
+          "matchedTerms": [
+            "不是"
+          ]
+        },
+        {
+          "card": "CPU异常响应与现场保护",
+          "score": 2,
+          "matchedTerms": [
+            "状态"
+          ]
+        },
+        {
           "card": "ALU 标志位 CF 与 OF",
           "score": 1,
           "matchedTerms": [
@@ -12632,6 +12939,13 @@
           "score": 1,
           "matchedTerms": [
             "后一个"
+          ]
+        },
+        {
+          "card": "共享铁锹互斥与资源锁",
+          "score": 1,
+          "matchedTerms": [
+            "的信号"
           ]
         },
         {
@@ -12930,17 +13244,18 @@
           ]
         },
         {
+          "card": "GBN序号空间与窗口约束",
+          "score": 6,
+          "matchedTerms": [
+            "因此",
+            "已知"
+          ]
+        },
+        {
           "card": "奈奎斯特与香农信道容量",
           "score": 5,
           "matchedTerms": [
             "log"
-          ]
-        },
-        {
-          "card": "海明码与纠错距离",
-          "score": 4,
-          "matchedTerms": [
-            "满足"
           ]
         }
       ]
@@ -13079,18 +13394,19 @@
           ]
         },
         {
+          "card": "GBN序号空间与窗口约束",
+          "score": 8,
+          "matchedTerms": [
+            "时需",
+            "因此"
+          ]
+        },
+        {
           "card": "IPv6 地址与首部特点",
           "score": 8,
           "matchedTerms": [
             "地址",
             "解析"
-          ]
-        },
-        {
-          "card": "CSMA/CA 与无线局域网",
-          "score": 7,
-          "matchedTerms": [
-            "ca"
           ]
         }
       ]
@@ -13162,8 +13478,25 @@
       "answer": null,
       "analysis": "2013-第45题-解析 出入口一次仅允许一个人通过，设置互斥信号量 mutex, 初值为 1。博物馆最多可同时容 纳 500 人，故设置信号量 empty, 初值为 500。 semaphore empty = 500 ; semaphore mutex = 1 ; visitor () { P ( empty ); P ( mutex ); 进门 ; V ( mutex ); 参观 ; P ( mutex ); 出门 ; V ( mutex ); V ( empty ); } 【评分说明】 ①信号量初值给 1 分，说明含义给 1 分，两个信号量的初值和含义共 4 分。 ②对 mutex 的 P、V 操作正确给 2 分。 ③对 empty 的 P、V 操作正确给 1 分。 ④其他答案，参照①~③的标准给分。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "关键路径与关键活动",
+          "score": 10,
+          "matchedTerms": [
+            "ve",
+            "活动",
+            "的活动"
+          ]
+        },
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 8,
+          "matchedTerms": [
+            "活动",
+            "ve"
+          ]
+        },
         {
           "card": "关键路径与 AOE 网",
           "score": 7,
@@ -13173,24 +13506,17 @@
           ]
         },
         {
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 5,
+          "matchedTerms": [
+            "ve"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 2,
           "matchedTerms": [
             "答案"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 1,
-          "matchedTerms": [
-            "的过程"
-          ]
-        },
-        {
-          "card": "单链表头插法与尾插法",
-          "score": 1,
-          "matchedTerms": [
-            "的含义"
           ]
         }
       ]
@@ -13226,6 +13552,13 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 5,
           "matchedTerms": [
@@ -13238,15 +13571,6 @@
           "score": 4,
           "matchedTerms": [
             "表达式"
-          ]
-        },
-        {
-          "card": "单链表与双链表",
-          "score": 3,
-          "matchedTerms": [
-            "物理地",
-            "理地址",
-            "物理地址"
           ]
         }
       ]
@@ -13765,20 +14089,19 @@
           ]
         },
         {
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 6,
+          "matchedTerms": [
+            "拓扑序"
+          ]
+        },
+        {
           "card": "二次探测法与开放定址散列",
           "score": 3,
           "matchedTerms": [
             "序列可",
             "列可能",
             "序列可能"
-          ]
-        },
-        {
-          "card": "归并排序与稳定性",
-          "score": 3,
-          "matchedTerms": [
-            "得到",
-            "序列分"
           ]
         }
       ]
@@ -14053,6 +14376,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 4,
           "matchedTerms": [
@@ -14068,13 +14398,6 @@
         },
         {
           "card": "比较计数排序与秩排序",
-          "score": 2,
-          "matchedTerms": [
-            "时间"
-          ]
-        },
-        {
-          "card": "递归算法与递归树",
           "score": 2,
           "matchedTerms": [
             "时间"
@@ -14681,6 +15004,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 6,
+          "matchedTerms": [
+            "中断"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 4,
           "matchedTerms": [
@@ -14706,13 +15036,6 @@
           "score": 2,
           "matchedTerms": [
             "指令"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 2,
-          "matchedTerms": [
-            "执行"
           ]
         }
       ]
@@ -14764,10 +15087,11 @@
           ]
         },
         {
-          "card": "定点补码加减与溢出",
-          "score": 2,
+          "card": "CPU异常响应与现场保护",
+          "score": 4,
           "matchedTerms": [
-            "得到"
+            "完成后",
+            "状态"
           ]
         }
       ]
@@ -14785,12 +15109,27 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "Cache组相联映射与地址字段",
+          "score": 8,
+          "matchedTerms": [
+            "kb",
+            "容量"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 7,
           "matchedTerms": [
             "bit",
             "kb",
             "是否被"
+          ]
+        },
+        {
+          "card": "数组跨页与缺页次数",
+          "score": 5,
+          "matchedTerms": [
+            "kb"
           ]
         },
         {
@@ -14801,24 +15140,10 @@
           ]
         },
         {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 3,
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 5,
           "matchedTerms": [
             "kb"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 2,
-          "matchedTerms": [
-            "容量为"
-          ]
-        },
-        {
-          "card": "立即数扩展与移位指令",
-          "score": 2,
-          "matchedTerms": [
-            "因此"
           ]
         }
       ]
@@ -14835,6 +15160,15 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 8,
+          "matchedTerms": [
+            "地址转换",
+            "地址转",
+            "址转换"
+          ]
+        },
         {
           "card": "TLB 组相联映射与 LRU 替换",
           "score": 7,
@@ -14865,14 +15199,6 @@
           "card": "小端字节序与补码读取",
           "score": 4,
           "matchedTerms": [
-            "地址"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 4,
-          "matchedTerms": [
-            "物理地址",
             "地址"
           ]
         }
@@ -14965,17 +15291,17 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 6,
+          "matchedTerms": [
+            "异常"
+          ]
+        },
+        {
           "card": "存储器层次与主存组织",
           "score": 3,
           "matchedTerms": [
             "lru"
-          ]
-        },
-        {
-          "card": "流水线结构冒险与数据冒险",
-          "score": 3,
-          "matchedTerms": [
-            "i2"
           ]
         }
       ]
@@ -15003,6 +15329,14 @@
           ]
         },
         {
+          "card": "Cache组相联映射与地址字段",
+          "score": 5,
+          "matchedTerms": [
+            "容量",
+            "不是"
+          ]
+        },
+        {
           "card": "数组下标寻址与元素宽度",
           "score": 4,
           "matchedTerms": [
@@ -15024,13 +15358,6 @@
             "数据传",
             "据传输",
             "数据传输"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 2,
-          "matchedTerms": [
-            "缓冲区"
           ]
         }
       ]
@@ -15067,6 +15394,15 @@
           ]
         },
         {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 8,
+          "matchedTerms": [
+            "地址转换",
+            "地址转",
+            "址转换"
+          ]
+        },
+        {
           "card": "小端字节序与补码读取",
           "score": 6,
           "matchedTerms": [
@@ -15080,17 +15416,6 @@
           "matchedTerms": [
             "字节",
             "地址"
-          ]
-        },
-        {
-          "card": "大小端存储",
-          "score": 5,
-          "matchedTerms": [
-            "字节数",
-            "在内存",
-            "内存中",
-            "的字节",
-            "在内存中"
           ]
         }
       ]
@@ -15195,10 +15520,10 @@
           ]
         },
         {
-          "card": "临界区与共享缓冲区",
+          "card": "进程虚拟地址空间与段布局",
           "score": 3,
           "matchedTerms": [
-            "c1"
+            "text"
           ]
         }
       ]
@@ -15367,6 +15692,20 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "进程虚拟地址空间与段布局",
+          "score": 6,
+          "matchedTerms": [
+            "数据段"
+          ]
+        },
+        {
+          "card": "全局指针与动态内存分配",
+          "score": 6,
+          "matchedTerms": [
+            "数据段"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 5,
           "matchedTerms": [
@@ -15385,20 +15724,6 @@
           "score": 4,
           "matchedTerms": [
             "避免"
-          ]
-        },
-        {
-          "card": "分页与分段的区别",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "伙伴系统与内存回收",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
           ]
         }
       ]
@@ -15716,6 +16041,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 3,
+          "matchedTerms": [
+            "ef"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 3,
           "matchedTerms": [
@@ -15735,13 +16067,6 @@
           "score": 3,
           "matchedTerms": [
             "因为"
-          ]
-        },
-        {
-          "card": "归并排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "得到"
           ]
         }
       ]
@@ -15841,6 +16166,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 4,
           "matchedTerms": [
@@ -15855,15 +16187,6 @@
             "元素在",
             "元素的",
             "=a"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 3,
-          "matchedTerms": [
-            "在内存",
-            "内存中",
-            "在内存中"
           ]
         }
       ]
@@ -15880,6 +16203,14 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "后缀最大值与最小值维护",
+          "score": 8,
+          "matchedTerms": [
+            "空间",
+            "题的"
+          ]
+        },
         {
           "card": "数组行优先与列优先存储",
           "score": 6,
@@ -15914,14 +16245,6 @@
             "只需",
             "操作需"
           ]
-        },
-        {
-          "card": "外部排序与多路归并",
-          "score": 3,
-          "matchedTerms": [
-            "磁盘",
-            "的文件"
-          ]
         }
       ]
     },
@@ -15938,6 +16261,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "ve",
+            "ef"
+          ]
+        },
+        {
           "card": "循环链式队列与空闲结点复用",
           "score": 6,
           "matchedTerms": [
@@ -15953,25 +16284,18 @@
           ]
         },
         {
+          "card": "关键路径与关键活动",
+          "score": 5,
+          "matchedTerms": [
+            "ve"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 5,
           "matchedTerms": [
             "之间",
             "访问"
-          ]
-        },
-        {
-          "card": "AVL 树平衡调整",
-          "score": 5,
-          "matchedTerms": [
-            "ll"
-          ]
-        },
-        {
-          "card": "最小距离三元组的三指针扫描",
-          "score": 3,
-          "matchedTerms": [
-            "int"
           ]
         }
       ]
@@ -15988,6 +16312,15 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 6,
+          "matchedTerms": [
+            "n-1",
+            "=0",
+            "-1"
+          ]
+        },
         {
           "card": "最小距离三元组的三指针扫描",
           "score": 6,
@@ -16017,13 +16350,6 @@
           "score": 1,
           "matchedTerms": [
             "的信息"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 1,
-          "matchedTerms": [
-            "n2"
           ]
         }
       ]
@@ -16267,17 +16593,17 @@
           ]
         },
         {
-          "card": "单链表重排与原地逆置",
-          "score": 4,
+          "card": "关键路径与关键活动",
+          "score": 5,
           "matchedTerms": [
-            "a2"
+            "ve"
           ]
         },
         {
-          "card": "树的基本术语与性质",
-          "score": 4,
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 5,
           "matchedTerms": [
-            "深度"
+            "ve"
           ]
         }
       ]
@@ -16665,6 +16991,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "算法五个特性",
           "score": 4,
           "matchedTerms": [
@@ -16719,6 +17052,13 @@
           "score": 2,
           "matchedTerms": [
             "的最小"
+          ]
+        },
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 1,
+          "matchedTerms": [
+            "-1"
           ]
         }
       ]
@@ -16828,6 +17168,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "十字链表与邻接多重表",
           "score": 4,
           "matchedTerms": [
@@ -16842,14 +17189,7 @@
           ]
         },
         {
-          "card": "算法复杂度",
-          "score": 2,
-          "matchedTerms": [
-            "对应"
-          ]
-        },
-        {
-          "card": "线性表与顺序表",
+          "card": "后缀极值与区间乘积最大值",
           "score": 2,
           "matchedTerms": [
             "写入"
@@ -17030,6 +17370,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 4,
           "matchedTerms": [
@@ -17057,13 +17404,6 @@
           "matchedTerms": [
             "空间"
           ]
-        },
-        {
-          "card": "冒泡排序与简单选择排序",
-          "score": 2,
-          "matchedTerms": [
-            "交换"
-          ]
         }
       ]
     },
@@ -17090,6 +17430,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 3,
           "matchedTerms": [
@@ -17108,13 +17455,6 @@
           "score": 2,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "欧拉路径与欧拉回路",
-          "score": 2,
-          "matchedTerms": [
-            "返回"
           ]
         }
       ]
@@ -17190,6 +17530,15 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 16,
+          "matchedTerms": [
+            "异常",
+            "中断",
+            "cpu"
+          ]
+        },
+        {
           "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 11,
           "matchedTerms": [
@@ -17221,14 +17570,6 @@
           "matchedTerms": [
             "cpu",
             "寄存器"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 8,
-          "matchedTerms": [
-            "执行",
-            "cpu"
           ]
         }
       ]
@@ -17483,28 +17824,28 @@
           ]
         },
         {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 12,
+          "matchedTerms": [
+            "索引",
+            "kb",
+            "则地址"
+          ]
+        },
+        {
+          "card": "Cache组相联映射与地址字段",
+          "score": 8,
+          "matchedTerms": [
+            "kb",
+            "块大小"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 7,
           "matchedTerms": [
             "字节",
             "mb"
-          ]
-        },
-        {
-          "card": "立即数扩展与移位指令",
-          "score": 6,
-          "matchedTerms": [
-            "偏移量",
-            "移量按",
-            "偏移量按"
-          ]
-        },
-        {
-          "card": "小端字节序与补码读取",
-          "score": 6,
-          "matchedTerms": [
-            "地址",
-            "字节"
           ]
         }
       ]
@@ -17535,6 +17876,14 @@
           ]
         },
         {
+          "card": "数组跨页与缺页次数",
+          "score": 7,
+          "matchedTerms": [
+            "分页",
+            "页面数"
+          ]
+        },
+        {
           "card": "Cache 替换与写策略",
           "score": 6,
           "matchedTerms": [
@@ -17550,10 +17899,12 @@
           ]
         },
         {
-          "card": "小端字节序与补码读取",
-          "score": 2,
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 3,
           "matchedTerms": [
-            "组合"
+            "可能出",
+            "能出现",
+            "可能出现"
           ]
         }
       ]
@@ -17625,6 +17976,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "Cache跨块访问与缺失率",
+          "score": 4,
+          "matchedTerms": [
+            "次访问"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 4,
           "matchedTerms": [
@@ -17650,13 +18008,6 @@
           "score": 2,
           "matchedTerms": [
             "磁道"
-          ]
-        },
-        {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 2,
-          "matchedTerms": [
-            "访问"
           ]
         }
       ]
@@ -17755,6 +18106,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "多阶段流水线的信号量同步",
+          "score": 6,
+          "matchedTerms": [
+            "流水线"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 5,
           "matchedTerms": [
@@ -17778,13 +18136,6 @@
         },
         {
           "card": "分页与分段的区别",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "伙伴系统与内存回收",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -17955,6 +18306,20 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "进程虚拟地址空间与段布局",
+          "score": 6,
+          "matchedTerms": [
+            "数据段"
+          ]
+        },
+        {
+          "card": "全局指针与动态内存分配",
+          "score": 6,
+          "matchedTerms": [
+            "数据段"
+          ]
+        },
+        {
           "card": "伙伴系统与内存回收",
           "score": 5,
           "matchedTerms": [
@@ -17975,21 +18340,6 @@
           "score": 5,
           "matchedTerms": [
             "c1"
-          ]
-        },
-        {
-          "card": "页表结构与地址转换",
-          "score": 5,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "TLB 与快表命中",
-          "score": 5,
-          "matchedTerms": [
-            "kb",
-            "忽略"
           ]
         }
       ]
@@ -18275,11 +18625,11 @@
           ]
         },
         {
-          "card": "NAT 与端口映射",
-          "score": 6,
+          "card": "GBN序号空间与窗口约束",
+          "score": 7,
           "matchedTerms": [
-            "地址",
-            "r2"
+            "因此",
+            "sr"
           ]
         }
       ]
@@ -18357,6 +18707,13 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "数组行优先与列优先存储",
           "score": 5,
           "matchedTerms": [
@@ -18379,13 +18736,6 @@
             "访问一",
             "问一个",
             "访问一个"
-          ]
-        },
-        {
-          "card": "前缀编码与二叉判定树",
-          "score": 2,
-          "matchedTerms": [
-            "因为"
           ]
         }
       ]
@@ -18411,6 +18761,14 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "ve",
+            "es"
+          ]
+        },
+        {
           "card": "二次探测法与开放定址散列",
           "score": 6,
           "matchedTerms": [
@@ -18431,15 +18789,6 @@
           "score": 5,
           "matchedTerms": [
             "ve"
-          ]
-        },
-        {
-          "card": "最小距离三元组的三指针扫描",
-          "score": 5,
-          "matchedTerms": [
-            "int",
-            "的最大",
-            "错误地"
           ]
         }
       ]
@@ -18732,20 +19081,19 @@
           ]
         },
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 4,
+          "matchedTerms": [
+            "n-1",
+            "-1"
+          ]
+        },
+        {
           "card": "链式栈与链式队列",
           "score": 3,
           "matchedTerms": [
             "个结点",
             "结点的"
-          ]
-        },
-        {
-          "card": "树与森林的存储结构",
-          "score": 3,
-          "matchedTerms": [
-            "森林中",
-            "结点的",
-            "的结点"
           ]
         }
       ]
@@ -19157,6 +19505,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "红黑树性质与高度",
           "score": 2,
           "matchedTerms": [
@@ -19200,6 +19555,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 3,
           "matchedTerms": [
@@ -19220,13 +19582,6 @@
           "score": 2,
           "matchedTerms": [
             "对应"
-          ]
-        },
-        {
-          "card": "归并排序与稳定性",
-          "score": 1,
-          "matchedTerms": [
-            "的数据"
           ]
         }
       ]
@@ -19423,6 +19778,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "空间换时间与辅助数组",
           "score": 6,
           "matchedTerms": [
@@ -19451,13 +19813,6 @@
           "matchedTerms": [
             "计数器"
           ]
-        },
-        {
-          "card": "抽象数据类型 ADT",
-          "score": 1,
-          "matchedTerms": [
-            "取决于"
-          ]
         }
       ]
     },
@@ -19477,10 +19832,24 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "红黑树性质与高度",
           "score": 2,
           "matchedTerms": [
             "执行"
+          ]
+        },
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 2,
+          "matchedTerms": [
+            "写入"
           ]
         },
         {
@@ -19495,20 +19864,6 @@
           "score": 2,
           "matchedTerms": [
             "写入"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 1,
-          "matchedTerms": [
-            "在数据"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 1,
-          "matchedTerms": [
-            "3后"
           ]
         }
       ]
@@ -19553,18 +19908,18 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "前缀编码与二叉判定树",
           "score": 4,
           "matchedTerms": [
             "冲突",
             "因为"
-          ]
-        },
-        {
-          "card": "散列表装填因子与查找终止",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
           ]
         }
       ]
@@ -19591,6 +19946,14 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 8,
+          "matchedTerms": [
+            "空间",
+            "时间"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 7,
           "matchedTerms": [
@@ -19608,13 +19971,6 @@
         },
         {
           "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
-          "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
             "本题"
@@ -19642,6 +19998,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 4,
           "matchedTerms": [
@@ -19660,13 +20023,6 @@
           "score": 3,
           "matchedTerms": [
             "输出"
-          ]
-        },
-        {
-          "card": "外部排序与多路归并",
-          "score": 3,
-          "matchedTerms": [
-            "cpu"
           ]
         }
       ]
@@ -19721,11 +20077,11 @@
           ]
         },
         {
-          "card": "指令系统与寻址方式",
-          "score": 8,
+          "card": "CPU异常响应与现场保护",
+          "score": 10,
           "matchedTerms": [
-            "直接",
-            "间接"
+            "中断",
+            "cpu"
           ]
         }
       ]
@@ -19913,6 +20269,18 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 16,
+          "matchedTerms": [
+            "中断",
+            "cpu",
+            "止进程",
+            "状态",
+            "处理器",
+            "的同步"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 12,
           "matchedTerms": [
@@ -19944,14 +20312,6 @@
           "matchedTerms": [
             "cpu"
           ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 7,
-          "matchedTerms": [
-            "cpu",
-            "执行"
-          ]
         }
       ]
     },
@@ -19967,6 +20327,23 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "CPU异常响应与现场保护",
+          "score": 8,
+          "matchedTerms": [
+            "异常",
+            "状态"
+          ]
+        },
+        {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 8,
+          "matchedTerms": [
+            "地址转换",
+            "地址转",
+            "址转换"
+          ]
+        },
         {
           "card": "Cache 映射与命中率",
           "score": 6,
@@ -19989,21 +20366,6 @@
           "matchedTerms": [
             "得到",
             "的结果"
-          ]
-        },
-        {
-          "card": "数组下标寻址与元素宽度",
-          "score": 3,
-          "matchedTerms": [
-            "地址为"
-          ]
-        },
-        {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 3,
-          "matchedTerms": [
-            "访问",
-            "到物理"
           ]
         }
       ]
@@ -20037,6 +20399,13 @@
           ]
         },
         {
+          "card": "Cache跨块访问与缺失率",
+          "score": 4,
+          "matchedTerms": [
+            "次访问"
+          ]
+        },
+        {
           "card": "流水线结构冒险与数据冒险",
           "score": 2,
           "matchedTerms": [
@@ -20044,17 +20413,11 @@
           ]
         },
         {
-          "card": "TLB 组相联映射与 LRU 替换",
+          "card": "数组跨页与缺页次数",
           "score": 2,
           "matchedTerms": [
-            "访问"
-          ]
-        },
-        {
-          "card": "磁盘结构与平均访问时间",
-          "score": 1,
-          "matchedTerms": [
-            "存访问"
+            "的页面",
+            "次访问"
           ]
         }
       ]
@@ -20155,10 +20518,12 @@
           ]
         },
         {
-          "card": "计算机系统层次结构",
-          "score": 2,
+          "card": "CPU异常响应与现场保护",
+          "score": 3,
           "matchedTerms": [
-            "之间的"
+            "外部设",
+            "部设备",
+            "外部设备"
           ]
         }
       ]
@@ -20207,10 +20572,10 @@
           ]
         },
         {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 2,
+          "card": "Cache组相联映射与地址字段",
+          "score": 3,
           "matchedTerms": [
-            "每次"
+            "组数"
           ]
         }
       ]
@@ -20627,30 +20992,25 @@
           ]
         },
         {
+          "card": "进程虚拟地址空间与段布局",
+          "score": 7,
+          "matchedTerms": [
+            "数据段",
+            "图中的"
+          ]
+        },
+        {
+          "card": "全局指针与动态内存分配",
+          "score": 6,
+          "matchedTerms": [
+            "数据段"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 6,
           "matchedTerms": [
             "同步"
-          ]
-        },
-        {
-          "card": "FIFO、LRU 与 OPT 页面置换",
-          "score": 6,
-          "matchedTerms": [
-            "时选择",
-            "选择一",
-            "择一个",
-            "时选择一",
-            "选择一个",
-            "时选择一个"
-          ]
-        },
-        {
-          "card": "改进型 CLOCK 页面置换",
-          "score": 5,
-          "matchedTerms": [
-            "最后",
-            "过程中"
           ]
         }
       ]
@@ -20741,6 +21101,15 @@
           ]
         },
         {
+          "card": "IPv4 CIDR与VLSM子网划分",
+          "score": 8,
+          "matchedTerms": [
+            "属于",
+            "满足",
+            "题目已"
+          ]
+        },
+        {
           "card": "IP TTL 与路由转发",
           "score": 6,
           "matchedTerms": [
@@ -20764,13 +21133,6 @@
           "matchedTerms": [
             "seq",
             "解析"
-          ]
-        },
-        {
-          "card": "海明码与纠错距离",
-          "score": 4,
-          "matchedTerms": [
-            "满足"
           ]
         }
       ]
@@ -20814,18 +21176,19 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 5,
+          "matchedTerms": [
+            "执行",
+            "时间和"
+          ]
+        },
+        {
           "card": "比较计数排序与秩排序",
           "score": 3,
           "matchedTerms": [
             "时间",
             "/2"
-          ]
-        },
-        {
-          "card": "算法五个特性",
-          "score": 3,
-          "matchedTerms": [
-            "输出"
           ]
         }
       ]
@@ -21384,6 +21747,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 3,
+          "matchedTerms": [
+            "ef"
+          ]
+        },
+        {
           "card": "树与森林的存储结构",
           "score": 3,
           "matchedTerms": [
@@ -21396,13 +21766,6 @@
           "score": 1,
           "matchedTerms": [
             "序列可"
-          ]
-        },
-        {
-          "card": "哈夫曼树与带权路径长度",
-          "score": 1,
-          "matchedTerms": [
-            "哈夫曼"
           ]
         }
       ]
@@ -21553,6 +21916,13 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 6,
           "matchedTerms": [
@@ -21575,13 +21945,6 @@
           "score": 3,
           "matchedTerms": [
             "因为"
-          ]
-        },
-        {
-          "card": "比较计数排序与秩排序",
-          "score": 2,
-          "matchedTerms": [
-            "空间"
           ]
         }
       ]
@@ -21887,6 +22250,14 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 8,
+          "matchedTerms": [
+            "空间",
+            "时间"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 8,
           "matchedTerms": [
@@ -21909,14 +22280,6 @@
             "时间",
             "空间",
             "=a"
-          ]
-        },
-        {
-          "card": "空间换时间与辅助数组",
-          "score": 4,
-          "matchedTerms": [
-            "析时间",
-            "时间"
           ]
         }
       ]
@@ -21958,17 +22321,17 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 2,
+          "matchedTerms": [
+            "确定"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 2,
           "matchedTerms": [
             "得到"
-          ]
-        },
-        {
-          "card": "顺序表按位查找与插删",
-          "score": 2,
-          "matchedTerms": [
-            "元素"
           ]
         }
       ]
@@ -22035,6 +22398,14 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 8,
+          "matchedTerms": [
+            "空间",
+            "时间"
+          ]
+        },
+        {
           "card": "比较计数排序与秩排序",
           "score": 4,
           "matchedTerms": [
@@ -22043,24 +22414,17 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 4,
           "matchedTerms": [
             "时间"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 4,
-          "matchedTerms": [
-            "时间"
-          ]
-        },
-        {
-          "card": "外部排序与多路归并",
-          "score": 3,
-          "matchedTerms": [
-            "cpu"
           ]
         }
       ]
@@ -22106,10 +22470,10 @@
           ]
         },
         {
-          "card": "数据结构三要素",
+          "card": "关键路径与关键活动",
           "score": 1,
           "matchedTerms": [
-            "和数据"
+            "的所有"
           ]
         }
       ]
@@ -22134,6 +22498,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 3,
           "matchedTerms": [
@@ -22155,13 +22526,6 @@
           "matchedTerms": [
             "执行"
           ]
-        },
-        {
-          "card": "循环队列判空与判满",
-          "score": 2,
-          "matchedTerms": [
-            "计数器"
-          ]
         }
       ]
     },
@@ -22178,6 +22542,27 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 3,
+          "matchedTerms": [
+            "res"
+          ]
+        },
+        {
+          "card": "后缀最大值与最小值维护",
+          "score": 3,
+          "matchedTerms": [
+            "res"
+          ]
+        },
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 3,
+          "matchedTerms": [
+            "es"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 3,
           "matchedTerms": [
@@ -22189,27 +22574,6 @@
           "score": 3,
           "matchedTerms": [
             "之间"
-          ]
-        },
-        {
-          "card": "冒泡排序与简单选择排序",
-          "score": 2,
-          "matchedTerms": [
-            "交换"
-          ]
-        },
-        {
-          "card": "线性表与顺序表",
-          "score": 1,
-          "matchedTerms": [
-            "个数据"
-          ]
-        },
-        {
-          "card": "循环链式队列与空闲结点复用",
-          "score": 1,
-          "matchedTerms": [
-            "个数据"
           ]
         }
       ]
@@ -22226,6 +22590,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
         {
           "card": "外部排序与多路归并",
           "score": 3,
@@ -22253,13 +22624,6 @@
           "matchedTerms": [
             "的数据"
           ]
-        },
-        {
-          "card": "循环队列判空与判满",
-          "score": 1,
-          "matchedTerms": [
-            "实现的"
-          ]
         }
       ]
     },
@@ -22275,6 +22639,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
         {
           "card": "外部排序与多路归并",
           "score": 3,
@@ -22449,6 +22820,16 @@
           ]
         },
         {
+          "card": "数组跨页与缺页次数",
+          "score": 8,
+          "matchedTerms": [
+            "kb",
+            "起始地",
+            "始地址",
+            "起始地址"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 7,
           "matchedTerms": [
@@ -22463,13 +22844,6 @@
           "matchedTerms": [
             "地址",
             "字节"
-          ]
-        },
-        {
-          "card": "虚拟地址分页与页内偏移",
-          "score": 5,
-          "matchedTerms": [
-            "kb"
           ]
         }
       ]
@@ -22487,7 +22861,28 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "数组跨页与缺页次数",
+          "score": 5,
+          "matchedTerms": [
+            "kb"
+          ]
+        },
+        {
           "card": "虚拟地址分页与页内偏移",
+          "score": 5,
+          "matchedTerms": [
+            "kb"
+          ]
+        },
+        {
+          "card": "Cache组相联映射与地址字段",
+          "score": 5,
+          "matchedTerms": [
+            "kb"
+          ]
+        },
+        {
+          "card": "VIPT Cache索引与页内偏移",
           "score": 5,
           "matchedTerms": [
             "kb"
@@ -22498,27 +22893,6 @@
           "score": 3,
           "matchedTerms": [
             "kb"
-          ]
-        },
-        {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "磁盘结构与平均访问时间",
-          "score": 2,
-          "matchedTerms": [
-            "扇区"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 1,
-          "matchedTerms": [
-            "区大小"
           ]
         }
       ]
@@ -22554,6 +22928,14 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 8,
+          "matchedTerms": [
+            "中断",
+            "状态"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 5,
           "matchedTerms": [
@@ -22568,13 +22950,6 @@
           "score": 4,
           "matchedTerms": [
             "通常"
-          ]
-        },
-        {
-          "card": "中断与 DMA",
-          "score": 4,
-          "matchedTerms": [
-            "响应"
           ]
         }
       ]
@@ -22763,6 +23138,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 6,
+          "matchedTerms": [
+            "索引"
+          ]
+        },
+        {
           "card": "立即数扩展与移位指令",
           "score": 4,
           "matchedTerms": [
@@ -22790,13 +23172,6 @@
           "matchedTerms": [
             "得到",
             "是同一"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 2,
-          "matchedTerms": [
-            "即使"
           ]
         }
       ]
@@ -23381,8 +23756,25 @@
       "answer": null,
       "analysis": "2017-第42题-解析 1）Prim 算法 属于贪心策略。算法从一个任意的顶点开始，一直长大到覆盖图中所有顶点为止。算法每一步在连接树集合 S 中顶点和其他顶点的边中，选择一条使得树的总权重增加最小的边加入集合 S。当算法终止时，S 就是最小生成树。 S 中顶点为 A，候选边为 (A,D),(A,B),(A,E)，选择 (A,D) 加入 S。 S 中顶点为 A,D，候选边为 (A,B),(A,E),(D,E),(C,D)，选择 (D,E) 加入 S。 S 中顶点为 A,D,E，候选边为 (A,B),(C,D),(C,E)，选择 (C,E) 加入 S。 S 中顶点为 A,D,E,C，候选边为 (A,B),(B,C)，选择 (B,C) 加入 S。 S 就是最小生成树。 依次选出的边为 (A,D),(D,E),(C,E),(B,C)（4 分） 【评分说明】每正确选对一条边且次序正确，给 1 分。若考生选择的边正确，但次序不完 全正确，酌情给分。 2）图 G 的 MST 是唯一的。（2 分）第一小题的最小生成树包括了图中权值最小的四条边，其他边都比这四条边大，所以此图的 MST 唯一。 3）当带权连通图的任意一个环中所包含的边的权值均不相同时，其 MST 是唯一的。（2 分）此题不要求回答充分必要条件，所以回答一个限制边权值的充分条件即可。 【评分说明】①若考生答案中给出的是其他充分条件，例如“带权连通图的所有边的权值均不相同”，同样给分。 ②若考生给出的充分条件对图的顶点数和边数做了某些限制，例如，限制了图中顶点的个数（顶点个数少于 3 个）、限制了图的形状（图中没有环）等，则最高给 1 分。 ③答案部分正确，酌情给分。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "IPv4 CIDR与VLSM子网划分",
+          "score": 10,
+          "matchedTerms": [
+            "属于",
+            "满足",
+            "的最小"
+          ]
+        },
+        {
+          "card": "GBN信道利用率与发送窗口",
+          "score": 9,
+          "matchedTerms": [
+            "ms",
+            "要求"
+          ]
+        },
         {
           "card": "TCP 可靠传输与流量控制",
           "score": 6,
@@ -23399,25 +23791,10 @@
           ]
         },
         {
-          "card": "IPv6 地址与首部特点",
+          "card": "卫星链路传播时延与文件发送时延",
           "score": 5,
           "matchedTerms": [
-            "使用",
-            "解析"
-          ]
-        },
-        {
-          "card": "海明码与纠错距离",
-          "score": 4,
-          "matchedTerms": [
-            "满足"
-          ]
-        },
-        {
-          "card": "以太网 CSMA/CD",
-          "score": 4,
-          "matchedTerms": [
-            "cd"
+            "ms"
           ]
         }
       ]
@@ -23450,6 +23827,14 @@
           ]
         },
         {
+          "card": "GBN序号空间与窗口约束",
+          "score": 6,
+          "matchedTerms": [
+            "因此",
+            "已知"
+          ]
+        },
+        {
           "card": "ARP 与 DHCP",
           "score": 3,
           "matchedTerms": [
@@ -23461,13 +23846,6 @@
           "score": 3,
           "matchedTerms": [
             "h1"
-          ]
-        },
-        {
-          "card": "OSI 与 TCP/IP 参考模型",
-          "score": 3,
-          "matchedTerms": [
-            "表示"
           ]
         }
       ]
@@ -23557,6 +23935,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "抽象数据类型 ADT",
           "score": 3,
           "matchedTerms": [
@@ -23568,14 +23953,6 @@
           "score": 3,
           "matchedTerms": [
             "cpu"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 2,
-          "matchedTerms": [
-            "的过程",
-            "地址的"
           ]
         }
       ]
@@ -23599,6 +23976,13 @@
             "之间",
             "访问",
             "答案"
+          ]
+        },
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
           ]
         },
         {
@@ -23719,17 +24103,17 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
             "本题"
-          ]
-        },
-        {
-          "card": "栈的顺序存储与共享栈",
-          "score": 4,
-          "matchedTerms": [
-            "入栈"
           ]
         }
       ]
@@ -23989,11 +24373,10 @@
           ]
         },
         {
-          "card": "树与森林的存储结构",
+          "card": "活动时间余量与并行区间",
           "score": 3,
           "matchedTerms": [
-            "字符",
-            "个编码"
+            "ef"
           ]
         }
       ]
@@ -24099,17 +24482,17 @@
           ]
         },
         {
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 6,
+          "matchedTerms": [
+            "拓扑序"
+          ]
+        },
+        {
           "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
             "a1"
-          ]
-        },
-        {
-          "card": "算法五个特性",
-          "score": 3,
-          "matchedTerms": [
-            "输出"
           ]
         }
       ]
@@ -24293,6 +24676,13 @@
           ]
         },
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 3,
+          "matchedTerms": [
+            "结果为"
+          ]
+        },
+        {
           "card": "基数排序与桶排序思想",
           "score": 3,
           "matchedTerms": [
@@ -24306,13 +24696,6 @@
           "matchedTerms": [
             "排序可",
             "第一趟"
-          ]
-        },
-        {
-          "card": "数组行优先与列优先存储",
-          "score": 2,
-          "matchedTerms": [
-            "数组"
           ]
         }
       ]
@@ -24337,6 +24720,13 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 2,
+          "matchedTerms": [
+            "题的"
+          ]
+        },
+        {
           "card": "冒泡排序与简单选择排序",
           "score": 2,
           "matchedTerms": [
@@ -24355,13 +24745,6 @@
           "score": 2,
           "matchedTerms": [
             "初始"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 2,
-          "matchedTerms": [
-            "答案"
           ]
         }
       ]
@@ -24424,6 +24807,14 @@
           ]
         },
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 5,
+          "matchedTerms": [
+            "结果为",
+            "=0"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 3,
           "matchedTerms": [
@@ -24470,6 +24861,13 @@
           "score": 1,
           "matchedTerms": [
             "最小的"
+          ]
+        },
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 1,
+          "matchedTerms": [
+            "-1"
           ]
         },
         {
@@ -24591,6 +24989,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 5,
+          "matchedTerms": [
+            "的最大值",
+            "最大值"
+          ]
+        },
+        {
           "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
@@ -24618,13 +25024,6 @@
             "存容量",
             "容量的",
             "存容量的"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 2,
-          "matchedTerms": [
-            "答案为"
           ]
         }
       ]
@@ -24696,6 +25095,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 4,
           "matchedTerms": [
@@ -24710,17 +25116,17 @@
           ]
         },
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 2,
+          "matchedTerms": [
+            "=0"
+          ]
+        },
+        {
           "card": "图的存储与遍历",
           "score": 2,
           "matchedTerms": [
             "只需"
-          ]
-        },
-        {
-          "card": "拓扑排序唯一性判定",
-          "score": 1,
-          "matchedTerms": [
-            "以判断"
           ]
         }
       ]
@@ -24761,17 +25167,17 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 3,
           "matchedTerms": [
             "cpu"
-          ]
-        },
-        {
-          "card": "比较计数排序与秩排序",
-          "score": 2,
-          "matchedTerms": [
-            "时间"
           ]
         }
       ]
@@ -24833,6 +25239,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -24851,13 +25264,6 @@
           "score": 2,
           "matchedTerms": [
             "次序"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 2,
-          "matchedTerms": [
-            "执行"
           ]
         }
       ]
@@ -25057,6 +25463,14 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 4,
+          "matchedTerms": [
+            "完成后",
+            "状态"
+          ]
+        },
+        {
           "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 3,
           "matchedTerms": [
@@ -25069,13 +25483,6 @@
           "score": 2,
           "matchedTerms": [
             "检查"
-          ]
-        },
-        {
-          "card": "Cache 替换与写策略",
-          "score": 2,
-          "matchedTerms": [
-            "状态"
           ]
         }
       ]
@@ -25766,10 +26173,10 @@
           ]
         },
         {
-          "card": "临界区与共享缓冲区",
+          "card": "共享铁锹互斥与资源锁",
           "score": 1,
           "matchedTerms": [
-            "进程对"
+            "不需要"
           ]
         }
       ]
@@ -25805,6 +26212,14 @@
           ]
         },
         {
+          "card": "共享铁锹互斥与资源锁",
+          "score": 2,
+          "matchedTerms": [
+            "不需要",
+            "使用者"
+          ]
+        },
+        {
           "card": "多处理机调度与负载均衡",
           "score": 1,
           "matchedTerms": [
@@ -25816,13 +26231,6 @@
           "score": 1,
           "matchedTerms": [
             "过程中"
-          ]
-        },
-        {
-          "card": "进程创建与终止",
-          "score": 1,
-          "matchedTerms": [
-            "制所有"
           ]
         }
       ]
@@ -25839,6 +26247,14 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "GBN信道利用率与发送窗口",
+          "score": 8,
+          "matchedTerms": [
+            "要求",
+            "min"
+          ]
+        },
         {
           "card": "TCP 序号确认与累计确认",
           "score": 7,
@@ -25865,17 +26281,11 @@
           ]
         },
         {
-          "card": "TCP 接收窗口与滑动窗口",
-          "score": 5,
+          "card": "IPv4 CIDR与VLSM子网划分",
+          "score": 6,
           "matchedTerms": [
-            "min"
-          ]
-        },
-        {
-          "card": "IP TTL 与路由转发",
-          "score": 4,
-          "matchedTerms": [
-            "初始"
+            "满足",
+            "的最小"
           ]
         }
       ]
@@ -25999,14 +26409,15 @@
           ]
         },
         {
-          "card": "单链表重排与原地逆置",
-          "score": 4,
+          "card": "活动时间余量与并行区间",
+          "score": 5,
           "matchedTerms": [
-            "总时间"
+            "执行",
+            "时间最"
           ]
         },
         {
-          "card": "堆排序与优先队列",
+          "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
             "总时间"
@@ -26086,6 +26497,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "数组行优先与列优先存储",
           "score": 6,
           "matchedTerms": [
@@ -26120,13 +26538,6 @@
             "保存当",
             "存当前",
             "保存当前"
-          ]
-        },
-        {
-          "card": "比较计数排序与秩排序",
-          "score": 2,
-          "matchedTerms": [
-            "空间"
           ]
         }
       ]
@@ -26211,6 +26622,13 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "比较计数排序与秩排序",
           "score": 3,
           "matchedTerms": [
@@ -26232,14 +26650,6 @@
           "matchedTerms": [
             "得到",
             "的数据"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 3,
-          "matchedTerms": [
-            "得到",
-            "/2"
           ]
         }
       ]
@@ -26438,6 +26848,14 @@
           ]
         },
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 4,
+          "matchedTerms": [
+            "n-1",
+            "-1"
+          ]
+        },
+        {
           "card": "线索二叉树",
           "score": 4,
           "matchedTerms": [
@@ -26449,14 +26867,6 @@
           "score": 4,
           "matchedTerms": [
             "的值"
-          ]
-        },
-        {
-          "card": "二叉树遍历与性质",
-          "score": 3,
-          "matchedTerms": [
-            "二叉树",
-            "个结点"
           ]
         }
       ]
@@ -26547,8 +26957,52 @@
       "existingCards": [
         "关键路径与 AOE 网"
       ],
-      "confidence": "low-candidate",
+      "confidence": "high-candidate",
       "candidates": [
+        {
+          "card": "关键路径与关键活动",
+          "score": 44,
+          "matchedTerms": [
+            "关键路径",
+            "最早开始",
+            "最迟开始",
+            "活动",
+            "最迟开始时间",
+            "aoe",
+            "关键路径是",
+            "的最长",
+            "最长路",
+            "长路径",
+            "的最长路",
+            "最长路径"
+          ]
+        },
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 19,
+          "matchedTerms": [
+            "活动",
+            "活动b",
+            "最早开",
+            "早开始",
+            "开始时",
+            "始时间",
+            "时间和",
+            "最早开始",
+            "早开始时",
+            "开始时间",
+            "始时间和",
+            "最早开始时"
+          ]
+        },
+        {
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 10,
+          "matchedTerms": [
+            "aoe",
+            "边表示活动"
+          ]
+        },
         {
           "card": "算法复杂度",
           "score": 6,
@@ -26566,28 +27020,6 @@
             "示活动",
             "有向无环",
             "表示活动"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 6,
-          "matchedTerms": [
-            "时间",
-            "答案"
-          ]
-        },
-        {
-          "card": "完全二叉树与编号性质",
-          "score": 4,
-          "matchedTerms": [
-            "开始时"
-          ]
-        },
-        {
-          "card": "最小距离三元组的三指针扫描",
-          "score": 4,
-          "matchedTerms": [
-            "时间"
           ]
         }
       ]
@@ -26621,6 +27053,13 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 6,
           "matchedTerms": [
@@ -26643,13 +27082,6 @@
             "二叉树",
             "叉树中",
             "二叉树中"
-          ]
-        },
-        {
-          "card": "树与森林的存储结构",
-          "score": 4,
-          "matchedTerms": [
-            "二叉树"
           ]
         }
       ]
@@ -27020,6 +27452,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "单链表头插法与尾插法",
           "score": 3,
           "matchedTerms": [
@@ -27047,14 +27486,6 @@
           "matchedTerms": [
             "和数据"
           ]
-        },
-        {
-          "card": "数据结构三要素",
-          "score": 2,
-          "matchedTerms": [
-            "和数据",
-            "有不同"
-          ]
         }
       ]
     },
@@ -27070,6 +27501,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
         {
           "card": "最小正整数缺失值查找",
           "score": 4,
@@ -27101,13 +27539,6 @@
           "matchedTerms": [
             "长度为"
           ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 2,
-          "matchedTerms": [
-            "执行"
-          ]
         }
       ]
     },
@@ -27123,6 +27554,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
         {
           "card": "内部排序与稳定性",
           "score": 3,
@@ -27153,13 +27591,6 @@
           "matchedTerms": [
             "执行"
           ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 2,
-          "matchedTerms": [
-            "访问"
-          ]
         }
       ]
     },
@@ -27183,6 +27614,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 3,
+          "matchedTerms": [
+            "ef"
+          ]
+        },
+        {
           "card": "中缀表达式求值",
           "score": 1,
           "matchedTerms": [
@@ -27203,6 +27641,14 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 6,
+          "matchedTerms": [
+            "执行",
+            "确定"
+          ]
+        },
         {
           "card": "算法复杂度",
           "score": 6,
@@ -27232,13 +27678,6 @@
           "matchedTerms": [
             "cpu"
           ]
-        },
-        {
-          "card": "比较计数排序与秩排序",
-          "score": 2,
-          "matchedTerms": [
-            "时间"
-          ]
         }
       ]
     },
@@ -27264,6 +27703,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "十字链表与邻接多重表",
           "score": 3,
           "matchedTerms": [
@@ -27283,13 +27729,6 @@
           "matchedTerms": [
             "于操作",
             "操作数"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 2,
-          "matchedTerms": [
-            "答案"
           ]
         }
       ]
@@ -27316,32 +27755,32 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "执行",
+            "es"
+          ]
+        },
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 3,
+          "matchedTerms": [
+            "res"
+          ]
+        },
+        {
+          "card": "后缀最大值与最小值维护",
+          "score": 3,
+          "matchedTerms": [
+            "res"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 3,
           "matchedTerms": [
             "if"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 2,
-          "matchedTerms": [
-            "在数据",
-            "的过程"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 2,
-          "matchedTerms": [
-            "执行"
-          ]
-        },
-        {
-          "card": "图的存储与遍历",
-          "score": 2,
-          "matchedTerms": [
-            "不存在"
           ]
         }
       ]
@@ -27385,6 +27824,13 @@
           "matchedTerms": [
             "答案"
           ]
+        },
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 1,
+          "matchedTerms": [
+            "-1"
+          ]
         }
       ]
     },
@@ -27405,6 +27851,13 @@
           "score": 4,
           "matchedTerms": [
             "容量",
+            "写入"
+          ]
+        },
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 2,
+          "matchedTerms": [
             "写入"
           ]
         },
@@ -27503,6 +27956,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "并查集与路径压缩",
           "score": 3,
           "matchedTerms": [
@@ -27523,13 +27983,6 @@
           "score": 2,
           "matchedTerms": [
             "结束"
-          ]
-        },
-        {
-          "card": "归并排序与稳定性",
-          "score": 1,
-          "matchedTerms": [
-            "的数据"
           ]
         }
       ]
@@ -27721,6 +28174,20 @@
           ]
         },
         {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 6,
+          "matchedTerms": [
+            "索引"
+          ]
+        },
+        {
+          "card": "Cache组相联映射与地址字段",
+          "score": 4,
+          "matchedTerms": [
+            "标记"
+          ]
+        },
+        {
           "card": "浮点数表示与规格化",
           "score": 3,
           "matchedTerms": [
@@ -27732,20 +28199,6 @@
           "score": 2,
           "matchedTerms": [
             "表示"
-          ]
-        },
-        {
-          "card": "立即数扩展与移位指令",
-          "score": 2,
-          "matchedTerms": [
-            "因此"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 2,
-          "matchedTerms": [
-            "个块"
           ]
         }
       ]
@@ -27958,10 +28411,10 @@
           ]
         },
         {
-          "card": "ALU 标志位 CF 与 OF",
-          "score": 1,
+          "card": "Cache平均访问时间与缺失损失",
+          "score": 2,
           "matchedTerms": [
-            "产生的"
+            "本题"
           ]
         }
       ]
@@ -27994,6 +28447,19 @@
           ]
         },
         {
+          "card": "数组跨页与缺页次数",
+          "score": 17,
+          "matchedTerms": [
+            "分页",
+            "页内偏移",
+            "虚拟地",
+            "拟地址",
+            "虚拟地址",
+            "页内偏",
+            "内偏移"
+          ]
+        },
+        {
           "card": "Cache 直接映射与组相联",
           "score": 13,
           "matchedTerms": [
@@ -28004,6 +28470,18 @@
           ]
         },
         {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 11,
+          "matchedTerms": [
+            "页内偏移",
+            "内偏移",
+            "页内偏",
+            "虚拟地",
+            "拟地址",
+            "虚拟地址"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 10,
           "matchedTerms": [
@@ -28011,27 +28489,6 @@
             "匹配",
             "地址",
             "内偏移"
-          ]
-        },
-        {
-          "card": "小端字节序与补码读取",
-          "score": 9,
-          "matchedTerms": [
-            "地址",
-            "字节",
-            "十六进",
-            "六进制",
-            "十六进制"
-          ]
-        },
-        {
-          "card": "数制转换与定点小数",
-          "score": 6,
-          "matchedTerms": [
-            "二进制",
-            "十六进",
-            "六进制",
-            "十六进制"
           ]
         }
       ]
@@ -28343,17 +28800,17 @@
           ]
         },
         {
+          "card": "阻塞式I/O与驱动程序调用",
+          "score": 2,
+          "matchedTerms": [
+            "认为"
+          ]
+        },
+        {
           "card": "进程同步与信号量",
           "score": 1,
           "matchedTerms": [
             "=1"
-          ]
-        },
-        {
-          "card": "页表结构与地址转换",
-          "score": 1,
-          "matchedTerms": [
-            "同一个"
           ]
         }
       ]
@@ -28629,6 +29086,13 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 5,
+          "matchedTerms": [
+            "min"
+          ]
+        },
+        {
           "card": "完全二叉树与编号性质",
           "score": 5,
           "matchedTerms": [
@@ -28637,13 +29101,6 @@
         },
         {
           "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
-          "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
             "本题"
@@ -28750,19 +29207,19 @@
           ]
         },
         {
-          "card": "AVL 树平衡调整",
-          "score": 5,
+          "card": "活动时间余量与并行区间",
+          "score": 6,
           "matchedTerms": [
-            "ll"
+            "执行",
+            "确定"
           ]
         },
         {
-          "card": "内部排序与稳定性",
-          "score": 4,
+          "card": "后缀极值与区间乘积最大值",
+          "score": 5,
           "matchedTerms": [
-            "改为",
-            "=n",
-            "n−1"
+            "结果为",
+            "=0"
           ]
         }
       ]
@@ -28846,6 +29303,13 @@
           ]
         },
         {
+          "card": "关键路径与关键活动",
+          "score": 5,
+          "matchedTerms": [
+            "vl"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 5,
           "matchedTerms": [
@@ -28855,17 +29319,10 @@
           ]
         },
         {
-          "card": "单链表重排与原地逆置",
-          "score": 4,
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 5,
           "matchedTerms": [
-            "an"
-          ]
-        },
-        {
-          "card": "最小距离三元组的三指针扫描",
-          "score": 3,
-          "matchedTerms": [
-            "int"
+            "vl"
           ]
         }
       ]
@@ -29114,17 +29571,18 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 5,
+          "matchedTerms": [
+            "ef",
+            "确定"
+          ]
+        },
+        {
           "card": "AVL 树平衡调整",
           "score": 5,
           "matchedTerms": [
             "bf"
-          ]
-        },
-        {
-          "card": "单链表重排与原地逆置",
-          "score": 4,
-          "matchedTerms": [
-            "a2"
           ]
         }
       ]
@@ -29281,17 +29739,17 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 3,
+          "matchedTerms": [
+            "ef"
+          ]
+        },
+        {
           "card": "十字链表与邻接多重表",
           "score": 2,
           "matchedTerms": [
             "无向图"
-          ]
-        },
-        {
-          "card": "直接插入与折半插入排序",
-          "score": 1,
-          "matchedTerms": [
-            "将当前"
           ]
         }
       ]
@@ -29327,6 +29785,45 @@
           ]
         },
         {
+          "card": "关键路径与关键活动",
+          "score": 29,
+          "matchedTerms": [
+            "关键路径",
+            "活动",
+            "aoe",
+            "关键路径是",
+            "关键活动",
+            "工期",
+            "点到汇",
+            "到汇点",
+            "点到汇点",
+            "是关键",
+            "关键活",
+            "键活动"
+          ]
+        },
+        {
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 13,
+          "matchedTerms": [
+            "aoe",
+            "汇点",
+            "是关键",
+            "关键活",
+            "键活动",
+            "关键活动"
+          ]
+        },
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 11,
+          "matchedTerms": [
+            "工程进度",
+            "活动",
+            "时间不"
+          ]
+        },
+        {
           "card": "哈夫曼树与带权路径长度",
           "score": 8,
           "matchedTerms": [
@@ -29337,32 +29834,6 @@
             "路径长度",
             "径长度最",
             "路径长度最"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 7,
-          "matchedTerms": [
-            "时间",
-            "因为"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 6,
-          "matchedTerms": [
-            "时间"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 5,
-          "matchedTerms": [
-            "路径长",
-            "径长度",
-            "路径长度",
-            "路径不",
-            "路径的"
           ]
         }
       ]
@@ -29627,6 +30098,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "抽象数据类型 ADT",
           "score": 3,
           "matchedTerms": [
@@ -29640,13 +30118,6 @@
           "score": 3,
           "matchedTerms": [
             "v2"
-          ]
-        },
-        {
-          "card": "外部排序与多路归并",
-          "score": 3,
-          "matchedTerms": [
-            "cpu"
           ]
         }
       ]
@@ -29727,6 +30198,13 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 6,
           "matchedTerms": [
@@ -29748,13 +30226,6 @@
           "score": 4,
           "matchedTerms": [
             "a2"
-          ]
-        },
-        {
-          "card": "二次探测法与开放定址散列",
-          "score": 3,
-          "matchedTerms": [
-            "h0"
           ]
         }
       ]
@@ -29795,6 +30266,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 1,
+          "matchedTerms": [
+            "-1"
+          ]
+        },
+        {
           "card": "B 树与 B+ 树",
           "score": 1,
           "matchedTerms": [
@@ -29831,6 +30309,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "快速排序分区过程",
           "score": 4,
           "matchedTerms": [
@@ -29850,13 +30335,6 @@
           "matchedTerms": [
             "v2"
           ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 2,
-          "matchedTerms": [
-            "执行"
-          ]
         }
       ]
     },
@@ -29872,6 +30350,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
         {
           "card": "外部排序与多路归并",
           "score": 3,
@@ -29898,13 +30383,6 @@
           "score": 2,
           "matchedTerms": [
             "于程序"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 2,
-          "matchedTerms": [
-            "返回"
           ]
         }
       ]
@@ -29958,6 +30436,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 3,
           "matchedTerms": [
@@ -29986,6 +30471,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 4,
           "matchedTerms": [
@@ -30012,13 +30504,6 @@
           "score": 2,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "循环队列判空与判满",
-          "score": 2,
-          "matchedTerms": [
-            "标志位"
           ]
         }
       ]
@@ -30120,6 +30605,15 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 3,
+          "matchedTerms": [
+            "系统调",
+            "统调用",
+            "系统调用"
+          ]
+        },
+        {
           "card": "计算机系统层次结构",
           "score": 2,
           "matchedTerms": [
@@ -30127,24 +30621,17 @@
           ]
         },
         {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 2,
+          "matchedTerms": [
+            "问题"
+          ]
+        },
+        {
           "card": "流水线吞吐率与加速比",
           "score": 1,
           "matchedTerms": [
             "不一定"
-          ]
-        },
-        {
-          "card": "硬布线控制器与微程序控制器",
-          "score": 1,
-          "matchedTerms": [
-            "可通过"
-          ]
-        },
-        {
-          "card": "Cache 替换与写策略",
-          "score": 1,
-          "matchedTerms": [
-            "写操作"
           ]
         }
       ]
@@ -30172,6 +30659,21 @@
           ]
         },
         {
+          "card": "Cache跨块访问与缺失率",
+          "score": 8,
+          "matchedTerms": [
+            "长度",
+            "次访问"
+          ]
+        },
+        {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 6,
+          "matchedTerms": [
+            "索引"
+          ]
+        },
+        {
           "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 2,
           "matchedTerms": [
@@ -30180,20 +30682,6 @@
         },
         {
           "card": "指令系统与寻址方式",
-          "score": 2,
-          "matchedTerms": [
-            "长度"
-          ]
-        },
-        {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 2,
-          "matchedTerms": [
-            "访问"
-          ]
-        },
-        {
-          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
           "score": 2,
           "matchedTerms": [
             "长度"
@@ -30211,8 +30699,19 @@
       "answer": "D",
       "analysis": "2020-第25题-解析 当 CPU 检测到中断信号后，由硬件自动保存被中断程序的断点（即程序计数器 PC）, I 错 误。之后，硬件找到该中断信号对应的中断向量，中断向量指明中断服务程序入口地址（各 中断向量统一存放在中断向量表中，该表由操作系统初始化，Ⅲ 正确）。接下来开始执行 中断服务程序，保存 PSW、保存中断屏蔽字、保存各通用寄存器的值，并提供与中断信号 对应的中断服务，中断服务程序属于操作系统内核，Ⅱ 和 Ⅳ 正确。",
       "existingCards": [],
-      "confidence": "high-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "CPU异常响应与现场保护",
+          "score": 24,
+          "matchedTerms": [
+            "psw",
+            "中断",
+            "断点",
+            "cpu",
+            "检测到"
+          ]
+        },
         {
           "card": "中断响应与异常处理",
           "score": 22,
@@ -30264,15 +30763,6 @@
             "cpu",
             "pc",
             "寄存器"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 10,
-          "matchedTerms": [
-            "cpu",
-            "中断",
-            "在中断"
           ]
         }
       ]
@@ -30343,7 +30833,21 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 5,
+          "matchedTerms": [
+            "va"
+          ]
+        },
+        {
           "card": "虚拟地址分页与页内偏移",
+          "score": 3,
+          "matchedTerms": [
+            "va"
+          ]
+        },
+        {
+          "card": "Cache组相联映射与地址字段",
           "score": 3,
           "matchedTerms": [
             "va"
@@ -30361,20 +30865,6 @@
           "score": 2,
           "matchedTerms": [
             "得到"
-          ]
-        },
-        {
-          "card": "DMA 工作过程与总线占用",
-          "score": 2,
-          "matchedTerms": [
-            "得到"
-          ]
-        },
-        {
-          "card": "BCD 码与字符编码",
-          "score": 1,
-          "matchedTerms": [
-            "分配数"
           ]
         }
       ]
@@ -30423,6 +30913,17 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 13,
+          "matchedTerms": [
+            "中断",
+            "cpu",
+            "处理程",
+            "理程序",
+            "处理程序"
+          ]
+        },
+        {
           "card": "主存与辅存层次结构",
           "score": 12,
           "matchedTerms": [
@@ -30434,15 +30935,6 @@
             "存访问",
             "存访问时",
             "存访问时间"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 12,
-          "matchedTerms": [
-            "执行",
-            "访存",
-            "cpu"
           ]
         }
       ]
@@ -30530,6 +31022,13 @@
           ]
         },
         {
+          "card": "Cache组相联映射与地址字段",
+          "score": 6,
+          "matchedTerms": [
+            "映射"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 6,
           "matchedTerms": [
@@ -30543,16 +31042,6 @@
           "matchedTerms": [
             "处理",
             "设备"
-          ]
-        },
-        {
-          "card": "计算机系统层次结构",
-          "score": 5,
-          "matchedTerms": [
-            "之间的",
-            "应用程",
-            "用程序",
-            "应用程序"
           ]
         }
       ]
@@ -30579,6 +31068,13 @@
           ]
         },
         {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 6,
+          "matchedTerms": [
+            "索引"
+          ]
+        },
+        {
           "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
           "score": 6,
           "matchedTerms": [
@@ -30599,13 +31095,6 @@
           "matchedTerms": [
             "表示",
             "上限"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 4,
-          "matchedTerms": [
-            "字节"
           ]
         }
       ]
@@ -31057,6 +31546,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "GBN信道利用率与发送窗口",
+          "score": 8,
+          "matchedTerms": [
+            "要求",
+            "min"
+          ]
+        },
+        {
           "card": "IP TTL 与路由转发",
           "score": 8,
           "matchedTerms": [
@@ -31088,13 +31585,6 @@
           "matchedTerms": [
             "使用",
             "解析"
-          ]
-        },
-        {
-          "card": "TCP 接收窗口与滑动窗口",
-          "score": 5,
-          "matchedTerms": [
-            "min"
           ]
         }
       ]
@@ -31278,6 +31768,22 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "执行",
+            "es"
+          ]
+        },
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 5,
+          "matchedTerms": [
+            "res",
+            "=0"
+          ]
+        },
+        {
           "card": "二次探测法与开放定址散列",
           "score": 4,
           "matchedTerms": [
@@ -31292,24 +31798,10 @@
           ]
         },
         {
-          "card": "最小正整数缺失值查找",
+          "card": "后缀最大值与最小值维护",
           "score": 3,
           "matchedTerms": [
-            "之间"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 2,
-          "matchedTerms": [
-            "执行"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 2,
-          "matchedTerms": [
-            "对应"
+            "res"
           ]
         }
       ]
@@ -31357,6 +31849,14 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 8,
+          "matchedTerms": [
+            "空间",
+            "个元素"
+          ]
+        },
+        {
           "card": "二叉树遍历与性质",
           "score": 6,
           "matchedTerms": [
@@ -31372,14 +31872,6 @@
             "所有元素",
             "数组的",
             "个数组"
-          ]
-        },
-        {
-          "card": "比较计数排序与秩排序",
-          "score": 4,
-          "matchedTerms": [
-            "个元素",
-            "空间"
           ]
         }
       ]
@@ -31606,6 +32098,15 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "每个元",
+            "个元素",
+            "每个元素"
+          ]
+        },
+        {
           "card": "比较计数排序与秩排序",
           "score": 5,
           "matchedTerms": [
@@ -31624,16 +32125,6 @@
             "在内存中",
             "/2",
             "个元素"
-          ]
-        },
-        {
-          "card": "稀疏矩阵三元组表示",
-          "score": 5,
-          "matchedTerms": [
-            "行优先",
-            "二维数",
-            "维数组",
-            "二维数组"
           ]
         }
       ]
@@ -31820,10 +32311,10 @@
           ]
         },
         {
-          "card": "单链表重排与原地逆置",
-          "score": 4,
+          "card": "关键路径与关键活动",
+          "score": 5,
           "matchedTerms": [
-            "a1"
+            "vl"
           ]
         }
       ]
@@ -31853,6 +32344,13 @@
           ]
         },
         {
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 6,
+          "matchedTerms": [
+            "拓扑序"
+          ]
+        },
+        {
           "card": "Kahn拓扑排序与入度维护",
           "score": 6,
           "matchedTerms": [
@@ -31876,13 +32374,6 @@
           "score": 4,
           "matchedTerms": [
             "a1"
-          ]
-        },
-        {
-          "card": "算法五个特性",
-          "score": 3,
-          "matchedTerms": [
-            "输出"
           ]
         }
       ]
@@ -32054,6 +32545,13 @@
           ]
         },
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 3,
+          "matchedTerms": [
+            "结果为"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 2,
           "matchedTerms": [
@@ -32065,13 +32563,6 @@
           "score": 2,
           "matchedTerms": [
             "数组"
-          ]
-        },
-        {
-          "card": "顺序表按位查找与插删",
-          "score": 2,
-          "matchedTerms": [
-            "元素"
           ]
         }
       ]
@@ -32242,6 +32733,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 6,
           "matchedTerms": [
@@ -32272,15 +32770,6 @@
             "存容量",
             "容量的",
             "存容量的"
-          ]
-        },
-        {
-          "card": "循环队列判空与判满",
-          "score": 3,
-          "matchedTerms": [
-            "存储空",
-            "储空间",
-            "存储空间"
           ]
         }
       ]
@@ -32387,6 +32876,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "红黑树性质与高度",
           "score": 2,
           "matchedTerms": [
@@ -32401,17 +32897,10 @@
           ]
         },
         {
-          "card": "归并排序与稳定性",
+          "card": "关键路径与关键活动",
           "score": 1,
           "matchedTerms": [
-            "的数据"
-          ]
-        },
-        {
-          "card": "欧拉路径与欧拉回路",
-          "score": 1,
-          "matchedTerms": [
-            "的路径"
+            "经过的"
           ]
         }
       ]
@@ -32522,6 +33011,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "红黑树性质与高度",
           "score": 2,
           "matchedTerms": [
@@ -32536,17 +33032,17 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 1,
+          "matchedTerms": [
+            "会导致"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 1,
           "matchedTerms": [
             "不影响"
-          ]
-        },
-        {
-          "card": "Kahn拓扑排序与入度维护",
-          "score": 1,
-          "matchedTerms": [
-            "后必须"
           ]
         }
       ]
@@ -32563,6 +33059,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
         {
           "card": "外部排序与多路归并",
           "score": 3,
@@ -32606,6 +33109,16 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 15,
+          "matchedTerms": [
+            "断点",
+            "cpu",
+            "切换到内核态",
+            "状态"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 10,
           "matchedTerms": [
@@ -32636,14 +33149,6 @@
           "matchedTerms": [
             "cpu",
             "器指令"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 8,
-          "matchedTerms": [
-            "执行",
-            "cpu"
           ]
         }
       ]
@@ -32729,6 +33234,18 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 12,
+          "matchedTerms": [
+            "中断",
+            "状态",
+            "检测到",
+            "处理程",
+            "理程序",
+            "处理程序"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 11,
           "matchedTerms": [
@@ -32750,13 +33267,6 @@
           "matchedTerms": [
             "处理",
             "的时间"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 4,
-          "matchedTerms": [
-            "时间"
           ]
         }
       ]
@@ -32857,18 +33367,19 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 12,
+          "matchedTerms": [
+            "中断",
+            "cpu",
+            "状态"
+          ]
+        },
+        {
           "card": "中断与 DMA",
           "score": 10,
           "matchedTerms": [
             "中断处理",
-            "cpu"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 8,
-          "matchedTerms": [
-            "执行",
             "cpu"
           ]
         }
@@ -32905,6 +33416,34 @@
           ]
         },
         {
+          "card": "数组跨页与缺页次数",
+          "score": 23,
+          "matchedTerms": [
+            "分页",
+            "页内偏移",
+            "kb",
+            "虚拟地",
+            "拟地址",
+            "虚拟地址",
+            "页内偏",
+            "内偏移",
+            "页大小"
+          ]
+        },
+        {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 16,
+          "matchedTerms": [
+            "页内偏移",
+            "kb",
+            "内偏移",
+            "页内偏",
+            "虚拟地",
+            "拟地址",
+            "虚拟地址"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 12,
           "matchedTerms": [
@@ -32926,26 +33465,6 @@
             "页内偏",
             "内偏移",
             "页内偏移"
-          ]
-        },
-        {
-          "card": "小端字节序与补码读取",
-          "score": 8,
-          "matchedTerms": [
-            "地址",
-            "字节",
-            "位为"
-          ]
-        },
-        {
-          "card": "存储芯片容量扩展",
-          "score": 7,
-          "matchedTerms": [
-            "过地址",
-            "字节",
-            "存储单",
-            "储单元",
-            "存储单元"
           ]
         }
       ]
@@ -32976,6 +33495,16 @@
           ]
         },
         {
+          "card": "数组跨页与缺页次数",
+          "score": 9,
+          "matchedTerms": [
+            "分页",
+            "虚拟地",
+            "拟地址",
+            "虚拟地址"
+          ]
+        },
+        {
           "card": "指令系统与寻址方式",
           "score": 9,
           "matchedTerms": [
@@ -33003,13 +33532,6 @@
             "物理地址",
             "地址"
           ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 7,
-          "matchedTerms": [
-            "cpu"
-          ]
         }
       ]
     },
@@ -33033,6 +33555,13 @@
           ]
         },
         {
+          "card": "Cache组相联映射与地址字段",
+          "score": 6,
+          "matchedTerms": [
+            "映射"
+          ]
+        },
+        {
           "card": "虚拟地址分页与页内偏移",
           "score": 5,
           "matchedTerms": [
@@ -33052,13 +33581,6 @@
           "score": 3,
           "matchedTerms": [
             "mb"
-          ]
-        },
-        {
-          "card": "指令格式与操作码扩展",
-          "score": 3,
-          "matchedTerms": [
-            "ir"
           ]
         }
       ]
@@ -33113,10 +33635,26 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 3,
+          "matchedTerms": [
+            "系统调",
+            "统调用",
+            "系统调用"
+          ]
+        },
+        {
           "card": "TLB 组相联映射与 LRU 替换",
           "score": 2,
           "matchedTerms": [
             "访问"
+          ]
+        },
+        {
+          "card": "数组跨页与缺页次数",
+          "score": 1,
+          "matchedTerms": [
+            "的页面"
           ]
         },
         {
@@ -33200,6 +33738,13 @@
           "score": 2,
           "matchedTerms": [
             "常用于"
+          ]
+        },
+        {
+          "card": "共享铁锹互斥与资源锁",
+          "score": 1,
+          "matchedTerms": [
+            "的信号"
           ]
         },
         {
@@ -33311,14 +33856,14 @@
           ]
         },
         {
-          "card": "文件逻辑结构与物理结构",
+          "card": "共享铁锹互斥与资源锁",
           "score": 1,
           "matchedTerms": [
-            "的数据"
+            "尽可能"
           ]
         },
         {
-          "card": "文件系统与目录",
+          "card": "文件逻辑结构与物理结构",
           "score": 1,
           "matchedTerms": [
             "的数据"
@@ -33401,6 +33946,21 @@
           ]
         },
         {
+          "card": "多阶段流水线的信号量同步",
+          "score": 7,
+          "matchedTerms": [
+            "wait"
+          ]
+        },
+        {
+          "card": "共享铁锹互斥与资源锁",
+          "score": 6,
+          "matchedTerms": [
+            "wait",
+            "间等待"
+          ]
+        },
+        {
           "card": "进程同步与信号量",
           "score": 4,
           "matchedTerms": [
@@ -33410,20 +33970,6 @@
         {
           "card": "缺页异常与页表更新",
           "score": 4,
-          "matchedTerms": [
-            "os"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
-          "card": "磁盘引导与格式化流程",
-          "score": 3,
           "matchedTerms": [
             "os"
           ]
@@ -33712,19 +34258,19 @@
           ]
         },
         {
+          "card": "GBN序号空间与窗口约束",
+          "score": 7,
+          "matchedTerms": [
+            "因此",
+            "sr"
+          ]
+        },
+        {
           "card": "TCP 可靠传输与流量控制",
           "score": 7,
           "matchedTerms": [
             "连接",
             "字节编"
-          ]
-        },
-        {
-          "card": "路由选择与转发表",
-          "score": 6,
-          "matchedTerms": [
-            "r3",
-            "r2"
           ]
         }
       ]
@@ -33806,6 +34352,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "单链表重排与原地逆置",
           "score": 2,
           "matchedTerms": [
@@ -33824,13 +34377,6 @@
           "score": 2,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "前缀编码与二叉判定树",
-          "score": 2,
-          "matchedTerms": [
-            "因为"
           ]
         }
       ]
@@ -33874,14 +34420,14 @@
           ]
         },
         {
-          "card": "IP TTL 与路由转发",
+          "card": "GBN序号空间与窗口约束",
           "score": 4,
           "matchedTerms": [
-            "初始"
+            "时需"
           ]
         },
         {
-          "card": "IP TTL 与逐跳递减",
+          "card": "IP TTL 与路由转发",
           "score": 4,
           "matchedTerms": [
             "初始"
@@ -34308,29 +34854,24 @@
           ]
         },
         {
-          "card": "十字链表与邻接多重表",
+          "card": "关键路径与关键活动",
+          "score": 5,
+          "matchedTerms": [
+            "ve"
+          ]
+        },
+        {
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 5,
+          "matchedTerms": [
+            "ve"
+          ]
+        },
+        {
+          "card": "活动时间余量与并行区间",
           "score": 4,
           "matchedTerms": [
-            "无向图",
-            "于无向",
-            "于无向图"
-          ]
-        },
-        {
-          "card": "欧拉路径与欧拉回路",
-          "score": 3,
-          "matchedTerms": [
-            "顶点数",
-            "个顶点"
-          ]
-        },
-        {
-          "card": "图的存储与遍历",
-          "score": 3,
-          "matchedTerms": [
-            "个顶点",
-            "无向图",
-            "不连通"
+            "ve"
           ]
         }
       ]
@@ -34345,8 +34886,26 @@
       "answer": "B",
       "analysis": "2022-第7题-解析 在 AOE 网中，活动的时间余量 = 结束顶点的最迟开始时间 - 开始顶点的最早开始时间 - 该活动的持续时间。根据关键路径算法得到下表： 结点编号 1 2 3 4 5 6 最早开始时间 ve(i) 0 2 5 8 9 12 最迟开始时间 vl(i) 0 4 5 8 11 12 c 的时间余量 = vl(3) - ve(2) - 1 = 5 - 2 - 1 = 2 g 的时间余量 = vl(6) - ve(3) - 1 = 12 - 5 - 1 = 6， h 的时间余量 = vl(5) - ve(4) - 1 = 11 - 8 - 1 = 2 j 的时间余量 = vl(6) - ve(5) - 1 = 12 - 9 - 1 = 2， 时间余量最大的活动是 g。",
       "existingCards": [],
-      "confidence": "high-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "关键路径与关键活动",
+          "score": 50,
+          "matchedTerms": [
+            "关键路径",
+            "最早开始",
+            "最迟开始",
+            "ve",
+            "vl",
+            "活动",
+            "持续时间",
+            "最迟开始时间",
+            "aoe",
+            "点的最",
+            "的活动",
+            "活动是"
+          ]
+        },
         {
           "card": "关键路径与 AOE 网",
           "score": 48,
@@ -34366,29 +34925,38 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 31,
+          "matchedTerms": [
+            "活动",
+            "vl",
+            "ve",
+            "-ve",
+            "时间余量最大",
+            "最早开",
+            "早开始",
+            "开始时",
+            "始时间",
+            "持续时",
+            "续时间",
+            "最早开始"
+          ]
+        },
+        {
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 20,
+          "matchedTerms": [
+            "aoe",
+            "ve",
+            "vl",
+            "持续时",
+            "续时间",
+            "持续时间"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 6,
-          "matchedTerms": [
-            "时间"
-          ]
-        },
-        {
-          "card": "完全二叉树与编号性质",
-          "score": 4,
-          "matchedTerms": [
-            "开始时"
-          ]
-        },
-        {
-          "card": "最小距离三元组的三指针扫描",
-          "score": 4,
-          "matchedTerms": [
-            "时间"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 4,
           "matchedTerms": [
             "时间"
           ]
@@ -34724,14 +35292,14 @@
           ]
         },
         {
-          "card": "快速排序分区过程",
+          "card": "活动时间余量与并行区间",
           "score": 4,
           "matchedTerms": [
-            "平均"
+            "执行"
           ]
         },
         {
-          "card": "冒泡排序与简单选择排序",
+          "card": "快速排序分区过程",
           "score": 4,
           "matchedTerms": [
             "平均"
@@ -34752,6 +35320,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 6,
+          "matchedTerms": [
+            "的最大值",
+            "最大值",
+            "最小值"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 6,
           "matchedTerms": [
@@ -34762,6 +35339,14 @@
           ]
         },
         {
+          "card": "AOE网事件最早与最迟发生时间",
+          "score": 4,
+          "matchedTerms": [
+            "最大值",
+            "最小值"
+          ]
+        },
+        {
           "card": "多路归并与双指针",
           "score": 2,
           "matchedTerms": [
@@ -34769,23 +35354,10 @@
           ]
         },
         {
-          "card": "堆的定义与建堆",
-          "score": 1,
+          "card": "后缀最大值与最小值维护",
+          "score": 2,
           "matchedTerms": [
-            "最大值"
-          ]
-        },
-        {
-          "card": "堆排序与优先队列",
-          "score": 1,
-          "matchedTerms": [
-            "最大值"
-          ]
-        },
-        {
-          "card": "快速排序分区过程",
-          "score": 1,
-          "matchedTerms": [
+            "最大值",
             "最小值"
           ]
         }
@@ -34848,6 +35420,13 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "基数排序与桶排序思想",
           "score": 4,
           "matchedTerms": [
@@ -34867,14 +35446,6 @@
           "score": 3,
           "matchedTerms": [
             "kb"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 3,
-          "matchedTerms": [
-            "对应",
-            "将查找"
           ]
         }
       ]
@@ -35074,6 +35645,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "红黑树性质与高度",
           "score": 2,
           "matchedTerms": [
@@ -35159,6 +35737,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "二次探测法与开放定址散列",
           "score": 4,
           "matchedTerms": [
@@ -35188,13 +35773,6 @@
             "访问同",
             "问同一",
             "访问同一"
-          ]
-        },
-        {
-          "card": "比较计数排序与秩排序",
-          "score": 2,
-          "matchedTerms": [
-            "空间"
           ]
         }
       ]
@@ -35286,6 +35864,13 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 6,
+          "matchedTerms": [
+            "中断"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 6,
           "matchedTerms": [
@@ -35295,18 +35880,10 @@
           ]
         },
         {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 5,
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 6,
           "matchedTerms": [
-            "处理",
-            "中断"
-          ]
-        },
-        {
-          "card": "数组下标寻址与元素宽度",
-          "score": 4,
-          "matchedTerms": [
-            "通常"
+            "索引"
           ]
         }
       ]
@@ -35533,6 +36110,16 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 12,
+          "matchedTerms": [
+            "异常",
+            "异常处",
+            "常处理",
+            "异常处理"
+          ]
+        },
+        {
           "card": "虚拟地址分页与页内偏移",
           "score": 8,
           "matchedTerms": [
@@ -35557,17 +36144,6 @@
             "页框号",
             "框号的",
             "页框号的"
-          ]
-        },
-        {
-          "card": "大小端存储",
-          "score": 5,
-          "matchedTerms": [
-            "在内存",
-            "内存中",
-            "存中的",
-            "在内存中",
-            "内存中的"
           ]
         }
       ]
@@ -35617,10 +36193,10 @@
           ]
         },
         {
-          "card": "存储器层次与主存组织",
-          "score": 3,
+          "card": "Cache跨块访问与缺失率",
+          "score": 4,
           "matchedTerms": [
-            "lru"
+            "长度"
           ]
         }
       ]
@@ -35635,7 +36211,7 @@
       "answer": "B",
       "analysis": "2022-第31题-解析 对四个选项进行逐一分析： Ⅰ. 保存断点和程序状态字 ❌ 参考中断处理过程，保存断点由中断隐指令完成，即由硬件完成。 Ⅱ. 保存通用寄存器的内容 ✅ 为了防止系统调用覆盖用户程序中的数据，操作系统在进入系统调用处理程序时会保存用户程序的寄存器内容（这属于上下文切换的一部分）。 Ⅲ. 执行系统调用服务程序 ✅ 系统调用就是要求操作系统执行某项服务，服务程序是操作系统的一部分，由操作系统调度执行。 Ⅳ. 将 CPU 模式改为内核态 ❌ 这一点不是由操作系统主动完成，而是由硬件自动完成的： 当执行陷阱指令（如 int 0x80 ）或发生中断时，CPU 自动将模式从用户态切换为内核态，然后跳转到操作系统提供的中断向量地址。 所以，这属于硬件响应的一部分，不是由操作系统“显式”控制的。 所以正确答案选择 B。",
       "existingCards": [],
-      "confidence": "high-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
         {
           "card": "中断响应与异常处理",
@@ -35653,6 +36229,24 @@
             "保存断点和",
             "处理程",
             "理程序"
+          ]
+        },
+        {
+          "card": "CPU异常响应与现场保护",
+          "score": 31,
+          "matchedTerms": [
+            "中断",
+            "断点",
+            "cpu",
+            "保存断点",
+            "状态",
+            "断点和",
+            "处理程",
+            "理程序",
+            "处理程序",
+            "保存断",
+            "存断点",
+            "存断点和"
           ]
         },
         {
@@ -35685,14 +36279,6 @@
             "cpu",
             "通用寄存器",
             "的过程"
-          ]
-        },
-        {
-          "card": "DMA 工作过程与总线占用",
-          "score": 11,
-          "matchedTerms": [
-            "cpu",
-            "处理"
           ]
         }
       ]
@@ -36051,12 +36637,26 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "多阶段流水线的信号量同步",
+          "score": 7,
+          "matchedTerms": [
+            "wait"
+          ]
+        },
+        {
           "card": "进程状态与 PCB",
           "score": 6,
           "matchedTerms": [
             "状态",
             "所需的",
             "后进入"
+          ]
+        },
+        {
+          "card": "共享铁锹互斥与资源锁",
+          "score": 5,
+          "matchedTerms": [
+            "wait"
           ]
         },
         {
@@ -36074,20 +36674,6 @@
             "输时间",
             "传输时间"
           ]
-        },
-        {
-          "card": "磁盘引导与格式化流程",
-          "score": 3,
-          "matchedTerms": [
-            "os"
-          ]
-        },
-        {
-          "card": "文件逻辑结构与物理结构",
-          "score": 3,
-          "matchedTerms": [
-            "os"
-          ]
         }
       ]
     },
@@ -36104,10 +36690,27 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "多阶段流水线的信号量同步",
+          "score": 6,
+          "matchedTerms": [
+            "流水线"
+          ]
+        },
+        {
           "card": "文件系统与目录",
           "score": 6,
           "matchedTerms": [
             "目录"
+          ]
+        },
+        {
+          "card": "共享铁锹互斥与资源锁",
+          "score": 5,
+          "matchedTerms": [
+            "足够",
+            "题目要",
+            "目要求",
+            "题目要求"
           ]
         },
         {
@@ -36125,22 +36728,6 @@
             "文件大",
             "件大小",
             "文件大小"
-          ]
-        },
-        {
-          "card": "信号量同步与互斥",
-          "score": 3,
-          "matchedTerms": [
-            "题目要",
-            "目要求",
-            "题目要求"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 3,
-          "matchedTerms": [
-            "大小"
           ]
         }
       ]
@@ -36189,10 +36776,10 @@
           ]
         },
         {
-          "card": "奈奎斯特与香农信道容量",
-          "score": 3,
+          "card": "GBN信道利用率与发送窗口",
+          "score": 4,
           "matchedTerms": [
-            "bit"
+            "要求"
           ]
         }
       ]
@@ -36217,6 +36804,13 @@
           ]
         },
         {
+          "card": "GBN信道利用率与发送窗口",
+          "score": 4,
+          "matchedTerms": [
+            "要求"
+          ]
+        },
+        {
           "card": "IP TTL 与路由转发",
           "score": 4,
           "matchedTerms": [
@@ -36236,13 +36830,6 @@
           "matchedTerms": [
             "表示"
           ]
-        },
-        {
-          "card": "交换机自学习与转发",
-          "score": 2,
-          "matchedTerms": [
-            "题目"
-          ]
         }
       ]
     },
@@ -36258,8 +36845,18 @@
       "existingCards": [
         "ALU 算术逻辑单元"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "GBN序号空间与窗口约束",
+          "score": 13,
+          "matchedTerms": [
+            "时需",
+            "因此",
+            "sr",
+            "已知"
+          ]
+        },
         {
           "card": "以太网帧与 MAC 地址",
           "score": 8,
@@ -36290,14 +36887,6 @@
           "score": 6,
           "matchedTerms": [
             "连接"
-          ]
-        },
-        {
-          "card": "IPv4 子网划分与 CIDR",
-          "score": 5,
-          "matchedTerms": [
-            "的地址",
-            "个地址"
           ]
         }
       ]
@@ -36357,11 +36946,11 @@
           ]
         },
         {
-          "card": "以太网帧与 MAC 地址",
+          "card": "卫星链路传播时延与文件发送时延",
           "score": 8,
           "matchedTerms": [
-            "地址",
-            "因此"
+            "ms",
+            "bit"
           ]
         }
       ]
@@ -36433,6 +37022,23 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "执行",
+            "ef"
+          ]
+        },
+        {
+          "card": "关键路径与关键活动",
+          "score": 3,
+          "matchedTerms": [
+            "必须满",
+            "须满足",
+            "必须满足"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 3,
           "matchedTerms": [
@@ -36447,24 +37053,10 @@
           ]
         },
         {
-          "card": "树与森林的遍历",
-          "score": 1,
+          "card": "后缀极值与区间乘积最大值",
+          "score": 2,
           "matchedTerms": [
-            "的定义"
-          ]
-        },
-        {
-          "card": "拓扑排序唯一性判定",
-          "score": 1,
-          "matchedTerms": [
-            "必须在"
-          ]
-        },
-        {
-          "card": "拓扑排序与 AOV 网",
-          "score": 1,
-          "matchedTerms": [
-            "图表示"
+            "=0"
           ]
         }
       ]
@@ -36499,6 +37091,14 @@
           ]
         },
         {
+          "card": "关键路径与关键活动",
+          "score": 6,
+          "matchedTerms": [
+            "ve",
+            "的所有"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 6,
           "matchedTerms": [
@@ -36510,13 +37110,6 @@
           "score": 5,
           "matchedTerms": [
             "ve"
-          ]
-        },
-        {
-          "card": "单链表重排与原地逆置",
-          "score": 4,
-          "matchedTerms": [
-            "a1"
           ]
         }
       ]
@@ -37391,10 +37984,11 @@
           ]
         },
         {
-          "card": "快速排序分区过程",
+          "card": "后缀最大值与最小值维护",
           "score": 4,
           "matchedTerms": [
-            "平均"
+            "题的",
+            "时间"
           ]
         }
       ]
@@ -37419,6 +38013,13 @@
             "转换为",
             "换为二",
             "转换为二"
+          ]
+        },
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 2,
+          "matchedTerms": [
+            "=0"
           ]
         },
         {
@@ -37509,6 +38110,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 8,
+          "matchedTerms": [
+            "空间",
+            "题的"
+          ]
+        },
+        {
           "card": "查找算法与散列表",
           "score": 4,
           "matchedTerms": [
@@ -37538,15 +38147,6 @@
           "matchedTerms": [
             "cpu"
           ]
-        },
-        {
-          "card": "最小生成树与最短路径",
-          "score": 3,
-          "matchedTerms": [
-            "个不同",
-            "不同的",
-            "个不同的"
-          ]
         }
       ]
     },
@@ -37560,8 +38160,19 @@
       "answer": "B",
       "analysis": "2023-第16题-解析 int 类型在计算机中以补码形式表示，因此，x（10）的二进制表示为 0000 0000 0000 0000 0000 0000 0000 1010B，y（-20）的二进制表示为 11111111 11111111 1111 1111 11101100。 OF 和 CF 是 CPU 中 标志寄存器 的标志位。CF 表示无符号整数运算时的进位/借位，因此计算 CF 的时候，需要把和 x 和 y 当成无符号数进行计算，因为 x 不够减 y，所以 CF = 1。计算 OF 的时候，需要把和 x 和 y 当成有符号数进行计算，x-y=30，不超过 int 的最大值，不会产生溢出，所以 OF=0。所以本题的正确选项为 B。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 9,
+          "matchedTerms": [
+            "的最大值",
+            "=0",
+            "最大值",
+            "大值不",
+            "最大值不"
+          ]
+        },
         {
           "card": "最小距离三元组的三指针扫描",
           "score": 5,
@@ -37579,25 +38190,17 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
             "本题"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 3,
-          "matchedTerms": [
-            "执行",
-            "不超过"
-          ]
-        },
-        {
-          "card": "外部排序与多路归并",
-          "score": 3,
-          "matchedTerms": [
-            "cpu"
           ]
         }
       ]
@@ -37625,6 +38228,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -37643,13 +38253,6 @@
           "score": 2,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "前缀编码与二叉判定树",
-          "score": 2,
-          "matchedTerms": [
-            "编码"
           ]
         }
       ]
@@ -37743,21 +38346,18 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 4,
           "matchedTerms": [
             "if",
             "内存中"
-          ]
-        },
-        {
-          "card": "拓扑排序唯一性判定",
-          "score": 4,
-          "matchedTerms": [
-            "判断最",
-            "断最终",
-            "判断最终",
-            "并更新"
           ]
         }
       ]
@@ -37806,10 +38406,11 @@
           ]
         },
         {
-          "card": "散列表装填因子与查找终止",
+          "card": "后缀最大值与最小值维护",
           "score": 4,
           "matchedTerms": [
-            "本题"
+            "题的",
+            "时间"
           ]
         }
       ]
@@ -37826,6 +38427,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
         {
           "card": "外部排序与多路归并",
           "score": 3,
@@ -37869,6 +38477,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -37888,13 +38503,6 @@
           "score": 3,
           "matchedTerms": [
             "输出"
-          ]
-        },
-        {
-          "card": "外部排序与多路归并",
-          "score": 3,
-          "matchedTerms": [
-            "cpu"
           ]
         }
       ]
@@ -37967,6 +38575,14 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "Cache组相联映射与地址字段",
+          "score": 12,
+          "matchedTerms": [
+            "映射",
+            "组索引"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 10,
           "matchedTerms": [
@@ -37978,8 +38594,8 @@
           ]
         },
         {
-          "card": "中断响应与异常处理",
-          "score": 6,
+          "card": "CPU异常响应与现场保护",
+          "score": 9,
           "matchedTerms": [
             "中断",
             "处理程",
@@ -37988,26 +38604,21 @@
           ]
         },
         {
-          "card": "中断与 DMA",
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 7,
+          "matchedTerms": [
+            "索引",
+            "组索引"
+          ]
+        },
+        {
+          "card": "中断响应与异常处理",
           "score": 6,
           "matchedTerms": [
-            "中断处理"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 5,
-          "matchedTerms": [
-            "处理",
-            "中断"
-          ]
-        },
-        {
-          "card": "虚拟地址分页与页内偏移",
-          "score": 5,
-          "matchedTerms": [
-            "本题",
-            "地址由"
+            "中断",
+            "处理程",
+            "理程序",
+            "处理程序"
           ]
         }
       ]
@@ -38044,26 +38655,25 @@
           ]
         },
         {
-          "card": "Cache 映射与命中率",
-          "score": 4,
+          "card": "数组跨页与缺页次数",
+          "score": 6,
           "matchedTerms": [
             "kb",
-            "位表示"
+            "页大小"
           ]
         },
         {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 3,
+          "card": "Cache组相联映射与地址字段",
+          "score": 5,
           "matchedTerms": [
-            "mb"
+            "kb"
           ]
         },
         {
-          "card": "大小端存储",
-          "score": 3,
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 5,
           "matchedTerms": [
-            "位数",
-            "内存中"
+            "kb"
           ]
         }
       ]
@@ -38080,8 +38690,20 @@
       "existingCards": [
         "内核态与用户态特权级"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "CPU异常响应与现场保护",
+          "score": 12,
+          "matchedTerms": [
+            "cpu",
+            "切换到内核态",
+            "状态",
+            "系统调",
+            "统调用",
+            "系统调用"
+          ]
+        },
         {
           "card": "程序查询与中断驱动 I/O",
           "score": 8,
@@ -38112,13 +38734,6 @@
             "cpu",
             "执行"
           ]
-        },
-        {
-          "card": "硬布线控制器与微程序控制器",
-          "score": 7,
-          "matchedTerms": [
-            "cpu"
-          ]
         }
       ]
     },
@@ -38134,6 +38749,33 @@
       "existingCards": [],
       "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "CPU异常响应与现场保护",
+          "score": 19,
+          "matchedTerms": [
+            "异常",
+            "cpu",
+            "异常处",
+            "常处理",
+            "异常处理",
+            "状态",
+            "的同步"
+          ]
+        },
+        {
+          "card": "数组跨页与缺页次数",
+          "score": 13,
+          "matchedTerms": [
+            "缺页异常",
+            "的页面",
+            "会触发",
+            "触发缺",
+            "发缺页",
+            "会触发缺",
+            "触发缺页",
+            "会触发缺页"
+          ]
+        },
         {
           "card": "整数溢出检测与异常处理",
           "score": 12,
@@ -38159,21 +38801,6 @@
             "cpu",
             "处理"
           ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 8,
-          "matchedTerms": [
-            "执行",
-            "cpu"
-          ]
-        },
-        {
-          "card": "单周期与多周期数据通路",
-          "score": 7,
-          "matchedTerms": [
-            "cpu"
-          ]
         }
       ]
     },
@@ -38198,6 +38825,14 @@
             "虚拟地",
             "拟地址",
             "大小不"
+          ]
+        },
+        {
+          "card": "Cache组相联映射与地址字段",
+          "score": 9,
+          "matchedTerms": [
+            "映射",
+            "容量"
           ]
         },
         {
@@ -38227,15 +38862,6 @@
             "义决定",
             "主存和",
             "地址的"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 6,
-          "matchedTerms": [
-            "执行",
-            "都认为",
-            "同的访"
           ]
         }
       ]
@@ -38337,6 +38963,13 @@
           ]
         },
         {
+          "card": "Cache组相联映射与地址字段",
+          "score": 6,
+          "matchedTerms": [
+            "映射"
+          ]
+        },
+        {
           "card": "TLB 组相联映射与 LRU 替换",
           "score": 5,
           "matchedTerms": [
@@ -38352,15 +38985,6 @@
           "score": 4,
           "matchedTerms": [
             "地址"
-          ]
-        },
-        {
-          "card": "大小端存储",
-          "score": 3,
-          "matchedTerms": [
-            "在内存",
-            "内存中",
-            "在内存中"
           ]
         }
       ]
@@ -38391,6 +39015,13 @@
           ]
         },
         {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 6,
+          "matchedTerms": [
+            "索引"
+          ]
+        },
+        {
           "card": "虚拟地址分页与页内偏移",
           "score": 4,
           "matchedTerms": [
@@ -38405,10 +39036,10 @@
           ]
         },
         {
-          "card": "TLB 组相联映射与 LRU 替换",
+          "card": "Cache平均访问时间与缺失损失",
           "score": 2,
           "matchedTerms": [
-            "访问"
+            "本题"
           ]
         }
       ]
@@ -38435,6 +39066,13 @@
           ]
         },
         {
+          "card": "Cache组相联映射与地址字段",
+          "score": 6,
+          "matchedTerms": [
+            "映射"
+          ]
+        },
+        {
           "card": "虚拟地址分页与页内偏移",
           "score": 5,
           "matchedTerms": [
@@ -38457,13 +39095,6 @@
             "设备是",
             "备是否",
             "设备是否"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 4,
-          "matchedTerms": [
-            "执行"
           ]
         }
       ]
@@ -38707,6 +39338,15 @@
           ]
         },
         {
+          "card": "阻塞式I/O与驱动程序调用",
+          "score": 4,
+          "matchedTerms": [
+            "认为",
+            "数据时",
+            "数是否"
+          ]
+        },
+        {
           "card": "临界区与共享缓冲区",
           "score": 3,
           "matchedTerms": [
@@ -38928,6 +39568,16 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 14,
+          "matchedTerms": [
+            "tf",
+            "ve",
+            "es",
+            "ef"
+          ]
+        },
+        {
           "card": "图的存储与遍历",
           "score": 12,
           "matchedTerms": [
@@ -38959,22 +39609,11 @@
           ]
         },
         {
-          "card": "Kahn拓扑排序与入度维护",
-          "score": 9,
+          "card": "关键路径与关键活动",
+          "score": 10,
           "matchedTerms": [
-            "顶点数",
-            "邻接矩",
-            "接矩阵",
-            "邻接矩阵",
-            "该顶点"
-          ]
-        },
-        {
-          "card": "空间换时间与辅助数组",
-          "score": 8,
-          "matchedTerms": [
-            "计数",
-            "记录"
+            "ve",
+            "tf"
           ]
         }
       ]
@@ -39014,6 +39653,16 @@
           ]
         },
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 8,
+          "matchedTerms": [
+            "和最小值",
+            ">0",
+            "最大值",
+            "最小值"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 8,
           "matchedTerms": [
@@ -39027,19 +39676,12 @@
           ]
         },
         {
-          "card": "最小距离三元组的三指针扫描",
+          "card": "后缀最大值与最小值维护",
           "score": 4,
           "matchedTerms": [
-            "最小值",
-            "最大值"
-          ]
-        },
-        {
-          "card": "空间换时间与辅助数组",
-          "score": 3,
-          "matchedTerms": [
-            "记录",
-            "记录的"
+            "题的",
+            "最大值",
+            "最小值"
           ]
         }
       ]
@@ -39091,22 +39733,19 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 8,
+          "matchedTerms": [
+            "空间",
+            "时间"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 7,
           "matchedTerms": [
             "时间",
             "int"
-          ]
-        },
-        {
-          "card": "图的存储与遍历",
-          "score": 6,
-          "matchedTerms": [
-            "时间",
-            "二维数",
-            "维数组",
-            "二维数组",
-            "为每个"
           ]
         }
       ]
@@ -39188,6 +39827,14 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "执行",
+            "es"
+          ]
+        },
+        {
           "card": "单链表重排与原地逆置",
           "score": 5,
           "matchedTerms": [
@@ -39208,14 +39855,6 @@
           "score": 5,
           "matchedTerms": [
             "ll"
-          ]
-        },
-        {
-          "card": "前缀编码与二叉判定树",
-          "score": 3,
-          "matchedTerms": [
-            "因为",
-            "码是否"
           ]
         }
       ]
@@ -39263,10 +39902,10 @@
           ]
         },
         {
-          "card": "空间换时间与辅助数组",
+          "card": "活动时间余量与并行区间",
           "score": 4,
           "matchedTerms": [
-            "标记"
+            "执行"
           ]
         }
       ]
@@ -40105,6 +40744,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -40112,19 +40758,10 @@
           ]
         },
         {
-          "card": "算法五个特性",
+          "card": "后缀极值与区间乘积最大值",
           "score": 3,
           "matchedTerms": [
-            "语言代",
-            "言代码",
-            "语言代码"
-          ]
-        },
-        {
-          "card": "最小距离三元组的三指针扫描",
-          "score": 3,
-          "matchedTerms": [
-            "int"
+            "结果为"
           ]
         }
       ]
@@ -40141,6 +40778,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
         {
           "card": "算法五个特性",
           "score": 3,
@@ -40170,13 +40814,6 @@
           "matchedTerms": [
             "对应"
           ]
-        },
-        {
-          "card": "哈夫曼树与带权路径长度",
-          "score": 1,
-          "matchedTerms": [
-            "完成的"
-          ]
         }
       ]
     },
@@ -40192,6 +40829,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
         {
           "card": "比较计数排序与秩排序",
           "score": 2,
@@ -40214,10 +40858,10 @@
           ]
         },
         {
-          "card": "最小生成树与最短路径",
+          "card": "后缀极值与区间乘积最大值",
           "score": 1,
           "matchedTerms": [
-            "−1"
+            "-1"
           ]
         }
       ]
@@ -40285,6 +40929,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "树的基本术语与性质",
           "score": 4,
           "matchedTerms": [
@@ -40312,14 +40963,6 @@
           "score": 2,
           "matchedTerms": [
             "空间"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 2,
-          "matchedTerms": [
-            "地址的",
-            "的映射"
           ]
         }
       ]
@@ -40460,10 +41103,10 @@
           ]
         },
         {
-          "card": "散列表装填因子与查找终止",
+          "card": "活动时间余量与并行区间",
           "score": 4,
           "matchedTerms": [
-            "本题"
+            "执行"
           ]
         }
       ]
@@ -40541,6 +41184,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 2,
+          "matchedTerms": [
+            "确定"
+          ]
+        },
+        {
           "card": "中缀表达式求值",
           "score": 2,
           "matchedTerms": [
@@ -40559,13 +41209,6 @@
           "score": 1,
           "matchedTerms": [
             "序需要"
-          ]
-        },
-        {
-          "card": "最小生成树与最短路径",
-          "score": 1,
-          "matchedTerms": [
-            "有多个"
           ]
         }
       ]
@@ -40592,6 +41235,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 3,
+          "matchedTerms": [
+            "es"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 3,
           "matchedTerms": [
@@ -40611,13 +41261,6 @@
           "matchedTerms": [
             "的数据"
           ]
-        },
-        {
-          "card": "数据结构三要素",
-          "score": 1,
-          "matchedTerms": [
-            "和存储"
-          ]
         }
       ]
     },
@@ -40631,8 +41274,26 @@
       "answer": "A",
       "analysis": "2024-第23题-解析 本题考查 中断和异常。 A 错误。中断或异常发生时，CPU 处于用户态。当中断或异常发生时，CPU 会从用户态切换到内核态，然后开始执行相应的中断处理程序或异常处理程序。 B 正确。操作系统为每种系统调用提供了对应的内核服务例程，这些例程负责处理用户程序发起的系统调用，以及管理内核资源和执行相应的操作。当用户程序发起系统调用时，处理器会从用户态切换到内核态，并执行与该系统调用对应的内核服务例程。 C 正确。当中断发生时，CPU 会从用户态切换到内核态，并开始执行相应的中断处理程序。因为中断处理程序需要访问和操作受保护的内核资源，如管理设备、执行特权指令等，所以中断处理程序必须在内核态下执行。 D 正确。系统添加新类型设备时，需注册相应的中断服务例程。因为许多设备在发生特定事件时会触发中断，需要相应的中断处理程序来进行处理，该中断处理程序就是中断服务例程。",
       "existingCards": [],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
+        {
+          "card": "CPU异常响应与现场保护",
+          "score": 35,
+          "matchedTerms": [
+            "异常",
+            "中断",
+            "cpu",
+            "切换到内核态",
+            "异常处",
+            "常处理",
+            "异常处理",
+            "处理器",
+            "处理程",
+            "理程序",
+            "处理程序",
+            "常处理程"
+          ]
+        },
         {
           "card": "中断与 DMA",
           "score": 16,
@@ -40677,15 +41338,6 @@
             "处理",
             "设备"
           ]
-        },
-        {
-          "card": "整数溢出检测与异常处理",
-          "score": 12,
-          "matchedTerms": [
-            "异常处",
-            "常处理",
-            "异常处理"
-          ]
         }
       ]
     },
@@ -40720,6 +41372,15 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 6,
+          "matchedTerms": [
+            "终止进",
+            "止进程",
+            "终止进程"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 4,
           "matchedTerms": [
@@ -40733,14 +41394,6 @@
           "matchedTerms": [
             "执行",
             "周期"
-          ]
-        },
-        {
-          "card": "DMA 工作过程与总线占用",
-          "score": 4,
-          "matchedTerms": [
-            "周期",
-            "设备"
           ]
         }
       ]
@@ -40993,6 +41646,16 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 5,
+          "matchedTerms": [
+            "并返回",
+            "系统调",
+            "统调用",
+            "系统调用"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 4,
           "matchedTerms": [
@@ -41001,13 +41664,6 @@
         },
         {
           "card": "立即数与直接间接寻址",
-          "score": 3,
-          "matchedTerms": [
-            "ea"
-          ]
-        },
-        {
-          "card": "指令译码与有效地址计算",
           "score": 3,
           "matchedTerms": [
             "ea"
@@ -41622,6 +42278,13 @@
           ]
         },
         {
+          "card": "GBN信道利用率与发送窗口",
+          "score": 4,
+          "matchedTerms": [
+            "要求"
+          ]
+        },
+        {
           "card": "TCP 三次握手与四次挥手",
           "score": 4,
           "matchedTerms": [
@@ -41634,13 +42297,6 @@
           "matchedTerms": [
             "拓扑",
             "算法基"
-          ]
-        },
-        {
-          "card": "交换机自学习与转发",
-          "score": 2,
-          "matchedTerms": [
-            "题目"
           ]
         }
       ]
@@ -41814,21 +42470,20 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 7,
+          "matchedTerms": [
+            "执行",
+            "ef"
+          ]
+        },
+        {
           "card": "数组行优先与列优先存储",
           "score": 6,
           "matchedTerms": [
             "kb",
             "数组",
             "数组a"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 6,
-          "matchedTerms": [
-            "数组",
-            "对应",
-            "答案为"
           ]
         }
       ]
@@ -41856,6 +42511,21 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 6,
+          "matchedTerms": [
+            "执行",
+            "确定"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 6,
           "matchedTerms": [
@@ -41869,22 +42539,6 @@
           "matchedTerms": [
             "转换后",
             "通过右"
-          ]
-        },
-        {
-          "card": "单链表与双链表",
-          "score": 3,
-          "matchedTerms": [
-            "物理地",
-            "理地址",
-            "物理地址"
-          ]
-        },
-        {
-          "card": "外部排序与多路归并",
-          "score": 3,
-          "matchedTerms": [
-            "cpu"
           ]
         }
       ]
@@ -41912,6 +42566,15 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 11,
+          "matchedTerms": [
+            "执行",
+            "tf",
+            "ef"
+          ]
+        },
+        {
           "card": "循环链式队列与空闲结点复用",
           "score": 9,
           "matchedTerms": [
@@ -41923,26 +42586,19 @@
           ]
         },
         {
-          "card": "AVL 树平衡调整",
+          "card": "后缀极值与区间乘积最大值",
+          "score": 6,
+          "matchedTerms": [
+            "=0",
+            "写入",
+            "时访问"
+          ]
+        },
+        {
+          "card": "关键路径与关键活动",
           "score": 5,
           "matchedTerms": [
-            "ll"
-          ]
-        },
-        {
-          "card": "比较计数排序与秩排序",
-          "score": 3,
-          "matchedTerms": [
-            "释放",
-            "时必须"
-          ]
-        },
-        {
-          "card": "单链表与双链表",
-          "score": 3,
-          "matchedTerms": [
-            "释放",
-            "时必须"
+            "tf"
           ]
         }
       ]
@@ -42844,6 +43500,13 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -42857,13 +43520,6 @@
             "语言代",
             "言代码",
             "语言代码"
-          ]
-        },
-        {
-          "card": "最小距离三元组的三指针扫描",
-          "score": 3,
-          "matchedTerms": [
-            "int"
           ]
         }
       ]
@@ -42951,17 +43607,17 @@
           ]
         },
         {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 2,
+          "matchedTerms": [
+            "=0"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 2,
           "matchedTerms": [
             "得到"
-          ]
-        },
-        {
-          "card": "比较计数排序与秩排序",
-          "score": 1,
-          "matchedTerms": [
-            "=a"
           ]
         }
       ]
@@ -42997,6 +43653,13 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "数组行优先与列优先存储",
           "score": 4,
           "matchedTerms": [
@@ -43010,15 +43673,6 @@
           "matchedTerms": [
             "int",
             "的整数"
-          ]
-        },
-        {
-          "card": "循环队列判空与判满",
-          "score": 3,
-          "matchedTerms": [
-            "存储空",
-            "储空间",
-            "存储空间"
           ]
         }
       ]
@@ -43085,6 +43739,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
         {
           "card": "红黑树性质与高度",
           "score": 2,
@@ -43165,6 +43826,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 6,
+          "matchedTerms": [
+            "执行",
+            "确定"
+          ]
+        },
+        {
           "card": "空间换时间与辅助数组",
           "score": 6,
           "matchedTerms": [
@@ -43190,14 +43859,6 @@
           "score": 2,
           "matchedTerms": [
             "和数据"
-          ]
-        },
-        {
-          "card": "数据结构三要素",
-          "score": 2,
-          "matchedTerms": [
-            "和数据",
-            "和存储"
           ]
         }
       ]
@@ -43316,6 +43977,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "活动时间余量与并行区间",
+          "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 3,
           "matchedTerms": [
@@ -43372,6 +44040,14 @@
           ]
         },
         {
+          "card": "CPU异常响应与现场保护",
+          "score": 8,
+          "matchedTerms": [
+            "中断",
+            "状态"
+          ]
+        },
+        {
           "card": "数组下标寻址与元素宽度",
           "score": 5,
           "matchedTerms": [
@@ -43392,13 +44068,6 @@
           "score": 4,
           "matchedTerms": [
             "每次"
-          ]
-        },
-        {
-          "card": "中断响应与异常处理",
-          "score": 3,
-          "matchedTerms": [
-            "中断"
           ]
         }
       ]
@@ -43502,11 +44171,10 @@
           ]
         },
         {
-          "card": "指令系统与寻址方式",
-          "score": 3,
+          "card": "Cache跨块访问与缺失率",
+          "score": 4,
           "matchedTerms": [
-            "长度",
-            "的操作"
+            "长度"
           ]
         }
       ]
@@ -43550,19 +44218,17 @@
           ]
         },
         {
+          "card": "Cache平均访问时间与缺失损失",
+          "score": 4,
+          "matchedTerms": [
+            "命中"
+          ]
+        },
+        {
           "card": "存储器层次与主存组织",
           "score": 3,
           "matchedTerms": [
             "lru"
-          ]
-        },
-        {
-          "card": "大小端存储",
-          "score": 3,
-          "matchedTerms": [
-            "内存中",
-            "存中的",
-            "内存中的"
           ]
         }
       ]
@@ -43682,6 +44348,13 @@
           ]
         },
         {
+          "card": "Cache组相联映射与地址字段",
+          "score": 2,
+          "matchedTerms": [
+            "不是"
+          ]
+        },
+        {
           "card": "TLB 组相联映射与 LRU 替换",
           "score": 2,
           "matchedTerms": [
@@ -43702,6 +44375,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 6,
+          "matchedTerms": [
+            "索引"
+          ]
+        },
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 4,
@@ -43731,13 +44411,6 @@
             "写入",
             "系统通"
           ]
-        },
-        {
-          "card": "定点补码加减与溢出",
-          "score": 2,
-          "matchedTerms": [
-            "表示"
-          ]
         }
       ]
     },
@@ -43766,6 +44439,14 @@
           ]
         },
         {
+          "card": "Cache组相联映射与地址字段",
+          "score": 8,
+          "matchedTerms": [
+            "映射",
+            "不是"
+          ]
+        },
+        {
           "card": "Cache 直接映射与组相联",
           "score": 6,
           "matchedTerms": [
@@ -43775,24 +44456,19 @@
           ]
         },
         {
+          "card": "数组跨页与缺页次数",
+          "score": 4,
+          "matchedTerms": [
+            "虚拟地",
+            "拟地址",
+            "虚拟地址",
+            "不是页"
+          ]
+        },
+        {
           "card": "小端字节序与补码读取",
           "score": 4,
           "matchedTerms": [
-            "地址"
-          ]
-        },
-        {
-          "card": "指令系统与寻址方式",
-          "score": 4,
-          "matchedTerms": [
-            "直接"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 4,
-          "matchedTerms": [
-            "物理地址",
             "地址"
           ]
         }
@@ -43899,18 +44575,19 @@
           ]
         },
         {
+          "card": "Cache组相联映射与地址字段",
+          "score": 8,
+          "matchedTerms": [
+            "kb",
+            "块大小"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 7,
           "matchedTerms": [
             "块大小",
             "kb"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 6,
-          "matchedTerms": [
-            "时间"
           ]
         }
       ]
@@ -44352,6 +45029,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "GBN信道利用率与发送窗口",
+          "score": 8,
+          "matchedTerms": [
+            "要求",
+            "min"
+          ]
+        },
+        {
           "card": "CSMA/CA 与无线局域网",
           "score": 7,
           "matchedTerms": [
@@ -44374,17 +45059,10 @@
           ]
         },
         {
-          "card": "交换机自学习与转发",
-          "score": 2,
+          "card": "GBN序号空间与窗口约束",
+          "score": 4,
           "matchedTerms": [
-            "题目"
-          ]
-        },
-        {
-          "card": "热土豆路由与 IGP 出口距离",
-          "score": 2,
-          "matchedTerms": [
-            "长度"
+            "因此"
           ]
         }
       ]
@@ -44488,6 +45166,15 @@
           ]
         },
         {
+          "card": "后缀最大值与最小值维护",
+          "score": 10,
+          "matchedTerms": [
+            "空间",
+            "个元素",
+            "时间"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 10,
           "matchedTerms": [
@@ -44507,17 +45194,6 @@
             "起始",
             "数组",
             "页面"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 6,
-          "matchedTerms": [
-            "平均",
-            "/2",
-            "一个元",
-            "个元素",
-            "一个元素"
           ]
         }
       ]
@@ -44617,10 +45293,10 @@
           ]
         },
         {
-          "card": "循环链式队列与空闲结点复用",
+          "card": "后缀极值与区间乘积最大值",
           "score": 2,
           "matchedTerms": [
-            "初始"
+            "=0"
           ]
         }
       ]
@@ -44646,6 +45322,21 @@
           ]
         },
         {
+          "card": "活动时间余量与并行区间",
+          "score": 8,
+          "matchedTerms": [
+            "执行",
+            "tf"
+          ]
+        },
+        {
+          "card": "后缀最大值与最小值维护",
+          "score": 6,
+          "matchedTerms": [
+            "空间"
+          ]
+        },
+        {
           "card": "递归算法与递归树",
           "score": 5,
           "matchedTerms": [
@@ -44653,24 +45344,10 @@
           ]
         },
         {
-          "card": "单链表重排与原地逆置",
-          "score": 4,
+          "card": "关键路径与关键活动",
+          "score": 5,
           "matchedTerms": [
-            "an"
-          ]
-        },
-        {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
-          "card": "散列表装填因子与查找终止",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
+            "tf"
           ]
         }
       ]
@@ -44687,8 +45364,44 @@
       "existingCards": [
         "IPv4 子网划分与 CIDR"
       ],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
+        {
+          "card": "GBN信道利用率与发送窗口",
+          "score": 57,
+          "matchedTerms": [
+            "gbn",
+            "rtt",
+            "信道利用率",
+            "发送窗口",
+            "kbps",
+            "帧长1500b",
+            "帧长",
+            "要求",
+            "ack",
+            "忽略",
+            "倍单向传播时延",
+            "发送窗口至少"
+          ]
+        },
+        {
+          "card": "卫星链路传播时延与文件发送时延",
+          "score": 39,
+          "matchedTerms": [
+            "传播时延",
+            "km",
+            "kbps",
+            "高度36000km",
+            "高度",
+            "传播速度",
+            "单向传播时延",
+            "单向传",
+            "向传播",
+            "为卫星",
+            "单向传播",
+            "比特数"
+          ]
+        },
         {
           "card": "停止等待协议与利用率",
           "score": 36,
@@ -44741,34 +45454,6 @@
             "算传播时",
             "算传播时延",
             "时延和"
-          ]
-        },
-        {
-          "card": "GBN 后退 N 帧协议",
-          "score": 23,
-          "matchedTerms": [
-            "gbn",
-            "ack",
-            "发送窗",
-            "送窗口",
-            "窗口大",
-            "口大小",
-            "发送窗口",
-            "窗口大小",
-            "确认帧"
-          ]
-        },
-        {
-          "card": "TCP 接收窗口与滑动窗口",
-          "score": 21,
-          "matchedTerms": [
-            "接收窗",
-            "收窗口",
-            "接收窗口",
-            "ack",
-            "发送窗",
-            "送窗口",
-            "发送窗口"
           ]
         }
       ]
