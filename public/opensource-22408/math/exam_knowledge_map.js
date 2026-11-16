@@ -3040,244 +3040,524 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "对数后需保留平方产生的系数 2，并正确平移积分区间。"
   },
   "240": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-选择题-10",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A"
+    ],
+    "secondary": [
+      "CAL-05-E"
+    ],
+    "rationale": "由\n$$\nf'(0)=\\lim_{x\\to0}\\frac{f(x)-f(0)}{x}>0\n$$\n及极限保号性，知当 $0<x<\\delta$ 时 $\\dfrac{f(x)-f(0)}{x}>0$，从而 $f(x)>f(0)$。",
+    "methods": "导数定义的局部保号性；由 f′(0)>0 及导数定义，取足够小邻域使差商为正，推出右侧 f(x)>f(0)。",
+    "pitfalls": "导数在一点为正不代表整个邻域导数都为正，不能推出单调性。"
   },
   "241": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-选择题-11",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "对 $x^{2}+1$ 设特解 $ax^{2}+bx+c$；因 $\\sin x$ 与齐次方程特征根 $\\pm i$ 对应，需乘以 $x$，设为 $x(A\\sin x+B\\cos x)$。故选 A。",
+    "methods": "二阶常系数非齐次方程待定系数法；多项式右端设同次数多项式特解；正弦项与齐次解共振，需乘 x。",
+    "pitfalls": "先检查特征根是否与右端频率共振，再决定是否乘 x。"
   },
   "242": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-选择题-12",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-F"
+    ],
+    "secondary": [
+      "CAL-08-E"
+    ],
+    "rationale": "区域为圆 $x^{2}+(y-1)^{2}\\le1$。极坐标下\n$$\n0\\le\\theta\\le\\pi,\\qquad 0\\le r\\le2\\sin\\theta,\n$$\n且 $xy=r^{2}\\sin\\theta\\cos\\theta$，面积元为 $r\\,dr\\,d\\theta$。故选 D。",
+    "methods": "二重积分区域的极坐标表示；将圆域化为 0≤θ≤π、0≤r≤2sinθ，并把 xy 与面积元 r dr dθ 一并转换。",
+    "pitfalls": "极坐标积分必须包含雅可比因子 r。"
   },
   "243": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-选择题-13",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-A"
+    ],
+    "secondary": [
+      "LA-02-B"
+    ],
+    "rationale": "列变换对应右乘初等矩阵。先交换第 1、2 列，再将第 2 列加到第 3 列，故\n$$\n\\boldsymbol{Q}\n=\n\\begin{pmatrix}0&1&0\\\\1&0&0\\\\0&0&1\\end{pmatrix}\n\\begin{pmatrix}1&0&0\\\\0&1&1\\\\0&0&1\\end{pmatrix}\n=\n\\begin{pmatrix}0&1&1\\\\1&0&0\\\\0&0&1\\end{pmatrix}.\n$$",
+    "methods": "列变换对应右乘初等矩阵；将列交换与列倍加分别写成右乘初等矩阵，按变换先后顺序相乘。",
+    "pitfalls": "列变换是右乘；矩阵乘积次序不能颠倒。"
   },
   "244": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-选择题-14",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-03-B"
+    ],
+    "secondary": [
+      "LA-02-E"
+    ],
+    "rationale": "设 $\\boldsymbol{A}$ 为 $m\\times n$ 矩阵，$\\boldsymbol{B}$ 为 $n\\times s$ 矩阵。由 $\\boldsymbol{A}\\boldsymbol{B}=0$ 得\n$$\n\\operatorname{rank}(\\boldsymbol{A})+\\operatorname{rank}(\\boldsymbol{B})\\le n.\n$$\n因二者非零，故 $\\operatorname{rank}(\\boldsymbol{A})<n,\\ \\operatorname{rank}(\\boldsymbol{B})<n$，即 $\\boldsymbol{A}$ 的列向量组、$\\boldsymbol{B}$ 的行向量组线性相关。",
+    "methods": "零矩阵乘积与秩不等式；由 AB=0 得 Im(B)⊂Ker(A)，结合秩—零度定理推出 A 列向量组及 B 行向量组相关。",
+    "pitfalls": "区分 A 的列向量与 B 的行向量，不能误判成两者列向量均相关。"
   },
   "245": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-解答题-15",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-01-H"
+    ],
+    "rationale": "令\n$$\nu=x\\ln\\frac{1+2\\cos x}{3}.\n$$\n则原式等于\n$$\n\\lim_{x\\to0}\\frac{e^{u}-1}{u}\\cdot\n\\lim_{x\\to0}\\frac{u}{x^{3}}.\n$$\n又\n$$\n\\ln\\frac{1+2\\cos x}{3}\n=\\ln\\left(1+\\frac{2(\\cos x-1)}{3}\\right)\n\\sim -\\frac{x^{2}}{3},\n$$\n故原极限为 $-\\dfrac13$。\n\n> **注：** 若原解析答案为 $-\\dfrac16$，则题式可能存在排版差异；此处按当前题干公式计算。",
+    "methods": "对数等价无穷小与复合极限；令 u=x ln((1+2cosx)/3)，利用 (e^u−1)/u→1 及 ln(1+v)∼v。",
+    "pitfalls": "先求括号内对数的二阶主项，再乘外层 x。"
   },
   "246": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-解答题-16",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-05-E"
+    ],
+    "rationale": "（Ⅰ）当 $-2\\le x\\le0$ 时，\n$$\nf(x)=kf(x+2)=k(x+2)\\big[(x+2)^2-4\\big]=kx(x+2)(x+4).\n$$\n\n（Ⅱ）右导数\n$$\nf'_+(0)=\\big[x(x^{2}-4)\\big]'_{x=0}=-4,\n$$\n左导数\n$$\nf'_-(0)=\\big[kx(x+2)(x+4)\\big]'_{x=0}=8k.\n$$\n可导需 $8k=-4$，故 $k=-\\dfrac12$。",
+    "methods": "函数平移关系与左右导数；由 f(x)=k f(x+2) 求出左侧表达式，分别计算 x=0 左右导数并令其相等。",
+    "pitfalls": "分段点可导要求函数连续且左右导数相等；本题先用关系式确定左段。"
   },
   "247": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-解答题-17",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-F"
+    ],
+    "secondary": [
+      "CAL-05-B"
+    ],
+    "rationale": "（Ⅰ）令 $t=u+\\pi$，有\n$$\nf(x+\\pi)=\\int_{x}^{x+\\pi/2}|\\sin(u+\\pi)|\\,du=f(x),\n$$\n故 $f(x)$ 以 $\\pi$ 为周期。\n\n（Ⅱ）只需考察 $[0,\\pi]$。由\n$$\nf'(x)=\\left|\\cos x\\right|-\\left|\\sin x\\right|,\n$$\n得驻点 $x=\\dfrac\\pi4,\\dfrac{3\\pi}4$。计算\n$$\nf(0)=f(\\pi)=1,\\quad\nf\\left(\\frac\\pi4\\right)=\\sqrt2,\\quad\nf\\left(\\frac{3\\pi}4\\right)=2-\\sqrt2.\n$$\n故值域为\n$$\n[\\,2-\\sqrt2,\\ \\sqrt2\\,].\n$$",
+    "methods": "变上限积分函数的周期性与值域；利用 |sin(t+π)|=|sin t| 证明周期性，再在一个周期内求导并比较端点与驻点值。",
+    "pitfalls": "周期性只需考察一个周期；求值域需包含端点和全部驻点。"
   },
   "248": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-解答题-18",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "（Ⅰ）有\n$$\nV(t)=\\pi\\int_0^t y^2\\,dx,\\qquad\nS(t)=2\\pi\\int_0^t y\\sqrt{1+(y')^2}\\,dx.\n$$\n因 $y=\\dfrac{e^x+e^{-x}}2,\\ y'=\\dfrac{e^x-e^{-x}}2$，所以 $\\sqrt{1+(y')^2}=y$。故\n$$\nS(t)=2V(t),\\qquad \\frac{S(t)}{V(t)}=2.\n$$\n\n（Ⅱ）$F(t)=\\pi y^2(t)$，因此\n$$\n\\frac{S(t)}{F(t)}\n=\\frac{2\\int_0^t y^2\\,dx}{y^2(t)}.\n$$\n用洛必达法则得\n$$\n\\lim_{t\\to+\\infty}\\frac{S(t)}{F(t)}=1.\n$$",
+    "methods": "旋转曲面侧面积与旋转体体积；使用旋转侧面积公式 2π∫y√(1+y′²)dx 与体积公式 π∫y²dx，利用双曲余弦恒等式化简。",
+    "pitfalls": "侧面积公式包含弧长因子，不能误用为圆柱侧面积。"
   },
   "249": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-解答题-19",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A"
+    ],
+    "secondary": [
+      "CAL-05-E"
+    ],
+    "rationale": "题干区间 $e^{2}<a<b<e$ 为空，按原解析应为 $e<a<b<e^{2}$。令\n$$\n\\varphi(x)=\\ln^{2}x-\\frac{4}{e^{2}}x.\n$$\n则\n$$\n\\varphi'(x)=\\frac{2\\ln x}{x}-\\frac{4}{e^{2}},\\qquad\n\\varphi''(x)=\\frac{2(1-\\ln x)}{x^{2}}.\n$$\n在 $e<x<e^{2}$ 上，$\\varphi''(x)<0$，故 $\\varphi'(x)$ 递减；又 $\\varphi'(e^{2})=0$，所以 $\\varphi'(x)>0$。因此 $\\varphi$ 单调递增，若 $e<a<b<e^{2}$，则\n$$\n\\varphi(b)>\\varphi(a),\n$$\n即\n$$\n\\ln^{2}b-\\ln^{2}a>\\frac{4}{e^{2}}(b-a).\n$$",
+    "methods": "构造辅助函数证明函数不等式；令 φ(x)=ln²x−4x/e²，分析 φ′、φ″ 的符号并用单调性比较端点。",
+    "pitfalls": "先核对区间端点顺序；题库原文区间 e²<a<b<e 自相矛盾，应标记源数据勘误。"
   },
   "250": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-解答题-20",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-B"
+    ],
+    "secondary": [
+      "CAL-07-A"
+    ],
+    "rationale": "设速度为 $v$，滑行距离为 $x$。由牛顿第二定律\n$$\nm\\frac{dv}{dt}=-kv.\n$$\n又\n$$\n\\frac{dv}{dt}=v\\frac{dv}{dx},\n$$\n故\n$$\nm v\\frac{dv}{dx}=-kv,\\qquad\n\\frac{dv}{dx}=-\\frac{k}{m}.\n$$\n积分得\n$$\nx=\\frac{m}{k}(v_0-v).\n$$\n当 $v=0$ 时，\n$$\nx_{\\max}=\\frac{mv_0}{k}\n=\\frac{9000\\times700}{6.0\\times10^6}\n=1.05\\ \\mathrm{km}.\n$$",
+    "methods": "一阶线性微分方程的积分因子；整理成 y′+2y/x=lnx，取积分因子 x²，积分并代入初值。",
+    "pitfalls": "积分因子乘完整方程；定义域为 x>0。"
   },
   "251": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-解答题-21",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "令\n$$\nu=x^{2}-y^{2},\\qquad v=e^{xy}.\n$$\n则\n$$\n\\frac{\\partial z}{\\partial x}=2xf'_1+ye^{xy}f'_2,\n\\qquad\n\\frac{\\partial z}{\\partial y}=-2yf'_1+xe^{xy}f'_2.\n$$\n其中 $f'_1,f'_2$ 均在 $(x^{2}-y^{2},e^{xy})$ 处取值。继续对 $z_y$ 关于 $x$ 求偏导，得\n$$\n\\frac{\\partial^{2}z}{\\partial x\\partial y}\n=-4xyf''_{11}\n+2(x^{2}-y^{2})e^{xy}f''_{12}\n+xye^{2xy}f''_{22}\n+(1+xy)e^{xy}f'_2.\n$$",
+    "methods": "二元复合函数的二阶混合偏导；设 u=x²−y²、v=e^(xy)，先用多元链式法则求一阶偏导，再对 y 偏导关于 x 求导。",
+    "pitfalls": "混合二阶偏导含 f11、f12、f22 及 v 的二阶导项，注意乘积法则。"
   },
   "252": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-解答题-22",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-04-B"
+    ],
+    "secondary": [
+      "LA-04-A"
+    ],
+    "rationale": "由原解析结论，方程组有非零解当且仅当\n$$\na=0\\quad\\text{或}\\quad a=-10.\n$$\n\n#### 情形一：$a=0$\n\n方程组化为\n$$\nx_{1}+x_{2}+x_{3}+x_{4}=0.\n$$\n取 $x_2,x_3,x_4$ 为自由变量，通解为\n$$\n\\boldsymbol{x}\n=C_{1}\\begin{pmatrix}-1\\\\1\\\\0\\\\0\\end{pmatrix}\n+C_{2}\\begin{pmatrix}-1\\\\0\\\\1\\\\0\\end{pmatrix}\n+C_{3}\\begin{pmatrix}-1\\\\0\\\\0\\\\1\\end{pmatrix},\n$$\n其中 $C_1,C_2,C_3$ 为任意常数。\n\n#### 情形二：$a=-10$\n\n同解方程组为\n$$\n2x_1-x_2=0,\\qquad 3x_1-x_3=0,\\qquad 4x_1-x_4=0.\n$$\n故通解为\n$$\n\\boldsymbol{x}=C\\begin{pmatrix}1\\\\2\\\\3\\\\4\\end{pmatrix},\n$$\n其中 $C$ 为任意常数。",
+    "methods": "齐次线性方程组非零解与行列式；非零解存在等价于系数矩阵行列式为零；对参数分情形求基础解系。",
+    "pitfalls": "参数使秩下降时自由变量个数改变，通解维数也随之改变。"
   },
   "253": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-解答题-23",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-B"
+    ],
+    "secondary": [
+      "LA-05-A"
+    ],
+    "rationale": "特征多项式为\n$$\n|\\lambda\\boldsymbol{E}-\\boldsymbol{A}|\n=(\\lambda-2)(\\lambda^{2}-8\\lambda+18+3a).\n$$\n\n#### 情形一：$\\lambda=2$ 是二重根\n\n令\n$$\n2^{2}-8\\cdot2+18+3a=0,\n$$\n得 $a=-2$。此时特征值为 $2,2,6$，且\n$$\n\\operatorname{rank}(2\\boldsymbol{E}-\\boldsymbol{A})=1.\n$$\n故 $\\lambda=2$ 有 $2$ 个线性无关特征向量，$\\boldsymbol{A}$ 可相似对角化。\n\n#### 情形二：二次因子有二重根\n\n由\n$$\n\\lambda^{2}-8\\lambda+18+3a=(\\lambda-4)^{2}\n$$\n得 $a=-\\dfrac23$。此时特征值为 $2,4,4$，且\n$$\n\\operatorname{rank}(4\\boldsymbol{E}-\\boldsymbol{A})=2.\n$$\n故 $\\lambda=4$ 只有 $1$ 个线性无关特征向量，$\\boldsymbol{A}$ 不可相似对角化。\n\n综上：\n\n- $a=-2$ 时，$\\boldsymbol{A}$ 可相似对角化；\n- $a=-\\dfrac23$ 时，$\\boldsymbol{A}$ 不可相似对角化。",
+    "methods": "重特征值与相似对角化判定；先因式分解特征多项式求参数，再比较重特征值的代数重数与特征子空间维数。",
+    "pitfalls": "重根不自动意味着可对角化，必须核验几何重数。"
   },
   "254": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-填空题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "由 $y=e^{x\\ln\\left(1+\\sin x\\right)}$，得 $y^{\\prime}=\\left(1+\\sin x\\right)^{x}\\left[\\ln\\left(1+\\sin x\\right)+\\frac{x\\cos x}{1+\\sin x}\\right]$。代入 $x=\\pi$，得 $y^{\\prime}\\left(\\pi\\right)=-\\pi$，故 $\\left.\\mathrm{d}y\\right|_{x=\\pi}=-\\pi\\mathrm{d}x$。",
+    "methods": "对数求导与函数微分；对 y=(1+sinx)^x 取对数求导，计算 y′(π)，再用 dy=y′dx。",
+    "pitfalls": "微分结果仍含 dx；代入点时底数为 1。"
   },
   "255": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-填空题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-H"
+    ],
+    "secondary": [
+      "CAL-05-C"
+    ],
+    "rationale": "设斜渐近线为 $y=ax+b$。有 $a=\\lim_{x\\to+\\infty}\\frac{\\sqrt{x^{2}+3x+1}}{x}=1$，$b=\\lim_{x\\to+\\infty}\\left(\\sqrt{x^{2}+3x+1}-x\\right)=\\frac{3}{2}$，故斜渐近线为 $y=x+\\frac{3}{2}$。",
+    "methods": "无理函数斜渐近线；分别计算 y/x 的极限求斜率，再计算 y−ax 的极限求截距。",
+    "pitfalls": "根式含 x²，需分别检查 x→+∞ 与 x→−∞；题给渐近线对应正无穷方向。"
   },
   "256": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-填空题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-G"
+    ],
+    "rationale": "令 $x=\\sin t$，则\n\n$\\int_{0}^{1}\\frac{x}{\\left(2-x^{2}\\right)\\sqrt{1-x^{2}}}\\mathrm{~d}x=\\int_{0}^{\\frac{\\pi}{2}}\\frac{\\sin t}{2-\\sin^{2}t}\\mathrm{~d}t=\\int_{0}^{\\frac{\\pi}{2}}\\frac{\\sin t}{1+\\cos^{2}t}\\mathrm{~d}t$。\n\n再令 $u=\\cos t$，得 $\\int_{0}^{1}\\frac{1}{1+u^{2}}\\mathrm{~d}u=\\frac{\\pi}{4}$。",
+    "methods": "定积分三角换元与有理积分；先令 x=sin t 消去根式，再令 u=cos t 化为 ∫du/(1+u²)。",
+    "pitfalls": "换元时同步调整积分上下限和微分。"
   },
   "257": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-填空题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-B"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "原方程化为 $y^{\\prime}+\\frac{2}{x}y=\\ln x$，积分因子为 $x^{2}$，故 $\\left(x^{2}y\\right)^{\\prime}=x^{2}\\ln x$。积分得 $x^{2}y=\\frac{x^{3}}{3}\\ln x-\\frac{x^{3}}{9}+C$。由 $y\\left(1\\right)=-\\frac{1}{9}$，得 $C=0$，故 $y=\\frac{1}{3}x\\ln x-\\frac{1}{9}x$。",
+    "methods": "一阶线性微分方程初值问题；除以 x 后使用积分因子 x²，积分得到 x²y，再由 y(1) 确定常数。",
+    "pitfalls": "积分 ∫x²lnx dx 要分部积分两次或正确套用公式。"
   },
   "258": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-填空题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-01-G"
+    ],
+    "secondary": [
+      "CAL-02-C"
+    ],
+    "rationale": "有理化得\n\n$\\frac{\\beta\\left(x\\right)}{\\alpha\\left(x\\right)}=\\frac{1+x\\arcsin x-\\cos x}{kx^{2}\\left(\\sqrt{1+x\\arcsin x}+\\sqrt{\\cos x}\\right)}$。\n\n当 $x\\to 0$ 时，分母中根式和趋于 $2$，且 $\\frac{x\\arcsin x}{x^{2}}\\to 1$，$\\frac{1-\\cos x}{x^{2}}\\to \\frac{1}{2}$，故 $\\lim_{x\\to 0}\\frac{\\beta\\left(x\\right)}{\\alpha\\left(x\\right)}=\\frac{3}{4k}$。由等价无穷小得 $k=\\frac{3}{4}$。",
+    "methods": "根式差的等价无穷小与参数；有理化后分别使用 x arcsin x∼x²、1−cosx∼x²/2，比较系数。",
+    "pitfalls": "两个根式相减不能直接分别作等价替换，先有理化。"
   },
   "259": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-填空题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-01-E"
+    ],
+    "secondary": [
+      "LA-01-A"
+    ],
+    "rationale": "因为\n\n$\\boldsymbol{B}=\\boldsymbol{A}\\left(\\begin{matrix}1 & 1 & 1\\\\ 1 & 2 & 3\\\\ 1 & 4 & 9\\end{matrix}\\right)$，\n\n所以 $\\left|\\boldsymbol{B}\\right|=\\left|\\boldsymbol{A}\\right|\\left|\\begin{matrix}1 & 1 & 1\\\\ 1 & 2 & 3\\\\ 1 & 4 & 9\\end{matrix}\\right|=1\\cdot 2=2$。",
+    "methods": "矩阵乘积行列式与列向量线性组合；将 B 表示为 A 乘系数矩阵，利用行列式乘法公式。",
+    "pitfalls": "注意系数矩阵列向量对应 α 的组合系数，行列式值为 2。"
   },
   "260": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-选择题-7",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-01-A"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "由极限可得\n\n$f\\left(x\\right)=\\left\\{\\begin{matrix}1, & \\left|x\\right|<1\\\\ \\left|x\\right|^{3}, & \\left|x\\right|\\geq 1\\end{matrix}\\right.$。\n\n该函数仅在 $x=\\pm 1$ 处不可导，故选 C。",
+    "methods": "极限定义函数的分段表达与可导性；根据 n 次方根极限分别讨论 |x|≤1 与 |x|>1，得到分段函数并检查拼接点左右导数。",
+    "pitfalls": "在 x=±1 处需比较左右导数，不能只看函数连续。"
   },
   "261": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-选择题-8",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-A"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "若 $F\\left(x\\right)$ 为偶函数，则由 $F\\left(-x\\right)=F\\left(x\\right)$ 两边求导得 $-F^{\\prime}\\left(-x\\right)=F^{\\prime}\\left(x\\right)$，即 $f\\left(-x\\right)=-f\\left(x\\right)$，故 $f\\left(x\\right)$ 为奇函数。反之，若 $f\\left(x\\right)$ 为奇函数，则 $F\\left(x\\right)=\\int_{0}^{x}f\\left(t\\right)\\mathrm{~d}t+C$ 为偶函数。",
+    "methods": "原函数奇偶性与被积函数奇偶性；利用 F′=f，对 F(−x)=F(x) 求导可推出 f 为奇函数；反向由积分表示验证。",
+    "pitfalls": "原函数相差常数，奇偶性结论需结合定义域对称及常数项。"
   },
   "262": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-选择题-9",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-E"
+    ],
+    "secondary": [
+      "CAL-04-C"
+    ],
+    "rationale": "由 $t^{2}+2t=3$ 得 $t=1$，对应点为 $\\left(3,\\ln 2\\right)$。又 $\\frac{\\mathrm{d}y}{\\mathrm{d}x}=\\frac{1}{2\\left(1+t\\right)^{2}}$，故切线斜率为 $\\frac{1}{8}$，法线斜率为 $-8$。法线方程为 $y-\\ln 2=-8\\left(x-3\\right)$，令 $y=0$，得 $x=3+\\frac{\\ln 2}{8}$。",
+    "methods": "参数方程求导与法线截距；由 x=t²+2t 求出 t，再用 (dy/dt)/(dx/dt) 得切线斜率，写法线并令 y=0。",
+    "pitfalls": "参数 t 需满足 x=3 的方程；法线斜率为切线斜率负倒数。"
   },
   "263": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-选择题-10",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-E"
+    ],
+    "secondary": [
+      "CAL-08-C"
+    ],
+    "rationale": "设原积分为 $I$。区域 $D$ 关于 $y=x$ 对称，交换 $x,y$ 后与原式相加，得\n\n$2I=\\iint_{D}\\left(a+b\\right)\\mathrm{~d}\\sigma=\\left(a+b\\right)\\pi$。\n\n因此 $I=\\frac{a+b}{2}\\pi$。",
+    "methods": "对称区域二重积分的交换变量技巧；区域关于 y=x 对称，交换 x、y 后与原积分相加，分式化为常数。",
+    "pitfalls": "被积函数需连同区域一起交换；对称性才允许等式成立。"
   },
   "264": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-选择题-11",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-A"
+    ],
+    "secondary": [
+      "CAL-08-B"
+    ],
+    "rationale": "直接求二阶偏导可得\n\n$\\frac{\\partial^{2}u}{\\partial x^{2}}=\\varphi^{\\prime\\prime}\\left(x+y\\right)+\\varphi^{\\prime\\prime}\\left(x-y\\right)+\\psi^{\\prime}\\left(x+y\\right)-\\psi^{\\prime}\\left(x-y\\right)$，\n\n$\\frac{\\partial^{2}u}{\\partial y^{2}}=\\varphi^{\\prime\\prime}\\left(x+y\\right)+\\varphi^{\\prime\\prime}\\left(x-y\\right)+\\psi^{\\prime}\\left(x+y\\right)-\\psi^{\\prime}\\left(x-y\\right)$。\n\n故二者相等，选 B。",
+    "methods": "含变上限积分的二阶偏导；分别对 x、y 求偏导，使用链式法则及变上限积分求导公式，再比较二阶偏导。",
+    "pitfalls": "上下限分别依赖 x、y，求导时注意上下限导数符号。"
   },
   "265": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-选择题-12",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-03-B"
+    ],
+    "secondary": [
+      "CAL-02-C"
+    ],
+    "rationale": "当 $x\\to 0^{+}$ 时，$x^{\\frac{1}{x-1}}\\to+\\infty$，故 $x=0$ 是第二类间断点；当 $x\\to 1$ 时，$x^{\\frac{1}{x-1}}=\\left(1+\\left(x-1\\right)\\right)^{\\frac{1}{x-1}}\\to e$，故 $x=1$ 是第一类间断点。",
+    "methods": "幂指函数在零点与一点处的间断分类；在 x→0+ 直接分析幂指极限，在 x→1 取对数化为标准重要极限。",
+    "pitfalls": "区分函数定义域端点附近的无穷极限与可去型极限。"
   },
   "266": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-选择题-13",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-E"
+    ],
+    "secondary": [
+      "LA-05-A"
+    ],
+    "rationale": "因为\n\n$\\boldsymbol{A}\\left(\\boldsymbol{\\alpha}_{1}+\\boldsymbol{\\alpha}_{2}\\right)=\\lambda_{1}\\boldsymbol{\\alpha}_{1}+\\lambda_{2}\\boldsymbol{\\alpha}_{2}$，\n\n且 $\\boldsymbol{\\alpha}_{1},\\boldsymbol{\\alpha}_{2}$ 线性无关，所以 $\\boldsymbol{\\alpha}_{1}$ 与 $\\lambda_{1}\\boldsymbol{\\alpha}_{1}+\\lambda_{2}\\boldsymbol{\\alpha}_{2}$ 线性无关当且仅当 $\\lambda_{2}\\ne 0$。",
+    "methods": "不同特征值特征向量的线性无关性；将 A(α1+α2) 写成 λ1α1+λ2α2，利用不同特征值对应特征向量线性无关判定。",
+    "pitfalls": "判断与 α1 是否线性无关，关键看 α2 的系数 λ2 是否为零。"
   },
   "267": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-选择题-14",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-D"
+    ],
+    "secondary": [
+      "LA-01-E"
+    ],
+    "rationale": "设 $\\boldsymbol{E}_{12}$ 为交换第 1 行与第 2 行的初等矩阵，则 $\\boldsymbol{B}=\\boldsymbol{E}_{12}\\boldsymbol{A}$。由 $\\boldsymbol{B}^{*}=\\left|\\boldsymbol{B}\\right|\\boldsymbol{B}^{-1}$，且 $\\left|\\boldsymbol{B}\\right|=-\\left|\\boldsymbol{A}\\right|$，$\\boldsymbol{B}^{-1}=\\boldsymbol{A}^{-1}\\boldsymbol{E}_{12}$，得 $\\boldsymbol{B}^{*}=-\\boldsymbol{A}^{*}\\boldsymbol{E}_{12}$。故交换 $\\boldsymbol{A}^{*}$ 的第 1 列与第 2 列得 $-\\boldsymbol{B}^{*}$。",
+    "methods": "行交换对伴随矩阵的影响；用 B=EA 及 A*=|A|A⁻¹，推出 B*=−A*E，解释为伴随矩阵对应列交换并乘负号。",
+    "pitfalls": "行交换使行列式变号，且逆矩阵中的初等矩阵出现在右侧。"
   },
   "268": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-解答题-15",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-F"
+    ],
+    "secondary": [
+      "CAL-06-G"
+    ],
+    "rationale": "对分母作变量代换 $u=x-t$，得 $\\int_{0}^{x}xf\\left(x-t\\right)\\mathrm{~d}t=x\\int_{0}^{x}f\\left(u\\right)\\mathrm{~d}u$。又\n\n$\\int_{0}^{x}\\left(x-t\\right)f\\left(t\\right)\\mathrm{~d}t=x\\int_{0}^{x}f\\left(t\\right)\\mathrm{~d}t-\\int_{0}^{x}tf\\left(t\\right)\\mathrm{~d}t$。\n\n由连续性，$\\int_{0}^{x}f\\left(t\\right)\\mathrm{~d}t\\sim xf\\left(0\\right)$，$\\int_{0}^{x}tf\\left(t\\right)\\mathrm{~d}t\\sim \\frac{x^{2}}{2}f\\left(0\\right)$，故原极限为 $\\frac{1}{2}$。",
+    "methods": "积分表达式变量代换与连续函数极限；对分母作 u=x−t 换元，将分子拆成 x∫f−∫tf，再用连续性求两个积分主项。",
+    "pitfalls": "分子分母均为二阶量，需保留积分核 t 带来的 1/2 系数。"
   },
   "269": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-解答题-16",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-F"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "由题意，\n\n$S_{1}\\left(x\\right)=\\int_{0}^{x}\\left[e^{t}-\\frac{1}{2}\\left(e^{t}+e^{-t}\\right)\\right]\\mathrm{~d}t=\\frac{1}{2}\\left(e^{x}+e^{-x}\\right)-1$。\n\n因 $M\\left(x,y\\right)$ 在 $C_{2}$ 上，故 $y=e^{x}$，于是 $S_{1}\\left(x\\right)=\\frac{1}{2}\\left(y+\\frac{1}{y}\\right)-1$。\n\n又 $S_{2}\\left(y\\right)=\\int_{1}^{y}\\left(\\ln t-\\varphi\\left(t\\right)\\right)\\mathrm{~d}t$。由 $S_{1}\\left(x\\right)=S_{2}\\left(y\\right)$ 两边对 $y$ 求导，得 $\\ln y-\\varphi\\left(y\\right)=\\frac{1}{2}\\left(1-\\frac{1}{y^{2}}\\right)$。故\n\n$x=\\varphi\\left(y\\right)=\\ln y-\\frac{1}{2}+\\frac{1}{2y^{2}}$。",
+    "methods": "几何面积函数求导反求曲线；分别写出两块面积积分，利用 y=e^x 消去 x，再对面积恒等式求导求 φ(y)。",
+    "pitfalls": "积分上下限和被积函数的几何上下关系决定正负号。"
   },
   "270": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-解答题-17",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-D"
+    ],
+    "secondary": [
+      "CAL-05-G"
+    ],
+    "rationale": "由切线信息得 $f\\left(0\\right)=0,\\ f\\left(3\\right)=2,\\ f^{\\prime}\\left(0\\right)=2,\\ f^{\\prime}\\left(3\\right)=-2$，又拐点处 $f^{\\prime\\prime}\\left(3\\right)=0$。\n\n分部积分两次：\n\n$\\int_{0}^{3}\\left(x^{2}+x\\right)f^{\\prime\\prime\\prime}\\left(x\\right)\\mathrm{~d}x=-\\left[\\left(2x+1\\right)f^{\\prime}\\left(x\\right)\\right]_{0}^{3}+2\\left[f\\left(x\\right)\\right]_{0}^{3}$。\n\n代入数据得\n\n$-\\left[7\\cdot\\left(-2\\right)-2\\right]+2\\left(2-0\\right)=20$。",
+    "methods": "分部积分与拐点条件；利用切线求 f(0)、f(3)、f′(0)、f′(3)，再由拐点得 f″(3)=0，对积分分部积分两次。",
+    "pitfalls": "拐点只给出二阶导为零（在足够光滑前提下），还需正确使用边界项。"
   },
   "271": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-解答题-18",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "令 $x=\\cos t$，则 $y^{\\prime}=-\\frac{1}{\\sin t}\\frac{\\mathrm{d}y}{\\mathrm{d}t}$，代入原方程化为\n\n$\\frac{\\mathrm{d}^{2}y}{\\mathrm{d}t^{2}}+y=0$。\n\n其通解为 $y=C_{1}\\cos t+C_{2}\\sin t$，即 $y=C_{1}x+C_{2}\\sqrt{1-x^{2}}$。由 $\\left.y\\right|_{x=0}=1$ 得 $C_{2}=1$；由 $\\left.y^{\\prime}\\right|_{x=0}=2$ 得 $C_{1}=2$。故特解为\n\n$y=2x+\\sqrt{1-x^{2}}$。",
+    "methods": "变量代换化简二阶微分方程；令 x=cos t，利用链式法则将方程化为 y_tt+y=0，再由初值确定常数。",
+    "pitfalls": "将 y′、y″ 全部转换为 t 导数，避免漏掉系数。"
   },
   "272": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-解答题-19",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A"
+    ],
+    "secondary": [
+      "CAL-05-E"
+    ],
+    "rationale": "（Ⅰ）令 $F\\left(x\\right)=f\\left(x\\right)+x-1$，则 $F\\left(0\\right)=-1<0$，$F\\left(1\\right)=1>0$。由介值定理，存在 $\\xi\\in\\left(0,1\\right)$，使 $F\\left(\\xi\\right)=0$，即 $f\\left(\\xi\\right)=1-\\xi$。\n\n（Ⅱ）在 $\\left[0,\\xi\\right]$ 与 $\\left[\\xi,1\\right]$ 上分别用拉格朗日中值定理，存在 $\\eta\\in\\left(0,\\xi\\right)$，$\\zeta\\in\\left(\\xi,1\\right)$，使\n\n$f^{\\prime}\\left(\\eta\\right)=\\frac{1-\\xi}{\\xi},\\quad f^{\\prime}\\left(\\zeta\\right)=\\frac{\\xi}{1-\\xi}$。\n\n故 $f^{\\prime}\\left(\\eta\\right)f^{\\prime}\\left(\\zeta\\right)=1$。",
+    "methods": "介值定理与两段拉格朗日中值定理；构造 F=f+x−1 用介值定理找 ξ，再分别在 [0,ξ]、[ξ,1] 使用拉格朗日中值定理。",
+    "pitfalls": "两个中值点分别落在 ξ 两侧，才能保证是不同点。"
   },
   "273": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-解答题-20",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-D"
+    ],
+    "secondary": [
+      "CAL-08-C"
+    ],
+    "rationale": "由 $\\mathrm{d}z=2x\\mathrm{d}x-2y\\mathrm{d}y$，得 $f\\left(x,y\\right)=x^{2}-y^{2}+C$。由 $f\\left(1,1\\right)=2$ 得 $C=2$，故 $f\\left(x,y\\right)=x^{2}-y^{2}+2$。\n\n区域内部驻点为 $\\left(0,0\\right)$，函数值为 $2$。边界上 $x^{2}+\\frac{y^{2}}{4}=1$，即 $y^{2}=4\\left(1-x^{2}\\right)$，故\n\n$f\\left(x,y\\right)=x^{2}-4\\left(1-x^{2}\\right)+2=5x^{2}-2$。\n\n当 $x=0$ 时取最小值 $-2$；当 $x=\\pm 1$ 时取最大值 $3$。",
+    "methods": "全微分确定函数与椭圆域最值；由偏导积分得 f=x²−y²+C，先求内部驻点，再将椭圆边界代入化为一元函数。",
+    "pitfalls": "闭区域最值要比较内部驻点与整个边界，不可只检查驻点。"
   },
   "274": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-解答题-21",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-E"
+    ],
+    "secondary": [
+      "CAL-08-F"
+    ],
+    "rationale": "记 $D_{1}$ 为第一象限单位圆的四分之一。则\n\n$\\iint_{D}\\left|x^{2}+y^{2}-1\\right|\\mathrm{~d}\\sigma=2\\iint_{D_{1}}\\left(1-x^{2}-y^{2}\\right)\\mathrm{~d}\\sigma+\\iint_{D}\\left(x^{2}+y^{2}-1\\right)\\mathrm{~d}\\sigma$。\n\n其中\n\n$\\iint_{D_{1}}\\left(1-x^{2}-y^{2}\\right)\\mathrm{~d}\\sigma=\\int_{0}^{\\frac{\\pi}{2}}\\mathrm{d}\\theta\\int_{0}^{1}\\left(1-r^{2}\\right)r\\mathrm{~d}r=\\frac{\\pi}{8}$，\n\n且 $\\iint_{D}\\left(x^{2}+y^{2}-1\\right)\\mathrm{~d}\\sigma=\\frac{1}{3}+\\frac{1}{3}-1=-\\frac{1}{3}$。\n\n故原积分为 $\\frac{\\pi}{4}-\\frac{1}{3}$。",
+    "methods": "含绝对值二重积分的区域拆分；以单位圆弧将正方形分成两部分，在圆内外分别去绝对值并用极坐标积分。",
+    "pitfalls": "绝对值符号改变的曲线是 x²+y²=1，区域拆分不能遗漏。"
   },
   "275": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-解答题-22",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-03-A"
+    ],
+    "secondary": [
+      "LA-03-C"
+    ],
+    "rationale": "记 $\\boldsymbol{A}=\\left(\\boldsymbol{\\alpha}_{1},\\boldsymbol{\\alpha}_{2},\\boldsymbol{\\alpha}_{3}\\right)$。由题意，$\\boldsymbol{\\beta}_{1},\\boldsymbol{\\beta}_{2},\\boldsymbol{\\beta}_{3}$ 不能由 $\\boldsymbol{\\alpha}_{1},\\boldsymbol{\\alpha}_{2},\\boldsymbol{\\alpha}_{3}$ 线性表示，因此 $\\operatorname{rank}\\left(\\boldsymbol{A}\\right)<3$，即\n\n$\\left|\\boldsymbol{A}\\right|=\\left|\\begin{matrix}a & 1 & 1\\\\ 1 & a & 1\\\\ 1 & 1 & a\\end{matrix}\\right|=\\left(a+2\\right)\\left(a-1\\right)^{2}=0$。\n\n故 $a=1$ 或 $a=-2$。当 $a=-2$ 时，$\\boldsymbol{\\alpha}_{2}$ 不能由 $\\boldsymbol{\\beta}_{1},\\boldsymbol{\\beta}_{2},\\boldsymbol{\\beta}_{3}$ 线性表示，不合题意；当 $a=1$ 时满足题意。故 $a=1$。",
+    "methods": "向量组线性表示的秩条件；将 α 向量组组成矩阵，利用 β 不能由 α 表示推出 α 矩阵秩小于 3，再结合题设排除参数。",
+    "pitfalls": "需同时检验两组向量的表示关系；秩小于 3 只是必要线索。"
   },
   "276": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2005-解答题-23",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-04-B"
+    ],
+    "secondary": [
+      "LA-04-A"
+    ],
+    "rationale": "由 $\\boldsymbol{A}\\boldsymbol{B}=\\boldsymbol{0}$ 可知，$\\boldsymbol{B}$ 的每一列都是方程组 $\\boldsymbol{A}\\boldsymbol{x}=\\boldsymbol{0}$ 的解。\n\n#### 情形一：$k\\ne 9$\n\n此时 $\\operatorname{rank}\\left(\\boldsymbol{B}\\right)=2$，故 $\\boldsymbol{A}\\boldsymbol{x}=\\boldsymbol{0}$ 至少有两个线性无关解。又 $\\boldsymbol{A}$ 第一行不全为零，所以 $\\operatorname{rank}\\left(\\boldsymbol{A}\\right)=1$。基础解系可取为\n\n$\\boldsymbol{\\xi}_{1}=\\left(1,2,3\\right)^{T},\\quad \\boldsymbol{\\xi}_{2}=\\left(3,6,k\\right)^{T}$。\n\n故通解为\n\n$\\boldsymbol{x}=C_{1}\\left(1,2,3\\right)^{T}+C_{2}\\left(3,6,k\\right)^{T}$，\n\n其中 $C_{1},C_{2}$ 为任意常数。\n\n#### 情形二：$k=9$\n\n此时 $\\operatorname{rank}\\left(\\boldsymbol{B}\\right)=1$。\n\n若 $\\operatorname{rank}\\left(\\boldsymbol{A}\\right)=2$，则基础解系可取为 $\\boldsymbol{\\xi}_{1}=\\left(1,2,3\\right)^{T}$，通解为\n\n$\\boldsymbol{x}=C\\left(1,2,3\\right)^{T}$，\n\n其中 $C$ 为任意常数。\n\n若 $\\operatorname{rank}\\left(\\boldsymbol{A}\\right)=1$，则方程组与 $ax_{1}+bx_{2}+cx_{3}=0$ 同解。当 $a\\ne 0$ 时，基础解系可取为\n\n$\\boldsymbol{\\xi}_{1}=\\left(-\\frac{b}{a},1,0\\right)^{T},\\quad \\boldsymbol{\\xi}_{2}=\\left(-\\frac{c}{a},0,1\\right)^{T}$。\n\n故通解为\n\n$\\boldsymbol{x}=C_{1}\\left(-\\frac{b}{a},1,0\\right)^{T}+C_{2}\\left(-\\frac{c}{a},0,1\\right)^{T}$，\n\n其中 $C_{1},C_{2}$ 为任意常数。",
+    "methods": "矩阵乘积为零与齐次方程组通解；由 AB=0 得 B 的列向量属于 Ax=0 的解空间，按 B 的秩及 A 的秩分类讨论。",
+    "pitfalls": "k=9 时 B 的秩下降，A 的秩可能为 1 或 2，需保留参数 a,b,c 的约束。"
   },
   "277": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2006-填空题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-H"
+    ],
+    "secondary": [
+      "CAL-02-A"
+    ],
+    "rationale": "因为\n\n$\\lim_{x\\to\\infty}\\frac{x+4\\sin x}{5x-2\\cos x}=\\lim_{x\\to\\infty}\\frac{1+\\frac{4\\sin x}{x}}{5-\\frac{2\\cos x}{x}}=\\frac{1}{5}$，\n\n所以水平渐近线为 $y=\\frac{1}{5}$。",
+    "methods": "含有界振荡项的水平渐近线；将分子分母同除以 x，利用 sinx/x、cosx/x 趋于零求极限。",
+    "pitfalls": "有界振荡项除以 x 后趋于零。"
   },
   "278": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2006-填空题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-03-A"
+    ],
+    "secondary": [
+      "CAL-06-F"
+    ],
+    "rationale": "由连续性，\n\n$a=\\lim_{x\\to 0}\\frac{\\int_{0}^{x}\\sin t^{2}\\mathrm{~d}t}{x^{3}}=\\lim_{x\\to 0}\\frac{\\sin x^{2}}{3x^{2}}=\\frac{1}{3}$。",
+    "methods": "变上限积分商的连续性极限；由连续性和积分中值定理或洛必达法则求 ∫₀ˣsin(t²)dt 的三阶主项。",
+    "pitfalls": "被积函数 sin(t²)∼t²，积分后主项为 x³/3。"
   },
   "279": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2006-填空题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "$\\int_{0}^{+\\infty}\\frac{x}{\\left(1+x^{2}\\right)^{2}}\\mathrm{~d}x=-\\frac{1}{2}\\left[\\frac{1}{1+x^{2}}\\right]_{0}^{+\\infty}=\\frac{1}{2}$。",
+    "methods": "反常积分的换元与收敛计算；令 u=1+x²，利用 du=2x dx 将积分化为幂函数积分并计算无穷端点极限。",
+    "pitfalls": "先写成极限形式确认收敛，再代入上下限。"
   },
   "280": {
     "status": "pending",
