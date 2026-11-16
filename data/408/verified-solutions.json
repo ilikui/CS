@@ -3670,7 +3670,7 @@
       "index": 43,
       "id": 588,
       "subject": "计算机组成原理",
-      "score": 14,
+      "score": 13,
       "question": "2024年408综合题43：32位字长、按字节编址、32位定长指令字。题图给出add、slli、lw格式及部分ALU数据通路。寄存器字段宽5位；Ext=0零扩展、Ext=1符号扩展；ALUctr=000加、001减、010逻辑左移。问寄存器数与shamt位数；add的ALUBsrc、F/OF/CF及无符号溢出标志；slli的Ext；lw的Ext/ALUctr；机器码A040A103H的译码和有效地址。",
       "answer": "最多32个通用寄存器，shamt为5位可表示0～31。add时ALUBsrc=0；F=1FDB9753H，OF=1，CF=1；无符号溢出看CF。slli的Ext可为0或1，因为其移位立即数高位为0。lw的Ext=1、ALUctr=000。A040A103H为lw r2,-1532(r1)；R[01H]=FFFFA2D0H时有效地址FFFF9CD4H。",
       "steps": [
@@ -3685,7 +3685,7 @@
       ],
       "analysis": "该题的关键是按题目给出的指令编码表逐字段译码，不能把标准RISC-V的全部规则或其他自定义格式混入。CF与OF针对不同数值解释：CF描述无符号进位，OF描述有符号补码溢出。lw的立即数是有符号偏移，因此地址生成必须符号扩展。",
       "code": "87654321H + 98765432H = 1_1FDB9753H\\nF = 1FDB9753H, CF = 1, OF = 1\\nA040A103H -> lw r2,-1532(r1)\\nEA = FFFFA2D0H + FFFFFA04H = FFFF9CD4H",
-      "correction": "原卷回忆版PDF给第43题14分；PGCode页面题目标注13分、同时第47题标注9分，分值分配存在来源差异，但两种分配合计均为70分。这里按回忆版PDF分值记录。机器码必须按本题图示格式译码。",
+      "correction": "分值来源存在差异：回忆版PDF总览列第43题14分，但其列出的各小问分值合计13分；PGCode完整题目按13分列示。本库采用PGCode详细题目分值13分。",
       "verification": "题面和图43(a)/(b)按PGCode完整预览核对，指令字段、ALU标志位和地址计算已复算。分值存在来源差异：回忆版PDF列14分，PGCode列13分；本库按回忆版PDF分配14分。",
       "complexity": "寄存器编码32种；shamt范围0～31；ALU加法结果F=1FDB9753H；有效地址FFFF9CD4H。",
       "cards": [
@@ -3920,7 +3920,7 @@
       "index": 47,
       "id": 592,
       "subject": "计算机网络",
-      "score": 8,
+      "score": 9,
       "question": "2024年408综合题47：四个AS互连。AS1运行RIP；AS3规模较小，任意两主机间经过路由器不超过15个；AS4规模较大，可能超过20个。题图给出R11～R16拓扑、AS2/AS3/AS4边界路由器及136.5.16.0/20路由通告表。问AS4选RIP还是OSPF；AS3通信所需最小TTL；RIP传播210.2.4.0/24的最短时间；R44向R13及R13向R14/R15的BGP会话和报文；R14、R15在无策略约束下的下一跳。",
       "answer": "（1）AS4选OSPF。（2）AS3初始TTL至少16。（3）R11～R16均获正确210.2.4.0/24路由至少60s。（4）R44→R13使用eBGP、UPDATE报文；R13→R14/R15使用iBGP。（5）R14下一跳R11，R15下一跳R13。",
       "steps": [
@@ -3933,8 +3933,8 @@
       ],
       "analysis": "该题分为IGP协议能力、TTL逐跳递减、距离向量收敛、BGP会话类型/报文和BGP路径选择五层。RIP的15跳限制决定AS4选OSPF；TTL必须比最大路由器转发数至少多1；同步初始交换视为t=0，之后每30秒扩散一跳。BGP先比较AS_PATH长度，再在等长候选间根据本AS内部到出口的IGP代价选择热土豆出口。",
       "code": "AS4: OSPF (RIP max 15 hops)\\nAS3: TTL_min = 15 + 1 = 16\\nRIP propagation: t=0 R13/R15; t=30 R12/R14; t=60 R11 -> 60s\\nR44 -> R13: eBGP UPDATE\\nR13 -> R14/R15: iBGP\\nNext hop: R14 -> R11; R15 -> R13",
-      "correction": "RIP最大有效跳数是15，16代表不可达；TTL在每个路由器转发时递减；初始向量交换发生在t=0，不应额外加30秒。BGP等长路径的出口选择按IGP距离而不是路由器编号。",
-      "verification": "详细拓扑、RIP更新时序和BGP路径表以PGCode完整题面/原题图为准。回忆版PDF第47题只保留简化回忆题干，且列8分；PGCode列9分。两来源总分均为70分，但43/47分值分配不同，本库按回忆版PDF记录8分，并保留此来源差异。",
+      "correction": "分值来源存在差异：回忆版PDF总览列第47题8分且题干为简化回忆版；PGCode完整题目列9分，五小问分值合计9分。本库采用PGCode完整题目分值9分。",
+      "verification": "详细拓扑、RIP更新时序和BGP路径表以PGCode完整题面/原题图为准。回忆版PDF第47题为简化回忆题干并列8分；PGCode完整题目列9分。全卷两种来源总分均为70分，但分值分配不同，本库按完整题目小问分值记录9分。",
       "complexity": "RIP传播3个时刻层级：0s、30s、60s；AS_PATH候选长度3、4、3。",
       "cards": [
         {
@@ -3997,7 +3997,7 @@
           "2024年408回忆版试卷PDF",
           "PGCode 2024完整试卷预览"
         ],
-        "note": "详细拓扑、RIP更新时序和BGP路径表以PGCode完整题面/原题图为准。回忆版PDF第47题只保留简化回忆题干，且列8分；PGCode列9分。两来源总分均为70分，但43/47分值分配不同，本库按回忆版PDF记录8分，并保留此来源差异。"
+        "note": "详细拓扑、RIP更新时序和BGP路径表以PGCode完整题面/原题图为准。回忆版PDF第47题为简化回忆题干并列8分；PGCode完整题目列9分。全卷两种来源总分均为70分，但分值分配不同，本库按完整题目小问分值记录9分。"
       },
       "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
       "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf",
