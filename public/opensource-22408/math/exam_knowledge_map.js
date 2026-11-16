@@ -2520,244 +2520,524 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "根式有理化后要同步处理分母因式与符号。"
   },
   "200": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2001-填空题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "两边对 $x$ 求导，得\n\n$e^{2x+y}\\left(2+y^{\\prime}\\right)+\\sin\\left(xy\\right)\\left(y+xy^{\\prime}\\right)=0$。\n\n代入 $x=0$，$y=1$，得 $y^{\\prime}\\left(0\\right)=-2$，故法线斜率为 $\\dfrac{1}{2}$。法线方程为 $y-1=\\dfrac{1}{2}x$，即 $x-2y+2=0$。",
+    "methods": "隐函数求导与法线方程；对隐式方程两边求导，代入点坐标求切线斜率，再取负倒数得到法线斜率。",
+    "pitfalls": "注意法线斜率是切线斜率的负倒数。"
   },
   "201": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2001-填空题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-E"
+    ],
+    "rationale": "在对称区间上，$x^{3}\\cos^{2}x$ 为奇函数，积分为 $0$。于是\n\n$\\int_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}}\\left(x^{3}+\\sin^{2}x\\right)\\cos^{2}x\\mathrm{~d}x=2\\int_{0}^{\\frac{\\pi}{2}}\\sin^{2}x\\cos^{2}x\\mathrm{~d}x$。\n\n又 $2\\sin^{2}x\\cos^{2}x=\\dfrac{1}{4}\\left(1-\\cos 4x\\right)$，故结果为 $\\dfrac{\\pi}{8}$。",
+    "methods": "对称区间积分的奇偶性；拆分被积函数，奇函数部分在对称区间积分为零，偶函数部分化为两倍半区间积分。",
+    "pitfalls": "先判断整个乘积的奇偶性，再使用对称区间性质。"
   },
   "202": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2001-填空题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-B"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "因为 $\\left(y\\arcsin x\\right)^{\\prime}=y^{\\prime}\\arcsin x+\\dfrac{y}{\\sqrt{1-x^{2}}}$，所以原方程为 $\\left(y\\arcsin x\\right)^{\\prime}=1$。积分得 $y\\arcsin x=x+C$，代入 $\\left(\\dfrac{1}{2},0\\right)$ 得 $C=-\\dfrac{1}{2}$。",
+    "methods": "由导数关系反求函数；识别 y' arcsin x+y/√(1−x²) 为乘积 y·arcsin x 的导数，积分后代入初值。",
+    "pitfalls": "乘积求导的第二项来自 (arcsin x)'。"
   },
   "203": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2001-填空题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-04-D"
+    ],
+    "secondary": [
+      "LA-02-B"
+    ],
+    "rationale": "方程组有无穷多个解，需满足系数矩阵与增广矩阵秩相等且小于未知量个数 $3$。对增广矩阵初等行变换可得最后一行与 $a+2$ 同因子，故必须有 $a=-2$。",
+    "methods": "线性方程组无穷多解的秩条件；对增广矩阵作初等行变换，使系数矩阵秩等于增广矩阵秩且小于未知量数。",
+    "pitfalls": "无穷多解需要相容且秩小于未知量个数。"
   },
   "204": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2001-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-01-A"
+    ],
+    "secondary": [
+      "CAL-01-B"
+    ],
+    "rationale": "任意 $x$ 下，$f\\left(x\\right)$ 只可能为 $0$ 或 $1$，且 $0\\le 1$、$1\\le 1$，所以 $f\\left[f\\left(x\\right)\\right]=1$，从而 $f\\left\\{f\\left[f\\left(x\\right)\\right]\\right\\}=f\\left(1\\right)=1$。",
+    "methods": "分段函数复合与函数值域；逐层计算 f(x)，利用其取值只可能为 0 或 1，继续代入外层函数。",
+    "pitfalls": "复合函数应从最内层向外逐层求值。"
   },
   "205": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2001-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-01-G"
+    ],
+    "secondary": [
+      "CAL-02-C"
+    ],
+    "rationale": "当 $x\\to 0$ 时，$\\left(1-\\cos x\\right)\\ln\\left(1+x^{2}\\right)\\sim \\dfrac{x^{4}}{2}$，$x^{n}\\sin x\\sim x^{n+1}$，$e^{x^{2}}-1\\sim x^{2}$。由题意得 $4>n+1$ 且 $n+1>2$，所以 $n=2$。",
+    "methods": "无穷小阶的比较；分别用标准等价无穷小求三项主阶，再将两个高阶条件转化为指数不等式。",
+    "pitfalls": "高阶无穷小要求商趋于零，注意严格不等号。"
   },
   "206": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2001-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-G"
+    ],
+    "secondary": [
+      "CAL-05-C"
+    ],
+    "rationale": "由 $y^{\\prime}=4\\left(x-1\\right)\\left(x-2\\right)\\left(x-3\\right)$，得 $y^{\\prime\\prime}=4\\left(3x^{2}-12x+11\\right)$。方程 $y^{\\prime\\prime}=0$ 有两个不同实根，且二阶导数在两根处变号，故有两个拐点。",
+    "methods": "二阶导数变号与拐点；求二阶导数并解 f''(x)=0，检查每个根两侧凹凸性是否改变。",
+    "pitfalls": "二阶导数为零只是候选条件，必须验证变号。"
   },
   "207": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2001-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-E"
+    ],
+    "secondary": [
+      "CAL-05-B"
+    ],
+    "rationale": "令 $F\\left(x\\right)=f\\left(x\\right)-x$，则 $F^{\\prime}\\left(x\\right)=f^{\\prime}\\left(x\\right)-f^{\\prime}\\left(1\\right)$。因 $f^{\\prime}\\left(x\\right)$ 严格单调减少，故 $F\\left(x\\right)$ 在 $x=1$ 处取极大值。又 $F\\left(1\\right)=0$，所以两侧均有 $F\\left(x\\right)<0$，即 $f\\left(x\\right)<x$。",
+    "methods": "导函数单调性与函数差值比较；构造 F(x)=f(x)−x，由 f' 严格递减判断 F 在 x=1 取极大值。",
+    "pitfalls": "利用 F(1)=0 和严格单调性确定两侧符号。"
   },
   "208": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2001-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-E"
+    ],
+    "secondary": [
+      "CAL-05-B"
+    ],
+    "rationale": "由原图可知，$y$ 轴左侧及 $y$ 轴右侧靠近 $y$ 轴处，曲线 $y=f\\left(x\\right)$ 均单调增加，故对应区间内 $f^{\\prime}\\left(x\\right)>0$。结合选项可排除 A、B、C，故选 D。",
+    "methods": "由函数图像识别导函数符号；根据原函数图像各区间的增减性判断导数正负，再匹配导函数图像。",
+    "pitfalls": "图像题需逐区间识别单调性及驻点。"
   },
   "209": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2002-填空题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-03-A"
+    ],
+    "secondary": [
+      "CAL-02-C"
+    ],
+    "rationale": "当 $x\\to 0^{+}$ 时，$1-e^{\\tan x}\\sim -x$，$\\arcsin\\dfrac{x}{2}\\sim \\dfrac{x}{2}$，故 $\\lim_{x\\to 0^{+}}f\\left(x\\right)=-2$。又 $f\\left(0\\right)=a$，由连续性得 $a=-2$。",
+    "methods": "分段函数连续性与等价无穷小；分别求左右极限，使用 tan x∼x、arcsin(x/2)∼x/2，令左右极限与函数值相等。",
+    "pitfalls": "连续性需同时满足左右极限相等且等于函数值。"
   },
   "210": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2002-填空题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "所求面积为 $S=\\int_{0}^{+\\infty}x e^{-x}\\mathrm{~d}x$。分部积分得 $S=\\left[-x e^{-x}\\right]_{0}^{+\\infty}+\\int_{0}^{+\\infty}e^{-x}\\mathrm{~d}x=1$。",
+    "methods": "无界区域面积与反常积分；将面积写成从 0 到无穷的反常积分，使用分部积分计算。",
+    "pitfalls": "先确认函数非负，再检查无穷上限的收敛性。"
   },
   "211": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2002-填空题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-A"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "因为 $yy^{\\prime\\prime}+\\left(y^{\\prime}\\right)^{2}=\\left(yy^{\\prime}\\right)^{\\prime}$，所以 $yy^{\\prime}=C$。由初始条件得 $C=\\dfrac{1}{2}$，即 $\\left(y^{2}\\right)^{\\prime}=1$。积分得 $y^{2}=x+1$，又 $y\\left(0\\right)=1$，故 $y=\\sqrt{x+1}$。",
+    "methods": "微分方程化为全导数并利用初值；识别 yy''+(y')²=(yy')'，积分一次并继续积分，最后使用初值选定分支。",
+    "pitfalls": "两次积分常数需由两个初始条件确定。"
   },
   "212": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2002-填空题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-E"
+    ],
+    "rationale": "由定积分定义，\n\n$\\lim_{n\\to \\infty}\\dfrac{1}{n}\\sum_{i=1}^{n}\\sqrt{1+\\cos\\dfrac{i\\pi}{n}}=\\dfrac{1}{\\pi}\\int_{0}^{\\pi}\\sqrt{1+\\cos x}\\mathrm{~d}x$。\n\n又 $1+\\cos x=2\\cos^{2}\\dfrac{x}{2}$，所以原式等于 $\\dfrac{\\sqrt{2}}{\\pi}\\int_{0}^{\\pi}\\cos\\dfrac{x}{2}\\mathrm{~d}x=\\dfrac{2\\sqrt{2}}{\\pi}$。",
+    "methods": "数列极限与定积分定义；将和式识别为区间 [0,π] 上的黎曼和，再利用三角恒等式计算积分。",
+    "pitfalls": "黎曼和前的步长系数为 π/n，不能遗漏区间长度。"
   },
   "213": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2002-填空题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-A"
+    ],
+    "secondary": [
+      "LA-05-D"
+    ],
+    "rationale": "记该矩阵为 $\\boldsymbol{A}$。计算得 $\\left|\\lambda\\boldsymbol{E}-\\boldsymbol{A}\\right|=\\lambda^{2}\\left(\\lambda-4\\right)$，所以特征值为 $0,0,4$，非零特征值为 $4$。",
+    "methods": "矩阵特征值与特征多项式；计算 det(λE−A)，由特征多项式的根确定特征值。",
+    "pitfalls": "题目只问非零特征值，注意重根零值不需重复作答。"
   },
   "214": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2002-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-B"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "由 $y=f\\left(x^{2}\\right)$，得 $y^{\\prime}=2x f^{\\prime}\\left(x^{2}\\right)$。线性主部为 $y^{\\prime}\\left(-1\\right)\\Delta x=0.2f^{\\prime}\\left(1\\right)$，由题意 $0.2f^{\\prime}\\left(1\\right)=0.1$，故 $f^{\\prime}\\left(1\\right)=0.5$，选 D。",
+    "methods": "复合函数导数与微分线性主部；对 y=f(x²) 求导，利用 Δy 的线性主部 y'Δx 建立方程。",
+    "pitfalls": "线性主部使用导数乘自变量增量，注意 Δx 的负号。"
   },
   "215": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2002-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-E"
+    ],
+    "rationale": "设 $F\\left(x\\right)=\\int_{0}^{x}t\\left[f\\left(t\\right)+f\\left(-t\\right)\\right]\\mathrm{~d}t$。令 $t=-u$，可得 $F\\left(-x\\right)=F\\left(x\\right)$，故 D 为偶函数。",
+    "methods": "积分定义函数的奇偶性；逐项判断选项，利用 x² 的偶性或变量替换验证积分函数的奇偶性。",
+    "pitfalls": "积分上限为 x 时，不能仅凭被积函数奇偶性直接判断。"
   },
   "216": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2002-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "由方程和初始条件得 $y^{\\prime\\prime}\\left(0\\right)=1$。因此 $y\\left(x\\right)=\\dfrac{1}{2}x^{2}+o\\left(x^{2}\\right)$，而 $\\ln\\left(1+x^{2}\\right)\\sim x^{2}$，故极限为 $2$，选 C。",
+    "methods": "微分方程初值与局部泰勒展开；由微分方程和初值求 y''(0)，得到 y(x) 的二阶主项，再与 ln(1+x²) 比较。",
+    "pitfalls": "分子分母都为二阶无穷小时需比较二阶系数。"
   },
   "217": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2002-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A"
+    ],
+    "secondary": [
+      "CAL-05-E"
+    ],
+    "rationale": "设 $\\lim_{x\\to +\\infty}f^{\\prime}\\left(x\\right)=A$。若 $A>0$ 或 $A<0$，由拉格朗日中值定理均可推出 $f\\left(x\\right)$ 无界，与题设矛盾。因此 $A=0$，选 B。",
+    "methods": "导数极限与有界函数性质；设导数极限为 A，若 A 非零则由中值定理推出函数无界，与条件矛盾。",
+    "pitfalls": "函数有界是关键条件，不能仅凭函数本身收敛推断导数收敛。"
   },
   "218": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2002-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-03-B"
+    ],
+    "secondary": [
+      "LA-03-A"
+    ],
+    "rationale": "若 A 中向量组线性相关，则 $k\\boldsymbol{\\beta}_{1}+\\boldsymbol{\\beta}_{2}$ 可由 $\\boldsymbol{\\alpha}_{1},\\boldsymbol{\\alpha}_{2},\\boldsymbol{\\alpha}_{3}$ 线性表示。又 $\\boldsymbol{\\beta}_{1}$ 可由它们线性表示，从而 $\\boldsymbol{\\beta}_{2}$ 也可由它们线性表示，矛盾。故选 A。",
+    "methods": "向量组线性表示与线性相关性；反设扩充向量组相关，推出 β₂ 可由原向量组表示，与题设矛盾。",
+    "pitfalls": "把 β₁ 的可表示性与 β₂ 的不可表示性结合使用。"
   },
   "219": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2003-填空题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-01-G"
+    ],
+    "rationale": "当 $x \\to 0$ 时，$\\left(1+u\\right)^{\\alpha}-1\\sim \\alpha u$，$\\sin x\\sim x$，故 $\\left(1-a x^{2}\\right)^{\\frac{1}{4}}-1\\sim -\\dfrac{a}{4}x^{2}$，$x\\sin x\\sim x^{2}$。由等价无穷小得 $-\\dfrac{a}{4}=1$，所以 $a=-4$。",
+    "methods": "等价无穷小确定参数；展开 (1−ax²)^(1/4)−1 与 x sin x 的首项，比较系数求 a。",
+    "pitfalls": "等价无穷小要求主项系数也相同。"
   },
   "220": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2003-填空题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-D"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "对 $xy+2\\ln x=y^{4}$ 两边求导，得 $y+xy^{\\prime}+\\dfrac{2}{x}=4y^{3}y^{\\prime}$。代入 $x=1$，$y=1$，得 $y^{\\prime}=1$，故切线方程为 $y-1=x-1$，即 $x-y=0$。",
+    "methods": "隐函数切线斜率；对隐式方程求导，代入指定点求 y'，写出点斜式切线方程。",
+    "pitfalls": "幂函数 y⁴ 求导时包含 4y³y'。"
   },
   "221": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2003-填空题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "因为 $y^{\\left(n\\right)}=2^{x}\\left(\\ln 2\\right)^{n}$，所以 $y^{\\left(n\\right)}\\left(0\\right)=\\left(\\ln 2\\right)^{n}$。故麦克劳林公式中 $x^{n}$ 项的系数为 $\\dfrac{y^{\\left(n\\right)}\\left(0\\right)}{n!}=\\dfrac{\\left(\\ln 2\\right)^{n}}{n!}$。",
+    "methods": "指数函数麦克劳林展开系数；求 n 阶导数并在 x=0 处取值，再除以 n! 得到幂级数系数。",
+    "pitfalls": "麦克劳林 x^n 项系数是 f^(n)(0)/n!。"
   },
   "222": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2003-填空题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-08-F"
+    ],
+    "rationale": "极坐标面积公式为 $S=\\dfrac{1}{2}\\int_{\\alpha}^{\\beta}\\rho^{2}\\left(\\theta\\right)\\mathrm{~d}\\theta$，故 $S=\\dfrac{1}{2}\\int_{0}^{2\\pi}e^{2a\\theta}\\mathrm{~d}\\theta=\\dfrac{e^{4a\\pi}-1}{4a}$。",
+    "methods": "极坐标曲线围成面积；使用极坐标面积公式 S=1/2∫ρ²dθ，代入指数形式积分。",
+    "pitfalls": "面积公式中的 1/2 不可遗漏，积分区间为 0 到 2π。"
   },
   "223": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2003-填空题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-A"
+    ],
+    "secondary": [
+      "LA-05-A"
+    ],
+    "rationale": "由 $\\boldsymbol{\\alpha}\\boldsymbol{\\alpha}^{T}=\\begin{bmatrix}1\\\\-1\\\\1\\end{bmatrix}\\begin{bmatrix}1 & -1 & 1\\end{bmatrix}$，可取 $\\boldsymbol{\\alpha}=\\begin{bmatrix}1\\\\-1\\\\1\\end{bmatrix}$。于是 $\\boldsymbol{\\alpha}^{T}\\boldsymbol{\\alpha}=1^{2}+\\left(-1\\right)^{2}+1^{2}=3$。",
+    "methods": "向量外积矩阵与内积；从 ααᵀ 的秩一分解识别向量分量，再计算 αᵀα 的平方范数。",
+    "pitfalls": "ααᵀ确定向量至多差整体符号，但内积不受整体符号影响。"
   },
   "224": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2003-填空题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-A"
+    ],
+    "secondary": [
+      "LA-02-C"
+    ],
+    "rationale": "由 $\\boldsymbol{A}^{2}\\boldsymbol{B}-\\boldsymbol{A}-\\boldsymbol{B}=\\boldsymbol{E}$，得 $\\left(\\boldsymbol{A}^{2}-\\boldsymbol{E}\\right)\\boldsymbol{B}=\\boldsymbol{A}+\\boldsymbol{E}$，即 $\\left(\\boldsymbol{A}-\\boldsymbol{E}\\right)\\left(\\boldsymbol{A}+\\boldsymbol{E}\\right)\\boldsymbol{B}=\\boldsymbol{A}+\\boldsymbol{E}$。因 $\\boldsymbol{A}+\\boldsymbol{E}$ 可逆，故 $\\left(\\boldsymbol{A}-\\boldsymbol{E}\\right)\\boldsymbol{B}=\\boldsymbol{E}$。又 $\\left|\\boldsymbol{A}-\\boldsymbol{E}\\right|=2$，所以 $\\left|\\boldsymbol{B}\\right|=\\dfrac{1}{2}$。",
+    "methods": "矩阵方程变形与行列式计算；提取 (A²−E)B=A+E，因式分解并利用可逆性化简，再取行列式。",
+    "pitfalls": "矩阵乘法不可交换；约去矩阵因子需说明其可逆。"
   },
   "225": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2003-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-01-G"
+    ],
+    "secondary": [
+      "CAL-02-A"
+    ],
+    "rationale": "若 $\\lim_{n \\to \\infty}b_{n}c_{n}=A$ 存在，则 $\\lim_{n \\to \\infty}c_{n}=\\lim_{n \\to \\infty}\\dfrac{b_{n}c_{n}}{b_{n}}=A$，与 $\\lim_{n \\to \\infty}c_{n}=\\infty$ 矛盾，故选 D。",
+    "methods": "数列极限与无穷大因子矛盾；利用 b_n→1 将 b_nc_n 的假设极限反推 c_n 的极限，产生矛盾。",
+    "pitfalls": "极限乘积的逆推需要分母 b_n 最终非零。"
   },
   "226": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2003-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "令 $u=1+x^{n}$，则 $\\mathrm{~d}u=nx^{n-1}\\mathrm{~d}x$，故 $a_{n}=\\dfrac{1}{n}\\left[\\left(1+\\left(\\dfrac{n}{n+1}\\right)^{n}\\right)^{\\frac{3}{2}}-1\\right]$。因此 $\\lim_{n \\to \\infty}n a_{n}=\\left(1+e^{-1}\\right)^{\\frac{3}{2}}-1$，选 B。",
+    "methods": "含参数积分的换元与极限；令 u=1+x^n，将积分直接化为端点函数差，再求 n 次幂极限。",
+    "pitfalls": "换元时 du=n x^(n−1)dx，注意外部系数。"
   },
   "227": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2003-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-D"
+    ],
+    "secondary": [
+      "CAL-07-B"
+    ],
+    "rationale": "由 $y=\\dfrac{x}{\\ln x}$，得 $y^{\\prime}=\\dfrac{\\ln x-1}{\\left(\\ln x\\right)^{2}}$，且 $\\dfrac{y}{x}=\\dfrac{1}{\\ln x}$，$\\dfrac{x}{y}=\\ln x$。代入方程得 $\\varphi\\left(\\ln x\\right)=-\\dfrac{1}{\\left(\\ln x\\right)^{2}}$，故 $\\varphi\\left(\\dfrac{x}{y}\\right)=-\\dfrac{y^{2}}{x^{2}}$，选 A。",
+    "methods": "由微分方程特解反求未知函数；将已知 y 及 y' 代入方程，整理出 φ(x/y) 并转换成 y²/x²。",
+    "pitfalls": "注意 x/y 与 y/x 的倒数关系。"
   },
   "228": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2003-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-05-E"
+    ],
+    "rationale": "由导函数图形可知，三个驻点中第一个为极大值点，第二个和第三个为极小值点；导数不存在点 $x=0$ 左侧导数为正、右侧导数为负，故也是极大值点。因此共有两个极小值点和两个极大值点，选 C。",
+    "methods": "由导函数图像判断极值点；根据导函数过零点及不可导点两侧符号变化，统计极大值和极小值。",
+    "pitfalls": "不可导点也可能是极值点，需检查左右单调性。"
   },
   "229": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2003-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-E"
+    ],
+    "rationale": "在 $\\left(0,\\dfrac{\\pi}{4}\\right)$ 内，$\\tan x>x$，所以 $I_{1}>I_{2}$。又 $\\dfrac{\\tan x}{x}<\\sec^{2}x$，故 $I_{1}<\\int_{0}^{\\frac{\\pi}{4}}\\sec^{2}x\\mathrm{~d}x=1$。因此 $1>I_{1}>I_{2}$，选 B。",
+    "methods": "定积分大小比较与函数不等式；利用区间内 x<tan x 及 tan x/x<sec²x，建立两个积分的大小界。",
+    "pitfalls": "积分不等式需在整个积分区间成立。"
   },
   "230": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2003-选择题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-03-B"
+    ],
+    "secondary": [
+      "LA-03-C"
+    ],
+    "rationale": "若向量组 I 可由向量组 II 线性表示，且 $r>s$，则向量组 I 必线性相关，故选 D。",
+    "methods": "向量组线性表示与秩的关系；若 r>s，r 个向量由 s 个向量线性表示，则原向量组必线性相关。",
+    "pitfalls": "区分被表示的向量组与用于表示的向量组。"
   },
   "231": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-填空题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-A"
+    ],
+    "secondary": [
+      "CAL-02-C"
+    ],
+    "rationale": "当 $x=0$ 时，$f(0)=0$；当 $x\\ne0$ 时，$f(x)=x$。故 $\\lim_{x\\to0}f(x)=f(0)$，函数在 $x=0$ 连续。\n\n> **注：** 若原答案写作 $x=0$，则题干分式可能存在排版差异；此处按当前题干公式计算。",
+    "methods": "函数极限与参数型数列极限；先对 n→∞ 求点态极限，分别讨论 x=0 与 x≠0，再检查拼接点连续性。",
+    "pitfalls": "必须先确定极限函数的定义域和值，不能只代入特殊点。"
   },
   "232": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-填空题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-C"
+    ],
+    "secondary": [
+      "CAL-04-E"
+    ],
+    "rationale": "由\n$$\n\\dfrac{dy}{dx}=\\dfrac{t^{2}-1}{t^{2}+1},\\qquad\n\\dfrac{d^{2}y}{dx^{2}}=\\dfrac{4t}{3(t^{2}+1)^{3}}\n$$\n知向上凸时 $t<0$。又 $x=t^{3}+3t+1$ 单调递增，且 $t=0$ 时 $x=1$，故 $x<1$。",
+    "methods": "参数方程二阶导数与凹凸性；先求 dy/dx，再用 (d/dt)(dy/dx)/(dx/dt) 求二阶导，判断符号并转换 t 到 x。",
+    "pitfalls": "二阶导数的参数公式分母还需乘 dx/dt。"
   },
   "233": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-填空题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "令 $x=\\sec t$，则 $dx=\\sec t\\tan t\\,dt$，且 $x:1\\to+\\infty$ 对应 $t:0\\to\\dfrac{\\pi}{2}$。原积分化为\n$$\n\\int_{0}^{\\pi/2}dt=\\frac{\\pi}{2}.\n$$",
+    "methods": "反常积分的三角换元；令 x=sec t，将根式和积分上下限一并转换，化为常数积分。",
+    "pitfalls": "无穷上限对应 t→π/2，按反常积分处理。"
   },
   "234": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-填空题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "对方程分别求 $x,y$ 的偏导，解出 $z_x,z_y$ 后代入所求式，结合 $e^{2x-3z}=z-y^{2}$ 化简，得结果为 $2$。",
+    "methods": "隐函数确定的二元函数偏导数；对隐式方程分别求 x、y 偏导，联立化简所求线性组合。",
+    "pitfalls": "链式法则中的 z_x、z_y 项需移到同一侧。"
   },
   "235": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-填空题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-B"
+    ],
+    "secondary": [
+      "CAL-07-A"
+    ],
+    "rationale": "原方程化为\n$$\ny'-\\frac{1}{2x}y=\\frac{1}{2}x^{2}.\n$$\n其通解为\n$$\ny=C\\sqrt{x}+\\frac{1}{5}x^{3}.\n$$\n由 $y(1)=\\dfrac65$ 得 $C=1$，故特解如上。",
+    "methods": "一阶线性微分方程与初值；整理成 y'−(1/2x)y=x²/2，使用积分因子求通解并代入初值。",
+    "pitfalls": "积分因子为 x^(−1/2)，注意定义区间与平方根分支。"
   },
   "236": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-填空题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-D"
+    ],
+    "secondary": [
+      "LA-02-A"
+    ],
+    "rationale": "由题得\n$$\n(\\boldsymbol{A}-2\\boldsymbol{E})\\boldsymbol{B}\\boldsymbol{A}^{*}=\\boldsymbol{E}.\n$$\n取行列式：\n$$\n|\\boldsymbol{A}-2\\boldsymbol{E}|\\,|\\boldsymbol{B}|\\,|\\boldsymbol{A}^{*}|=1.\n$$\n又 $|\\boldsymbol{A}|=3,\\ |\\boldsymbol{A}^{*}|=9,\\ |\\boldsymbol{A}-2\\boldsymbol{E}|=1$，故 $|\\boldsymbol{B}|=\\dfrac19$。",
+    "methods": "伴随矩阵与行列式乘法性质；对矩阵方程两边取行列式，使用 |A*|=|A|^(n−1) 求 |B|。",
+    "pitfalls": "三阶矩阵的伴随行列式是 |A|²，不是 |A|。"
   },
   "237": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-选择题-7",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-01-G"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "当 $x\\to0^{+}$ 时，\n$$\n\\alpha\\sim x,\\qquad\n\\beta\\sim\\frac23x^{3},\\qquad\n\\gamma\\sim\\frac14x^{2}.\n$$\n故阶数依次为 $x,x^{2},x^{3}$，排列为 $\\alpha,\\gamma,\\beta$。",
+    "methods": "积分型无穷小的主阶比较；用被积函数在零点的等价无穷小估计三个积分的主阶，再比较阶数。",
+    "pitfalls": "变上限积分的主阶需同时考虑被积函数阶数和积分上限阶数。"
   },
   "238": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-选择题-8",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-G"
+    ],
+    "secondary": [
+      "CAL-05-F"
+    ],
+    "rationale": "按分段函数讨论，$x=0$ 附近函数由减到增，故为极小值点；曲线在 $(0,0)$ 两侧凹凸性改变，故 $(0,0)$ 为拐点。",
+    "methods": "绝对值分段函数的极值与拐点；按 x=1 分段写函数，检查 x=0 的左右单调性及二阶导数符号变化。",
+    "pitfalls": "极值与拐点是不同概念，需分别验证。"
   },
   "239": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2004-选择题-9",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-E"
+    ],
+    "rationale": "原式为\n$$\n\\lim_{n\\to\\infty}\\frac1n\\sum_{i=1}^{n}2\\ln\\left(1+\\frac{i}{n}\\right)\n=\\int_{0}^{1}2\\ln(1+x)\\,dx\n=\\int_{1}^{2}2\\ln u\\,du.\n$$\n故选 B。",
+    "methods": "乘积连乘极限转化为黎曼和；对 n 次根式取对数，将乘积转化为对数和，再识别黎曼和。",
+    "pitfalls": "对数后需保留平方产生的系数 2，并正确平移积分区间。"
   },
   "240": {
     "status": "pending",
