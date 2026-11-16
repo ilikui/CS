@@ -8,6 +8,8 @@ function extractArray(source, marker) {
 }
 function plain(s){return String(s||'').replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]*>/g,' ').replace(/&nbsp;|&#160;/gi,' ').replace(/&amp;/gi,'&').replace(/&lt;/gi,'<').replace(/&gt;/gi,'>').replace(/&quot;/gi,'"').replace(/&#39;|&apos;/gi,"'").replace(/\s+/g,' ').trim();}
 function norm(s){return plain(s).toLowerCase().replace(/[\s，。；：！？、,.!?;:（）()【】\[\]{}“”‘’"']/g,'');}
+function subjectForIndex(i){if(i>=1&&i<=10)return '数据结构';if(i>=11&&i<=20)return '计算机组成原理';if(i>=21&&i<=30)return '操作系统';if(i>=31&&i<=40)return '计算机网络';return null;}
+function subjectCode(subject){return ({'数据结构':'data-structure','计算机组成原理':'computer-organization','操作系统':'operating-system','计算机网络':'computer-network'})[subject]||null;}
 function splitTerms(s){const stop=new Set(['原理','性质','定义','基础','结构','过程','方式','方法','管理','操作','机制','系统','概念','算法','与','和','及','的','考点']);return [...new Set(String(s||'').split(/[与和及、，,：:／/（）()\s·；;]+/).map(x=>x.trim()).filter(x=>x.length>=2&&!stop.has(x)))];}
 function bigrams(s){const x=norm(s),out=new Map();for(let i=0;i<x.length-1;i++){const g=x.slice(i,i+2);if(/[\u3400-\u9fff]/.test(g))out.set(g,(out.get(g)||0)+1);}return out;}
 function cosine(a,b,idf){let dot=0,na=0,nb=0;for(const[k,v]of a){const w=idf.get(k)||1,z=v*w;na+=z*z;dot+=z*(b.get(k)||0)*w;}for(const[k,v]of b){const z=v*(idf.get(k)||1);nb+=z*z;}return na&&nb?dot/Math.sqrt(na*nb):0;}
@@ -25,19 +27,20 @@ const bySubject=new Map();for(const c of cardDocs){if(!bySubject.has(c.subject))
 const questionMap={},cardQuestionList=Object.fromEntries(cards.map(c=>[c[1],[]])),subjectStats={};
 let verifiedQuestions=0,suggestedQuestions=0,lowConfidence=0;
 for(const q of questions){
+ const inferredSubject=subjectForIndex(Number(q.index))||q.subject;
  const key=String(q.year)+'-'+String(q.index),text=plain((q.question||'')+' '+(q.analysis||'')),qNorm=norm(text),qGrams=bigrams(text);
  let links=oldLinks.get(key)||[];if(links.length)verifiedQuestions++;
  else{
-  const candidates=(bySubject.get(q.subject)||cardDocs).map(c=>{let phraseScore=0,matched=[];for(const term of c.terms){const t=norm(term);if(t.length>=2&&qNorm.includes(t)){phraseScore+=Math.min(t.length,8);matched.push(term);}}const sim=cosine(qGrams,c.grams,idf);return{title:c.title,phraseScore,similarity:sim,score:phraseScore*.08+sim,matched};}).sort((a,b)=>b.score-a.score);
+  const candidates=(bySubject.get(inferredSubject)||cardDocs).map(c=>{let phraseScore=0,matched=[];for(const term of c.terms){const t=norm(term);if(t.length>=2&&qNorm.includes(t)){phraseScore+=Math.min(t.length,8);matched.push(term);}}const sim=cosine(qGrams,c.grams,idf);return{title:c.title,phraseScore,similarity:sim,score:phraseScore*.08+sim,matched};}).sort((a,b)=>b.score-a.score);
   const best=candidates[0];if(!best)throw new Error('No card candidate '+key);const chosen=[best];
   if(best.score>0)for(const c of candidates.slice(1,4))if(c.score>=best.score*.78&&c.score>0&&c.phraseScore>=2)chosen.push(c);
   const band=best.phraseScore>=5||best.similarity>=.18?'medium':'low';if(band==='low')lowConfidence++;
   links=chosen.map(c=>({title:c.title,topic:c.matched.join('、')||c.title,status:'needs-review',confidence:c.score,confidenceBand:band,matchedTerms:c.matched}));suggestedQuestions++;
  }
  const clean=links.map(l=>({title:l.title,topic:l.topic||l.title,status:l.status||'needs-review',confidence:l.confidence??1,confidenceBand:l.confidenceBand||(l.status==='verified'?'verified':'low'),matchedTerms:l.matchedTerms||[],recordTopic:l.status==='verified'?l.topic:null}));
- const rec={key,year:q.year,index:q.index,id:q.id,subject:q.subject,type:q.type,typeName:q.typeName||({1:'选择题',2:'应用题',3:'算法题'}[q.type]||'真题'),score:q.score,question:plain(q.question||''),answer:plain(q.answer||''),analysis:plain(q.analysis||''),cards:clean};
+ const rec={key,year:q.year,index:q.index,id:q.id,subject:inferredSubject,subjectCode:subjectCode(inferredSubject),type:q.type,typeName:q.typeName||({1:'选择题',2:'应用题',3:'算法题'}[q.type]||'真题'),score:q.score,question:plain(q.question||''),answer:plain(q.answer||''),analysis:plain(q.analysis||''),cards:clean};
  questionMap[key]=rec;for(const l of clean)cardQuestionList[l.title].push(key);
- if(!subjectStats[q.subject])subjectStats[q.subject]={questions:0,verified:0,suggested:0};subjectStats[q.subject].questions++;if(clean.some(l=>l.status==='verified'))subjectStats[q.subject].verified++;else subjectStats[q.subject].suggested++;
+ if(!subjectStats[inferredSubject])subjectStats[inferredSubject]={questions:0,verified:0,suggested:0};subjectStats[inferredSubject].questions++;if(clean.some(l=>l.status==='verified'))subjectStats[inferredSubject].verified++;else subjectStats[inferredSubject].suggested++;
 }
 for(const list of Object.values(cardQuestionList))list.sort((a,b)=>a.year-b.year||a.index-b.index);
 const linkedCards=Object.values(cardQuestionList).filter(x=>x.length).length;
