@@ -112,6 +112,7 @@
         '<p><strong>判定依据：</strong>' + esc(verified.rationale) + '</p>' +
         '<p><strong>解题方法：</strong>' + esc(verified.methods) + '</p>' +
         '<p><strong>易错点：</strong>' + esc(verified.pitfalls) + '</p></details>' +
+        (verified.sourceUrl ? '<p class="q-original-source"><a href="' + esc(verified.sourceUrl) + '" target="_blank" rel="noopener noreferrer">' + esc(verified.sourceLabel || '查看原卷题图') + '</a></p>' : '') +
         '<button type="button" class="q-add-review" data-card-ids="' + ids.join(',') +
         '" data-question-id="' + questionId.replace(/"/g,'&quot;') + '">做错了 · 加入知识卡复习</button></div>';
     }
@@ -123,6 +124,7 @@
         '" title="' + (item.hits.length ? '命中关键词：' + item.hits.slice(0, 3).join('、') : '按题目表达式与题型规则补充的候选关联') +
         '">' + item.id + '</a>').join('') +
       '<small>' + (fallback ? '按规则补充的候选考点，尚未人工确认。' : '按题干与解析关键词匹配，尚未人工确认。') + '</small>' +
+      (verified && verified.sourceUrl ? '<p class="q-original-source"><a href="' + String(verified.sourceUrl).replace(/&/g,'&amp;').replace(/"/g,'&quot;') + '" target="_blank" rel="noopener noreferrer">' + String(verified.sourceLabel || '查看原卷题图').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</a></p>' : '') +
       '<button type="button" class="q-add-review" data-card-ids="' + ids.join(',') +
       '" data-question-id="' + questionId.replace(/"/g,'&quot;') + '">做错了 · 加入知识卡复习</button></div>';
   }
