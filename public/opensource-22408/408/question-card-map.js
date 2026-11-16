@@ -4112,6 +4112,300 @@ window.QUESTION_CARD_MAP = {
       "路由选择与转发表",
       "IPv4 子网划分与 CIDR"
     ]
+  },
+  "2021-41": {
+    "year": 2021,
+    "index": 41,
+    "id": 565,
+    "subject": "数据结构",
+    "subjectCode": "data-structure",
+    "typeName": "应用题",
+    "score": 15,
+    "question": "判断无向连通图是否存在包含每条边恰好一次的欧拉路径。",
+    "answer": "欧拉路径存在当且仅当奇度顶点数为0或2；邻接矩阵逐行统计度，时间O(n²)、空间O(1)。",
+    "analysis": "欧拉路径存在当且仅当奇度顶点数为0或2；邻接矩阵逐行统计度，时间O(n²)、空间O(1)。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "欧拉路径与欧拉回路",
+        "topic": "欧拉路径与欧拉回路",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "邻接矩阵与邻接表",
+        "topic": "邻接矩阵与邻接表",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "图的存储与遍历",
+        "topic": "图的存储与遍历",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "欧拉路径与欧拉回路"
+    ],
+    "secondaryCards": [
+      "邻接矩阵与邻接表",
+      "图的存储与遍历"
+    ]
+  },
+  "2021-42": {
+    "year": 2021,
+    "index": 42,
+    "id": 566,
+    "subject": "数据结构",
+    "subjectCode": "data-structure",
+    "typeName": "应用题",
+    "score": 8,
+    "question": "通过逐对比较计算每个元素最终秩，分析样例、比较次数和稳定性。",
+    "answer": "样例排序结果−10,10,11,19,25,25；比较n(n−1)/2次；将a[i]<a[j]改为a[i]<=a[j]可稳定化。",
+    "analysis": "样例排序结果−10,10,11,19,25,25；比较n(n−1)/2次；将a[i]<a[j]改为a[i]<=a[j]可稳定化。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "比较计数排序与秩排序",
+        "topic": "比较计数排序与秩排序",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "内部排序与稳定性",
+        "topic": "内部排序与稳定性",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "算法复杂度",
+        "topic": "算法复杂度",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "比较计数排序与秩排序"
+    ],
+    "secondaryCards": [
+      "内部排序与稳定性",
+      "算法复杂度"
+    ]
+  },
+  "2021-43": {
+    "year": 2021,
+    "index": 43,
+    "id": 567,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "应用题",
+    "score": 15,
+    "question": "16位字长、20位地址线、8位数据线、R/I/J格式，解码01B2H/01B3H并判断溢出。",
+    "answer": "ALU16位、空间1MB、IR16/MAR20/MDR8；R型16种、I/J合计63种、寄存器4个；01B2减法B04AH无溢出，01B3乘法8290H溢出。",
+    "analysis": "ALU16位、空间1MB、IR16/MAR20/MDR8；R型16种、I/J合计63种、寄存器4个；01B2减法B04AH无溢出，01B3乘法8290H溢出。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "指令格式与操作码扩展",
+        "topic": "指令格式与操作码扩展",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "定点补码加减与溢出",
+        "topic": "定点补码加减与溢出",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "ALU 算术逻辑单元",
+        "topic": "ALU 算术逻辑单元",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "立即数与直接间接寻址",
+        "topic": "立即数与直接间接寻址",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "指令格式与操作码扩展",
+      "定点补码加减与溢出"
+    ],
+    "secondaryCards": [
+      "ALU 算术逻辑单元",
+      "立即数与直接间接寻址"
+    ]
+  },
+  "2021-44": {
+    "year": 2021,
+    "index": 44,
+    "id": 568,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "应用题",
+    "score": 8,
+    "question": "30位虚拟地址、4KB页、8组二路TLB，拆分VPN/offset/tag/set并模拟LRU。",
+    "answer": "VPN18位、offset12位；TLB set=VA[14:12]，Tag=VA[29:15]；访问20时组4中VPN4被LRU淘汰；VA增加2位则Tag增加2位。",
+    "analysis": "VPN18位、offset12位；TLB set=VA[14:12]，Tag=VA[29:15]；访问20时组4中VPN4被LRU淘汰；VA增加2位则Tag增加2位。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "TLB 与快表命中",
+        "topic": "TLB 与快表命中",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "TLB 组相联映射与 LRU 替换",
+        "topic": "TLB 组相联映射与 LRU 替换",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "页表结构与地址转换",
+        "topic": "页表结构与地址转换",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "TLB 与快表命中",
+      "TLB 组相联映射与 LRU 替换"
+    ],
+    "secondaryCards": [
+      "页表结构与地址转换"
+    ]
+  },
+  "2021-45": {
+    "year": 2021,
+    "index": 45,
+    "id": 569,
+    "subject": "操作系统",
+    "subjectCode": "operating-system",
+    "typeName": "应用题",
+    "score": 7,
+    "question": "整型信号量wait/signal的互斥保护、开关中断两种实现及用户态权限。",
+    "answer": "方法1在S<=0时关中断忙等会死等；方法2等待时开中断、重新检查时关中断，单处理器模型下正确；用户态不能执行特权指令。",
+    "analysis": "方法1在S<=0时关中断忙等会死等；方法2等待时开中断、重新检查时关中断，单处理器模型下正确；用户态不能执行特权指令。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "进程同步与信号量",
+        "topic": "进程同步与信号量",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "互斥锁、自旋锁与信号量",
+        "topic": "互斥锁、自旋锁与信号量",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "内核态与用户态特权级",
+        "topic": "内核态与用户态特权级",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "进程同步与信号量"
+    ],
+    "secondaryCards": [
+      "互斥锁、自旋锁与信号量",
+      "内核态与用户态特权级"
+    ]
+  },
+  "2021-46": {
+    "year": 2021,
+    "index": 46,
+    "id": 570,
+    "subject": "操作系统",
+    "subjectCode": "operating-system",
+    "typeName": "应用题",
+    "score": 8,
+    "question": "多阶段启动程序顺序及启动盘物理格式化、分区、逻辑格式化和系统安装顺序。",
+    "answer": "ROM引导→MBR磁盘引导→分区引导→OS初始化；物理格式化→分区→逻辑格式化→安装；扇区划分在物理格式化，根目录在逻辑格式化。",
+    "analysis": "ROM引导→MBR磁盘引导→分区引导→OS初始化；物理格式化→分区→逻辑格式化→安装；扇区划分在物理格式化，根目录在逻辑格式化。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "磁盘引导与格式化流程",
+        "topic": "磁盘引导与格式化流程",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "文件逻辑结构与物理结构",
+        "topic": "文件逻辑结构与物理结构",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "文件系统与目录",
+        "topic": "文件系统与目录",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "磁盘引导与格式化流程"
+    ],
+    "secondaryCards": [
+      "文件逻辑结构与物理结构",
+      "文件系统与目录"
+    ]
+  },
+  "2021-47": {
+    "year": 2021,
+    "index": 47,
+    "id": 571,
+    "subject": "计算机网络",
+    "subjectCode": "computer-network",
+    "typeName": "应用题",
+    "score": 9,
+    "question": "通过域名访问Web服务器，分析DNS封装、交换机MAC学习表及ARP广播帧。",
+    "answer": "DNS→UDP→IP→Ethernet；交换表CC→4、BB→1、AA→2；H2至少收到2个ARP请求广播帧，目的MAC为全F。",
+    "analysis": "DNS→UDP→IP→Ethernet；交换表CC→4、BB→1、AA→2；H2至少收到2个ARP请求广播帧，目的MAC为全F。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "DNS 递归与迭代查询",
+        "topic": "DNS 递归与迭代查询",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "ARP 与 DHCP",
+        "topic": "ARP 与 DHCP",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "交换机自学习与转发",
+        "topic": "交换机自学习与转发",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "以太网帧与 MAC 地址",
+        "topic": "以太网帧与 MAC 地址",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "DNS 递归与迭代查询",
+      "ARP 与 DHCP"
+    ],
+    "secondaryCards": [
+      "交换机自学习与转发",
+      "以太网帧与 MAC 地址"
+    ]
   }
 };
 window.CARD_QUESTION_LIST = {
@@ -4154,7 +4448,8 @@ window.CARD_QUESTION_LIST = {
   ],
   "邻接矩阵与邻接表": [
     "2011-8",
-    "2015-42"
+    "2015-42",
+    "2021-41"
   ],
   "拓扑排序与 AOV 网": [
     "2010-8"
@@ -4195,7 +4490,8 @@ window.CARD_QUESTION_LIST = {
     "2011-21"
   ],
   "立即数与直接间接寻址": [
-    "2011-16"
+    "2011-16",
+    "2021-43"
   ],
   "浮点数表示与规格化": [
     "2015-14",
@@ -4238,7 +4534,8 @@ window.CARD_QUESTION_LIST = {
     "2015-45",
     "2017-46",
     "2019-43",
-    "2020-45"
+    "2020-45",
+    "2021-45"
   ],
   "银行家算法安全性检查": [
     "2011-27"
@@ -4251,7 +4548,8 @@ window.CARD_QUESTION_LIST = {
     "2018-44",
     "2018-45",
     "2019-46",
-    "2020-46"
+    "2020-46",
+    "2021-44"
   ],
   "进程调度算法": [
     "2009-24",
@@ -4276,7 +4574,8 @@ window.CARD_QUESTION_LIST = {
     "2009-28",
     "2014-46",
     "2016-47",
-    "2018-46"
+    "2018-46",
+    "2021-46"
   ],
   "磁盘调度 FCFS 与 SSTF": [
     "2009-29",
@@ -4322,11 +4621,13 @@ window.CARD_QUESTION_LIST = {
     "2016-41"
   ],
   "DNS 递归与迭代查询": [
-    "2010-40"
+    "2010-40",
+    "2021-47"
   ],
   "以太网帧与 MAC 地址": [
     "2011-47",
-    "2015-47"
+    "2015-47",
+    "2021-47"
   ],
   "IPv4 首部与分片": [
     "2021-36",
@@ -4413,7 +4714,8 @@ window.CARD_QUESTION_LIST = {
     "2014-42",
     "2015-42",
     "2017-42",
-    "2018-42"
+    "2018-42",
+    "2021-41"
   ],
   "CPU 指令执行过程": [
     "2014-44",
@@ -4424,7 +4726,8 @@ window.CARD_QUESTION_LIST = {
     "2015-43"
   ],
   "指令格式与操作码扩展": [
-    "2015-44"
+    "2015-44",
+    "2021-43"
   ],
   "虚拟内存与页面置换": [
     "2014-45",
@@ -4435,7 +4738,8 @@ window.CARD_QUESTION_LIST = {
     "2020-46"
   ],
   "ARP 与 DHCP": [
-    "2015-47"
+    "2015-47",
+    "2021-47"
   ],
   "DHCP 地址租约过程": [
     "2015-47"
@@ -4458,7 +4762,8 @@ window.CARD_QUESTION_LIST = {
     "2017-42",
     "2018-41",
     "2019-41",
-    "2020-41"
+    "2020-41",
+    "2021-42"
   ],
   "计算机性能指标 CPI 与 CPU 时间": [
     "2016-44",
@@ -4470,7 +4775,8 @@ window.CARD_QUESTION_LIST = {
     "2014-45",
     "2016-45",
     "2017-45",
-    "2018-44"
+    "2018-44",
+    "2021-44"
   ],
   "调度评价指标": [
     "2016-46"
@@ -4488,7 +4794,8 @@ window.CARD_QUESTION_LIST = {
   ],
   "互斥锁、自旋锁与信号量": [
     "2014-47",
-    "2017-46"
+    "2017-46",
+    "2021-45"
   ],
   "递归算法与递归树": [
     "2017-41",
@@ -4502,7 +4809,8 @@ window.CARD_QUESTION_LIST = {
     "2017-43",
     "2017-44",
     "2019-45",
-    "2020-43"
+    "2020-43",
+    "2021-43"
   ],
   "RISC 与 CISC": [
     "2017-44"
@@ -4598,5 +4906,32 @@ window.CARD_QUESTION_LIST = {
   "数组行优先与列优先存储": [
     "2020-46"
   ],
-  "IPv4 地址与子网划分": []
+  "IPv4 地址与子网划分": [],
+  "欧拉路径与欧拉回路": [
+    "2021-41"
+  ],
+  "比较计数排序与秩排序": [
+    "2021-42"
+  ],
+  "内部排序与稳定性": [
+    "2021-42"
+  ],
+  "ALU 算术逻辑单元": [
+    "2021-43"
+  ],
+  "TLB 组相联映射与 LRU 替换": [
+    "2021-44"
+  ],
+  "内核态与用户态特权级": [
+    "2021-45"
+  ],
+  "磁盘引导与格式化流程": [
+    "2021-46"
+  ],
+  "文件系统与目录": [
+    "2021-46"
+  ],
+  "交换机自学习与转发": [
+    "2021-47"
+  ]
 };
