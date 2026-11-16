@@ -7310,244 +7310,531 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "两段积分的内层上下限不同，先合并区域再使用对称性；不能遗漏系数2。"
   },
   "560": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-选择题-7",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-F"
+    ],
+    "secondary": [
+      "LA-05-B"
+    ],
+    "rationale": "相似矩阵的判断不能只看特征值；本题可直接构造相似变换矩阵 P 并验证 P⁻¹AP 等于选项 A。",
+    "methods": "按题给矩阵构造 P，计算 P⁻¹AP，与四个选项逐项比对。",
+    "pitfalls": "相同特征值并不足以判定相似；需要相似变换或 Jordan 结构依据。"
   },
   "561": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-选择题-8",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-B"
+    ],
+    "secondary": [
+      "LA-02-E"
+    ],
+    "rationale": "分块矩阵 [A,AB]=A[I,B]，右乘矩阵不增加 A 的秩，同时分块矩阵包含 A 的列空间，因此秩相等。",
+    "methods": "利用矩阵乘积秩不等式证明不超过 r(A)，再由包含 A 的列组证明不小于 r(A)。",
+    "pitfalls": "区分 [A,AB] 与 [A,BA]；乘积左右次序不能互换。"
   },
   "562": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-填空题-9",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A"
+    ],
+    "secondary": [
+      "CAL-02-D"
+    ],
+    "rationale": "arctan(x+1)−arctan x 可用拉格朗日中值定理表示为 1/(1+ξ²)，其中 ξ∈(x,x+1)，再求夹逼极限。",
+    "methods": "对 arctan 在 [x,x+1] 使用中值定理，比较 x²/(1+ξ²)。",
+    "pitfalls": "ξ 与 x 同阶且 ξ/x→1；不能把 ξ 直接当作 x+1 或 x。"
   },
   "563": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-填空题-10",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-G"
+    ],
+    "secondary": [
+      "CAL-05-C"
+    ],
+    "rationale": "拐点由二阶导数变号确定，再求该点切线斜率与函数值。",
+    "methods": "计算 y'、y''，解 y''=0 并验证凹凸性改变，写点斜式。",
+    "pitfalls": "二阶导为零只是候选条件，必须验证两侧变号。"
   },
   "564": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-填空题-11",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "积分上限无穷，分母可因式分解并作部分分式，利用对数原函数计算收敛值。",
+    "methods": "将分母分解为 (x−1)(x−3)，拆成两个简单分式后取上限极限。",
+    "pitfalls": "分别的对数项在无穷远处发散，必须合并后取极限，不能拆开分别求值。"
   },
   "565": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-填空题-12",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-E"
+    ],
+    "secondary": [
+      "CAL-05-C"
+    ],
+    "rationale": "参数方程曲率先由 dy/dx 与 d²y/dx² 求得，再代入曲率公式。",
+    "methods": "先求参数一阶导和二阶导，再用 κ=|y''|/[1+(y')²]^(3/2)。",
+    "pitfalls": "参数二阶导需除以 dx/dt；曲率分母是 3/2 次幂。"
   },
   "566": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-填空题-13",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-D"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "由隐函数 F(x,y,z)=0 求 z_x=−F_x/F_z，并先确认指定点对应 z=1。",
+    "methods": "代入点求 z，再分别计算 F_x、F_z，使用隐函数求导公式。",
+    "pitfalls": "F_z 不能漏掉 ln z 与 e^(z−1) 两部分的导数。"
   },
   "567": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-填空题-14",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-A"
+    ],
+    "secondary": [
+      "LA-01-A"
+    ],
+    "rationale": "以线性无关向量组为基，矩阵 A 在该基下的表示矩阵由三条作用关系的系数组成；相似矩阵行列式不变。",
+    "methods": "令 P=(α₁,α₂,α₃)，写 AP=PC，故 |A|=|C|。",
+    "pitfalls": "按每个 Aαⱼ 的系数作为表示矩阵第 j 列，不能把行列写反。"
   },
   "568": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-解答题-15",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-A"
+    ],
+    "rationale": "含 arctan 与指数复合项的不定积分，适合分部积分，余项再令 t=√(eˣ−1) 换元。",
+    "methods": "取 u=arctan√(eˣ−1)、dv=e²ˣdx，分部积分后作根式换元。",
+    "pitfalls": "求 du 时利用 1+(√(eˣ−1))²=eˣ 化简；最后别漏积分常数。"
   },
   "569": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-解答题-16",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-F"
+    ],
+    "secondary": [
+      "CAL-07-B"
+    ],
+    "rationale": "先对卷积型积分换元并化为 F(x)=∫₀ˣf，求导得到一阶线性微分方程 F'+F=2ax。",
+    "methods": "将第二积分换元为 xF(x)−∫₀ˣu f(u)du，再求导并解 F 方程。",
+    "pitfalls": "换元后上下限与 x−t 的关系要准确；平均值为1且区间长度为1，所以积分也为1。"
   },
   "570": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-解答题-17",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-E"
+    ],
+    "secondary": [
+      "CAL-04-E",
+      "CAL-06-C"
+    ],
+    "rationale": "区域由摆线参数方程与 x 轴围成，先对 y 积分，再用 t 参数化 x、y 及 dx。",
+    "methods": "写成 ∫[xφ(x)+φ(x)²]dx，代入 x=t−sint、y=1−cost、dx=(1−cost)dt。",
+    "pitfalls": "二重积分对 y 积分时上限为 φ(x)；参数换元需带 dx/dt。"
   },
   "571": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-解答题-18",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-05-A"
+    ],
+    "rationale": "构造 f 并研究导数符号：利用 g(x)=x−2lnx+2k 的单调区间与最小值证明 f 在1两侧的符号。",
+    "methods": "求 f'=g/x，分 x<1 与 x>1 讨论 g 的单调性，再比较 f(x) 与 f(1)=0。",
+    "pitfalls": "参数下界 k≥ln2−1 用于保证 g(2)≥0；需分别处理 x<1 和 x>1。"
   },
   "572": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-解答题-19",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-D"
+    ],
+    "secondary": [
+      "CAL-05-B"
+    ],
+    "rationale": "三段周长变量满足线性约束，总面积是正系数二次型；拉格朗日乘数法给出唯一内部极小值。",
+    "methods": "分别写圆、正方形、正三角形面积，设周长 x+y+z=2，求约束极值。",
+    "pitfalls": "检查长度非负约束与内部解；面积系数应分别为 1/(4π)、√3/36、1/16。"
   },
   "573": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-解答题-20",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-04-C"
+    ],
+    "rationale": "面积 S 表示为动点横坐标 x 的函数，利用链式法则求时间变化率。",
+    "methods": "先由几何面积减去曲线下方面积得到 S(x)，再乘 dx/dt。",
+    "pitfalls": "面积分割需避免重复或遗漏；最终代入 x=3、x'=4。"
   },
   "574": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-解答题-21",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-01-J"
+    ],
+    "secondary": [
+      "CAL-01-A"
+    ],
+    "rationale": "由指数函数的中值定理证明 x_{n+1}=ln((e^{x_n}−1)/x_n) 位于0与x_n之间，进而单调有界收敛并求极限。",
+    "methods": "先归纳正性，再用 e^{x_n}−1=x_n e^ξ 得 x_{n+1}=ξ∈(0,x_n)，最后令极限满足方程。",
+    "pitfalls": "证明单调前需先证明各项为正；极限方程还需结合非负性排除其他根。"
   },
   "575": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-解答题-22",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-06-B"
+    ],
+    "secondary": [
+      "LA-06-A",
+      "LA-06-D"
+    ],
+    "rationale": "二次型是三个线性表达式的平方和，f=0 等价于齐次线性方程组；规范形由系数矩阵秩及正惯性指数确定。",
+    "methods": "将三个线性式作为新变量，计算变换矩阵行列式/秩，区分 a=2 与 a≠2。",
+    "pitfalls": "平方和保证非负；变换可逆时规范形有三个正平方项，退化时只有两个。"
   },
   "576": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2018-解答题-23",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-B"
+    ],
+    "secondary": [
+      "LA-03-E",
+      "LA-02-A"
+    ],
+    "rationale": "初等列变换保持秩，先比较 A、B 的秩确定参数，再解矩阵方程 AP=B 并从通解中选可逆解。",
+    "methods": "分别求 A、B 的秩条件，代入 a 后解 A P=B，检查 det P≠0。",
+    "pitfalls": "秩相等只是可解的必要结构条件，求出的 P 还必须满足可逆性。"
   },
   "577": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-01-G"
+    ],
+    "secondary": [
+      "CAL-05-D"
+    ],
+    "rationale": "tan x 的泰勒展开首个非零差项为 x³/3，因此 x−tanx 与 x³ 同阶。",
+    "methods": "展开 tanx=x+x³/3+o(x³)，比较无穷小阶数。",
+    "pitfalls": "同阶看首个非零项；符号不影响阶数。"
   },
   "578": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-G"
+    ],
+    "secondary": [
+      "CAL-05-C"
+    ],
+    "rationale": "对 y=x sinx+2cosx 求二阶导，检查 y'' 在区间内零点两侧是否变号。",
+    "methods": "求 y''=−x sinx，确定 x=π 是区间内部变号点并求函数值。",
+    "pitfalls": "端点不属于给定开区间；二阶导为零仍需验证变号。"
   },
   "579": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "反常积分敛散性可通过原函数或比较判别；D 项 x/(1+x²) 的原函数为半对数并趋于无穷。",
+    "methods": "分别检查四个积分，D 项直接积分得 1/2 ln(1+x²)。",
+    "pitfalls": "不能仅因区间无穷就判断发散；需检查被积函数衰减速度。"
   },
   "580": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "通解中的 (C₁+C₂x)e^(−x) 表明特征根 −1 为二重根；代入特解 eˣ 确定右端系数。",
+    "methods": "由特征方程 (λ+1)² 求 a、b，再代 y=eˣ 求 c。",
+    "pitfalls": "不要把齐次解中的指数根与非齐次特解指数混淆。"
   },
   "581": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-F"
+    ],
+    "secondary": [
+      "CAL-08-E"
+    ],
+    "rationale": "区域内 r=√(x²+y²) 不超过 π/2，逐点比较 1−cosr、sinr、r，再用积分保序性比较三个积分。",
+    "methods": "证明 0<r≤π/2 时 1−cosr<sinr<r，对区域积分。",
+    "pitfalls": "比较函数需在整个区域成立；原点处等号不影响严格积分不等式。"
   },
   "582": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-选择题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-C"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "若差商极限为0，二阶泰勒展开表明函数值、一阶导数和二阶导数在 a 处相同，从而切线与曲率相同；反向不成立。",
+    "methods": "令 h=f−g，利用 h(x)/(x−a)²→0 推出 h(a)=h'(a)=h''(a)=0；再构造反例说明非必要。",
+    "pitfalls": "曲率相等只约束二阶导绝对值（在相同切线斜率下），不能保证二阶导数相等。"
   },
   "583": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-选择题-7",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-D"
+    ],
+    "secondary": [
+      "LA-02-E"
+    ],
+    "rationale": "四阶矩阵齐次方程基础解系有2个向量，故秩为2；当秩小于 n−1 时伴随矩阵为零矩阵。",
+    "methods": "由 nullity=2 得 r(A)=4−2=2，再用伴随矩阵秩定理。",
+    "pitfalls": "伴随矩阵秩的分段结论依赖矩阵阶数及 r(A)；本题 r=2<3。"
   },
   "584": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-选择题-8",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-06-D"
+    ],
+    "secondary": [
+      "LA-05-C",
+      "LA-06-A"
+    ],
+    "rationale": "实对称矩阵可正交对角化，特征值满足 λ²+λ−2=0；结合行列式确定特征值重数与正负惯性指数。",
+    "methods": "解特征值方程得1、−2，利用三阶行列式为4确定谱为(1,−2,−2)。",
+    "pitfalls": "规范形的正负平方项数量由正负特征值个数决定，不能只看行列式符号。"
   },
   "585": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-填空题-9",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-01-G"
+    ],
+    "rationale": "幂指型极限取对数，将其转化为 2 ln(x+2ˣ)/x，再用一阶展开求指数极限。",
+    "methods": "写成 exp(2 ln(x+2ˣ)/x)，对 x+2ˣ 在0处作一阶展开。",
+    "pitfalls": "底数趋于1且保持正值；取对数后需正确处理 2ˣ=e^(x ln2)。"
   },
   "586": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-填空题-10",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-E"
+    ],
+    "secondary": [
+      "CAL-04-C"
+    ],
+    "rationale": "摆线参数方程在指定 t 处先求坐标与 dy/dx，再写切线方程并读取轴截距。",
+    "methods": "计算 dx/dt、dy/dt，得到斜率 sin t/(1−cos t)，代入 t=3π/2。",
+    "pitfalls": "轴截距是令 y=0 后得到的 x 值；注意参数点横坐标包含 +1。"
   },
   "587": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-填空题-11",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-A"
+    ],
+    "secondary": [
+      "CAL-08-B"
+    ],
+    "rationale": "对 z=y f(y²/x) 求偏导并组合 2x z_x+y z_y，链式法则中的 f' 项相消，剩余项为 z。",
+    "methods": "设 u=y²/x，分别求 z_x、z_y 后代入目标组合。",
+    "pitfalls": "两个偏导中的 f'(u) 项系数相反，避免漏掉外层因子 y。"
   },
   "588": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-填空题-12",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-04-E"
+    ],
+    "rationale": "弧长公式 L=∫√(1+(y')²)dx，y'=−tanx，积分化为 secx 的原函数。",
+    "methods": "先求导，再利用 √(1+tan²x)=secx（区间内 secx>0）积分。",
+    "pitfalls": "根号取正值；本题区间 [0,π/6] 上 secx 为正。"
   },
   "589": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-填空题-13",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-08-E"
+    ],
+    "rationale": "含变上限积分的外层积分可交换积分次序，将三角函数积分化为 sin(t²) 的直接换元。",
+    "methods": "改写积分区域 0≤x≤t≤1，交换次序后先积 x，再令 u=t²。",
+    "pitfalls": "原内积分从1到x方向相反，换序时必须带负号。"
   },
   "590": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-填空题-14",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-01-B"
+    ],
+    "secondary": [
+      "LA-01-A"
+    ],
+    "rationale": "行列式按第一行展开，第一行只有前两项非零，正好得到 A₁₁−A₁₂。",
+    "methods": "直接按第一行拉普拉斯展开，与给出的代数余子式组合对照。",
+    "pitfalls": "代数余子式已包含符号因子，不能再次重复加负号。"
   },
   "591": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-解答题-15",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-04-A",
+      "CAL-03-A"
+    ],
+    "rationale": "分段函数分别求导并制作符号表；x=0 处函数连续但不可导，需结合左右单调性判断局部极值。",
+    "methods": "对 x>0、x<0 分别求导，求驻点 −1、1/e，并检查拼接点0。",
+    "pitfalls": "x=0 处导数不存在但仍可能是极值点；需比较两侧函数值趋势。"
   },
   "592": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-解答题-16",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-A"
+    ],
+    "rationale": "有理函数先作部分分式分解，再分别积分得到对数项与有理项。",
+    "methods": "将分母分解为 (x−1)²(x²+x+1)，求部分分式系数后积分。",
+    "pitfalls": "二次不可约因子分子应匹配其导数；注意 (x−1)² 项的积分符号。"
   },
   "593": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-解答题-17",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-B"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "一阶线性微分方程用积分因子 e^(−x²/2) 求解，再用初值确定常数；旋转体体积用圆盘法。",
+    "methods": "求通解 y=e^(x²/2)(√x+C)，代初值得 C=0；再计算 π∫₁²y²dx。",
+    "pitfalls": "积分因子符号要与 y'−xy 的系数匹配；旋转体体积需平方半径。"
   },
   "594": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-解答题-18",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-F"
+    ],
+    "secondary": [
+      "CAL-08-E"
+    ],
+    "rationale": "区域条件转极坐标后得到 π/4≤θ≤3π/4、0≤r≤sin²θ；利用对称性消去 cosθ 部分。",
+    "methods": "将两个区域不等式分别换成角度和半径限制，写出极坐标面积元 r dr dθ。",
+    "pitfalls": "被积函数除以 r 后与面积元相乘仍有 r；区域是上半平面扇形曲边区域。"
   },
   "595": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-解答题-19",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "面积积分含 |sinx|，按每个长度 π 的区间分段，形成等比数列，再求无穷和。",
+    "methods": "将积分拆成 kπ 到(k+1)π，利用周期符号和 e^(−kπ) 提取公比。",
+    "pitfalls": "面积必须取绝对值；不能把正负波瓣直接抵消。"
   },
   "596": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-解答题-20",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "指数因子代换 u=v e^(ax+by) 后展开二阶偏导，令 v_x、v_y 的系数分别为零消去一阶偏导项。",
+    "methods": "计算 u_x、u_xx、u_y、u_yy，收集 v_x、v_y 系数并解线性方程。",
+    "pitfalls": "二阶项的链式展开会产生 2a、2b 系数；不要只代一阶导数。"
   },
   "597": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-解答题-21",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A"
+    ],
+    "secondary": [
+      "CAL-05-G"
+    ],
+    "rationale": "积分中值定理给出内部点 a 使 f(a)=1，再用 f(a)=f(1) 的罗尔定理结论；第二问用内部最大值点和二阶泰勒公式。",
+    "methods": "先由平均值确定取值1的点，再用罗尔定理；以最大值点为中心分别向两端作二阶泰勒展开。",
+    "pitfalls": "第二问需要利用最大值严格大于1及两个泰勒余项点的较小二阶导数；不可将最大值点误当端点。"
   },
   "598": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-解答题-22",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-03-D"
+    ],
+    "secondary": [
+      "LA-03-A",
+      "LA-03-C"
+    ],
+    "rationale": "两组向量等价等价于它们张成同一子空间；对合并矩阵行化简比较秩，并求 β₃ 的线性表示。",
+    "methods": "把两组向量拼成矩阵，行化简分参数讨论，再解 α 系数方程。",
+    "pitfalls": "a=1 时向量组秩下降，表示不唯一；a=−1 时两组张成空间不同。"
   },
   "599": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2019-解答题-23",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-F"
+    ],
+    "secondary": [
+      "LA-05-A",
+      "LA-02-A"
+    ],
+    "rationale": "相似矩阵具有相同特征多项式，先比较特征值确定 x、y，再构造由对应特征向量组成的相似变换矩阵。",
+    "methods": "计算 A、B 的特征多项式，确定参数后求 B 的特征向量并解 AP=PB。",
+    "pitfalls": "特征值相同是必要非充分条件；构造 P 后应验证 P 可逆及 P⁻¹AP=B。"
   },
   "600": {
     "status": "pending",
