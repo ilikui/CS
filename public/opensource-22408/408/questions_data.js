@@ -487,5 +487,82 @@ window.QUESTIONS_DATA = [
     "score": 9,
     "question": "<p>（9分）某网络拓扑如题图所示，以太网交换机S通过路由器R与Internet互联。路由器部分接口、本地域名服务器、H1、H2的IP地址和MAC地址如图所示。</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2021/2021-47.png\" alt=\"2021年408第47题网络拓扑图，含路由器、交换机、DNS服务器、H1和H2\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></p><p>在t0时刻H1的ARP表和S的交换表均为空，H1此刻通过浏览器使用域名www.abc.com访问Web服务器；t1时刻S第一次收到封装HTTP请求报文的以太网帧。假设期间没有与此次访问无关的网络通信。回答：</p><ol><li>从t0到t1期间，H1除HTTP外还运行哪个应用层协议？该协议报文从应用层到数据链路层如何逐层封装？</li><li>若S的交换表结构为[MAC地址，端口]，t1时刻交换表内容是什么？</li><li>从t0到t1期间，H2至少收到几个与此次Web访问相关的帧？是什么帧？目的MAC地址是什么？</li></ol>",
     "answer": "除HTTP外还运行DNS；封装为DNS→UDP→IP→以太网帧。S的交换表：00-11-22-33-44-CC→端口4，00-11-22-33-44-BB→端口1，00-11-22-33-44-AA→端口2。H2至少收到2个ARP请求广播帧，目的MAC均为FF-FF-FF-FF-FF-FF。"
+  },
+  {
+    "id": 572,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2022,
+    "index": 41,
+    "score": 13,
+    "question": "<p>（13分）已知非空二叉树T的结点值均为正整数，采用顺序存储方式保存，数据结构定义如下：</p><pre><code>typedef struct {\n    int SqBiTNode[MAX_SIZE]; // 保存二叉树结点值的数组\n    int ElemNum;             // 实际占用的数组元素个数\n} SqBiTree;</code></pre><p>T中不存在的结点在数组SqBiTNode中用−1表示。根结点存储在下标0处，左、右孩子分别按完全二叉树顺序存储规则定位。原卷给出两棵示例树：</p><ul><li>T1：根40，左25、右60；25的右孩子30，30的左孩子27；60的右孩子80。数组：<code>[40,25,60,-1,30,-1,80,-1,-1,27]</code>，ElemNum=10。</li><li>T2：根40，左50、右60；50的右孩子30，30的右孩子35。数组：<code>[40,50,60,-1,30,-1,-1,-1,-1,-1,35]</code>，ElemNum=11。</li></ul><p>请设计尽可能高效的算法，判定采用这种方式存储的二叉树是否为二叉搜索树，是则返回true，否则返回false。要求给出基本设计思想、C/C++算法及关键注释。</p><p><a href=\"https://images.eduego.com/Uploads/files/wenjian/202312/202312260079107.pdf#page=6\" target=\"_blank\" rel=\"noopener\">查看2022年408原卷第6页及原题图</a></p>",
+    "answer": "对顺序存储二叉树进行中序遍历，检查所有实际结点值是否严格递增；严格递增则为二叉搜索树。",
+    "analysisHtml": "<p>BST的中序遍历序列严格递增。孩子下标为左2k+1、右2k+2；下标越界或数组值为−1时，该位置为空。不能只检查父子结点的局部大小关系。</p>"
+  },
+  {
+    "id": 573,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2022,
+    "index": 42,
+    "score": 10,
+    "question": "<p>（10分）现有n（n&gt;100000）个数保存在一维数组M中，需要查找M中最小的10个数。请回答：</p><ol><li>设计一个完成上述查找任务的算法，要求平均情况下的比较次数尽可能少，简述算法思想（不需要程序实现）。</li><li>说明所设计算法平均情况下的时间复杂度和空间复杂度。</li></ol><p><a href=\"https://images.eduego.com/Uploads/files/wenjian/202312/202312260079107.pdf#page=7\" target=\"_blank\" rel=\"noopener\">查看2022年408原卷第7页及原题图</a></p>",
+    "answer": "使用容量为10的大根堆维护当前最小的10个候选值。扫描新元素x，若x小于堆顶则替换堆顶并向下调整，否则丢弃。扫描结束后堆中即为最小10个数。时间O(n)，空间O(1)（k=10为常数）。",
+    "analysisHtml": "<p>先取前10个元素建大根堆；堆顶是当前候选中的最大值。每个后续元素只需先与堆顶比较，只有更小才需要O(log10)调整。若要求升序输出，最后只需排序10个元素。</p>"
+  },
+  {
+    "id": 574,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2022,
+    "index": 43,
+    "score": 15,
+    "question": "<p>（15分）某CPU中部分数据通路如题43图所示，其中GPRs为通用寄存器组，FR为标志寄存器，用于存放ALU产生的标志信息；带箭头虚线表示控制信号，如Read、Write分别表示主存读、主存写，MDRin表示内部总线上数据写入MDR，MDRout表示MDR内容送内部总线。</p><p>题图数据通路包含系统总线、MAR、MDR、PC、IR、内部总线、GPRs、ALU、暂存器Y/Z及标志寄存器FR。</p><ol><li>设ALU输入端A、B及输出端F的最高位分别为A15、B15、F15，FR中的符号标志和溢出标志分别为SF和OF，求SF、A加B及A减B时OF的逻辑表达式（输入变量为A15、B15、F15）。</li><li>为什么要设置暂存器Y和Z？</li><li>若GPRs的输入端rs、rd分别为所读、写通用寄存器的编号，GPRs最多有多少个通用寄存器？rs和rd来自哪个寄存器？rd应连接地址译码器还是多路选择器？</li><li>取指令阶段（不考虑PC增量）的控制信号序列是什么？若发出主存读命令到数据传送到MDR共需5个时钟周期，取指阶段至少需要几个周期？</li><li>控制信号由什么部件产生？哪些寄存器输出连接到该部件输入端？</li></ol><p><a href=\"https://images.eduego.com/Uploads/files/wenjian/202312/202312260079107.pdf#page=7\" target=\"_blank\" rel=\"noopener\">查看2022年408原卷第7页及原题图</a></p>",
+    "answer": "SF=F15；OF加法=¬A15¬B15F15+A15B15¬F15；OF减法=¬A15B15F15+A15¬B15¬F15。Y暂存ALU一个输入，Z暂存ALU输出。rs、rd均4位，最多16个GPR，来自IR，rd连接地址译码器。取指序列PCout、MARin→Read→MDRout、IRin，至少7周期。CU产生控制信号，IR和FR输出接入CU。",
+    "analysisHtml": "<p>单总线每一时刻只能有一个有效数据源。ALU有两个输入和一个输出，Y暂存先到的操作数，Z暂存结果。rs选择读端口，rd选择写端口；写端口通过地址译码器选中目标寄存器。</p>"
+  },
+  {
+    "id": 575,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2022,
+    "index": 44,
+    "score": 8,
+    "question": "<p>（8分）假设某磁盘驱动器中有4个双面盘片，每个盘面有20000个磁道，每个磁道有500个扇区，每个扇区可记录512字节数据，盘片转速为7200 r/min，平均寻道时间为5ms。请回答：</p><ol><li>每个扇区包含数据及地址信息，地址信息分为3个字段。字段名称分别是什么？各字段至少占多少位？</li><li>一个扇区的平均访问时间约为多少？</li><li>采用周期挪用DMA传送，磁盘控制器数据缓冲区大小为64位，一个扇区读写过程中DMA向CPU发送多少次总线请求？若CPU也需要访问主存，DMA能否获得总线使用权？为什么？</li></ol><p><a href=\"https://images.eduego.com/Uploads/files/wenjian/202312/202312260079107.pdf#page=8\" target=\"_blank\" rel=\"noopener\">查看2022年408原卷第8页及原题图</a></p>",
+    "answer": "地址字段为柱面号15位、磁头号3位、扇区号9位。平均访问时间约9.18ms。64位缓冲区为8B，512B扇区需要64次DMA总线请求。周期挪用DMA可以获得总线使用权，以保证磁盘数据及时传送。",
+    "analysisHtml": "<p>柱面数20000→ceil(log₂20000)=15位；盘面数4×2=8→3位；扇区数500→9位。转一圈约8.33ms，平均旋转延迟4.17ms，单扇区传输约0.0167ms。</p>"
+  },
+  {
+    "id": 576,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2022,
+    "index": 45,
+    "score": 7,
+    "question": "<p>（7分）某文件系统磁盘块大小为4KB，目录项由文件名和索引节点号构成，每个索引节点占256字节，其中包含直接地址项10个，一级、二级和三级间接地址项各1个，每个地址项占4字节。子目录stu包含子目录course和文件doc；course子目录包含文件course1和course2。文件名、索引节点号及占用磁盘块号如下表：</p><table><tr><th>文件名</th><th>索引节点号</th><th>磁盘块号</th></tr><tr><td>stu</td><td>1</td><td>10</td></tr><tr><td>course</td><td>2</td><td>20</td></tr><tr><td>course1</td><td>10</td><td>30</td></tr><tr><td>course2</td><td>100</td><td>40</td></tr><tr><td>doc</td><td>10</td><td>x</td></tr></table><ol><li>目录文件stu中每个目录项的内容是什么？</li><li>文件doc占用磁盘块的块号x是多少？</li><li>若目录文件course的内容已在内存，打开文件course1并将其读入内存，需要读几个磁盘块？说明理由。</li><li>若course2大小增长到6MB，存取course2需要使用该索引节点的哪几级间接地址项？说明理由。</li></ol><p><a href=\"https://images.eduego.com/Uploads/files/wenjian/202312/202312260079107.pdf#page=8\" target=\"_blank\" rel=\"noopener\">查看2022年408原卷第8页及原题图</a></p>",
+    "answer": "stu目录项为(course,2)和(doc,10)；doc与course1共享inode 10，故x=30；读取course1需读2个磁盘块：其inode所在块及文件数据块30；6MB=1536个4KB块，需使用一级和二级间接地址项。",
+    "analysisHtml": "<p>每个间接索引块可存4096/4=1024个块号。直接项覆盖10块，一级间接再覆盖1024块，合计1034块，小于1536；二级间接足够覆盖余下数据，无需三级间接。</p>"
+  },
+  {
+    "id": 577,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2022,
+    "index": 46,
+    "score": 8,
+    "question": "<p>（8分）某进程的两个线程T1和T2并发执行A、B、C、D、E和F共6个操作，其中T1执行A、E和F，T2执行B、C和D。执行顺序约束为：C在A和B完成后执行；D和E均在C完成后执行；F在E完成后执行。请使用信号量的wait()、signal()操作描述T1和T2之间的同步关系，并说明所用信号量的作用及其初值。</p><p>原卷题46图的依赖关系：A→C，B→C，C→D，C→E，E→F。</p><p><a href=\"https://images.eduego.com/Uploads/files/wenjian/202312/202312260079107.pdf#page=9\" target=\"_blank\" rel=\"noopener\">查看2022年408原卷第9页及原题图</a></p>",
+    "answer": "设置SAC=0和SCE=0。T1：A；signal(SAC)；wait(SCE)；E；F。T2：B；wait(SAC)；C；signal(SCE)；D。SAC保证A先于C，SCE保证C先于E；线程内顺序同时保证C先于D、E先于F。",
+    "analysisHtml": "<p>A与B之间无先后约束；D与E之间也无先后约束。T2先执行B再等待A完成，C执行后通知T1，T1等待通知后执行E、F。两个初值为0的信号量即可满足所有偏序约束。</p>"
+  },
+  {
+    "id": 578,
+    "subject": "computer-network",
+    "type": 2,
+    "year": 2022,
+    "index": 47,
+    "score": 9,
+    "question": "<p>（9分）某网络拓扑如题47图所示，R为路由器，S为以太网交换机，AP为802.11接入点。路由器E0接口及DHCP服务器的IP地址配置见图；H1与H2属于同一广播域但不属于同一冲突域；H2和H3属于同一冲突域；H4和H5已接入网络并通过DHCP动态获取IP地址。现有路由器、100BaseT以太网交换机和100BaseT集线器（Hub）三类设备各若干台。</p><ol><li>设备1和设备2分别应选择哪类设备？</li><li>若信号传播速度为2×10^8m/s，以太网最小帧长为64B，信号通过设备2时额外延迟1.51μs，H2与H3之间最远可相距多少？</li><li>H4通过DHCP动态获取IP地址时首先发送的报文M是什么？路由器E0接口能否收到封装M的以太网帧？S向DHCP服务器转发该帧的目的MAC地址是什么？</li><li>若H4向H5发送IP分组P，H5收到的封装P的802.11帧地址1、地址2、地址3分别是什么？</li></ol><p>原卷图中：R的E0为192.168.0.1/25、MAC 00-11-11-11-11-A1；DHCP服务器为192.168.0.2/25、MAC 00-11-11-11-11-B1；AP的MAC为00-11-11-11-11-C1；H4为192.168.0.3/25、MAC 00-11-11-11-11-D1；H5为192.168.0.4/25、MAC 00-11-11-11-11-E1。</p><p><a href=\"https://images.eduego.com/Uploads/files/wenjian/202312/202312260079107.pdf#page=9\" target=\"_blank\" rel=\"noopener\">查看2022年408原卷第9页及原题图</a></p>",
+    "answer": "设备1选交换机，设备2选Hub；H2与H3最远距离210m；M为DHCP Discover，路由器E0能收到该广播帧，S转发帧的目的MAC为FF-FF-FF-FF-FF-FF；802.11地址1=H5的00-11-11-11-11-E1，地址2=AP的00-11-11-11-11-C1，地址3=H4的00-11-11-11-11-D1。",
+    "analysisHtml": "<p>交换机隔离冲突域但保留同一广播域；Hub共享冲突域。最小帧发送时间为64×8/100Mb/s=5.12μs，扣除两次设备延迟3.02μs后，线路往返传播时间为2.10μs，单程1.05μs，距离210m。DHCP Discover以广播方式发送。AP向无线终端转发时，地址1是接收端，地址2是AP，地址3保留原始发送端地址。</p>"
   }
 ];
