@@ -73,11 +73,40 @@ body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="导数�
 desc='拖动观察点经过 x=−2、x=2：f′>0 时递增，f′<0 时递减；在 −2 处由正变负为极大值，在 2 处由负变正为极小值。';
 }
 }else if(k==='integral'){
-if(/换元|凑微分/.test(t)){body=graph(x=>Math.sin(x));desc='u=g(x) 把原变量刻度映射为新变量；同步替换 dx 与积分上下限。';}
-else if(/分部/.test(t)){body=graph(x=>x*Math.exp(-x*x/8));desc='分部积分来自乘积求导；选择 u 使其求导简化，dv 使其易积分。';}
-else if(/反常/.test(t)){body=graph(x=>1/(x*x+0.12));desc='瑕点或无穷区间用极限定义反常积分；分别检查各端点/瑕点的敛散性。';}
+if(/原函数|不定积分/.test(t)){
+const C=(p-1)*2, X=x=>70+x*350, Y=y=>220-y*115;
+const F=x=>x*x*x+x*x+C, f0=x=>3*x*x+2*x;
+const path=fn=>{let d='';for(let i=0;i<=100;i++){const x=i/100*1.35,y=fn(x);d+=(i?'L':'M')+X(x).toFixed(1)+','+Y(y).toFixed(1);}return d;};
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M55 220H430 M70 238V24" stroke="#9aaabd"/><path d="'+path(F)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+path(f0)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="6 4"/><text x="82" y="28" fill="'+COLORS.blue+'">F(x)=x³+x²+C，C='+C.toFixed(1)+'</text><text x="82" y="47" fill="'+COLORS.orange+'">F′(x)=3x²+2x=f(x)</text><text x="330" y="250" fill="'+COLORS.ink+'">x</text></svg>';
+desc='滑块改变积分常数 C：蓝色原函数曲线上下平移，但橙色导数曲线不变。求导验算：(x³+x²+C)′=3x²+2x。所有原函数只差一个常数。';
+}else if(/换元|凑微分|分部/.test(t)){
+if(p<1.075){
+const q=Math.max(.35,Math.min(1,(p-.35)/.725)),u=q*q;
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M45 220H425 M45 25V230" stroke="#9aaabd"/><path d="M60 220Q190 35 380 115" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M60 220L'+(60+320*q)+' 220L'+(60+320*q)+' '+(220-170*Math.cos(u))+'Z" fill="'+COLORS.green+'" opacity=".22"/><path d="M60 220L'+(60+320*q)+' '+(220-170*Math.cos(u))+'" stroke="'+COLORS.orange+'" stroke-width="2" stroke-dasharray="5 4"/><circle cx="'+(60+320*q)+'" cy="'+(220-170*Math.cos(u))+'" r="5" fill="'+COLORS.orange+'"/><text x="70" y="25" fill="'+COLORS.blue+'">原变量 x → 新变量 u=x²</text><text x="70" y="48" fill="'+COLORS.green+'">du=2x dx；上限 x=1 对应 u=1</text><text x="70" y="250" fill="'+COLORS.ink+'">当前 x='+q.toFixed(2)+'，u='+u.toFixed(2)+'</text></svg>';
+desc='换元示例 ∫₀¹2x cos(x²)dx：令 u=x²，则 du=2x dx；上下限同步变为 0 和 1，原积分化为 ∫₀¹cosu du=sin1。拖动观察 x 与 u=x² 的非线性映射。';
+}else{
+const q=(p-1.075)/.725;
+body='<svg viewBox="0 0 460 270" class="sp-plot"><rect x="28" y="22" width="404" height="226" rx="9" fill="#f8fbfe" stroke="#e0e9f2"/><text x="48" y="55" fill="'+COLORS.blue+'" font-size="17">∫ x eˣ dx</text><text x="48" y="91" fill="'+COLORS.ink+'" font-size="14">选 u=x，dv=eˣ dx</text><path d="M48 105H405" stroke="#d7e2ee"/><text x="48" y="139" fill="'+COLORS.orange+'" font-size="15">du=dx</text><text x="245" y="139" fill="'+COLORS.green+'" font-size="15">v=eˣ</text><text x="48" y="177" fill="'+COLORS.ink+'" font-size="14">∫u dv = uv − ∫v du</text><text x="48" y="212" fill="'+COLORS.blue+'" font-size="16">= xeˣ − ∫eˣdx</text><text x="48" y="237" fill="'+COLORS.blue+'" font-size="16">= eˣ(x−1)+C</text><rect x="390" y="'+(190-35*q)+'" width="10" height="'+(25+35*q)+'" rx="4" fill="'+COLORS.green+'"/></svg>';
+desc='分部积分示例 ∫xeˣdx：由 (uv)′=u′v+uv′ 积分得 ∫u dv=uv−∫v du。取 u=x、dv=eˣdx，得到 xeˣ−∫eˣdx=eˣ(x−1)+C。';
+}
+}else if(/反常/.test(t)){body=graph(x=>1/(x*x+0.12));desc='瑕点或无穷区间用极限定义反常积分；分别检查各端点/瑕点的敛散性。';}
 else if(/中值/.test(t)){body=graph(x=>Math.cos(x/2));desc='积分平均值 f(ξ) 等于区间平均高度；连续函数保证存在这样的 ξ。';}
-else{body=graph(x=>x*x/5,'<path d="M230 135L326 135L326 90L230 135Z" fill="'+COLORS.green+'" opacity=".25"/>');desc='蓝色曲线下方阴影表示累积面积；黎曼矩形逐渐细分逼近定积分。';}
+else if(/黎曼|定积分|变上限|面积/.test(t)){
+if(p<1.075){
+const n=Math.max(2,Math.min(24,Math.round(2+(p-.35)/.725*22))),dx=1/n;
+let rect='';
+for(let i=0;i<n;i++){const x=i*dx,h=(x+dx/2)**2,xx=70+x*350,w=350*dx;rect+='<rect x="'+xx.toFixed(2)+'" y="'+(220-170*h).toFixed(2)+'" width="'+(w-.7).toFixed(2)+'" height="'+(170*h).toFixed(2)+'" fill="'+COLORS.green+'" opacity=".28" stroke="'+COLORS.green+'" stroke-width=".7"/>';}
+const curve=[];for(let i=0;i<=100;i++){const x=i/100;curve.push((i?'L':'M')+(70+350*x).toFixed(1)+','+(220-170*x*x).toFixed(1));}
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M50 220H430 M70 238V25" stroke="#9aaabd"/>'+rect+'<path d="'+curve.join(' ')+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><text x="80" y="25" fill="'+COLORS.blue+'">y=x²，分割数 n='+n+'</text><text x="80" y="250" fill="'+COLORS.green+'">中点和 ≈ '+(Array.from({length:n},(_,i)=>((i+.5)*dx)**2*dx).reduce((a,b)=>a+b,0)).toFixed(5)+'；精确值 1/3</text></svg>';
+desc='以 ∫₀¹x²dx=1/3 为例：绿色矩形用每个小区间中点高度近似面积。滑块增加分割数 n，矩形变窄，中点黎曼和逐渐逼近 1/3；有限 n 是近似，极限才是定积分。';
+}else{
+const x=Math.max(.1,Math.min(1,(p-1.075)/.725)),area=x*x*x/3;
+const xx=70+350*x, yy=220-170*x*x;
+let curve='';for(let i=0;i<=100;i++){const z=i/100*x;curve+=(i?'L':'M')+(70+350*z).toFixed(1)+','+(220-170*z*z).toFixed(1);}
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M50 220H430 M70 238V25" stroke="#9aaabd"/><path d="'+curve+'L'+xx.toFixed(1)+' 220L70 220Z" fill="'+COLORS.green+'" opacity=".25"/><path d="'+curve+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+xx.toFixed(1)+' '+yy.toFixed(1)+'V220" stroke="'+COLORS.orange+'" stroke-width="2" stroke-dasharray="5 4"/><circle cx="'+xx.toFixed(1)+'" cy="'+yy.toFixed(1)+'" r="5" fill="'+COLORS.orange+'"/><text x="82" y="25" fill="'+COLORS.blue+'">A(x)=∫₀ˣt²dt=x³/3</text><text x="82" y="47" fill="'+COLORS.green+'">当前 x='+x.toFixed(2)+'，A(x)='+area.toFixed(4)+'</text><text x="'+Math.min(350,xx+8).toFixed(1)+'" y="'+Math.max(65,yy-9).toFixed(1)+'" fill="'+COLORS.orange+'">边界高度 f(x)=x²</text></svg>';
+desc='变上限积分 A(x)=∫₀ˣt²dt：滑块推动右边界，绿色阴影是从 0 累积到 x 的面积。边界处高度 f(x)=x²，故 A′(x)=x²；面积增加速率等于新边界处的函数值。';
+}
+}else{body=graph(x=>x*x/5);desc='积分的面积意义与数值逼近；注意定积分是带符号面积。';}
 }else if(k==='ode'){
 if(/二阶|特征根|重根/.test(t)){body=graph(x=>Math.exp(-x/3)*(Math.cos(p*x)+.4*Math.sin(p*x)));desc='二阶常系数方程的根决定解曲线：实异根指数叠加、重根含 x 因子、共轭根产生衰减振荡。';}
 else if(/线性|积分因子/.test(t)){body=graph(x=>Math.exp(-x/3)+.3*Math.exp(-p*x));desc='积分因子 μ=e^{∫Pdx} 将左侧化为 (μy)′，解曲线由积分常数平移。';}
