@@ -4099,8 +4099,8 @@ window.QUESTION_CARD_MAP = {
         "role": "secondary"
       },
       {
-        "title": "IPv4 地址与子网划分",
-        "topic": "IPv4 地址与子网划分",
+        "title": "IPv4 子网划分与 CIDR",
+        "topic": "IPv4 子网划分与 CIDR",
         "status": "verified",
         "role": "secondary"
       }
@@ -4110,7 +4110,7 @@ window.QUESTION_CARD_MAP = {
     ],
     "secondaryCards": [
       "路由选择与转发表",
-      "IPv4 地址与子网划分"
+      "IPv4 子网划分与 CIDR"
     ]
   }
 };
@@ -4304,7 +4304,8 @@ window.CARD_QUESTION_LIST = {
     "2014-43",
     "2025-47",
     "2018-47",
-    "2019-47"
+    "2019-47",
+    "2020-47"
   ],
   "路由选择与转发表": [
     "2014-43",
@@ -4597,7 +4598,5 @@ window.CARD_QUESTION_LIST = {
   "数组行优先与列优先存储": [
     "2020-46"
   ],
-  "IPv4 地址与子网划分": [
-    "2020-47"
-  ]
+  "IPv4 地址与子网划分": []
 };
