@@ -2487,6 +2487,259 @@ window.QUESTION_CARD_MAP = {
         "status": "verified"
       }
     ]
+  },
+  "2014-41": {
+    "year": 2014,
+    "index": 41,
+    "id": 276,
+    "subject": "数据结构",
+    "subjectCode": "data-structure",
+    "typeName": "应用题",
+    "answer": "WPL=Σ(wᵢ×depthᵢ)，其中根结点深度取 0。可用先序递归遍历：到达叶结点时累加 depth×weight；也可用层次遍历记录层数并累加叶结点权值。",
+    "analysis": "层次遍历也可实现：队列保存结点，按层处理；每遇到叶结点累加当前层数×权值。递归法代码更简洁。注意本题权值只在叶结点有意义。",
+    "steps": [
+      "WPL 只统计叶结点，不统计分支结点。",
+      "从根结点开始递归，根深度为 0；每向下一层，深度加 1。",
+      "若结点左右孩子均为空，则它是叶结点，将 depth×weight 加入总和。",
+      "若不是叶结点，分别递归左右子树，深度参数传 depth+1。",
+      "空树返回 0；单结点树的根同时为叶结点，深度为 0，按本题常用定义其 WPL 为 0。"
+    ],
+    "code": "typedef struct BiTNode {\\n    int weight;\\n    struct BiTNode *lchild, *rchild;\\n} BiTNode, *BiTree;\\n\\nint WPL(BiTree root, int depth) {\\n    if (root == NULL) return 0;\\n    if (root->lchild == NULL && root->rchild == NULL)\\n        return depth * root->weight;\\n    return WPL(root->lchild, depth + 1)\\n         + WPL(root->rchild, depth + 1);\\n}\\n\\n/* 调用：WPL(root, 0) */",
+    "audit": {
+      "status": "cross-checked",
+      "note": "答案解析库中的年份、题号、ID一致；核心考点已逐题人工关联到现有原子知识卡。"
+    },
+    "cards": [
+      {
+        "title": "哈夫曼树与带权路径长度",
+        "topic": "哈夫曼树与带权路径长度",
+        "status": "verified"
+      }
+    ]
+  },
+  "2014-42": {
+    "year": 2014,
+    "index": 42,
+    "id": 277,
+    "subject": "数据结构",
+    "subjectCode": "data-structure",
+    "typeName": "应用题",
+    "answer": "（1）图，具体为无向带权图。（2）采用邻接表式链式存储：路由器表头结点指向 Link/Net 信息链，Link 与 Net 用 union 存储，Metric 保存链路代价。（3）R1 到各子网最短路径：192.1.1.0/24 直接到达，费用 1；192.1.5.0/24 经 R1-R3，费用 3；192.1.6.0/24 经 R1-R2，费用 4；192.1.7.0/24 经 R1-R2-R4，费用 8。",
+    "analysis": "LSI 不是简单的普通边集：每台路由器的链路状态信息既包含相邻路由器 Link，也包含直连网络 Net。用带表头的多重链式结构可完整表示。最短路径费用应按题图中 Metric 累加，而不是按经过的路由器数量计数。",
+    "steps": [
+      "路由器是顶点，路由器之间的链路是边，Metric 是边权；OSPF 链路关系双向，因此抽象为无向带权图。",
+      "建立路由器表头链表，每个表头存 RouterID，并指向其 LSI 链。",
+      "LSI 链结点分为 Link 和 Net 两类：Link 记录邻接路由器 ID/IP；Net 记录网络 Prefix/Mask；共同字段 Metric 和 next。",
+      "对 R1 运行 Dijkstra：初始化 R1 到直连邻居/网络的距离，反复选择当前未确定的最小距离顶点并松弛其邻接边。",
+      "最终路径与代价：192.1.1.0/24 直连=1；192.1.5.0/24 经 R3=3；192.1.6.0/24 经 R2=4；192.1.7.0/24 经 R2、R4=8。"
+    ],
+    "code": "typedef struct { unsigned int ID, IP; } LinkInfo;\\ntypedef struct { unsigned int Prefix, Mask; } NetInfo;\\ntypedef struct ArcNode {\\n    int flag; /* 1: Link, 2: Net */\\n    union { LinkInfo link; NetInfo net; } info;\\n    unsigned int metric;\\n    struct ArcNode *next;\\n} ArcNode;\\ntypedef struct RouterNode {\\n    unsigned int routerID;\\n    ArcNode *lsi;\\n    struct RouterNode *next;\\n} RouterNode;",
+    "audit": {
+      "status": "cross-checked",
+      "note": "答案解析库中的年份、题号、ID一致；核心考点已逐题人工关联到现有原子知识卡。"
+    },
+    "cards": [
+      {
+        "title": "图的存储与遍历",
+        "topic": "图的存储与遍历",
+        "status": "verified"
+      },
+      {
+        "title": "距离向量与链路状态路由",
+        "topic": "距离向量与链路状态路由",
+        "status": "verified"
+      }
+    ]
+  },
+  "2014-43": {
+    "year": 2014,
+    "index": 43,
+    "id": 278,
+    "subject": "计算机网络",
+    "subjectCode": "computer-network",
+    "typeName": "应用题",
+    "answer": "（1）R1 路由表最少 3 项：192.1.1.0/24 直连 E0；192.1.6.0/23 下一跳 10.1.1.2、接口 L0；192.1.5.0/24 下一跳 10.1.1.10、接口 L1。（2）经 L0 转发，目的主机收到 TTL=61。（3）增加默认路由 0.0.0.0/0，Metric=10。",
+    "analysis": "192.1.6.0/24 与 192.1.7.0/24 的前 23 位相同，能够聚合为 192.1.6.0/23。TTL 由路由器逐跳递减，不是交换机每转发一帧就递减。",
+    "steps": [
+      "根据第 42 题的最短路径，把连续的 192.1.6.0/24 与 192.1.7.0/24 聚合为 192.1.6.0/23，减少路由表项。",
+      "192.1.1.0/24 是 R1 直连网络，从 E0 转发。",
+      "192.1.6.0/23 经 R2，下一跳 10.1.1.2，从 L0 转发。",
+      "192.1.5.0/24 经 R3，下一跳 10.1.1.10，从 L1 转发。",
+      "192.1.7.211 属于 192.1.6.0/23，故选 L0。TTL 初始 64，每经过一个三层转发路由器减 1；到达目的主机前经过 R1、R2、R4 共 3 次转发，TTL=64−3=61。",
+      "新增到 Internet 的 Metric=10 链路时，R1 的 LSI 增加默认网络前缀 0.0.0.0/0，Metric=10。"
+    ],
+    "code": "",
+    "audit": {
+      "status": "cross-checked",
+      "note": "答案解析库中的年份、题号、ID一致；核心考点已逐题人工关联到现有原子知识卡。"
+    },
+    "cards": [
+      {
+        "title": "IPv4 子网划分与 CIDR",
+        "topic": "IPv4 子网划分与 CIDR",
+        "status": "verified"
+      },
+      {
+        "title": "路由选择与转发表",
+        "topic": "路由选择与转发表",
+        "status": "verified"
+      }
+    ]
+  },
+  "2014-44": {
+    "year": 2014,
+    "index": 44,
+    "id": 279,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "应用题",
+    "answer": "（1）按字节编址。（2）数组 A 每个元素 32 位，即 4B。（3）bne 的 OFFSET 字段为 FFFAH（补码 −6），转移目标地址=(PC)+4+OFFSET×4。（4）因数据相关发生阻塞的是第 2、3、4、6 条指令；第 6 条 bne 发生控制冒险。指令 1 不因与指令 5 的跨循环相关而阻塞，是因为 bne 后 3 个周期的阻塞覆盖了该相关。",
+    "analysis": "本题关键在于 OFFSET 的缩放单位：字段值不是直接按字节加到 PC，而是乘以 4。流水线相关按题设无转发、按序发射/完成分析。",
+    "steps": [
+      "指令为 32 位定长，即 4B；指令地址相邻差 4 个地址单位，所以一个地址单位是 1B，采用字节编址。",
+      "sll 左移两位相当于乘 4；数组元素地址步长为 4B，因此每个元素占 4B=32 位。",
+      "bne 机器码末 16 位为 FFFAH，按 16 位补码解释为 −6。",
+      "执行分支时 PC 已指向下一条指令，PC+4 为顺序执行后的地址；OFFSET 的单位为 4B，因此目标地址=(PC)+4+(−6)×4=(PC)+4−24。",
+      "无转发的五级流水线中，指令 2 依赖指令 1、指令 3 依赖指令 2、指令 4 依赖指令 3、指令 6 依赖指令 5，故这些后继指令需等待相关结果写回。",
+      "第 6 条是 bne，分支改变 PC，发生控制冒险。分支引起的 3 周期阻塞使下一轮指令 1 的取数时机晚于指令 5 的写回，因此跨循环相关不再形成额外阻塞。"
+    ],
+    "code": "",
+    "audit": {
+      "status": "cross-checked",
+      "note": "答案解析库中的年份、题号、ID一致；核心考点已逐题人工关联到现有原子知识卡。"
+    },
+    "cards": [
+      {
+        "title": "流水线结构冒险与数据冒险",
+        "topic": "流水线结构冒险与数据冒险",
+        "status": "verified"
+      },
+      {
+        "title": "指令系统与寻址方式",
+        "topic": "指令系统与寻址方式",
+        "status": "verified"
+      },
+      {
+        "title": "CPU 指令执行过程",
+        "topic": "CPU 指令执行过程",
+        "status": "verified"
+      }
+    ]
+  },
+  "2014-45": {
+    "year": 2014,
+    "index": 45,
+    "id": 280,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "应用题",
+    "answer": "（1）P 执行结束时 R2=1000。（2）指令 Cache 容量 512B，命中率约 99.98%。（3）可能发生溢出异常的是指令 4（加法）；可能发生缺页异常的是指令 3（访存）；数组 A 访问需读磁盘 1 次，TLB 至少访问 1001 次。",
+    "analysis": "本题要区分指令 Cache 与数据访问：数组页缺失影响的是数据访存，不能把它计入指令 Cache 的缺失次数。1000 次数组读取加上首次缺页处理后的重试，得到 1001 次 TLB 访问。",
+    "steps": [
+      "循环变量 i 从 0 开始，每轮加 1，循环条件 i<1000；退出时 i=1000，因此 R2=1000。",
+      "指令 Cache 有 16 行，每行/块 32B，容量=16×32=512B。",
+      "程序 P 共 6 条 32 位指令，占 24B，小于一个 32B Cache 块；起始地址 08048100H 对齐到块边界，因此首次取指发生一次缺失，之后指令取指命中。",
+      "总指令取指次数为 1000×6=6000 次，缺失 1 次，命中率=(6000−1)/6000≈99.9833%，约 99.98%。",
+      "指令 4 执行 sum+=A[i]，加法结果可能超出有符号整数表示范围，可能触发溢出异常。",
+      "指令 3 读取 A[i]；数组页初始不在内存，首次访问该指令可能触发缺页异常。所有数组元素位于同一页、同一磁盘扇区，调入一次后后续访问不再产生该数组页的缺页，故读磁盘至少 1 次。",
+      "每次 A[i] 数据访问需要地址转换；首次缺页后重试也会再次进行地址转换，因此 TLB 至少访问 1000+1=1001 次。"
+    ],
+    "code": "",
+    "audit": {
+      "status": "cross-checked",
+      "note": "答案解析库中的年份、题号、ID一致；核心考点已逐题人工关联到现有原子知识卡。"
+    },
+    "cards": [
+      {
+        "title": "Cache 直接映射与组相联",
+        "topic": "Cache 直接映射与组相联",
+        "status": "verified"
+      },
+      {
+        "title": "Cache 替换与写策略",
+        "topic": "Cache 替换与写策略",
+        "status": "verified"
+      },
+      {
+        "title": "虚拟内存与页面置换",
+        "topic": "虚拟内存与页面置换",
+        "status": "verified"
+      },
+      {
+        "title": "TLB 与快表命中",
+        "topic": "TLB 与快表命中",
+        "status": "verified"
+      }
+    ]
+  },
+  "2014-46": {
+    "year": 2014,
+    "index": 46,
+    "id": 281,
+    "subject": "操作系统",
+    "subjectCode": "operating-system",
+    "typeName": "应用题",
+    "answer": "（1）连续分配：最少访问 59 次磁盘块；FCB 中起始块号和文件长度需更新。（2）链接分配：访问 31 次磁盘块；最大文件长度为 4080GB（按十进制 GB 表述；精确值为 1020×2^32 字节）。",
+    "analysis": "连续分配移动方向应选择文件前方有空闲空间的一侧，移动较少的 29 条记录，而不是移动后面的 171 条记录。链接分配按题目将每个块的指针视为 4B、块号为 32 位处理。容量精确值为 4,380,866,641,920 字节，即 4080GiB；不同资料把 GiB 简写为 GB。",
+    "steps": [
+      "连续分配时插入为第 30 条记录，需要把原第 1—29 条记录整体向前移动一个块位置，为新记录腾出位置。",
+      "移动 29 条记录需要读 29 次、写 29 次，共 58 次；再写入新记录 1 次，合计 59 次。",
+      "由于文件整体向前移动，文件起始块号改变；文件增加一条记录，文件长度也改变。",
+      "链接分配时，需沿链访问前 29 个块以定位第 29 条记录，读取 29 次；再写入新记录块，并修改第 29 块的链接指针，合计 31 次块访问。",
+      "每块数据区为 1024−4=1020B。32 位块地址可表示 2^32 个块，因此最大文件数据量=1020×2^32=4,380,866,641,920 字节=4080GiB（常按 4080GB 记）。"
+    ],
+    "code": "",
+    "audit": {
+      "status": "cross-checked",
+      "note": "答案解析库中的年份、题号、ID一致；核心考点已逐题人工关联到现有原子知识卡。"
+    },
+    "cards": [
+      {
+        "title": "文件物理分配方式",
+        "topic": "文件物理分配方式",
+        "status": "verified"
+      },
+      {
+        "title": "文件逻辑结构与物理结构",
+        "topic": "文件逻辑结构与物理结构",
+        "status": "verified"
+      }
+    ]
+  },
+  "2014-47": {
+    "year": 2014,
+    "index": 47,
+    "id": 282,
+    "subject": "操作系统",
+    "subjectCode": "operating-system",
+    "typeName": "应用题",
+    "answer": "信号量初值：mutex1=1（消费者批次互斥）、mutex2=1（缓冲区互斥）、empty=1000（空缓冲区数）、full=0（产品数）。生产者先 P(empty)、P(mutex2)，放入产品后 V(mutex2)、V(full)。消费者先 P(mutex1)，连续执行 10 次 P(full)、P(mutex2)、取产品、V(mutex2)、V(empty)，完成 10 次后 V(mutex1)。",
+    "analysis": "mutex1 必须覆盖完整的 10 次取货过程，而不能只在每次取货时短暂加锁，否则多个消费者可能交替取货，无法满足“一个消费者连续取出 10 件后其他消费者才可以取”的要求。mutex2 只保护缓冲区单次操作。",
+    "steps": [
+      "empty 表示空槽数，初值 1000；full 表示产品数，初值 0；二者实现生产者与消费者的同步。",
+      "mutex2 保护环形缓冲区的实际读写，初值 1，确保同一时刻只有一个进程修改缓冲区。",
+      "mutex1 由消费者在一整批 10 次取货开始前申请，完成第 10 次后释放，保证同一时刻只有一个消费者处于连续取 10 件的批次中。",
+      "生产者：生产产品；P(empty) 等待空位；P(mutex2) 进入临界区放入产品；V(mutex2)；V(full) 增加产品计数。",
+      "消费者：P(mutex1) 独占批次；循环 10 次，每次先 P(full) 等待产品，再 P(mutex2) 取出产品，随后 V(mutex2)、V(empty)；循环结束后 V(mutex1)。",
+      "若产品不足 10 件，当前消费者会在 P(full) 处等待，但仍持有 mutex1，其他消费者不能插队；生产者不需要 mutex1，仍可继续生产并唤醒该消费者。"
+    ],
+    "code": "semaphore mutex1 = 1, mutex2 = 1;\\nsemaphore empty = 1000, full = 0;\\n\\nproducer() {\\n    while (true) {\\n        produce(x);\\n        P(empty);\\n        P(mutex2);\\n        insert_into_ring_buffer(x);\\n        V(mutex2);\\n        V(full);\\n    }\\n}\\n\\nconsumer() {\\n    while (true) {\\n        P(mutex1);              // 独占连续10次消费批次\\n        for (int i = 0; i < 10; ++i) {\\n            P(full);            // 等待缓冲区非空\\n            P(mutex2);\\n            remove_from_ring_buffer();\\n            V(mutex2);\\n            V(empty);\\n            consume_item();\\n        }\\n        V(mutex1);\\n    }\\n}",
+    "audit": {
+      "status": "cross-checked",
+      "note": "答案解析库中的年份、题号、ID一致；核心考点已逐题人工关联到现有原子知识卡。"
+    },
+    "cards": [
+      {
+        "title": "进程同步与信号量",
+        "topic": "进程同步与信号量",
+        "status": "verified"
+      },
+      {
+        "title": "互斥锁、自旋锁与信号量",
+        "topic": "互斥锁、自旋锁与信号量",
+        "status": "verified"
+      }
+    ]
   }
 };
 window.CARD_QUESTION_LIST = {
@@ -2520,6 +2773,7 @@ window.CARD_QUESTION_LIST = {
     "2009-5"
   ],
   "哈夫曼树与带权路径长度": [
+    "2014-41",
     "2019-3"
   ],
   "邻接矩阵与邻接表": [
@@ -2543,9 +2797,11 @@ window.CARD_QUESTION_LIST = {
   ],
   "Cache 直接映射与组相联": [
     "2009-14",
+    "2014-45",
     "2016-45"
   ],
   "流水线结构冒险与数据冒险": [
+    "2014-44",
     "2016-19"
   ],
   "硬布线控制器与微程序控制器": [
@@ -2568,6 +2824,7 @@ window.CARD_QUESTION_LIST = {
     "2015-14"
   ],
   "Cache 替换与写策略": [
+    "2014-45",
     "2015-16",
     "2016-45"
   ],
@@ -2589,6 +2846,7 @@ window.CARD_QUESTION_LIST = {
   ],
   "进程同步与信号量": [
     "2011-45",
+    "2014-47",
     "2015-45"
   ],
   "银行家算法安全性检查": [
@@ -2611,10 +2869,12 @@ window.CARD_QUESTION_LIST = {
   ],
   "文件物理分配方式": [
     "2009-28",
+    "2014-46",
     "2016-47"
   ],
   "文件逻辑结构与物理结构": [
     "2009-28",
+    "2014-46",
     "2016-47"
   ],
   "磁盘调度 FCFS 与 SSTF": [
@@ -2639,9 +2899,11 @@ window.CARD_QUESTION_LIST = {
     "2010-47"
   ],
   "IPv4 子网划分与 CIDR": [
+    "2014-43",
     "2025-47"
   ],
   "路由选择与转发表": [
+    "2014-43",
     "2015-38"
   ],
   "TCP 序号确认与累计确认": [
@@ -2695,6 +2957,7 @@ window.CARD_QUESTION_LIST = {
     "2020-30"
   ],
   "距离向量与链路状态路由": [
+    "2014-42",
     "2016-37"
   ],
   "信道、信号与码元速率": [
@@ -2738,9 +3001,11 @@ window.CARD_QUESTION_LIST = {
     "2009-37"
   ],
   "图的存储与遍历": [
+    "2014-42",
     "2015-42"
   ],
   "CPU 指令执行过程": [
+    "2014-44",
     "2015-43",
     "2015-44"
   ],
@@ -2751,6 +3016,7 @@ window.CARD_QUESTION_LIST = {
     "2015-44"
   ],
   "虚拟内存与页面置换": [
+    "2014-45",
     "2015-46",
     "2016-45"
   ],
@@ -2779,6 +3045,7 @@ window.CARD_QUESTION_LIST = {
     "2016-44"
   ],
   "TLB 与快表命中": [
+    "2014-45",
     "2016-45"
   ],
   "调度评价指标": [
@@ -2789,5 +3056,11 @@ window.CARD_QUESTION_LIST = {
   ],
   "空闲空间管理": [
     "2016-47"
+  ],
+  "指令系统与寻址方式": [
+    "2014-44"
+  ],
+  "互斥锁、自旋锁与信号量": [
+    "2014-47"
   ]
 };
