@@ -9,6 +9,22 @@ const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: red
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const COLORS={blue:'#2869a7',orange:'#d77c32',green:'#2f946b',grid:'#e7edf4',ink:'#40546a'};
 function kind(t){
+const priority=[
+[/变上限积分|积分中值|积分上限|积分下限|定积分|原函数|不定积分|换元积分|分部积分|黎曼|反常积分|积分法|积分比较|积分估值|积分变量|积分对称|积分奇偶|积分面积|积分的几何/,'integral'],
+[/二元函数|多元|偏导|全微分|二重积分|极坐标|雅可比|等高线|Hessian|混合偏导|方向导数|梯度|区域可加/,'multivariable'],
+[/特征值|特征向量|特征子空间|代数重数|几何重数|可对角化|正交对角化|相似矩阵|特征多项式|特征方程/,'eigen'],
+[/行列式|余子式|代数余子式|范德蒙|克拉默|三角行列式/,'determinant'],
+[/矩阵|初等矩阵|矩阵秩|矩阵乘积/,'matrix'],
+[/向量组|线性相关|线性无关|向量内积|正交化|规范正交|极大无关组|基与维数/,'vectors'],
+[/方程组|解空间|基础解系|自由变量|增广矩阵|方程组解/,'system'],
+[/泰勒|麦克劳林/,'taylor'],
+[/罗尔|拉格朗日|柯西中值|中值定理/,'mvt'],
+[/导数|可导|求导|微分|切线|弧微分|参数方程|隐函数|链式法则|莱布尼茨公式/,'derivative'],
+[/单调性判定|单调区间|单调性、极值|极值|凹凸|拐点|渐近线|费马引理|最值候选/,'shape'],
+[/连续|间断|介值|零点定理|保号性|一致连续/,'continuity'],
+[/极限|无穷小|无穷大|柯西准则|夹逼|收敛|子列/,'limit']
+];
+for(const [re,k] of priority)if(re.test(t))return k;
 const rules=[
 [/ε|epsilon|\bN\b|柯西准则|数列极限|收敛|子列|夹逼|极限唯一|局部有界|保序性|极限四则|重要极限|洛必达|等价无穷小|无穷小|无穷大/,'limit'],
 [/间断|连续函数|连续性|介值|零点定理|最值定理|一致连续|局部保号|复合连续/,'continuity'],
@@ -54,14 +70,33 @@ let a=(p-.8)*1.1, y=a*a/2,m=a;
 body=graph(x=>x*x/2,'<line x1="'+(230+(a-1.5)*48)+'" y1="'+(135-(y-m*1.5)*35)+'" x2="'+(230+(a+1.5)*48)+'" y2="'+(135-(y+m*1.5)*35)+'" stroke="'+COLORS.orange+'" stroke-width="3"/><circle cx="'+(230+a*48)+'" cy="'+(135-y*35)+'" r="6" fill="'+COLORS.orange+'"/>');
 desc='蓝线为 y=x²/2，橙线为切线；拖动参数移动切点，斜率 m=f′(a) 随 a 改变。';
 }else if(k==='mvt'){
+if(/罗尔/.test(t)){
+const a=.5+1.5*p,b=-a,X=x=>230+x*48,Y=y=>135-y*35,xi=0;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="罗尔定理：端点函数值相同，内部存在水平切线"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(x=>x*x,-2.8,2.8,-1,5)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(-a)+' '+Y(a*a)+'L'+X(a)+' '+Y(a*a)+'" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="6 5"/><path d="M'+X(xi-1.2)+' '+Y(0)+'L'+X(xi+1.2)+' '+Y(0)+'" stroke="'+COLORS.green+'" stroke-width="2.5"/><circle cx="'+X(-a)+'" cy="'+Y(a*a)+'" r="5" fill="'+COLORS.orange+'"/><circle cx="'+X(a)+'" cy="'+Y(a*a)+'" r="5" fill="'+COLORS.orange+'"/><circle cx="'+X(xi)+'" cy="'+Y(0)+'" r="6" fill="'+COLORS.green+'"/><text x="45" y="25" fill="'+COLORS.orange+'">f(a)=f(b)</text><text x="270" y="25" fill="'+COLORS.green+'">f′(ξ)=0，ξ=0</text></svg>';
+desc='罗尔定理示例 f(x)=x²−a²，区间 [−a,a]。拖动改变 a；端点函数值始终相等，内部 ξ=0 处切线水平。连续、开区间可导、端点函数值相等，三项条件缺一不可。';
+}else if(/柯西/.test(t)){
+const b=.6+1.2*p,xi=b/2,X=x=>230+x*105,Y=y=>220-y*26;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="柯西中值定理：两函数增量比等于某点导数比"><path d="M35 220H430 M45 20V235" stroke="#9aaabd"/><path d="'+graphPath(x=>x*x,0,2.4,0,5)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+graphPath(x=>x*x+x,0,2.4,0,8)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M'+X(xi)+' 220V'+Y(xi*xi)+'" stroke="'+COLORS.green+'" stroke-dasharray="5 4"/><circle cx="'+X(xi)+'" cy="'+Y(xi*xi)+'" r="6" fill="'+COLORS.green+'"/><text x="65" y="28" fill="'+COLORS.blue+'">f(x)=x²</text><text x="65" y="49" fill="'+COLORS.orange+'">g(x)=x²+x</text><text x="250" y="245" fill="'+COLORS.green+'">ξ=b/2='+xi.toFixed(2)+'</text></svg>';
+desc='取 f(x)=x²、g(x)=x²+x，区间 [0,b]。此时 [f(b)−f(0)]/[g(b)−g(0)]=b/(b+1)，且 f′(ξ)/g′(ξ)=2ξ/(2ξ+1)；令 ξ=b/2 两者相等。';
+}else{
 const a=-2,b=-.5+1.5*p,c=(a+b)/2,fa=a*a/3,fb=b*b/3,fc=c*c/3,slope=(fb-fa)/(b-a),X=x=>230+x*48,Y=y=>135-y*35;
 const secY=x=>fa+slope*(x-a),tanY=x=>fc+slope*(x-c);
 body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="拉格朗日中值定理：端点割线与中间点切线平行"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(x=>x*x/3,-4,4,-1,5)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(a)+' '+Y(secY(a))+'L'+X(b)+' '+Y(secY(b))+'" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="7 5"/><path d="M'+X(c-1.35)+' '+Y(tanY(c-1.35))+'L'+X(c+1.35)+' '+Y(tanY(c+1.35))+'" stroke="'+COLORS.green+'" stroke-width="2.5"/><circle cx="'+X(a)+'" cy="'+Y(fa)+'" r="5" fill="'+COLORS.orange+'"/><circle cx="'+X(b)+'" cy="'+Y(fb)+'" r="5" fill="'+COLORS.orange+'"/><circle cx="'+X(c)+'" cy="'+Y(fc)+'" r="6" fill="'+COLORS.green+'"/><path d="M'+X(c)+' '+Y(fc)+'V245" stroke="'+COLORS.green+'" stroke-dasharray="4 4"/><text x="'+(X(c)+9)+'" y="'+(Y(fc)-10)+'" fill="'+COLORS.green+'">ξ='+c.toFixed(2)+'</text><text x="'+(X(a)-5)+'" y="'+(Y(fa)+18)+'" fill="'+COLORS.orange+'">a</text><text x="'+(X(b)-5)+'" y="'+(Y(fb)+18)+'" fill="'+COLORS.orange+'">b</text></svg>';
 desc='固定左端点 a=−2，拖动参数改变右端点 b。橙色割线斜率 [f(b)−f(a)]/(b−a)，绿色切线斜率 f′(ξ) 始终相等；ξ=(a+b)/2。';
+}
 }else if(k==='taylor'){
-body=graph(x=>Math.exp(x/3),'');desc='函数曲线可由切线、二次多项式等局部多项式逐阶逼近；阶数越高局部拟合越精细。';
+const n=Math.max(1,Math.min(6,1+Math.round((p-.35)/1.45*5)));
+const X=x=>230+x*90,Y=y=>205-y*23;
+const path=fn=>{let d='';for(let i=0;i<=160;i++){const x=-2+i/40,y=fn(x);d+=(i?'L':'M')+X(x).toFixed(1)+','+Y(y).toFixed(1);}return d;};
+const poly=x=>{let sum=0,term=1;for(let j=0;j<=n;j++){if(j===0)term=1;else term*=x/j;sum+=term;}return sum;};
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="泰勒多项式阶数变化与原函数逼近"><path d="M35 205H430 M230 18V238" stroke="#9aaabd"/><path d="'+path(x=>Math.exp(x))+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+path(poly)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="6 4"/><text x="48" y="25" fill="'+COLORS.blue+'">原函数 eˣ</text><text x="48" y="47" fill="'+COLORS.orange+'">Tₙ(x)，n='+n+'</text><text x="300" y="250" fill="'+COLORS.ink+'">蓝：原函数；橙：近似</text></svg>';
+desc='拖动改变麦克劳林多项式阶数 n='+n+'。橙色 Tₙ(x)=1+x+x²/2!+…+xⁿ/n! 与蓝色 eˣ 在 x=0 附近逐阶贴合；阶数越高，局部近似通常越精确。';
 }else if(k==='shape'){
-if(/渐近/.test(t)){body=graph(x=>1/(x-.25),'');desc='竖直渐近线附近函数绝对值增大；水平/斜渐近线由无穷远极限判断。';}
+if(/渐近/.test(t)){
+const c=(p-1.075)*.45;
+body=graph(x=>1/(x-c)+.2*x,-4,4,-3,4).replace('</svg>','<path d="M'+(230+c*48)+' 12V250" stroke="'+COLORS.orange+'" stroke-dasharray="5 5" stroke-width="2"/><text x="'+Math.min(355,230+c*48+5)+'" y="25" fill="'+COLORS.orange+'">x='+c.toFixed(2)+'</text></svg>');
+desc='滑块移动竖直渐近线 x=c；蓝色曲线在 x→c 时发散。此例另有斜渐近线 y=0.2x；判断渐近线必须回到相应极限定义。';
+}
 else if(/凹凸|拐点/.test(t)){
 const x=(p-1.075)*3.2,y=x*x*x/12,dy=x*x/4,ddy=x/2,X=q=>230+q*48,Y=q=>135-q*35;
 const tangent=q=>y+dy*(q-x);
