@@ -298,10 +298,41 @@ const loadedQuestionData =
 if (window.__408_QUESTION_DATA_ERROR__ || !Array.isArray(loadedQuestionData) || loadedQuestionData.length === 0) {
     showDataError(window.__408_QUESTION_DATA_ERROR__ ? '408 真题数据文件请求失败：本站 questions_data.js 无法下载。' : '408 真题数据文件已请求，但未生成 QUESTIONS_DATA 数组。请检查数据文件格式或浏览器控制台中的脚本错误。');
 } else {
-    document.getElementById('data-status').style.display = 'none';
-    document.getElementById('progress').textContent = '题库加载完成：' + loadedQuestionData.length + ' 题';
-    renderYears();
-    applyFilters();
+    const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    const renderVerifiedSolution = solution => {
+        const steps = (solution.steps || []).map(step => '<li>' + escapeHtml(step) + '</li>').join('');
+        const code = solution.code ? '<h4>参考代码</h4><pre><code>' + escapeHtml(solution.code) + '</code></pre>' : '';
+        const matrix = solution.correctedAdjacencyMatrix
+            ? '<h4>复核后的邻接矩阵</h4><table class="verified-matrix">' + solution.correctedAdjacencyMatrix.map(row => '<tr>' + row.map(cell => '<td>' + escapeHtml(cell) + '</td>').join('') + '</tr>').join('') + '</table>'
+            : '';
+        const explanation = solution.explanation ? '<p>' + escapeHtml(solution.explanation) + '</p>' : '';
+        const correction = solution.correction ? '<div class="verified-correction"><strong>复核说明：</strong>' + escapeHtml(solution.correction) + '</div>' : '';
+        const complexity = solution.complexity ? '<p><strong>复杂度：</strong>' + escapeHtml(solution.complexity) + '</p>' : '';
+        const original = solution.originalAnalysis ? '<details><summary>查看题库原始解析</summary><div class="q-body">' + solution.originalAnalysis + '</div></details>' : '';
+        return '<div class="verified-solution"><strong>逐题复核答案</strong><div><strong>答案：</strong>' + escapeHtml(solution.answer || '') + '</div><h4>解题步骤</h4><ol>' + steps + '</ol>' + matrix + code + complexity + explanation + correction + original + '<small>本条已人工复核；修订记录保留在仓库 data/408/verified-solutions-2009-2011.json。</small></div>';
+    };
+    fetch('./verified-solutions-2009-2011.json')
+        .then(response => { if (!response.ok) throw new Error('verified solutions unavailable'); return response.json(); })
+        .then(payload => {
+            const supplements = new Map((payload.questions || []).map(item => [String(item.year) + '-' + String(item.index), item]));
+            loadedQuestionData.forEach(q => {
+                const solution = supplements.get(String(q.year) + '-' + String(q.index));
+                if (!solution) return;
+                solution.originalAnalysis = q.analysisHtml || q.answerHtml || '';
+                q.answer = solution.answer || q.answer;
+                q.analysisHtml = renderVerifiedSolution(solution);
+            });
+            document.getElementById('data-status').style.display = 'none';
+            document.getElementById('progress').textContent = '题库加载完成：' + loadedQuestionData.length + ' 题 · 已加载逐题复核解析';
+            renderYears();
+            applyFilters();
+        })
+        .catch(() => {
+            document.getElementById('data-status').style.display = 'none';
+            document.getElementById('progress').textContent = '题库加载完成：' + loadedQuestionData.length + ' 题';
+            renderYears();
+            applyFilters();
+        });
 }
 </script>
 <script src="/render-enhance.js" defer></script>\n</body>
