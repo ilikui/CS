@@ -6337,19 +6337,9 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "原函数在 x=0 不存在，不能称连续；先确定定义域再分类间断点。"
   },
   "487": {
-    "status": "verified",
+    "status": "pending",
     "questionKey": "2015-选择题-3",
-    "primary": [
-      "CAL-04-A",
-      "CAL-05-D"
-    ],
-    "secondary": [
-      "CAL-03-A",
-      "CAL-05-C"
-    ],
-    "rationale": "先由 f'(0) 存在且连续推出振荡项的幂次衰减条件，再由 f'(x) 中振荡项趋零得到 α−β−1>0，即 α−β>1；选项 A 的条件表达需核对。",
-    "methods": "按定义求 f'(0)；对 x>0 求导，要求 αx^{α−1}cos(1/x^β) 与 βx^{α−β−1}sin(1/x^β) 均趋零，结合 α>1 得 α−β>1。",
-    "pitfalls": "题库给出的 A 仅写 α−β>0，与推导所得 α−β>1 不等价；原解析疑似漏写 −1，标记源答案/解析勘误风险。"
+    "reason": "题库给出的选项条件 α−β>0 与解析推导的 α−β>1 不一致，当前答案无法由题面严格推出；暂不确认关联。"
   },
   "488": {
     "status": "pending",
@@ -6357,19 +6347,9 @@ window.EXAM_KNOWLEDGE_MAP = {
     "reason": "题目依赖原始图形（f''/f' 图像），当前题库文本未包含图像，无法独立核验拐点/极值数量；暂不确认知识卡映射。"
   },
   "489": {
-    "status": "verified",
+    "status": "pending",
     "questionKey": "2015-选择题-5",
-    "primary": [
-      "CAL-08-B",
-      "CAL-08-A"
-    ],
-    "secondary": [
-      "CAL-04-B",
-      "CAL-08-C"
-    ],
-    "rationale": "由变量代换 u=x+y/x、v=y 反解 x=uv/(1+v)，再求复合表达式 f(u,v) 的两个偏导。",
-    "methods": "先解出 x=uv/(1+v)，代入 x²−y² 得 f(u,v)；分别对 u、v 求偏导并代 (1,1)。",
-    "pitfalls": "代换反解时需检查局部可逆性；对 v 求导时分母 (1+v)² 的商法则不能遗漏。"
+    "reason": "题目给定 u=x+y/x、v=y 后，题库解析声称 x=uv/(1+v)，该反解不成立，且 (u,v)=(1,1) 处无法按该变换确定实数 x；源解析存在实质错误，暂不确认关联。"
   },
   "490": {
     "status": "verified",
