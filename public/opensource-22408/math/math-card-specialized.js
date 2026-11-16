@@ -186,18 +186,94 @@ else{body=graph(x=>Math.exp(p*x/3));desc='分离变量后分别积分；参数�
 if(/极坐标|雅可比/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><circle cx="230" cy="135" r="'+(45+40*p)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.5"/><path d="M230 135L'+(230+(45+40*p)*.866)+' '+(135-(45+40*p)*.5)+' A '+(45+40*p)+' '+(45+40*p)+' 0 0 0 '+(230+(45+40*p))+' 135 Z" fill="'+COLORS.green+'" opacity=".25"/><path d="M230 135H'+(230+45+40*p)+' M230 135L'+(230+(45+40*p)*.866)+' '+(135-(45+40*p)*.5)+'" stroke="'+COLORS.orange+'" stroke-width="2"/></svg>';desc='极坐标面积元 dA=r dr dθ；扇形面积随半径平方变化，雅可比因子 r 不可遗漏。';}
 else if(/偏导|方向导数|梯度/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M30 215Q110 30 190 215T350 215" fill="none" stroke="'+COLORS.blue+'" stroke-width="2"/><path d="M45 180Q125 65 205 180T365 180 M65 145Q145 95 225 145T385 145" fill="none" stroke="#9ab8d5"/><path d="M230 135L'+(230+90*p)+' '+(135-60*p)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><path d="M'+(230+90*p)+' '+(135-60*p)+'l-12 2 6 10" fill="none" stroke="'+COLORS.orange+'"/></svg>';desc='等高线表示函数值相同；梯度垂直等高线并指向增长最快方向。';}
 else{body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 205L230 120L420 205 M40 205L230 245L420 205 M230 120V245" fill="none" stroke="#9aaabd"/><path d="M40 205Q230 '+(80+20*p)+' 420 205" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M230 120Q280 90 330 120" fill="none" stroke="'+COLORS.orange+'" stroke-width="2"/></svg>';desc='曲面 z=f(x,y) 的截面反映固定一个变量后的单变量函数；全微分是切平面线性近似。';}
-}else if(k==='determinant'){
+ }else if(k==='determinant'){
+if(/余子式|代数余子式|按行|按列|展开/.test(t)){
+const row=Math.max(0,Math.min(2,Math.floor((p-.35)/1.45*3)));
+let cells='';for(let r=0;r<3;r++)for(let c=0;c<3;c++){const active=r===row;cells+='<rect x="'+(95+c*78)+'" y="'+(55+r*55)+'" width="58" height="42" rx="5" fill="'+(active?'#f8dfca':'#eaf2fa')+'" stroke="'+(active?COLORS.orange:COLORS.blue)+'"/><text x="'+(124+c*78)+'" y="'+(82+r*55)+'" text-anchor="middle" fill="'+COLORS.ink+'">'+(r+1)+','+(c+1)+'</text>';}
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M82 45V215 M88 45V215 M370 45V215 M376 45V215" stroke="'+COLORS.ink+'" stroke-width="2"/>'+cells+'<text x="95" y="235" fill="'+COLORS.orange+'">高亮第 '+(row+1)+' 行：按代数余子式展开</text></svg>';
+desc='滑块选择展开行，橙色高亮该行的元素；每一项都要乘对应代数余子式，符号按 (−1)^(i+j) 交替。';
+}else if(/初等行变换|初等变换/.test(t)){
+const mode=Math.min(2,Math.floor((p-.35)/1.45*3)),label=["交换两行：变号","某行乘 k：行列式乘 k","某行加另一行倍数：不变"][mode],effect=["det(B)=−det(A)","det(B)=k det(A)","det(B)=det(A)"][mode];
+body='<svg viewBox="0 0 460 270" class="sp-plot"><rect x="55" y="65" width="125" height="120" rx="8" fill="#eaf2fa" stroke="'+COLORS.blue+'"/><rect x="280" y="65" width="125" height="120" rx="8" fill="#f8dfca" stroke="'+COLORS.orange+'"/><text x="117" y="95" text-anchor="middle">A</text><text x="117" y="125" text-anchor="middle">行列式 D</text><path d="M195 125H260 M252 118L260 125L252 132" stroke="'+COLORS.green+'" stroke-width="3" fill="none"/><text x="342" y="95" text-anchor="middle">B</text><text x="342" y="125" text-anchor="middle">'+effect+'</text><text x="60" y="225" fill="'+COLORS.orange+'">'+label+'</text></svg>';
+desc='三类初等行变换对行列式的影响不同：交换两行变号；一行乘 k，行列式乘 k；一行加另一行的倍数，行列式不变。';
+}else if(/范德蒙/.test(t)){
+const gap=.35+.55*p,pts=[0,1,2].map(i=>90+i*gap*105);
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 210H430" stroke="#9aaabd"/>'+pts.map((x,i)=>'<circle cx="'+x+'" cy="150" r="7" fill="'+[COLORS.blue,COLORS.orange,COLORS.green][i]+'"/><text x="'+(x-5)+'" y="178">'+i+'：'+(i*gap).toFixed(2)+'</text>').join('')+'<path d="M'+pts[0]+' 145L'+pts[1]+' 145L'+pts[2]+' 145" stroke="'+COLORS.ink+'" stroke-width="2"/><text x="60" y="35" fill="'+COLORS.blue+'">det(V)=∏(xⱼ−xᵢ)</text><text x="60" y="60" fill="'+COLORS.orange+'">节点重合时行列式为 0</text></svg>';
+desc='范德蒙行列式等于各节点两两差的乘积。滑块改变节点间距；任意两个节点重合时，行列式为 0，节点互异时不为 0。';
+}else{
 body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M90 205L90 65L220 65L220 205Z" fill="#d9e9f8" stroke="'+COLORS.blue+'" stroke-width="2"/><path d="M90 205L'+(90+95*p)+' '+(205-40*p)+'L'+(220+95*p)+' '+(65-40*p)+'L220 65Z" fill="#f8dfca" stroke="'+COLORS.orange+'" stroke-width="2"/><text x="150" y="235" fill="'+COLORS.blue+'">原面积 = 1</text><text x="330" y="95" fill="'+COLORS.orange+'">det(A)</text></svg>';desc='行列式绝对值表示单位正方形经线性变换后的面积缩放倍数；负号表示方向翻转。';
-}else if(k==='matrix'){
+}
+ }else if(k==='matrix'){
+if(/转置/.test(t)){
+const n=3,cell=42,shift=Math.round((p-.35)/1.45*2);
+let left='',right='';for(let r=0;r<n;r++)for(let c=0;c<n;c++){left+='<rect x="'+(55+c*cell)+'" y="'+(48+r*cell)+'" width="38" height="38" fill="#eaf2fa" stroke="'+COLORS.blue+'"/><text x="'+(74+c*cell)+'" y="'+(73+r*cell)+'" text-anchor="middle">'+(r+1)+(c+1)+'</text>';right+='<rect x="'+(280+c*cell)+'" y="'+(48+r*cell)+'" width="38" height="38" fill="#f8dfca" stroke="'+COLORS.orange+'"/><text x="'+(299+c*cell)+'" y="'+(73+r*cell)+'" text-anchor="middle">'+(c+1)+(r+1)+'</text>';}
+body='<svg viewBox="0 0 460 270" class="sp-plot">'+left+'<path d="M205 110H255 M247 102L255 110L247 118" stroke="'+COLORS.green+'" stroke-width="3" fill="none"/>'+right+'<text x="75" y="205" fill="'+COLORS.blue+'">A</text><text x="300" y="205" fill="'+COLORS.orange+'">Aᵀ</text><text x="70" y="235">行列互换，主对角线不变</text></svg>';
+desc='转置把第 i 行、第 j 列的元素移到第 j 行、第 i 列；主对角线保持不变，且 (AB)ᵀ=BᵀAᵀ。';
+}else if(/秩|初等变换/.test(t)){
+const rank=Math.max(1,Math.min(3,Math.round(1+(p-.35)/1.45*2)));
+body='<svg viewBox="0 0 460 270" class="sp-plot"><rect x="55" y="55" width="150" height="140" rx="8" fill="#eaf2fa" stroke="'+COLORS.blue+'"/><rect x="255" y="55" width="150" height="140" rx="8" fill="#f8dfca" stroke="'+COLORS.orange+'"/>'+[0,1,2].map(i=>'<path d="M70 '+(90+i*35)+'H190" stroke="'+(i<rank?COLORS.blue:'#cbd5df')+'" stroke-width="5"/>').join('')+[0,1,2].map(i=>'<path d="M270 '+(90+i*35)+'H390" stroke="'+(i<rank?COLORS.orange:'#cbd5df')+'" stroke-width="5"/>').join('')+'<path d="M210 125H248" stroke="'+COLORS.green+'" stroke-width="3"/><text x="70" y="225" fill="'+COLORS.blue+'">原矩阵</text><text x="270" y="225" fill="'+COLORS.orange+'">阶梯形</text><text x="160" y="250">非零主元行数 = rank(A) = '+rank+'</text></svg>';
+desc='初等行变换不改变矩阵的秩。滑块改变示意矩阵的主元行数；阶梯形矩阵中非零行数就是秩，不能把零行计入。';
+}else if(/分块/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><rect x="65" y="55" width="130" height="130" fill="#eaf2fa" stroke="'+COLORS.blue+'"/><path d="M130 55V185 M65 120H195" stroke="#fff" stroke-width="4"/><rect x="265" y="55" width="130" height="130" fill="#f8dfca" stroke="'+COLORS.orange+'"/><path d="M330 55V185 M265 120H395" stroke="#fff" stroke-width="4"/><path d="M205 120H250" stroke="'+COLORS.green+'" stroke-width="3"/><text x="90" y="215">A=(Aᵢⱼ)</text><text x="275" y="215">B=(Bᵢⱼ)</text><text x="85" y="245">块乘法仍按行乘列，块尺寸须匹配</text></svg>';
+desc='分块矩阵乘法与普通矩阵乘法规则相同：左矩阵块行乘右矩阵块列并相加。先检查对应块的列数与行数匹配。';
+}else if(/伴随|逆矩阵|可逆/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><rect x="50" y="75" width="120" height="105" rx="8" fill="#eaf2fa" stroke="'+COLORS.blue+'"/><rect x="290" y="75" width="120" height="105" rx="8" fill="#e5f4ed" stroke="'+COLORS.green+'"/><path d="M180 125H280 M270 117L280 125L270 133" stroke="'+COLORS.orange+'" stroke-width="3" fill="none"/><text x="110" y="115" text-anchor="middle">A</text><text x="110" y="145" text-anchor="middle">det(A)≠0</text><text x="350" y="115" text-anchor="middle">A⁻¹</text><text x="350" y="145" text-anchor="middle">AA⁻¹=I</text><text x="85" y="225">可逆 ⇔ 行列式非零 ⇔ 存在逆矩阵</text></svg>';
+desc='可逆矩阵存在逆矩阵，满足 AA⁻¹=A⁻¹A=I。伴随矩阵公式 A⁻¹=A*/det(A) 仅在 det(A)≠0 时成立。';
+}else{
 body='<svg viewBox="0 0 460 270" class="sp-plot"><g stroke="#c6d5e5" fill="none">'+Array.from({length:5},(_,i)=>'<path d="M'+(65+i*42)+' 35V225 M65 '+(35+i*42)+'H233"/>').join('')+'</g><path d="M65 225L'+(65+105*p)+' '+(225-42*p)+' M65 225L'+(65+42*p)+' '+(225-105*p)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><path d="M65 225L'+(65+105*p)+' '+(225-42*p)+'L'+(65+147*p)+' '+(225-147*p)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2"/></svg>';desc='矩阵乘法表示线性变换复合；转置/逆矩阵的乘积顺序要反向，秩描述独立信息维数。';
-}else if(k==='vectors'){
+}
+ }else if(k==='vectors'){
+if(/施密特|正交/.test(t)){
+const theta=.25+(p-.35)/1.45*1.2,ax=100,ay=205,bx=100+150*Math.cos(theta),by=205-150*Math.sin(theta),proj=150*Math.cos(theta);
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 220H430 M75 245V20" stroke="#9aaabd"/><path d="M75 220L225 220" stroke="'+COLORS.blue+'" stroke-width="4"/><path d="M75 220L'+bx+' '+by+'" stroke="'+COLORS.orange+'" stroke-width="4"/><path d="M75 220L'+(75+proj)+' 220" stroke="'+COLORS.green+'" stroke-width="3" stroke-dasharray="5 4"/><path d="M'+(75+proj)+' 220L'+bx+' '+by+'" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="245" y="45" fill="'+COLORS.orange+'">v₂</text><text x="230" y="210" fill="'+COLORS.green+'">projᵥ₁v₂</text><text x="65" y="25">v₂⊥=v₂−projᵥ₁v₂</text></svg>';
+desc='施密特正交化：先把 v₂ 在 v₁ 上的投影 projᵥ₁v₂ 去掉，得到与 v₁ 垂直的剩余向量；再单位化得到规范正交组。';
+}else if(/基与维数|坐标/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M45 220H430 M75 245V20" stroke="#9aaabd"/><path d="M75 220L'+(75+115*p)+' '+(220-35*p)+'" stroke="'+COLORS.blue+'" stroke-width="4"/><path d="M75 220L'+(75+35*p)+' '+(220-105*p)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><path d="M75 220L'+(75+150*p)+' '+(220-140*p)+'" stroke="'+COLORS.green+'" stroke-width="3" stroke-dasharray="5 4"/><text x="300" y="35" fill="'+COLORS.green+'">v=c₁e₁+c₂e₂</text></svg>';
+desc='基是能唯一表示空间中每个向量的一组线性无关向量；坐标系数是该向量在这组基下的唯一坐标。';
+}else if(/线性相关/.test(t)){
+const slope=.3+(p-.35)/1.45*1.2;
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 220H430 M75 245V20" stroke="#9aaabd"/><path d="M75 220L'+(75+150)+' '+(220-100)+'" stroke="'+COLORS.blue+'" stroke-width="4"/><path d="M75 220L'+(75+150*slope)+' '+(220-100*slope)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><text x="255" y="40" fill="'+COLORS.blue+'">v₁</text><text x="255" y="65" fill="'+COLORS.orange+'">v₂</text><text x="60" y="25">同一直线 ⇔ 线性相关（二维两向量示例）</text></svg>';
+desc='二维中两个向量共线时线性相关；若一个向量不能由另一个数乘得到，则线性无关。一般向量组用系数方程判断。';
+}else{
 body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 220H430 M75 245V20" stroke="#9aaabd"/><path d="M75 220L'+(75+120*p)+' '+(220-75*p)+'" stroke="'+COLORS.blue+'" stroke-width="4"/><path d="M75 220L'+(75+85*p)+' '+(220-140*p)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><path d="M75 220L'+(75+205*p)+' '+(220-215*p)+'" stroke="'+COLORS.green+'" stroke-width="3" stroke-dasharray="5 4"/><text x="350" y="35" fill="'+COLORS.green+'">线性组合</text></svg>';desc='向量组的线性相关/表示转化为列矩阵方程；观察向量是否能由其他向量组合得到。';
-}else if(k==='system'){
+}
+ }else if(k==='system'){
+if(/齐次|基础解系|解空间|非零解/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M35 135H430 M230 15V250" stroke="#9aaabd"/><path d="M65 225L395 45" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M65 45L395 225" stroke="'+COLORS.orange+'" stroke-width="3"/><circle cx="230" cy="135" r="6" fill="'+COLORS.green+'"/><text x="245" y="125" fill="'+COLORS.green+'">原点解</text><text x="55" y="25">齐次系统 Ax=0：解空间必过原点</text></svg>';
+desc='齐次方程组 Ax=0 至少有零解；若有自由变量，则存在非零解。基础解系张成整个解空间，解空间维数为 n−r(A)。';
+}else if(/非齐次|判定|高斯|Rouché|增广矩阵/.test(t)){
+const mode=Math.min(2,Math.floor((p-.35)/1.45*3));
+const line=mode===0?'两直线相交：唯一解':mode===1?'两直线平行：无解':'两直线重合：无穷多解';
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M35 220H430 M45 20V235" stroke="#9aaabd"/><path d="M55 205L400 45" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+(mode===0?'M55 45L400 205':mode===1?'M55 175L400 15':'M55 205L400 45')+'" stroke="'+COLORS.orange+'" stroke-width="3"/><text x="65" y="25" fill="'+COLORS.green+'">'+line+'</text><text x="65" y="245">比较 r(A) 与 r(A|b)</text></svg>';
+desc='线性方程组有解当且仅当 r(A)=r(A|b)。有解时自由变量数决定解的多少；无解时两秩不相等。滑块切换相交、平行和重合的几何情形。';
+}else{
 body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M45 220L410 40 M45 50L410 210" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="130" r="7" fill="'+COLORS.orange+'"/><path d="M230 130L230 220" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="250" y="120" fill="'+COLORS.orange+'">解</text><text x="330" y="245" fill="'+COLORS.ink+'">自由变量 '+Math.max(0,Math.round(p*2))+'</text></svg>';desc='方程组解对应几何交点/交集；秩决定约束独立性，自由变量数为 n−r(A)。';
-}else if(k==='eigen'){
+}
+ }else if(k==='eigen'){
+if(/迹|行列式|和与积/.test(t)){
+const l1=.5+p,l2=2.5-p,tr=l1+l2,det=l1*l2;
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M45 220H425 M65 245V20" stroke="#9aaabd"/><path d="M95 220V'+(220-l1*55)+' M205 220V'+(220-l2*55)+'" stroke="'+COLORS.blue+'" stroke-width="14"/><text x="70" y="35" fill="'+COLORS.blue+'">λ₁='+l1.toFixed(2)+'</text><text x="205" y="35" fill="'+COLORS.orange+'">λ₂='+l2.toFixed(2)+'</text><text x="270" y="100" fill="'+COLORS.green+'">tr A=λ₁+λ₂='+tr.toFixed(2)+'</text><text x="270" y="130" fill="'+COLORS.green+'">det A=λ₁λ₂='+det.toFixed(2)+'</text></svg>';
+desc='二阶矩阵特征值满足 λ₁+λ₂=tr(A)，λ₁λ₂=det(A)。滑块改变两个特征值，观察和与积如何同步变化。';
+}else if(/代数重数|几何重数|特征子空间/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M45 220H425 M75 245V20" stroke="#9aaabd"/><path d="M75 220L'+(75+120*p)+' '+(220-35*p)+'" stroke="'+COLORS.blue+'" stroke-width="4"/><path d="M75 220L'+(75+35*p)+' '+(220-120*p)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><text x="250" y="45" fill="'+COLORS.blue+'">λ₁：特征方向 1</text><text x="250" y="70" fill="'+COLORS.orange+'">λ₂：特征方向 2</text><text x="65" y="25">几何重数 ≤ 代数重数</text></svg>';
+desc='代数重数是特征值作为特征多项式根的重数；几何重数是对应特征子空间的维数，满足 1≤几何重数≤代数重数。';
+}else if(/对角化|正交/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 220H430 M75 245V20" stroke="#9aaabd"/><path d="M75 220L'+(75+95*p)+' '+(220-45*p)+'" stroke="'+COLORS.blue+'" stroke-width="4"/><path d="M75 220L'+(75+45*p)+' '+(220-95*p)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><path d="M75 220L'+(75+140*p)+' '+(220-140*p)+'" stroke="'+COLORS.green+'" stroke-width="2" stroke-dasharray="5 4"/><text x="260" y="35" fill="'+COLORS.green+'">A=PDP⁻¹</text></svg>';
+desc='可对角化表示存在一组线性无关特征向量组成 P，使 A=PDP⁻¹；实对称矩阵还能选取正交规范特征向量，使 P⁻¹=Pᵀ。';
+}else{
 body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 220H430 M75 245V20" stroke="#9aaabd"/><path d="M75 220L'+(75+90*p)+' '+(220-80*p)+'" stroke="'+COLORS.blue+'" stroke-width="4"/><path d="M75 220L'+(75+145*p)+' '+(220-130*p)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><path d="M75 220L'+(75+200*p)+' '+(220-180*p)+'" stroke="'+COLORS.orange+'" stroke-width="1.5" stroke-dasharray="4 4"/><text x="330" y="45" fill="'+COLORS.orange+'">Av = λv</text></svg>';desc='特征向量方向在 A 变换后保持不变，长度按 |λ| 缩放，λ 为负时方向反转。';
-}else if(k==='quadratic'){
+}
+ }else if(k==='quadratic'){
+if(/正定|主子式|定义|极小值/.test(t)){
+const a=.5+(p-.35)/1.45*1.5;
+body='<svg viewBox="0 0 460 270" class="sp-plot"><ellipse cx="230" cy="135" rx="'+(70+35/a)+'" ry="'+(70+25*a)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.5"/><ellipse cx="230" cy="135" rx="'+(42+25/a)+'" ry="'+(42+18*a)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2"/><path d="M25 135H435 M230 15V255" stroke="#9aaabd"/><text x="45" y="28" fill="'+COLORS.blue+'">Q=x²+'+a.toFixed(2)+'y²</text><text x="45" y="50" fill="'+COLORS.green+'">x≠0 或 y≠0 时 Q&gt;0</text></svg>';
+desc='正定二次型的等值线围绕原点形成闭合椭圆；除原点外 Q(x,y)>0。实对称矩阵正定等价于特征值全正，也等价于顺序主子式全正。';
+}else if(/惯性|秩/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M45 220H425 M230 15V245" stroke="#9aaabd"/><path d="M55 80Q230 260 405 80 M55 190Q230 10 405 190" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M55 135H405" stroke="'+COLORS.orange+'" stroke-dasharray="5 5"/><text x="70" y="28" fill="'+COLORS.blue+'">正、负惯性指数</text><text x="70" y="250" fill="'+COLORS.orange+'">秩 = 正惯性指数 + 负惯性指数</text></svg>';
+desc='二次型标准形中正平方项、负平方项和零平方项的个数分别对应正惯性指数、负惯性指数和零惯性指数；秩等于前两者之和。';
+}else{
 body='<svg viewBox="0 0 460 270" class="sp-plot"><ellipse cx="230" cy="135" rx="'+(45+45*p)+'" ry="'+(95-25*p)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.5"/><ellipse cx="230" cy="135" rx="'+(85+35*p)+'" ry="'+(45+20*p)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M25 135H435 M230 15V255" stroke="#9aaabd"/><text x="350" y="40" fill="'+COLORS.blue+'">xᵀAx = c</text></svg>';desc='二次型等值线的形状反映正定/负定/不定；正定时除原点外函数值恒正。';
+}
 }
 return '<div class="sp-art">'+body+'</div><div class="sp-formula">'+esc(formula[k]||'')+'</div><p class="sp-desc">'+desc+'</p>';
 }
