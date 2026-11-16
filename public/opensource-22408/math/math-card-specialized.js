@@ -66,9 +66,24 @@ else{body=graph(x=>Math.sin(x*p)/(x===0?1:x));desc='横轴位置逐渐靠近目�
 }else if(k==='continuity'){
 body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="M35 220L230 50L425 220" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="50" r="6" fill="white" stroke="'+COLORS.orange+'" stroke-width="3"/><circle cx="230" cy="'+(50+70*p)+'" r="6" fill="'+COLORS.orange+'"/><path d="M230 50V'+(50+70*p)+'" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="255" y="38" fill="'+COLORS.blue+'">左右极限</text><text x="255" y="'+(70+70*p)+'" fill="'+COLORS.orange+'">函数值</text></svg>';desc=/间断/.test(t)?'空心圆表示极限位置，实心圆表示函数值；比较左右极限与点值分类。':'连续要求左右极限相等并等于函数值；闭区间性质依赖连续条件。';
 }else if(k==='derivative'){
+if(/隐函数|参数方程/.test(t)){
+const theta=.3+(p-.35)/1.45*1.8,x=Math.cos(theta),y=Math.sin(theta),X=q=>230+q*145,Y=q=>135-q*95,dx=-Math.sin(theta),dy=-Math.cos(theta);
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="圆的隐函数与参数方程切线动态演示"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><circle cx="230" cy="135" r="95" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+(X(x)-dx*55)+' '+(Y(y)-dy*55)+'L'+(X(x)+dx*55)+' '+(Y(y)+dy*55)+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M230 135L'+X(x)+' '+Y(y)+'" stroke="'+COLORS.green+'" stroke-dasharray="5 4"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.orange+'"/><text x="40" y="25" fill="'+COLORS.blue+'">x²+y²=1；x=cos t，y=sin t</text><text x="40" y="47" fill="'+COLORS.orange+'">dy/dx=−x/y='+(-x/y).toFixed(2)+'</text></svg>';
+desc='拖动参数 t：点 (cos t,sin t) 沿单位圆移动，橙色切线斜率 dy/dx=−x/y。隐式求导 2x+2yy′=0；当 y=0 时切线竖直，不能直接用有限斜率表示。';
+}else if(/链式|复合函数/.test(t)){
+const x=.25+(p-.35)/1.45*1.45,y=Math.sin(x*x),m=2*x*Math.cos(x*x),X=q=>230+q*85,Y=q=>135-q*85,tx=q=>y+m*(q-x);
+let d='';for(let i=0;i<=160;i++){const q=-2+i/40;d+=(i?'L':'M')+X(q).toFixed(1)+','+Y(Math.sin(q*q)).toFixed(1);}
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="复合函数链式法则切线斜率"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+d+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(x-1)+' '+Y(tx(x-1))+'L'+X(x+1)+' '+Y(tx(x+1))+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.green+'"/><text x="38" y="25" fill="'+COLORS.blue+'">y=sin(x²)</text><text x="38" y="47" fill="'+COLORS.orange+'">y′=2x cos(x²)='+m.toFixed(2)+'</text></svg>';
+desc='外层 sin(u) 求导得到 cos(u)，再乘内层 u=x² 的导数 2x。滑块移动切点，观察切线斜率 y′=2x cos(x²) 如何随 x 改变；链式法则的关键是不能漏乘内层导数。';
+}else if(/高阶导数|莱布尼茨/.test(t)){
+const x=(p-1.075)*2.2,X=q=>230+q*48,Y=q=>135-q*35;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="函数及一阶二阶导数关系"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>Math.sin(q))+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.8"/><path d="'+graphPath(q=>Math.cos(q))+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="6 4"/><path d="'+graphPath(q=>-Math.sin(q))+'" fill="none" stroke="'+COLORS.green+'" stroke-width="2.2" stroke-dasharray="2 4"/><path d="M'+X(x)+' 20V245" stroke="'+COLORS.ink+'" stroke-dasharray="4 4"/><text x="38" y="22" fill="'+COLORS.blue+'">f=sin x</text><text x="145" y="22" fill="'+COLORS.orange+'">f′=cos x</text><text x="270" y="22" fill="'+COLORS.green+'">f′′=−sin x</text></svg>';
+desc='蓝线是原函数，橙线是一阶导数，绿线是二阶导数。滑块移动观察位置：求导把函数变化率变成新函数；高阶导数继续描述变化率的变化。';
+}else{
 let a=(p-.8)*1.1, y=a*a/2,m=a;
 body=graph(x=>x*x/2,'<line x1="'+(230+(a-1.5)*48)+'" y1="'+(135-(y-m*1.5)*35)+'" x2="'+(230+(a+1.5)*48)+'" y2="'+(135-(y+m*1.5)*35)+'" stroke="'+COLORS.orange+'" stroke-width="3"/><circle cx="'+(230+a*48)+'" cy="'+(135-y*35)+'" r="6" fill="'+COLORS.orange+'"/>');
 desc='蓝线为 y=x²/2，橙线为切线；拖动参数移动切点，斜率 m=f′(a) 随 a 改变。';
+}
 }else if(k==='mvt'){
 if(/罗尔/.test(t)){
 const a=.5+1.5*p,b=-a,X=x=>230+x*48,Y=y=>135-y*35,xi=0;
@@ -94,7 +109,7 @@ desc='拖动改变麦克劳林多项式阶数 n='+n+'。橙色 Tₙ(x)=1+x+x²/2
 }else if(k==='shape'){
 if(/渐近/.test(t)){
 const c=(p-1.075)*.45;
-body=graph(x=>1/(x-c)+.2*x,-4,4,-3,4).replace('</svg>','<path d="M'+(230+c*48)+' 12V250" stroke="'+COLORS.orange+'" stroke-dasharray="5 5" stroke-width="2"/><text x="'+Math.min(355,230+c*48+5)+'" y="25" fill="'+COLORS.orange+'">x='+c.toFixed(2)+'</text></svg>');
+body=graph(x=>1/(x-c)+.2*x).replace('</svg>','<path d="M'+(230+c*48)+' 12V250" stroke="'+COLORS.orange+'" stroke-dasharray="5 5" stroke-width="2"/><text x="'+Math.min(355,230+c*48+5)+'" y="25" fill="'+COLORS.orange+'">x='+c.toFixed(2)+'</text></svg>');
 desc='滑块移动竖直渐近线 x=c；蓝色曲线在 x→c 时发散。此例另有斜渐近线 y=0.2x；判断渐近线必须回到相应极限定义。';
 }
 else if(/凹凸|拐点/.test(t)){
