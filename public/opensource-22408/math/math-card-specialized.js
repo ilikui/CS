@@ -54,14 +54,24 @@ let a=(p-.8)*1.1, y=a*a/2,m=a;
 body=graph(x=>x*x/2,'<line x1="'+(230+(a-1.5)*48)+'" y1="'+(135-(y-m*1.5)*35)+'" x2="'+(230+(a+1.5)*48)+'" y2="'+(135-(y+m*1.5)*35)+'" stroke="'+COLORS.orange+'" stroke-width="3"/><circle cx="'+(230+a*48)+'" cy="'+(135-y*35)+'" r="6" fill="'+COLORS.orange+'"/>');
 desc='蓝线为 y=x²/2，橙线为切线；拖动参数移动切点，斜率 m=f′(a) 随 a 改变。';
 }else if(k==='mvt'){
-body=graph(x=>x*x/3,'<line x1="86" y1="215" x2="374" y2="71" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="6 4"/><circle cx="230" cy="143" r="6" fill="'+COLORS.green+'"/><text x="244" y="158" fill="'+COLORS.green+'">ξ</text>');
-desc='端点割线斜率等于某点切线斜率；罗尔、拉格朗日、柯西定理分别对应不同条件。';
+const a=-2,b=-.5+1.5*p,c=(a+b)/2,fa=a*a/3,fb=b*b/3,fc=c*c/3,slope=(fb-fa)/(b-a),X=x=>230+x*48,Y=y=>135-y*35;
+const secY=x=>fa+slope*(x-a),tanY=x=>fc+slope*(x-c);
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="拉格朗日中值定理：端点割线与中间点切线平行"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(x=>x*x/3,-4,4,-1,5)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(a)+' '+Y(secY(a))+'L'+X(b)+' '+Y(secY(b))+'" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="7 5"/><path d="M'+X(c-1.35)+' '+Y(tanY(c-1.35))+'L'+X(c+1.35)+' '+Y(tanY(c+1.35))+'" stroke="'+COLORS.green+'" stroke-width="2.5"/><circle cx="'+X(a)+'" cy="'+Y(fa)+'" r="5" fill="'+COLORS.orange+'"/><circle cx="'+X(b)+'" cy="'+Y(fb)+'" r="5" fill="'+COLORS.orange+'"/><circle cx="'+X(c)+'" cy="'+Y(fc)+'" r="6" fill="'+COLORS.green+'"/><path d="M'+X(c)+' '+Y(fc)+'V245" stroke="'+COLORS.green+'" stroke-dasharray="4 4"/><text x="'+(X(c)+9)+'" y="'+(Y(fc)-10)+'" fill="'+COLORS.green+'">ξ='+c.toFixed(2)+'</text><text x="'+(X(a)-5)+'" y="'+(Y(fa)+18)+'" fill="'+COLORS.orange+'">a</text><text x="'+(X(b)-5)+'" y="'+(Y(fb)+18)+'" fill="'+COLORS.orange+'">b</text></svg>';
+desc='固定左端点 a=−2，拖动参数改变右端点 b。橙色割线斜率 [f(b)−f(a)]/(b−a)，绿色切线斜率 f′(ξ) 始终相等；ξ=(a+b)/2。';
 }else if(k==='taylor'){
 body=graph(x=>Math.exp(x/3),'');desc='函数曲线可由切线、二次多项式等局部多项式逐阶逼近；阶数越高局部拟合越精细。';
 }else if(k==='shape'){
 if(/渐近/.test(t)){body=graph(x=>1/(x-.25),'');desc='竖直渐近线附近函数绝对值增大；水平/斜渐近线由无穷远极限判断。';}
-else if(/凹凸|拐点/.test(t)){body=graph(x=>x*x*x/12,'<circle cx="230" cy="135" r="5" fill="'+COLORS.orange+'"/>');desc='三次曲线在原点两侧凹凸性改变；拐点要检查凹凸性变号。';}
-else{body=graph(x=>x*x*x/12-x,'');desc='拖动参数观察曲线局部；一阶导数符号决定单调，符号改变处可能出现极值。';}
+else if(/凹凸|拐点/.test(t)){
+const x=(p-1.075)*3.2,y=x*x*x/12,dy=x*x/4,ddy=x/2,X=q=>230+q*48,Y=q=>135-q*35;
+const tangent=q=>y+dy*(q-x);
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="二阶导数符号与拐点动态演示"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>q*q*q/12)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(x-1.35)+' '+Y(tangent(x-1.35))+'L'+X(x+1.35)+' '+Y(tangent(x+1.35))+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M'+X(x)+' '+Y(y)+'V245" stroke="'+COLORS.green+'" stroke-dasharray="4 4"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.green+'"/><text x="'+(X(x)+9)+'" y="'+(Y(y)-10)+'">x='+x.toFixed(2)+'</text><text x="38" y="25" fill="'+COLORS.orange+'">f′′(x)='+ddy.toFixed(2)+'</text></svg>';
+desc='拖动观察点穿过 x=0：左侧 f′′<0、右侧 f′′>0，凹凸性改变，因此原点是拐点。切线斜率 f′(x)=x²/4，二阶导数符号决定曲率变化。';
+}else{
+const x=(p-1.075)*3.2,y=x*x*x/12-x,dy=x*x/4-1,X=q=>230+q*48,Y=q=>135-q*35,tangent=q=>y+dy*(q-x);
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="导数符号、单调区间与极值动态演示"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>q*q*q/12-q)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(x-1.25)+' '+Y(tangent(x-1.25))+'L'+X(x+1.25)+' '+Y(tangent(x+1.25))+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M'+X(x)+' '+Y(y)+'V245" stroke="'+COLORS.green+'" stroke-dasharray="4 4"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.green+'"/><text x="'+(X(x)+8)+'" y="'+(Y(y)-10)+'">x='+x.toFixed(2)+'</text><text x="38" y="25" fill="'+COLORS.orange+'">f′(x)='+dy.toFixed(2)+'</text></svg>';
+desc='拖动观察点经过 x=−2、x=2：f′>0 时递增，f′<0 时递减；在 −2 处由正变负为极大值，在 2 处由负变正为极小值。';
+}
 }else if(k==='integral'){
 if(/换元|凑微分/.test(t)){body=graph(x=>Math.sin(x));desc='u=g(x) 把原变量刻度映射为新变量；同步替换 dx 与积分上下限。';}
 else if(/分部/.test(t)){body=graph(x=>x*Math.exp(-x*x/8));desc='分部积分来自乘积求导；选择 u 使其求导简化，dv 使其易积分。';}
