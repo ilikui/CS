@@ -4000,16 +4000,16 @@ window.QUESTION_CARD_MAP = {
     "subjectCode": "data-structure",
     "typeName": "应用题",
     "score": 13,
-    "question": "（13分）定义三元组（a，b，c）（其中a、b、c均为 整数 ）的距离 D=|a−b|+|b−c|+|c−a|。给定3个非空整数集合S1、S2和S3，按升序分别存储在3个数组中。设计一个尽可能高效的算法，计算并输出所有可能的三元组（a，b，c）（a∈S1，b∈S2，c∈S3）中的最小距离。例如S1={−1，0，9}，S2={−25，−10，10，11}，S3={2，9，17，30，41}，则最小距离为2，相应的三元组为（9，10，9）。 给出算法的基本设计思想。 采用C或C++语言描述算法，关键之处给出注释。 说明时间复杂度和空间复杂度。",
+    "question": "（13分）定义三元组（a，b，c）（其中a、b、c均为 正数 ）的距离 D=|a−b|+|b−c|+|c−a|。给定3个非空整数集合S1、S2和S3，按升序分别存储在3个数组中。设计一个尽可能高效的算法，计算并输出所有可能的三元组（a，b，c）（a∈S1，b∈S2，c∈S3）中的最小距离。例如S1={−1，0，9}，S2={−25，−10，10，11}，S3={2，9，17，30，41}，则最小距离为2，相应的三元组为（9，10，9）。 给出算法的基本设计思想。 采用C或C++语言描述算法，关键之处给出注释。 说明时间复杂度和空间复杂度。",
     "answer": "利用D=2(max(a,b,c)−min(a,b,c))，对三个升序数组分别设置指针i、j、k。每轮计算当前三元组距离并更新最优值，然后只移动当前最小值所在数组的指针；任一数组遍历结束即停止。时间O(n1+n2+n3)，辅助空间O(1)。",
-    "analysis": "三元组距离只取决于最大值与最小值，与中间值无关。三个数组均升序，三指针归并式扫描可在不枚举n1×n2×n3个组合的情况下找到全局最优。已对照2020年原卷PDF文本核验，题干实际为a、b、c均为整数；部分网页转录成“正数”属于转录错误，示例中的负数与原卷一致。",
+    "analysis": "三元组距离只取决于最大值与最小值，与中间值无关。三个数组均升序，三指针归并式扫描可在不枚举n1×n2×n3个组合的情况下找到全局最优。重要勘误：原卷文字限定a、b、c为正数，但示例数组含负数，属于原题自身矛盾。严格按正数解释需先跳过非正数；若将“正数”视为笔误，则把所有整数作为候选。给定示例两种口径均得到(9,10,9)，距离2。",
     "steps": [
       "恒等变形：|a−b|+|b−c|+|c−a|=2(max(a,b,c)−min(a,b,c))。因此目标是让当前三数的最大值与最小值尽可能接近。",
-      "初始化i=j=k=0，取A[i]、B[j]、C[k]，求low、high并计算D=2×(high−low)，更新最小距离及对应三元组。",
+      "原卷字面限定a、b、c为正数。因三个数组升序，先分别跳过所有≤0的元素；若任一数组没有正数，则不存在满足字面条件的三元组。若将题干“正数”视为笔误、按整数集合理解，则不执行这一步。题面矛盾必须在答案中明确说明。",
+      "初始化i、j、k为各数组首个有效元素下标，取A[i]、B[j]、C[k]，求low、high并计算D=2×(high−low)，更新最小距离及对应三元组。",
       "若当前最小距离为0，则已达到理论下界，可立即结束。",
-      "否则只增加当前最小值所在数组的下标；因为另外两个值不变或更大，移动非最小值不会降低当前区间宽度，而移动最小值才可能缩小区间。",
-      "重复直到任一数组耗尽。每轮至少推进一个指针，最多推进n1+n2+n3次。",
-      "使用long long计算high−low及2×差值，避免两个32位int相减或乘2发生溢出。"
+      "否则只增加当前最小值所在数组的下标；因为另外两个值不变或更大，移动非最小值不会降低当前区间宽度，而移动最小值才可能缩小区间。最小值并列时推进其中任意一个最小值指针即可。",
+      "重复直到任一数组耗尽。每轮至少推进一个下标，最多推进n1+n2+n3次；差值及乘2使用long long，避免32位整数运算溢出。"
     ],
     "cards": [
       {
@@ -4039,12 +4039,12 @@ window.QUESTION_CARD_MAP = {
       "算法复杂度"
     ],
     "complexity": "时间复杂度O(n1+n2+n3)，辅助空间复杂度O(1)。",
-    "code": "long long minDistance(const int A[], int n1,\\n                      const int B[], int n2,\\n                      const int C[], int n3,\\n                      int *ra, int *rb, int *rc) {\\n    int i = 0, j = 0, k = 0;\\n    long long best = LLONG_MAX;\\n    while (i < n1 && j < n2 && k < n3) {\\n        long long a = A[i], b = B[j], c = C[k];\\n        long long low = a, high = a;\\n        if (b < low) low = b; if (c < low) low = c;\\n        if (b > high) high = b; if (c > high) high = c;\\n        long long d = 2LL * (high - low);\\n        if (d < best) {\\n            best = d; *ra = (int)a; *rb = (int)b; *rc = (int)c;\\n        }\\n        if (best == 0) break;\\n        if (a == low) ++i;\\n        else if (b == low) ++j;\\n        else ++k;\\n    }\\n    return best;\\n}",
-    "correction": "原卷PDF题干为“a、b、c均为整数”；PGCode等网页转录的“均为正数”与负数示例矛盾，不能照抄该网页措辞。",
-    "verification": "已对照2020年原卷PDF文本（题目41）与PGCode参考解析核验，原卷明确写“a、b、c均为整数”；三指针算法、样例和复杂度已复核。",
+    "code": "#include <limits.h>\n#include <stdbool.h>\n\nbool minPositiveDistance(const int A[], int n1,\n                         const int B[], int n2,\n                         const int C[], int n3,\n                         long long *best, int *ra, int *rb, int *rc) {\n    int i = 0, j = 0, k = 0;\n    // 按原卷“a、b、c均为正数”的字面要求，跳过非正元素。\n    while (i < n1 && A[i] <= 0) ++i;\n    while (j < n2 && B[j] <= 0) ++j;\n    while (k < n3 && C[k] <= 0) ++k;\n    if (i == n1 || j == n2 || k == n3) return false;\n\n    *best = LLONG_MAX;\n    while (i < n1 && j < n2 && k < n3) {\n        long long a = A[i], b = B[j], c = C[k];\n        long long low = a, high = a;\n        if (b < low) low = b; if (c < low) low = c;\n        if (b > high) high = b; if (c > high) high = c;\n        long long d = 2LL * (high - low);\n        if (d < *best) {\n            *best = d; *ra = (int)a; *rb = (int)b; *rc = (int)c;\n        }\n        if (*best == 0) break;\n        if (a == low) ++i;\n        else if (b == low) ++j;\n        else ++k;\n    }\n    return true;\n}\n\n// 若按“正数”为笔误、把所有整数都视为候选值，\n// 删除上面三条跳过非正元素的while即可。",
+    "correction": "原卷PDF第41题原文确实写“a、b、c均为正数”，但示例集合S1、S2含有−1、−25、−10等负数，题面自身存在矛盾，不能将原题静默改写为“均为整数”。严格按“正数”理解时，算法应先跳过各升序数组中的非正数；若将“正数”视为笔误、按整数集合理解，则从下标0开始扫描。给定示例在两种口径下的最优三元组均为(9,10,9)，最小距离均为2。",
+    "verification": "已目视核对厦门工学院公开的2020年408原始试卷PDF第27页（综合题41原文）；PDF确写“均为正数”，但紧随示例包含负数。该冲突来自原卷本身，不是网页转录错误。三指针算法及样例结果已复核。",
     "audit": {
-      "status": "cross-checked",
-      "note": "原卷题干措辞已回查PDF，纠正网页转录“正数”为原卷“整数”；算法及复杂度已复核。"
+      "status": "cross-checked-corrected",
+      "note": "原卷第41题正数限定与负数样例冲突；保留原文，解析提供严格字面口径及笔误口径两种处理。"
     }
   },
   "2020-42": {
