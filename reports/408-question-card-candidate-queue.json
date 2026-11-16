@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T12:35:45.071Z",
+  "generatedAt": "2026-11-16T12:37:52.495Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -7,9 +7,9 @@
     "uniqueQuestionsAlreadyLinked": 226,
     "questionsWithoutAnyFormalLink": 573,
     "questionsNeedingAdditionalCardReview": 799,
-    "candidateQuestions": 792,
-    "noCandidateQuestions": 7,
-    "cards": 190,
+    "candidateQuestions": 794,
+    "noCandidateQuestions": 5,
+    "cards": 194,
     "cardsWithFormalLinks": 150,
     "cardsWithoutFormalLinks": [
       {
@@ -171,6 +171,22 @@
       {
         "subject": "计算机网络",
         "title": "IP TTL 与路由转发"
+      },
+      {
+        "subject": "数据结构",
+        "title": "单链表重排与原地逆置"
+      },
+      {
+        "subject": "数据结构",
+        "title": "循环链式队列与空闲结点复用"
+      },
+      {
+        "subject": "计算机组成原理",
+        "title": "x86 CALL/JMP/RET 控制转移与相对寻址"
+      },
+      {
+        "subject": "计算机组成原理",
+        "title": "整数溢出检测与异常处理"
       }
     ]
   },
@@ -214,18 +230,18 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
+        {
           "card": "算法五个特性",
           "score": 4,
           "matchedTerms": [
             "输出",
             "是解决"
-          ]
-        },
-        {
-          "card": "抽象数据类型 ADT",
-          "score": 2,
-          "matchedTerms": [
-            "逻辑结构"
           ]
         }
       ]
@@ -255,6 +271,14 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 8,
+          "matchedTerms": [
+            "a1",
+            "an"
+          ]
+        },
+        {
           "card": "循环队列判空与判满",
           "score": 8,
           "matchedTerms": [
@@ -263,27 +287,20 @@
           ]
         },
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 7,
+          "matchedTerms": [
+            "为空",
+            "初始",
+            "队列的"
+          ]
+        },
+        {
           "card": "抽象数据类型 ADT",
           "score": 6,
           "matchedTerms": [
             "push",
             "pop"
-          ]
-        },
-        {
-          "card": "线性表与顺序表",
-          "score": 5,
-          "matchedTerms": [
-            "容量",
-            "个元素",
-            "元素的"
-          ]
-        },
-        {
-          "card": "树的基本术语与性质",
-          "score": 4,
-          "matchedTerms": [
-            "深度"
           ]
         }
       ]
@@ -479,6 +496,14 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 6,
+          "matchedTerms": [
+            "an",
+            "个结点"
+          ]
+        },
+        {
           "card": "树的基本术语与性质",
           "score": 5,
           "matchedTerms": [
@@ -492,13 +517,6 @@
           "matchedTerms": [
             "最后一",
             "个结点"
-          ]
-        },
-        {
-          "card": "树与森林的存储结构",
-          "score": 4,
-          "matchedTerms": [
-            "二叉树"
           ]
         }
       ]
@@ -565,12 +583,11 @@
           ]
         },
         {
-          "card": "完全二叉树与编号性质",
+          "card": "单链表重排与原地逆置",
           "score": 6,
           "matchedTerms": [
-            "右孩子",
-            "二叉树",
-            "个孩子"
+            "an",
+            "变为"
           ]
         }
       ]
@@ -603,6 +620,14 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 6,
+          "matchedTerms": [
+            "an",
+            "个结点"
+          ]
+        },
+        {
           "card": "树的基本术语与性质",
           "score": 5,
           "matchedTerms": [
@@ -624,13 +649,6 @@
           "matchedTerms": [
             "个结点"
           ]
-        },
-        {
-          "card": "拓扑排序与 AOV 网",
-          "score": 2,
-          "matchedTerms": [
-            "的顶点"
-          ]
         }
       ]
     },
@@ -649,6 +667,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
+        {
           "card": "二叉树遍历与性质",
           "score": 3,
           "matchedTerms": [
@@ -665,22 +690,15 @@
           ]
         },
         {
+          "card": "单链表与双链表",
+          "score": 2,
+          "matchedTerms": [
+            "指针"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 2,
-          "matchedTerms": [
-            "关键字"
-          ]
-        },
-        {
-          "card": "树与森林的遍历",
-          "score": 2,
-          "matchedTerms": [
-            "树定义"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 1,
           "matchedTerms": [
             "关键字"
           ]
@@ -725,6 +743,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
+        {
           "card": "树与森林的存储结构",
           "score": 4,
           "matchedTerms": [
@@ -736,14 +761,6 @@
           "score": 4,
           "matchedTerms": [
             "二叉树"
-          ]
-        },
-        {
-          "card": "B 树与 B+ 树",
-          "score": 4,
-          "matchedTerms": [
-            "关键字",
-            "插入"
           ]
         }
       ]
@@ -859,6 +876,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
+        {
           "card": "十字链表与邻接多重表",
           "score": 4,
           "matchedTerms": [
@@ -878,13 +902,6 @@
           "matchedTerms": [
             "执行"
           ]
-        },
-        {
-          "card": "基数排序与桶排序思想",
-          "score": 2,
-          "matchedTerms": [
-            "和数据"
-          ]
         }
       ]
     },
@@ -902,6 +919,13 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
         {
           "card": "最小正整数缺失值查找",
           "score": 4,
@@ -940,6 +964,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 6,
+          "matchedTerms": [
+            "an",
+            "变为"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 3,
           "matchedTerms": [
@@ -966,13 +998,6 @@
           "matchedTerms": [
             "有两个"
           ]
-        },
-        {
-          "card": "完全二叉树与编号性质",
-          "score": 1,
-          "matchedTerms": [
-            "有两个"
-          ]
         }
       ]
     },
@@ -991,6 +1016,13 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
         {
           "card": "稀疏矩阵三元组表示",
           "score": 2,
@@ -1015,6 +1047,14 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 8,
+          "matchedTerms": [
+            "a1",
+            "an"
+          ]
+        },
         {
           "card": "外部排序与多路归并",
           "score": 3,
@@ -1048,6 +1088,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 8,
+          "matchedTerms": [
+            "a2",
+            "an"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 4,
           "matchedTerms": [
@@ -1077,6 +1125,13 @@
             "之间",
             "因为",
             "访问"
+          ]
+        },
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
           ]
         },
         {
@@ -1118,6 +1173,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 3,
           "matchedTerms": [
@@ -1129,13 +1191,6 @@
           "score": 2,
           "matchedTerms": [
             "时间"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 2,
-          "matchedTerms": [
-            "执行"
           ]
         }
       ]
@@ -1154,6 +1209,14 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 6,
+          "matchedTerms": [
+            "an",
+            "修改"
+          ]
+        },
         {
           "card": "红黑树性质与高度",
           "score": 2,
@@ -1181,13 +1244,6 @@
           "matchedTerms": [
             "取决于"
           ]
-        },
-        {
-          "card": "二叉搜索树查找与删除",
-          "score": 1,
-          "matchedTerms": [
-            "取决于"
-          ]
         }
       ]
     },
@@ -1205,6 +1261,14 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 8,
+          "matchedTerms": [
+            "a1",
+            "an"
+          ]
+        },
         {
           "card": "算法复杂度",
           "score": 6,
@@ -1232,13 +1296,6 @@
           "matchedTerms": [
             "时间"
           ]
-        },
-        {
-          "card": "图的存储与遍历",
-          "score": 2,
-          "matchedTerms": [
-            "时间"
-          ]
         }
       ]
     },
@@ -1256,6 +1313,13 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
         {
           "card": "十字链表与邻接多重表",
           "score": 4,
@@ -1294,6 +1358,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 3,
           "matchedTerms": [
@@ -1319,13 +1390,6 @@
           "score": 2,
           "matchedTerms": [
             "下溢"
-          ]
-        },
-        {
-          "card": "空间换时间与辅助数组",
-          "score": 1,
-          "matchedTerms": [
-            "输入数"
           ]
         }
       ]
@@ -1526,10 +1590,10 @@
           ]
         },
         {
-          "card": "中断屏蔽与优先级",
+          "card": "整数溢出检测与异常处理",
           "score": 2,
           "matchedTerms": [
-            "由硬件"
+            "检查"
           ]
         }
       ]
@@ -1549,6 +1613,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 8,
+          "matchedTerms": [
+            "字节",
+            "长度",
+            "位移"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 6,
           "matchedTerms": [
@@ -1564,24 +1637,18 @@
           ]
         },
         {
+          "card": "指令系统与寻址方式",
+          "score": 4,
+          "matchedTerms": [
+            "位移",
+            "长度"
+          ]
+        },
+        {
           "card": "存储芯片容量扩展",
           "score": 2,
           "matchedTerms": [
             "字节"
-          ]
-        },
-        {
-          "card": "立即数与直接间接寻址",
-          "score": 2,
-          "matchedTerms": [
-            "位移量"
-          ]
-        },
-        {
-          "card": "指令系统与寻址方式",
-          "score": 2,
-          "matchedTerms": [
-            "位移"
           ]
         }
       ]
@@ -1600,6 +1667,20 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "磁盘结构与平均访问时间",
+          "score": 2,
+          "matchedTerms": [
+            "磁道"
+          ]
+        },
+        {
+          "card": "定点补码加减与溢出",
+          "score": 2,
+          "matchedTerms": [
+            "大于"
+          ]
+        },
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 2,
@@ -2070,6 +2151,13 @@
           ]
         },
         {
+          "card": "进程同步与信号量",
+          "score": 1,
+          "matchedTerms": [
+            "=1"
+          ]
+        },
+        {
           "card": "上下文切换",
           "score": 1,
           "matchedTerms": [
@@ -2217,6 +2305,14 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 6,
+          "matchedTerms": [
+            "an",
+            "修改"
+          ]
+        },
+        {
           "card": "红黑树性质与高度",
           "score": 6,
           "matchedTerms": [
@@ -2244,15 +2340,6 @@
             "最短路",
             "短路径",
             "最短路径"
-          ]
-        },
-        {
-          "card": "邻接矩阵与邻接表",
-          "score": 3,
-          "matchedTerms": [
-            "表示边",
-            "个顶点",
-            "带权图"
           ]
         }
       ]
@@ -2345,6 +2432,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
+        {
           "card": "快速排序分区过程",
           "score": 4,
           "matchedTerms": [
@@ -2356,15 +2450,6 @@
           "score": 4,
           "matchedTerms": [
             "平均"
-          ]
-        },
-        {
-          "card": "堆的定义与建堆",
-          "score": 3,
-          "matchedTerms": [
-            "之间没",
-            "间没有",
-            "之间没有"
           ]
         }
       ]
@@ -2413,11 +2498,11 @@
           ]
         },
         {
-          "card": "奈奎斯特与香农信道容量",
-          "score": 4,
+          "card": "NAT 与端口映射",
+          "score": 5,
           "matchedTerms": [
-            "db",
-            "的信息"
+            "地址",
+            "提供"
           ]
         }
       ]
@@ -2455,6 +2540,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 4,
           "matchedTerms": [
@@ -2466,13 +2558,6 @@
           "score": 2,
           "matchedTerms": [
             "释放"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 1,
-          "matchedTerms": [
-            "是否有"
           ]
         }
       ]
@@ -2509,6 +2594,14 @@
           ]
         },
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 5,
           "matchedTerms": [
@@ -2522,13 +2615,6 @@
           "score": 5,
           "matchedTerms": [
             "lr"
-          ]
-        },
-        {
-          "card": "快速排序分区过程",
-          "score": 4,
-          "matchedTerms": [
-            "平均"
           ]
         }
       ]
@@ -2548,6 +2634,13 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
         {
           "card": "归并排序与稳定性",
           "score": 2,
@@ -2574,13 +2667,6 @@
           "score": 2,
           "matchedTerms": [
             "对应"
-          ]
-        },
-        {
-          "card": "希尔排序与增量序列",
-          "score": 2,
-          "matchedTerms": [
-            "相当于"
           ]
         }
       ]
@@ -2666,9 +2752,20 @@
         },
         {
           "card": "链式栈与链式队列",
-          "score": 4,
+          "score": 7,
           "matchedTerms": [
-            "出队"
+            "出队",
+            "题的队",
+            "的队列",
+            "题的队列"
+          ]
+        },
+        {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
           ]
         },
         {
@@ -2685,13 +2782,6 @@
           "matchedTerms": [
             "个元素",
             "不可能"
-          ]
-        },
-        {
-          "card": "算法五个特性",
-          "score": 3,
-          "matchedTerms": [
-            "输出"
           ]
         }
       ]
@@ -2802,6 +2892,14 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 6,
+          "matchedTerms": [
+            "a1",
+            "变为"
+          ]
+        },
+        {
           "card": "二叉搜索树查找与删除",
           "score": 5,
           "matchedTerms": [
@@ -2816,16 +2914,6 @@
           "score": 5,
           "matchedTerms": [
             "vl"
-          ]
-        },
-        {
-          "card": "堆的定义与建堆",
-          "score": 4,
-          "matchedTerms": [
-            "二叉树",
-            "左右子",
-            "右子树",
-            "根结点"
           ]
         }
       ]
@@ -3008,18 +3096,17 @@
           ]
         },
         {
-          "card": "链式栈与链式队列",
+          "card": "单链表重排与原地逆置",
           "score": 2,
           "matchedTerms": [
             "个结点"
           ]
         },
         {
-          "card": "邻接矩阵与邻接表",
+          "card": "链式栈与链式队列",
           "score": 2,
           "matchedTerms": [
-            "个顶点",
-            "的边数"
+            "个结点"
           ]
         }
       ]
@@ -3719,6 +3806,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
+        {
           "card": "树的基本术语与性质",
           "score": 4,
           "matchedTerms": [
@@ -3774,7 +3868,7 @@
           ]
         },
         {
-          "card": "指令系统与寻址方式",
+          "card": "整数溢出检测与异常处理",
           "score": 1,
           "matchedTerms": [
             "指令的"
@@ -3954,12 +4048,28 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "整数溢出检测与异常处理",
+          "score": 6,
+          "matchedTerms": [
+            "标志",
+            "int"
+          ]
+        },
+        {
           "card": "ALU 算术逻辑单元",
           "score": 6,
           "matchedTerms": [
             "状态标",
             "态标志",
             "状态标志"
+          ]
+        },
+        {
+          "card": "定点补码加减与溢出",
+          "score": 5,
+          "matchedTerms": [
+            "int",
+            "表示"
           ]
         },
         {
@@ -3974,20 +4084,6 @@
           "score": 4,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "立即数与直接间接寻址",
-          "score": 3,
-          "matchedTerms": [
-            "ea"
-          ]
-        },
-        {
-          "card": "定点补码加减与溢出",
-          "score": 2,
-          "matchedTerms": [
-            "表示"
           ]
         }
       ]
@@ -4088,16 +4184,14 @@
           ]
         },
         {
-          "card": "存储器层次与主存组织",
-          "score": 3,
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 4,
           "matchedTerms": [
-            "字节编",
-            "节编址",
-            "字节编址"
+            "字节"
           ]
         },
         {
-          "card": "存储器芯片与地址译码",
+          "card": "存储器层次与主存组织",
           "score": 3,
           "matchedTerms": [
             "字节编",
@@ -4119,14 +4213,15 @@
       "existingCards": [
         "文件物理分配方式"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
         {
           "card": "指令系统与寻址方式",
-          "score": 8,
+          "score": 10,
           "matchedTerms": [
             "直接",
-            "间接"
+            "间接",
+            "长度"
           ]
         },
         {
@@ -4145,10 +4240,17 @@
           ]
         },
         {
-          "card": "总线带宽与突发传输",
-          "score": 1,
+          "card": "Cache 直接映射与组相联",
+          "score": 2,
           "matchedTerms": [
-            "的数据"
+            "块大小"
+          ]
+        },
+        {
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 2,
+          "matchedTerms": [
+            "长度"
           ]
         }
       ]
@@ -4167,6 +4269,13 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "指令系统与寻址方式",
+          "score": 2,
+          "matchedTerms": [
+            "相对"
+          ]
+        },
         {
           "card": "RISC 与 CISC",
           "score": 2,
@@ -4535,17 +4644,26 @@
       "confidence": "low-candidate",
       "candidates": [
         {
-          "card": "读者写者问题",
-          "score": 1,
+          "card": "进程同步与信号量",
+          "score": 4,
           "matchedTerms": [
-            "第一个"
+            "min",
+            "=1"
           ]
         },
         {
           "card": "哲学家进餐与死锁避免",
+          "score": 4,
+          "matchedTerms": [
+            "min",
+            "较小的"
+          ]
+        },
+        {
+          "card": "读者写者问题",
           "score": 1,
           "matchedTerms": [
-            "较小的"
+            "第一个"
           ]
         }
       ]
@@ -4564,6 +4682,13 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "磁盘调度 FCFS 与 SSTF",
+          "score": 2,
+          "matchedTerms": [
+            "请求"
+          ]
+        },
         {
           "card": "调度评价指标",
           "score": 2,
@@ -4731,6 +4856,16 @@
           ]
         },
         {
+          "card": "IPv4 子网划分与 CIDR",
+          "score": 8,
+          "matchedTerms": [
+            "的地址",
+            "h1",
+            "器地址",
+            "地址和"
+          ]
+        },
+        {
           "card": "IPv6 地址与首部特点",
           "score": 8,
           "matchedTerms": [
@@ -4743,14 +4878,6 @@
           "score": 6,
           "matchedTerms": [
             "字段"
-          ]
-        },
-        {
-          "card": "DNS 与 HTTP",
-          "score": 5,
-          "matchedTerms": [
-            "地址",
-            "解析"
           ]
         }
       ]
@@ -4832,7 +4959,7 @@
       "candidates": [
         {
           "card": "磁盘结构与平均访问时间",
-          "score": 35,
+          "score": 40,
           "matchedTerms": [
             "ssd",
             "rpm",
@@ -4877,11 +5004,11 @@
           ]
         },
         {
-          "card": "指令系统与寻址方式",
-          "score": 5,
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 6,
           "matchedTerms": [
-            "直接",
-            "存储器"
+            "字节",
+            "位于"
           ]
         }
       ]
@@ -4932,19 +5059,22 @@
         },
         {
           "card": "单链表与双链表",
-          "score": 3,
+          "score": 5,
           "matchedTerms": [
+            "指针",
             "物理地",
             "理地址",
             "物理地址"
           ]
         },
         {
-          "card": "空间换时间与辅助数组",
-          "score": 3,
+          "card": "循环队列判空与判满",
+          "score": 5,
           "matchedTerms": [
-            "时间",
-            "入时间"
+            "指向",
+            "存储空",
+            "储空间",
+            "存储空间"
           ]
         }
       ]
@@ -4975,9 +5105,10 @@
         },
         {
           "card": "进程同步与信号量",
-          "score": 4,
+          "score": 5,
           "matchedTerms": [
-            "等待"
+            "等待",
+            "=1"
           ]
         },
         {
@@ -5090,6 +5221,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
+          ]
+        },
+        {
           "card": "栈的顺序存储与共享栈",
           "score": 4,
           "matchedTerms": [
@@ -5120,13 +5259,6 @@
             "有元素",
             "所有元素"
           ]
-        },
-        {
-          "card": "顺序表按位查找与插删",
-          "score": 2,
-          "matchedTerms": [
-            "元素"
-          ]
         }
       ]
     },
@@ -5142,8 +5274,25 @@
       "existingCards": [
         "循环队列判空与判满"
       ],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
+        {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 23,
+          "matchedTerms": [
+            "front",
+            "rear",
+            "指向队",
+            "向队头",
+            "指向队头",
+            "初始",
+            "队列的",
+            "入队时",
+            "循环队",
+            "环队列",
+            "循环队列"
+          ]
+        },
         {
           "card": "链式栈与链式队列",
           "score": 13,
@@ -5178,14 +5327,6 @@
           "score": 4,
           "matchedTerms": [
             "维数组"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 4,
-          "matchedTerms": [
-            "数组",
-            "个元素"
           ]
         }
       ]
@@ -5233,12 +5374,13 @@
         },
         {
           "card": "链式栈与链式队列",
-          "score": 8,
+          "score": 9,
           "matchedTerms": [
             "最后一",
             "后一个",
             "个结点",
-            "最后一个"
+            "最后一个",
+            "结点的"
           ]
         },
         {
@@ -5256,11 +5398,11 @@
           ]
         },
         {
-          "card": "树与森林的存储结构",
-          "score": 5,
+          "card": "单链表重排与原地逆置",
+          "score": 6,
           "matchedTerms": [
-            "二叉树",
-            "结点的"
+            "a2",
+            "个结点"
           ]
         }
       ]
@@ -5292,6 +5434,25 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 8,
+          "matchedTerms": [
+            "a1",
+            "个结点",
+            "结点只"
+          ]
+        },
+        {
+          "card": "链式栈与链式队列",
+          "score": 7,
+          "matchedTerms": [
+            "一个结",
+            "个结点",
+            "一个结点",
+            "结点的"
+          ]
+        },
+        {
           "card": "树的基本术语与性质",
           "score": 7,
           "matchedTerms": [
@@ -5308,24 +5469,6 @@
             "孩子结",
             "子结点",
             "孩子结点"
-          ]
-        },
-        {
-          "card": "链式栈与链式队列",
-          "score": 6,
-          "matchedTerms": [
-            "一个结",
-            "个结点",
-            "一个结点"
-          ]
-        },
-        {
-          "card": "十字链表与邻接多重表",
-          "score": 6,
-          "matchedTerms": [
-            "结点同",
-            "点同时",
-            "结点同时"
           ]
         }
       ]
@@ -5385,6 +5528,14 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 6,
+          "matchedTerms": [
+            "a1",
+            "个结点"
+          ]
+        },
+        {
           "card": "树的基本术语与性质",
           "score": 6,
           "matchedTerms": [
@@ -5392,15 +5543,6 @@
             "个结点",
             "结点的",
             "个结点的"
-          ]
-        },
-        {
-          "card": "完全二叉树与编号性质",
-          "score": 6,
-          "matchedTerms": [
-            "右孩子",
-            "二叉树",
-            "个结点"
           ]
         }
       ]
@@ -5713,6 +5855,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 3,
           "matchedTerms": [
@@ -5731,13 +5880,6 @@
           "score": 2,
           "matchedTerms": [
             "再将"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 2,
-          "matchedTerms": [
-            "插入"
           ]
         }
       ]
@@ -5885,6 +6027,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
         {
           "card": "线性表与顺序表",
           "score": 2,
@@ -6165,6 +6314,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "中缀表达式求值",
           "score": 2,
           "matchedTerms": [
@@ -6282,10 +6438,10 @@
           ]
         },
         {
-          "card": "DMA 工作过程与总线占用",
+          "card": "指令系统与寻址方式",
           "score": 2,
           "matchedTerms": [
-            "执行时间"
+            "长度"
           ]
         }
       ]
@@ -6436,10 +6592,12 @@
           ]
         },
         {
-          "card": "中断屏蔽与优先级",
-          "score": 1,
+          "card": "磁盘结构与平均访问时间",
+          "score": 3,
           "matchedTerms": [
-            "行处理"
+            "驱动程",
+            "动程序",
+            "驱动程序"
           ]
         }
       ]
@@ -6512,6 +6670,16 @@
           ]
         },
         {
+          "card": "整数溢出检测与异常处理",
+          "score": 6,
+          "matchedTerms": [
+            "标志",
+            "的标志",
+            "标志位",
+            "的标志位"
+          ]
+        },
+        {
           "card": "中断响应与异常处理",
           "score": 6,
           "matchedTerms": [
@@ -6526,13 +6694,6 @@
           "score": 6,
           "matchedTerms": [
             "中断处理"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 6,
-          "matchedTerms": [
-            "有效位"
           ]
         }
       ]
@@ -6600,6 +6761,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "整数溢出检测与异常处理",
+          "score": 8,
+          "matchedTerms": [
+            "of",
+            "cf"
+          ]
+        },
+        {
           "card": "ALU 算术逻辑单元",
           "score": 6,
           "matchedTerms": [
@@ -6616,26 +6785,21 @@
           ]
         },
         {
+          "card": "指令系统与寻址方式",
+          "score": 5,
+          "matchedTerms": [
+            "相对",
+            "目标",
+            "地址为"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 5,
           "matchedTerms": [
             "物理地址",
             "地址",
             "采用的"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 4,
-          "matchedTerms": [
-            "执行"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 3,
-          "matchedTerms": [
-            "处理"
           ]
         }
       ]
@@ -6747,10 +6911,10 @@
           ]
         },
         {
-          "card": "流水线结构冒险与数据冒险",
-          "score": 1,
+          "card": "Cache 映射与命中率",
+          "score": 2,
           "matchedTerms": [
-            "执行的"
+            "编号"
           ]
         }
       ]
@@ -6802,6 +6966,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "进程同步与信号量",
+          "score": 1,
+          "matchedTerms": [
+            "=1"
+          ]
+        },
         {
           "card": "索引结点 inode 与文件控制块",
           "score": 1,
@@ -6983,6 +7154,13 @@
           ]
         },
         {
+          "card": "磁盘调度 FCFS 与 SSTF",
+          "score": 2,
+          "matchedTerms": [
+            "请求"
+          ]
+        },
+        {
           "card": "伙伴系统与内存回收",
           "score": 2,
           "matchedTerms": [
@@ -7001,13 +7179,6 @@
           "score": 1,
           "matchedTerms": [
             "段可能"
-          ]
-        },
-        {
-          "card": "缺页异常处理流程",
-          "score": 1,
-          "matchedTerms": [
-            "可能是"
           ]
         }
       ]
@@ -7114,14 +7285,11 @@
           ]
         },
         {
-          "card": "稀疏矩阵三元组表示",
-          "score": 7,
+          "card": "单链表重排与原地逆置",
+          "score": 8,
           "matchedTerms": [
-            "行优先",
-            "矩阵",
-            "维数组",
-            "矩阵a",
-            "组中的"
+            "a1",
+            "a2"
           ]
         }
       ]
@@ -7419,6 +7587,15 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 7,
+          "matchedTerms": [
+            "改为",
+            "修改",
+            "变为"
+          ]
+        },
+        {
           "card": "递归算法与递归树",
           "score": 7,
           "matchedTerms": [
@@ -7443,14 +7620,6 @@
           "score": 6,
           "matchedTerms": [
             "时间"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 6,
-          "matchedTerms": [
-            "时间",
-            "访问"
           ]
         }
       ]
@@ -7552,6 +7721,14 @@
           ]
         },
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
+          ]
+        },
+        {
           "card": "二叉树遍历与性质",
           "score": 2,
           "matchedTerms": [
@@ -7570,13 +7747,6 @@
           "score": 2,
           "matchedTerms": [
             "的典型"
-          ]
-        },
-        {
-          "card": "堆排序与优先队列",
-          "score": 1,
-          "matchedTerms": [
-            "优先级"
           ]
         }
       ]
@@ -7643,10 +7813,11 @@
           ]
         },
         {
-          "card": "线索二叉树",
+          "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
-            "二叉树"
+            "个结点",
+            "结点只"
           ]
         }
       ]
@@ -7713,11 +7884,11 @@
           ]
         },
         {
-          "card": "树的基本术语与性质",
-          "score": 5,
+          "card": "单链表重排与原地逆置",
+          "score": 6,
           "matchedTerms": [
-            "高度",
-            "结点的"
+            "a1",
+            "n−1"
           ]
         }
       ]
@@ -8332,6 +8503,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 4,
           "matchedTerms": [
@@ -8350,13 +8528,6 @@
           "score": 1,
           "matchedTerms": [
             "正整数"
-          ]
-        },
-        {
-          "card": "最小生成树与最短路径",
-          "score": 1,
-          "matchedTerms": [
-            "−1"
           ]
         }
       ]
@@ -8427,6 +8598,15 @@
           ]
         },
         {
+          "card": "单链表与双链表",
+          "score": 3,
+          "matchedTerms": [
+            "时必须",
+            "必须先",
+            "时必须先"
+          ]
+        },
+        {
           "card": "稀疏矩阵三元组表示",
           "score": 3,
           "matchedTerms": [
@@ -8440,13 +8620,6 @@
           "score": 2,
           "matchedTerms": [
             "访问"
-          ]
-        },
-        {
-          "card": "抽象数据类型 ADT",
-          "score": 1,
-          "matchedTerms": [
-            "体存储"
           ]
         }
       ]
@@ -8464,6 +8637,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 5,
           "matchedTerms": [
@@ -8479,25 +8660,17 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "冒泡排序与简单选择排序",
           "score": 2,
           "matchedTerms": [
             "交换"
-          ]
-        },
-        {
-          "card": "B 树与 B+ 树",
-          "score": 2,
-          "matchedTerms": [
-            "在不同",
-            "教材中"
-          ]
-        },
-        {
-          "card": "最小生成树与最短路径",
-          "score": 1,
-          "matchedTerms": [
-            "不同的"
           ]
         }
       ]
@@ -8543,6 +8716,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 4,
           "matchedTerms": [
@@ -8558,13 +8738,6 @@
         },
         {
           "card": "空间换时间与辅助数组",
-          "score": 2,
-          "matchedTerms": [
-            "时间"
-          ]
-        },
-        {
-          "card": "图的存储与遍历",
           "score": 2,
           "matchedTerms": [
             "时间"
@@ -8749,6 +8922,41 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "指令系统与寻址方式",
+          "score": 16,
+          "matchedTerms": [
+            "寄存器",
+            "pc",
+            "指令的",
+            "址寄存",
+            "址寄存器",
+            "下一条",
+            "一条指",
+            "条指令",
+            "下一条指",
+            "一条指令",
+            "下一条指令"
+          ]
+        },
+        {
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 14,
+          "matchedTerms": [
+            "下一条",
+            "调用子",
+            "用子程",
+            "子程序",
+            "调用子程",
+            "用子程序",
+            "调用子程序",
+            "寄存器",
+            "一条指",
+            "条指令",
+            "下一条指",
+            "一条指令"
+          ]
+        },
+        {
           "card": "流水线结构冒险与数据冒险",
           "score": 12,
           "matchedTerms": [
@@ -8783,25 +8991,6 @@
             "条指令",
             "一条指令",
             "寄存器"
-          ]
-        },
-        {
-          "card": "指令系统与寻址方式",
-          "score": 10,
-          "matchedTerms": [
-            "寄存器",
-            "pc",
-            "指令的",
-            "址寄存",
-            "址寄存器"
-          ]
-        },
-        {
-          "card": "中断与 DMA",
-          "score": 10,
-          "matchedTerms": [
-            "中断处理",
-            "保护现场"
           ]
         }
       ]
@@ -8915,9 +9104,12 @@
         },
         {
           "card": "磁盘结构与平均访问时间",
-          "score": 1,
+          "score": 4,
           "matchedTerms": [
-            "通常由"
+            "通常由",
+            "驱动程",
+            "动程序",
+            "驱动程序"
           ]
         }
       ]
@@ -9139,6 +9331,15 @@
             "应用程",
             "用程序",
             "应用程序"
+          ]
+        },
+        {
+          "card": "磁盘结构与平均访问时间",
+          "score": 3,
+          "matchedTerms": [
+            "程序完",
+            "序完成",
+            "程序完成"
           ]
         },
         {
@@ -9449,6 +9650,13 @@
           ]
         },
         {
+          "card": "哲学家进餐与死锁避免",
+          "score": 2,
+          "matchedTerms": [
+            "设置"
+          ]
+        },
+        {
           "card": "缓冲区与缓冲池",
           "score": 1,
           "matchedTerms": [
@@ -9538,6 +9746,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "磁盘调度 FCFS 与 SSTF",
+          "score": 2,
+          "matchedTerms": [
+            "请求"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 2,
           "matchedTerms": [
@@ -9563,13 +9778,6 @@
           "score": 1,
           "matchedTerms": [
             "出请求"
-          ]
-        },
-        {
-          "card": "缓冲区与缓冲池",
-          "score": 1,
-          "matchedTerms": [
-            "使用的"
           ]
         }
       ]
@@ -9648,6 +9856,15 @@
           ]
         },
         {
+          "card": "IPv4 子网划分与 CIDR",
+          "score": 7,
+          "matchedTerms": [
+            "h1",
+            "h2",
+            "为两个"
+          ]
+        },
+        {
           "card": "P2P 与客户服务器模型",
           "score": 7,
           "matchedTerms": [
@@ -9669,15 +9886,6 @@
             "算法思",
             "法思路",
             "算法思路"
-          ]
-        },
-        {
-          "card": "HTTP 请求响应与连接管理",
-          "score": 6,
-          "matchedTerms": [
-            "get",
-            "解析",
-            "不能保"
           ]
         }
       ]
@@ -9782,10 +9990,11 @@
           ]
         },
         {
-          "card": "网桥与交换机的冲突域广播域",
-          "score": 4,
+          "card": "NAT 与端口映射",
+          "score": 5,
           "matchedTerms": [
-            "同一"
+            "地址",
+            "访问"
           ]
         }
       ]
@@ -9822,6 +10031,14 @@
           ]
         },
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
+          ]
+        },
+        {
           "card": "链式栈与链式队列",
           "score": 3,
           "matchedTerms": [
@@ -9836,13 +10053,6 @@
           "matchedTerms": [
             "时间",
             "轮扫描"
-          ]
-        },
-        {
-          "card": "递归算法与递归树",
-          "score": 2,
-          "matchedTerms": [
-            "时间"
           ]
         }
       ]
@@ -9943,17 +10153,17 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "二叉树遍历与性质",
           "score": 4,
           "matchedTerms": [
             "的应用"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 2,
-          "matchedTerms": [
-            "长度为"
           ]
         }
       ]
@@ -10051,6 +10261,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 6,
+          "matchedTerms": [
+            "an",
+            "n−1"
+          ]
+        },
+        {
           "card": "栈的顺序存储与共享栈",
           "score": 4,
           "matchedTerms": [
@@ -10120,6 +10338,14 @@
           ]
         },
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
+          ]
+        },
+        {
           "card": "树与森林的存储结构",
           "score": 5,
           "matchedTerms": [
@@ -10132,14 +10358,6 @@
           "score": 4,
           "matchedTerms": [
             "二叉树"
-          ]
-        },
-        {
-          "card": "B 树与 B+ 树",
-          "score": 4,
-          "matchedTerms": [
-            "关键字",
-            "插入"
           ]
         }
       ]
@@ -10175,6 +10393,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
+        {
           "card": "查找算法与散列表",
           "score": 3,
           "matchedTerms": [
@@ -10197,13 +10422,6 @@
           "matchedTerms": [
             "生成树",
             "−1"
-          ]
-        },
-        {
-          "card": "B 树与 B+ 树",
-          "score": 2,
-          "matchedTerms": [
-            "叶结点"
           ]
         }
       ]
@@ -10374,6 +10592,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "十字链表与邻接多重表",
           "score": 3,
           "matchedTerms": [
@@ -10388,13 +10613,6 @@
             "邻接矩",
             "接矩阵",
             "邻接矩阵"
-          ]
-        },
-        {
-          "card": "顺序表按位查找与插删",
-          "score": 2,
-          "matchedTerms": [
-            "元素"
           ]
         }
       ]
@@ -10544,6 +10762,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 2,
+          "matchedTerms": [
+            "结点只"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 2,
           "matchedTerms": [
@@ -10553,13 +10778,6 @@
         {
           "card": "B 树与 B+ 树",
           "score": 2,
-          "matchedTerms": [
-            "关键字"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 1,
           "matchedTerms": [
             "关键字"
           ]
@@ -10632,6 +10850,27 @@
     },
     {
       "year": 2013,
+      "index": 12,
+      "id": 200,
+      "subject": "数据结构",
+      "type": "选择题",
+      "question": "2013-第12题-题目 某计算机主频为 1.2GHz，其指令分为 4 类，它们在基准程序中所占比例及 CPI 如下表所示。 指令类型 所占比例 CPI A 50% 2 B 20% 3 C 10% 4 D 20% 5 该机的 MIPS 数是（ ）。 A. 100 B. 200 C. 400 D. 600",
+      "answer": "C",
+      "analysis": "2013-第12题-解析 基准程序的 CPI= 2x0.5 + 3x0.2 + 4x0.1 + 5x0.2 = 3。计算机的主频为 1.2 GHz, 即 1200 MHz，故该机器的 MIPS = 1200/3= 400。",
+      "existingCards": [],
+      "confidence": "low-candidate",
+      "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2013,
       "index": 13,
       "id": 201,
       "subject": "数据结构",
@@ -10668,6 +10907,27 @@
     },
     {
       "year": 2013,
+      "index": 14,
+      "id": 202,
+      "subject": "数据结构",
+      "type": "选择题",
+      "question": "2013-第14题-题目 某字长为 8 位的计算机中，已知整型变量 x、y 的机器数分别为 [x]补=11110100 ， [y]补=10110000 。若整型变量 z=2x+y/2，则 z 的机器数为（ ）。 A. 11000000 B. 00100100 C. 10101010 D. 溢出",
+      "answer": "A",
+      "analysis": "2013-第14题-解析 x*2，将 x 算术左移一位为 1 1101000；y/2，将 y 算术右移一位为 1 1011000, 均无溢出或丢失精度。补码相加为 1 1101000 + 1 1011000 = 1 1000000, 亦无溢出。",
+      "existingCards": [],
+      "confidence": "low-candidate",
+      "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2013,
       "index": 15,
       "id": 203,
       "subject": "数据结构",
@@ -10678,6 +10938,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
         {
           "card": "查找算法与散列表",
           "score": 2,
@@ -10764,6 +11031,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "归并排序与稳定性",
           "score": 2,
           "matchedTerms": [
@@ -10789,13 +11063,6 @@
           "score": 1,
           "matchedTerms": [
             "地址的"
-          ]
-        },
-        {
-          "card": "中缀表达式求值",
-          "score": 1,
-          "matchedTerms": [
-            "操作数"
           ]
         }
       ]
@@ -11118,8 +11385,25 @@
       "answer": "C",
       "analysis": "2013-第25题-解析 计算磁盘号、磁头号和扇区号的工作是由 设备驱动程序 完成的。题中的功能因设备硬件的不同而不同，因此应由厂家提供的设备驱动程序实现。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "磁盘结构与平均访问时间",
+          "score": 13,
+          "matchedTerms": [
+            "柱面",
+            "扇区",
+            "驱动程",
+            "动程序",
+            "程序完",
+            "序完成",
+            "驱动程序",
+            "动程序完",
+            "程序完成",
+            "驱动程序完",
+            "动程序完成"
+          ]
+        },
         {
           "card": "程序查询与中断驱动 I/O",
           "score": 8,
@@ -11154,15 +11438,6 @@
             "处理",
             "设备"
           ]
-        },
-        {
-          "card": "硬布线控制器与微程序控制器",
-          "score": 3,
-          "matchedTerms": [
-            "程序实",
-            "序实现",
-            "程序实现"
-          ]
         }
       ]
     },
@@ -11176,14 +11451,15 @@
       "answer": "A",
       "analysis": "2013-第26题-解析 四个选项中，只有 A 选项是与单个文件长度无关的。索引结点 的总数即文件的总数，与单个文件的长度无关；间接地址级数越多、地址项数越多、文件块越大，单个文件的长度就会越大。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
         {
           "card": "指令系统与寻址方式",
-          "score": 8,
+          "score": 10,
           "matchedTerms": [
             "直接",
-            "间接"
+            "间接",
+            "长度"
           ]
         },
         {
@@ -11192,6 +11468,20 @@
           "matchedTerms": [
             "块大小",
             "地址"
+          ]
+        },
+        {
+          "card": "Cache 直接映射与组相联",
+          "score": 2,
+          "matchedTerms": [
+            "块大小"
+          ]
+        },
+        {
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 2,
+          "matchedTerms": [
+            "长度"
           ]
         },
         {
@@ -11740,6 +12030,13 @@
           ]
         },
         {
+          "card": "进程同步与信号量",
+          "score": 1,
+          "matchedTerms": [
+            "=1"
+          ]
+        },
+        {
           "card": "上下文切换",
           "score": 1,
           "matchedTerms": [
@@ -12022,6 +12319,16 @@
           ]
         },
         {
+          "card": "IPv4 子网划分与 CIDR",
+          "score": 8,
+          "matchedTerms": [
+            "的地址",
+            "h3",
+            "地址是",
+            "器地址"
+          ]
+        },
+        {
           "card": "IPv6 地址与首部特点",
           "score": 8,
           "matchedTerms": [
@@ -12035,14 +12342,6 @@
           "matchedTerms": [
             "连接",
             "字节编"
-          ]
-        },
-        {
-          "card": "DNS 与 HTTP",
-          "score": 5,
-          "matchedTerms": [
-            "地址",
-            "解析"
           ]
         }
       ]
@@ -12298,6 +12597,15 @@
           ]
         },
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 7,
+          "matchedTerms": [
+            "为空",
+            "初始",
+            "初始化"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 6,
           "matchedTerms": [
@@ -12310,15 +12618,6 @@
           "score": 4,
           "matchedTerms": [
             "入栈"
-          ]
-        },
-        {
-          "card": "完全二叉树与编号性质",
-          "score": 3,
-          "matchedTerms": [
-            "从左向",
-            "左向右",
-            "从左向右"
           ]
         }
       ]
@@ -12337,7 +12636,7 @@
       "candidates": [
         {
           "card": "循环队列判空与判满",
-          "score": 28,
+          "score": 30,
           "matchedTerms": [
             "队列",
             "循环队",
@@ -12345,7 +12644,23 @@
             "循环队列",
             "队空",
             "队满",
-            "入队"
+            "入队",
+            "指向"
+          ]
+        },
+        {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 16,
+          "matchedTerms": [
+            "为空",
+            "指向队",
+            "向队头",
+            "指向队头",
+            "初始",
+            "后一个",
+            "循环队",
+            "环队列",
+            "循环队列"
           ]
         },
         {
@@ -12373,13 +12688,6 @@
             "数组",
             "个元素",
             "情况下"
-          ]
-        },
-        {
-          "card": "数组行优先与列优先存储",
-          "score": 4,
-          "matchedTerms": [
-            "维数组"
           ]
         }
       ]
@@ -12448,13 +12756,10 @@
           ]
         },
         {
-          "card": "二叉搜索树查找与删除",
+          "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
-            "的结点",
-            "后继结",
-            "继结点",
-            "后继结点"
+            "a2"
           ]
         }
       ]
@@ -12714,6 +13019,15 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 6,
+          "matchedTerms": [
+            "每个结",
+            "个结点",
+            "每个结点"
+          ]
+        },
+        {
           "card": "二叉树遍历与性质",
           "score": 6,
           "matchedTerms": [
@@ -12730,15 +13044,6 @@
           "matchedTerms": [
             "二叉树",
             "根结点"
-          ]
-        },
-        {
-          "card": "树与森林的遍历",
-          "score": 5,
-          "matchedTerms": [
-            "二叉树",
-            "树定义",
-            "的定义"
           ]
         }
       ]
@@ -12778,6 +13083,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
+        {
           "card": "最小生成树与最短路径",
           "score": 4,
           "matchedTerms": [
@@ -12792,15 +13104,6 @@
             "最小元",
             "小元素",
             "最小元素"
-          ]
-        },
-        {
-          "card": "树与森林的遍历",
-          "score": 3,
-          "matchedTerms": [
-            "序的定",
-            "的定义",
-            "序的定义"
           ]
         }
       ]
@@ -12847,17 +13150,17 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
+        {
           "card": "图的存储与遍历",
           "score": 2,
           "matchedTerms": [
             "不存在"
-          ]
-        },
-        {
-          "card": "最小生成树与最短路径",
-          "score": 2,
-          "matchedTerms": [
-            "排序"
           ]
         }
       ]
@@ -13214,6 +13517,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "基数排序与桶排序思想",
           "score": 2,
           "matchedTerms": [
@@ -13347,6 +13657,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 3,
           "matchedTerms": [
@@ -13355,13 +13672,6 @@
         },
         {
           "card": "递归算法与递归树",
-          "score": 2,
-          "matchedTerms": [
-            "时间"
-          ]
-        },
-        {
-          "card": "空间换时间与辅助数组",
           "score": 2,
           "matchedTerms": [
             "时间"
@@ -13865,10 +14175,10 @@
           ]
         },
         {
-          "card": "中断与 DMA",
-          "score": 3,
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 4,
           "matchedTerms": [
-            "减少"
+            "字节"
           ]
         }
       ]
@@ -14016,6 +14326,14 @@
           ]
         },
         {
+          "card": "进程同步与信号量",
+          "score": 4,
+          "matchedTerms": [
+            "min",
+            "=1"
+          ]
+        },
+        {
           "card": "文件逻辑结构与物理结构",
           "score": 4,
           "matchedTerms": [
@@ -14030,13 +14348,6 @@
           "score": 3,
           "matchedTerms": [
             "利用率"
-          ]
-        },
-        {
-          "card": "SCAN 与 C-SCAN 磁盘调度",
-          "score": 2,
-          "matchedTerms": [
-            "忽略"
           ]
         }
       ]
@@ -14065,6 +14376,13 @@
           "score": 3,
           "matchedTerms": [
             "ch"
+          ]
+        },
+        {
+          "card": "进程同步与信号量",
+          "score": 1,
+          "matchedTerms": [
+            "=1"
           ]
         },
         {
@@ -14257,7 +14575,7 @@
         },
         {
           "card": "链式栈与链式队列",
-          "score": 28,
+          "score": 29,
           "matchedTerms": [
             "数据结构",
             "存储结",
@@ -14269,7 +14587,8 @@
             "后一个结",
             "一个结点",
             "最后一个结",
-            "后一个结点"
+            "后一个结点",
+            "结点的"
           ]
         },
         {
@@ -14333,7 +14652,7 @@
       "candidates": [
         {
           "card": "链式栈与链式队列",
-          "score": 54,
+          "score": 55,
           "matchedTerms": [
             "数据结构",
             "的链式",
@@ -14471,6 +14790,17 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "IPv4 子网划分与 CIDR",
+          "score": 12,
+          "matchedTerms": [
+            "的地址",
+            "h1",
+            "h2",
+            "个地址",
+            "地址和"
+          ]
+        },
+        {
           "card": "IP TTL 与路由转发",
           "score": 11,
           "matchedTerms": [
@@ -14500,15 +14830,6 @@
           "score": 6,
           "matchedTerms": [
             "地址"
-          ]
-        },
-        {
-          "card": "IPv4 子网划分与 CIDR",
-          "score": 6,
-          "matchedTerms": [
-            "的地址",
-            "个地址",
-            "地址和"
           ]
         }
       ]
@@ -14583,20 +14904,21 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表与双链表",
+          "score": 5,
+          "matchedTerms": [
+            "指针",
+            "指针即",
+            "针即可",
+            "指针即可"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 4,
           "matchedTerms": [
             "访问",
             "答案"
-          ]
-        },
-        {
-          "card": "单链表与双链表",
-          "score": 3,
-          "matchedTerms": [
-            "指针即",
-            "针即可",
-            "指针即可"
           ]
         },
         {
@@ -14638,6 +14960,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
+          ]
+        },
+        {
           "card": "关键路径与 AOE 网",
           "score": 5,
           "matchedTerms": [
@@ -14664,13 +14994,6 @@
           "score": 2,
           "matchedTerms": [
             "开始"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 1,
-          "matchedTerms": [
-            "的过程"
           ]
         }
       ]
@@ -14757,14 +15080,14 @@
           ]
         },
         {
-          "card": "树与森林的存储结构",
+          "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
-            "二叉树"
+            "a1"
           ]
         },
         {
-          "card": "线索二叉树",
+          "card": "树与森林的存储结构",
           "score": 4,
           "matchedTerms": [
             "二叉树"
@@ -14817,6 +15140,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
+        {
           "card": "二叉搜索树查找与删除",
           "score": 4,
           "matchedTerms": [
@@ -14824,14 +15154,6 @@
             "个孩子",
             "孩子的",
             "两个孩子"
-          ]
-        },
-        {
-          "card": "堆的定义与建堆",
-          "score": 2,
-          "matchedTerms": [
-            "父结点",
-            "叶结点"
           ]
         }
       ]
@@ -14949,17 +15271,17 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
+        {
           "card": "树的基本术语与性质",
           "score": 4,
           "matchedTerms": [
             "深度"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 4,
-          "matchedTerms": [
-            "遍历"
           ]
         }
       ]
@@ -15121,17 +15443,17 @@
           ]
         },
         {
-          "card": "算法复杂度",
-          "score": 2,
+          "card": "单链表与双链表",
+          "score": 3,
           "matchedTerms": [
-            "数组"
+            "next"
           ]
         },
         {
-          "card": "稀疏矩阵三元组表示",
-          "score": 2,
+          "card": "单链表重排与原地逆置",
+          "score": 3,
           "matchedTerms": [
-            "开始"
+            "next"
           ]
         }
       ]
@@ -15224,6 +15546,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "堆排序与优先队列",
           "score": 4,
           "matchedTerms": [
@@ -15252,13 +15581,6 @@
           "score": 3,
           "matchedTerms": [
             "之间"
-          ]
-        },
-        {
-          "card": "单链表与双链表",
-          "score": 2,
-          "matchedTerms": [
-            "删除"
           ]
         }
       ]
@@ -15808,10 +16130,11 @@
       "candidates": [
         {
           "card": "指令系统与寻址方式",
-          "score": 12,
+          "score": 15,
           "matchedTerms": [
             "寄存器",
             "pc",
+            "cache",
             "存器内",
             "器内容",
             "寄存器内",
@@ -16135,18 +16458,21 @@
           ]
         },
         {
+          "card": "大小端存储",
+          "score": 5,
+          "matchedTerms": [
+            "偏移",
+            "在内存",
+            "内存中",
+            "在内存中"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 5,
           "matchedTerms": [
             "mb",
             "得到"
-          ]
-        },
-        {
-          "card": "指令系统与寻址方式",
-          "score": 4,
-          "matchedTerms": [
-            "直接"
           ]
         }
       ]
@@ -16188,6 +16514,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "Cache 映射与命中率",
+          "score": 7,
+          "matchedTerms": [
+            "字节",
+            "编号",
+            "和块内"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 6,
           "matchedTerms": [
@@ -16196,11 +16531,11 @@
           ]
         },
         {
-          "card": "Cache 映射与命中率",
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
           "score": 5,
           "matchedTerms": [
             "字节",
-            "和块内"
+            "字节序"
           ]
         },
         {
@@ -16215,13 +16550,6 @@
           "score": 2,
           "matchedTerms": [
             "字节"
-          ]
-        },
-        {
-          "card": "定点补码加减与溢出",
-          "score": 2,
-          "matchedTerms": [
-            "表示"
           ]
         }
       ]
@@ -16260,10 +16588,17 @@
           ]
         },
         {
-          "card": "中断响应与异常处理",
-          "score": 1,
+          "card": "磁盘结构与平均访问时间",
+          "score": 2,
           "matchedTerms": [
-            "处理完"
+            "磁道"
+          ]
+        },
+        {
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 2,
+          "matchedTerms": [
+            "位于"
           ]
         }
       ]
@@ -16557,17 +16892,18 @@
           ]
         },
         {
+          "card": "进程同步与信号量",
+          "score": 4,
+          "matchedTerms": [
+            "min",
+            "=1"
+          ]
+        },
+        {
           "card": "处理机调度层次",
           "score": 3,
           "matchedTerms": [
             "分配"
-          ]
-        },
-        {
-          "card": "分页与分段的区别",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
           ]
         }
       ]
@@ -16591,6 +16927,13 @@
           "score": 3,
           "matchedTerms": [
             "bin"
+          ]
+        },
+        {
+          "card": "磁盘调度 FCFS 与 SSTF",
+          "score": 2,
+          "matchedTerms": [
+            "请求"
           ]
         },
         {
@@ -16703,6 +17046,14 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 6,
+          "matchedTerms": [
+            "a2",
+            "n−1"
+          ]
+        },
+        {
           "card": "图的存储与遍历",
           "score": 4,
           "matchedTerms": [
@@ -16719,13 +17070,6 @@
             "个顶点",
             "的路径",
             "−1"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 3,
-          "matchedTerms": [
-            "之间"
           ]
         }
       ]
@@ -16854,6 +17198,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
+          ]
+        },
+        {
           "card": "AVL 树平衡调整",
           "score": 5,
           "matchedTerms": [
@@ -16880,13 +17232,6 @@
           "score": 1,
           "matchedTerms": [
             "的含义"
-          ]
-        },
-        {
-          "card": "树与森林的遍历",
-          "score": 1,
-          "matchedTerms": [
-            "的定义"
           ]
         }
       ]
@@ -16958,19 +17303,17 @@
           ]
         },
         {
-          "card": "查找算法与散列表",
-          "score": 3,
+          "card": "单链表重排与原地逆置",
+          "score": 4,
           "matchedTerms": [
-            "的过程",
-            "地址的",
-            "机访问"
+            "a1"
           ]
         },
         {
-          "card": "冒泡排序与简单选择排序",
-          "score": 2,
+          "card": "循环链式队列与空闲结点复用",
+          "score": 4,
           "matchedTerms": [
-            "交换"
+            "为空"
           ]
         }
       ]
@@ -16985,20 +17328,30 @@
       "answer": "D",
       "analysis": "2016-第1题-解析 根据存储状态，单链表的结构如下图所示。 c a e b d ^ f 1008H 1000H 1010H 1004H 100CH 1014H 其中“链接地址”是指结点 next 所指的内存地址。当结点 f 插入后，a 指向 f, f 指向 e, e 指向 b。显然 a、e 和 f 的“链接地址”分别是 f、b 和 e 的内存地址，即 1014H、1004H 和 1010H。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 10,
+          "matchedTerms": [
+            "a1",
+            "next",
+            "null"
+          ]
+        },
+        {
+          "card": "单链表与双链表",
+          "score": 9,
+          "matchedTerms": [
+            "单链表",
+            "next"
+          ]
+        },
         {
           "card": "循环链表与双向循环链表",
           "score": 7,
           "matchedTerms": [
             "next",
-            "单链表"
-          ]
-        },
-        {
-          "card": "单链表与双链表",
-          "score": 6,
-          "matchedTerms": [
             "单链表"
           ]
         },
@@ -17011,17 +17364,11 @@
           ]
         },
         {
-          "card": "KMP 模式匹配与 next 数组",
+          "card": "循环队列判空与判满",
           "score": 5,
           "matchedTerms": [
-            "next"
-          ]
-        },
-        {
-          "card": "十字链表与邻接多重表",
-          "score": 4,
-          "matchedTerms": [
-            "的存储"
+            "next",
+            "指向"
           ]
         }
       ]
@@ -17059,35 +17406,38 @@
           ]
         },
         {
+          "card": "循环队列判空与判满",
+          "score": 9,
+          "matchedTerms": [
+            "p-",
+            "next",
+            "指向",
+            "循环链"
+          ]
+        },
+        {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 7,
+          "matchedTerms": [
+            "p-",
+            "next",
+            "循环链"
+          ]
+        },
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 6,
+          "matchedTerms": [
+            "next",
+            "prev"
+          ]
+        },
+        {
           "card": "单链表头插法与尾插法",
           "score": 5,
           "matchedTerms": [
             "next",
             "头结点"
-          ]
-        },
-        {
-          "card": "递归算法与递归树",
-          "score": 5,
-          "matchedTerms": [
-            "at"
-          ]
-        },
-        {
-          "card": "KMP 模式匹配与 next 数组",
-          "score": 5,
-          "matchedTerms": [
-            "next"
-          ]
-        },
-        {
-          "card": "二叉搜索树查找与删除",
-          "score": 4,
-          "matchedTerms": [
-            "的结点",
-            "后继结",
-            "继结点",
-            "后继结点"
           ]
         }
       ]
@@ -17105,6 +17455,16 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "链式栈与链式队列",
+          "score": 10,
+          "matchedTerms": [
+            "队列的",
+            "出队",
+            "出队后",
+            "的队列"
+          ]
+        },
+        {
           "card": "栈与队列",
           "score": 10,
           "matchedTerms": [
@@ -17113,15 +17473,6 @@
             "先进先",
             "先进先出",
             "队列的"
-          ]
-        },
-        {
-          "card": "链式栈与链式队列",
-          "score": 9,
-          "matchedTerms": [
-            "队列的",
-            "出队",
-            "出队后"
           ]
         },
         {
@@ -17134,19 +17485,20 @@
           ]
         },
         {
-          "card": "算法复杂度",
-          "score": 4,
+          "card": "循环链式队列与空闲结点复用",
+          "score": 9,
           "matchedTerms": [
-            "个元素",
-            "情况下",
-            "有元素"
+            "入队出队",
+            "队列的",
+            "出队后",
+            "出队时"
           ]
         },
         {
-          "card": "最小正整数缺失值查找",
-          "score": 3,
+          "card": "单链表重排与原地逆置",
+          "score": 4,
           "matchedTerms": [
-            "之间"
+            "a2"
           ]
         }
       ]
@@ -17183,6 +17535,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 4,
           "matchedTerms": [
@@ -17197,13 +17556,6 @@
             "存储形",
             "储形式",
             "存储形式"
-          ]
-        },
-        {
-          "card": "顺序表按位查找与插删",
-          "score": 2,
-          "matchedTerms": [
-            "元素"
           ]
         }
       ]
@@ -17239,6 +17591,14 @@
           ]
         },
         {
+          "card": "链式栈与链式队列",
+          "score": 3,
+          "matchedTerms": [
+            "个结点",
+            "结点的"
+          ]
+        },
+        {
           "card": "并查集与路径压缩",
           "score": 2,
           "matchedTerms": [
@@ -17246,14 +17606,7 @@
           ]
         },
         {
-          "card": "红黑树性质与高度",
-          "score": 2,
-          "matchedTerms": [
-            "结点数"
-          ]
-        },
-        {
-          "card": "链式栈与链式队列",
+          "card": "单链表重排与原地逆置",
           "score": 2,
           "matchedTerms": [
             "个结点"
@@ -17739,6 +18092,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 8,
+          "matchedTerms": [
+            "a2",
+            "an"
+          ]
+        },
+        {
           "card": "循环队列判空与判满",
           "score": 6,
           "matchedTerms": [
@@ -17769,13 +18130,6 @@
           "matchedTerms": [
             "ttl"
           ]
-        },
-        {
-          "card": "稀疏矩阵三元组表示",
-          "score": 2,
-          "matchedTerms": [
-            "开始"
-          ]
         }
       ]
     },
@@ -17802,6 +18156,20 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 4,
+          "matchedTerms": [
+            "为空"
+          ]
+        },
+        {
           "card": "红黑树性质与高度",
           "score": 2,
           "matchedTerms": [
@@ -17813,20 +18181,6 @@
           "score": 2,
           "matchedTerms": [
             "元素"
-          ]
-        },
-        {
-          "card": "线性表与顺序表",
-          "score": 2,
-          "matchedTerms": [
-            "个元素"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 2,
-          "matchedTerms": [
-            "访问"
           ]
         }
       ]
@@ -18447,6 +18801,15 @@
           ]
         },
         {
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 3,
+          "matchedTerms": [
+            "起始地",
+            "始地址",
+            "起始地址"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 2,
           "matchedTerms": [
@@ -18458,13 +18821,6 @@
           "score": 2,
           "matchedTerms": [
             "存地址"
-          ]
-        },
-        {
-          "card": "计算机系统层次结构",
-          "score": 2,
-          "matchedTerms": [
-            "之间的"
           ]
         }
       ]
@@ -18807,6 +19163,13 @@
           "matchedTerms": [
             "过程中"
           ]
+        },
+        {
+          "card": "进程同步与信号量",
+          "score": 1,
+          "matchedTerms": [
+            "=1"
+          ]
         }
       ]
     },
@@ -18844,6 +19207,13 @@
           "matchedTerms": [
             "检测"
           ]
+        },
+        {
+          "card": "哲学家进餐与死锁避免",
+          "score": 2,
+          "matchedTerms": [
+            "设置"
+          ]
         }
       ]
     },
@@ -18866,6 +19236,13 @@
           "score": 4,
           "matchedTerms": [
             "对应的",
+            "请求"
+          ]
+        },
+        {
+          "card": "磁盘调度 FCFS 与 SSTF",
+          "score": 2,
+          "matchedTerms": [
             "请求"
           ]
         },
@@ -18969,14 +19346,14 @@
           ]
         },
         {
-          "card": "伙伴系统与内存回收",
+          "card": "磁盘调度 FCFS 与 SSTF",
           "score": 2,
           "matchedTerms": [
             "请求"
           ]
         },
         {
-          "card": "连续内存分配与动态分区",
+          "card": "伙伴系统与内存回收",
           "score": 2,
           "matchedTerms": [
             "请求"
@@ -19136,6 +19513,16 @@
           ]
         },
         {
+          "card": "IPv4 子网划分与 CIDR",
+          "score": 5,
+          "matchedTerms": [
+            "属于",
+            "为两个",
+            "两个子",
+            "为两个子"
+          ]
+        },
+        {
           "card": "TCP 序号确认与累计确认",
           "score": 5,
           "matchedTerms": [
@@ -19148,14 +19535,6 @@
           "score": 4,
           "matchedTerms": [
             "满足"
-          ]
-        },
-        {
-          "card": "IPv6 地址与首部特点",
-          "score": 4,
-          "matchedTerms": [
-            "进行分",
-            "解析"
           ]
         }
       ]
@@ -19782,6 +20161,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "十字链表与邻接多重表",
           "score": 4,
           "matchedTerms": [
@@ -19808,13 +20194,6 @@
           "score": 2,
           "matchedTerms": [
             "的顶点"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 1,
-          "matchedTerms": [
-            "的两倍"
           ]
         }
       ]
@@ -20186,6 +20565,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "十字链表与邻接多重表",
           "score": 4,
           "matchedTerms": [
@@ -20324,6 +20710,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
         {
           "card": "最小正整数缺失值查找",
           "score": 3,
@@ -20526,6 +20919,13 @@
           "matchedTerms": [
             "个数据"
           ]
+        },
+        {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 1,
+          "matchedTerms": [
+            "个数据"
+          ]
         }
       ]
     },
@@ -20676,6 +21076,15 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 12,
+          "matchedTerms": [
+            "返回地",
+            "回地址",
+            "返回地址"
+          ]
+        },
+        {
           "card": "中断响应与异常处理",
           "score": 10,
           "matchedTerms": [
@@ -20710,14 +21119,6 @@
           "matchedTerms": [
             "cpu"
           ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 7,
-          "matchedTerms": [
-            "cpu",
-            "执行"
-          ]
         }
       ]
     },
@@ -20731,8 +21132,21 @@
       "answer": "B",
       "analysis": "2017-第25题-解析 参考 动态内存内存回收过程，回收起始地址为 60K、大小为 140KB 的分区时，它与表中第一个分区和第四个分区合并，成为起始地址为 20K、大小为 380KB 的分区，剩余 3 个空闲分区。在回收内存后，算法会对空闲分区链按分区大小由小到大进行排序，表中的第二个分区排第一。所以选择 B。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 10,
+          "matchedTerms": [
+            "字节",
+            "起始地",
+            "始地址",
+            "起始地址",
+            "地址和",
+            "始地址和",
+            "起始地址和"
+          ]
+        },
         {
           "card": "程序查询与中断驱动 I/O",
           "score": 7,
@@ -20766,15 +21180,6 @@
           "matchedTerms": [
             "每次"
           ]
-        },
-        {
-          "card": "存储器层次与主存组织",
-          "score": 3,
-          "matchedTerms": [
-            "字节编",
-            "节编址",
-            "字节编址"
-          ]
         }
       ]
     },
@@ -20790,6 +21195,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "磁盘结构与平均访问时间",
+          "score": 2,
+          "matchedTerms": [
+            "扇区"
+          ]
+        },
         {
           "card": "程序查询与中断驱动 I/O",
           "score": 1,
@@ -20958,9 +21370,11 @@
           ]
         },
         {
-          "card": "冯·诺依曼结构与存储程序",
-          "score": 4,
+          "card": "磁盘结构与平均访问时间",
+          "score": 5,
           "matchedTerms": [
+            "柱面",
+            "扇区",
             "控制器"
           ]
         }
@@ -21044,6 +21458,13 @@
           ]
         },
         {
+          "card": "大小端存储",
+          "score": 2,
+          "matchedTerms": [
+            "偏移"
+          ]
+        },
+        {
           "card": "计算机系统层次结构",
           "score": 2,
           "matchedTerms": [
@@ -21059,13 +21480,6 @@
         },
         {
           "card": "Cache 替换与写策略",
-          "score": 2,
-          "matchedTerms": [
-            "即使"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
           "score": 2,
           "matchedTerms": [
             "即使"
@@ -21174,6 +21588,13 @@
           ]
         },
         {
+          "card": "进程同步与信号量",
+          "score": 1,
+          "matchedTerms": [
+            "=1"
+          ]
+        },
+        {
           "card": "文件逻辑结构与物理结构",
           "score": 1,
           "matchedTerms": [
@@ -21220,6 +21641,13 @@
           "score": 1,
           "matchedTerms": [
             "理计算"
+          ]
+        },
+        {
+          "card": "进程同步与信号量",
+          "score": 1,
+          "matchedTerms": [
+            "=1"
           ]
         }
       ]
@@ -21408,6 +21836,14 @@
           ]
         },
         {
+          "card": "进程同步与信号量",
+          "score": 4,
+          "matchedTerms": [
+            "min",
+            "=1"
+          ]
+        },
+        {
           "card": "分页与分段的区别",
           "score": 3,
           "matchedTerms": [
@@ -21423,13 +21859,6 @@
         },
         {
           "card": "连续内存分配与动态分区",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "内存分配与页面管理",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -21651,6 +22080,13 @@
           ]
         },
         {
+          "card": "IPv4 子网划分与 CIDR",
+          "score": 3,
+          "matchedTerms": [
+            "h1"
+          ]
+        },
+        {
           "card": "OSI 与 TCP/IP 参考模型",
           "score": 3,
           "matchedTerms": [
@@ -21662,13 +22098,6 @@
           "score": 3,
           "matchedTerms": [
             "n−1"
-          ]
-        },
-        {
-          "card": "奈奎斯特与香农信道容量",
-          "score": 2,
-          "matchedTerms": [
-            "最大数"
           ]
         }
       ]
@@ -21740,6 +22169,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 6,
+          "matchedTerms": [
+            "an",
+            "变为"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 6,
           "matchedTerms": [
@@ -21767,13 +22204,6 @@
           "matchedTerms": [
             "的过程",
             "地址的"
-          ]
-        },
-        {
-          "card": "单链表头插法与尾插法",
-          "score": 2,
-          "matchedTerms": [
-            "输入"
           ]
         }
       ]
@@ -21909,10 +22339,10 @@
           ]
         },
         {
-          "card": "栈与队列",
+          "card": "循环链式队列与空闲结点复用",
           "score": 2,
           "matchedTerms": [
-            "入栈"
+            "初始"
           ]
         }
       ]
@@ -21955,18 +22385,18 @@
           ]
         },
         {
-          "card": "算法五个特性",
-          "score": 4,
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
           "matchedTerms": [
-            "输出",
-            "并输出"
+            "为空",
+            "初始"
           ]
         },
         {
-          "card": "栈的顺序存储与共享栈",
+          "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
-            "入栈"
+            "a1"
           ]
         }
       ]
@@ -22247,6 +22677,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "算法五个特性",
           "score": 3,
           "matchedTerms": [
@@ -22265,13 +22702,6 @@
           "score": 2,
           "matchedTerms": [
             "的结点"
-          ]
-        },
-        {
-          "card": "哈夫曼树与带权路径长度",
-          "score": 2,
-          "matchedTerms": [
-            "每次选"
           ]
         }
       ]
@@ -22393,24 +22823,25 @@
           ]
         },
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
+          ]
+        },
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "快速排序分区过程",
           "score": 4,
           "matchedTerms": [
             "平均"
-          ]
-        },
-        {
-          "card": "冒泡排序与简单选择排序",
-          "score": 4,
-          "matchedTerms": [
-            "平均"
-          ]
-        },
-        {
-          "card": "归并排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "得到"
           ]
         }
       ]
@@ -22505,17 +22936,17 @@
           ]
         },
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 2,
+          "matchedTerms": [
+            "初始"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 2,
           "matchedTerms": [
             "答案"
-          ]
-        },
-        {
-          "card": "堆的定义与建堆",
-          "score": 1,
-          "matchedTerms": [
-            "大根堆"
           ]
         }
       ]
@@ -22592,6 +23023,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "哈夫曼树与带权路径长度",
           "score": 1,
           "matchedTerms": [
@@ -22645,6 +23083,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
+        {
           "card": "十字链表与邻接多重表",
           "score": 4,
           "matchedTerms": [
@@ -22658,13 +23103,6 @@
             "顺序存",
             "序存储",
             "顺序存储"
-          ]
-        },
-        {
-          "card": "最小生成树与最短路径",
-          "score": 3,
-          "matchedTerms": [
-            "ttl"
           ]
         }
       ]
@@ -22681,6 +23119,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
         {
           "card": "归并排序与稳定性",
           "score": 2,
@@ -22710,6 +23155,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 3,
           "matchedTerms": [
@@ -22738,13 +23190,6 @@
           "matchedTerms": [
             "答案"
           ]
-        },
-        {
-          "card": "堆的定义与建堆",
-          "score": 1,
-          "matchedTerms": [
-            "最大值"
-          ]
         }
       ]
     },
@@ -22760,6 +23205,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
         {
           "card": "最小正整数缺失值查找",
           "score": 4,
@@ -22789,13 +23241,6 @@
           "score": 2,
           "matchedTerms": [
             "数组"
-          ]
-        },
-        {
-          "card": "线性表与顺序表",
-          "score": 1,
-          "matchedTerms": [
-            "元素的"
           ]
         }
       ]
@@ -22901,6 +23346,13 @@
         },
         {
           "card": "线性表与顺序表",
+          "score": 1,
+          "matchedTerms": [
+            "个数据"
+          ]
+        },
+        {
+          "card": "循环链式队列与空闲结点复用",
           "score": 1,
           "matchedTerms": [
             "个数据"
@@ -23116,10 +23568,10 @@
           ]
         },
         {
-          "card": "CPU 指令执行过程",
-          "score": 4,
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 6,
           "matchedTerms": [
-            "执行"
+            "机器级代码"
           ]
         }
       ]
@@ -23152,6 +23604,13 @@
           ]
         },
         {
+          "card": "整数溢出检测与异常处理",
+          "score": 2,
+          "matchedTerms": [
+            "检查"
+          ]
+        },
+        {
           "card": "Cache 替换与写策略",
           "score": 2,
           "matchedTerms": [
@@ -23163,13 +23622,6 @@
           "score": 1,
           "matchedTerms": [
             "的结果"
-          ]
-        },
-        {
-          "card": "中断响应与异常处理",
-          "score": 1,
-          "matchedTerms": [
-            "完成后"
           ]
         }
       ]
@@ -23382,6 +23834,16 @@
           ]
         },
         {
+          "card": "磁盘结构与平均访问时间",
+          "score": 5,
+          "matchedTerms": [
+            "磁道",
+            "寻道时",
+            "道时间",
+            "寻道时间"
+          ]
+        },
+        {
           "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 4,
           "matchedTerms": [
@@ -23396,16 +23858,7 @@
           ]
         },
         {
-          "card": "磁盘结构与平均访问时间",
-          "score": 3,
-          "matchedTerms": [
-            "寻道时",
-            "道时间",
-            "寻道时间"
-          ]
-        },
-        {
-          "card": "ALU 算术逻辑单元",
+          "card": "整数溢出检测与异常处理",
           "score": 3,
           "matchedTerms": [
             "cf"
@@ -23438,6 +23891,13 @@
           "matchedTerms": [
             "减少",
             "块数据"
+          ]
+        },
+        {
+          "card": "整数溢出检测与异常处理",
+          "score": 3,
+          "matchedTerms": [
+            "标志"
           ]
         },
         {
@@ -23607,6 +24067,13 @@
           ]
         },
         {
+          "card": "磁盘调度 FCFS 与 SSTF",
+          "score": 2,
+          "matchedTerms": [
+            "请求"
+          ]
+        },
+        {
           "card": "伙伴系统与内存回收",
           "score": 2,
           "matchedTerms": [
@@ -23625,13 +24092,6 @@
           "score": 1,
           "matchedTerms": [
             "使用的"
-          ]
-        },
-        {
-          "card": "目录结构与文件路径",
-          "score": 1,
-          "matchedTerms": [
-            "信息的"
           ]
         }
       ]
@@ -23987,12 +24447,12 @@
           ]
         },
         {
-          "card": "IPv6 地址与首部特点",
+          "card": "IPv4 子网划分与 CIDR",
           "score": 7,
           "matchedTerms": [
-            "使用",
-            "路由器",
-            "解析"
+            "h1",
+            "h2",
+            "路由器"
           ]
         }
       ]
@@ -24038,14 +24498,14 @@
           ]
         },
         {
-          "card": "堆排序与优先队列",
+          "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
             "总时间"
           ]
         },
         {
-          "card": "直接插入与折半插入排序",
+          "card": "堆排序与优先队列",
           "score": 4,
           "matchedTerms": [
             "总时间"
@@ -24161,10 +24621,10 @@
           ]
         },
         {
-          "card": "顺序表按位查找与插删",
+          "card": "单链表重排与原地逆置",
           "score": 2,
           "matchedTerms": [
-            "还是"
+            "修改"
           ]
         }
       ]
@@ -24205,18 +24665,23 @@
           ]
         },
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "的最后",
+            "最后一",
+            "后一个",
+            "的最后一",
+            "最后一个",
+            "的最后一个"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 6,
           "matchedTerms": [
             "时间",
             "访问"
-          ]
-        },
-        {
-          "card": "中缀表达式求值",
-          "score": 4,
-          "matchedTerms": [
-            "表达式"
           ]
         }
       ]
@@ -24809,6 +25274,14 @@
           ]
         },
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
+          ]
+        },
+        {
           "card": "快速排序分区过程",
           "score": 4,
           "matchedTerms": [
@@ -24820,14 +25293,6 @@
           "score": 4,
           "matchedTerms": [
             "平均"
-          ]
-        },
-        {
-          "card": "B 树与 B+ 树",
-          "score": 4,
-          "matchedTerms": [
-            "关键字",
-            "插入"
           ]
         }
       ]
@@ -24868,19 +25333,17 @@
           ]
         },
         {
-          "card": "直接插入与折半插入排序",
+          "card": "单链表与双链表",
           "score": 3,
           "matchedTerms": [
-            "比较次",
-            "较次数",
-            "比较次数"
+            "next"
           ]
         },
         {
-          "card": "算法复杂度",
-          "score": 2,
+          "card": "单链表重排与原地逆置",
+          "score": 3,
           "matchedTerms": [
-            "数组"
+            "next"
           ]
         }
       ]
@@ -24989,6 +25452,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "最小生成树与最短路径",
           "score": 3,
           "matchedTerms": [
@@ -25002,13 +25472,6 @@
           "matchedTerms": [
             "答案",
             "的最小"
-          ]
-        },
-        {
-          "card": "并查集与路径压缩",
-          "score": 2,
-          "matchedTerms": [
-            "的结点"
           ]
         }
       ]
@@ -25356,6 +25819,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "十字链表与邻接多重表",
           "score": 4,
           "matchedTerms": [
@@ -25434,6 +25904,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 4,
           "matchedTerms": [
@@ -25452,13 +25929,6 @@
           "score": 3,
           "matchedTerms": [
             "cpu"
-          ]
-        },
-        {
-          "card": "单链表头插法与尾插法",
-          "score": 2,
-          "matchedTerms": [
-            "输入"
           ]
         }
       ]
@@ -25981,10 +26451,11 @@
           ]
         },
         {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 4,
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 5,
           "matchedTerms": [
-            "字节"
+            "字节",
+            "地址和"
           ]
         }
       ]
@@ -26242,6 +26713,20 @@
           ]
         },
         {
+          "card": "进程同步与信号量",
+          "score": 1,
+          "matchedTerms": [
+            "=1"
+          ]
+        },
+        {
+          "card": "页表结构与地址转换",
+          "score": 1,
+          "matchedTerms": [
+            "同一个"
+          ]
+        },
+        {
           "card": "SCAN 与 C-SCAN 磁盘调度",
           "score": 1,
           "matchedTerms": [
@@ -26378,7 +26863,7 @@
       "candidates": [
         {
           "card": "链式栈与链式队列",
-          "score": 61,
+          "score": 84,
           "matchedTerms": [
             "rear",
             "队列的",
@@ -26396,7 +26881,7 @@
         },
         {
           "card": "循环队列判空与判满",
-          "score": 53,
+          "score": 60,
           "matchedTerms": [
             "队列",
             "front",
@@ -26406,10 +26891,28 @@
             "循环队列",
             "队空",
             "队满",
+            "next",
             "牺牲一",
             "牲一个",
-            "牺牲一个",
-            "入队"
+            "牺牲一个"
+          ]
+        },
+        {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 46,
+          "matchedTerms": [
+            "front",
+            "rear",
+            "为空",
+            "next",
+            "空闲结",
+            "闲结点",
+            "空闲结点",
+            "初始",
+            "循环链",
+            "环链式",
+            "链式队",
+            "式队列"
           ]
         },
         {
@@ -26444,24 +26947,6 @@
             "顺序存储结",
             "序存储结构",
             "个元素"
-          ]
-        },
-        {
-          "card": "循环链表与双向循环链表",
-          "score": 38,
-          "matchedTerms": [
-            "循环链表",
-            "next",
-            "循环单",
-            "环单链",
-            "单链表",
-            "尾指针",
-            "头结点",
-            "循环单链",
-            "环单链表",
-            "循环单链表",
-            "向循环",
-            "循环链"
           ]
         }
       ]
@@ -26553,6 +27038,15 @@
           ]
         },
         {
+          "card": "NAT 与端口映射",
+          "score": 6,
+          "matchedTerms": [
+            "地址",
+            "访问",
+            "的地址"
+          ]
+        },
+        {
           "card": "网络组成与功能",
           "score": 5,
           "matchedTerms": [
@@ -26561,13 +27055,6 @@
             "计算机系",
             "算机系统",
             "计算机系统"
-          ]
-        },
-        {
-          "card": "ICMP 差错报告与诊断",
-          "score": 4,
-          "matchedTerms": [
-            "请求"
           ]
         }
       ]
@@ -26604,6 +27091,15 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 7,
+          "matchedTerms": [
+            "改为",
+            "n−1",
+            "修改"
+          ]
+        },
+        {
           "card": "AVL 树平衡调整",
           "score": 5,
           "matchedTerms": [
@@ -26615,13 +27111,6 @@
           "score": 3,
           "matchedTerms": [
             "输出"
-          ]
-        },
-        {
-          "card": "外部排序与多路归并",
-          "score": 3,
-          "matchedTerms": [
-            "cpu"
           ]
         }
       ]
@@ -26704,6 +27193,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
+        {
           "card": "抽象数据类型 ADT",
           "score": 2,
           "matchedTerms": [
@@ -26715,13 +27211,6 @@
           "score": 2,
           "matchedTerms": [
             "交换"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 2,
-          "matchedTerms": [
-            "对应"
           ]
         }
       ]
@@ -26777,11 +27266,10 @@
           ]
         },
         {
-          "card": "顺序表按位查找与插删",
+          "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
-            "数组下标从",
-            "元素"
+            "a1"
           ]
         }
       ]
@@ -26876,6 +27364,17 @@
           ]
         },
         {
+          "card": "链式栈与链式队列",
+          "score": 15,
+          "matchedTerms": [
+            "存储结",
+            "储结构",
+            "存储结构",
+            "个结点",
+            "结点的"
+          ]
+        },
+        {
           "card": "循环队列判空与判满",
           "score": 15,
           "matchedTerms": [
@@ -26888,16 +27387,6 @@
             "顺序存",
             "序存储",
             "顺序存储"
-          ]
-        },
-        {
-          "card": "链式栈与链式队列",
-          "score": 14,
-          "matchedTerms": [
-            "存储结",
-            "储结构",
-            "存储结构",
-            "个结点"
           ]
         },
         {
@@ -26968,14 +27457,14 @@
           ]
         },
         {
-          "card": "树与森林的存储结构",
+          "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
-            "二叉树"
+            "a2"
           ]
         },
         {
-          "card": "线索二叉树",
+          "card": "树与森林的存储结构",
           "score": 4,
           "matchedTerms": [
             "二叉树"
@@ -27305,6 +27794,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
+          ]
+        },
+        {
           "card": "B 树与 B+ 树",
           "score": 6,
           "matchedTerms": [
@@ -27337,14 +27834,6 @@
           "matchedTerms": [
             "根结点",
             "结点的"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 2,
-          "matchedTerms": [
-            "关键字",
-            "的过程"
           ]
         }
       ]
@@ -27565,6 +28054,13 @@
             "存储空",
             "储空间",
             "存储空间"
+          ]
+        },
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
           ]
         },
         {
@@ -27972,6 +28468,20 @@
           "matchedTerms": [
             "不是"
           ]
+        },
+        {
+          "card": "指令系统与寻址方式",
+          "score": 2,
+          "matchedTerms": [
+            "长度"
+          ]
+        },
+        {
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 2,
+          "matchedTerms": [
+            "长度"
+          ]
         }
       ]
     },
@@ -28337,6 +28847,14 @@
           ]
         },
         {
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 6,
+          "matchedTerms": [
+            "字节",
+            "长度"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 4,
           "matchedTerms": [
@@ -28344,24 +28862,18 @@
           ]
         },
         {
+          "card": "定点补码加减与溢出",
+          "score": 4,
+          "matchedTerms": [
+            "表示",
+            "上限"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 4,
           "matchedTerms": [
             "字节"
-          ]
-        },
-        {
-          "card": "存储芯片容量扩展",
-          "score": 2,
-          "matchedTerms": [
-            "字节"
-          ]
-        },
-        {
-          "card": "定点补码加减与溢出",
-          "score": 2,
-          "matchedTerms": [
-            "表示"
           ]
         }
       ]
@@ -28743,19 +29255,20 @@
           ]
         },
         {
+          "card": "进程同步与信号量",
+          "score": 4,
+          "matchedTerms": [
+            "min",
+            "访问共"
+          ]
+        },
+        {
           "card": "虚拟内存与页面置换",
           "score": 3,
           "matchedTerms": [
             "最长时",
             "长时间",
             "最长时间"
-          ]
-        },
-        {
-          "card": "调度评价指标",
-          "score": 2,
-          "matchedTerms": [
-            "服务"
           ]
         }
       ]
@@ -29064,19 +29577,17 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 4,
           "matchedTerms": [
             "遍历"
-          ]
-        },
-        {
-          "card": "单链表与双链表",
-          "score": 3,
-          "matchedTerms": [
-            "物理地",
-            "理地址",
-            "物理地址"
           ]
         }
       ]
@@ -29093,6 +29604,14 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 7,
+          "matchedTerms": [
+            "an",
+            "改为"
+          ]
+        },
         {
           "card": "递归算法与递归树",
           "score": 5,
@@ -29120,13 +29639,6 @@
           "matchedTerms": [
             "访问"
           ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 1,
-          "matchedTerms": [
-            "机访问"
-          ]
         }
       ]
     },
@@ -29146,12 +29658,14 @@
       "candidates": [
         {
           "card": "单链表与双链表",
-          "score": 20,
+          "score": 25,
           "matchedTerms": [
             "循环链",
             "环链表",
             "循环链表",
+            "next",
             "删除",
+            "指针",
             "删除该结点",
             "头结点",
             "链表结",
@@ -29161,7 +29675,7 @@
         },
         {
           "card": "链式栈与链式队列",
-          "score": 13,
+          "score": 15,
           "matchedTerms": [
             "后一个",
             "一个结",
@@ -29169,7 +29683,29 @@
             "后一个结",
             "一个结点",
             "后一个结点",
+            "尾指针",
+            "结点的",
+            "循环链"
+          ]
+        },
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 10,
+          "matchedTerms": [
+            "an",
+            "next",
+            "个结点",
             "尾指针"
+          ]
+        },
+        {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 9,
+          "matchedTerms": [
+            "为空",
+            "next",
+            "循环链",
+            "后一个"
           ]
         },
         {
@@ -29179,23 +29715,6 @@
             "next",
             "尾指针",
             "头结点"
-          ]
-        },
-        {
-          "card": "树的基本术语与性质",
-          "score": 7,
-          "matchedTerms": [
-            "的基本",
-            "个结点",
-            "结点的",
-            "个结点的"
-          ]
-        },
-        {
-          "card": "递归算法与递归树",
-          "score": 5,
-          "matchedTerms": [
-            "at"
           ]
         }
       ]
@@ -29222,6 +29741,17 @@
           ]
         },
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 9,
+          "matchedTerms": [
+            "为空",
+            "初始",
+            "队时必",
+            "次入队",
+            "出队时"
+          ]
+        },
+        {
           "card": "栈与队列",
           "score": 6,
           "matchedTerms": [
@@ -29230,9 +29760,10 @@
         },
         {
           "card": "链式栈与链式队列",
-          "score": 4,
+          "score": 5,
           "matchedTerms": [
-            "出队"
+            "出队",
+            "的队列"
           ]
         },
         {
@@ -29240,13 +29771,6 @@
           "score": 3,
           "matchedTerms": [
             "因为"
-          ]
-        },
-        {
-          "card": "归并排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "得到"
           ]
         }
       ]
@@ -29303,10 +29827,10 @@
           ]
         },
         {
-          "card": "链式栈与链式队列",
+          "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
-            "式存储"
+            "a2"
           ]
         }
       ]
@@ -29367,17 +29891,17 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "线索二叉树",
           "score": 4,
           "matchedTerms": [
             "二叉树"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 4,
-          "matchedTerms": [
-            "遍历"
           ]
         }
       ]
@@ -29413,6 +29937,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
+        {
           "card": "树与森林的存储结构",
           "score": 4,
           "matchedTerms": [
@@ -29433,13 +29964,6 @@
             "路径长",
             "径长度",
             "路径长度"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 2,
-          "matchedTerms": [
-            "长度为"
           ]
         }
       ]
@@ -29493,10 +30017,10 @@
           ]
         },
         {
-          "card": "线索二叉树",
+          "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
-            "二叉树"
+            "a1"
           ]
         }
       ]
@@ -29533,6 +30057,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "算法五个特性",
           "score": 3,
           "matchedTerms": [
@@ -29541,13 +30072,6 @@
         },
         {
           "card": "归并排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "得到"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
           "score": 2,
           "matchedTerms": [
             "得到"
@@ -29567,6 +30091,14 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 6,
+          "matchedTerms": [
+            "a2",
+            "修改"
+          ]
+        },
         {
           "card": "关键路径与 AOE 网",
           "score": 5,
@@ -29606,14 +30138,6 @@
             "短路径",
             "最短路径"
           ]
-        },
-        {
-          "card": "哈夫曼树与带权路径长度",
-          "score": 2,
-          "matchedTerms": [
-            "路径长",
-            "个最小"
-          ]
         }
       ]
     },
@@ -29648,6 +30172,16 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 10,
+          "matchedTerms": [
+            "a1",
+            "每个结",
+            "个结点",
+            "每个结点"
+          ]
+        },
+        {
           "card": "树的基本术语与性质",
           "score": 5,
           "matchedTerms": [
@@ -29674,15 +30208,6 @@
             "有两个",
             "个孩子",
             "的结点"
-          ]
-        },
-        {
-          "card": "稀疏矩阵三元组表示",
-          "score": 3,
-          "matchedTerms": [
-            "元素数",
-            "素数量",
-            "元素数量"
           ]
         }
       ]
@@ -29757,6 +30282,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 4,
           "matchedTerms": [
@@ -29785,13 +30318,6 @@
           "score": 2,
           "matchedTerms": [
             "得到"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 2,
-          "matchedTerms": [
-            "插入"
           ]
         }
       ]
@@ -29874,6 +30400,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "基数排序与桶排序思想",
           "score": 2,
           "matchedTerms": [
@@ -29950,6 +30483,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 6,
+          "matchedTerms": [
+            "a2",
+            "修改"
+          ]
+        },
+        {
           "card": "空间换时间与辅助数组",
           "score": 4,
           "matchedTerms": [
@@ -29977,13 +30518,6 @@
           "score": 2,
           "matchedTerms": [
             "标记"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 1,
-          "matchedTerms": [
-            "地址的"
           ]
         }
       ]
@@ -30102,6 +30636,13 @@
         },
         {
           "card": "线性表与顺序表",
+          "score": 1,
+          "matchedTerms": [
+            "个数据"
+          ]
+        },
+        {
+          "card": "循环链式队列与空闲结点复用",
           "score": 1,
           "matchedTerms": [
             "个数据"
@@ -30410,11 +30951,12 @@
       "candidates": [
         {
           "card": "磁盘结构与平均访问时间",
-          "score": 15,
+          "score": 17,
           "matchedTerms": [
             "磁盘访",
             "盘访问",
             "磁盘访问",
+            "磁道",
             "寻道时",
             "道时间",
             "寻道时间"
@@ -30975,6 +31517,13 @@
           ]
         },
         {
+          "card": "磁盘调度 FCFS 与 SSTF",
+          "score": 2,
+          "matchedTerms": [
+            "请求"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 2,
           "matchedTerms": [
@@ -30986,13 +31535,6 @@
           "score": 2,
           "matchedTerms": [
             "请求"
-          ]
-        },
-        {
-          "card": "进程调度算法",
-          "score": 2,
-          "matchedTerms": [
-            "等待"
           ]
         }
       ]
@@ -31288,6 +31830,14 @@
           ]
         },
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
+          ]
+        },
+        {
           "card": "AVL 树平衡调整",
           "score": 5,
           "matchedTerms": [
@@ -31307,13 +31857,6 @@
           "matchedTerms": [
             "标记",
             "对应"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 1,
-          "matchedTerms": [
-            "的映射"
           ]
         }
       ]
@@ -31337,6 +31880,13 @@
             "的值",
             "因为",
             "访问"
+          ]
+        },
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 2,
+          "matchedTerms": [
+            "修改"
           ]
         },
         {
@@ -31430,6 +31980,20 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
+        {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 4,
+          "matchedTerms": [
+            "为空"
+          ]
+        },
+        {
           "card": "归并排序与稳定性",
           "score": 2,
           "matchedTerms": [
@@ -31448,20 +32012,6 @@
           "score": 2,
           "matchedTerms": [
             "交换"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "得到"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 2,
-          "matchedTerms": [
-            "对应"
           ]
         }
       ]
@@ -31548,6 +32098,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 5,
           "matchedTerms": [
@@ -31575,13 +32133,6 @@
         },
         {
           "card": "归并排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "得到"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
           "score": 2,
           "matchedTerms": [
             "得到"
@@ -31696,6 +32247,14 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "个结点",
+            "n−1"
+          ]
+        },
+        {
           "card": "二叉树遍历与性质",
           "score": 4,
           "matchedTerms": [
@@ -31709,15 +32268,6 @@
           "score": 4,
           "matchedTerms": [
             "二叉树"
-          ]
-        },
-        {
-          "card": "哈夫曼树与带权路径长度",
-          "score": 3,
-          "matchedTerms": [
-            "的二叉",
-            "二叉树",
-            "的二叉树"
           ]
         }
       ]
@@ -32203,6 +32753,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
+        {
           "card": "快速排序分区过程",
           "score": 4,
           "matchedTerms": [
@@ -32221,13 +32778,6 @@
           "score": 4,
           "matchedTerms": [
             "时间"
-          ]
-        },
-        {
-          "card": "外部排序与多路归并",
-          "score": 3,
-          "matchedTerms": [
-            "cpu"
           ]
         }
       ]
@@ -32979,8 +33529,17 @@
       "answer": "A",
       "analysis": "2022-第29题-解析 缺页异常 需要从磁盘调页到内存中，将新调入的页与页框建立对应关系，并修改 该页的存在位，B、C、D 正确：如果内存中有空闲页框，就不需要淘汰其他页，A 错误。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "整数溢出检测与异常处理",
+          "score": 12,
+          "matchedTerms": [
+            "异常处",
+            "常处理",
+            "异常处理"
+          ]
+        },
         {
           "card": "BCD 码与字符编码",
           "score": 7,
@@ -33012,13 +33571,6 @@
           "score": 3,
           "matchedTerms": [
             "处理"
-          ]
-        },
-        {
-          "card": "流水线吞吐率与加速比",
-          "score": 1,
-          "matchedTerms": [
-            "不一定"
           ]
         }
       ]
@@ -33056,6 +33608,20 @@
           "score": 2,
           "matchedTerms": [
             "通常要"
+          ]
+        },
+        {
+          "card": "指令系统与寻址方式",
+          "score": 2,
+          "matchedTerms": [
+            "长度"
+          ]
+        },
+        {
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 2,
+          "matchedTerms": [
+            "长度"
           ]
         }
       ]
@@ -33431,6 +33997,13 @@
           ]
         },
         {
+          "card": "磁盘调度 FCFS 与 SSTF",
+          "score": 2,
+          "matchedTerms": [
+            "请求"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 2,
           "matchedTerms": [
@@ -33439,13 +34012,6 @@
         },
         {
           "card": "伙伴系统与内存回收",
-          "score": 2,
-          "matchedTerms": [
-            "请求"
-          ]
-        },
-        {
-          "card": "连续内存分配与动态分区",
           "score": 2,
           "matchedTerms": [
             "请求"
@@ -33490,14 +34056,14 @@
           ]
         },
         {
-          "card": "伙伴系统与内存回收",
+          "card": "磁盘调度 FCFS 与 SSTF",
           "score": 2,
           "matchedTerms": [
             "请求"
           ]
         },
         {
-          "card": "连续内存分配与动态分区",
+          "card": "伙伴系统与内存回收",
           "score": 2,
           "matchedTerms": [
             "请求"
@@ -33855,14 +34421,14 @@
           ]
         },
         {
-          "card": "递归算法与递归树",
-          "score": 2,
+          "card": "单链表重排与原地逆置",
+          "score": 4,
           "matchedTerms": [
-            "时间"
+            "a1"
           ]
         },
         {
-          "card": "空间换时间与辅助数组",
+          "card": "递归算法与递归树",
           "score": 2,
           "matchedTerms": [
             "时间"
@@ -33973,14 +34539,35 @@
       "candidates": [
         {
           "card": "链式栈与链式队列",
-          "score": 12,
+          "score": 13,
           "matchedTerms": [
             "后一个",
             "一个结",
             "个结点",
             "后一个结",
             "一个结点",
-            "后一个结点"
+            "后一个结点",
+            "结点的"
+          ]
+        },
+        {
+          "card": "单链表与双链表",
+          "score": 12,
+          "matchedTerms": [
+            "双链表",
+            "next",
+            "指针",
+            "尾结点"
+          ]
+        },
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 12,
+          "matchedTerms": [
+            "an",
+            "next",
+            "prev",
+            "个结点"
           ]
         },
         {
@@ -33996,31 +34583,12 @@
           ]
         },
         {
-          "card": "单链表头插法与尾插法",
-          "score": 7,
+          "card": "循环队列判空与判满",
+          "score": 8,
           "matchedTerms": [
+            "p-",
             "next",
-            "新结点",
-            "结点之",
-            "点之后",
-            "结点之后"
-          ]
-        },
-        {
-          "card": "单链表与双链表",
-          "score": 7,
-          "matchedTerms": [
-            "双链表",
-            "尾结点"
-          ]
-        },
-        {
-          "card": "十字链表与邻接多重表",
-          "score": 6,
-          "matchedTerms": [
-            "结点同",
-            "点同时",
-            "结点同时"
+            "指向"
           ]
         }
       ]
@@ -34129,6 +34697,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
+        {
           "card": "快速排序分区过程",
           "score": 4,
           "matchedTerms": [
@@ -34140,15 +34715,6 @@
           "score": 4,
           "matchedTerms": [
             "平均"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 3,
-          "matchedTerms": [
-            "路径长",
-            "径长度",
-            "路径长度"
           ]
         }
       ]
@@ -34658,22 +35224,19 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "归并排序与稳定性",
           "score": 4,
           "matchedTerms": [
             "得到",
             "子序列",
             "的数据"
-          ]
-        },
-        {
-          "card": "直接插入与折半插入排序",
-          "score": 4,
-          "matchedTerms": [
-            "子序列",
-            "序列的",
-            "的正确",
-            "子序列的"
           ]
         }
       ]
@@ -34797,6 +35360,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
+        {
           "card": "归并排序与稳定性",
           "score": 2,
           "matchedTerms": [
@@ -34808,13 +35378,6 @@
           "score": 2,
           "matchedTerms": [
             "十进制"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "得到"
           ]
         }
       ]
@@ -35113,14 +35676,16 @@
           ]
         },
         {
-          "card": "递归算法与递归树",
-          "score": 2,
+          "card": "循环链式队列与空闲结点复用",
+          "score": 3,
           "matchedTerms": [
-            "时间"
+            "一个数",
+            "个数据",
+            "一个数据"
           ]
         },
         {
-          "card": "空间换时间与辅助数组",
+          "card": "递归算法与递归树",
           "score": 2,
           "matchedTerms": [
             "时间"
@@ -35259,12 +35824,12 @@
           ]
         },
         {
-          "card": "存储器层次与主存组织",
+          "card": "磁盘结构与平均访问时间",
           "score": 3,
           "matchedTerms": [
-            "系统通",
-            "统通过",
-            "系统通过"
+            "驱动程",
+            "动程序",
+            "驱动程序"
           ]
         }
       ]
@@ -35443,6 +36008,15 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "整数溢出检测与异常处理",
+          "score": 12,
+          "matchedTerms": [
+            "异常处",
+            "常处理",
+            "异常处理"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 12,
           "matchedTerms": [
@@ -35472,14 +36046,6 @@
           "score": 7,
           "matchedTerms": [
             "cpu"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 7,
-          "matchedTerms": [
-            "cpu",
-            "执行"
           ]
         }
       ]
@@ -35534,11 +36100,12 @@
           ]
         },
         {
-          "card": "立即数与直接间接寻址",
+          "card": "定点补码加减与溢出",
           "score": 3,
           "matchedTerms": [
-            "地址的",
-            "方式的"
+            "函数返",
+            "数返回",
+            "函数返回"
           ]
         }
       ]
@@ -35648,10 +36215,10 @@
           ]
         },
         {
-          "card": "流水线结构冒险与数据冒险",
+          "card": "磁盘结构与平均访问时间",
           "score": 1,
           "matchedTerms": [
-            "的情况"
+            "的转换"
           ]
         }
       ]
@@ -35775,17 +36342,17 @@
           ]
         },
         {
+          "card": "进程同步与信号量",
+          "score": 1,
+          "matchedTerms": [
+            "=1"
+          ]
+        },
+        {
           "card": "进程状态与 PCB",
           "score": 1,
           "matchedTerms": [
             "所需的"
-          ]
-        },
-        {
-          "card": "目录结构与文件路径",
-          "score": 1,
-          "matchedTerms": [
-            "的文件"
           ]
         }
       ]
@@ -35922,17 +36489,18 @@
           ]
         },
         {
+          "card": "进程同步与信号量",
+          "score": 5,
+          "matchedTerms": [
+            "等待",
+            "=1"
+          ]
+        },
+        {
           "card": "改进型 CLOCK 页面置换",
           "score": 4,
           "matchedTerms": [
             "再次"
-          ]
-        },
-        {
-          "card": "进程同步与信号量",
-          "score": 4,
-          "matchedTerms": [
-            "等待"
           ]
         }
       ]
@@ -35956,6 +36524,13 @@
           "score": 1,
           "matchedTerms": [
             "过程中"
+          ]
+        },
+        {
+          "card": "进程同步与信号量",
+          "score": 1,
+          "matchedTerms": [
+            "=1"
           ]
         }
       ]
@@ -36256,10 +36831,10 @@
           ]
         },
         {
-          "card": "最小生成树与最短路径",
+          "card": "循环链式队列与空闲结点复用",
           "score": 2,
           "matchedTerms": [
-            "排序"
+            "初始"
           ]
         }
       ]
@@ -36348,6 +36923,15 @@
           ]
         },
         {
+          "card": "IPv4 子网划分与 CIDR",
+          "score": 7,
+          "matchedTerms": [
+            "h2",
+            "h3",
+            "地址是"
+          ]
+        },
+        {
           "card": "以太网帧与 MAC 地址",
           "score": 6,
           "matchedTerms": [
@@ -36367,13 +36951,6 @@
           "score": 4,
           "matchedTerms": [
             "同一"
-          ]
-        },
-        {
-          "card": "IP 地址与子网划分",
-          "score": 4,
-          "matchedTerms": [
-            "地址"
           ]
         }
       ]
@@ -36400,6 +36977,14 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 5,
+          "matchedTerms": [
+            "改为",
+            "修改"
+          ]
+        },
+        {
           "card": "AVL 树平衡调整",
           "score": 5,
           "matchedTerms": [
@@ -36418,13 +37003,6 @@
           "score": 2,
           "matchedTerms": [
             "交换"
-          ]
-        },
-        {
-          "card": "十字链表与邻接多重表",
-          "score": 2,
-          "matchedTerms": [
-            "同时进入"
           ]
         }
       ]
@@ -36509,6 +37087,13 @@
           ]
         },
         {
+          "card": "磁盘调度 FCFS 与 SSTF",
+          "score": 2,
+          "matchedTerms": [
+            "请求"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 2,
           "matchedTerms": [
@@ -36517,13 +37102,6 @@
         },
         {
           "card": "伙伴系统与内存回收",
-          "score": 2,
-          "matchedTerms": [
-            "请求"
-          ]
-        },
-        {
-          "card": "连续内存分配与动态分区",
           "score": 2,
           "matchedTerms": [
             "请求"
@@ -36545,7 +37123,7 @@
       "candidates": [
         {
           "card": "链式栈与链式队列",
-          "score": 22,
+          "score": 23,
           "matchedTerms": [
             "最后一",
             "后一个",
@@ -36559,6 +37137,21 @@
             "在链表",
             "链表头",
             "表头部"
+          ]
+        },
+        {
+          "card": "单链表与双链表",
+          "score": 18,
+          "matchedTerms": [
+            "单链表",
+            "next",
+            "删除",
+            "指针",
+            "头结点",
+            "结点不",
+            "链表结",
+            "表结点",
+            "链表结点"
           ]
         },
         {
@@ -36579,19 +37172,6 @@
           ]
         },
         {
-          "card": "单链表与双链表",
-          "score": 13,
-          "matchedTerms": [
-            "单链表",
-            "删除",
-            "头结点",
-            "结点不",
-            "链表结",
-            "表结点",
-            "链表结点"
-          ]
-        },
-        {
           "card": "循环链表与双向循环链表",
           "score": 12,
           "matchedTerms": [
@@ -36604,12 +37184,17 @@
           ]
         },
         {
-          "card": "红黑树性质与高度",
-          "score": 6,
+          "card": "循环链式队列与空闲结点复用",
+          "score": 12,
           "matchedTerms": [
-            "结点不",
-            "插入",
-            "删除"
+            "p-",
+            "next",
+            "最后一",
+            "后一个",
+            "最后一个",
+            "一个有",
+            "个有效",
+            "一个有效"
           ]
         }
       ]
@@ -36893,10 +37478,10 @@
           ]
         },
         {
-          "card": "顺序表按位查找与插删",
-          "score": 2,
+          "card": "单链表与双链表",
+          "score": 3,
           "matchedTerms": [
-            "元素"
+            "next"
           ]
         }
       ]
@@ -37085,6 +37670,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
+        {
           "card": "B 树与 B+ 树",
           "score": 4,
           "matchedTerms": [
@@ -37097,13 +37689,6 @@
           "score": 2,
           "matchedTerms": [
             "删除"
-          ]
-        },
-        {
-          "card": "归并排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "得到"
           ]
         }
       ]
@@ -37426,6 +38011,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 3,
           "matchedTerms": [
@@ -37446,13 +38038,6 @@
           "matchedTerms": [
             "循环移",
             "实现的"
-          ]
-        },
-        {
-          "card": "栈与队列",
-          "score": 2,
-          "matchedTerms": [
-            "模拟"
           ]
         }
       ]
@@ -37849,12 +38434,12 @@
           ]
         },
         {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 11,
+          "card": "整数溢出检测与异常处理",
+          "score": 12,
           "matchedTerms": [
-            "cpu",
-            "执行时",
-            "执行"
+            "异常处",
+            "常处理",
+            "异常处理"
           ]
         }
       ]
@@ -37929,7 +38514,7 @@
       "candidates": [
         {
           "card": "指令系统与寻址方式",
-          "score": 13,
+          "score": 14,
           "matchedTerms": [
             "寄存器",
             "pc",
@@ -37938,7 +38523,8 @@
             "址寄存",
             "基址寄存",
             "址寄存器",
-            "基址寄存器"
+            "基址寄存器",
+            "下一条"
           ]
         },
         {
@@ -38084,8 +38670,17 @@
       "answer": "B",
       "analysis": "2024-第28题-解析 I. 进程 P 的地址空间：在同一进程中的所有线程共享该进程的地址空间。这意味着，线程 Ta 和 Tb 可以访问进程 P 的全局变量，因为这些变量存储在进程的地址空间中。此外，如果线程 T 在堆上分配了内存，那么线程 T 和 Tb 也可以访问这些内存，因为堆是存储在进程的地址空间中的。 II. 线程 T 的栈：每个线程都有自己的栈，这是线程的私有资源，不会被其他线程共享。栈用于存储函数调用的局部变量和返回地址。由于每个线程可能有不同的函数调用序列，因此每个线程需要由自己的栈，因此，线程 Ta 和 Tb 不能访问线程 T 的栈。 III. 文件描述符 fd：同进程中的所有线程共享该进程打开的文件描述符。文件描述符是一个整数，用于表示进程打开的文件。当线程打开一个文件时，操作系统会返回一个文件描述符，然后线程 T、T 和 Tb 都可以使用这个文件描述符来读写该文件，这是因为，尽管每个线程有自己的栈，但是它们共享其余的进程资源，包括文件描述符。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 12,
+          "matchedTerms": [
+            "返回地",
+            "回地址",
+            "返回地址"
+          ]
+        },
         {
           "card": "流水线结构冒险与数据冒险",
           "score": 3,
@@ -38114,13 +38709,6 @@
           "score": 2,
           "matchedTerms": [
             "表示"
-          ]
-        },
-        {
-          "card": "计算机系统层次结构",
-          "score": 2,
-          "matchedTerms": [
-            "同一"
           ]
         }
       ]
@@ -38334,6 +38922,13 @@
           ]
         },
         {
+          "card": "磁盘结构与平均访问时间",
+          "score": 2,
+          "matchedTerms": [
+            "磁道"
+          ]
+        },
+        {
           "card": "中断屏蔽与优先级",
           "score": 1,
           "matchedTerms": [
@@ -38415,19 +39010,20 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 7,
+          "matchedTerms": [
+            "物理地址",
+            "的物理",
+            "在同一",
+            "同一个"
+          ]
+        },
+        {
           "card": "索引结点 inode 与文件控制块",
           "score": 6,
           "matchedTerms": [
             "直接"
-          ]
-        },
-        {
-          "card": "页表结构与地址转换",
-          "score": 6,
-          "matchedTerms": [
-            "物理地址",
-            "的物理",
-            "在同一"
           ]
         },
         {
@@ -38560,10 +39156,11 @@
       "candidates": [
         {
           "card": "进程同步与信号量",
-          "score": 6,
+          "score": 7,
           "matchedTerms": [
             "等待",
-            "通常为"
+            "通常为",
+            "=1"
           ]
         },
         {
@@ -38582,17 +39179,17 @@
           ]
         },
         {
+          "card": "磁盘调度 FCFS 与 SSTF",
+          "score": 2,
+          "matchedTerms": [
+            "请求"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 2,
           "matchedTerms": [
             "服务"
-          ]
-        },
-        {
-          "card": "伙伴系统与内存回收",
-          "score": 2,
-          "matchedTerms": [
-            "请求"
           ]
         }
       ]
@@ -38648,6 +39245,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "磁盘调度 FCFS 与 SSTF",
+          "score": 2,
+          "matchedTerms": [
+            "请求"
+          ]
+        },
+        {
           "card": "磁盘调度与 I/O",
           "score": 2,
           "matchedTerms": [
@@ -38673,13 +39277,6 @@
           "score": 2,
           "matchedTerms": [
             "请求"
-          ]
-        },
-        {
-          "card": "系统调用参数传递与返回",
-          "score": 2,
-          "matchedTerms": [
-            "完成后"
           ]
         }
       ]
@@ -38748,6 +39345,18 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "IPv4 子网划分与 CIDR",
+          "score": 16,
+          "matchedTerms": [
+            "的地址",
+            "h1",
+            "h2",
+            "h3",
+            "h4",
+            "地址是"
+          ]
+        },
+        {
           "card": "IPv6 地址与首部特点",
           "score": 11,
           "matchedTerms": [
@@ -38783,14 +39392,6 @@
           "matchedTerms": [
             "初始",
             "h2"
-          ]
-        },
-        {
-          "card": "DNS 与 HTTP",
-          "score": 5,
-          "matchedTerms": [
-            "地址",
-            "解析"
           ]
         }
       ]
@@ -38877,6 +39478,15 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 11,
+          "matchedTerms": [
+            "a1",
+            "a2",
+            "改为"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 10,
           "matchedTerms": [
@@ -38902,13 +39512,6 @@
             "存储单",
             "储单元",
             "存储单元"
-          ]
-        },
-        {
-          "card": "单链表头插法与尾插法",
-          "score": 4,
-          "matchedTerms": [
-            "式存储"
           ]
         }
       ]
@@ -38992,10 +39595,29 @@
           ]
         },
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 9,
+          "matchedTerms": [
+            "为空",
+            "初始",
+            "一个数",
+            "个数据",
+            "一个数据"
+          ]
+        },
+        {
           "card": "AVL 树平衡调整",
           "score": 5,
           "matchedTerms": [
             "ll"
+          ]
+        },
+        {
+          "card": "单链表与双链表",
+          "score": 3,
+          "matchedTerms": [
+            "释放",
+            "时必须"
           ]
         },
         {
@@ -39005,21 +39627,6 @@
             "分组进",
             "组进行",
             "分组进行"
-          ]
-        },
-        {
-          "card": "线性表与顺序表",
-          "score": 3,
-          "matchedTerms": [
-            "写入",
-            "个数据"
-          ]
-        },
-        {
-          "card": "单链表与双链表",
-          "score": 2,
-          "matchedTerms": [
-            "释放"
           ]
         }
       ]
@@ -39212,6 +39819,14 @@
           ]
         },
         {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 6,
+          "matchedTerms": [
+            "为空",
+            "初始"
+          ]
+        },
+        {
           "card": "树的基本术语与性质",
           "score": 4,
           "matchedTerms": [
@@ -39223,15 +39838,6 @@
           "score": 3,
           "matchedTerms": [
             "+f"
-          ]
-        },
-        {
-          "card": "稀疏矩阵三元组表示",
-          "score": 3,
-          "matchedTerms": [
-            "元素数",
-            "素数量",
-            "元素数量"
           ]
         }
       ]
@@ -39406,6 +40012,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
+        {
           "card": "归并排序与稳定性",
           "score": 4,
           "matchedTerms": [
@@ -39415,13 +40028,6 @@
         },
         {
           "card": "树与森林的存储结构",
-          "score": 4,
-          "matchedTerms": [
-            "二叉树"
-          ]
-        },
-        {
-          "card": "线索二叉树",
           "score": 4,
           "matchedTerms": [
             "二叉树"
@@ -39863,6 +40469,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
+        {
           "card": "算法五个特性",
           "score": 3,
           "matchedTerms": [
@@ -39890,13 +40503,6 @@
           "score": 2,
           "matchedTerms": [
             "得到"
-          ]
-        },
-        {
-          "card": "最小生成树与最短路径",
-          "score": 1,
-          "matchedTerms": [
-            "−1"
           ]
         }
       ]
@@ -39948,6 +40554,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a2"
+          ]
+        },
         {
           "card": "最小正整数缺失值查找",
           "score": 4,
@@ -40213,6 +40826,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "a1"
+          ]
+        },
+        {
           "card": "空间换时间与辅助数组",
           "score": 4,
           "matchedTerms": [
@@ -40231,13 +40851,6 @@
           "score": 2,
           "matchedTerms": [
             "标记"
-          ]
-        },
-        {
-          "card": "归并排序与稳定性",
-          "score": 1,
-          "matchedTerms": [
-            "的数据"
           ]
         }
       ]
@@ -40429,17 +41042,18 @@
           ]
         },
         {
+          "card": "整数溢出检测与异常处理",
+          "score": 6,
+          "matchedTerms": [
+            "x86",
+            "int"
+          ]
+        },
+        {
           "card": "中断响应与异常处理",
           "score": 6,
           "matchedTerms": [
             "控制"
-          ]
-        },
-        {
-          "card": "流水线结构冒险与数据冒险",
-          "score": 5,
-          "matchedTerms": [
-            "war"
           ]
         }
       ]
@@ -40489,10 +41103,11 @@
           ]
         },
         {
-          "card": "Cache 直接映射与组相联",
+          "card": "指令系统与寻址方式",
           "score": 3,
           "matchedTerms": [
-            "的位置"
+            "长度",
+            "的操作"
           ]
         }
       ]
@@ -40557,20 +41172,20 @@
       "candidates": [
         {
           "card": "指令系统与寻址方式",
-          "score": 24,
+          "score": 27,
           "matchedTerms": [
             "寻址方式",
             "直接",
             "间接",
             "的计算",
+            "长度",
             "指令系",
             "令系统",
             "指令系统",
             "寻址方",
             "址方式",
-            "间接寻",
-            "接寻址",
-            "间接寻址"
+            "条指令",
+            "间接寻"
           ]
         },
         {
@@ -40840,6 +41455,20 @@
           ]
         },
         {
+          "card": "磁盘结构与平均访问时间",
+          "score": 11,
+          "matchedTerms": [
+            "ssd",
+            "扇区",
+            "寻道时",
+            "道时间",
+            "寻道时间",
+            "无机械",
+            "控制器",
+            "扇区的"
+          ]
+        },
+        {
           "card": "冯·诺依曼结构与存储程序",
           "score": 10,
           "matchedTerms": [
@@ -40847,18 +41476,6 @@
             "存储空",
             "储空间",
             "存储空间"
-          ]
-        },
-        {
-          "card": "磁盘结构与平均访问时间",
-          "score": 8,
-          "matchedTerms": [
-            "ssd",
-            "寻道时",
-            "道时间",
-            "寻道时间",
-            "无机械",
-            "控制器"
           ]
         },
         {
@@ -40915,6 +41532,13 @@
           ]
         },
         {
+          "card": "进程同步与信号量",
+          "score": 1,
+          "matchedTerms": [
+            "=1"
+          ]
+        },
+        {
           "card": "文件共享与保护",
           "score": 1,
           "matchedTerms": [
@@ -40935,6 +41559,21 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "进程同步与信号量",
+          "score": 4,
+          "matchedTerms": [
+            "min",
+            "=1"
+          ]
+        },
+        {
+          "card": "哲学家进餐与死锁避免",
+          "score": 3,
+          "matchedTerms": [
+            "min"
+          ]
+        },
         {
           "card": "死锁必要条件与处理",
           "score": 2,
@@ -40971,17 +41610,18 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "进程同步与信号量",
+          "score": 5,
+          "matchedTerms": [
+            "等待",
+            "=1"
+          ]
+        },
+        {
           "card": "改进型 CLOCK 页面置换",
           "score": 4,
           "matchedTerms": [
             "再次"
-          ]
-        },
-        {
-          "card": "进程同步与信号量",
-          "score": 4,
-          "matchedTerms": [
-            "等待"
           ]
         },
         {
@@ -41034,6 +41674,13 @@
           ]
         },
         {
+          "card": "磁盘调度 FCFS 与 SSTF",
+          "score": 2,
+          "matchedTerms": [
+            "请求"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 2,
           "matchedTerms": [
@@ -41052,13 +41699,6 @@
           "score": 2,
           "matchedTerms": [
             "请求"
-          ]
-        },
-        {
-          "card": "改进型 CLOCK 页面置换",
-          "score": 1,
-          "matchedTerms": [
-            "过程中"
           ]
         }
       ]
@@ -41107,17 +41747,19 @@
           ]
         },
         {
+          "card": "磁盘调度 FCFS 与 SSTF",
+          "score": 3,
+          "matchedTerms": [
+            "重新计",
+            "新计算",
+            "重新计算"
+          ]
+        },
+        {
           "card": "虚拟内存与页面置换",
           "score": 2,
           "matchedTerms": [
             "区分"
-          ]
-        },
-        {
-          "card": "分页与分段的区别",
-          "score": 1,
-          "matchedTerms": [
-            "段可能"
           ]
         }
       ]
@@ -41137,6 +41779,21 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "进程同步与信号量",
+          "score": 4,
+          "matchedTerms": [
+            "min",
+            "=1"
+          ]
+        },
+        {
+          "card": "哲学家进餐与死锁避免",
+          "score": 3,
+          "matchedTerms": [
+            "min"
+          ]
+        },
+        {
           "card": "死锁必要条件与处理",
           "score": 1,
           "matchedTerms": [
@@ -41155,13 +41812,6 @@
           "score": 1,
           "matchedTerms": [
             "的数据"
-          ]
-        },
-        {
-          "card": "信号与异步事件通知",
-          "score": 1,
-          "matchedTerms": [
-            "发送中"
           ]
         }
       ]
@@ -41188,6 +41838,13 @@
           ]
         },
         {
+          "card": "磁盘调度 FCFS 与 SSTF",
+          "score": 2,
+          "matchedTerms": [
+            "请求"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 2,
           "matchedTerms": [
@@ -41206,13 +41863,6 @@
           "score": 2,
           "matchedTerms": [
             "请求"
-          ]
-        },
-        {
-          "card": "操作系统功能与特征",
-          "score": 1,
-          "matchedTerms": [
-            "服务的"
           ]
         }
       ]
@@ -41513,6 +42163,13 @@
           "matchedTerms": [
             "释放"
           ]
+        },
+        {
+          "card": "循环链式队列与空闲结点复用",
+          "score": 2,
+          "matchedTerms": [
+            "初始"
+          ]
         }
       ]
     },
@@ -41544,6 +42201,13 @@
           ]
         },
         {
+          "card": "单链表重排与原地逆置",
+          "score": 4,
+          "matchedTerms": [
+            "an"
+          ]
+        },
+        {
           "card": "单链表头插法与尾插法",
           "score": 2,
           "matchedTerms": [
@@ -41551,17 +42215,10 @@
           ]
         },
         {
-          "card": "二叉搜索树查找与删除",
+          "card": "单链表与双链表",
           "score": 2,
           "matchedTerms": [
-            "直接调"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 2,
-          "matchedTerms": [
-            "执行"
+            "指针"
           ]
         }
       ]
@@ -41679,32 +42336,6 @@
         "文件物理分配方式",
         "文件逻辑结构与物理结构"
       ],
-      "confidence": "no-candidate",
-      "candidates": []
-    },
-    {
-      "year": 2013,
-      "index": 12,
-      "id": 200,
-      "subject": "数据结构",
-      "type": "选择题",
-      "question": "2013-第12题-题目 某计算机主频为 1.2GHz，其指令分为 4 类，它们在基准程序中所占比例及 CPI 如下表所示。 指令类型 所占比例 CPI A 50% 2 B 20% 3 C 10% 4 D 20% 5 该机的 MIPS 数是（ ）。 A. 100 B. 200 C. 400 D. 600",
-      "answer": "C",
-      "analysis": "2013-第12题-解析 基准程序的 CPI= 2x0.5 + 3x0.2 + 4x0.1 + 5x0.2 = 3。计算机的主频为 1.2 GHz, 即 1200 MHz，故该机器的 MIPS = 1200/3= 400。",
-      "existingCards": [],
-      "confidence": "no-candidate",
-      "candidates": []
-    },
-    {
-      "year": 2013,
-      "index": 14,
-      "id": 202,
-      "subject": "数据结构",
-      "type": "选择题",
-      "question": "2013-第14题-题目 某字长为 8 位的计算机中，已知整型变量 x、y 的机器数分别为 [x]补=11110100 ， [y]补=10110000 。若整型变量 z=2x+y/2，则 z 的机器数为（ ）。 A. 11000000 B. 00100100 C. 10101010 D. 溢出",
-      "answer": "A",
-      "analysis": "2013-第14题-解析 x*2，将 x 算术左移一位为 1 1101000；y/2，将 y 算术右移一位为 1 1011000, 均无溢出或丢失精度。补码相加为 1 1101000 + 1 1011000 = 1 1000000, 亦无溢出。",
-      "existingCards": [],
       "confidence": "no-candidate",
       "candidates": []
     },
