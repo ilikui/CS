@@ -3578,7 +3578,7 @@
       "analysis": "拓扑序的每一个位置都必须从当前入度为0的顶点中选择。若某轮有两个或更多候选，任选其中不同顶点都会形成不同的拓扑前缀，因此序列不唯一；若无候选则剩余子图有环。每轮唯一选择是拓扑序唯一的充要判据。邻接矩阵下初始化入度O(V²)，每轮扫描顶点和一行矩阵，V轮总计O(V²)。",
       "code": "int uniquely(MGraph G) {\\n    int n = G.numVertices;\\n    int inDegree[MAXV] = {0};\\n    for (int i = 0; i < n; ++i)\\n        for (int j = 0; j < n; ++j)\\n            if (G.Edge[i][j] != 0) ++inDegree[j];\\n    for (int k = 0; k < n; ++k) {\\n        int target = -1;\\n        for (int i = 0; i < n; ++i) {\\n            if (inDegree[i] == 0) {\\n                if (target != -1) return 0; // 本轮不唯一\\n                target = i;\\n            }\\n        }\\n        if (target == -1) return 0; // 有环\\n        inDegree[target] = -1;       // 标记删除\\n        for (int j = 0; j < n; ++j)\\n            if (G.Edge[target][j] != 0) --inDegree[j];\\n    }\\n    return 1;\\n}",
       "correction": "判定唯一性不能只看图是否为DAG；必须每一轮都只有一个零入度候选。邻接矩阵中非零表示有边；若题设使用带权矩阵，仍应按非零判断边存在，而不是累加权值。",
-      "verification": "题干结构、函数要求与原卷回忆版PDF第41题及PGCode 2024全卷第41题逐项对照；唯一性判据与代码已独立复核。分值按回忆版PDF所列13分记录。",
+      "verification": "原卷回忆版PDF第41题与PGCode全卷题面一致。逐轮唯一零入度顶点是拓扑序唯一的充要条件；邻接矩阵下复杂度O(V²)。",
       "complexity": "时间O(V²)，辅助空间O(V)。",
       "cards": [
         {
@@ -3602,8 +3602,15 @@
       ],
       "audit": {
         "status": "cross-checked",
-        "note": "题干结构、函数要求与原卷回忆版PDF第41题及PGCode 2024全卷第41题逐项对照；唯一性判据与代码已独立复核。分值按回忆版PDF所列13分记录。"
-      }
+        "sources": [
+          "2024年408回忆版试卷PDF",
+          "PGCode 2024完整试卷预览"
+        ],
+        "note": "原卷回忆版PDF第41题与PGCode全卷题面一致。逐轮唯一零入度顶点是拓扑序唯一的充要条件；邻接矩阵下复杂度O(V²)。"
+      },
+      "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
+      "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf",
+      "sourcePage": 8
     },
     {
       "year": 2024,
@@ -3624,7 +3631,7 @@
       "analysis": "二次探测的平方项必须先对表长取模。表构造过程中的碰撞路径决定后续关键字落点，因此不能只把每个关键字独立计算初始地址。查找与插入使用相同探测序列。失败时第一次遇到从未占用的空单元即可停止。",
       "code": "HT[0..10] = {11, EMPTY, 14, 7, EMPTY, 20, 9, EMPTY, EMPTY, 3, 18};\\nalpha = 7.0 / 11;\\nfind(14): 9 -> 10 -> 2, compare 3,18,14;\\nfind(8): 2 -> 3 -> 6 -> 0 -> 7(EMPTY), fail.",
       "correction": "本题是二次探测H0+k²，不是线性探测H0+k。查找8的失败地址是首次遇到空单元的7，不是最后一个已比较关键字所在地址。",
-      "verification": "关键字序列、散列函数和二次探测公式与原卷回忆版PDF第42题、PGCode 2024第42题一致；7次插入、两次查找已逐地址复算。",
+      "verification": "原卷回忆版PDF第42题与PGCode全卷题面一致。散列表逐次插入和查找探测地址已独立复算，表地址0至10为[11,空,14,7,空,20,9,空,空,3,18]。",
       "complexity": "本题表长11；装填因子7/11；查找14探测3次，查找8探测5个地址后失败。",
       "cards": [
         {
@@ -3648,8 +3655,15 @@
       ],
       "audit": {
         "status": "cross-checked",
-        "note": "关键字序列、散列函数和二次探测公式与原卷回忆版PDF第42题、PGCode 2024第42题一致；7次插入、两次查找已逐地址复算。"
-      }
+        "sources": [
+          "2024年408回忆版试卷PDF",
+          "PGCode 2024完整试卷预览"
+        ],
+        "note": "原卷回忆版PDF第42题与PGCode全卷题面一致。散列表逐次插入和查找探测地址已独立复算，表地址0至10为[11,空,14,7,空,20,9,空,空,3,18]。"
+      },
+      "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
+      "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf",
+      "sourcePage": 8
     },
     {
       "year": 2024,
@@ -3672,7 +3686,7 @@
       "analysis": "该题的关键是按题目给出的指令编码表逐字段译码，不能把标准RISC-V的全部规则或其他自定义格式混入。CF与OF针对不同数值解释：CF描述无符号进位，OF描述有符号补码溢出。lw的立即数是有符号偏移，因此地址生成必须符号扩展。",
       "code": "87654321H + 98765432H = 1_1FDB9753H\\nF = 1FDB9753H, CF = 1, OF = 1\\nA040A103H -> lw r2,-1532(r1)\\nEA = FFFFA2D0H + FFFFFA04H = FFFF9CD4H",
       "correction": "原卷回忆版PDF给第43题14分；PGCode页面题目标注13分、同时第47题标注9分，分值分配存在来源差异，但两种分配合计均为70分。这里按回忆版PDF分值记录。机器码必须按本题图示格式译码。",
-      "verification": "已核对原卷配图43(a)/(b)（指令字段、ALU MUX与标志输出）及PGCode逐小问参考解析；加法结果、CF/OF、立即数符号扩展和有效地址均独立复算。",
+      "verification": "题面和图43(a)/(b)按PGCode完整预览核对，指令字段、ALU标志位和地址计算已复算。分值存在来源差异：回忆版PDF列14分，PGCode列13分；本库按回忆版PDF分配14分。",
       "complexity": "寄存器编码32种；shamt范围0～31；ALU加法结果F=1FDB9753H；有效地址FFFF9CD4H。",
       "cards": [
         {
@@ -3710,8 +3724,15 @@
       ],
       "audit": {
         "status": "cross-checked",
-        "note": "已核对原卷配图43(a)/(b)（指令字段、ALU MUX与标志输出）及PGCode逐小问参考解析；加法结果、CF/OF、立即数符号扩展和有效地址均独立复算。"
-      }
+        "sources": [
+          "2024年408回忆版试卷PDF",
+          "PGCode 2024完整试卷预览"
+        ],
+        "note": "题面和图43(a)/(b)按PGCode完整预览核对，指令字段、ALU标志位和地址计算已复算。分值存在来源差异：回忆版PDF列14分，PGCode列13分；本库按回忆版PDF分配14分。"
+      },
+      "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
+      "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf",
+      "sourcePage": 9
     },
     {
       "year": 2024,
@@ -3733,7 +3754,7 @@
       "analysis": "数组地址计算由元素宽度决定。小端方式只影响字节到整数的组合，不改变地址。FFFFECDCH按32位补码解释为负数，累加时发生模2^32回绕。页面边界在0013E000H，数组基址0013DFF0H距边界仅16字节，访问a[5]已经跨页。",
       "code": "&a[5] = 0013DFF0H + 5*4 = 0013E004H\\na[5] bytes: DC EC FF FF -> FFFFECDCH\\nsum = 00001332H + FFFFECDCH = 0000000EH (32-bit)\\npage = 0013E004H >> 12 = 0013EH\\nslli r4,r2,2 = 00212213H; short: slli r4,r2,1",
       "correction": "不能按大端把DC EC FF FF写成DCE CFFFF；sum结果必须保留低32位。数组起始地址页内偏移为FF0H，访问a[5]跨过0013E000H边界。",
-      "verification": "题干指令序列、内存图字节与原卷回忆版PDF第44题及PGCode第44题配图一致；地址、小端组合、32位求和、页号和机器码已复算。",
+      "verification": "原卷回忆版PDF第44题与PGCode题面及内存图一致。寄存器分工、a[5]地址、小端读数、32位累加、页号及指令机器码已复算。",
       "complexity": "int数组元素偏移20B；a[5]地址0013E004H；跨页2页；sum=0000000EH。",
       "cards": [
         {
@@ -3771,8 +3792,15 @@
       ],
       "audit": {
         "status": "cross-checked",
-        "note": "题干指令序列、内存图字节与原卷回忆版PDF第44题及PGCode第44题配图一致；地址、小端组合、32位求和、页号和机器码已复算。"
-      }
+        "sources": [
+          "2024年408回忆版试卷PDF",
+          "PGCode 2024完整试卷预览"
+        ],
+        "note": "原卷回忆版PDF第44题与PGCode题面及内存图一致。寄存器分工、a[5]地址、小端读数、32位累加、页号及指令机器码已复算。"
+      },
+      "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
+      "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf",
+      "sourcePage": 9
     },
     {
       "year": 2024,
@@ -3794,7 +3822,7 @@
       "analysis": "页号与页框号分别属于虚拟地址和物理地址。PTE地址计算使用虚页号乘以PTE字节数；目标页框号通过物理地址去掉22位页内偏移得到。页表所在页本身也有一个虚页号，因此需要再用该页号定位它自己的PTE。",
       "code": "VPN(12345678H)=048H; offset=345678H\\nPTE_VA=B8C00000H+048H*4=B8C00120H\\nPTE_PA=65400000H+048H*4=65400120H\\nPFN(BAB45678H)=2EAH\\nVPN(page table)=2E3H\\nPTE_VA(page table)=B8C00000H+2E3H*4=B8C00B8CH\\nPFN(page table)=65400000H>>22=195H",
       "correction": "页大小4MB，偏移是22位而不是12位；PTE地址按4字节乘VPN计算；页框号只取物理地址高10位。",
-      "verification": "页地址结构10/22位、两个基址及故障前后地址与原卷回忆版PDF第45题、PGCode第45题一致；所有十六进制计算已独立复算。",
+      "verification": "原卷回忆版PDF第45题与PGCode题面一致。页号10位、页内偏移22位，页表项地址和页框号均已按4字节PTE独立复算。",
       "complexity": "PTE偏移120H和B8CH；目标页框号2EAH；页表页框号195H。",
       "cards": [
         {
@@ -3825,8 +3853,15 @@
       ],
       "audit": {
         "status": "cross-checked",
-        "note": "页地址结构10/22位、两个基址及故障前后地址与原卷回忆版PDF第45题、PGCode第45题一致；所有十六进制计算已独立复算。"
-      }
+        "sources": [
+          "2024年408回忆版试卷PDF",
+          "PGCode 2024完整试卷预览"
+        ],
+        "note": "原卷回忆版PDF第45题与PGCode题面一致。页号10位、页内偏移22位，页表项地址和页框号均已按4字节PTE独立复算。"
+      },
+      "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
+      "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf",
+      "sourcePage": 9
     },
     {
       "year": 2024,
@@ -3846,7 +3881,7 @@
       "analysis": "第（2）问是一次性的先后同步，而不是完整的多槽生产者消费者模型。因为缓冲区初始为空、只有一次写和一次读，done=0足以让读者等待写者；不需要再定义empty和full。第（3）问两个C3都修改同一个非空缓冲区，没有先后要求，只需互斥信号量。",
       "code": "semaphore done = 0;\\nP1() { C1; signal(done); }\\nP2() { wait(done); C2; }\\n\\nsemaphore mutex = 1;\\nP1() { wait(mutex); C3; signal(mutex); }\\nP2() { wait(mutex); C3; signal(mutex); }",
       "correction": "第（2）问按题设“各执行一次”只需一个同步信号量done；额外加入empty/full不是最少方案。第（3）问mutex初值为1，不是0。",
-      "verification": "缓冲区条件与三问要求与原卷回忆版PDF第46题、PGCode第46题一致；同步/互斥关系与最少信号量数已复核。",
+      "verification": "原卷回忆版PDF第46题与PGCode题面一致。第（2）问仅需done=0完成一次性先后同步；第（3）问仅需mutex=1完成互斥。",
       "complexity": "每个进程各一次操作；第（2）问1个同步信号量，第（3）问1个互斥信号量。",
       "cards": [
         {
@@ -3870,8 +3905,15 @@
       ],
       "audit": {
         "status": "cross-checked",
-        "note": "缓冲区条件与三问要求与原卷回忆版PDF第46题、PGCode第46题一致；同步/互斥关系与最少信号量数已复核。"
-      }
+        "sources": [
+          "2024年408回忆版试卷PDF",
+          "PGCode 2024完整试卷预览"
+        ],
+        "note": "原卷回忆版PDF第46题与PGCode题面一致。第（2）问仅需done=0完成一次性先后同步；第（3）问仅需mutex=1完成互斥。"
+      },
+      "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
+      "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf",
+      "sourcePage": 10
     },
     {
       "year": 2024,
@@ -3892,7 +3934,7 @@
       "analysis": "该题分为IGP协议能力、TTL逐跳递减、距离向量收敛、BGP会话类型/报文和BGP路径选择五层。RIP的15跳限制决定AS4选OSPF；TTL必须比最大路由器转发数至少多1；同步初始交换视为t=0，之后每30秒扩散一跳。BGP先比较AS_PATH长度，再在等长候选间根据本AS内部到出口的IGP代价选择热土豆出口。",
       "code": "AS4: OSPF (RIP max 15 hops)\\nAS3: TTL_min = 15 + 1 = 16\\nRIP propagation: t=0 R13/R15; t=30 R12/R14; t=60 R11 -> 60s\\nR44 -> R13: eBGP UPDATE\\nR13 -> R14/R15: iBGP\\nNext hop: R14 -> R11; R15 -> R13",
       "correction": "RIP最大有效跳数是15，16代表不可达；TTL在每个路由器转发时递减；初始向量交换发生在t=0，不应额外加30秒。BGP等长路径的出口选择按IGP距离而不是路由器编号。",
-      "verification": "题图拓扑、BGP路径表和五个小问与PGCode 2024第47题及其配图47/47(b)交叉核对；RIP传播层次、TTL、会话类型和下一跳均按图复算。分值按回忆版PDF列出的8分记录，PGCode页面标注9分，来源间存在1分分配差异。",
+      "verification": "详细拓扑、RIP更新时序和BGP路径表以PGCode完整题面/原题图为准。回忆版PDF第47题只保留简化回忆题干，且列8分；PGCode列9分。两来源总分均为70分，但43/47分值分配不同，本库按回忆版PDF记录8分，并保留此来源差异。",
       "complexity": "RIP传播3个时刻层级：0s、30s、60s；AS_PATH候选长度3、4、3。",
       "cards": [
         {
@@ -3951,8 +3993,15 @@
       ],
       "audit": {
         "status": "cross-checked",
-        "note": "题图拓扑、BGP路径表和五个小问与PGCode 2024第47题及其配图47/47(b)交叉核对；RIP传播层次、TTL、会话类型和下一跳均按图复算。分值按回忆版PDF列出的8分记录，PGCode页面标注9分，来源间存在1分分配差异。"
-      }
+        "sources": [
+          "2024年408回忆版试卷PDF",
+          "PGCode 2024完整试卷预览"
+        ],
+        "note": "详细拓扑、RIP更新时序和BGP路径表以PGCode完整题面/原题图为准。回忆版PDF第47题只保留简化回忆题干，且列8分；PGCode列9分。两来源总分均为70分，但43/47分值分配不同，本库按回忆版PDF记录8分，并保留此来源差异。"
+      },
+      "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
+      "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf",
+      "sourcePage": 10
     },
     {
       "year": 2025,
