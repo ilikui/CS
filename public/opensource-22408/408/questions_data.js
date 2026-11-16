@@ -417,5 +417,75 @@ window.QUESTIONS_DATA = [
     "question": "<p>（9分）某校园网有两个局域网，通过路由器R1、R2和R3互联后接入Internet，S1和S2为以太网交换机。局域网采用静态IP地址配置，路由器部分接口以及各主机IP地址如下图所示。</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2020/2020-47a.png\" alt=\"2020年408第47题校园网拓扑图\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></p><p>NAT转换表包含外部IP、外部端口、内部IP和内部端口四个字段。</p><ol><li>为使H2和H3能够访问Web服务器（使用默认端口号），需要进行什么配置？</li><li>若H2主动访问Web服务器时，将HTTP请求报文封装到IP数据报P中发送，H2发送P时源IP和目的IP分别是什么？经过R3转发后，源IP和目的IP分别是什么？经过R2转发后，源IP和目的IP分别是什么？</li></ol>",
     "answer": "在R2配置静态端口映射203.10.2.2:80→192.168.1.2:80。H2发出时(源192.168.1.2，目的203.10.2.2)；经R3后(源203.10.2.6，目的203.10.2.2)；经R2后(源203.10.2.6，目的192.168.1.2)。",
     "analysisHtml": "<p>R3执行源NAT，R2执行目的NAT/端口映射。H2与Web服务器的私网IP相同，但位于不同LAN，必须依赖公网映射与源地址转换区分。</p>"
+  },
+  {
+    "id": 565,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2021,
+    "index": 41,
+    "score": 15,
+    "question": "<p>（15分）已知无向连通图G由顶点集V和边集E组成，|E|&gt;0，当G中度为奇数的顶点个数为不大于2的偶数时，G存在包含所有边且长度为|E|的路径（称为EL路径）。设图G采用邻接矩阵存储，类型定义如下：</p><pre><code>typedef struct {                    // 图的定义\n    int numVertices, numEdges;      // 图中实际的顶点数和边数\n    char VerticesList[MAXV];        // 顶点表，MAXV为已定义常量\n    int Edge[MAXV][MAXV];           // 邻接矩阵\n} MGraph;</code></pre><p>请设计算法 <code>int IsExistEL(MGraph G)</code>，判断G是否存在EL路径，若存在返回1，否则返回0。</p><ol><li>给出算法的基本设计思想。</li><li>采用C或C++语言描述算法，关键之处给出注释。</li><li>说明时间复杂度和空间复杂度。</li></ol>",
+    "answer": "无向连通图存在欧拉路径当且仅当奇度顶点数为0或2。逐行统计邻接矩阵的非零元素数得到各顶点度；奇度顶点数为0或2返回1，否则返回0。时间O(n²)，辅助空间O(1)。"
+  },
+  {
+    "id": 566,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2021,
+    "index": 42,
+    "score": 8,
+    "question": "<p>（8分）已知某排序算法：</p><pre><code>void cmpCountSort(int a[], int b[], int n) {\n    int i, j, *count;\n    count = (int *)malloc(sizeof(int) * n);\n    for (i = 0; i &lt; n; ++i) count[i] = 0;\n    for (i = 0; i &lt; n - 1; ++i)\n        for (j = i + 1; j &lt; n; ++j)\n            if (a[i] &lt; a[j]) ++count[j];\n            else ++count[i];\n    for (i = 0; i &lt; n; ++i) b[count[i]] = a[i];\n    free(count);\n}</code></pre><p>（1）若 <code>int a[]={25,-10,25,10,11,19}, b[6]</code>，调用后数组b的内容是什么？（2）若a含n个元素，元素之间比较次数是多少？（3）该算法稳定吗？若不稳定，修改为稳定排序算法。</p>",
+    "answer": "（1）b={−10,10,11,19,25,25}。（2）比较n(n−1)/2次。（3）原算法不稳定；将判断改为if(a[i]<=a[j]) count[j]++; else count[i]++;即可稳定。时间O(n²)，辅助空间O(n)。"
+  },
+  {
+    "id": 567,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2021,
+    "index": 43,
+    "score": 15,
+    "question": "<p>（15分）假定计算机M字长为16位，按字节编址，连接CPU和主存的系统总线中地址线为20位、数据线为8位，采用16位定长指令字，指令格式及说明如下图。</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2021/2021-43.png\" alt=\"2021年408第43题R型、I型、J型指令格式图\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></p><p>其中op1～op3为操作码，rs、rt和rd为通用寄存器编号，R[r]表示寄存器r的内容，imm为立即数，target为转移目标形式地址。回答：</p><ol><li>ALU宽度、可寻址主存空间大小，以及IR、MAR、MDR的位数分别是多少？</li><li>R型格式最多定义多少种操作？I型和J型格式合计最多定义多少种操作？通用寄存器最多有多少个？</li><li>若op1=0010和0011分别表示带符号整数减法和带符号整数乘法，指令01B2H的功能是什么？寄存器1、2、3内容分别为B052H、0008H、0020H时，执行01B2H和01B3H后，R3内容各是什么？是否溢出？</li><li>I型访存指令的imm为带符号偏移量，地址计算时应零扩展还是符号扩展？</li><li>无条件转移指令可采用哪种格式？</li></ol>",
+    "answer": "ALU 16位；可寻址空间2^20B=1MB；IR 16位、MAR 20位、MDR 8位。R型16种，I/J合计63种，通用寄存器4个。01B2H执行R[3]←R[1]−R[2]，结果B04AH，不溢出；01B3H执行乘法，低16位8290H，发生有符号溢出。imm符号扩展；无条件转移用J型。"
+  },
+  {
+    "id": 568,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2021,
+    "index": 44,
+    "score": 8,
+    "question": "<p>（8分）假设计算机M的主存地址为24位，按字节编址；采用分页存储管理方式，虚拟地址为30位，页大小为4KB；TLB采用2路组相联方式和LRU替换策略，共8组。回答：</p><ol><li>虚拟地址中哪几位表示虚页号？哪几位表示页内地址？</li><li>TLB访问时虚页号高位作标记、低位作组号，虚拟地址中哪几位是TLB标记、哪几位是TLB组号？</li><li>TLB初始为空，依次访问虚页号10、12、16、7、26、4、12、20，哪个虚页号对应的表项被替换？说明理由。</li><li>若虚拟地址位数增加到32位，TLB表项位数增加几位？</li></ol>",
+    "answer": "页内偏移VA[11:0]共12位，VPN为VA[29:12]共18位；TLB组号VA[14:12]共3位，Tag为VA[29:15]共15位；访问20时组4中的VPN=4被LRU替换；虚拟地址增加2位，TLB Tag增加2位。"
+  },
+  {
+    "id": 569,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2021,
+    "index": 45,
+    "score": 7,
+    "question": "<p>（7分）下述代码给出了整型信号量S的wait()和signal()操作功能描述，以及采用开/关中断指令实现信号量操作互斥的两种方法。</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2021/2021-45.png\" alt=\"2021年408第45题整型信号量wait和signal方法1、方法2代码图\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></p><p>功能描述：<code>wait(S){while(S&lt;=0); S=S-1;}</code>，<code>signal(S){S=S+1;}</code>。方法1在wait和signal开始时关中断、结束时开中断；方法2在wait的while循环体内先开中断再关中断，signal仍在关中断后执行S++再开中断。</p><ol><li>为什么wait和signal中对S的访问必须互斥？</li><li>分别说明方法1和方法2是否正确，若不正确说明理由。</li><li>用户程序能否使用开/关中断指令实现临界区互斥？为什么？</li></ol>",
+    "answer": "S是多进程共享变量，wait和signal都要读写S，必须互斥以避免竞态。方法1错误：S≤0时关中断忙等，signal无法运行而死等。方法2正确：等待时开中断让其他进程推进，重新检查及S--时关中断保护。用户程序不能执行开/关中断，因为它们是特权指令。"
+  },
+  {
+    "id": 570,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2021,
+    "index": 46,
+    "score": 8,
+    "question": "<p>（8分）某计算机用硬盘作为启动盘。硬盘第一个扇区存放主引导记录，包含磁盘引导程序和分区表；磁盘引导程序用于选择引导哪个分区的操作系统。各分区第一个扇区存放分区引导程序，用于引导该分区操作系统。系统采用多阶段引导方式，除磁盘引导程序和分区引导程序外，还需要执行ROM中的引导程序。回答：</p><ol><li>操作系统初始化程序、分区引导程序、ROM引导程序、磁盘引导程序的执行顺序是什么？</li><li>制作启动盘时，操作系统安装、磁盘物理格式化、逻辑格式化、磁盘分区四项操作的正确顺序是什么？</li><li>磁盘扇区划分和文件系统根目录建立分别在哪项操作中完成？</li></ol>",
+    "answer": "启动顺序：ROM引导程序→磁盘引导程序（MBR）→分区引导程序→操作系统初始化程序。制作顺序：物理格式化→分区→逻辑格式化→安装操作系统。扇区划分在物理格式化完成，根目录在逻辑格式化完成。"
+  },
+  {
+    "id": 571,
+    "subject": "computer-network",
+    "type": 2,
+    "year": 2021,
+    "index": 47,
+    "score": 9,
+    "question": "<p>（9分）某网络拓扑如题图所示，以太网交换机S通过路由器R与Internet互联。路由器部分接口、本地域名服务器、H1、H2的IP地址和MAC地址如图所示。</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2021/2021-47.png\" alt=\"2021年408第47题网络拓扑图，含路由器、交换机、DNS服务器、H1和H2\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></p><p>在t0时刻H1的ARP表和S的交换表均为空，H1此刻通过浏览器使用域名www.abc.com访问Web服务器；t1时刻S第一次收到封装HTTP请求报文的以太网帧。假设期间没有与此次访问无关的网络通信。回答：</p><ol><li>从t0到t1期间，H1除HTTP外还运行哪个应用层协议？该协议报文从应用层到数据链路层如何逐层封装？</li><li>若S的交换表结构为[MAC地址，端口]，t1时刻交换表内容是什么？</li><li>从t0到t1期间，H2至少收到几个与此次Web访问相关的帧？是什么帧？目的MAC地址是什么？</li></ol>",
+    "answer": "除HTTP外还运行DNS；封装为DNS→UDP→IP→以太网帧。S的交换表：00-11-22-33-44-CC→端口4，00-11-22-33-44-BB→端口1，00-11-22-33-44-AA→端口2。H2至少收到2个ARP请求广播帧，目的MAC均为FF-FF-FF-FF-FF-FF。"
   }
 ];
