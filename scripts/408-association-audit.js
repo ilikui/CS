@@ -1,5 +1,5 @@
 // Audit source identity, target card existence, and candidate coverage; never auto-promote candidates.
-// Re-run source-backed audit after exact source-text alignment for DHCP and packet-delay items.
+// Re-run source-backed audit after ALU and replacement-selection application solutions.
 // Refresh audit after the third batch of source-backed associations.
 // Re-run after application-question solutions and status-label corrections.
 // Refresh audit after round-five source-backed question links.
