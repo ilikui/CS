@@ -34,9 +34,9 @@ for(const q of questions){
   const band=best.phraseScore>=5||best.similarity>=.18?'medium':'low';if(band==='low')lowConfidence++;
   links=chosen.map(c=>({title:c.title,topic:c.matched.join('、')||c.title,status:'needs-review',confidence:c.score,confidenceBand:band,matchedTerms:c.matched}));suggestedQuestions++;
  }
- const clean=links.map(l=>({title:l.title,topic:l.topic||l.title,status:l.status||'needs-review',confidence:l.confidence??1,confidenceBand:l.confidenceBand||(l.status==='verified'?'verified':'low'),matchedTerms:l.matchedTerms||[],record:l.record||null}));
- const rec={key,year:q.year,index:q.index,id:q.id,subject:q.subject,type:q.type,typeName:q.typeName||({1:'选择题',2:'应用题',3:'算法题'}[q.type]||'真题'),score:q.score,question:q.question||'',answer:q.answer||'',analysis:q.analysis||'',cards:clean};
- questionMap[key]=rec;for(const l of clean)cardQuestionList[l.title].push(rec);
+ const clean=links.map(l=>({title:l.title,topic:l.topic||l.title,status:l.status||'needs-review',confidence:l.confidence??1,confidenceBand:l.confidenceBand||(l.status==='verified'?'verified':'low'),matchedTerms:l.matchedTerms||[],recordTopic:l.status==='verified'?l.topic:null}));
+ const rec={key,year:q.year,index:q.index,id:q.id,subject:q.subject,type:q.type,typeName:q.typeName||({1:'选择题',2:'应用题',3:'算法题'}[q.type]||'真题'),score:q.score,question:plain(q.question||''),answer:plain(q.answer||''),analysis:plain(q.analysis||''),cards:clean};
+ questionMap[key]=rec;for(const l of clean)cardQuestionList[l.title].push(key);
  if(!subjectStats[q.subject])subjectStats[q.subject]={questions:0,verified:0,suggested:0};subjectStats[q.subject].questions++;if(clean.some(l=>l.status==='verified'))subjectStats[q.subject].verified++;else subjectStats[q.subject].suggested++;
 }
 for(const list of Object.values(cardQuestionList))list.sort((a,b)=>a.year-b.year||a.index-b.index);
