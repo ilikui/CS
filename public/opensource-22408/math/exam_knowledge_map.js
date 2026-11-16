@@ -9942,69 +9942,148 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "两端条件需同时满足；p=0 或 p=2 均为对数发散边界。"
   },
   "760": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-填空题-12",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-01-G"
+    ],
+    "rationale": "通分后分子为 sin x−ln(1+x)。展开得 x²/2+o(x²)，分母 x sin x=x²+o(x²)，故极限为 1/2，与题库答案一致。",
+    "methods": "对 sin x 与 ln(1+x) 作同阶展开，保留到二阶；分母用 sin x∼x。",
+    "pitfalls": "不能分别把两个原项取极限；两项均含 1/x 量级，必须先合并或展开后比较。"
   },
   "761": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-填空题-13",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-05-C"
+    ],
+    "rationale": "隐式求导得 y'(0)=−√3；再次求导得 y''(0)=2。曲率为 |y''|/[1+(y')²]^(3/2)=1/4，曲率半径为 4。",
+    "methods": "将曲线在点附近视作 y(x)，对隐式方程连续求两次导数，再代入曲率公式。",
+    "pitfalls": "曲率半径是曲率的倒数；二阶求导时须对 2√3xy 与 y² 使用乘积法则。"
   },
   "762": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-填空题-14",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "全微分给出 f_x(0,0)=π、f_y(0,0)=3。链式法则代入 x=1，得到 π+3π cosπ=−2π。",
+    "methods": "先由全微分读取两个偏导，再对复合函数 f(ln x,sinπx) 使用多元链式法则。",
+    "pitfalls": "第二个内层函数求导为 πcosπx；不要漏掉该因子或把 cosπ 误作 1。"
   },
   "763": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-填空题-15",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-E"
+    ],
+    "rationale": "区间 [0,2] 上函数平均值为 (1/2)∫₀²ln(2+x)dx，原函数为 (2+x)ln(2+x)−(2+x)，计算得 3ln2−1。",
+    "methods": "使用连续函数在区间上的平均值公式，随后令 u=2+x 计算定积分。",
+    "pitfalls": "平均值需要除以区间长度 2；不要把积分值直接当作平均值。"
   },
   "764": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-填空题-16",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-E"
+    ],
+    "secondary": [
+      "LA-06-A"
+    ],
+    "rationale": "AAᵀ 的秩等于 A 的秩。二次型规范形仅有一个平方项，故 rank(A)=1，两行成比例。比较首末分量得 a=1，再比较中间分量得 b=1，因此 a+b=2。",
+    "methods": "利用 rank(AAᵀ)=rank(A)，令 A 两行成比例并逐分量比较系数。",
+    "pitfalls": "规范形只有一个非零平方项表示秩为 1；比例关系应对整行统一使用同一比例系数。"
   },
   "765": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-解答题-17",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-F"
+    ],
+    "secondary": [
+      "CAL-08-E"
+    ],
+    "rationale": "区域由 y≥|x| 与 x²+y²≤2 围成，极坐标范围为 π/4≤θ≤3π/4、0≤r≤√2。含雅可比因子后积分分离，结果为 4sin√2−2√2。",
+    "methods": "先将区域边界转为极坐标，再用 dA=rdrdθ，并将径向与角向积分分离。",
+    "pitfalls": "被积函数中的 y 与面积元 r 相乘后为 r²sinθ；不能遗漏雅可比因子 r。"
   },
   "766": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-解答题-18",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-F"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "x≠0 时换元 u=xt 得 f(x)=x⁻¹∫₀^{x³}g(u)du，求导得到题库表达式。连续性保证积分均值项为 xg(ξx)，故 f'(0)=0 且 f'(x)→0。",
+    "methods": "先作变量代换把变上限写成 x³，再用乘积法则与牛顿—莱布尼茨公式；在零点用导数定义和积分中值定理。",
+    "pitfalls": "公式含 x⁻² 不能直接代 x=0；零点导数必须由定义单独求，再验证两侧极限。"
   },
   "767": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-解答题-19",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-D"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "由 f_y=0 得 y=0，再由 f_x=0 得 x=0 或 −2。原点处 Hessian 判别式为负，是鞍点；(−2,0) 处判别式为 8e⁻⁴>0 且 f_xx<0，是极大值点，极大值 8/e²。",
+    "methods": "先联立一阶偏导求驻点，再计算二阶偏导构成 Hessian 判别式 AC−B²。",
+    "pitfalls": "判别式小于零对应鞍点；判别式大于零后还需检查 f_xx 符号才能区分极大与极小。"
   },
   "768": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-解答题-20",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-05-G",
+      "CAL-06-I"
+    ],
+    "rationale": "拐点由 y''=0 得 x₀=1/√3、y₀=3/4，直线 OM 斜率为 3√3/4。旋转体按 [0,x₀] 的直线边界和 [x₀,∞) 的曲线边界分段用圆盘法，积分收敛并得 V=π²/6−√3π/16。",
+    "methods": "先求拐点和 OM 方程，再按边界切换点分段建立 π∫(半径)²dx，第二段计算反常积分。",
+    "pitfalls": "无界区域不等于体积发散；分段时旋转半径取区域上边界，且两段不能重复或遗漏。"
   },
   "769": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-解答题-21",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-B"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "令 p=y' 将二阶方程降为一阶，再令 z=1/p 化为线性方程 z'+2z/x=−1/x²。由 p(3)=−9 得 z=−1/x+2/x²，积分并用 y(3)=1/2 定常数，所得解与题库表达式一致。",
+    "methods": "识别方程不显含 y，先降阶；对 p 的 Bernoulli 型方程作倒数代换，解线性方程后积分恢复 y。",
+    "pitfalls": "倒数代换时 z'=−p'/p²，符号容易出错；积分 ln(x−2) 在 x>2 上无需绝对值。"
   },
   "770": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2026-解答题-22",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-03-C"
+    ],
+    "secondary": [
+      "LA-02-A",
+      "LA-02-B"
+    ],
+    "rationale": "直接验证 α₃=−α₁+α₂、α₄=α₁−α₂，且 α₁、α₂ 线性无关，故构成极大无关组。于是 A=GH，HG=[[1,−1],[0,1]]，其 9 次幂为 [[1,−9],[0,1]]，由 (GH)^10=G(HG)^9H 得题库所列 A^10。",
+    "methods": "先用向量线性表示证明秩为 2 并构造 H，再用 (GH)^n=G(HG)^(n−1)H 降低矩阵幂的阶数。",
+    "pitfalls": "A 是 4×4 而 H、G 分别为 2×4 与 4×2；乘法顺序不能颠倒，幂次公式中 HG 的指数是 n−1。"
   }
 };
