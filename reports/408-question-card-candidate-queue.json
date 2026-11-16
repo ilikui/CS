@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T14:21:34.110Z",
+  "generatedAt": "2026-11-16T14:29:16.912Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -826,11 +826,11 @@
           ]
         },
         {
-          "card": "B 树与 B+ 树",
-          "score": 7,
+          "card": "单链表重排与原地逆置",
+          "score": 6,
           "matchedTerms": [
-            "树与",
-            "中可能"
+            "an",
+            "变为"
           ]
         }
       ]
@@ -1151,10 +1151,11 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
+          "card": "后缀极值与区间乘积最大值",
           "score": 4,
           "matchedTerms": [
-            "本题"
+            "n-1",
+            "-1"
           ]
         }
       ]
@@ -1247,13 +1248,6 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -1266,6 +1260,14 @@
           "matchedTerms": [
             "结果是",
             "结果是a"
+          ]
+        },
+        {
+          "card": "查找算法与散列表",
+          "score": 3,
+          "matchedTerms": [
+            "结果",
+            "结果的"
           ]
         }
       ]
@@ -1357,13 +1359,6 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "后缀极值与区间乘积最大值",
           "score": 4,
           "matchedTerms": [
@@ -1376,6 +1371,13 @@
           "score": 4,
           "matchedTerms": [
             "本题"
+          ]
+        },
+        {
+          "card": "线性表与顺序表",
+          "score": 4,
+          "matchedTerms": [
+            "字节"
           ]
         }
       ]
@@ -1411,13 +1413,6 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "后缀极值与区间乘积最大值",
           "score": 4,
           "matchedTerms": [
@@ -1431,6 +1426,13 @@
           "matchedTerms": [
             "而不是",
             "目标"
+          ]
+        },
+        {
+          "card": "散列表装填因子与查找终止",
+          "score": 4,
+          "matchedTerms": [
+            "本题"
           ]
         }
       ]
@@ -2475,6 +2477,19 @@
           ]
         },
         {
+          "card": "页表项地址计算与页框号",
+          "score": 11,
+          "matchedTerms": [
+            "地址",
+            "物理地址",
+            "物理地",
+            "理地址",
+            "用物理",
+            "用物理地",
+            "用物理地址"
+          ]
+        },
+        {
           "card": "缺页异常与页表更新",
           "score": 9,
           "matchedTerms": [
@@ -2494,16 +2509,6 @@
           "score": 6,
           "matchedTerms": [
             "物理"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 6,
-          "matchedTerms": [
-            "地址",
-            "物理地",
-            "理地址",
-            "物理地址"
           ]
         },
         {
@@ -2604,6 +2609,13 @@
           ]
         },
         {
+          "card": "页表项地址计算与页框号",
+          "score": 3,
+          "matchedTerms": [
+            "字节"
+          ]
+        },
+        {
           "card": "系统调用参数传递与返回",
           "score": 2,
           "matchedTerms": [
@@ -2615,13 +2627,6 @@
           "score": 2,
           "matchedTerms": [
             "后返回"
-          ]
-        },
-        {
-          "card": "磁盘调度与 I/O",
-          "score": 1,
-          "matchedTerms": [
-            "下一个"
           ]
         }
       ]
@@ -3256,10 +3261,11 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
+          "card": "后缀最大值与最小值维护",
           "score": 4,
           "matchedTerms": [
-            "本题"
+            "个元素",
+            "题的"
           ]
         }
       ]
@@ -3434,6 +3440,14 @@
           ]
         },
         {
+          "card": "B 树与 B+ 树",
+          "score": 4,
+          "matchedTerms": [
+            "叶结点",
+            "的叶结点"
+          ]
+        },
+        {
           "card": "归并排序与稳定性",
           "score": 3,
           "matchedTerms": [
@@ -3446,13 +3460,6 @@
           "score": 2,
           "matchedTerms": [
             "的结点"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 2,
-          "matchedTerms": [
-            "结点数"
           ]
         }
       ]
@@ -3929,13 +3936,6 @@
       "confidence": "low-candidate",
       "candidates": [
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -3961,6 +3961,13 @@
           "score": 2,
           "matchedTerms": [
             "十进制"
+          ]
+        },
+        {
+          "card": "快速选择与顺序统计量",
+          "score": 2,
+          "matchedTerms": [
+            "而不是"
           ]
         }
       ]
@@ -4037,13 +4044,6 @@
       "confidence": "low-candidate",
       "candidates": [
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -4069,6 +4069,15 @@
           "score": 3,
           "matchedTerms": [
             "if"
+          ]
+        },
+        {
+          "card": "外部排序与多路归并",
+          "score": 3,
+          "matchedTerms": [
+            "存容量",
+            "容量的",
+            "存容量的"
           ]
         }
       ]
@@ -4110,17 +4119,17 @@
           ]
         },
         {
-          "card": "有序数组中位数的二分缩减",
+          "card": "拓扑排序与 AOV 网",
           "score": 1,
           "matchedTerms": [
             "不一定"
           ]
         },
         {
-          "card": "最小生成树与最短路径",
+          "card": "有序数组中位数的二分缩减",
           "score": 1,
           "matchedTerms": [
-            "它们都"
+            "不一定"
           ]
         }
       ]
@@ -4139,14 +4148,6 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
-        {
-          "card": "二次探测法与开放定址散列",
-          "score": 6,
-          "matchedTerms": [
-            "本题",
-            "查找"
-          ]
-        },
         {
           "card": "递归算法与递归树",
           "score": 5,
@@ -4174,6 +4175,13 @@
           "score": 4,
           "matchedTerms": [
             "式存储"
+          ]
+        },
+        {
+          "card": "散列表装填因子与查找终止",
+          "score": 4,
+          "matchedTerms": [
+            "本题"
           ]
         }
       ]
@@ -4275,10 +4283,10 @@
           ]
         },
         {
-          "card": "红黑树性质与高度",
+          "card": "二次探测法与开放定址散列",
           "score": 2,
           "matchedTerms": [
-            "执行"
+            "指定的"
           ]
         }
       ]
@@ -4877,11 +4885,10 @@
         },
         {
           "card": "Cache 直接映射与组相联",
-          "score": 7,
+          "score": 6,
           "matchedTerms": [
-            "块大小为",
-            "因此",
-            "块大小"
+            "块大小",
+            "索引"
           ]
         }
       ]
@@ -5062,11 +5069,10 @@
       "candidates": [
         {
           "card": "页表项地址计算与页框号",
-          "score": 12,
+          "score": 9,
           "matchedTerms": [
             "mb",
-            "本题",
-            "大小"
+            "本题"
           ]
         },
         {
@@ -5181,6 +5187,13 @@
           "matchedTerms": [
             "把数据"
           ]
+        },
+        {
+          "card": "页表项地址计算与页框号",
+          "score": 1,
+          "matchedTerms": [
+            "题目若"
+          ]
         }
       ]
     },
@@ -5216,6 +5229,14 @@
           ]
         },
         {
+          "card": "页表项地址计算与页框号",
+          "score": 6,
+          "matchedTerms": [
+            "地址",
+            "字节"
+          ]
+        },
+        {
           "card": "进程创建与终止",
           "score": 5,
           "matchedTerms": [
@@ -5230,15 +5251,6 @@
           "score": 3,
           "matchedTerms": [
             "分配"
-          ]
-        },
-        {
-          "card": "分页与分段的区别",
-          "score": 3,
-          "matchedTerms": [
-            "地址空",
-            "址空间",
-            "地址空间"
           ]
         }
       ]
@@ -5335,7 +5347,7 @@
           "card": "页表项地址计算与页框号",
           "score": 5,
           "matchedTerms": [
-            "大小",
+            "字节",
             "字节数"
           ]
         },
@@ -5797,6 +5809,14 @@
           ]
         },
         {
+          "card": "页表项地址计算与页框号",
+          "score": 8,
+          "matchedTerms": [
+            "mb",
+            "字节"
+          ]
+        },
+        {
           "card": "FAT链接分配与簇链访问",
           "score": 7,
           "matchedTerms": [
@@ -5818,15 +5838,6 @@
             "访问控",
             "问控制",
             "访问控制"
-          ]
-        },
-        {
-          "card": "磁盘调度与 I/O",
-          "score": 5,
-          "matchedTerms": [
-            "个方向",
-            "开始",
-            "下一个"
           ]
         }
       ]
@@ -5947,17 +5958,17 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "栈的顺序存储与共享栈",
           "score": 4,
           "matchedTerms": [
             "入栈"
+          ]
+        },
+        {
+          "card": "最小正整数缺失值查找",
+          "score": 4,
+          "matchedTerms": [
+            "出现"
           ]
         }
       ]
@@ -6299,21 +6310,20 @@
           ]
         },
         {
+          "card": "B 树与 B+ 树",
+          "score": 4,
+          "matchedTerms": [
+            "根结点",
+            "关键字"
+          ]
+        },
+        {
           "card": "堆的定义与建堆",
           "score": 3,
           "matchedTerms": [
             "右子树",
             "子树之",
             "根结点"
-          ]
-        },
-        {
-          "card": "二叉树遍历与性质",
-          "score": 3,
-          "matchedTerms": [
-            "左子树",
-            "右子树",
-            "结点值"
           ]
         }
       ]
@@ -6434,15 +6444,13 @@
         },
         {
           "card": "二次探测法与开放定址散列",
-          "score": 8,
+          "score": 6,
           "matchedTerms": [
             "查找",
-            "用线性",
             "线性探",
             "性探测",
-            "用线性探",
             "线性探测",
-            "用线性探测"
+            "合适的"
           ]
         },
         {
@@ -6453,17 +6461,17 @@
           ]
         },
         {
+          "card": "KMP 模式匹配与 next 数组",
+          "score": 4,
+          "matchedTerms": [
+            "例如"
+          ]
+        },
+        {
           "card": "空间换时间与辅助数组",
           "score": 2,
           "matchedTerms": [
             "记录"
-          ]
-        },
-        {
-          "card": "前缀编码与二叉判定树",
-          "score": 2,
-          "matchedTerms": [
-            "冲突"
           ]
         }
       ]
@@ -6662,14 +6670,6 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 5,
-          "matchedTerms": [
-            "本题",
-            "次计算"
-          ]
-        },
-        {
           "card": "单链表与双链表",
           "score": 4,
           "matchedTerms": [
@@ -6822,6 +6822,13 @@
           ]
         },
         {
+          "card": "B 树与 B+ 树",
+          "score": 2,
+          "matchedTerms": [
+            "形成"
+          ]
+        },
+        {
           "card": "比较计数排序与秩排序",
           "score": 1,
           "matchedTerms": [
@@ -6858,13 +6865,6 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -6880,6 +6880,13 @@
         },
         {
           "card": "欧拉路径与欧拉回路",
+          "score": 2,
+          "matchedTerms": [
+            "条件是"
+          ]
+        },
+        {
+          "card": "栈的顺序存储与共享栈",
           "score": 2,
           "matchedTerms": [
             "条件是"
@@ -7114,13 +7121,6 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "摩尔投票法与主元素",
           "score": 4,
           "matchedTerms": [
@@ -7139,6 +7139,13 @@
           "score": 4,
           "matchedTerms": [
             "时间"
+          ]
+        },
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
           ]
         }
       ]
@@ -7285,13 +7292,6 @@
         },
         {
           "card": "立即数扩展与移位指令",
-          "score": 2,
-          "matchedTerms": [
-            "因此"
-          ]
-        },
-        {
-          "card": "Cache 直接映射与组相联",
           "score": 2,
           "matchedTerms": [
             "因此"
@@ -7476,19 +7476,6 @@
           ]
         },
         {
-          "card": "Cache 直接映射与组相联",
-          "score": 8,
-          "matchedTerms": [
-            "有效位",
-            "物理页",
-            "理页框",
-            "页框号",
-            "物理页框",
-            "理页框号",
-            "物理页框号"
-          ]
-        },
-        {
           "card": "TLB 组相联映射与 LRU 替换",
           "score": 8,
           "matchedTerms": [
@@ -7499,6 +7486,15 @@
             "物理页框",
             "理页框号",
             "物理页框号"
+          ]
+        },
+        {
+          "card": "程序查询与中断驱动 I/O",
+          "score": 7,
+          "matchedTerms": [
+            "处理",
+            "中断",
+            "设备"
           ]
         }
       ]
@@ -7711,18 +7707,17 @@
           ]
         },
         {
-          "card": "Cache 直接映射与组相联",
-          "score": 4,
-          "matchedTerms": [
-            "指令",
-            "因此"
-          ]
-        },
-        {
           "card": "CPU 指令执行过程",
           "score": 4,
           "matchedTerms": [
             "执行"
+          ]
+        },
+        {
+          "card": "浮点数表示与规格化",
+          "score": 3,
+          "matchedTerms": [
+            "-1"
           ]
         }
       ]
@@ -7793,6 +7788,13 @@
           "score": 1,
           "matchedTerms": [
             "的数据"
+          ]
+        },
+        {
+          "card": "页表项地址计算与页框号",
+          "score": 1,
+          "matchedTerms": [
+            "题目若"
           ]
         }
       ]
@@ -8069,10 +8071,10 @@
           ]
         },
         {
-          "card": "磁盘调度与 I/O",
-          "score": 1,
+          "card": "页表项地址计算与页框号",
+          "score": 3,
           "matchedTerms": [
-            "下一个"
+            "字节"
           ]
         }
       ]
@@ -8438,21 +8440,19 @@
           ]
         },
         {
+          "card": "二次探测法与开放定址散列",
+          "score": 6,
+          "matchedTerms": [
+            "起始",
+            "查找"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 6,
           "matchedTerms": [
             "时间",
             "访问"
-          ]
-        },
-        {
-          "card": "稀疏矩阵三元组表示",
-          "score": 5,
-          "matchedTerms": [
-            "还是",
-            "随机访",
-            "机访问",
-            "随机访问"
           ]
         }
       ]
@@ -8756,16 +8756,6 @@
           ]
         },
         {
-          "card": "AVL 树平衡调整",
-          "score": 12,
-          "matchedTerms": [
-            "平衡二叉树",
-            "平衡因子",
-            "平衡因",
-            "衡因子"
-          ]
-        },
-        {
           "card": "二叉树遍历与性质",
           "score": 11,
           "matchedTerms": [
@@ -8774,6 +8764,14 @@
             "右子树",
             "左右子",
             "左右子树"
+          ]
+        },
+        {
+          "card": "AVL 树平衡调整",
+          "score": 10,
+          "matchedTerms": [
+            "平衡二叉树",
+            "平衡因子"
           ]
         },
         {
@@ -8899,26 +8897,8 @@
       "answer": "C",
       "analysis": "2012-第6题-解析 对角线以下元素均为零，表明只有顶点 i 到顶点 j ( i < j ) 可能有边，而顶点 j 到顶点 i 一定没有边，即有向图是一个无环图，因此一定存在拓扑序列。对于拓扑序列是否唯一，试举一例：设有向图的邻接矩阵 ​ 0 0 0 ​ 1 0 0 ​ 1 0 0 ​ ​ 则存在两个拓扑序列，因此该图存在可能不唯一的拓扑序列。 结论：对于任一有向图，如果它的邻接矩阵中对角线以下（或以上）的元素均为零，则存在拓扑序列（可能不唯一）。反正，若图存在拓扑序列，却不一定能满足邻接矩阵中主对角线以下的元素均为零，但是可以通过适当地调整结点编号，使其邻接矩阵满足前述性质。",
       "existingCards": [],
-      "confidence": "high-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
-        {
-          "card": "拓扑排序与 AOV 网",
-          "score": 28,
-          "matchedTerms": [
-            "拓扑序列可能不唯一",
-            "无环图",
-            "拓扑序",
-            "扑序列",
-            "拓扑序列",
-            "序列可",
-            "列可能",
-            "可能不",
-            "能不唯",
-            "不唯一",
-            "扑序列可",
-            "序列可能"
-          ]
-        },
         {
           "card": "邻接矩阵与邻接表",
           "score": 13,
@@ -8927,6 +8907,19 @@
             "接矩阵",
             "邻接矩阵",
             "用邻接"
+          ]
+        },
+        {
+          "card": "拓扑排序与 AOV 网",
+          "score": 8,
+          "matchedTerms": [
+            "不唯一",
+            "无环图",
+            "拓扑序",
+            "扑序列",
+            "拓扑序列",
+            "不一定",
+            "存在两"
           ]
         },
         {
@@ -8974,6 +8967,15 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "KMP 模式匹配与 next 数组",
+          "score": 11,
+          "matchedTerms": [
+            "ababc",
+            "abab",
+            "ab"
+          ]
+        },
+        {
           "card": "最小生成树与最短路径",
           "score": 10,
           "matchedTerms": [
@@ -9013,13 +9015,6 @@
             "ab",
             "ba"
           ]
-        },
-        {
-          "card": "活动时间余量与并行区间",
-          "score": 3,
-          "matchedTerms": [
-            "ef"
-          ]
         }
       ]
     },
@@ -9051,19 +9046,6 @@
           ]
         },
         {
-          "card": "拓扑排序与 AOV 网",
-          "score": 8,
-          "matchedTerms": [
-            "的顶点",
-            "可能不",
-            "能不唯",
-            "不唯一",
-            "可能不唯",
-            "能不唯一",
-            "可能不唯一"
-          ]
-        },
-        {
           "card": "最小正整数缺失值查找",
           "score": 8,
           "matchedTerms": [
@@ -9088,6 +9070,15 @@
             "prim",
             "kruskal"
           ]
+        },
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 5,
+          "matchedTerms": [
+            "n-1",
+            "会得到",
+            "-1"
+          ]
         }
       ]
     },
@@ -9104,6 +9095,16 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "B 树与 B+ 树",
+          "score": 8,
+          "matchedTerms": [
+            "关键字",
+            "叶结点",
+            "上移",
+            "删除"
+          ]
+        },
+        {
           "card": "散列表装填因子与查找终止",
           "score": 7,
           "matchedTerms": [
@@ -9111,15 +9112,6 @@
             "的关键",
             "关键字",
             "的关键字"
-          ]
-        },
-        {
-          "card": "B 树与 B+ 树",
-          "score": 6,
-          "matchedTerms": [
-            "关键字",
-            "叶结点",
-            "删除"
           ]
         },
         {
@@ -9132,17 +9124,18 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "完全二叉树与编号性质",
           "score": 4,
           "matchedTerms": [
             "双亲"
+          ]
+        },
+        {
+          "card": "红黑树性质与高度",
+          "score": 3,
+          "matchedTerms": [
+            "删除",
+            "的平衡"
           ]
         }
       ]
@@ -9644,6 +9637,13 @@
           ]
         },
         {
+          "card": "拓扑排序与 AOV 网",
+          "score": 2,
+          "matchedTerms": [
+            "出一个"
+          ]
+        },
+        {
           "card": "二次探测法与开放定址散列",
           "score": 1,
           "matchedTerms": [
@@ -9662,13 +9662,6 @@
           "score": 1,
           "matchedTerms": [
             "中每个"
-          ]
-        },
-        {
-          "card": "B 树与 B+ 树",
-          "score": 1,
-          "matchedTerms": [
-            "在不同"
           ]
         }
       ]
@@ -9737,6 +9730,13 @@
       "candidates": [
         {
           "card": "线性表与顺序表",
+          "score": 3,
+          "matchedTerms": [
+            "ab"
+          ]
+        },
+        {
+          "card": "KMP 模式匹配与 next 数组",
           "score": 3,
           "matchedTerms": [
             "ab"
@@ -9819,6 +9819,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "B 树与 B+ 树",
+          "score": 2,
+          "matchedTerms": [
+            "形成"
+          ]
+        },
         {
           "card": "哈夫曼树与带权路径长度",
           "score": 1,
@@ -10593,6 +10600,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "页表项地址计算与页框号",
+          "score": 7,
+          "matchedTerms": [
+            "本题",
+            "字节"
+          ]
+        },
+        {
           "card": "索引结点 inode 与文件控制块",
           "score": 6,
           "matchedTerms": [
@@ -10627,13 +10642,6 @@
             "多少数",
             "少数据",
             "多少数据"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
           ]
         }
       ]
@@ -10744,6 +10752,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "页表项地址计算与页框号",
+          "score": 6,
+          "matchedTerms": [
+            "地址",
+            "字节"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 5,
           "matchedTerms": [
@@ -10756,14 +10772,6 @@
           "matchedTerms": [
             "地址可",
             "的地址"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 4,
-          "matchedTerms": [
-            "地址",
-            "地址的"
           ]
         },
         {
@@ -10854,6 +10862,14 @@
           ]
         },
         {
+          "card": "CRC 检错与生成多项式",
+          "score": 5,
+          "matchedTerms": [
+            "次数",
+            "次数为"
+          ]
+        },
+        {
           "card": "路由选择与转发表",
           "score": 4,
           "matchedTerms": [
@@ -10873,13 +10889,6 @@
           "score": 4,
           "matchedTerms": [
             "要求"
-          ]
-        },
-        {
-          "card": "UDP 与 TCP 对比",
-          "score": 4,
-          "matchedTerms": [
-            "有序"
           ]
         }
       ]
@@ -11095,6 +11104,15 @@
           ]
         },
         {
+          "card": "拓扑排序与 AOV 网",
+          "score": 6,
+          "matchedTerms": [
+            "取出一",
+            "出一个",
+            "取出一个"
+          ]
+        },
+        {
           "card": "循环链式队列与空闲结点复用",
           "score": 6,
           "matchedTerms": [
@@ -11108,13 +11126,6 @@
           "matchedTerms": [
             "因此",
             "开始"
-          ]
-        },
-        {
-          "card": "摩尔投票法与主元素",
-          "score": 4,
-          "matchedTerms": [
-            "时间"
           ]
         }
       ]
@@ -11353,13 +11364,6 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -11380,6 +11384,13 @@
             "入栈出",
             "栈出栈",
             "入栈出栈"
+          ]
+        },
+        {
+          "card": "活动时间余量与并行区间",
+          "score": 2,
+          "matchedTerms": [
+            "确定"
           ]
         }
       ]
@@ -11403,8 +11414,7 @@
             "平衡二叉树",
             "rr",
             "平衡因子",
-            "平衡因",
-            "衡因子"
+            "插入"
           ]
         },
         {
@@ -11421,6 +11431,15 @@
           ]
         },
         {
+          "card": "B 树与 B+ 树",
+          "score": 8,
+          "matchedTerms": [
+            "个关键字",
+            "关键字",
+            "插入"
+          ]
+        },
+        {
           "card": "循环链式队列与空闲结点复用",
           "score": 6,
           "matchedTerms": [
@@ -11434,14 +11453,6 @@
           "matchedTerms": [
             "个关键字",
             "关键字"
-          ]
-        },
-        {
-          "card": "树与森林的存储结构",
-          "score": 5,
-          "matchedTerms": [
-            "二叉树",
-            "结点的"
           ]
         }
       ]
@@ -11484,6 +11495,14 @@
           ]
         },
         {
+          "card": "B 树与 B+ 树",
+          "score": 4,
+          "matchedTerms": [
+            "叶结点",
+            "的叶结点"
+          ]
+        },
+        {
           "card": "红黑树性质与高度",
           "score": 3,
           "matchedTerms": [
@@ -11498,13 +11517,6 @@
           "matchedTerms": [
             "生成树",
             "=0"
-          ]
-        },
-        {
-          "card": "关键路径与 AOE 网",
-          "score": 2,
-          "matchedTerms": [
-            "长度"
           ]
         }
       ]
@@ -11593,13 +11605,14 @@
       "candidates": [
         {
           "card": "B 树与 B+ 树",
-          "score": 13,
+          "score": 16,
           "matchedTerms": [
             "树与",
             "叶结点",
+            "形成",
             "插入",
             "删除",
-            "结点后"
+            "的叶结点"
           ]
         },
         {
@@ -11861,6 +11874,15 @@
           ]
         },
         {
+          "card": "B 树与 B+ 树",
+          "score": 8,
+          "matchedTerms": [
+            "个关键字",
+            "根结点",
+            "关键字"
+          ]
+        },
+        {
           "card": "散列表装填因子与查找终止",
           "score": 5,
           "matchedTerms": [
@@ -11880,15 +11902,6 @@
           "score": 4,
           "matchedTerms": [
             "高度"
-          ]
-        },
-        {
-          "card": "树与森林的存储结构",
-          "score": 4,
-          "matchedTerms": [
-            "根结点",
-            "树根结",
-            "树根结点"
           ]
         }
       ]
@@ -12331,13 +12344,6 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -12356,6 +12362,13 @@
           "score": 2,
           "matchedTerms": [
             "冲突"
+          ]
+        },
+        {
+          "card": "外部排序与多路归并",
+          "score": 2,
+          "matchedTerms": [
+            "磁盘"
           ]
         }
       ]
@@ -12505,18 +12518,17 @@
           ]
         },
         {
-          "card": "Cache 直接映射与组相联",
-          "score": 4,
-          "matchedTerms": [
-            "块需要",
-            "因此"
-          ]
-        },
-        {
           "card": "程序查询与中断驱动 I/O",
           "score": 2,
           "matchedTerms": [
             "缓冲区"
+          ]
+        },
+        {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "执行"
           ]
         }
       ]
@@ -12683,17 +12695,18 @@
           ]
         },
         {
+          "card": "Cache 直接映射与组相联",
+          "score": 6,
+          "matchedTerms": [
+            "块大小",
+            "索引"
+          ]
+        },
+        {
           "card": "小端字节序与补码读取",
           "score": 4,
           "matchedTerms": [
             "地址"
-          ]
-        },
-        {
-          "card": "Cache跨块访问与缺失率",
-          "score": 4,
-          "matchedTerms": [
-            "长度"
           ]
         }
       ]
@@ -13077,9 +13090,10 @@
       "candidates": [
         {
           "card": "页表项地址计算与页框号",
-          "score": 5,
+          "score": 6,
           "matchedTerms": [
-            "mb"
+            "mb",
+            "题目若"
           ]
         },
         {
@@ -13127,20 +13141,19 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
-          "card": "页表项地址计算与页框号",
-          "score": 12,
-          "matchedTerms": [
-            "mb",
-            "本题",
-            "大小"
-          ]
-        },
-        {
           "card": "索引结点 inode 与文件控制块",
           "score": 9,
           "matchedTerms": [
             "直接",
             "kb"
+          ]
+        },
+        {
+          "card": "页表项地址计算与页框号",
+          "score": 9,
+          "matchedTerms": [
+            "mb",
+            "本题"
           ]
         },
         {
@@ -13326,17 +13339,18 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "页表项地址计算与页框号",
+          "score": 7,
+          "matchedTerms": [
+            "本题",
+            "字节"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 5,
           "matchedTerms": [
             "c2"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
           ]
         },
         {
@@ -13423,6 +13437,15 @@
           ]
         },
         {
+          "card": "CRC 检错与生成多项式",
+          "score": 6,
+          "matchedTerms": [
+            "次数",
+            "重新计",
+            "次数为"
+          ]
+        },
+        {
           "card": "GBN序号空间与窗口约束",
           "score": 6,
           "matchedTerms": [
@@ -13435,14 +13458,6 @@
           "score": 5,
           "matchedTerms": [
             "log"
-          ]
-        },
-        {
-          "card": "IP TTL 与逐跳转发",
-          "score": 5,
-          "matchedTerms": [
-            "减到",
-            "重新计"
           ]
         }
       ]
@@ -13746,7 +13761,7 @@
           "card": "二次探测法与开放定址散列",
           "score": 7,
           "matchedTerms": [
-            "递增",
+            "起始",
             "h0"
           ]
         },
@@ -14019,9 +14034,8 @@
         },
         {
           "card": "二次探测法与开放定址散列",
-          "score": 12,
+          "score": 10,
           "matchedTerms": [
-            "本题",
             "mod",
             "modm",
             "第一个"
@@ -14239,6 +14253,13 @@
           ]
         },
         {
+          "card": "KMP 模式匹配与 next 数组",
+          "score": 2,
+          "matchedTerms": [
+            "的定义"
+          ]
+        },
+        {
           "card": "树与森林的遍历",
           "score": 1,
           "matchedTerms": [
@@ -14259,23 +14280,6 @@
       "existingCards": [],
       "confidence": "medium-candidate",
       "candidates": [
-        {
-          "card": "拓扑排序与 AOV 网",
-          "score": 12,
-          "matchedTerms": [
-            "入度为",
-            "拓扑序",
-            "扑序列",
-            "拓扑序列",
-            "序列可",
-            "列可能",
-            "扑序列可",
-            "序列可能",
-            "拓扑序列可",
-            "扑序列可能",
-            "有向图"
-          ]
-        },
         {
           "card": "Kahn拓扑排序与入度维护",
           "score": 12,
@@ -14304,6 +14308,16 @@
           "score": 6,
           "matchedTerms": [
             "拓扑序"
+          ]
+        },
+        {
+          "card": "拓扑排序与 AOV 网",
+          "score": 5,
+          "matchedTerms": [
+            "入度为",
+            "拓扑序",
+            "扑序列",
+            "拓扑序列"
           ]
         },
         {
@@ -14391,6 +14405,20 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "B 树与 B+ 树",
+          "score": 18,
+          "matchedTerms": [
+            "个关键字",
+            "非根结",
+            "根结点",
+            "非根结点",
+            "关键字",
+            "键字数",
+            "关键字数",
+            "叶结点"
+          ]
+        },
+        {
           "card": "正则k叉树叶结点数与高度界",
           "score": 15,
           "matchedTerms": [
@@ -14430,16 +14458,6 @@
             "结点都有",
             "每个结点都",
             "个结点都有"
-          ]
-        },
-        {
-          "card": "B 树与 B+ 树",
-          "score": 8,
-          "matchedTerms": [
-            "关键字",
-            "键字数",
-            "关键字数",
-            "叶结点"
           ]
         },
         {
@@ -14668,10 +14686,10 @@
           ]
         },
         {
-          "card": "B 树与 B+ 树",
-          "score": 2,
+          "card": "归并排序与稳定性",
+          "score": 1,
           "matchedTerms": [
-            "合范围"
+            "的数据"
           ]
         }
       ]
@@ -14971,10 +14989,10 @@
           ]
         },
         {
-          "card": "归并排序与稳定性",
-          "score": 1,
+          "card": "拓扑排序与 AOV 网",
+          "score": 2,
           "matchedTerms": [
-            "的数据"
+            "意味着"
           ]
         }
       ]
@@ -15415,16 +15433,6 @@
           ]
         },
         {
-          "card": "Cache 直接映射与组相联",
-          "score": 8,
-          "matchedTerms": [
-            "tlb",
-            "物理地址",
-            "因此",
-            "和物理"
-          ]
-        },
-        {
           "card": "VIPT Cache索引与页内偏移",
           "score": 8,
           "matchedTerms": [
@@ -15438,6 +15446,18 @@
           "score": 7,
           "matchedTerms": [
             "tlb"
+          ]
+        },
+        {
+          "card": "大小端存储",
+          "score": 6,
+          "matchedTerms": [
+            "在内存",
+            "内存中",
+            "存中的",
+            "在内存中",
+            "内存中的",
+            "在内存中的"
           ]
         }
       ]
@@ -15834,10 +15854,11 @@
       "candidates": [
         {
           "card": "页表项地址计算与页框号",
-          "score": 9,
+          "score": 12,
           "matchedTerms": [
             "mb",
-            "本题"
+            "本题",
+            "字节"
           ]
         },
         {
@@ -16653,18 +16674,17 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 5,
-          "matchedTerms": [
-            "本题",
-            "序列可"
-          ]
-        },
-        {
           "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
             "a1"
+          ]
+        },
+        {
+          "card": "摩尔投票法与主元素",
+          "score": 4,
+          "matchedTerms": [
+            "不同元素"
           ]
         }
       ]
@@ -16763,6 +16783,18 @@
           ]
         },
         {
+          "card": "AVL 树平衡调整",
+          "score": 18,
+          "matchedTerms": [
+            "avl",
+            "平衡二叉树",
+            "插入",
+            "中序遍",
+            "序遍历",
+            "中序遍历"
+          ]
+        },
+        {
           "card": "树与森林的遍历",
           "score": 14,
           "matchedTerms": [
@@ -16773,14 +16805,6 @@
             "中序遍历",
             "序遍历可",
             "中序遍历可"
-          ]
-        },
-        {
-          "card": "AVL 树平衡调整",
-          "score": 13,
-          "matchedTerms": [
-            "avl",
-            "平衡二叉树"
           ]
         },
         {
@@ -17222,11 +17246,11 @@
           ]
         },
         {
-          "card": "多路归并与双指针",
-          "score": 2,
+          "card": "AVL 树平衡调整",
+          "score": 4,
           "matchedTerms": [
-            "元素组",
-            "个序列"
+            "插入",
+            "再对"
           ]
         }
       ]
@@ -17272,8 +17296,8 @@
           ]
         },
         {
-          "card": "并查集与路径压缩",
-          "score": 1,
+          "card": "KMP 模式匹配与 next 数组",
+          "score": 2,
           "matchedTerms": [
             "能直接"
           ]
@@ -17355,6 +17379,13 @@
         },
         {
           "card": "关键路径与 AOE 网",
+          "score": 1,
+          "matchedTerms": [
+            "不一定"
+          ]
+        },
+        {
+          "card": "拓扑排序与 AOV 网",
           "score": 1,
           "matchedTerms": [
             "不一定"
@@ -17559,14 +17590,6 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 5,
-          "matchedTerms": [
-            "本题",
-            "在同一"
-          ]
-        },
-        {
           "card": "查找算法与散列表",
           "score": 4,
           "matchedTerms": [
@@ -17581,6 +17604,13 @@
           "score": 4,
           "matchedTerms": [
             "本题"
+          ]
+        },
+        {
+          "card": "十字链表与邻接多重表",
+          "score": 4,
+          "matchedTerms": [
+            "的存储"
           ]
         }
       ]
@@ -17600,6 +17630,13 @@
         {
           "card": "快速选择与顺序统计量",
           "score": 2,
+          "matchedTerms": [
+            "而不是"
+          ]
+        },
+        {
+          "card": "KMP 模式匹配与 next 数组",
+          "score": 1,
           "matchedTerms": [
             "而不是"
           ]
@@ -18136,19 +18173,20 @@
           ]
         },
         {
+          "card": "Cache 直接映射与组相联",
+          "score": 10,
+          "matchedTerms": [
+            "块大小",
+            "字节",
+            "索引"
+          ]
+        },
+        {
           "card": "Cache组相联映射与地址字段",
           "score": 8,
           "matchedTerms": [
             "kb",
             "块大小"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 7,
-          "matchedTerms": [
-            "字节",
-            "mb"
           ]
         }
       ]
@@ -18250,19 +18288,19 @@
           ]
         },
         {
+          "card": "Cache 直接映射与组相联",
+          "score": 6,
+          "matchedTerms": [
+            "字节",
+            "中每个"
+          ]
+        },
+        {
           "card": "总线带宽与突发传输",
           "score": 5,
           "matchedTerms": [
             "/8",
             "字节"
-          ]
-        },
-        {
-          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
-          "score": 5,
-          "matchedTerms": [
-            "字节",
-            "字节序"
           ]
         }
       ]
@@ -18966,6 +19004,15 @@
           ]
         },
         {
+          "card": "拓扑排序与 AOV 网",
+          "score": 6,
+          "matchedTerms": [
+            "取出一",
+            "出一个",
+            "取出一个"
+          ]
+        },
+        {
           "card": "循环链式队列与空闲结点复用",
           "score": 6,
           "matchedTerms": [
@@ -18981,18 +19028,11 @@
           ]
         },
         {
-          "card": "最小正整数缺失值查找",
-          "score": 4,
+          "card": "KMP 模式匹配与 next 数组",
+          "score": 5,
           "matchedTerms": [
-            "访问",
-            "答案"
-          ]
-        },
-        {
-          "card": "正则k叉树叶结点数与高度界",
-          "score": 2,
-          "matchedTerms": [
-            "最多"
+            "ab",
+            "的定义"
           ]
         }
       ]
@@ -19080,20 +19120,20 @@
           ]
         },
         {
+          "card": "二次探测法与开放定址散列",
+          "score": 7,
+          "matchedTerms": [
+            "mod",
+            "在同一",
+            "第一个"
+          ]
+        },
+        {
           "card": "活动时间余量与并行区间",
           "score": 7,
           "matchedTerms": [
             "ve",
             "es"
-          ]
-        },
-        {
-          "card": "二次探测法与开放定址散列",
-          "score": 6,
-          "matchedTerms": [
-            "mod",
-            "在同一",
-            "第一个"
           ]
         },
         {
@@ -19147,10 +19187,10 @@
         },
         {
           "card": "AVL 树平衡调整",
-          "score": 6,
+          "score": 7,
           "matchedTerms": [
             "ll",
-            "插入后"
+            "插入"
           ]
         },
         {
@@ -19448,17 +19488,17 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
+          "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
             "本题"
           ]
         },
         {
-          "card": "散列表装填因子与查找终止",
+          "card": "树的基本术语与性质",
           "score": 4,
           "matchedTerms": [
-            "本题"
+            "深度"
           ]
         }
       ]
@@ -20229,17 +20269,17 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "活动时间余量与并行区间",
           "score": 4,
           "matchedTerms": [
             "执行"
+          ]
+        },
+        {
+          "card": "摩尔投票法与主元素",
+          "score": 4,
+          "matchedTerms": [
+            "时间"
           ]
         }
       ]
@@ -20630,12 +20670,10 @@
           ]
         },
         {
-          "card": "Cache 直接映射与组相联",
-          "score": 8,
+          "card": "单周期与多周期数据通路",
+          "score": 7,
           "matchedTerms": [
-            "cpu",
-            "指令",
-            "因此"
+            "cpu"
           ]
         }
       ]
@@ -20669,14 +20707,6 @@
           ]
         },
         {
-          "card": "Cache 直接映射与组相联",
-          "score": 8,
-          "matchedTerms": [
-            "缺失",
-            "物理地址"
-          ]
-        },
-        {
           "card": "CPU异常响应与现场保护",
           "score": 8,
           "matchedTerms": [
@@ -20700,6 +20730,15 @@
             "起始地",
             "始地址",
             "起始地址"
+          ]
+        },
+        {
+          "card": "Cache 映射与命中率",
+          "score": 6,
+          "matchedTerms": [
+            "缺失",
+            "物理地址",
+            "地址"
           ]
         }
       ]
@@ -20949,18 +20988,18 @@
           ]
         },
         {
+          "card": "页表项地址计算与页框号",
+          "score": 5,
+          "matchedTerms": [
+            "本题",
+            "和物理"
+          ]
+        },
+        {
           "card": "缺页异常与页表更新",
           "score": 4,
           "matchedTerms": [
             "os"
-          ]
-        },
-        {
-          "card": "文件逻辑结构与物理结构",
-          "score": 4,
-          "matchedTerms": [
-            "os",
-            "在物理"
           ]
         }
       ]
@@ -20978,18 +21017,19 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "页表项地址计算与页框号",
+          "score": 5,
+          "matchedTerms": [
+            "本题",
+            "题目若"
+          ]
+        },
+        {
           "card": "索引结点 inode 与文件控制块",
           "score": 4,
           "matchedTerms": [
             "kb",
             "算最大"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
           ]
         },
         {
@@ -21033,6 +21073,13 @@
           "matchedTerms": [
             "物理"
           ]
+        },
+        {
+          "card": "页表项地址计算与页框号",
+          "score": 1,
+          "matchedTerms": [
+            "题目若"
+          ]
         }
       ]
     },
@@ -21056,17 +21103,18 @@
           ]
         },
         {
+          "card": "页表项地址计算与页框号",
+          "score": 6,
+          "matchedTerms": [
+            "mb",
+            "题目若"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 5,
           "matchedTerms": [
             "c3"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 5,
-          "matchedTerms": [
-            "mb"
           ]
         },
         {
@@ -21398,6 +21446,16 @@
           ]
         },
         {
+          "card": "B 树与 B+ 树",
+          "score": 8,
+          "matchedTerms": [
+            "根结点",
+            "结点有",
+            "叶结点",
+            "的叶结点"
+          ]
+        },
+        {
           "card": "堆的定义与建堆",
           "score": 7,
           "matchedTerms": [
@@ -21416,17 +21474,6 @@
           "matchedTerms": [
             "高度为",
             "个孩子"
-          ]
-        },
-        {
-          "card": "完全二叉树与编号性质",
-          "score": 5,
-          "matchedTerms": [
-            "层结点",
-            "结点都",
-            "点都有",
-            "个孩子",
-            "结点都有"
           ]
         }
       ]
@@ -21479,13 +21526,11 @@
           ]
         },
         {
-          "card": "IPv4 子网划分与 CIDR",
-          "score": 5,
+          "card": "TCP 三次握手与四次挥手",
+          "score": 6,
           "matchedTerms": [
-            "属于",
-            "为两个",
-            "两个子",
-            "为两个子"
+            "seq",
+            "x+1"
           ]
         }
       ]
@@ -21826,15 +21871,6 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 6,
-          "matchedTerms": [
-            "必须使",
-            "须使用",
-            "必须使用"
-          ]
-        },
-        {
           "card": "快速选择与顺序统计量",
           "score": 6,
           "matchedTerms": [
@@ -21855,6 +21891,13 @@
           "score": 4,
           "matchedTerms": [
             "线性表"
+          ]
+        },
+        {
+          "card": "栈的顺序存储与共享栈",
+          "score": 4,
+          "matchedTerms": [
+            "入栈"
           ]
         }
       ]
@@ -22070,6 +22113,15 @@
           ]
         },
         {
+          "card": "B 树与 B+ 树",
+          "score": 6,
+          "matchedTerms": [
+            "根结点",
+            "叶结点",
+            "的叶结点"
+          ]
+        },
+        {
           "card": "堆的定义与建堆",
           "score": 5,
           "matchedTerms": [
@@ -22078,14 +22130,6 @@
             "右子树",
             "叶结点",
             "根结点"
-          ]
-        },
-        {
-          "card": "正则k叉树叶结点数与高度界",
-          "score": 5,
-          "matchedTerms": [
-            "因此",
-            "叶结点"
           ]
         }
       ]
@@ -22882,10 +22926,10 @@
           ]
         },
         {
-          "card": "最小正整数缺失值查找",
+          "card": "拓扑排序与 AOV 网",
           "score": 2,
           "matchedTerms": [
-            "访问"
+            "的所有"
           ]
         }
       ]
@@ -23744,6 +23788,13 @@
           "matchedTerms": [
             "理计算"
           ]
+        },
+        {
+          "card": "页表项地址计算与页框号",
+          "score": 1,
+          "matchedTerms": [
+            "题目若"
+          ]
         }
       ]
     },
@@ -23811,10 +23862,9 @@
         },
         {
           "card": "页表项地址计算与页框号",
-          "score": 4,
+          "score": 3,
           "matchedTerms": [
-            "地址",
-            "地址的"
+            "地址"
           ]
         },
         {
@@ -23899,17 +23949,18 @@
           ]
         },
         {
+          "card": "页表项地址计算与页框号",
+          "score": 4,
+          "matchedTerms": [
+            "地址",
+            "题目若"
+          ]
+        },
+        {
           "card": "处理机调度层次",
           "score": 3,
           "matchedTerms": [
             "分配"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 3,
-          "matchedTerms": [
-            "地址"
           ]
         },
         {
@@ -24486,10 +24537,10 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
+          "card": "活动时间余量与并行区间",
           "score": 4,
           "matchedTerms": [
-            "本题"
+            "执行"
           ]
         }
       ]
@@ -24811,10 +24862,12 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
+          "card": "AVL 树平衡调整",
+          "score": 3,
           "matchedTerms": [
-            "递增"
+            "中序遍",
+            "序遍历",
+            "中序遍历"
           ]
         },
         {
@@ -24857,21 +24910,20 @@
           ]
         },
         {
-          "card": "拓扑排序与 AOV 网",
-          "score": 6,
-          "matchedTerms": [
-            "入度为",
-            "拓扑序",
-            "扑序列",
-            "拓扑序列",
-            "有向图"
-          ]
-        },
-        {
           "card": "AOE网事件最早与最迟发生时间",
           "score": 6,
           "matchedTerms": [
             "拓扑序"
+          ]
+        },
+        {
+          "card": "拓扑排序与 AOV 网",
+          "score": 5,
+          "matchedTerms": [
+            "入度为",
+            "拓扑序",
+            "扑序列",
+            "拓扑序列"
           ]
         },
         {
@@ -24960,17 +25012,14 @@
           ]
         },
         {
-          "card": "堆的定义与建堆",
-          "score": 8,
+          "card": "B 树与 B+ 树",
+          "score": 12,
           "matchedTerms": [
-            "二叉树",
-            "个非叶",
-            "非叶结",
+            "个关键字",
+            "根结点",
+            "关键字",
             "叶结点",
-            "个非叶结",
-            "非叶结点",
-            "个非叶结点",
-            "根结点"
+            "两个孩子"
           ]
         }
       ]
@@ -25007,16 +25056,13 @@
         },
         {
           "card": "二次探测法与开放定址散列",
-          "score": 9,
+          "score": 6,
           "matchedTerms": [
             "查找",
             "散列表",
-            "用线性",
             "线性探",
             "性探测",
-            "用线性探",
-            "线性探测",
-            "用线性探测"
+            "线性探测"
           ]
         },
         {
@@ -25419,17 +25465,19 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
+          "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
             "本题"
           ]
         },
         {
-          "card": "散列表装填因子与查找终止",
-          "score": 4,
+          "card": "外部排序与多路归并",
+          "score": 3,
           "matchedTerms": [
-            "本题"
+            "存容量",
+            "容量的",
+            "存容量的"
           ]
         }
       ]
@@ -25640,13 +25688,6 @@
       "confidence": "low-candidate",
       "candidates": [
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "活动时间余量与并行区间",
           "score": 4,
           "matchedTerms": [
@@ -25672,6 +25713,13 @@
           "score": 3,
           "matchedTerms": [
             "cpu"
+          ]
+        },
+        {
+          "card": "二叉树遍历与性质",
+          "score": 2,
+          "matchedTerms": [
+            "是根"
           ]
         }
       ]
@@ -26286,6 +26334,16 @@
           ]
         },
         {
+          "card": "页表项地址计算与页框号",
+          "score": 8,
+          "matchedTerms": [
+            "地址",
+            "物理地址",
+            "物理地",
+            "理地址"
+          ]
+        },
+        {
           "card": "操作系统功能与特征",
           "score": 6,
           "matchedTerms": [
@@ -26309,16 +26367,6 @@
             "的物理地",
             "物理地址",
             "的物理地址"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 6,
-          "matchedTerms": [
-            "地址",
-            "物理地",
-            "理地址",
-            "物理地址"
           ]
         }
       ]
@@ -26505,20 +26553,19 @@
           ]
         },
         {
-          "card": "页表项地址计算与页框号",
-          "score": 4,
-          "matchedTerms": [
-            "地址",
-            "地址的"
-          ]
-        },
-        {
           "card": "互斥锁、自旋锁与信号量",
           "score": 3,
           "matchedTerms": [
             "完全相",
             "全相同",
             "完全相同"
+          ]
+        },
+        {
+          "card": "页表项地址计算与页框号",
+          "score": 3,
+          "matchedTerms": [
+            "地址"
           ]
         },
         {
@@ -26936,19 +26983,18 @@
           ]
         },
         {
-          "card": "正则k叉树叶结点数与高度界",
-          "score": 4,
+          "card": "KMP 模式匹配与 next 数组",
+          "score": 5,
           "matchedTerms": [
-            "因此"
+            "起始",
+            "长度为"
           ]
         },
         {
-          "card": "堆的定义与建堆",
-          "score": 3,
+          "card": "二次探测法与开放定址散列",
+          "score": 4,
           "matchedTerms": [
-            "保存当",
-            "存当前",
-            "保存当前"
+            "起始"
           ]
         }
       ]
@@ -27307,6 +27353,33 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "AVL 树平衡调整",
+          "score": 20,
+          "matchedTerms": [
+            "avl",
+            "平衡二叉树",
+            "右孩子",
+            "插入",
+            "失衡",
+            "旋转后"
+          ]
+        },
+        {
+          "card": "B 树与 B+ 树",
+          "score": 16,
+          "matchedTerms": [
+            "结点有",
+            "叶结点",
+            "形成",
+            "插入",
+            "删除",
+            "的叶结点",
+            "树和",
+            "在叶结",
+            "在叶结点"
+          ]
+        },
+        {
           "card": "红黑树性质与高度",
           "score": 14,
           "matchedTerms": [
@@ -27320,15 +27393,6 @@
             "平衡二叉",
             "的平衡二叉",
             "删除后"
-          ]
-        },
-        {
-          "card": "AVL 树平衡调整",
-          "score": 14,
-          "matchedTerms": [
-            "avl",
-            "平衡二叉树",
-            "旋转后"
           ]
         },
         {
@@ -27356,20 +27420,6 @@
             "叶结点",
             "一个孩",
             "一个孩子"
-          ]
-        },
-        {
-          "card": "二叉树遍历与性质",
-          "score": 11,
-          "matchedTerms": [
-            "二叉树",
-            "个孩子",
-            "右孩子",
-            "只有一",
-            "有一个",
-            "只有一个",
-            "叉树不",
-            "二叉树不"
           ]
         }
       ]
@@ -27467,9 +27517,8 @@
       "candidates": [
         {
           "card": "拓扑排序与 AOV 网",
-          "score": 11,
+          "score": 9,
           "matchedTerms": [
-            "的顶点",
             "用有向",
             "有向无",
             "向无环",
@@ -27665,25 +27714,23 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 8,
-          "matchedTerms": [
-            "查找",
-            "散列表",
-            "用线性",
-            "线性探",
-            "性探测",
-            "用线性探",
-            "线性探测"
-          ]
-        },
-        {
           "card": "线性表与顺序表",
           "score": 7,
           "matchedTerms": [
             "地址为",
             "插入",
             "长度是"
+          ]
+        },
+        {
+          "card": "二次探测法与开放定址散列",
+          "score": 6,
+          "matchedTerms": [
+            "查找",
+            "散列表",
+            "线性探",
+            "性探测",
+            "线性探测"
           ]
         }
       ]
@@ -27698,15 +27745,21 @@
       "answer": "B",
       "analysis": "2019-第9题-解析 假设位序都是从 0 开始的，按照 next 数组生成算法，对于 S 有 编号 0 1 2 3 4 5 S a b a a b c next -1 0 0 1 1 2 根据 KMP 算法，第一趟连续对比 6 次，在模式串的 5 号位和主串的 5 号位匹配失败，模式串的下一个比较位置为 next[5]，即下一次比较从模式串的 2 号位和主串 5 号位开始，然后直到模式串 5 号位和主串 8 号位匹配，第二趟比较 4 次，模式串匹配成功。单个字符的比较次数为 10 次，所以选 B。",
       "existingCards": [],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
         {
           "card": "KMP 模式匹配与 next 数组",
-          "score": 13,
+          "score": 22,
           "matchedTerms": [
             "kmp",
             "next",
-            "模式串"
+            "ab",
+            "模式串",
+            "式串匹",
+            "串匹配",
+            "模式串匹",
+            "式串匹配",
+            "模式串匹配"
           ]
         },
         {
@@ -28410,6 +28463,22 @@
           ]
         },
         {
+          "card": "KMP 模式匹配与 next 数组",
+          "score": 6,
+          "matchedTerms": [
+            "不能直",
+            "能直接",
+            "不能直接"
+          ]
+        },
+        {
+          "card": "二次探测法与开放定址散列",
+          "score": 4,
+          "matchedTerms": [
+            "参数"
+          ]
+        },
+        {
           "card": "活动时间余量与并行区间",
           "score": 4,
           "matchedTerms": [
@@ -28418,24 +28487,6 @@
         },
         {
           "card": "并查集与路径压缩",
-          "score": 3,
-          "matchedTerms": [
-            "不能直",
-            "能直接",
-            "不能直接"
-          ]
-        },
-        {
-          "card": "单链表与双链表",
-          "score": 3,
-          "matchedTerms": [
-            "不能直",
-            "能直接",
-            "不能直接"
-          ]
-        },
-        {
-          "card": "最小生成树与最短路径",
           "score": 3,
           "matchedTerms": [
             "不能直",
@@ -28758,11 +28809,12 @@
           ]
         },
         {
-          "card": "Cache 直接映射与组相联",
-          "score": 4,
+          "card": "大小端存储",
+          "score": 3,
           "matchedTerms": [
-            "物理地址",
-            "因此"
+            "在内存",
+            "内存中",
+            "在内存中"
           ]
         }
       ]
@@ -29121,13 +29173,6 @@
           ]
         },
         {
-          "card": "页表项地址计算与页框号",
-          "score": 3,
-          "matchedTerms": [
-            "大小"
-          ]
-        },
-        {
           "card": "索引结点 inode 与文件控制块",
           "score": 2,
           "matchedTerms": [
@@ -29139,6 +29184,13 @@
           "score": 1,
           "matchedTerms": [
             "缓存的"
+          ]
+        },
+        {
+          "card": "死锁必要条件与处理",
+          "score": 1,
+          "matchedTerms": [
+            "一定会"
           ]
         }
       ]
@@ -29208,10 +29260,11 @@
       "candidates": [
         {
           "card": "页表项地址计算与页框号",
-          "score": 7,
+          "score": 8,
           "matchedTerms": [
             "本题",
-            "地址"
+            "地址",
+            "题目若"
           ]
         },
         {
@@ -29327,6 +29380,13 @@
           "score": 2,
           "matchedTerms": [
             "分别为"
+          ]
+        },
+        {
+          "card": "页表项地址计算与页框号",
+          "score": 1,
+          "matchedTerms": [
+            "题目若"
           ]
         }
       ]
@@ -29940,10 +30000,10 @@
           ]
         },
         {
-          "card": "归并排序与稳定性",
-          "score": 2,
+          "card": "KMP 模式匹配与 next 数组",
+          "score": 3,
           "matchedTerms": [
-            "得到"
+            "ab"
           ]
         }
       ]
@@ -30072,19 +30132,21 @@
           ]
         },
         {
+          "card": "AVL 树平衡调整",
+          "score": 8,
+          "matchedTerms": [
+            "bf",
+            "中序遍",
+            "序遍历",
+            "中序遍历"
+          ]
+        },
+        {
           "card": "线性表与顺序表",
           "score": 6,
           "matchedTerms": [
             "ab",
             "ba"
-          ]
-        },
-        {
-          "card": "二次探测法与开放定址散列",
-          "score": 5,
-          "matchedTerms": [
-            "本题",
-            "序列可"
           ]
         },
         {
@@ -30197,24 +30259,18 @@
           ]
         },
         {
-          "card": "拓扑排序与 AOV 网",
-          "score": 8,
-          "matchedTerms": [
-            "的顶点",
-            "有向无",
-            "向无环",
-            "无环图",
-            "有向无环",
-            "向无环图",
-            "有向无环图"
-          ]
-        },
-        {
           "card": "图的存储与遍历",
           "score": 8,
           "matchedTerms": [
             "dfs",
             "有顶点"
+          ]
+        },
+        {
+          "card": "拓扑排序唯一性判定",
+          "score": 6,
+          "matchedTerms": [
+            "有向无环图"
           ]
         }
       ]
@@ -30450,8 +30506,20 @@
       "answer": "B",
       "analysis": "2020-第10题-解析 一 个 4 阶 B 树 的任意非叶结点至多含有加 4-1=3 个关键字，在关键字依次插入的过程中，会导致结点的不断分裂，插入过程如下所示。 5 6 9 5 6 9 13 9 13 5 6 8 9 13 2 5 6 8 9 12 13 2 5 6 12 13 2 5 6 9 8 12 13 15 2 5 6 9 8 插入 5, 6, 9 插入 13 分裂 插入 8, 2 插入 12 分裂 插入 15 得到根结点包含的关键字为 6, 9。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "B 树与 B+ 树",
+          "score": 16,
+          "matchedTerms": [
+            "至多",
+            "个关键字",
+            "根结点",
+            "关键字",
+            "叶结点",
+            "插入"
+          ]
+        },
         {
           "card": "散列表装填因子与查找终止",
           "score": 7,
@@ -30477,15 +30545,6 @@
             "非叶结点",
             "非叶结",
             "叶结点"
-          ]
-        },
-        {
-          "card": "B 树与 B+ 树",
-          "score": 6,
-          "matchedTerms": [
-            "关键字",
-            "叶结点",
-            "插入"
           ]
         },
         {
@@ -30779,6 +30838,13 @@
           ]
         },
         {
+          "card": "KMP 模式匹配与 next 数组",
+          "score": 3,
+          "matchedTerms": [
+            "ab"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 2,
           "matchedTerms": [
@@ -30813,13 +30879,6 @@
           "score": 1,
           "matchedTerms": [
             "-1"
-          ]
-        },
-        {
-          "card": "B 树与 B+ 树",
-          "score": 1,
-          "matchedTerms": [
-            "中可能"
           ]
         }
       ]
@@ -30969,6 +31028,13 @@
           "score": 3,
           "matchedTerms": [
             "因为"
+          ]
+        },
+        {
+          "card": "B 树与 B+ 树",
+          "score": 2,
+          "matchedTerms": [
+            "公式"
           ]
         }
       ]
@@ -31168,17 +31234,17 @@
           ]
         },
         {
-          "card": "流水线吞吐率与加速比",
-          "score": 1,
-          "matchedTerms": [
-            "不一定"
-          ]
-        },
-        {
           "card": "硬布线控制器与微程序控制器",
           "score": 1,
           "matchedTerms": [
             "可通过"
+          ]
+        },
+        {
+          "card": "Cache 替换与写策略",
+          "score": 1,
+          "matchedTerms": [
+            "写操作"
           ]
         }
       ]
@@ -31424,19 +31490,18 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
-          "card": "Cache 直接映射与组相联",
-          "score": 22,
+          "card": "存储器层次与主存组织",
+          "score": 20,
           "matchedTerms": [
             "平均访",
             "访问时",
             "问时间",
             "访问时间",
-            "cpu",
-            "物理地址"
+            "cpu"
           ]
         },
         {
-          "card": "存储器层次与主存组织",
+          "card": "Cache 直接映射与组相联",
           "score": 20,
           "matchedTerms": [
             "平均访",
@@ -31612,6 +31677,14 @@
           ]
         },
         {
+          "card": "Cache 直接映射与组相联",
+          "score": 6,
+          "matchedTerms": [
+            "字节",
+            "索引"
+          ]
+        },
+        {
           "card": "VIPT Cache索引与页内偏移",
           "score": 6,
           "matchedTerms": [
@@ -31628,13 +31701,6 @@
         },
         {
           "card": "程序查询与中断驱动 I/O",
-          "score": 4,
-          "matchedTerms": [
-            "字节"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
           "score": 4,
           "matchedTerms": [
             "字节"
@@ -31996,6 +32062,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "页表项地址计算与页框号",
+          "score": 6,
+          "matchedTerms": [
+            "字节",
+            "字节数",
+            "题目若"
+          ]
+        },
+        {
           "card": "FAT链接分配与簇链访问",
           "score": 4,
           "matchedTerms": [
@@ -32007,13 +32082,6 @@
           "score": 2,
           "matchedTerms": [
             "阶段"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 2,
-          "matchedTerms": [
-            "字节数"
           ]
         },
         {
@@ -32238,17 +32306,17 @@
           ]
         },
         {
+          "card": "CRC 检错与生成多项式",
+          "score": 4,
+          "matchedTerms": [
+            "次数"
+          ]
+        },
+        {
           "card": "BGP UPDATE 报文与路由通告",
           "score": 3,
           "matchedTerms": [
             "使用"
-          ]
-        },
-        {
-          "card": "OSI 与 TCP/IP 参考模型",
-          "score": 3,
-          "matchedTerms": [
-            "表示"
           ]
         }
       ]
@@ -32347,17 +32415,17 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
+          "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
             "本题"
           ]
         },
         {
-          "card": "散列表装填因子与查找终止",
+          "card": "正则k叉树叶结点数与高度界",
           "score": 4,
           "matchedTerms": [
-            "本题"
+            "因此"
           ]
         }
       ]
@@ -32820,15 +32888,16 @@
       "answer": "D",
       "analysis": "2021-第6题-解析 根据 AVL 旋转方法 可知，这题采用 RL 型旋转，旋转后树的结构为： 25 / \\ 20 30 / \\ \\ 16 23 40 根结点为 25",
       "existingCards": [],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
         {
           "card": "AVL 树平衡调整",
-          "score": 19,
+          "score": 21,
           "matchedTerms": [
             "avl",
             "平衡二叉树",
             "rl",
+            "插入",
             "旋转后"
           ]
         },
@@ -32860,10 +32929,12 @@
           ]
         },
         {
-          "card": "关键路径与关键活动",
-          "score": 5,
+          "card": "B 树与 B+ 树",
+          "score": 6,
           "matchedTerms": [
-            "vl"
+            "根结点",
+            "关键字",
+            "插入"
           ]
         }
       ]
@@ -32881,18 +32952,6 @@
       "confidence": "low-candidate",
       "candidates": [
         {
-          "card": "拓扑排序与 AOV 网",
-          "score": 8,
-          "matchedTerms": [
-            "入度为",
-            "的顶点",
-            "拓扑序",
-            "扑序列",
-            "拓扑序列",
-            "有向图"
-          ]
-        },
-        {
           "card": "AOE网事件最早与最迟发生时间",
           "score": 6,
           "matchedTerms": [
@@ -32909,6 +32968,16 @@
             "选择入度",
             "择入度为",
             "选择入度为"
+          ]
+        },
+        {
+          "card": "拓扑排序与 AOV 网",
+          "score": 5,
+          "matchedTerms": [
+            "入度为",
+            "拓扑序",
+            "扑序列",
+            "拓扑序列"
           ]
         },
         {
@@ -33053,8 +33122,8 @@
           ]
         },
         {
-          "card": "散列表装填因子与查找终止",
-          "score": 5,
+          "card": "B 树与 B+ 树",
+          "score": 6,
           "matchedTerms": [
             "个关键字",
             "关键字"
@@ -34162,18 +34231,17 @@
       "confidence": "low-candidate",
       "candidates": [
         {
-          "card": "Cache 直接映射与组相联",
-          "score": 8,
-          "matchedTerms": [
-            "映射",
-            "因此"
-          ]
-        },
-        {
           "card": "中断响应与异常处理",
           "score": 6,
           "matchedTerms": [
             "控制"
+          ]
+        },
+        {
+          "card": "Cache 直接映射与组相联",
+          "score": 6,
+          "matchedTerms": [
+            "映射"
           ]
         },
         {
@@ -34442,14 +34510,16 @@
       "existingCards": [
         "IPv4 首部与分片"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
         {
           "card": "页表项地址计算与页框号",
-          "score": 8,
+          "score": 12,
           "matchedTerms": [
             "本题",
-            "偏移"
+            "偏移",
+            "字节",
+            "题目若"
           ]
         },
         {
@@ -34576,17 +34646,18 @@
           ]
         },
         {
+          "card": "页表项地址计算与页框号",
+          "score": 5,
+          "matchedTerms": [
+            "本题",
+            "题目若"
+          ]
+        },
+        {
           "card": "缺页异常与页表更新",
           "score": 4,
           "matchedTerms": [
             "os"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
           ]
         }
       ]
@@ -34619,17 +34690,17 @@
           ]
         },
         {
-          "card": "页表项地址计算与页框号",
-          "score": 3,
-          "matchedTerms": [
-            "大小"
-          ]
-        },
-        {
           "card": "文件逻辑结构与物理结构",
           "score": 1,
           "matchedTerms": [
             "的数据"
+          ]
+        },
+        {
+          "card": "页表项地址计算与页框号",
+          "score": 1,
+          "matchedTerms": [
+            "题目若"
           ]
         }
       ]
@@ -34644,13 +34715,14 @@
       "answer": "C",
       "analysis": "2021-第40题-解析 本题考察 TCP 的滑动窗口机制。 依题意，甲发送完 200B 报文后，继续发送的报文段中序号字段 seq=701。由于乙告知接收窗口为 500，且甲未收到乙对 seq =501 报文段的确认，那么甲还能发送的报文段字节数为 500-200=300B，因此甲在未收到新的确认段之前，还能发送的数据序号范围是 701~1000。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
         {
           "card": "页表项地址计算与页框号",
-          "score": 6,
+          "score": 9,
           "matchedTerms": [
             "本题",
+            "字节",
             "字节数"
           ]
         },
@@ -34820,10 +34892,10 @@
           ]
         },
         {
-          "card": "DNS 与 HTTP",
+          "card": "CRC 检错与生成多项式",
           "score": 4,
           "matchedTerms": [
-            "基于"
+            "次数"
           ]
         }
       ]
@@ -34907,21 +34979,20 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 9,
-          "matchedTerms": [
-            "本题",
-            "mod",
-            "序列可"
-          ]
-        },
-        {
           "card": "最小正整数缺失值查找",
           "score": 9,
           "matchedTerms": [
             "标记",
             "因为",
             "访问"
+          ]
+        },
+        {
+          "card": "二次探测法与开放定址散列",
+          "score": 6,
+          "matchedTerms": [
+            "mod",
+            "序列可"
           ]
         },
         {
@@ -35071,6 +35142,15 @@
           ]
         },
         {
+          "card": "拓扑排序与 AOV 网",
+          "score": 6,
+          "matchedTerms": [
+            "整个过",
+            "个过程",
+            "整个过程"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 6,
           "matchedTerms": [
@@ -35090,13 +35170,6 @@
           "score": 4,
           "matchedTerms": [
             "为空"
-          ]
-        },
-        {
-          "card": "正则k叉树叶结点数与高度界",
-          "score": 4,
-          "matchedTerms": [
-            "因此"
           ]
         }
       ]
@@ -35607,8 +35680,9 @@
       "candidates": [
         {
           "card": "B 树与 B+ 树",
-          "score": 10,
+          "score": 12,
           "matchedTerms": [
+            "根结点",
             "关键字",
             "键字数",
             "关键字数",
@@ -36028,6 +36102,13 @@
           ]
         },
         {
+          "card": "KMP 模式匹配与 next 数组",
+          "score": 3,
+          "matchedTerms": [
+            "ab"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 2,
           "matchedTerms": [
@@ -36046,17 +36127,8 @@
       "answer": "C",
       "analysis": "2022-第15题-解析 本题考察 通过单级页表的地址翻译过程。 页大小为 4KB = 2 12 B，按字节编址，故页内地址为 12 位。虚拟地址空间大小为 4GB=23，故虚拟地址共 32 位，其中低 12 位为页内地址，高 20 位为虚页号。题中给出的 虚拟地址为 00082840H，虚页号为高 20 位即 00082H（页内地址为低 12 位即 840H），82H 对 应的十进制数为 130（注意题中页表的虚页号部分末尾未写 H，所以是十进制数，故查找时要 先将虚页号转换为十进制数），查页表命中，且存在位为 1，对应页框号为 018H。将查找到的 页框号 018H 和页内地址 840H 拼接，得到主存地址为 018840H。",
       "existingCards": [],
-      "confidence": "medium-candidate",
+      "confidence": "low-candidate",
       "candidates": [
-        {
-          "card": "二次探测法与开放定址散列",
-          "score": 9,
-          "matchedTerms": [
-            "本题",
-            "h0",
-            "查找"
-          ]
-        },
         {
           "card": "线性表与顺序表",
           "score": 8,
@@ -36070,6 +36142,14 @@
           "score": 6,
           "matchedTerms": [
             "空间"
+          ]
+        },
+        {
+          "card": "二次探测法与开放定址散列",
+          "score": 5,
+          "matchedTerms": [
+            "h0",
+            "查找"
           ]
         },
         {
@@ -36248,13 +36328,6 @@
       "confidence": "low-candidate",
       "candidates": [
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -36399,13 +36472,6 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -36428,6 +36494,13 @@
             "物理地",
             "理地址",
             "物理地址"
+          ]
+        },
+        {
+          "card": "比较计数排序与秩排序",
+          "score": 2,
+          "matchedTerms": [
+            "空间"
           ]
         }
       ]
@@ -37129,7 +37202,7 @@
           "score": 4,
           "matchedTerms": [
             "地址",
-            "地址的"
+            "题目若"
           ]
         },
         {
@@ -37475,6 +37548,13 @@
           ]
         },
         {
+          "card": "CRC 检错与生成多项式",
+          "score": 4,
+          "matchedTerms": [
+            "次数"
+          ]
+        },
+        {
           "card": "GBN信道利用率与发送窗口",
           "score": 4,
           "matchedTerms": [
@@ -37493,13 +37573,6 @@
           "score": 4,
           "matchedTerms": [
             "初始"
-          ]
-        },
-        {
-          "card": "OSI 与 TCP/IP 参考模型",
-          "score": 3,
-          "matchedTerms": [
-            "表示"
           ]
         }
       ]
@@ -37707,6 +37780,14 @@
           ]
         },
         {
+          "card": "KMP 模式匹配与 next 数组",
+          "score": 5,
+          "matchedTerms": [
+            "ab",
+            "的定义"
+          ]
+        },
+        {
           "card": "正则k叉树叶结点数与高度界",
           "score": 4,
           "matchedTerms": [
@@ -37720,13 +37801,6 @@
             "必须满",
             "须满足",
             "必须满足"
-          ]
-        },
-        {
-          "card": "线性表与顺序表",
-          "score": 3,
-          "matchedTerms": [
-            "ab"
           ]
         }
       ]
@@ -38060,10 +38134,10 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
+          "card": "快速排序分区过程",
           "score": 4,
           "matchedTerms": [
-            "本题"
+            "平均"
           ]
         }
       ]
@@ -38129,7 +38203,7 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
+          "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
             "本题"
@@ -38753,17 +38827,18 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
+          "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
             "本题"
           ]
         },
         {
-          "card": "散列表装填因子与查找终止",
-          "score": 4,
+          "card": "内部排序与稳定性",
+          "score": 3,
           "matchedTerms": [
-            "本题"
+            "得到",
+            "n2"
           ]
         }
       ]
@@ -38789,13 +38864,6 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -38814,6 +38882,13 @@
           "score": 4,
           "matchedTerms": [
             "因此"
+          ]
+        },
+        {
+          "card": "外部排序与多路归并",
+          "score": 3,
+          "matchedTerms": [
+            "cpu"
           ]
         }
       ]
@@ -38868,10 +38943,10 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
+          "card": "活动时间余量与并行区间",
           "score": 4,
           "matchedTerms": [
-            "本题"
+            "执行"
           ]
         }
       ]
@@ -38888,16 +38963,6 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
-        {
-          "card": "二次探测法与开放定址散列",
-          "score": 7,
-          "matchedTerms": [
-            "本题",
-            "使用不",
-            "用不同",
-            "使用不同"
-          ]
-        },
         {
           "card": "活动时间余量与并行区间",
           "score": 4,
@@ -38918,6 +38983,15 @@
           "matchedTerms": [
             "还是",
             "有一个"
+          ]
+        },
+        {
+          "card": "二次探测法与开放定址散列",
+          "score": 3,
+          "matchedTerms": [
+            "使用不",
+            "用不同",
+            "使用不同"
           ]
         },
         {
@@ -38958,13 +39032,6 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
@@ -38976,6 +39043,13 @@
           "score": 4,
           "matchedTerms": [
             "因此"
+          ]
+        },
+        {
+          "card": "十字链表与邻接多重表",
+          "score": 3,
+          "matchedTerms": [
+            "v2"
           ]
         }
       ]
@@ -39084,10 +39158,11 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
+          "card": "后缀最大值与最小值维护",
           "score": 4,
           "matchedTerms": [
-            "本题"
+            "题的",
+            "时间"
           ]
         }
       ]
@@ -39154,13 +39229,6 @@
       "confidence": "low-candidate",
       "candidates": [
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "活动时间余量与并行区间",
           "score": 4,
           "matchedTerms": [
@@ -39187,6 +39255,13 @@
           "matchedTerms": [
             "访问",
             "答案"
+          ]
+        },
+        {
+          "card": "算法五个特性",
+          "score": 3,
+          "matchedTerms": [
+            "输出"
           ]
         }
       ]
@@ -39259,6 +39334,15 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "Cache 直接映射与组相联",
+          "score": 12,
+          "matchedTerms": [
+            "映射",
+            "组索引",
+            "索引"
+          ]
+        },
+        {
           "card": "Cache组相联映射与地址字段",
           "score": 12,
           "matchedTerms": [
@@ -39275,14 +39359,6 @@
             "数组",
             "索引和",
             "采用的"
-          ]
-        },
-        {
-          "card": "Cache 直接映射与组相联",
-          "score": 10,
-          "matchedTerms": [
-            "映射",
-            "组索引"
           ]
         },
         {
@@ -39353,11 +39429,10 @@
           ]
         },
         {
-          "card": "Cache 直接映射与组相联",
-          "score": 6,
+          "card": "Cache组相联映射与地址字段",
+          "score": 5,
           "matchedTerms": [
-            "位数",
-            "因此"
+            "kb"
           ]
         }
       ]
@@ -39397,15 +39472,6 @@
           ]
         },
         {
-          "card": "Cache 直接映射与组相联",
-          "score": 8,
-          "matchedTerms": [
-            "cpu",
-            "指令",
-            "行需要"
-          ]
-        },
-        {
           "card": "CPU 指令执行过程",
           "score": 8,
           "matchedTerms": [
@@ -39418,6 +39484,14 @@
           "score": 7,
           "matchedTerms": [
             "cpu"
+          ]
+        },
+        {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 7,
+          "matchedTerms": [
+            "cpu",
+            "执行"
           ]
         }
       ]
@@ -39551,10 +39625,9 @@
         },
         {
           "card": "Cache 直接映射与组相联",
-          "score": 8,
+          "score": 6,
           "matchedTerms": [
-            "映射",
-            "因此"
+            "映射"
           ]
         }
       ]
@@ -39666,12 +39739,10 @@
         },
         {
           "card": "Cache 直接映射与组相联",
-          "score": 18,
+          "score": 14,
           "matchedTerms": [
             "映射",
             "相等",
-            "物理地址",
-            "因此",
             "物理页",
             "理页框",
             "页框号",
@@ -39747,7 +39818,7 @@
           "card": "Cache 直接映射与组相联",
           "score": 2,
           "matchedTerms": [
-            "因此"
+            "索引"
           ]
         }
       ]
@@ -39776,10 +39847,9 @@
         },
         {
           "card": "Cache 直接映射与组相联",
-          "score": 9,
+          "score": 7,
           "matchedTerms": [
             "映射",
-            "因此",
             "和物理"
           ]
         },
@@ -39831,10 +39901,9 @@
         },
         {
           "card": "页表项地址计算与页框号",
-          "score": 8,
+          "score": 5,
           "matchedTerms": [
-            "mb",
-            "大小"
+            "mb"
           ]
         },
         {
@@ -39945,14 +40014,14 @@
           ]
         },
         {
-          "card": "页表项地址计算与页框号",
-          "score": 3,
+          "card": "SCAN 与 C-SCAN 磁盘调度",
+          "score": 2,
           "matchedTerms": [
-            "大小"
+            "忽略"
           ]
         },
         {
-          "card": "SCAN 与 C-SCAN 磁盘调度",
+          "card": "TLB 与快表命中",
           "score": 2,
           "matchedTerms": [
             "忽略"
@@ -40639,7 +40708,7 @@
           "score": 14,
           "matchedTerms": [
             "mb",
-            "大小",
+            "字节",
             "va",
             "pa"
           ]
@@ -40821,17 +40890,18 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
+          "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
             "本题"
           ]
         },
         {
-          "card": "散列表装填因子与查找终止",
+          "card": "树与森林的遍历",
           "score": 4,
           "matchedTerms": [
-            "本题"
+            "序遍历",
+            "二叉树"
           ]
         }
       ]
@@ -40885,6 +40955,23 @@
           ]
         },
         {
+          "card": "AVL 树平衡调整",
+          "score": 13,
+          "matchedTerms": [
+            "左孩子",
+            "右孩子",
+            "中序遍",
+            "序遍历",
+            "遍历结",
+            "历结果",
+            "中序遍历",
+            "序遍历结",
+            "遍历结果",
+            "中序遍历结",
+            "序遍历结果"
+          ]
+        },
+        {
           "card": "树与森林的遍历",
           "score": 11,
           "matchedTerms": [
@@ -40909,14 +40996,6 @@
             "两个孩子",
             "有两个孩子"
           ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 7,
-          "matchedTerms": [
-            "遍历",
-            "之间"
-          ]
         }
       ]
     },
@@ -40936,6 +41015,13 @@
       "candidates": [
         {
           "card": "线性表与顺序表",
+          "score": 3,
+          "matchedTerms": [
+            "ab"
+          ]
+        },
+        {
+          "card": "KMP 模式匹配与 next 数组",
           "score": 3,
           "matchedTerms": [
             "ab"
@@ -41033,10 +41119,12 @@
       "candidates": [
         {
           "card": "KMP 模式匹配与 next 数组",
-          "score": 13,
+          "score": 19,
           "matchedTerms": [
             "kmp",
             "next",
+            "ab",
+            "的最长",
             "模式串"
           ]
         },
@@ -41133,24 +41221,20 @@
           ]
         },
         {
-          "card": "AVL 树平衡调整",
-          "score": 6,
+          "card": "散列表装填因子与查找终止",
+          "score": 3,
           "matchedTerms": [
-            "二叉搜",
-            "叉搜索",
-            "搜索树",
-            "二叉搜索",
-            "叉搜索树",
-            "二叉搜索树"
+            "的关键",
+            "关键字",
+            "的关键字"
           ]
         },
         {
-          "card": "B 树与 B+ 树",
-          "score": 6,
+          "card": "二叉树遍历与性质",
+          "score": 2,
           "matchedTerms": [
-            "点关键",
-            "关键字",
-            "点关键字"
+            "左子树",
+            "右子树"
           ]
         }
       ]
@@ -41277,10 +41361,11 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
+          "card": "B 树与 B+ 树",
           "score": 4,
           "matchedTerms": [
-            "本题"
+            "关键字",
+            "删除"
           ]
         }
       ]
@@ -41471,13 +41556,6 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "活动时间余量与并行区间",
           "score": 4,
           "matchedTerms": [
@@ -41489,6 +41567,13 @@
           "score": 4,
           "matchedTerms": [
             "本题"
+          ]
+        },
+        {
+          "card": "后缀极值与区间乘积最大值",
+          "score": 3,
+          "matchedTerms": [
+            "结果为"
           ]
         }
       ]
@@ -41559,6 +41644,16 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "二次探测法与开放定址散列",
+          "score": 7,
+          "matchedTerms": [
+            "参数",
+            "要选择",
+            "选择合",
+            "要选择合"
+          ]
+        },
+        {
           "card": "后缀最大值与最小值维护",
           "score": 6,
           "matchedTerms": [
@@ -41584,13 +41679,6 @@
           "score": 1,
           "matchedTerms": [
             "使用大"
-          ]
-        },
-        {
-          "card": "归并排序与稳定性",
-          "score": 1,
-          "matchedTerms": [
-            "的数据"
           ]
         }
       ]
@@ -41629,18 +41717,17 @@
           ]
         },
         {
+          "card": "KMP 模式匹配与 next 数组",
+          "score": 4,
+          "matchedTerms": [
+            "例如"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 3,
           "matchedTerms": [
             "if"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 3,
-          "matchedTerms": [
-            "对应",
-            "情况下"
           ]
         }
       ]
@@ -41949,15 +42036,15 @@
           ]
         },
         {
-          "card": "中缀表达式求值",
+          "card": "拓扑排序与 AOV 网",
           "score": 2,
           "matchedTerms": [
-            "优先级"
+            "出一个"
           ]
         },
         {
-          "card": "堆排序与优先队列",
-          "score": 1,
+          "card": "中缀表达式求值",
+          "score": 2,
           "matchedTerms": [
             "优先级"
           ]
@@ -42590,17 +42677,20 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "页表项地址计算与页框号",
+          "score": 8,
+          "matchedTerms": [
+            "mb",
+            "题目若",
+            "目若分",
+            "题目若分"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 5,
           "matchedTerms": [
             "c1"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 5,
-          "matchedTerms": [
-            "mb"
           ]
         },
         {
@@ -42683,17 +42773,17 @@
       "candidates": [
         {
           "card": "页表项地址计算与页框号",
-          "score": 16,
+          "score": 18,
           "matchedTerms": [
             "本题",
             "地址",
-            "pa",
-            "物理地",
-            "理地址",
             "物理地址",
-            "地址的",
-            "理地址的",
-            "物理地址的"
+            "pa",
+            "址和物",
+            "和物理",
+            "址和物理",
+            "物理地",
+            "理地址"
           ]
         },
         {
@@ -42824,17 +42914,17 @@
           ]
         },
         {
-          "card": "页表项地址计算与页框号",
-          "score": 3,
-          "matchedTerms": [
-            "大小"
-          ]
-        },
-        {
           "card": "磁盘调度与 I/O",
           "score": 1,
           "matchedTerms": [
             "下一个"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
+          "score": 1,
+          "matchedTerms": [
+            "时刻和"
           ]
         }
       ]
@@ -42902,6 +42992,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "页表项地址计算与页框号",
+          "score": 7,
+          "matchedTerms": [
+            "地址",
+            "字节",
+            "题目若"
+          ]
+        },
+        {
           "card": "改进型 CLOCK 页面置换",
           "score": 5,
           "matchedTerms": [
@@ -42931,13 +43030,6 @@
             "后一个",
             "最后一个"
           ]
-        },
-        {
-          "card": "临界区与共享缓冲区",
-          "score": 3,
-          "matchedTerms": [
-            "c1"
-          ]
         }
       ]
     },
@@ -42963,9 +43055,10 @@
         },
         {
           "card": "页表项地址计算与页框号",
-          "score": 4,
+          "score": 5,
           "matchedTerms": [
-            "页面"
+            "页面",
+            "题目若"
           ]
         },
         {
@@ -43187,12 +43280,13 @@
       "candidates": [
         {
           "card": "AVL 树平衡调整",
-          "score": 20,
+          "score": 22,
           "matchedTerms": [
             "ll",
             "rr",
             "lr",
-            "rl"
+            "rl",
+            "则是"
           ]
         },
         {
@@ -43269,6 +43363,14 @@
           ]
         },
         {
+          "card": "KMP 模式匹配与 next 数组",
+          "score": 7,
+          "matchedTerms": [
+            "起始",
+            "ab"
+          ]
+        },
+        {
           "card": "后缀最大值与最小值维护",
           "score": 6,
           "matchedTerms": [
@@ -43281,14 +43383,6 @@
           "matchedTerms": [
             "执行",
             "确定"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 6,
-          "matchedTerms": [
-            "的值",
-            "访问"
           ]
         }
       ]
@@ -43827,6 +43921,24 @@
           ]
         },
         {
+          "card": "拓扑排序与 AOV 网",
+          "score": 16,
+          "matchedTerms": [
+            "个入度",
+            "入度为",
+            "个入度为",
+            "有向无",
+            "向无环",
+            "无环图",
+            "有向无环",
+            "向无环图",
+            "有向无环图",
+            "拓扑序",
+            "扑序列",
+            "拓扑序列"
+          ]
+        },
+        {
           "card": "图的存储与遍历",
           "score": 16,
           "matchedTerms": [
@@ -43840,24 +43952,6 @@
             "所有顶",
             "有顶点",
             "所有顶点"
-          ]
-        },
-        {
-          "card": "拓扑排序与 AOV 网",
-          "score": 14,
-          "matchedTerms": [
-            "入度为",
-            "的顶点",
-            "有向无",
-            "向无环",
-            "无环图",
-            "有向无环",
-            "向无环图",
-            "有向无环图",
-            "拓扑序",
-            "扑序列",
-            "拓扑序列",
-            "有向图"
           ]
         },
         {
@@ -43975,9 +44069,8 @@
           "card": "B 树与 B+ 树",
           "score": 6,
           "matchedTerms": [
-            "点关键",
-            "关键字",
-            "点关键字"
+            "个关键字",
+            "关键字"
           ]
         },
         {
@@ -44022,15 +44115,16 @@
         },
         {
           "card": "二次探测法与开放定址散列",
-          "score": 9,
+          "score": 11,
           "matchedTerms": [
+            "二次探",
             "查找",
             "散列表",
             "线性探",
-            "二次探",
             "序列可",
             "列可能",
             "序列可能",
+            "找到空",
             "一个空"
           ]
         },
@@ -44245,13 +44339,6 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "活动时间余量与并行区间",
           "score": 4,
           "matchedTerms": [
@@ -44273,6 +44360,13 @@
             "言代码",
             "语言代码"
           ]
+        },
+        {
+          "card": "最小距离三元组的三指针扫描",
+          "score": 3,
+          "matchedTerms": [
+            "int"
+          ]
         }
       ]
     },
@@ -44293,13 +44387,6 @@
           "score": 5,
           "matchedTerms": [
             "at"
-          ]
-        },
-        {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
           ]
         },
         {
@@ -44377,8 +44464,17 @@
       "answer": "C",
       "analysis": "2025-第15题-解析 在 小端方式 下，数据的存放顺序是从最低有效字节到最高有效字节。例如，对于一个 4 字节的整数 12345678H，存放顺序为 78H 56H 34H 12H。 首先，我们需要计算 struct record 的大小。根据定义： int id ; 占用 4 字节。 char name[10] ; 占用 10 字节。 int salary ; 占用 4 字节。 总共需要 18 字节。然而，由于编译器按 边界对齐 方式分配存储空间，通常会对齐到最接近的 4 字节边界。因此，struct record 实际上会占用 20 字节（因为 18 需要向上对齐到 20）。 数组 employee 的起始地址为 0000A0B0H。 employee[1] 的起始地址为 0000A0B0H + 20 = 0000A0C4H 在 employee[1] 中， id 的值为 12345678H，存储在小端模式下： 地址 0000A0C4H 存放 78H 地址 0000A0C5H 存放 56H 地址 0000A0C6H 存放 34H 地址 0000A0C7H 存放 12H 因此，56H 的地址是 0000A0C5H。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "KMP 模式匹配与 next 数组",
+          "score": 11,
+          "matchedTerms": [
+            "例如",
+            "起始",
+            "0i"
+          ]
+        },
         {
           "card": "算法复杂度",
           "score": 8,
@@ -44410,13 +44506,6 @@
           "score": 6,
           "matchedTerms": [
             "顺序"
-          ]
-        },
-        {
-          "card": "后缀最大值与最小值维护",
-          "score": 6,
-          "matchedTerms": [
-            "空间"
           ]
         }
       ]
@@ -44490,6 +44579,13 @@
           "score": 4,
           "matchedTerms": [
             "通常"
+          ]
+        },
+        {
+          "card": "二次探测法与开放定址散列",
+          "score": 4,
+          "matchedTerms": [
+            "参数"
           ]
         },
         {
@@ -44663,17 +44759,17 @@
           ]
         },
         {
-          "card": "二次探测法与开放定址散列",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
-          ]
-        },
-        {
           "card": "空间换时间与辅助数组",
           "score": 4,
           "matchedTerms": [
             "标记"
+          ]
+        },
+        {
+          "card": "散列表装填因子与查找终止",
+          "score": 4,
+          "matchedTerms": [
+            "本题"
           ]
         }
       ]
@@ -45208,10 +45304,9 @@
         },
         {
           "card": "Cache 直接映射与组相联",
-          "score": 11,
+          "score": 12,
           "matchedTerms": [
             "映射",
-            "物理地址",
             "直接映",
             "接映射",
             "直接映射"
@@ -45383,19 +45478,18 @@
       "confidence": "low-candidate",
       "candidates": [
         {
-          "card": "页表项地址计算与页框号",
-          "score": 8,
-          "matchedTerms": [
-            "mb",
-            "大小"
-          ]
-        },
-        {
           "card": "死锁必要条件与处理",
           "score": 6,
           "matchedTerms": [
             "r1",
             "r2"
+          ]
+        },
+        {
+          "card": "页表项地址计算与页框号",
+          "score": 5,
+          "matchedTerms": [
+            "mb"
           ]
         },
         {
@@ -45659,13 +45753,6 @@
           ]
         },
         {
-          "card": "页表项地址计算与页框号",
-          "score": 3,
-          "matchedTerms": [
-            "大小"
-          ]
-        },
-        {
           "card": "哲学家进餐与死锁避免",
           "score": 3,
           "matchedTerms": [
@@ -45677,6 +45764,13 @@
           "score": 2,
           "matchedTerms": [
             "开始"
+          ]
+        },
+        {
+          "card": "磁盘引导与格式化流程",
+          "score": 2,
+          "matchedTerms": [
+            "阶段"
           ]
         }
       ]
@@ -46001,20 +46095,19 @@
           ]
         },
         {
+          "card": "CRC 检错与生成多项式",
+          "score": 6,
+          "matchedTerms": [
+            "次数",
+            "除法"
+          ]
+        },
+        {
           "card": "交换机自学习与转发",
           "score": 5,
           "matchedTerms": [
             "cc",
             "题目"
-          ]
-        },
-        {
-          "card": "数据链路层与差错检测",
-          "score": 5,
-          "matchedTerms": [
-            "次数",
-            "余数",
-            "次数3"
           ]
         }
       ]
@@ -46031,6 +46124,15 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "拓扑排序与 AOV 网",
+          "score": 6,
+          "matchedTerms": [
+            "同时存",
+            "时存在",
+            "同时存在"
+          ]
+        },
         {
           "card": "递归算法与递归树",
           "score": 5,
@@ -46057,13 +46159,6 @@
           "score": 2,
           "matchedTerms": [
             "=0"
-          ]
-        },
-        {
-          "card": "循环链式队列与空闲结点复用",
-          "score": 2,
-          "matchedTerms": [
-            "初始"
           ]
         }
       ]
