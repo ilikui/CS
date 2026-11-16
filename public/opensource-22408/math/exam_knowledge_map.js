@@ -8359,242 +8359,522 @@ window.EXAM_KNOWLEDGE_MAP = {
   "640": {
     "status": "pending",
     "questionKey": "2021-解答题-18",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-C"
+    ],
+    "secondary": [
+      "CAL-05-H"
+    ],
+    "rationale": "题目给出的负无穷方向斜渐近线符号有误：f(x)=−x²/(1+x)，故f(x)+x→1，斜渐近线应为y=−x+1；正无穷方向为y=x−1。原解析写成y=−x−1，不能照录。",
+    "methods": "分别按定义求斜率lim f(x)/x及截距lim(f(x)−kx)，并分左右无穷方向计算。",
+    "pitfalls": "负无穷方向的截距是+1而非−1；原解析有符号错误，暂列待核验。"
   },
   "641": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-解答题-19",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-E"
+    ],
+    "rationale": "由不定积分等式两边求导得f(x)/√x=x/3−1，从而f(x)=x^(3/2)/3−√x；弧长公式与绕x轴旋转曲面面积公式分别积分。",
+    "methods": "先由微积分基本定理恢复f，再计算f′、弧长积分和旋转曲面面积积分。",
+    "pitfalls": "旋转面积公式含半径f(x)及弧长微元；需确认曲线在区间内位于x轴上方。"
   },
   "642": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-解答题-20",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-B"
+    ],
+    "secondary": [
+      "CAL-05-B"
+    ],
+    "rationale": "方程化为一阶线性方程，积分因子法得y=1+x⁶/3；法线斜率为−1/y′，截距函数Iy=y+x/y′，再求最小值。",
+    "methods": "求通解并用初值定常数，再将法线方程与y轴交点写成x的函数求极值。",
+    "pitfalls": "法线斜率是切线斜率的负倒数；截距表达式须保留符号并考虑x正负。"
   },
   "643": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-解答题-21",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-F"
+    ],
+    "secondary": [
+      "CAL-08-E"
+    ],
+    "rationale": "极坐标下曲线化为r²=cos2θ，第一象限区域角度0≤θ≤π/4；xy=r²sinθcosθ，面积元rdrdθ，积分得1/48。",
+    "methods": "将边界和被积函数转为极坐标，带入雅可比r并确定角度范围。",
+    "pitfalls": "不要漏掉面积元中的r；角度上限由cos2θ≥0确定。"
   },
   "644": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-解答题-22",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-A"
+    ],
+    "secondary": [
+      "LA-05-B"
+    ],
+    "rationale": "特征多项式为(λ−b)(λ−3)(λ−1)，仅两个不同特征值要求b=1或3；重特征值对应特征子空间维数必须为2，分别推出(a,b)=(-1,3)或(1,1)，再拼接特征向量构造P。",
+    "methods": "求特征多项式，分类重根情形，计算特征空间维数并构造可逆特征向量矩阵。",
+    "pitfalls": "仅有两个不同特征值不自动保证可对角化；必须检查重根几何重数。"
   },
   "645": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-E"
+    ],
+    "secondary": [
+      "CAL-01-G"
+    ],
+    "rationale": "①等价无穷小平方后仍等价；②取a=−β即可反例；③由(a−β)/a→0；④由β/a=1−(a−β)/a→1。故真命题①③④。",
+    "methods": "逐条按等价无穷小定义转化为比值极限，构造反例否定逆命题。",
+    "pitfalls": "平方等价不能反推原函数等价，因为符号可能相反。"
   },
   "646": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-E"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "积分区域为0≤y≤x≤2，交换次序后先对y积分，化为(1/2)∫₀²x²/√(1+x³)dx，换元u=1+x³得2/3。",
+    "methods": "画区域交换积分次序，再作u=1+x³代换。",
+    "pitfalls": "交换次序后外层x范围为[0,2]，内层y范围为[0,x]。"
   },
   "647": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-05-G"
+    ],
+    "rationale": "A可用f(x)=x³在0处反例；B由f′(x₀)>0及导数连续性（存在二阶导数保证f′在邻域连续）得局部递增；C常数函数反例；D二阶导正表示局部凸而非凹。",
+    "methods": "分别利用导数定义、导数连续性和二阶导数判别凹凸。",
+    "pitfalls": "单调递增不保证某点导数严格正；凹凸术语的符号约定需一致。"
   },
   "648": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-F"
+    ],
+    "secondary": [
+      "CAL-08-B"
+    ],
+    "rationale": "令s=x−y，则F(x,y)=G(s)，故Fx=G′、Fy=−G′，Fxx=Fyy=G″=f(x−y)。选C。",
+    "methods": "先识别函数只依赖组合变量x−y，再用链式法则求一、二阶偏导。",
+    "pitfalls": "二阶对y求导时负号平方后消失，因此Fxx=Fyy。"
   },
   "649": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-02-E"
+    ],
+    "rationale": "x→0时被积函数同阶于lnx/x^p，收敛要求p<1；x→1时lnx∼−(1−x)，被积函数同阶于−(1−x)^p，收敛要求p>−1。",
+    "methods": "分开考察两个端点，分别用等价无穷小化为幂函数反常积分。",
+    "pitfalls": "两个端点的条件需取交集；p=±1端点均发散。"
   },
   "650": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-选择题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-A"
+    ],
+    "secondary": [
+      "CAL-01-I"
+    ],
+    "rationale": "cos x_n∈[0,1]且sin在[0,1]严格单调，sin(cos x_n)收敛可推出cos x_n收敛；但x_n可在±π/2间振荡。",
+    "methods": "利用连续严格单调函数在紧区间上的逆映射连续性，并构造交替数列反例。",
+    "pitfalls": "函数复合值收敛不一定推出原数列收敛；注意cos在给定区间不是单射。"
   },
   "651": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-选择题-7",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-06-E"
+    ],
+    "rationale": "对0<x<1有ln(1+x)>x/2，故I2>I1；又ln(1+x)<x且1+cosx>1、1+sinx<2，得I2的被积函数<x< I3的被积函数，故I1<I2<I3。",
+    "methods": "先建立逐点不等式，再在相同积分区间积分比较。",
+    "pitfalls": "比较被积函数时需确认分母正且不等式方向不变。"
   },
   "652": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-选择题-8",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-F"
+    ],
+    "secondary": [
+      "LA-05-B"
+    ],
+    "rationale": "矩阵具有特征值1、−1、0当且仅当其与Λ=diag(1,−1,0)相似，即存在可逆P使A=PΛP⁻¹。",
+    "methods": "使用相似矩阵特征值不变性及相似定义。",
+    "pitfalls": "正交相似或合同分解是更强条件，不是一般矩阵特征值相同的必要条件。"
   },
   "653": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-选择题-9",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-04-D"
+    ],
+    "secondary": [
+      "LA-04-A"
+    ],
+    "rationale": "detA=(a−1)(b−1)(b−a)。行列式非零时唯一解；行列式为零时分a=1、b=1或a=b讨论，增广列右端不满足相同线性关系，故无解。",
+    "methods": "先用行列式判可逆情形，再对奇异参数逐类比较系数矩阵与增广矩阵秩。",
+    "pitfalls": "detA=0只说明非唯一可逆，不足以直接判断无解；必须检查增广秩。"
   },
   "654": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-选择题-10",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-03-B"
+    ],
+    "secondary": [
+      "LA-03-C"
+    ],
+    "rationale": "两组三向量等价等价于秩相同。计算两组行列式分别为(λ−1)²(λ+2)与(λ−1)²(λ+1)²；除λ=−1、−2外秩相同，λ=1时两组秩均为1。",
+    "methods": "分别求两组向量组的秩，比较行列式非零及退化参数情形。",
+    "pitfalls": "行列式同时为零时仍须比较秩，不能直接判不等价。"
   },
   "655": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-填空题-11",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-05-D"
+    ],
+    "rationale": "取对数后lnL=lim cotx·ln((1+eˣ)/2)；括号内对数∼x/2且tanx∼x，故lnL=1/2，L=√e。",
+    "methods": "对幂指型极限取对数，使用指数与对数的一阶展开。",
+    "pitfalls": "先求对数极限，最后还原指数；避免把极限直接当成1/2。"
   },
   "656": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-填空题-12",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-D"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "先由x=1代入得y(1)=1；一次求导得y′(1)=−3/4；再次求导并代入得y″(1)=−31/32。",
+    "methods": "对隐式方程连续两次求导，保留y′与y″项后代入点值。",
+    "pitfalls": "二次求导时xy项产生2y′，y³项产生6y(y′)²+3y²y″。"
   },
   "657": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-填空题-13",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-D"
+    ],
+    "rationale": "将分子拆为(2x−1)+4，前项为ln(x²−x+1)在0到1的端点差为0；后项配方成反正切积分，得8√3π/9。",
+    "methods": "分子拆成分母导数倍数与常数，再配方积分。",
+    "pitfalls": "分母配方为(x−1/2)²+3/4；反正切上下限差为π/3。"
   },
   "658": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-填空题-14",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "特征方程r³−2r²+5r=r(r²−2r+5)=0，根为0、1±2i，通解为C1+eˣ(C2cos2x+C3sin2x)。",
+    "methods": "建立特征方程并按实根与共轭复根写三阶常系数方程通解。",
+    "pitfalls": "三阶方程需包含三个独立常数；复根实部决定指数因子。"
   },
   "659": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-填空题-15",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-F"
+    ],
+    "secondary": [
+      "CAL-08-E"
+    ],
+    "rationale": "极坐标面积S=(1/2)∫₀^{π/3}sin²(3θ)dθ=π/12。",
+    "methods": "使用极坐标曲边扇形面积公式并作三角恒等变换。",
+    "pitfalls": "面积公式有1/2系数；积分区间对应完整花瓣边界。"
   },
   "660": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-填空题-16",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-A"
+    ],
+    "secondary": [
+      "LA-02-C"
+    ],
+    "rationale": "把交换行和列倍加分别表示为左乘、右乘初等矩阵，写出B=P1AP2，故A⁻¹=P2B⁻¹P1；计算迹为−1。",
+    "methods": "还原行列初等变换的矩阵乘法关系，再求逆矩阵并取迹。",
+    "pitfalls": "左乘与右乘次序不能互换；逆矩阵乘积次序反转。"
   },
   "661": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-解答题-17",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-A"
+    ],
+    "secondary": [
+      "CAL-02-E"
+    ],
+    "rationale": "极限存在先要求常数项f(1)−3f(1)=0，得f(1)=0；利用e^{x²}−1∼x²、sin²x∼x²及f在1可导，极限为f′(1)−3f′(1)=2，得f′(1)=−1。",
+    "methods": "先消去常数项，再按可导定义把复合增量换成x²阶。",
+    "pitfalls": "不能直接对f求二阶导；题设只保证一阶可导。"
   },
   "662": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-解答题-18",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-B"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "线性方程积分因子为x⁻²，解得y=x²/4−(1/2)lnx；于是1+(y′)²=(x/2+1/(2x))²，弧长积分得(e²+1)/4。",
+    "methods": "用积分因子解一阶线性方程，再利用完全平方简化弧长根式。",
+    "pitfalls": "积分区间x≥1，根式取正号；初值用于确定齐次解常数。"
   },
   "663": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-解答题-19",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-F"
+    ],
+    "secondary": [
+      "CAL-08-E"
+    ],
+    "rationale": "区域由y轴、圆x²+y²=4及直线x=y−2围成，转极坐标后需按直线与圆弧交界分段；被积函数化为(cosθ−sinθ)²，积分结果2π−2。",
+    "methods": "先画区域，求直线的极坐标边界并按径向上界变化分段积分。",
+    "pitfalls": "直线边界r=2/(sinθ−cosθ)只在分母为正的角域有效；须分段确定r上限。"
   },
   "664": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-解答题-20",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-08-D"
+    ],
+    "rationale": "令g(x,y)=f(x,y−x)，链式法则给gx=fu−fv=(4x−2y)e⁻ʸ；积分得g，再由边界f(u,0)确定函数，最终f=(u²+v²)e^{−(u+v)}，分析驻点及极值。",
+    "methods": "用变量替换把偏微分方程转为关于x的一元积分，再用边界条件确定任意函数。",
+    "pitfalls": "链式法则中v=y−x产生负号；驻点不自动都是极值点。"
   },
   "665": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-解答题-21",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-G"
+    ],
+    "secondary": [
+      "CAL-06-H"
+    ],
+    "rationale": "若f″≥0，则f凸，切线支撑不等式积分后得到中点函数值不超过区间平均值；反之若某点f″<0，由连续性可取小区间使其严格凹，与条件矛盾。",
+    "methods": "用凸函数切线不等式证明必要性，反设局部凹函数构造反例证明充分性。",
+    "pitfalls": "充分性需利用f″连续性把单点负值扩展为邻域；区间端点应按a<b处理。"
   },
   "666": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2022-解答题-22",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-C"
+    ],
+    "secondary": [
+      "LA-06-D"
+    ],
+    "rationale": "二次型矩阵为[[3,0,1],[0,4,0],[1,0,3]]，特征值4、4、2；取标准正交特征向量构成Q，正交对角化后最小Rayleigh商为最小特征值2。",
+    "methods": "求实对称矩阵特征值和正交特征向量，使用Rayleigh商最小值定理。",
+    "pitfalls": "正交矩阵列向量须单位正交；最小值对应最小特征值2。"
   },
   "667": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-H"
+    ],
+    "secondary": [
+      "CAL-05-D"
+    ],
+    "rationale": "斜率lim(y/x)=1；截距lim(y−x)=lim x[ln(e+1/(x−1))−1]=1/e，故渐近线y=x+1/e。",
+    "methods": "按斜渐近线定义分别求斜率和截距，使用ln(1+u)∼u。",
+    "pitfalls": "对数展开中的小量约为1/[e(x−1)]，乘x后极限为1/e。"
   },
   "668": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-A"
+    ],
+    "secondary": [
+      "CAL-03-A"
+    ],
+    "rationale": "分段积分后左侧原函数为ln(√(1+x²)+x)+C1，右侧为(x+1)sinx+cosx+C2；在x=0连续要求C1=1、C2=0，选D。",
+    "methods": "分别求两段原函数，再用原函数在分界点连续确定常数。",
+    "pitfalls": "分段原函数不仅要分别求导正确，还须在连接点连续；本题两侧导数也与f(0)相符。"
   },
   "669": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-A"
+    ],
+    "secondary": [
+      "CAL-01-G"
+    ],
+    "rationale": "两数列均正且递减趋零；由y_{n+1}/x_{n+1}=(y_n/x_n)(x_n/sinx_n)y_n，且x_n/sinx_n→1、y_n→0，可得y_n/x_n→0。",
+    "methods": "先证明两个数列趋零，再建立相邻项比值递推并证明比值趋零。",
+    "pitfalls": "需说明递推乘子最终小于某个小于1的常数，不能仅凭形式乘积断言极限。"
   },
   "670": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-05-B"
+    ],
+    "rationale": "特征根必须使所有实解在整个实轴有界；唯一可能是纯虚共轭根±iβ，故a=0、b>0。",
+    "methods": "分类讨论特征方程实根、重根和复根实部，排除指数增长及线性项。",
+    "pitfalls": "全实轴有界比单侧有界严格得多；零根或重根会产生常数/线性组合，需审慎处理。"
   },
   "671": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-E"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "由参数式分t正负解出分段函数；两侧一阶导数在0趋于0且f′(0)=0，故f′连续；但f′差商左右极限分别−2与2/9，二阶导不存在。",
+    "methods": "按参数符号消去t，得到分段函数后逐阶检查导数及连接点左右极限。",
+    "pitfalls": "参数式在t=0两侧的x与y表达不同，不能直接套单一参数导数公式跨过绝对值点。"
   },
   "672": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-选择题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-05-B"
+    ],
+    "rationale": "令u=lnx，积分化为∫_{ln2}∞u^{−a−1}du=(ln2)^{−a}/a（a>0）；求导令零得a0=−1/ln(ln2)，并核查为极小值。",
+    "methods": "先换元确定收敛参数域，再对参数函数求导找极值。",
+    "pitfalls": "积分收敛要求a>0；不能在参数函数定义域外讨论极小值。"
   },
   "673": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-选择题-7",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-F"
+    ],
+    "secondary": [
+      "CAL-05-G"
+    ],
+    "rationale": "f′=(x²+2x+a)eˣ，无极值要求二次因子不变号，a≥1；f″=(x²+4x+a+2)eˣ，有拐点要求二次因子有两个不同实根，a<2，合并得[1,2)。",
+    "methods": "分别把无极值和有拐点转化为二次多项式判别式条件。",
+    "pitfalls": "a=1时f′有重零点但不变号；拐点要求凹凸性改变，故a=2不取。"
   },
   "674": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-选择题-8",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-D"
+    ],
+    "secondary": [
+      "LA-02-F"
+    ],
+    "rationale": "分块上三角矩阵行列式为|A||B|，逆矩阵为[[A⁻¹,−A⁻¹B⁻¹],[0,B⁻¹]]；伴随矩阵=det(M)M⁻¹，得到选项D。",
+    "methods": "先求分块矩阵逆，再利用M*=|M|M⁻¹转为伴随矩阵表达式。",
+    "pitfalls": "矩阵乘法不可交换，右上块次序是−A⁻¹B⁻¹，转成伴随形式为−A*B*。"
   },
   "675": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-选择题-9",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-06-D"
+    ],
+    "secondary": [
+      "LA-06-B"
+    ],
+    "rationale": "对应对称矩阵特征值为3、−7、0，故秩2且惯性指数(1,1)，规范形为y1²−y2²。",
+    "methods": "写出二次型对称矩阵，求特征值符号并应用惯性定理。",
+    "pitfalls": "规范形系数按正负惯性指数归一化；零特征值对应零平方项。"
   },
   "676": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-选择题-10",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-03-C"
+    ],
+    "secondary": [
+      "LA-03-B"
+    ],
+    "rationale": "γ属于两组向量张成空间的交，令两种线性表示相等组成齐次方程组，消元得公共向量方向为(1,5,8)，故γ=k(1,5,8)。",
+    "methods": "将两个线性表示相等，解系数方程组并代回求交空间生成向量。",
+    "pitfalls": "公共向量需同时属于两组张成空间；参数解代回任一组核验。"
   },
   "677": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-填空题-11",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-02-E"
+    ],
+    "rationale": "展开f=(a+1)x+(b−1/2)x²+o(x²)，g=(3/2)x²+o(x²)；等价要求a=−1、b=2，故ab=−2。",
+    "methods": "对ln(1+x)、e^{x²}和cosx作二阶展开，比较首个非零项。",
+    "pitfalls": "等价无穷小要求首个非零阶系数相同，先消去一次项。"
   },
   "678": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-填空题-12",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-F"
+    ],
+    "rationale": "由微积分基本定理y′=√(3−x²)，弧长为∫_{−√3}^{√3}√(4−x²)dx，计算得4π/3+√3。",
+    "methods": "先求导函数，再代入弧长公式，利用圆弓形积分或三角代换计算。",
+    "pitfalls": "积分区间是[−√3,√3]，根式为√(4−x²)，半径为2。"
   },
   "679": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-填空题-13",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-D"
+    ],
+    "secondary": [
+      "CAL-08-B"
+    ],
+    "rationale": "先由点(1,1)代入确定z=0；一次偏导得zx=1，再对x求导得e^z(zx)²+e^zzxx+2zx+xzxx=0，解得zxx=−3/2。",
+    "methods": "对隐式方程连续两次求x偏导，逐步代入点值。",
+    "pitfalls": "二次求导时xz项产生2zx；不要漏掉e^z(zx)²项。"
   },
   "680": {
     "status": "pending",
