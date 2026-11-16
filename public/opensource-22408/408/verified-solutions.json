@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "408 历年真题标准答案、详细解析与知识卡关联复核",
-  "scope": "2009—2018 年已逐题复核的综合题（当前共 61 题）",
+  "scope": "2009—2019 年已逐题复核的综合题（当前共 68 题）",
   "policy": "对照历年试题原卷、官方参考答案及可核验题库整理；图像依赖项按原卷图像核对；知识卡关联状态与答案核验状态分别记录。",
   "questions": [
     {
@@ -1376,6 +1376,391 @@
       ],
       "secondaryCards": [
         "IP TTL 与路由转发"
+      ]
+    },
+    {
+      "year": 2019,
+      "index": 41,
+      "id": 511,
+      "subject": "数据结构",
+      "answer": "采用快慢指针找到中点，将后半段链表断开并原地逆置，再将前半段与逆置后的后半段交替合并，得到a1、an、a2、a(n−1)…。时间O(n)，辅助空间O(1)。",
+      "steps": [
+        "slow、fast均从首元结点出发，slow每次走一步、fast每次走两步；循环条件为fast->next和fast->next->next均非空。",
+        "slow停在前半段末结点；保存slow->next作为后半段首结点，并令slow->next=NULL断开两段。",
+        "用三个指针prev、cur、next对后半段原地逆置，得到an、a(n−1)…。",
+        "令first指向前半段首结点，second指向逆置后半段首结点；每轮先保存两侧后继，再依次连接first->second、second->next1。",
+        "合并至second为空。奇数长度时中间结点留在前半段末尾；偶数长度时两段长度相同。",
+        "找中点、逆置、交错合并各为线性扫描，时间O(n)；仅使用常数个指针，辅助空间O(1)。"
+      ],
+      "complexity": "时间复杂度O(n)，辅助空间复杂度O(1)。",
+      "analysis": "本题的关键是不能用栈或数组保存后半段，否则不满足O(1)额外空间。先逆置后半段，把从尾部取结点转化为从链表头部顺序取结点。操作的是结点链接，不需要交换data。",
+      "code": "void reorder(NODE *head) {\\n    if (head == NULL || head->next == NULL || head->next->next == NULL) return;\\n    NODE *slow = head->next, *fast = head->next;\\n    while (fast->next != NULL && fast->next->next != NULL) {\\n        slow = slow->next;\\n        fast = fast->next->next;\\n    }\\n    NODE *cur = slow->next;\\n    slow->next = NULL;                 // 断开前后两段\\n    NODE *rev = NULL;\\n    while (cur != NULL) {              // 后半段原地逆置\\n        NODE *next = cur->next;\\n        cur->next = rev;\\n        rev = cur;\\n        cur = next;\\n    }\\n    NODE *first = head->next;\\n    while (rev != NULL) {              // 两段交替合并\\n        NODE *next1 = first->next;\\n        NODE *next2 = rev->next;\\n        first->next = rev;\\n        rev->next = next1;\\n        first = next1;\\n        rev = next2;\\n    }\\n}",
+      "correction": "合并时必须先保存first和rev各自的后继，否则改写next指针会丢失剩余链表。偶数、奇数长度均可处理。",
+      "verification": "已对照2019年原题题干与公开参考答案核对快慢指针、后半段逆置和交替合并步骤；代码按奇偶长度边界复核。",
+      "audit": {
+        "status": "cross-checked",
+        "note": "题干、参考答案、指针操作和复杂度已交叉核验。"
+      },
+      "cards": [
+        {
+          "title": "单链表重排与原地逆置",
+          "topic": "单链表重排与原地逆置",
+          "status": "verified",
+          "role": "core"
+        },
+        {
+          "title": "单链表与双链表",
+          "topic": "单链表与双链表",
+          "status": "verified",
+          "role": "secondary"
+        },
+        {
+          "title": "算法复杂度",
+          "topic": "算法复杂度",
+          "status": "verified",
+          "role": "secondary"
+        }
+      ],
+      "coreCards": [
+        "单链表重排与原地逆置"
+      ],
+      "secondaryCards": [
+        "单链表与双链表",
+        "算法复杂度"
+      ]
+    },
+    {
+      "year": 2019,
+      "index": 42,
+      "id": 512,
+      "subject": "数据结构",
+      "answer": "采用两段式单向循环链表（带一个空闲结点），设置front指向队头、rear指向待写入的空闲结点。初始仅一个空闲结点且front=rear；队空条件front==rear，队满条件front==rear->next。入队时若队满先在rear后增加一个空闲结点，再把元素写入rear并令rear后移；出队读取front后令front后移。",
+      "steps": [
+        "选链式结构：可按需增加结点，并通过循环链接复用已出队结点；数组顺序队列难以同时满足动态扩容、空间复用和始终O(1)操作。",
+        "初始创建一个空闲结点p，使p->next=p，front=rear=p。front==rear表示空队列。",
+        "rear始终指向下一个待写入的空闲结点；若front==rear->next，说明只剩当前空闲结点，需要先在rear后插入一个新的空闲结点。",
+        "入队：必要时扩展空闲结点；将新元素写入rear->data；rear=rear->next。",
+        "出队：若front==rear则队空；否则读取front->data并令front=front->next。出队结点不释放，之后沿循环链重新成为可复用空闲结点。",
+        "每次入队/出队只改常数个指针并访问一个结点，时间复杂度均为O(1)；动态分配新结点只在需要扩展时发生。"
+      ],
+      "complexity": "入队O(1)，出队O(1)；队列占用结点数只增不减，出队结点通过循环链复用。",
+      "analysis": "这是带空闲结点的两段式单向循环链表。front==rear判空；front==rear->next表示空闲结点即将被占用，需要扩展。要区分rear指向的是待写入空闲结点，而不是传统链式队列中的最后一个数据结点。",
+      "code": "// 初始化：创建一个结点 p，令 p->next=p，front=rear=p\\n// 入队：\\nif (front == rear->next) {\\n    NODE *s = malloc(sizeof(NODE));\\n    if (s == NULL) return false;\\n    s->next = rear->next;\\n    rear->next = s;\\n}\\nrear->data = x;\\nrear = rear->next;\\n// 出队：\\nif (front == rear) return false;\\n*x = front->data;\\nfront = front->next;\\nreturn true;",
+      "correction": "rear指向待写入的空闲结点；若误按普通链式队列把rear理解为最后一个有效数据结点，队空/队满条件和入队过程都会写错。",
+      "verification": "已对照2019年原题及参考解析核对两段式单向循环链表、空闲结点、队空/队满条件和O(1)操作。",
+      "audit": {
+        "status": "cross-checked",
+        "note": "存储结构、指针语义、队列状态和操作过程已交叉核验。"
+      },
+      "cards": [
+        {
+          "title": "循环链式队列与空闲结点复用",
+          "topic": "循环链式队列与空闲结点复用",
+          "status": "verified",
+          "role": "core"
+        },
+        {
+          "title": "链式栈与链式队列",
+          "topic": "链式栈与链式队列",
+          "status": "verified",
+          "role": "secondary"
+        },
+        {
+          "title": "循环队列判空与判满",
+          "topic": "循环队列判空与判满",
+          "status": "verified",
+          "role": "secondary"
+        }
+      ],
+      "coreCards": [
+        "循环链式队列与空闲结点复用"
+      ],
+      "secondaryCards": [
+        "链式栈与链式队列",
+        "循环队列判空与判满"
+      ]
+    },
+    {
+      "year": 2019,
+      "index": 43,
+      "id": 513,
+      "subject": "操作系统",
+      "answer": "每根筷子设互斥信号量fork[i]，初值1；另设碗/竞争许可信号量plate，初值min(m,n−1)。哲学家i先P(plate)，再P(fork[i])和P(fork[(i+1)%n])，进餐后按相反顺序V两根筷子并V(plate)。",
+      "steps": [
+        "定义fork[0…n−1]，每个初值为1，表示对应筷子当前可用且同一时刻只能被一人持有。",
+        "定义plate=min(m,n−1)：m限制可同时取得碗的哲学家数；n−1限制最多n−1人同时竞争筷子，避免所有人各持一根并循环等待。",
+        "哲学家i思考后先P(plate)，再依次P(fork[i])与P(fork[(i+1)%n])，只有拿到碗和左右筷子才能进餐。",
+        "进餐结束后V(fork[i])、V(fork[(i+1)%n])，最后V(plate)，释放资源。",
+        "所有哲学家按相同方向取筷子，但plate保证至少一位哲学家不会陷入全员持有一根筷子的环形等待，系统可取得进展。"
+      ],
+      "complexity": "每位哲学家的P/V操作为常数次；最多min(m,n−1)位哲学家同时通过碗许可进入取筷子阶段。",
+      "analysis": "碗信号量兼有资源数量限制和死锁预防作用。若m<n，最多m位哲学家获得碗；若m≥n，则把并发竞争者限制为n−1，破坏哲学家就餐死锁所需的环路等待条件。",
+      "code": "semaphore fork[n] = {1,1,...,1};\\nsemaphore plate = min(m, n - 1);\\n\\nphilosopher(int i) {\\n    while (true) {\\n        think();\\n        P(plate);\\n        P(fork[i]);\\n        P(fork[(i + 1) % n]);\\n        eat();\\n        V(fork[i]);\\n        V(fork[(i + 1) % n]);\\n        V(plate);\\n    }\\n}",
+      "correction": "plate必须在申请两根筷子之前P，进餐后释放；若先拿筷子再申请碗，不能用该许可量有效阻止所有哲学家持有一根筷子造成的环路等待。",
+      "verification": "已对照2019年原题与参考答案核对plate初值min(m,n−1)、筷子互斥信号量及P/V顺序。",
+      "audit": {
+        "status": "cross-checked",
+        "note": "资源数量、信号量初值、P/V顺序和死锁预防理由已核验。"
+      },
+      "cards": [
+        {
+          "title": "哲学家进餐与死锁避免",
+          "topic": "哲学家进餐与死锁避免",
+          "status": "verified",
+          "role": "core"
+        },
+        {
+          "title": "进程同步与信号量",
+          "topic": "进程同步与信号量",
+          "status": "verified",
+          "role": "core"
+        },
+        {
+          "title": "死锁必要条件与处理",
+          "topic": "死锁必要条件与处理",
+          "status": "verified",
+          "role": "secondary"
+        }
+      ],
+      "coreCards": [
+        "哲学家进餐与死锁避免",
+        "进程同步与信号量"
+      ],
+      "secondaryCards": [
+        "死锁必要条件与处理"
+      ]
+    },
+    {
+      "year": 2019,
+      "index": 44,
+      "id": 514,
+      "subject": "操作系统",
+      "answer": "磁盘容量=300×10×200×512=307,200,000B=300,000KiB。每柱面有1000簇；SSTF访问顺序为100260→101660→110560→60005。第100530簇的物理地址为柱面100、磁道5、扇区60；簇号到物理地址由磁盘驱动程序完成。",
+      "steps": [
+        "每簇含2个扇区，每柱面簇数=10磁道×200扇区/磁道÷2=1000簇。",
+        "磁盘总容量=300柱面×10磁道/柱面×200扇区/磁道×512B=307,200,000B，按1024换算为300,000KiB。",
+        "85号柱面对应簇号85000—85999。四个请求所在柱面分别为100、60、101、110。",
+        "从85号柱面出发，距离最近的是100260（柱面100）；之后从100号柱面选101660（柱面101），再选110560（柱面110），最后60005（柱面60）。",
+        "每柱面1000簇，100530÷1000得柱面100，余数530；每磁道100簇，530÷100得磁道5，余30簇。",
+        "每簇2扇区，扇区偏移=(30×2)=60；簇号到柱面/磁道/扇区的转换由磁盘驱动程序完成。"
+      ],
+      "complexity": "磁盘容量307,200,000B；SSTF顺序100260、101660、110560、60005；物理地址(100,5,60)。",
+      "analysis": "SSTF比较的是当前磁头所在柱面与各请求所在柱面的寻道距离，而不是直接比较簇号差。簇号转换先除以每柱面簇数，再用余数定位磁道和扇区。",
+      "code": "每柱面簇数 = 10 × 200 / 2 = 1000\\n柱面号 = cluster / 1000\\n柱面内簇偏移 = cluster % 1000\\n磁道号 = 柱面内簇偏移 / 100\\n磁道内簇偏移 = 柱面内簇偏移 % 100\\n扇区号 = 磁道内簇偏移 × 2",
+      "correction": "扇区号60按题目参考解析的零起始偏移口径给出；若设备接口采用从1开始的扇区编号，需在最终物理寻址表示中按接口约定转换。",
+      "verification": "已对照2019年原题与公开参考答案复核磁盘参数、每柱面簇数、SSTF顺序及簇100530的柱面/磁道/扇区换算。",
+      "audit": {
+        "status": "cross-checked",
+        "note": "容量、寻道顺序与簇号映射公式已复算。"
+      },
+      "cards": [
+        {
+          "title": "磁盘结构与平均访问时间",
+          "topic": "磁盘结构与平均访问时间",
+          "status": "verified",
+          "role": "core"
+        },
+        {
+          "title": "磁盘调度 FCFS 与 SSTF",
+          "topic": "磁盘调度 FCFS 与 SSTF",
+          "status": "verified",
+          "role": "core"
+        },
+        {
+          "title": "文件物理分配方式",
+          "topic": "文件物理分配方式",
+          "status": "verified",
+          "role": "secondary"
+        }
+      ],
+      "coreCards": [
+        "磁盘结构与平均访问时间",
+        "磁盘调度 FCFS 与 SSTF"
+      ],
+      "secondaryCards": [
+        "文件物理分配方式"
+      ]
+    },
+    {
+      "year": 2019,
+      "index": 45,
+      "id": 515,
+      "subject": "计算机组成原理",
+      "answer": "（1）f(10)递归调用f1共10次；第16行call递归调用。（2）第12行jle是条件转移；call、jmp、ret必然改变控制流。（3）第17行地址0040102AH；相对偏移=00401000H−0040102AH=FFFFFFD6H，机器码字节D6 FF FF FF，采用小端方式。（4）13!超过32位int上限，改用long long返回类型和运算。（5）若乘积高32位不是低32位符号位的扩展则OF=1；可在imul后使用into触发溢出异常。",
+      "steps": [
+        "f(10)从初次调用开始依次计算10、9、…、1，共10次函数调用；第16行call f1是递归调用点。",
+        "第12行jle根据比较标志决定是否跳转，是条件转移；call调用子程序、jmp无条件跳转、ret返回，均改变控制流。",
+        "第16行call位于00401025H，机器指令长度5B，下一条指令地址为0040102AH。",
+        "相对位移以call下一条指令地址为基准：目标00401000H−0040102AH=−2AH=FFFFFFD6H；低位字节先存储，故偏移字节D6 FF FF FF表明小端。",
+        "13!=6,227,020,800，大于32位有符号int最大值2,147,483,647；原函数返回值1932053504是32位截断/回绕后的结果，不能代表数学阶乘。",
+        "将函数返回类型改为long long，并保证递归乘法表达式在long long类型中计算，可正确表示13!。",
+        "32位有符号乘法若完整64位乘积的高32位不等于低32位最高位的符号扩展（全0或全1），则截断结果溢出，OF=1；INTO在OF=1时触发溢出中断。"
+      ],
+      "complexity": "递归调用次数为n（含初次调用）；阶乘递归深度O(n)，调用栈空间O(n)。",
+      "analysis": "本题综合递归调用、控制转移、相对寻址、小端存储、整数表示范围与乘法溢出。相对位移必须从下一条指令地址计算；signed int溢出不能当作正确数学结果。",
+      "code": "// 将原函数返回类型及递归表达式提升为64位\\nlong long f1(long long n) {\\n    if (n > 1) return n * f1(n - 1);\\n    return 1;\\n}\\n// 32位x86：imul后可用 INTO 在OF=1时触发溢出异常",
+      "correction": "INTO是32位x86中按OF标志触发的溢出中断指令；不要将其与无条件INT指令混淆。long long需要同时覆盖函数返回值和乘法运算，不应只在最终赋值处强制转换。",
+      "verification": "已对照2019年原题机器码清单与公开参考答案逐项复算地址、相对位移、大小端、13!溢出和OF判定条件。",
+      "audit": {
+        "status": "cross-checked",
+        "note": "机器指令地址、相对位移字节序和整数溢出判断已逐项复核。"
+      },
+      "cards": [
+        {
+          "title": "递归算法与递归树",
+          "topic": "递归算法与递归树",
+          "status": "verified",
+          "role": "core"
+        },
+        {
+          "title": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "topic": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "status": "verified",
+          "role": "core"
+        },
+        {
+          "title": "定点补码加减与溢出",
+          "topic": "定点补码加减与溢出",
+          "status": "verified",
+          "role": "secondary"
+        },
+        {
+          "title": "整数溢出检测与异常处理",
+          "topic": "整数溢出检测与异常处理",
+          "status": "verified",
+          "role": "secondary"
+        },
+        {
+          "title": "大小端存储",
+          "topic": "大小端存储",
+          "status": "verified",
+          "role": "secondary"
+        }
+      ],
+      "coreCards": [
+        "递归算法与递归树",
+        "x86 CALL/JMP/RET 控制转移与相对寻址"
+      ],
+      "secondaryCards": [
+        "定点补码加减与溢出",
+        "整数溢出检测与异常处理",
+        "大小端存储"
+      ]
+    },
+    {
+      "year": 2019,
+      "index": 46,
+      "id": 516,
+      "subject": "计算机组成原理",
+      "answer": "push地址00401000H与ret地址0040104AH的高20位均为00401H，均位于4KB页00401000H—00401FFFH。Cache共64行、4路组相联，组数16；块内偏移为地址[5:0]，组号为[9:6]，Tag为[31:10]。call地址00401025H的组号为0。",
+      "steps": [
+        "页大小4KB=2^12B，页内偏移12位；页号为地址高20位。",
+        "push地址00401000H与ret地址0040104AH的高20位均为00401H，故位于同一虚拟页。",
+        "Cache行数64、4路组相联，组数=64/4=16，需要4位组索引。",
+        "主存块大小64B=2^6B，块内偏移占低6位；32位地址剩余22位为Tag。",
+        "地址字段从低到高为：块内偏移[5:0]、组索引[9:6]、Tag[31:10]。",
+        "call地址00401025H的页内低12位为025H，二进制低10位为0000100101；[9:6]为0000，因此只能映射到Cache第0组。"
+      ],
+      "complexity": "Cache共16组，每组4行；地址字段Tag22位、组索引4位、块内偏移6位。",
+      "analysis": "页大小决定页内偏移位数；Cache块大小决定块内偏移位数；Cache组数决定组索引位数。不要把页内偏移与Cache块内偏移混为一谈。",
+      "code": "页内偏移位数 = log2(4096) = 12\\nCache组数 = 64 / 4 = 16\\n块内偏移 = log2(64) = 6 bit\\n组索引 = log2(16) = 4 bit\\nTag = 32 - 6 - 4 = 22 bit",
+      "correction": "call指令地址低12位为0x025；Cache组索引取物理地址[9:6]，该字段为0000，故组号0。",
+      "verification": "已对照2019年原题地址表与公开参考答案复核页号、Cache组数、字段位段和call指令组号。",
+      "audit": {
+        "status": "cross-checked",
+        "note": "分页地址与Cache地址字段已独立计算并交叉核验。"
+      },
+      "cards": [
+        {
+          "title": "页表结构与地址转换",
+          "topic": "页表结构与地址转换",
+          "status": "verified",
+          "role": "core"
+        },
+        {
+          "title": "Cache 直接映射与组相联",
+          "topic": "Cache 直接映射与组相联",
+          "status": "verified",
+          "role": "core"
+        },
+        {
+          "title": "Cache 映射与命中率",
+          "topic": "Cache 映射与命中率",
+          "status": "verified",
+          "role": "secondary"
+        },
+        {
+          "title": "指令系统与寻址方式",
+          "topic": "指令系统与寻址方式",
+          "status": "verified",
+          "role": "secondary"
+        }
+      ],
+      "coreCards": [
+        "页表结构与地址转换",
+        "Cache 直接映射与组相联"
+      ],
+      "secondaryCards": [
+        "Cache 映射与命中率",
+        "指令系统与寻址方式"
+      ]
+    },
+    {
+      "year": 2019,
+      "index": 47,
+      "id": 517,
+      "subject": "计算机网络",
+      "answer": "设备1为路由器，设备2和设备3为以太网交换机。设备1的IF1配置192.168.1.254/30，IF2配置192.168.1.1/26，IF3配置192.168.1.65/26。R需提供NAT服务。H3发送目的地址192.168.1.127时，该地址是H3所在192.168.1.64/26子网的定向广播地址，只有同一子网的H4接收。",
+      "steps": [
+        "H1、H2地址192.168.1.2/26和.3/26属于192.168.1.0/26；H3、H4地址.66/26和.67/26属于192.168.1.64/26。",
+        "设备1连接两个不同IP网络，必须承担三层转发功能，因此选择路由器；设备2、3只连接同一LAN内主机，选择无VLAN交换机。",
+        "设备1的IF1与R的192.168.1.253/30互连，/30网络为192.168.1.252/30，可用地址.253和.254，故设备1 IF1=.254/30。",
+        "LAN1默认网关为192.168.1.1，设备1 IF2配置192.168.1.1/26；LAN2默认网关为192.168.1.65，设备1 IF3配置192.168.1.65/26。",
+        "192.168.1.0/24、/16等私有地址不能在公网直接路由；R需提供网络地址转换NAT，使内网私有地址映射为公网地址。",
+        "192.168.1.127是192.168.1.64/26的主机位全1广播地址；路由器不转发二层广播，因此H1/H2收不到，只有LAN2中的H4接收。"
+      ],
+      "complexity": "设备1为路由器；设备2/3为交换机；IF1=.254/30、IF2=.1/26、IF3=.65/26；需要NAT；广播接收者为H4。",
+      "analysis": "先按子网掩码确定二层广播域，再决定互联设备。交换机不改变IP子网边界；路由器隔离广播域。私有IPv4地址访问Internet通常需要NAT或等价地址转换机制。",
+      "code": "LAN1: 192.168.1.0/26  gateway 192.168.1.1\\nLAN2: 192.168.1.64/26 gateway 192.168.1.65\\nR—设备1互联: 192.168.1.252/30\\nR: .253/30  设备1 IF1: .254/30\\n设备1 IF2: .1/26  IF3: .65/26",
+      "correction": "192.168.1.127不是/24网络的广播地址，而是H3/H4所在192.168.1.64/26子网的广播地址；路由器不会把该广播转发到LAN1。",
+      "verification": "已查看2019年第47题原始拓扑图，核对四台主机地址、默认网关、R接口和设备接口；并对照参考解析复核设备类型、IP配置、NAT与广播接收范围。",
+      "audit": {
+        "status": "cross-checked",
+        "note": "原题拓扑图已目视核对；地址规划、路由器/交换机职责和广播域边界已复算。"
+      },
+      "cards": [
+        {
+          "title": "IPv4 子网划分与 CIDR",
+          "topic": "IPv4 子网划分与 CIDR",
+          "status": "verified",
+          "role": "core"
+        },
+        {
+          "title": "NAT 与端口映射",
+          "topic": "NAT 与端口映射",
+          "status": "verified",
+          "role": "core"
+        },
+        {
+          "title": "网桥与交换机的冲突域广播域",
+          "topic": "网桥与交换机的冲突域广播域",
+          "status": "verified",
+          "role": "secondary"
+        },
+        {
+          "title": "路由选择与转发表",
+          "topic": "路由选择与转发表",
+          "status": "verified",
+          "role": "secondary"
+        }
+      ],
+      "coreCards": [
+        "IPv4 子网划分与 CIDR",
+        "NAT 与端口映射"
+      ],
+      "secondaryCards": [
+        "网桥与交换机的冲突域广播域",
+        "路由选择与转发表"
       ]
     }
   ]
