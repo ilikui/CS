@@ -2003,27 +2003,27 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "1997-选择题-3",
     "primary": [
-      "CAL-02-A"
+      "CAL-05-F"
     ],
     "secondary": [
-      "CAL-02-B"
+      "CAL-05-E"
     ],
     "rationale": "二阶导数符号判极值；由题设得 $f^{\\prime\\prime}\\left(x_{0}\\right)=\\frac{1-e^{-x_{0}}}{x_{0}}$。无论 $x_{0}>0$ 或 $x_{0}<0$，均有 $f^{\\prime\\prime}\\left(x_{0}\\right)>0$，故 $f\\left(x_{0}\\right)$ 为极小值。",
-    "methods": "在驻点代入方程求二阶导，判断正负。",
-    "pitfalls": "驻点二阶导为正判极小；题设 x0 非零，(1-e^-x0)/x0>0。"
+    "methods": "驻点二阶导数判别极值；先由 f'(x₀)=0，再代入关系求 f''(x₀) 的符号。",
+    "pitfalls": "不要把二阶导数正负与函数值正负混淆。"
   },
   "161": {
     "status": "verified",
     "questionKey": "1997-选择题-4",
     "primary": [
-      "CAL-03-A"
+      "CAL-06-C"
     ],
     "secondary": [
-      "CAL-03-B"
+      "CAL-06-E"
     ],
     "rationale": "周期函数积分区间长度为周期；因 $e^{\\sin t}\\sin t$ 以 $2\\pi$ 为周期，所以 $F\\left(x\\right)$ 为常数。又 $F\\left(x\\right)=\\int_{0}^{\\pi}\\left(e^{\\sin t}-e^{-\\sin t}\\right)\\sin t\\mathrm{~d}t>0$，故为正常数。",
-    "methods": "周期函数在任一完整周期上的定积分相同。",
-    "pitfalls": "将区间平移到方便的周期区间，并拆分正负部分判断积分符号。"
+    "methods": "周期函数在一个周期上的定积分与起点无关；利用被积函数周期性，将积分区间平移到便于判断符号的位置。",
+    "pitfalls": "周期积分为常数不代表积分为零，还需判断其正负。"
   },
   "162": {
     "status": "verified",
@@ -2035,333 +2035,333 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-01-B"
     ],
     "rationale": "分段函数复合；当 $x<0$ 时，$f\\left(x\\right)=x^{2}>0$，故 $g\\left[f\\left(x\\right)\\right]=2+x^{2}$；当 $x\\ge 0$ 时，$f\\left(x\\right)=-x\\le 0$，故 $g\\left[f\\left(x\\right)\\right]=2+x$。",
-    "methods": "先求内函数各区间的值域，再代入外函数对应分支。",
-    "pitfalls": "分 x<0 与 x≥0 计算 f(x)，判断 f(x) 的符号后选择 g 分支。"
+    "methods": "分段函数的复合与分段区间判断；先判断内层函数 f(x) 的符号，再选择外层 g 的对应分支。",
+    "pitfalls": "分段点 x=0 需单独归入正确区间。"
   },
   "163": {
     "status": "verified",
     "questionKey": "1997-解答题-1",
     "primary": [
-      "CAL-01-C"
+      "CAL-02-C"
     ],
     "secondary": [
-      "CAL-01-D"
+      "CAL-01-G"
     ],
     "rationale": "无穷远极限与根式有理化；分子分母同除以 $\\left|x\\right|=-x$，得 $\\lim_{x \\to -\\infty}\\frac{\\sqrt{4+\\frac{1}{x}-\\frac{1}{x^{2}}}-1-\\frac{1}{x}}{\\sqrt{1+\\frac{\\sin x}{x^{2}}}}=1$。",
-    "methods": "x→−∞ 时 |x|=−x，根式除以 |x| 后求极限。",
-    "pitfalls": "同除 −x，整理成趋于常数的根式表达式。"
+    "methods": "无穷远处根式极限与绝对值处理；x→−∞ 时先用 |x|=−x 规范化，再将根式除以 |x|。",
+    "pitfalls": "不能把 √(x²) 直接写成 x；应写 |x|。"
   },
   "164": {
     "status": "verified",
     "questionKey": "1997-解答题-2",
     "primary": [
-      "CAL-04-A"
+      "CAL-04-E"
     ],
     "secondary": [
-      "CAL-04-B"
+      "CAL-04-C"
     ],
     "rationale": "参数方程隐函数求导；对 $2y-ty^{2}+e^{t}=5$ 关于 $t$ 求导，得 $\\frac{\\mathrm{d}y}{\\mathrm{d}t}=\\frac{e^{t}-y^{2}}{2\\left(ty-1\\right)}$。又 $\\frac{\\mathrm{d}x}{\\mathrm{d}t}=\\frac{1}{1+t^{2}}$，所以 $y^{\\prime}=\\frac{\\left(e^{t}-y^{2}\\right)\\left(1+t^{2}\\right)}{2\\left(ty-1\\right)}$。",
-    "methods": "分别对参数求 dx/dt、dy/dt，再取比值。",
-    "pitfalls": "隐式关系先求 dy/dt，利用 dy/dx=(dy/dt)/(dx/dt)。"
+    "methods": "参数方程确定函数的导数；分别求 dy/dt 与 dx/dt，再用 dy/dx=(dy/dt)/(dx/dt)。",
+    "pitfalls": "注意参数导数的商序，不能颠倒。"
   },
   "165": {
     "status": "verified",
     "questionKey": "1997-解答题-3",
     "primary": [
-      "CAL-05-A"
+      "CAL-06-B"
     ],
     "secondary": [
-      "CAL-05-B"
+      "CAL-06-D"
     ],
     "rationale": "指数乘积与三角恒等式积分；因为 $\\left(\\tan x+1\\right)^{2}=\\sec^{2}x+2\\tan x$，所以 $\\int e^{2x}\\left(\\tan x+1\\right)^{2}\\mathrm{~d}x=\\int e^{2x}\\left(\\sec^{2}x+2\\tan x\\right)\\mathrm{~d}x=e^{2x}\\tan x+C$。",
-    "methods": "展开平方并识别 e^{2x}tan x 的导数结构。",
-    "pitfalls": "利用 (tan x+1)^2=sec²x+2tan x，整体识别 d(e^{2x}tan x)。"
+    "methods": "利用导数结构识别不定积分；展开三角恒等式，识别 e^(2x)tan x 的导数结构。",
+    "pitfalls": "先验证被积函数是否恰为某个乘积的导数。"
   },
   "166": {
     "status": "verified",
     "questionKey": "1997-解答题-4",
     "primary": [
-      "CAL-06-A"
+      "CAL-07-D"
     ],
     "secondary": [
-      "CAL-06-B"
+      "CAL-07-A"
     ],
     "rationale": "全微分方程判定；令 $P=3x^{2}+2xy-y^{2}$，$Q=x^{2}-2xy$，则 $\\frac{\\partial P}{\\partial y}=\\frac{\\partial Q}{\\partial x}=2x-2y$，故为全微分方程。积分得通解 $x^{3}+x^{2}y-xy^{2}=C$，其中 $C$ 为任意常数。",
-    "methods": "比较 M_y 与 N_x，若相等则存在势函数。",
-    "pitfalls": "对 M 关于 x 积分，再用 N 校正 y 项。"
+    "methods": "全微分方程的判定与求解；比较 M_y 与 N_x；相等时构造势函数并积分。",
+    "pitfalls": "注意积分后补充另一变量的函数，再用 Q 校正。"
   },
   "167": {
     "status": "verified",
     "questionKey": "1997-解答题-5",
     "primary": [
-      "LA-01-A"
+      "CAL-07-C"
     ],
     "secondary": [
-      "LA-01-B"
+      "CAL-07-D"
     ],
     "rationale": "二阶线性非齐次方程；由 $y_{1}-y_{3}=e^{-x}$，$y_{1}-y_{2}=e^{2x}-e^{-x}$，知对应齐次方程特征根为 $-1,2$，故齐次方程为 $y^{\\prime\\prime}-y^{\\prime}-2y=0$。以 $xe^{x}$ 为特解，代入得非齐次项为 $\\left(1-2x\\right)e^{x}$，故所求方程为 $y^{\\prime\\prime}-y^{\\prime}-2y=\\left(1-2x\\right)e^{x}$。",
-    "methods": "用已知解差分提取齐次解，再由特解确定右端。",
-    "pitfalls": "识别特征根 −1、2，代入 xe^x 求非齐次项。"
+    "methods": "由多个非齐次方程解反求方程；解的差给出齐次解，据此确定特征根；再代入一个特解求非齐次项。",
+    "pitfalls": "不要将三个非齐次解直接当作齐次解。"
   },
   "168": {
     "status": "verified",
     "questionKey": "1997-解答题-6",
     "primary": [
-      "CAL-01-A"
+      "LA-02-A"
     ],
     "secondary": [
-      "CAL-01-B"
+      "LA-02-D"
     ],
     "rationale": "矩阵方程左乘可逆矩阵；由 $\\boldsymbol{A}^{2}-\\boldsymbol{A}\\boldsymbol{B}=\\boldsymbol{E}$，得 $\\boldsymbol{B}=\\boldsymbol{A}-\\boldsymbol{A}^{-1}$。又 $\\boldsymbol{A}^{-1}=\\begin{pmatrix}1 & -1 & -2\\\\0 & 1 & 1\\\\0 & 0 & -1\\end{pmatrix}$，所以 $\\boldsymbol{B}=\\begin{pmatrix}0 & 2 & 1\\\\0 & 0 & 0\\\\0 & 0 & 0\\end{pmatrix}$。",
-    "methods": "由 A²−AB=E 提取 B=A−A⁻¹。",
-    "pitfalls": "计算 A⁻¹ 后逐项相减。"
+    "methods": "矩阵方程与逆矩阵运算；由 A²−AB=E 提取 A(A−B)=E，利用 A 可逆解出 B。",
+    "pitfalls": "矩阵乘法不可交换，整理时保持乘法顺序。"
   },
   "169": {
     "status": "verified",
     "questionKey": "1998-填空题-1",
     "primary": [
-      "CAL-04-A"
+      "CAL-05-D"
     ],
     "secondary": [
-      "CAL-04-C"
+      "CAL-02-C"
     ],
     "rationale": "二阶泰勒展开求极限；由 $\\sqrt{1+x}=1+\\frac{1}{2}x-\\frac{1}{8}x^{2}+o\\left(x^{2}\\right)$，$\\sqrt{1-x}=1-\\frac{1}{2}x-\\frac{1}{8}x^{2}+o\\left(x^{2}\\right)$，得 $\\sqrt{1+x}+\\sqrt{1-x}-2=-\\frac{1}{4}x^{2}+o\\left(x^{2}\\right)$，故原极限为 $-\\frac{1}{4}$。",
-    "methods": "展开 √(1±x) 至 x² 项。",
-    "pitfalls": "线性项抵消，保留二阶系数后除 x²。"
+    "methods": "麦克劳林展开求极限；将两个根式展开到 x² 项，合并后除以 x²。",
+    "pitfalls": "保留到分母所需的最低非零阶，线性项会抵消。"
   },
   "170": {
     "status": "verified",
     "questionKey": "1998-填空题-2",
     "primary": [
-      "CAL-04-B"
+      "CAL-06-C"
     ],
     "secondary": [
-      "CAL-04-C"
+      "CAL-06-E"
     ],
     "rationale": "曲线与坐标轴围面积；因为 $y=-x\\left(x+1\\right)\\left(x-2\\right)$，所以交点为 $x=-1,0,2$。当 $-1\\le x\\le 0$ 时，$y<0$；当 $0\\le x\\le 2$ 时，$y\\ge 0$。故 $A=-\\int_{-1}^{0}-x\\left(x+1\\right)\\left(x-2\\right)\\mathrm{~d}x+\\int_{0}^{2}-x\\left(x+1\\right)\\left(x-2\\right)\\mathrm{~d}x=\\frac{37}{12}$。",
-    "methods": "求零点并分区间判断函数符号。",
-    "pitfalls": "对负区间取负积分，对正区间取正积分。"
+    "methods": "曲线与 x 轴围成面积的定积分；求零点并分段判断函数符号，按几何面积取绝对值积分。",
+    "pitfalls": "定积分的代数值不一定等于几何面积。"
   },
   "171": {
     "status": "verified",
     "questionKey": "1998-填空题-3",
     "primary": [
-      "CAL-03-A"
+      "CAL-06-D"
     ],
     "secondary": [
-      "CAL-03-C"
+      "CAL-06-B"
     ],
     "rationale": "分部积分与三角积分；$\\int \\frac{\\ln \\left(\\sin x\\right)}{\\sin^{2}x}\\mathrm{~d}x=-\\int \\ln \\left(\\sin x\\right)\\mathrm{~d}\\left(\\cot x\\right)=-\\cot x\\ln \\left(\\sin x\\right)+\\int \\left(\\csc^{2}x-1\\right)\\mathrm{~d}x=-\\cot x\\ln \\left(\\sin x\\right)-\\cot x-x+C$。",
-    "methods": "将 ln(sin x) 与 csc²x 配合分部积分。",
-    "pitfalls": "取 u=ln sin x，dv=csc²x dx。"
+    "methods": "含对数与三角函数的分部积分；取 u=ln(sin x)，dv=csc²x dx，进行分部积分。",
+    "pitfalls": "注意 d(cot x)=−csc²x dx 的负号。"
   },
   "172": {
     "status": "verified",
     "questionKey": "1998-填空题-4",
     "primary": [
-      "CAL-04-A"
+      "CAL-06-F"
     ],
     "secondary": [
-      "CAL-04-B"
+      "CAL-06-G"
     ],
     "rationale": "变限积分求导与换元；令 $u=x^{2}-t^{2}$，则 $\\int_{0}^{x}tf\\left(x^{2}-t^{2}\\right)\\mathrm{~d}t=\\frac{1}{2}\\int_{0}^{x^{2}}f\\left(u\\right)\\mathrm{~d}u$，因此 $\\frac{\\mathrm{d}}{\\mathrm{d}x}\\int_{0}^{x}tf\\left(x^{2}-t^{2}\\right)\\mathrm{~d}t=xf\\left(x^{2}\\right)$。",
-    "methods": "先用 u=x²−t² 将积分化为上限 x² 的积分。",
-    "pitfalls": "积分变为 1/2∫₀^{x²}f(u)du，再用链式法则。"
+    "methods": "变限积分求导与换元；先令 u=x²−t² 化为上限为 x² 的积分，再用链式法则求导。",
+    "pitfalls": "上限 x² 求导会产生因子 2x，与前面的 1/2 抵消。"
   },
   "173": {
     "status": "verified",
     "questionKey": "1998-填空题-5",
     "primary": [
-      "CAL-05-A"
+      "CAL-05-H"
     ],
     "secondary": [
       "CAL-05-C"
     ],
     "rationale": "斜渐近线；$\\lim_{x \\to +\\infty}\\frac{y}{x}=1$，且 $\\lim_{x \\to +\\infty}\\left(y-x\\right)=\\lim_{t \\to 0^{+}}\\frac{\\ln \\left(e+t\\right)-1}{t}=\\frac{1}{e}$，故斜渐近线为 $y=x+\\frac{1}{e}$。",
-    "methods": "分别求 y/x 与 y−kx 的极限。",
-    "pitfalls": "利用 ln(e+1/x) 的展开确定斜率和截距。"
+    "methods": "函数斜渐近线的求法；先求斜率 k=lim(y/x)，再求截距 b=lim(y−kx)。",
+    "pitfalls": "两个极限都存在且有限才能得到斜渐近线。"
   },
   "174": {
     "status": "verified",
     "questionKey": "1998-选择题-1",
     "primary": [
-      "CAL-01-A"
+      "CAL-02-A"
     ],
     "secondary": [
-      "CAL-01-C"
+      "CAL-01-G"
     ],
     "rationale": "数列乘积趋零的推论；若 $\\left\\{\\frac{1}{x_{n}}\\right\\}$ 为无穷小，则 $\\left|x_{n}\\right|\\to \\infty$。又 $x_{n}y_{n}\\to 0$，所以 $y_{n}=\\left(x_{n}y_{n}\\right)\\frac{1}{x_{n}}\\to 0$，故选 D。",
-    "methods": "将 y_n=(x_n y_n)(1/x_n)。",
-    "pitfalls": "两个因子都趋零则乘积趋零。"
+    "methods": "数列乘积趋零与因子趋零的推理；利用 y_n=(x_n y_n)(1/x_n)，由两个因子趋零推出 y_n→0。",
+    "pitfalls": "先确认 1/x_n→0 的条件意味着 x_n 的绝对值趋于无穷。"
   },
   "175": {
     "status": "verified",
     "questionKey": "1998-选择题-2",
     "primary": [
-      "CAL-01-B"
+      "CAL-04-A"
     ],
     "secondary": [
-      "CAL-01-D"
+      "CAL-03-B"
     ],
     "rationale": "绝对值函数不可导点；$f\\left(x\\right)=\\left(x+1\\right)\\left(x-2\\right)\\left|x\\right|\\left|x+1\\right|\\left|x-1\\right|$，只需考察 $x=-1,0,1$。其中 $x=-1$ 处可导，$x=0$ 与 $x=1$ 处左右导数不相等，故不可导点个数为 $2$。",
-    "methods": "检查绝对值内部零点及外因子抵消。",
-    "pitfalls": "逐个分析 x=−1,0,1 的左右导数。"
+    "methods": "含绝对值函数在零点处的可导性；找出绝对值内部为零的点，逐点比较左右导数。",
+    "pitfalls": "绝对值零点不一定都是不可导点，需检查外因子是否抵消尖点。"
   },
   "176": {
     "status": "verified",
     "questionKey": "1998-选择题-3",
     "primary": [
-      "CAL-01-C"
+      "CAL-07-B"
     ],
     "secondary": [
-      "CAL-01-D"
+      "CAL-04-A"
     ],
     "rationale": "增量定义导数与初值；由题意得 $y^{\\prime}=\\frac{y}{1+x^{2}}$，解得 $y=Ce^{\\arctan x}$。由 $y\\left(0\\right)=\\pi$ 得 $C=\\pi$，故 $y\\left(1\\right)=\\pi e^{\\frac{\\pi}{4}}$。",
-    "methods": "由 Δy/Δx 得微分方程 y'=y/(1+x²)。",
-    "pitfalls": "分离变量积分，使用 y(0)=π。"
+    "methods": "由增量关系建立并求解一阶微分方程；将增量式除以 Δx 取极限，得到 y'=y/(1+x²)，分离变量并用初值。",
+    "pitfalls": "高阶无穷小项除以 Δx 后趋于零。"
   },
   "177": {
     "status": "verified",
     "questionKey": "1998-选择题-4",
     "primary": [
-      "CAL-01-A"
+      "CAL-05-F"
     ],
     "secondary": [
-      "CAL-01-B"
+      "CAL-05-E"
     ],
     "rationale": "极大值的邻域性质；因 $f\\left(a\\right)$ 为极大值，所以在 $a$ 的某邻域内 $f\\left(a\\right)\\ge f\\left(x\\right)$。当 $x\\ne a$ 时，$\\lim_{t \\to a}\\frac{f\\left(t\\right)-f\\left(x\\right)}{\\left(t-x\\right)^{2}}=\\frac{f\\left(a\\right)-f\\left(x\\right)}{\\left(a-x\\right)^{2}}\\ge 0$。",
-    "methods": "用 f(x)≤f(a) 与平方分母非负构造极限。",
-    "pitfalls": "固定 x≠a，令 t→a。"
+    "methods": "极大值定义与邻域内函数值比较；由局部极大值定义得 f(x)≤f(a)，再代入所给极限。",
+    "pitfalls": "平方分母为正；固定 x≠a 后再令 t→a。"
   },
   "178": {
     "status": "verified",
     "questionKey": "1998-选择题-5",
     "primary": [
-      "LA-01-A"
+      "LA-02-D"
     ],
     "secondary": [
-      "LA-01-C"
+      "LA-01-B"
     ],
     "rationale": "伴随矩阵的齐次性；伴随矩阵的元素是 $n-1$ 阶代数余子式，所以 $\\left(k\\boldsymbol{A}\\right)^{*}=k^{n-1}\\boldsymbol{A}^{*}$。",
-    "methods": "伴随元素为 n−1 阶代数余子式。",
-    "pitfalls": "每个余子式缩放 k^{n−1}。"
+    "methods": "伴随矩阵对数乘因子的齐次性；伴随矩阵元素是 n−1 阶代数余子式，整体缩放因子为 k^(n−1)。",
+    "pitfalls": "不要误用 det(kA)=k^n det(A) 的指数 n。"
   },
   "179": {
     "status": "verified",
     "questionKey": "1999-填空题-1",
     "primary": [
-      "CAL-01-B"
+      "CAL-04-E"
     ],
     "secondary": [
-      "CAL-01-C"
+      "CAL-04-C"
     ],
     "rationale": "参数曲线法线；点 $\\left(0,1\\right)$ 对应 $t=0$。由参数方程求导得\n\n$\\dfrac{\\mathrm{d}y}{\\mathrm{d}x}=\\dfrac{e^{t}\\cos t-e^{t}\\sin t}{e^{t}\\sin 2t+2e^{t}\\cos 2t}$。\n\n代入 $t=0$，得切线斜率为 $\\dfrac{1}{2}$，故法线斜率为 $-2$。所以法线方程为 $y-1=-2x$，即 $2x+y-1=0$。",
-    "methods": "先找参数对应点，计算 dy/dx，再取负倒数。",
-    "pitfalls": "t=0，切线斜率 1/2，法线斜率 −2。"
+    "methods": "参数曲线切线与法线方程；先由点坐标确定参数，再计算 dy/dx，法线斜率取负倒数。",
+    "pitfalls": "切线斜率为 1/2 时法线斜率为 −2。"
   },
   "180": {
     "status": "verified",
     "questionKey": "1999-填空题-2",
     "primary": [
-      "CAL-04-A"
-    ],
-    "secondary": [
       "CAL-04-D"
     ],
+    "secondary": [
+      "CAL-04-C"
+    ],
     "rationale": "隐函数求导；当 $x=0$ 时，由原方程得 $y=1$。两边对 $x$ 求导：\n\n$\\dfrac{2x+y^{\\prime}}{x^{2}+y}=3x^{2}+y^{\\prime}\\sin x+y\\cos x$。\n\n代入 $x=0,y=1$，得 $y^{\\prime}=1$。",
-    "methods": "对方程两边求导并代入点坐标。",
-    "pitfalls": "x=0 得 y=1，整理 y'。"
+    "methods": "隐函数方程求导；对隐式方程两边关于 x 求导，解出 y' 后代入指定点。",
+    "pitfalls": "含 y 的复合项求导时必须乘 y'。"
   },
   "181": {
     "status": "verified",
     "questionKey": "1999-填空题-3",
     "primary": [
-      "CAL-05-A"
+      "CAL-06-B"
     ],
     "secondary": [
-      "CAL-05-D"
+      "CAL-06-D"
     ],
     "rationale": "有理函数积分配平方；因为 $x+5=\\left(x-3\\right)+8$，所以\n\n$\\int\\dfrac{x+5}{x^{2}-6x+13}\\mathrm{~d}x=\\int\\dfrac{x-3}{x^{2}-6x+13}\\mathrm{~d}x+8\\int\\dfrac{\\mathrm{d}x}{\\left(x-3\\right)^{2}+4}$。\n\n故\n\n$\\int\\dfrac{x+5}{x^{2}-6x+13}\\mathrm{~d}x=\\dfrac{1}{2}\\ln\\left(x^{2}-6x+13\\right)+4\\arctan\\dfrac{x-3}{2}+C$。",
-    "methods": "拆分分子为分母导数部分与常数部分。",
-    "pitfalls": "平方完成 (x−3)²+4，分别积分。"
+    "methods": "有理函数不定积分的拆项与配方；将分子拆成分母导数与常数项，分母配方后分别积分。",
+    "pitfalls": "对数项与反正切项系数要分别核对。"
   },
   "182": {
     "status": "verified",
     "questionKey": "1999-填空题-4",
+    "primary": [
+      "CAL-06-H"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "函数平均值；平均值为\n\n$\\overline{y}=\\dfrac{1}{\\frac{\\sqrt{3}}{2}-\\frac{1}{2}}\\int_{\\frac{1}{2}}^{\\frac{\\sqrt{3}}{2}}\\dfrac{x^{2}}{\\sqrt{1-x^{2}}}\\mathrm{~d}x$。\n\n令 $x=\\sin t$，得\n\n$\\overline{y}=\\dfrac{2}{\\sqrt{3}-1}\\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{3}}\\sin^{2}t\\mathrm{~d}t=\\dfrac{\\left(\\sqrt{3}+1\\right)\\pi}{12}$。",
+    "methods": "函数在区间上的平均值；平均值等于区间定积分除以区间长度，再作三角换元计算。",
+    "pitfalls": "别漏掉区间长度因子。"
+  },
+  "183": {
+    "status": "verified",
+    "questionKey": "1999-填空题-5",
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "常系数微分方程共振；齐次方程 $y^{\\prime\\prime}-4y=0$ 的特征根为 $\\lambda_{1}=2,\\lambda_{2}=-2$。又非齐次项为 $e^{2x}$，设特解 $y^{*}=Axe^{2x}$，代入得 $A=\\dfrac{1}{4}$。故通解为\n\n$y=C_{1}e^{-2x}+\\left(C_{2}+\\dfrac{1}{4}x\\right)e^{2x}$。",
+    "methods": "二阶常系数非齐次线性微分方程；先解特征方程，再按右端与特征根共振的情形设特解。",
+    "pitfalls": "右端 e^(2x) 对应特征根 2，特解需乘 x。"
+  },
+  "184": {
+    "status": "verified",
+    "questionKey": "1999-选择题-1",
+    "primary": [
+      "CAL-04-A"
+    ],
+    "secondary": [
+      "CAL-03-A"
+    ],
+    "rationale": "分段函数在拼接点可导；因 $g\\left(x\\right)$ 有界，$\\lim_{x\\to 0^{-}}x^{2}g\\left(x\\right)=0$；又 $\\lim_{x\\to 0^{+}}\\dfrac{1-\\cos x}{\\sqrt{x}}=0$，故 $f\\left(x\\right)$ 在 $x=0$ 处连续。\n\n又\n\n$f_{+}^{\\prime}\\left(0\\right)=\\lim_{x\\to 0^{+}}\\dfrac{1-\\cos x}{x\\sqrt{x}}=0,\\quad f_{-}^{\\prime}\\left(0\\right)=\\lim_{x\\to 0^{-}}xg\\left(x\\right)=0$。\n\n所以 $f^{\\prime}\\left(0\\right)$ 存在，选 D。",
+    "methods": "分段函数在拼接点的连续与可导；分别求左右函数值极限及左右导数，比较是否相等。",
+    "pitfalls": "g 有界保证 x²g(x)/x→0，但必须按差商定义检查。"
+  },
+  "185": {
+    "status": "verified",
+    "questionKey": "1999-选择题-2",
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-06-F"
+    ],
+    "rationale": "积分函数渐近阶；由洛必达法则，\n\n$\\lim_{x\\to 0}\\dfrac{\\alpha\\left(x\\right)}{\\beta\\left(x\\right)}=\\lim_{x\\to 0}\\dfrac{\\sin^{5}x}{\\frac{1}{5}\\cdot \\frac{x^{5}}{1+\\sin x}}=5$。\n\n极限为有限非零常数但不等于 $1$，故二者同阶但不等价，选 C。",
+    "methods": "积分定义的函数比较无穷小阶；对 α/β 使用洛必达法则，或比较被积函数主阶后积分。",
+    "pitfalls": "极限为 5 表示同阶但不等价，不是等价无穷小。"
+  },
+  "186": {
+    "status": "verified",
+    "questionKey": "1999-选择题-3",
     "primary": [
       "CAL-06-A"
     ],
     "secondary": [
       "CAL-06-C"
     ],
-    "rationale": "函数平均值；平均值为\n\n$\\overline{y}=\\dfrac{1}{\\frac{\\sqrt{3}}{2}-\\frac{1}{2}}\\int_{\\frac{1}{2}}^{\\frac{\\sqrt{3}}{2}}\\dfrac{x^{2}}{\\sqrt{1-x^{2}}}\\mathrm{~d}x$。\n\n令 $x=\\sin t$，得\n\n$\\overline{y}=\\dfrac{2}{\\sqrt{3}-1}\\int_{\\frac{\\pi}{6}}^{\\frac{\\pi}{3}}\\sin^{2}t\\mathrm{~d}t=\\dfrac{\\left(\\sqrt{3}+1\\right)\\pi}{12}$。",
-    "methods": "平均值=区间积分/区间长度。",
-    "pitfalls": "x=sin t 化为 sin²t 积分。"
-  },
-  "183": {
-    "status": "verified",
-    "questionKey": "1999-填空题-5",
-    "primary": [
-      "CAL-04-B"
-    ],
-    "secondary": [
-      "CAL-04-C"
-    ],
-    "rationale": "常系数微分方程共振；齐次方程 $y^{\\prime\\prime}-4y=0$ 的特征根为 $\\lambda_{1}=2,\\lambda_{2}=-2$。又非齐次项为 $e^{2x}$，设特解 $y^{*}=Axe^{2x}$，代入得 $A=\\dfrac{1}{4}$。故通解为\n\n$y=C_{1}e^{-2x}+\\left(C_{2}+\\dfrac{1}{4}x\\right)e^{2x}$。",
-    "methods": "特征根重复与右端同根时乘 x。",
-    "pitfalls": "设 Ax e^{2x}，代入确定 A。"
-  },
-  "184": {
-    "status": "verified",
-    "questionKey": "1999-选择题-1",
-    "primary": [
-      "CAL-01-A"
-    ],
-    "secondary": [
-      "CAL-01-D"
-    ],
-    "rationale": "分段函数在拼接点可导；因 $g\\left(x\\right)$ 有界，$\\lim_{x\\to 0^{-}}x^{2}g\\left(x\\right)=0$；又 $\\lim_{x\\to 0^{+}}\\dfrac{1-\\cos x}{\\sqrt{x}}=0$，故 $f\\left(x\\right)$ 在 $x=0$ 处连续。\n\n又\n\n$f_{+}^{\\prime}\\left(0\\right)=\\lim_{x\\to 0^{+}}\\dfrac{1-\\cos x}{x\\sqrt{x}}=0,\\quad f_{-}^{\\prime}\\left(0\\right)=\\lim_{x\\to 0^{-}}xg\\left(x\\right)=0$。\n\n所以 $f^{\\prime}\\left(0\\right)$ 存在，选 D。",
-    "methods": "分别求左右极限与左右导数。",
-    "pitfalls": "有界 g 保证左侧 x²g(x) 的导数差商趋零。"
-  },
-  "185": {
-    "status": "verified",
-    "questionKey": "1999-选择题-2",
-    "primary": [
-      "CAL-01-B"
-    ],
-    "secondary": [
-      "CAL-01-C"
-    ],
-    "rationale": "积分函数渐近阶；由洛必达法则，\n\n$\\lim_{x\\to 0}\\dfrac{\\alpha\\left(x\\right)}{\\beta\\left(x\\right)}=\\lim_{x\\to 0}\\dfrac{\\sin^{5}x}{\\frac{1}{5}\\cdot \\frac{x^{5}}{1+\\sin x}}=5$。\n\n极限为有限非零常数但不等于 $1$，故二者同阶但不等价，选 C。",
-    "methods": "比较被积函数在零点的主阶，再积分。",
-    "pitfalls": "α≈x⁶/6，β≈x⁶/30，比例为5。"
-  },
-  "186": {
-    "status": "verified",
-    "questionKey": "1999-选择题-3",
-    "primary": [
-      "CAL-01-A"
-    ],
-    "secondary": [
-      "CAL-01-B"
-    ],
     "rationale": "原函数奇偶性；原函数可写为 $F\\left(x\\right)=\\int_{0}^{x}f\\left(t\\right)\\mathrm{~d}t+C$。若 $f\\left(x\\right)$ 为奇函数，则\n\n$F\\left(-x\\right)=\\int_{0}^{-x}f\\left(t\\right)\\mathrm{~d}t+C=\\int_{0}^{x}f\\left(u\\right)\\mathrm{~d}u+C=F\\left(x\\right)$。\n\n所以 $F\\left(x\\right)$ 为偶函数，选 A。",
-    "methods": "奇函数从0到x积分得到偶函数。",
-    "pitfalls": "用变量替换验证 F(−x)=F(x)。"
+    "methods": "原函数的奇偶性；将原函数写为从 0 到 x 的积分加常数，利用奇函数积分性质。",
+    "pitfalls": "任意原函数只相差常数，偶性结论仍成立。"
   },
   "187": {
     "status": "verified",
     "questionKey": "1999-选择题-4",
     "primary": [
-      "CAL-01-C"
-    ],
-    "secondary": [
       "CAL-01-D"
     ],
+    "secondary": [
+      "CAL-02-A"
+    ],
     "rationale": "数列极限定义；该条件与数列极限定义等价。因为 $\\varepsilon\\in\\left(0,1\\right)$ 仍可任意小，且 $\\left|x_{n}-a\\right|\\le 2\\varepsilon$ 仍能保证 $\\left|x_{n}-a\\right|$ 任意小，所以是充分必要条件，选 C。",
-    "methods": "任意 ε∈(0,1) 与距离 ≤2ε 等价于标准 ε 条件。",
-    "pitfalls": "令标准容差 η，取 ε<η/2。"
+    "methods": "数列收敛的 ε-N 定义等价形式；利用 ε 可任意小，将误差上界 2ε 与标准定义互相转换。",
+    "pitfalls": "常数倍不改变任意小的性质。"
   },
   "188": {
     "status": "verified",
@@ -2373,151 +2373,151 @@ window.EXAM_KNOWLEDGE_MAP = {
       "LA-01-B"
     ],
     "rationale": "行列式行列变换；利用行列式性质化简可得 $f\\left(x\\right)=5x\\left(x-1\\right)$。故方程 $f\\left(x\\right)=0$ 有两个根 $x=0,x=1$，选 B。",
-    "methods": "利用行之间线性关系化简后求因式。",
-    "pitfalls": "题解给出 f(x)=5x(x−1)，根为0和1。"
+    "methods": "行列式化简与多项式方程根；利用行列式行列变换化简为多项式，再求其零点。",
+    "pitfalls": "行变换对行列式的影响需同步记录。"
   },
   "189": {
     "status": "verified",
     "questionKey": "2000-填空题-1",
     "primary": [
-      "CAL-01-A"
+      "CAL-05-D"
     ],
     "secondary": [
-      "CAL-01-C"
+      "CAL-02-C"
     ],
     "rationale": "反正切与对数展开；当 $x\\to 0$ 时，$\\arctan x=x-\\dfrac{x^{3}}{3}+o\\left(x^{3}\\right)$，$\\ln\\left(1+2x^{3}\\right)\\sim 2x^{3}$，故\n\n$\\lim_{x\\to 0}\\dfrac{\\arctan x-x}{\\ln\\left(1+2x^{3}\\right)}=-\\dfrac{1}{6}$。",
-    "methods": "分子 arctan x−x 的三阶项，分母 ln(1+2x³)。",
-    "pitfalls": "主项 −x³/3 与 2x³ 相除。"
+    "methods": "麦克劳林展开与高阶无穷小比较；分别展开 arctan x 与 ln(1+2x³)，比较最低非零阶。",
+    "pitfalls": "分子首个非零项是 −x³/3，分母首项是 2x³。"
   },
   "190": {
     "status": "verified",
     "questionKey": "2000-填空题-2",
     "primary": [
-      "CAL-01-B"
+      "CAL-04-D"
     ],
     "secondary": [
-      "CAL-01-D"
+      "CAL-08-A"
     ],
     "rationale": "隐函数微分；对 $2^{xy}=x+y$ 两边求微分，得 $2^{xy}\\ln 2\\left(x\\mathrm{d}y+y\\mathrm{d}x\\right)=\\mathrm{d}x+\\mathrm{d}y$。当 $x=0$ 时，由原方程得 $y=1$，代入得 $\\ln 2\\,\\mathrm{d}x=\\mathrm{d}x+\\mathrm{d}y$，故 $\\left.\\mathrm{d}y\\right|_{x=0}=\\left(\\ln 2-1\\right)\\mathrm{d}x$。",
-    "methods": "对 2^{xy}=x+y 求全微分并代点。",
-    "pitfalls": "x=0,y=1，解 dy=(ln2−1)dx。"
+    "methods": "隐函数全微分；对 2^(xy)=x+y 两边求全微分，再代入 x=0 时的 y 值。",
+    "pitfalls": "指数函数求微分需乘 ln2，xy 的微分要用乘积法则。"
   },
   "191": {
     "status": "verified",
     "questionKey": "2000-填空题-3",
     "primary": [
-      "CAL-04-A"
+      "CAL-06-I"
     ],
     "secondary": [
-      "CAL-04-C"
+      "CAL-06-G"
     ],
     "rationale": "反常积分换元；令 $x-2=t^{2}$，则 $x=t^{2}+2$，$\\mathrm{d}x=2t\\mathrm{~d}t$。于是\n\n$\\int_{2}^{+\\infty}\\dfrac{\\mathrm{d}x}{\\left(x+7\\right)\\sqrt{x-2}}=\\int_{0}^{+\\infty}\\dfrac{2\\mathrm{~d}t}{t^{2}+9}=\\dfrac{2}{3}\\left.\\arctan\\dfrac{t}{3}\\right|_{0}^{+\\infty}=\\dfrac{\\pi}{3}$。",
-    "methods": "令 x−2=t²，将根式消去。",
-    "pitfalls": "积分转为 2∫₀∞dt/(t²+9)。"
+    "methods": "反常积分的换元计算；令 x−2=t²，将下端点与无穷上限同步换成 t 的范围。",
+    "pitfalls": "换元后需保留反常上限并检查收敛。"
   },
   "192": {
     "status": "verified",
     "questionKey": "2000-填空题-4",
     "primary": [
-      "CAL-04-A"
+      "CAL-05-H"
     ],
     "secondary": [
-      "CAL-04-B"
+      "CAL-05-D"
     ],
     "rationale": "指数函数斜渐近线；设斜渐近线为 $y=kx+b$。由 $k=\\lim_{x\\to \\infty}\\dfrac{y}{x}=2$，$b=\\lim_{x\\to \\infty}\\left[y-2x\\right]=1$，故斜渐近线为 $y=2x+1$。",
-    "methods": "求 y−2x 的极限。",
-    "pitfalls": "e^{1/x}=1+1/x+o(1/x)，得到截距1。"
+    "methods": "含指数函数的斜渐近线；用 e^(1/x)=1+1/x+o(1/x) 求斜率和截距。",
+    "pitfalls": "斜率取 lim y/x，截距取 lim(y−kx)。"
   },
   "193": {
     "status": "verified",
     "questionKey": "2000-填空题-5",
     "primary": [
-      "CAL-04-C"
+      "LA-02-A"
     ],
     "secondary": [
-      "CAL-04-D"
+      "LA-02-D"
     ],
     "rationale": "矩阵逆与 Cayley 变换；由 $\\boldsymbol{B}=\\left(\\boldsymbol{E}+\\boldsymbol{A}\\right)^{-1}\\left(\\boldsymbol{E}-\\boldsymbol{A}\\right)$，得\n\n$\\boldsymbol{E}+\\boldsymbol{B}=2\\left(\\boldsymbol{E}+\\boldsymbol{A}\\right)^{-1}$。\n\n故\n\n$\\left(\\boldsymbol{E}+\\boldsymbol{B}\\right)^{-1}=\\dfrac{1}{2}\\left(\\boldsymbol{E}+\\boldsymbol{A}\\right)=\\begin{bmatrix}1 & 0 & 0 & 0\\\\-1 & 2 & 0 & 0\\\\0 & -2 & 3 & 0\\\\0 & 0 & -3 & 4\\end{bmatrix}$。",
-    "methods": "从 B=(E+A)⁻¹(E−A) 得 E+B=2(E+A)⁻¹。",
-    "pitfalls": "取逆得到 (E+B)⁻¹=(E+A)/2。"
+    "methods": "矩阵表达式与逆矩阵恒等变形；先化简 E+B=2(E+A)⁻¹，再整体取逆。",
+    "pitfalls": "矩阵求逆时注意乘法顺序和标量因子。"
   },
   "194": {
     "status": "verified",
     "questionKey": "2000-选择题-1",
     "primary": [
-      "CAL-01-A"
+      "CAL-03-A"
     ],
     "secondary": [
-      "CAL-01-B"
+      "CAL-02-B"
     ],
     "rationale": "分母连续与无穷远；若 $a<0$，则分母 $a+e^{bx}$ 可能为 $0$，不满足连续性，故需 $a\\ge 0$。又要使 $\\lim_{x\\to -\\infty}\\dfrac{x}{a+e^{bx}}=0$，需 $b<0$，使 $e^{bx}\\to +\\infty$。故选 D。",
-    "methods": "连续要求分母无零；极限约束确定指数方向。",
-    "pitfalls": "a≥0 且 b<0。"
+    "methods": "函数在全实轴连续与无穷远极限约束；连续性要求分母对所有实数不为零，极限条件再约束 b 的符号。",
+    "pitfalls": "需同时使用连续性与 x→−∞ 的极限，不能只看其中一项。"
   },
   "195": {
     "status": "verified",
     "questionKey": "2000-选择题-2",
     "primary": [
-      "CAL-01-C"
+      "CAL-05-G"
     ],
     "secondary": [
-      "CAL-01-D"
+      "CAL-05-F"
     ],
     "rationale": "隐含微分方程判拐点；代入 $x=0$，得 $f^{\\prime\\prime}\\left(0\\right)=0$。对原式求导，得 $f^{\\prime\\prime\\prime}\\left(x\\right)+2f^{\\prime}\\left(x\\right)f^{\\prime\\prime}\\left(x\\right)=1$，故 $f^{\\prime\\prime\\prime}\\left(0\\right)=1$。所以 $f^{\\prime\\prime}\\left(x\\right)$ 在 $x=0$ 两侧变号，选 C。",
-    "methods": "代 x=0 得 f''=0，再微分关系得 f'''=1。",
-    "pitfalls": "f'' 在0附近变号，因此拐点。"
+    "methods": "由高阶导数符号判定拐点；先由原式求 f''(0)=0，再对关系式求导得到 f'''(0)>0。",
+    "pitfalls": "f'(0)=0 不代表极值；关键是 f'' 在点两侧变号。"
   },
   "196": {
     "status": "verified",
     "questionKey": "2000-选择题-3",
     "primary": [
-      "CAL-01-A"
+      "CAL-05-E"
     ],
     "secondary": [
-      "CAL-01-C"
+      "CAL-04-B"
     ],
     "rationale": "商函数单调性；令 $F\\left(x\\right)=\\dfrac{f\\left(x\\right)}{g\\left(x\\right)}$，则 $F^{\\prime}\\left(x\\right)<0$，故 $F\\left(x\\right)$ 单调递减。于是当 $a<x<b$ 时，$F\\left(x\\right)>F\\left(b\\right)$，即 $f\\left(x\\right)g\\left(b\\right)>f\\left(b\\right)g\\left(x\\right)$，选 A。",
-    "methods": "条件等价于 (f/g)'<0。",
-    "pitfalls": "F(x)>F(b)，交叉相乘正函数 g 得选项 A。"
+    "methods": "利用商函数导数判断单调性；令 F=f/g，利用给定不等式得到 F'<0，再比较 F(x) 与 F(b)。",
+    "pitfalls": "g>0 才能安全交叉相乘并保持不等号方向。"
   },
   "197": {
     "status": "verified",
     "questionKey": "2000-选择题-4",
     "primary": [
-      "CAL-01-A"
+      "CAL-05-D"
     ],
     "secondary": [
-      "CAL-01-B"
+      "CAL-02-C"
     ],
     "rationale": "三阶展开反推函数；当 $x\\to 0$ 时，$\\sin 6x=6x-36x^{3}+o\\left(x^{3}\\right)$。由 $\\sin 6x+xf\\left(x\\right)=o\\left(x^{3}\\right)$，得 $x\\left(6+f\\left(x\\right)\\right)-36x^{3}=o\\left(x^{3}\\right)$，所以 $6+f\\left(x\\right)\\sim 36x^{2}$，选 C。",
-    "methods": "sin6x=6x−36x³+o(x³)，由条件反推 f。",
-    "pitfalls": "6+f(x)≈36x²，目标极限36。"
+    "methods": "泰勒展开与极限条件反推函数；展开 sin(6x) 到 x³ 项，将已知极限为零的条件整理出 f(x)。",
+    "pitfalls": "注意 sin(6x) 的三次项系数为 −36。"
   },
   "198": {
     "status": "verified",
     "questionKey": "2000-选择题-5",
     "primary": [
-      "CAL-01-C"
+      "CAL-07-C"
     ],
     "secondary": [
-      "CAL-01-D"
+      "CAL-07-D"
     ],
     "rationale": "特征根与重根；由 $e^{-x}$ 与 $xe^{-x}$ 可知 $r=-1$ 是二重根；由 $e^{x}$ 可知 $r=1$ 是单根。因此特征方程为 $\\left(r+1\\right)^{2}\\left(r-1\\right)=0$，即 $r^{3}+r^{2}-r-1=0$。故选 B。",
-    "methods": "xe^{-x} 表示 −1 二重根，e^x 表示1单根。",
-    "pitfalls": "特征多项式 (r+1)²(r−1)。"
+    "methods": "常系数线性齐次微分方程的特征根重数；由 e^(−x)、xe^(−x)、e^x 识别特征根 −1（二重）与 1（单重）。",
+    "pitfalls": "xe^(−x) 表示 −1 是二重根；当前卡片以二阶常系数方程为主，此题为三阶推广。"
   },
   "199": {
     "status": "verified",
     "questionKey": "2001-填空题-1",
     "primary": [
-      "CAL-01-A"
+      "CAL-02-C"
     ],
     "secondary": [
-      "CAL-01-B"
+      "CAL-01-G"
     ],
     "rationale": "根式极限有理化；分母 $x^{2}+x-2=\\left(x+2\\right)\\left(x-1\\right)$，分子有理化得\n\n$\\dfrac{\\sqrt{3-x}-\\sqrt{1+x}}{x^{2}+x-2}=\\dfrac{2\\left(1-x\\right)}{\\left(x+2\\right)\\left(x-1\\right)\\left(\\sqrt{3-x}+\\sqrt{1+x}\\right)}=-\\dfrac{2}{\\left(x+2\\right)\\left(\\sqrt{3-x}+\\sqrt{1+x}\\right)}$。\n\n故原极限为 $-\\dfrac{2}{3\\cdot 2\\sqrt{2}}=-\\dfrac{\\sqrt{2}}{6}$。",
-    "methods": "分子乘共轭，分母因式分解。",
-    "pitfalls": "化简后代 x=1。"
+    "methods": "根式极限的有理化；分子乘共轭，分母因式分解约去 x−1 后代入极限点。",
+    "pitfalls": "根式有理化后要同步处理分母因式与符号。"
   },
   "200": {
     "status": "pending",
