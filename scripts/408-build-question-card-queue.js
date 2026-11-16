@@ -12,7 +12,7 @@ function extractArray(source, marker) {
     const ch = source[i];
     if (quote) {
       if (escaped) escaped = false;
-      else if (ch === '\\') escaped = true;
+      else if (ch === '\') escaped = true;
       else if (ch === quote) quote = '';
       continue;
     }
@@ -23,13 +23,13 @@ function extractArray(source, marker) {
   throw new Error('Unclosed array: ' + marker);
 }
 function htmlText(s) {
-  return String(s || '').replace(/<script[\\s\\S]*?<\\/script>/gi,' ')
-    .replace(/<style[\\s\\S]*?<\\/style>/gi,' ').replace(/<[^>]*>/g,' ')
+  return String(s || '').replace(/<script[\s\S]*?<\/script>/gi,' ')
+    .replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]*>/g,' ')
     .replace(/&nbsp;|&#160;/gi,' ').replace(/&amp;/gi,'&').replace(/&lt;/gi,'<')
     .replace(/&gt;/gi,'>').replace(/&quot;/gi,'"').replace(/&#39;|&apos;/gi,"'")
-    .replace(/\\s+/g,' ').trim();
+    .replace(/\s+/g,' ').trim();
 }
-function norm(s) { return htmlText(s).toLowerCase().replace(/\\s+/g,'').replace(/[“”‘’"'，。；：！？、,.!?;:（）()【】\\[\\]{}]/g,''); }
+function norm(s) { return htmlText(s).toLowerCase().replace(/\s+/g,'').replace(/[“”‘’"'，。；：！？、,.!?;:（）()【】\[\]{}]/g,''); }
 function subjectForIndex(i) {
   if (i >= 1 && i <= 10) return '数据结构';
   if (i >= 11 && i <= 20) return '计算机组成原理';
@@ -48,17 +48,17 @@ function termsForCard(card) {
   const weighted = new Map();
   const add = (term, weight) => {
     const t = norm(term);
-    if (t.length < 2 || stop.has(t) || /^\\d+$/.test(t)) return;
+    if (t.length < 2 || stop.has(t) || /^\d+$/.test(t)) return;
     weighted.set(t, Math.max(weighted.get(t) || 0, weight));
   };
   add(card[1], 12);
   const fields = [[card[8],5],[card[3],3],[card[2],2],[card[4],1],[card[5],1],[card[6],1],[card[7],1]];
   for (const [value, base] of fields) {
     const raw = htmlText(value);
-    const chunks = raw.split(/[。；，、：:！？!?（）()\\[\\]→|\\n]+/).map(x=>x.trim()).filter(x=>x.length>=2 && x.length<=28);
+    const chunks = raw.split(/[。；，、：:！？!?（）()\[\]→|\n]+/).map(x=>x.trim()).filter(x=>x.length>=2 && x.length<=28);
     for (const chunk of chunks) {
       add(chunk, base + Math.min(2, Math.floor(chunk.length/5)));
-      const cjk = chunk.match(/[\\u4e00-\\u9fff]{2,}/g) || [];
+      const cjk = chunk.match(/[\u4e00-\u9fff]{2,}/g) || [];
       for (const run of cjk) {
         if (run.length <= 7) add(run, base + 1);
         else for (let n=3;n<=5;n++) for(let i=0;i+n<=run.length;i++) add(run.slice(i,i+n), Math.max(1,base-1));
