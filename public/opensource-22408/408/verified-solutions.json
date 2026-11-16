@@ -989,7 +989,7 @@
       "explanation": "最大并发的关键是按共享变量冲突关系细粒度加锁。thread1和thread2同时读取y不冲突；原卷图像中thread3的w.a和w.b均初始化为1，公开文字转录有将w.b误录为2的情况；thread3写y时必须同时排斥两者。thread2和thread3对z的读写通过z_mutex互斥。thread3分段释放z和y的锁，缩短临界区。",
       "verification": "已查看2017-46原卷图像，确认thread3局部变量w.a=1、w.b=1；并按三个线程对x、y、z的读写冲突复核三个互斥信号量。",
       "source": "https://pgcode.cn/exams/408/years/2017/preview",
-      "code": "semaphore y_mutex1=1, y_mutex2=1, z_mutex=1;\\nthread1: P(y_mutex1); w=add(x,y); V(y_mutex1);\\nthread2: P(z_mutex); P(y_mutex2); w=add(y,z); V(y_mutex2); V(z_mutex);\\nthread3: P(z_mutex); z=add(z,w); V(z_mutex); P(y_mutex1); P(y_mutex2); y=add(y,w); V(y_mutex2); V(y_mutex1);"
+      "code": "semaphore y_mutex1=1, y_mutex2=1, z_mutex=1;\n\nthread1:\n    P(y_mutex1);\n    w = add(x, y);\n    V(y_mutex1);\n\nthread2:\n    P(z_mutex);\n    P(y_mutex2);\n    w = add(y, z);\n    V(y_mutex2);\n    V(z_mutex);\n\nthread3:\n    cnum w = {1, 1};  // 原卷图像\n    P(z_mutex);\n    z = add(z, w);\n    V(z_mutex);\n\n    P(y_mutex1);\n    P(y_mutex2);\n    y = add(y, w);\n    V(y_mutex2);\n    V(y_mutex1);"
     },
     {
       "year": 2017,
