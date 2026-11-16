@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T13:06:28.880Z",
+  "generatedAt": "2026-11-16T13:12:08.456Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -7,9 +7,9 @@
     "uniqueQuestionsAlreadyLinked": 226,
     "questionsWithoutAnyFormalLink": 573,
     "questionsNeedingAdditionalCardReview": 799,
-    "candidateQuestions": 798,
-    "noCandidateQuestions": 1,
-    "cards": 247,
+    "candidateQuestions": 799,
+    "noCandidateQuestions": 0,
+    "cards": 252,
     "cardsWithFormalLinks": 150,
     "cardsWithoutFormalLinks": [
       {
@@ -399,6 +399,26 @@
       {
         "subject": "计算机网络",
         "title": "IPv4 CIDR与VLSM子网划分"
+      },
+      {
+        "subject": "数据结构",
+        "title": "正则k叉树叶结点数与高度界"
+      },
+      {
+        "subject": "数据结构",
+        "title": "快速选择与顺序统计量"
+      },
+      {
+        "subject": "计算机组成原理",
+        "title": "异步串行通信帧格式与字符速率"
+      },
+      {
+        "subject": "操作系统",
+        "title": "动态优先级与饥饿避免"
+      },
+      {
+        "subject": "操作系统",
+        "title": "FAT链接分配与簇链访问"
       }
     ]
   },
@@ -603,6 +623,22 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 16,
+          "matchedTerms": [
+            "非叶结点",
+            "高度",
+            "每个非",
+            "个非叶",
+            "非叶结",
+            "叶结点",
+            "每个非叶",
+            "个非叶结",
+            "每个非叶结",
+            "个非叶结点"
+          ]
+        },
+        {
           "card": "红黑树性质与高度",
           "score": 14,
           "matchedTerms": [
@@ -656,14 +692,6 @@
             "vl",
             "es"
           ]
-        },
-        {
-          "card": "完全二叉树与编号性质",
-          "score": 7,
-          "matchedTerms": [
-            "二叉树定义",
-            "二叉树"
-          ]
         }
       ]
     },
@@ -697,6 +725,16 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 9,
+          "matchedTerms": [
+            "高度",
+            "最多",
+            "个结点",
+            "叶结点"
+          ]
+        },
+        {
           "card": "堆的定义与建堆",
           "score": 8,
           "matchedTerms": [
@@ -724,14 +762,6 @@
           "matchedTerms": [
             "高度",
             "个结点"
-          ]
-        },
-        {
-          "card": "树与森林的存储结构",
-          "score": 5,
-          "matchedTerms": [
-            "二叉树",
-            "的结点"
           ]
         }
       ]
@@ -861,21 +891,19 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 6,
+          "matchedTerms": [
+            "边数",
+            "个结点"
+          ]
+        },
+        {
           "card": "树的基本术语与性质",
           "score": 5,
           "matchedTerms": [
             "条边",
             "个结点"
-          ]
-        },
-        {
-          "card": "Kahn拓扑排序与入度维护",
-          "score": 5,
-          "matchedTerms": [
-            "顶点数",
-            "所有顶",
-            "有顶点",
-            "所有顶点"
           ]
         }
       ]
@@ -894,6 +922,16 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 5,
+          "matchedTerms": [
+            "最多",
+            "叶结点",
+            "结点都",
+            "叶结点都"
+          ]
+        },
         {
           "card": "单链表重排与原地逆置",
           "score": 4,
@@ -922,13 +960,6 @@
           "score": 3,
           "matchedTerms": [
             "之间"
-          ]
-        },
-        {
-          "card": "单链表与双链表",
-          "score": 2,
-          "matchedTerms": [
-            "指针"
           ]
         }
       ]
@@ -1262,6 +1293,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 7,
+          "matchedTerms": [
+            "因此",
+            "开始",
+            "中每个"
+          ]
+        },
+        {
           "card": "单链表重排与原地逆置",
           "score": 4,
           "matchedTerms": [
@@ -1288,13 +1328,6 @@
           "score": 2,
           "matchedTerms": [
             "开始"
-          ]
-        },
-        {
-          "card": "前缀编码与二叉判定树",
-          "score": 1,
-          "matchedTerms": [
-            "任一字"
           ]
         }
       ]
@@ -1392,17 +1425,18 @@
           ]
         },
         {
+          "card": "快速选择与顺序统计量",
+          "score": 4,
+          "matchedTerms": [
+            "而不是",
+            "目标"
+          ]
+        },
+        {
           "card": "散列表装填因子与查找终止",
           "score": 4,
           "matchedTerms": [
             "本题"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 4,
-          "matchedTerms": [
-            "的值"
           ]
         }
       ]
@@ -1554,17 +1588,17 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "红黑树性质与高度",
           "score": 2,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 2,
-          "matchedTerms": [
-            "对应"
           ]
         }
       ]
@@ -1775,11 +1809,11 @@
           ]
         },
         {
-          "card": "CPU 指令执行过程",
+          "card": "异步串行通信帧格式与字符速率",
           "score": 8,
           "matchedTerms": [
-            "执行",
-            "cpu"
+            "cpu",
+            "ns"
           ]
         }
       ]
@@ -1831,10 +1865,10 @@
           ]
         },
         {
-          "card": "DMA 工作过程与总线占用",
-          "score": 2,
+          "card": "异步串行通信帧格式与字符速率",
+          "score": 3,
           "matchedTerms": [
-            "执行时间"
+            "ns"
           ]
         }
       ]
@@ -1872,6 +1906,13 @@
           ]
         },
         {
+          "card": "异步串行通信帧格式与字符速率",
+          "score": 3,
+          "matchedTerms": [
+            "ns"
+          ]
+        },
+        {
           "card": "RISC-V 指令格式与寄存器编码",
           "score": 3,
           "matchedTerms": [
@@ -1883,13 +1924,6 @@
           "score": 2,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "小端字节序与补码读取",
-          "score": 2,
-          "matchedTerms": [
-            "组合"
           ]
         }
       ]
@@ -1930,15 +1964,15 @@
           ]
         },
         {
-          "card": "中断响应与异常处理",
+          "card": "异步串行通信帧格式与字符速率",
           "score": 3,
           "matchedTerms": [
-            "中断"
+            "ns"
           ]
         },
         {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 2,
+          "card": "中断响应与异常处理",
+          "score": 3,
           "matchedTerms": [
             "中断"
           ]
@@ -1985,18 +2019,18 @@
           ]
         },
         {
+          "card": "异步串行通信帧格式与字符速率",
+          "score": 5,
+          "matchedTerms": [
+            "ns",
+            "最大"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 4,
           "matchedTerms": [
             "字节"
-          ]
-        },
-        {
-          "card": "指令系统与寻址方式",
-          "score": 4,
-          "matchedTerms": [
-            "位移",
-            "长度"
           ]
         }
       ]
@@ -2021,6 +2055,13 @@
           "score": 6,
           "matchedTerms": [
             "索引"
+          ]
+        },
+        {
+          "card": "异步串行通信帧格式与字符速率",
+          "score": 3,
+          "matchedTerms": [
+            "ns"
           ]
         },
         {
@@ -2070,6 +2111,13 @@
           ]
         },
         {
+          "card": "异步串行通信帧格式与字符速率",
+          "score": 3,
+          "matchedTerms": [
+            "ns"
+          ]
+        },
+        {
           "card": "磁盘结构与平均访问时间",
           "score": 2,
           "matchedTerms": [
@@ -2081,13 +2129,6 @@
           "score": 2,
           "matchedTerms": [
             "得到"
-          ]
-        },
-        {
-          "card": "Cache 直接映射与组相联",
-          "score": 2,
-          "matchedTerms": [
-            "有一个"
           ]
         }
       ]
@@ -2130,17 +2171,17 @@
           ]
         },
         {
+          "card": "异步串行通信帧格式与字符速率",
+          "score": 3,
+          "matchedTerms": [
+            "ns"
+          ]
+        },
+        {
           "card": "RISC-V 指令格式与寄存器编码",
           "score": 3,
           "matchedTerms": [
             "使用"
-          ]
-        },
-        {
-          "card": "冯·诺依曼结构与存储程序",
-          "score": 2,
-          "matchedTerms": [
-            "结构称"
           ]
         }
       ]
@@ -2182,17 +2223,17 @@
           ]
         },
         {
+          "card": "异步串行通信帧格式与字符速率",
+          "score": 3,
+          "matchedTerms": [
+            "ns"
+          ]
+        },
+        {
           "card": "TLB 组相联映射与 LRU 替换",
           "score": 2,
           "matchedTerms": [
             "访问"
-          ]
-        },
-        {
-          "card": "主存与辅存层次结构",
-          "score": 1,
-          "matchedTerms": [
-            "访问时"
           ]
         }
       ]
@@ -2246,12 +2287,10 @@
           ]
         },
         {
-          "card": "CPU异常响应与现场保护",
+          "card": "异步串行通信帧格式与字符速率",
           "score": 3,
           "matchedTerms": [
-            "系统调",
-            "统调用",
-            "系统调用"
+            "ns"
           ]
         }
       ]
@@ -2549,6 +2588,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 4,
+          "matchedTerms": [
+            "字节"
+          ]
+        },
+        {
           "card": "系统调用参数传递与返回",
           "score": 2,
           "matchedTerms": [
@@ -2574,13 +2620,6 @@
           "score": 1,
           "matchedTerms": [
             "=1"
-          ]
-        },
-        {
-          "card": "上下文切换",
-          "score": 1,
-          "matchedTerms": [
-            "下一个"
           ]
         }
       ]
@@ -2615,6 +2654,13 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 4,
+          "matchedTerms": [
+            "大小"
+          ]
+        },
+        {
           "card": "分页与分段的区别",
           "score": 3,
           "matchedTerms": [
@@ -2623,13 +2669,6 @@
         },
         {
           "card": "伙伴系统与内存回收",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "连续内存分配与动态分区",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -3082,6 +3121,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "比较计数排序与秩排序",
           "score": 3,
           "matchedTerms": [
@@ -3094,13 +3140,6 @@
           "score": 3,
           "matchedTerms": [
             "结果为"
-          ]
-        },
-        {
-          "card": "活动时间余量与并行区间",
-          "score": 3,
-          "matchedTerms": [
-            "es"
           ]
         }
       ]
@@ -3511,6 +3550,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 8,
+          "matchedTerms": [
+            "边数",
+            "最少",
+            "个结点"
+          ]
+        },
+        {
           "card": "最小生成树与最短路径",
           "score": 6,
           "matchedTerms": [
@@ -3538,13 +3586,6 @@
           "matchedTerms": [
             "条边",
             "个结点"
-          ]
-        },
-        {
-          "card": "AOE网事件最早与最迟发生时间",
-          "score": 5,
-          "matchedTerms": [
-            "ve"
           ]
         }
       ]
@@ -3623,6 +3664,15 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 10,
+          "matchedTerms": [
+            "因此",
+            "高度",
+            "最多"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 9,
           "matchedTerms": [
@@ -3656,13 +3706,6 @@
             "比较次",
             "较次数",
             "比较次数"
-          ]
-        },
-        {
-          "card": "堆的定义与建堆",
-          "score": 5,
-          "matchedTerms": [
-            "log"
           ]
         }
       ]
@@ -3902,10 +3945,10 @@
           ]
         },
         {
-          "card": "后缀极值与区间乘积最大值",
-          "score": 1,
+          "card": "快速选择与顺序统计量",
+          "score": 2,
           "matchedTerms": [
-            "-1"
+            "而不是"
           ]
         }
       ]
@@ -4923,6 +4966,13 @@
           "matchedTerms": [
             "处理"
           ]
+        },
+        {
+          "card": "异步串行通信帧格式与字符速率",
+          "score": 2,
+          "matchedTerms": [
+            "服务程序"
+          ]
         }
       ]
     },
@@ -5010,21 +5060,19 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 4,
+          "matchedTerms": [
+            "大小"
+          ]
+        },
+        {
           "card": "读者写者问题",
           "score": 3,
           "matchedTerms": [
             "最后一",
             "后一个",
             "最后一个"
-          ]
-        },
-        {
-          "card": "索引结点 inode 与文件控制块",
-          "score": 3,
-          "matchedTerms": [
-            "文件长",
-            "件长度",
-            "文件长度"
           ]
         }
       ]
@@ -5129,6 +5177,14 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 7,
+          "matchedTerms": [
+            "字节",
+            "8b"
+          ]
+        },
+        {
           "card": "进程与线程",
           "score": 6,
           "matchedTerms": [
@@ -5152,15 +5208,6 @@
           "score": 3,
           "matchedTerms": [
             "分配"
-          ]
-        },
-        {
-          "card": "分页与分段的区别",
-          "score": 3,
-          "matchedTerms": [
-            "地址空",
-            "址空间",
-            "地址空间"
           ]
         }
       ]
@@ -5232,6 +5279,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 8,
+          "matchedTerms": [
+            "字节",
+            "大小"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 5,
           "matchedTerms": [
@@ -5260,13 +5315,6 @@
           "matchedTerms": [
             "min",
             "较小的"
-          ]
-        },
-        {
-          "card": "读者写者问题",
-          "score": 1,
-          "matchedTerms": [
-            "第一个"
           ]
         }
       ]
@@ -5307,17 +5355,17 @@
           ]
         },
         {
+          "card": "动态优先级与饥饿避免",
+          "score": 2,
+          "matchedTerms": [
+            "分别为"
+          ]
+        },
+        {
           "card": "管道与消息传递",
           "score": 2,
           "matchedTerms": [
             "消息"
-          ]
-        },
-        {
-          "card": "伙伴系统与内存回收",
-          "score": 2,
-          "matchedTerms": [
-            "请求"
           ]
         }
       ]
@@ -5707,6 +5755,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 7,
+          "matchedTerms": [
+            "字节",
+            "8b"
+          ]
+        },
+        {
           "card": "文件共享与保护",
           "score": 6,
           "matchedTerms": [
@@ -5737,13 +5793,6 @@
             "问题要",
             "题要求",
             "问题要求"
-          ]
-        },
-        {
-          "card": "调度评价指标",
-          "score": 2,
-          "matchedTerms": [
-            "到达"
           ]
         }
       ]
@@ -6038,6 +6087,15 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 10,
+          "matchedTerms": [
+            "因此",
+            "高度",
+            "个结点"
+          ]
+        },
+        {
           "card": "树与森林的存储结构",
           "score": 9,
           "matchedTerms": [
@@ -6075,15 +6133,6 @@
             "个结点",
             "结点的",
             "的子树"
-          ]
-        },
-        {
-          "card": "二叉搜索树查找与删除",
-          "score": 6,
-          "matchedTerms": [
-            "孩子结",
-            "子结点",
-            "孩子结点"
           ]
         }
       ]
@@ -6131,6 +6180,18 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 10,
+          "matchedTerms": [
+            "因此",
+            "个结点",
+            "叉树中",
+            "树中每",
+            "叶结点",
+            "结点数"
+          ]
+        },
+        {
           "card": "二叉搜索树查找与删除",
           "score": 8,
           "matchedTerms": [
@@ -6149,16 +6210,6 @@
           "matchedTerms": [
             "a1",
             "个结点"
-          ]
-        },
-        {
-          "card": "树的基本术语与性质",
-          "score": 6,
-          "matchedTerms": [
-            "树是",
-            "个结点",
-            "结点的",
-            "个结点的"
           ]
         }
       ]
@@ -6197,6 +6248,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "堆的定义与建堆",
           "score": 3,
           "matchedTerms": [
@@ -6212,13 +6270,6 @@
             "左子树",
             "关键字",
             "右子树"
-          ]
-        },
-        {
-          "card": "二次探测法与开放定址散列",
-          "score": 2,
-          "matchedTerms": [
-            "查找"
           ]
         }
       ]
@@ -7044,14 +7095,14 @@
           ]
         },
         {
-          "card": "最小距离三元组的三指针扫描",
+          "card": "正则k叉树叶结点数与高度界",
           "score": 4,
           "matchedTerms": [
-            "时间"
+            "因此"
           ]
         },
         {
-          "card": "最小正整数缺失值查找",
+          "card": "最小距离三元组的三指针扫描",
           "score": 4,
           "matchedTerms": [
             "时间"
@@ -7968,6 +8019,13 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 4,
+          "matchedTerms": [
+            "字节"
+          ]
+        },
+        {
           "card": "临界区与共享缓冲区",
           "score": 3,
           "matchedTerms": [
@@ -7986,13 +8044,6 @@
           "score": 1,
           "matchedTerms": [
             "字段是"
-          ]
-        },
-        {
-          "card": "上下文切换",
-          "score": 1,
-          "matchedTerms": [
-            "下一个"
           ]
         }
       ]
@@ -8287,18 +8338,19 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 6,
+          "matchedTerms": [
+            "因此",
+            "开始"
+          ]
+        },
+        {
           "card": "后缀极值与区间乘积最大值",
           "score": 5,
           "matchedTerms": [
             "res",
             "=0"
-          ]
-        },
-        {
-          "card": "AOE网事件最早与最迟发生时间",
-          "score": 5,
-          "matchedTerms": [
-            "ve"
           ]
         }
       ]
@@ -8639,6 +8691,21 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 16,
+          "matchedTerms": [
+            "非叶结点",
+            "高度",
+            "最少",
+            "非叶结",
+            "叶结点",
+            "结点数",
+            "高度分",
+            "度分别",
+            "高度分别"
+          ]
+        },
+        {
           "card": "AVL 树平衡调整",
           "score": 12,
           "matchedTerms": [
@@ -8685,14 +8752,6 @@
             "非叶结",
             "叶结点",
             "非叶结点"
-          ]
-        },
-        {
-          "card": "单链表重排与原地逆置",
-          "score": 6,
-          "matchedTerms": [
-            "a1",
-            "n−1"
           ]
         }
       ]
@@ -9395,6 +9454,13 @@
           "matchedTerms": [
             "int"
           ]
+        },
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 1,
+          "matchedTerms": [
+            "度分别"
+          ]
         }
       ]
     },
@@ -9537,6 +9603,13 @@
           "score": 1,
           "matchedTerms": [
             "每个字"
+          ]
+        },
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 1,
+          "matchedTerms": [
+            "中每个"
           ]
         },
         {
@@ -10132,14 +10205,15 @@
           ]
         },
         {
-          "card": "单周期与多周期数据通路",
-          "score": 7,
+          "card": "异步串行通信帧格式与字符速率",
+          "score": 8,
           "matchedTerms": [
-            "cpu"
+            "cpu",
+            "ms"
           ]
         },
         {
-          "card": "硬布线控制器与微程序控制器",
+          "card": "单周期与多周期数据通路",
           "score": 7,
           "matchedTerms": [
             "cpu"
@@ -10659,19 +10733,17 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 4,
+          "matchedTerms": [
+            "字节"
+          ]
+        },
+        {
           "card": "临界区与共享缓冲区",
           "score": 3,
           "matchedTerms": [
             "c1"
-          ]
-        },
-        {
-          "card": "缺页异常处理流程",
-          "score": 3,
-          "matchedTerms": [
-            "的一部",
-            "一部分",
-            "的一部分"
           ]
         }
       ]
@@ -10990,18 +11062,19 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 6,
+          "matchedTerms": [
+            "因此",
+            "开始"
+          ]
+        },
+        {
           "card": "数组行优先与列优先存储",
           "score": 4,
           "matchedTerms": [
             "起始",
             "页面"
-          ]
-        },
-        {
-          "card": "最小距离三元组的三指针扫描",
-          "score": 4,
-          "matchedTerms": [
-            "时间"
           ]
         }
       ]
@@ -11053,12 +11126,12 @@
           ]
         },
         {
-          "card": "循环队列判空与判满",
-          "score": 3,
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 5,
           "matchedTerms": [
-            "存储空",
-            "储空间",
-            "存储空间"
+            "最多",
+            "最少",
+            "的最大"
           ]
         }
       ]
@@ -11726,8 +11799,17 @@
       "answer": "A",
       "analysis": "2013-第10题-解析 对于 5 阶 B 树，根结点只有达到 5 个关键字时才能产生分裂，成为高度为 2 的 B 树，因此高度为 2 的 5 阶 B 树所含关键字的个数最少是 5。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 10,
+          "matchedTerms": [
+            "因此",
+            "高度",
+            "最少"
+          ]
+        },
         {
           "card": "散列表装填因子与查找终止",
           "score": 5,
@@ -11757,13 +11839,6 @@
           "score": 2,
           "matchedTerms": [
             "结点只"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "关键字"
           ]
         }
       ]
@@ -11873,6 +11948,13 @@
           "matchedTerms": [
             "的值",
             "负数"
+          ]
+        },
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
           ]
         },
         {
@@ -12262,10 +12344,10 @@
           ]
         },
         {
-          "card": "最小正整数缺失值查找",
+          "card": "正则k叉树叶结点数与高度界",
           "score": 4,
           "matchedTerms": [
-            "时间"
+            "因此"
           ]
         }
       ]
@@ -12310,18 +12392,19 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 6,
+          "matchedTerms": [
+            "因此",
+            "开始"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 5,
           "matchedTerms": [
             "cpu",
             "磁盘"
-          ]
-        },
-        {
-          "card": "活动时间余量与并行区间",
-          "score": 4,
-          "matchedTerms": [
-            "执行"
           ]
         }
       ]
@@ -13110,6 +13193,13 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 3,
+          "matchedTerms": [
+            "8b"
+          ]
+        },
+        {
           "card": "TLB 与快表命中",
           "score": 3,
           "matchedTerms": [
@@ -13121,13 +13211,6 @@
           "score": 2,
           "matchedTerms": [
             "的地址"
-          ]
-        },
-        {
-          "card": "死锁必要条件与处理",
-          "score": 2,
-          "matchedTerms": [
-            "检测"
           ]
         }
       ]
@@ -13161,6 +13244,13 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 4,
+          "matchedTerms": [
+            "字节"
+          ]
+        },
+        {
           "card": "读者写者问题",
           "score": 1,
           "matchedTerms": [
@@ -13172,13 +13262,6 @@
           "score": 1,
           "matchedTerms": [
             "=1"
-          ]
-        },
-        {
-          "card": "临界区与共享缓冲区",
-          "score": 1,
-          "matchedTerms": [
-            "数据的"
           ]
         }
       ]
@@ -13520,10 +13603,10 @@
           ]
         },
         {
-          "card": "最小正整数缺失值查找",
+          "card": "正则k叉树叶结点数与高度界",
           "score": 2,
           "matchedTerms": [
-            "答案"
+            "最多"
           ]
         }
       ]
@@ -13981,10 +14064,13 @@
           ]
         },
         {
-          "card": "递归算法与递归树",
-          "score": 5,
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 6,
           "matchedTerms": [
-            "at"
+            "个孩子",
+            "叶结点",
+            "一个孩",
+            "一个孩子"
           ]
         }
       ]
@@ -14187,6 +14273,21 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 15,
+          "matchedTerms": [
+            "因此",
+            "最多",
+            "最少",
+            "个结点",
+            "叶结点",
+            "结点数",
+            "点数量",
+            "结点数量",
+            "结点都"
+          ]
+        },
+        {
           "card": "完全二叉树与编号性质",
           "score": 10,
           "matchedTerms": [
@@ -14227,17 +14328,6 @@
           "matchedTerms": [
             "每个结",
             "个结点",
-            "每个结点"
-          ]
-        },
-        {
-          "card": "二叉树遍历与性质",
-          "score": 6,
-          "matchedTerms": [
-            "二叉树",
-            "每个结",
-            "个结点",
-            "结点最",
             "每个结点"
           ]
         }
@@ -16175,6 +16265,14 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 6,
+          "matchedTerms": [
+            "因此",
+            "开始"
+          ]
+        },
+        {
           "card": "活动时间余量与并行区间",
           "score": 4,
           "matchedTerms": [
@@ -16187,15 +16285,6 @@
           "matchedTerms": [
             "数组",
             "对应"
-          ]
-        },
-        {
-          "card": "比较计数排序与秩排序",
-          "score": 3,
-          "matchedTerms": [
-            "元素在",
-            "元素的",
-            "=a"
           ]
         }
       ]
@@ -16218,6 +16307,15 @@
           "matchedTerms": [
             "空间",
             "题的"
+          ]
+        },
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 8,
+          "matchedTerms": [
+            "因此",
+            "最少",
+            "开始"
           ]
         },
         {
@@ -16245,14 +16343,6 @@
           "matchedTerms": [
             "访问",
             "答案"
-          ]
-        },
-        {
-          "card": "图的存储与遍历",
-          "score": 3,
-          "matchedTerms": [
-            "只需",
-            "操作需"
           ]
         }
       ]
@@ -16760,6 +16850,14 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 7,
+          "matchedTerms": [
+            "km",
+            "开始"
+          ]
+        },
+        {
           "card": "循环链表与双向循环链表",
           "score": 5,
           "matchedTerms": [
@@ -16775,13 +16873,6 @@
         },
         {
           "card": "单链表与双链表",
-          "score": 3,
-          "matchedTerms": [
-            "next"
-          ]
-        },
-        {
-          "card": "单链表重排与原地逆置",
           "score": 3,
           "matchedTerms": [
             "next"
@@ -17049,6 +17140,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 5,
+          "matchedTerms": [
+            "因此",
+            "的最小"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 3,
           "matchedTerms": [
@@ -17068,6 +17167,13 @@
           "score": 1,
           "matchedTerms": [
             "-1"
+          ]
+        },
+        {
+          "card": "快速选择与顺序统计量",
+          "score": 1,
+          "matchedTerms": [
+            "整数时"
           ]
         }
       ]
@@ -17191,17 +17297,17 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "红黑树性质与高度",
           "score": 2,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "后缀极值与区间乘积最大值",
-          "score": 2,
-          "matchedTerms": [
-            "写入"
           ]
         }
       ]
@@ -17316,6 +17422,27 @@
     },
     {
       "year": 2015,
+      "index": 19,
+      "id": 301,
+      "subject": "数据结构",
+      "type": "选择题",
+      "question": "2015-第19题-题目 下列有关总线定时的叙述中，错误的是（ ）。 A. 异步通信方式中，全互锁协议最慢 B. 异步通信方式中，非互锁协议的可靠性最差 C. 同步通信方式中，同步时钟信号可由各设备提供 D. 半同步通信方式中，握手信号的采样由同步时钟控制",
+      "answer": "C",
+      "analysis": "2015-第19题-解析 在 同步通信方式 中，系统采用一个统一的时钟信号，而不是由各设备提供，否则没法实现统一的时钟。",
+      "existingCards": [],
+      "confidence": "low-candidate",
+      "candidates": [
+        {
+          "card": "快速选择与顺序统计量",
+          "score": 2,
+          "matchedTerms": [
+            "而不是"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2015,
       "index": 20,
       "id": 302,
       "subject": "数据结构",
@@ -17394,6 +17521,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "算法五个特性",
           "score": 3,
           "matchedTerms": [
@@ -17405,13 +17539,6 @@
           "score": 3,
           "matchedTerms": [
             "之间"
-          ]
-        },
-        {
-          "card": "比较计数排序与秩排序",
-          "score": 2,
-          "matchedTerms": [
-            "空间"
           ]
         }
       ]
@@ -18144,10 +18271,10 @@
           ]
         },
         {
-          "card": "分页与分段的区别",
-          "score": 3,
+          "card": "FAT链接分配与簇链访问",
+          "score": 4,
           "matchedTerms": [
-            "kb"
+            "字节"
           ]
         }
       ]
@@ -18679,17 +18806,17 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 2,
+          "matchedTerms": [
+            "最多"
+          ]
+        },
+        {
           "card": "查找算法与散列表",
           "score": 1,
           "matchedTerms": [
             "的过程"
-          ]
-        },
-        {
-          "card": "单链表头插法与尾插法",
-          "score": 1,
-          "matchedTerms": [
-            "的含义"
           ]
         }
       ]
@@ -18731,20 +18858,18 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "比较计数排序与秩排序",
           "score": 3,
           "matchedTerms": [
             "空间",
             "/2"
-          ]
-        },
-        {
-          "card": "拓扑排序与 AOV 网",
-          "score": 3,
-          "matchedTerms": [
-            "访问一",
-            "问一个",
-            "访问一个"
           ]
         }
       ]
@@ -19082,6 +19207,15 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 7,
+          "matchedTerms": [
+            "边数",
+            "个结点",
+            "结点数"
+          ]
+        },
+        {
           "card": "最小生成树与最短路径",
           "score": 5,
           "matchedTerms": [
@@ -19095,14 +19229,6 @@
           "matchedTerms": [
             "n-1",
             "-1"
-          ]
-        },
-        {
-          "card": "链式栈与链式队列",
-          "score": 3,
-          "matchedTerms": [
-            "个结点",
-            "结点的"
           ]
         }
       ]
@@ -19421,11 +19547,12 @@
           ]
         },
         {
-          "card": "堆的定义与建堆",
-          "score": 2,
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 3,
           "matchedTerms": [
             "叶结点",
-            "根结点"
+            "结点都",
+            "叶结点都"
           ]
         }
       ]
@@ -19521,6 +19648,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "红黑树性质与高度",
           "score": 2,
           "matchedTerms": [
@@ -19528,17 +19662,17 @@
           ]
         },
         {
+          "card": "快速选择与顺序统计量",
+          "score": 2,
+          "matchedTerms": [
+            "目标"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 2,
           "matchedTerms": [
             "对应"
-          ]
-        },
-        {
-          "card": "树与森林的存储结构",
-          "score": 1,
-          "matchedTerms": [
-            "转换为"
           ]
         }
       ]
@@ -20151,11 +20285,11 @@
           ]
         },
         {
-          "card": "CPU 指令执行过程",
+          "card": "异步串行通信帧格式与字符速率",
           "score": 8,
           "matchedTerms": [
-            "执行",
-            "cpu"
+            "cpu",
+            "ms"
           ]
         }
       ]
@@ -20980,8 +21114,17 @@
       "answer": null,
       "analysis": "2016-第41题-解析 1）TCP 连接的建立过程为 三次握手：首先，H3 向 Wb 服务器 S 发出连接请求报文段，这时首部中的同步位 SYN=1，ACK=0，同时选择一个初始序号 seq=100。TCP 规定，SYN 报文段（即 SYN=1 的报文段）不能携带数据，但是要消耗一个序号。接着，S 收到连接请求报文段，为自己选择一个初始序号 seq=y，向 A 发送确认。这个报文段 SYN=1、ACK=1、seq=y，确认号 ack 是 100+1=101。它不能携带数据，但是也要消耗一个序号。最后，H3 收到 S 的确认报文段后，还要向 S 给出确认。这份确认报文段 SYN=0、ACK=1，确认号 ack=y+1，自己的序号 seq=101。因此，第二次握手 TCP 段的 SYN=1、（1 分）ACK=1;（1 分）确认序号是 101。（1 分） 2）题目规定 S 对收到的每个段（MSS 大小的段）进行确认，并通告新的接收窗口，而且 TCP 接收缓存仅有数据存入而无数据取出。H3 收到的第 8 个确认段所通告的接收窗口是 20-8=12KB;（1 分）在慢开始算法里，发送方 H3 先设置拥塞窗口 cwnd=1KB，接下来每收到一个对新报文段的确认就使发送方的拥塞窗口加 KB。H3 共收到 8 个确认段，所以此时 H3 的拥塞窗口变为 1+8=9KB;（1 分）发送窗口=min{拥塞窗口，接收窗口}，所以 H3 的发送窗口变为 min{9,12}=9KB。（1 分） 3）TCP 是用字节作为 窗口 和 序号 的单位。当 H3 的发送窗口等于 0KB 时，也就是接收窗口等于 0KB 时，下一个待发送段的序号是 20K+101=20×1024+101=20581；（1 分）H3 从发送第 1 个段到发送窗口等于 0KB 时刻为止，经过五个传输轮次，每个传输轮次的时间就是往返 RTT，因此平均数据传输速率是 20KB/(5×200ms)=20KB/s=20.48kbps。（1 分） 4）通信结束后，H3 向 S 发送连接释放报文段。S 收到 H3 的连接释放报文段后，马上发出确认报文段。此时 S 已经没有数据需要传输，于是它也马上发出连接释放报文段。H3 在收到 S 的连接释放报文段后，发出确认报文段。S 在收到这份确认后就释放 TCP 连接。因此从 t 时刻起，S 释放该连接的最短时间是：H3 的连接释放报文段传送到 S 的时间+S 的连接释放报文段传送到 H3 的时间+H3 的确认报文段传送到 S 的时间 = 1.5×200ms = 300ms。（1 分）",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "FAT链接分配与簇链访问",
+          "score": 9,
+          "matchedTerms": [
+            "字节",
+            "大小",
+            "接分配"
+          ]
+        },
         {
           "card": "TLB 与快表命中",
           "score": 8,
@@ -21014,13 +21157,6 @@
           "matchedTerms": [
             "数据段"
           ]
-        },
-        {
-          "card": "信号量同步与互斥",
-          "score": 6,
-          "matchedTerms": [
-            "同步"
-          ]
         }
       ]
     },
@@ -21034,8 +21170,26 @@
       "answer": null,
       "analysis": "2016-第42题-解析 1）根据定义，正则 k 叉树中仅含有两类结点；叶结点（个数记为 n 0 ​ ）和度为 k 的分支结点（个数记为 n 1 ​ ）。树 T 中的结点总数 n = n 0 ​ + n k ​ = n 0 ​ + m 。树中所含的边数 e = n − 1 ，这些边均为 m 个度为 k 的结点发出的，即 e = mk 。整理得 n 0 ​ + m = m k ​ + 1 ，故 n 0 ​ = ( k − 1 ) m + 1 。 2）高度为 h 的正则 k 叉树 T 中，含最多结点的树形为：除第 h 层外，第 1 层到第 h − 1 层的结点都是度为 k 的分支结点；而第 h 层均为叶结点，即树是“满”树。此时第 j （ 1 ≤ j ≤ h ）层结点数为 k j − 1 ，结点总数 M 1 ​ 为 M 1 ​ = i = 0 ∑ h ​ k j − 1 = k − 1 k h − 1 ​ 含最少结点的正则 K 叉树的树形为：第 1 层只有根结点，第 2 层到第 h − 1 层仅含 1 个分支结点和 k − 1 个叶结点，第 h 层有 K 个叶结点。即除根外第 2 层到第 h 层中每层的结点数均为 k ，故 T 中所含结点总数 M 2 ​ 为 M 2 ​ = 1 + ( h − 1 ) k 【评分说明】①参考答案仅给出一种推导过程，若考生采用其他推导方法且正确，同样给分。 ②若考生仅给出结果，但没有推导过程，则 (1)、(2) 的最高得分分别是 2 分和 3 分。若推导过程或答案不完全正确，酌情给分。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "high-candidate",
       "candidates": [
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 49,
+          "matchedTerms": [
+            "m+1",
+            "非叶结点",
+            "边数",
+            "高度",
+            "k−1",
+            "h−1",
+            "正则",
+            "个孩子",
+            "最多",
+            "最少",
+            "叉树中",
+            "中每个"
+          ]
+        },
         {
           "card": "树的基本术语与性质",
           "score": 8,
@@ -21076,14 +21230,6 @@
             "根结点",
             "结点的",
             "的结点"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 3,
-          "matchedTerms": [
-            "结点数",
-            "树是满"
           ]
         }
       ]
@@ -21331,6 +21477,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 7,
+          "matchedTerms": [
+            "因此",
+            "最多",
+            "的最大"
+          ]
+        },
+        {
           "card": "递归算法与递归树",
           "score": 5,
           "matchedTerms": [
@@ -21358,13 +21513,6 @@
           "matchedTerms": [
             "查找",
             "第一个"
-          ]
-        },
-        {
-          "card": "数组行优先与列优先存储",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
           ]
         }
       ]
@@ -21472,6 +21620,15 @@
           ]
         },
         {
+          "card": "快速选择与顺序统计量",
+          "score": 6,
+          "matchedTerms": [
+            "迭代实",
+            "代实现",
+            "迭代实现"
+          ]
+        },
+        {
           "card": "线性表与顺序表",
           "score": 6,
           "matchedTerms": [
@@ -21483,13 +21640,6 @@
           "score": 4,
           "matchedTerms": [
             "线性表"
-          ]
-        },
-        {
-          "card": "栈的顺序存储与共享栈",
-          "score": 4,
-          "matchedTerms": [
-            "入栈"
           ]
         }
       ]
@@ -21612,6 +21762,16 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 10,
+          "matchedTerms": [
+            "非叶结点",
+            "因此",
+            "非叶结",
+            "叶结点"
+          ]
+        },
+        {
           "card": "堆的定义与建堆",
           "score": 6,
           "matchedTerms": [
@@ -21638,13 +21798,6 @@
             "条件是",
             "所有非",
             "点的度"
-          ]
-        },
-        {
-          "card": "线索二叉树",
-          "score": 4,
-          "matchedTerms": [
-            "二叉树"
           ]
         }
       ]
@@ -21714,10 +21867,11 @@
           ]
         },
         {
-          "card": "线索二叉树",
-          "score": 4,
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 5,
           "matchedTerms": [
-            "二叉树"
+            "因此",
+            "叶结点"
           ]
         }
       ]
@@ -21756,6 +21910,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "活动时间余量与并行区间",
           "score": 3,
           "matchedTerms": [
@@ -21768,13 +21929,6 @@
           "matchedTerms": [
             "字符",
             "个编码"
-          ]
-        },
-        {
-          "card": "二次探测法与开放定址散列",
-          "score": 1,
-          "matchedTerms": [
-            "序列可"
           ]
         }
       ]
@@ -21826,10 +21980,10 @@
           ]
         },
         {
-          "card": "最小生成树与最短路径",
+          "card": "正则k叉树叶结点数与高度界",
           "score": 4,
           "matchedTerms": [
-            "条边"
+            "边数"
           ]
         }
       ]
@@ -22193,6 +22347,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 8,
+          "matchedTerms": [
+            "因此",
+            "最多",
+            "开始"
+          ]
+        },
+        {
           "card": "循环队列判空与判满",
           "score": 6,
           "matchedTerms": [
@@ -22220,13 +22383,6 @@
           "score": 2,
           "matchedTerms": [
             "开始"
-          ]
-        },
-        {
-          "card": "多路归并与双指针",
-          "score": 1,
-          "matchedTerms": [
-            "对所有"
           ]
         }
       ]
@@ -22323,6 +22479,14 @@
           ]
         },
         {
+          "card": "快速选择与顺序统计量",
+          "score": 3,
+          "matchedTerms": [
+            "下标",
+            "标顺序"
+          ]
+        },
+        {
           "card": "归并排序与稳定性",
           "score": 2,
           "matchedTerms": [
@@ -22334,13 +22498,6 @@
           "score": 2,
           "matchedTerms": [
             "确定"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "得到"
           ]
         }
       ]
@@ -22357,6 +22514,14 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 6,
+          "matchedTerms": [
+            "因此",
+            "最少"
+          ]
+        },
         {
           "card": "单链表重排与原地逆置",
           "score": 4,
@@ -23661,10 +23826,10 @@
           ]
         },
         {
-          "card": "磁盘调度与 I/O",
-          "score": 1,
+          "card": "FAT链接分配与簇链访问",
+          "score": 2,
           "matchedTerms": [
-            "传输时"
+            "次数"
           ]
         }
       ]
@@ -23936,6 +24101,14 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 6,
+          "matchedTerms": [
+            "因此",
+            "开始"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 6,
           "matchedTerms": [
@@ -23955,13 +24128,6 @@
           "score": 3,
           "matchedTerms": [
             "push"
-          ]
-        },
-        {
-          "card": "外部排序与多路归并",
-          "score": 3,
-          "matchedTerms": [
-            "cpu"
           ]
         }
       ]
@@ -24009,10 +24175,10 @@
           ]
         },
         {
-          "card": "比较计数排序与秩排序",
-          "score": 1,
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 2,
           "matchedTerms": [
-            "=a"
+            "最多"
           ]
         }
       ]
@@ -24251,8 +24417,26 @@
       "answer": "A",
       "analysis": "2018-第4题-解析 非叶结点的度均为 2, 且所有叶结点都位于同一层的完全二叉树就是满二叉树。对一棵高度为 h 的满二叉树（空树 h = 0 ）, 其最后一层全部是叶结点，数量为 2 h − 1 ; 总结点数为 2 h − 1 。因此当 2 h − 1 = k 时，可以得到 2 h − 1 = 2 k − 1 。",
       "existingCards": [],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 34,
+          "matchedTerms": [
+            "非叶结点",
+            "因此",
+            "高度",
+            "k−1",
+            "h−1",
+            "每个非",
+            "个非叶",
+            "非叶结",
+            "叶结点",
+            "每个非叶",
+            "个非叶结",
+            "每个非叶结"
+          ]
+        },
         {
           "card": "二叉树遍历与性质",
           "score": 17,
@@ -24310,14 +24494,6 @@
             "二叉树",
             "结点的",
             "的结点"
-          ]
-        },
-        {
-          "card": "树的基本术语与性质",
-          "score": 5,
-          "matchedTerms": [
-            "高度",
-            "结点的"
           ]
         }
       ]
@@ -24498,10 +24674,11 @@
           ]
         },
         {
-          "card": "单链表重排与原地逆置",
-          "score": 4,
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 5,
           "matchedTerms": [
-            "a1"
+            "因此",
+            "结点都"
           ]
         }
       ]
@@ -24516,8 +24693,26 @@
       "answer": "B",
       "analysis": "2018-第8题-解析 m 阶 B 树 的基本性质：根结点以外的非叶结点最少含有 ⌈ m /2 ⌉ − 1 个关键字，代入 m = 3 得到每个非叶结点中最少包含 1 个关键字，而根结点含有 1 个关键字，因此所有非叶结点都有两个孩子。此时其树形与 h=5 的满二叉树相同，可求得关键字最少为 31 个。",
       "existingCards": [],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 28,
+          "matchedTerms": [
+            "非叶结点",
+            "因此",
+            "高度",
+            "个孩子",
+            "最少",
+            "每个非",
+            "个非叶",
+            "非叶结",
+            "叶结点",
+            "每个非叶",
+            "个非叶结",
+            "每个非叶结"
+          ]
+        },
         {
           "card": "树的基本术语与性质",
           "score": 16,
@@ -24569,19 +24764,6 @@
             "非叶结点",
             "个非叶结点",
             "根结点"
-          ]
-        },
-        {
-          "card": "二叉搜索树查找与删除",
-          "score": 7,
-          "matchedTerms": [
-            "关键字",
-            "有两个",
-            "两个孩",
-            "个孩子",
-            "有两个孩",
-            "两个孩子",
-            "有两个孩子"
           ]
         }
       ]
@@ -24770,6 +24952,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
         {
           "card": "前缀编码与二叉判定树",
           "score": 2,
@@ -25057,6 +25246,21 @@
           ]
         },
         {
+          "card": "快速选择与顺序统计量",
+          "score": 4,
+          "matchedTerms": [
+            "下标为",
+            "下标"
+          ]
+        },
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 4,
           "matchedTerms": [
@@ -25071,22 +25275,6 @@
             "数组下",
             "组下标",
             "数组下标"
-          ]
-        },
-        {
-          "card": "数组行优先与列优先存储",
-          "score": 3,
-          "matchedTerms": [
-            "数组",
-            "数组a"
-          ]
-        },
-        {
-          "card": "最小距离三元组的三指针扫描",
-          "score": 3,
-          "matchedTerms": [
-            "数组的",
-            "取一个"
           ]
         }
       ]
@@ -25262,17 +25450,17 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 3,
           "matchedTerms": [
             "cpu"
-          ]
-        },
-        {
-          "card": "二叉搜索树查找与删除",
-          "score": 2,
-          "matchedTerms": [
-            "次序"
           ]
         }
       ]
@@ -26021,17 +26209,17 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 4,
+          "matchedTerms": [
+            "大小"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 3,
           "matchedTerms": [
             "利用率"
-          ]
-        },
-        {
-          "card": "分页与分段的区别",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
           ]
         }
       ]
@@ -26078,10 +26266,10 @@
           ]
         },
         {
-          "card": "缓冲区与缓冲池",
+          "card": "动态优先级与饥饿避免",
           "score": 1,
           "matchedTerms": [
-            "的目的"
+            "另一个"
           ]
         }
       ]
@@ -26175,17 +26363,17 @@
           ]
         },
         {
+          "card": "动态优先级与饥饿避免",
+          "score": 1,
+          "matchedTerms": [
+            "的进程"
+          ]
+        },
+        {
           "card": "改进型 CLOCK 页面置换",
           "score": 1,
           "matchedTerms": [
             "字段是"
-          ]
-        },
-        {
-          "card": "共享铁锹互斥与资源锁",
-          "score": 1,
-          "matchedTerms": [
-            "不需要"
           ]
         }
       ]
@@ -26410,6 +26598,14 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 6,
+          "matchedTerms": [
+            "因此",
+            "最多"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 6,
           "matchedTerms": [
@@ -26423,13 +26619,6 @@
           "matchedTerms": [
             "执行",
             "时间最"
-          ]
-        },
-        {
-          "card": "单链表重排与原地逆置",
-          "score": 4,
-          "matchedTerms": [
-            "总时间"
           ]
         }
       ]
@@ -26524,6 +26713,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "查找算法与散列表",
           "score": 3,
           "matchedTerms": [
@@ -26538,15 +26734,6 @@
             "物理地",
             "理地址",
             "物理地址"
-          ]
-        },
-        {
-          "card": "堆的定义与建堆",
-          "score": 3,
-          "matchedTerms": [
-            "保存当",
-            "存当前",
-            "保存当前"
           ]
         }
       ]
@@ -26638,6 +26825,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "比较计数排序与秩排序",
           "score": 3,
           "matchedTerms": [
@@ -26651,14 +26845,6 @@
           "matchedTerms": [
             "长度为",
             "地址的"
-          ]
-        },
-        {
-          "card": "归并排序与稳定性",
-          "score": 3,
-          "matchedTerms": [
-            "得到",
-            "的数据"
           ]
         }
       ]
@@ -26918,6 +27104,19 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 12,
+          "matchedTerms": [
+            "非叶结点",
+            "个孩子",
+            "叉树中",
+            "非叶结",
+            "叶结点",
+            "一个孩",
+            "一个孩子"
+          ]
+        },
+        {
           "card": "二叉搜索树查找与删除",
           "score": 10,
           "matchedTerms": [
@@ -26939,17 +27138,6 @@
             "插入结",
             "的结点",
             "右孩子"
-          ]
-        },
-        {
-          "card": "B 树与 B+ 树",
-          "score": 8,
-          "matchedTerms": [
-            "叶结点",
-            "插入",
-            "删除",
-            "在叶结",
-            "在叶结点"
           ]
         }
       ]
@@ -27288,6 +27476,14 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 7,
+          "matchedTerms": [
+            "km",
+            "开始"
+          ]
+        },
+        {
           "card": "循环链表与双向循环链表",
           "score": 5,
           "matchedTerms": [
@@ -27296,13 +27492,6 @@
         },
         {
           "card": "单链表头插法与尾插法",
-          "score": 3,
-          "matchedTerms": [
-            "next"
-          ]
-        },
-        {
-          "card": "单链表与双链表",
           "score": 3,
           "matchedTerms": [
             "next"
@@ -27518,6 +27707,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 4,
           "matchedTerms": [
@@ -27540,13 +27736,6 @@
             "语言代",
             "言代码",
             "语言代码"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 2,
-          "matchedTerms": [
-            "长度为"
           ]
         }
       ]
@@ -27623,10 +27812,24 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "活动时间余量与并行区间",
           "score": 3,
           "matchedTerms": [
             "ef"
+          ]
+        },
+        {
+          "card": "快速选择与顺序统计量",
+          "score": 1,
+          "matchedTerms": [
+            "所在的"
           ]
         },
         {
@@ -27682,10 +27885,12 @@
           ]
         },
         {
-          "card": "外部排序与多路归并",
-          "score": 3,
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
           "matchedTerms": [
-            "cpu"
+            "开始",
+            "的最大",
+            "的最小"
           ]
         }
       ]
@@ -27719,6 +27924,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "十字链表与邻接多重表",
           "score": 3,
           "matchedTerms": [
@@ -27730,14 +27942,6 @@
           "score": 2,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "中缀表达式求值",
-          "score": 2,
-          "matchedTerms": [
-            "于操作",
-            "操作数"
           ]
         }
       ]
@@ -27772,6 +27976,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "后缀极值与区间乘积最大值",
           "score": 3,
           "matchedTerms": [
@@ -27783,13 +27994,6 @@
           "score": 3,
           "matchedTerms": [
             "res"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 3,
-          "matchedTerms": [
-            "if"
           ]
         }
       ]
@@ -27821,6 +28025,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 3,
           "matchedTerms": [
@@ -27832,13 +28043,6 @@
           "score": 2,
           "matchedTerms": [
             "答案"
-          ]
-        },
-        {
-          "card": "后缀极值与区间乘积最大值",
-          "score": 1,
-          "matchedTerms": [
-            "-1"
           ]
         }
       ]
@@ -27855,6 +28059,14 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 5,
+          "matchedTerms": [
+            "因此",
+            "的最小"
+          ]
+        },
         {
           "card": "线性表与顺序表",
           "score": 4,
@@ -27880,13 +28092,6 @@
         {
           "card": "最小生成树与最短路径",
           "score": 2,
-          "matchedTerms": [
-            "的最小"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 1,
           "matchedTerms": [
             "的最小"
           ]
@@ -28254,17 +28459,18 @@
           ]
         },
         {
+          "card": "异步串行通信帧格式与字符速率",
+          "score": 8,
+          "matchedTerms": [
+            "cpu",
+            "ms"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 8,
           "matchedTerms": [
             "执行",
-            "cpu"
-          ]
-        },
-        {
-          "card": "硬布线控制器与微程序控制器",
-          "score": 7,
-          "matchedTerms": [
             "cpu"
           ]
         }
@@ -28648,6 +28854,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 5,
+          "matchedTerms": [
+            "大小",
+            "缓存的"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 3,
           "matchedTerms": [
@@ -28717,6 +28931,13 @@
           "score": 3,
           "matchedTerms": [
             "c1"
+          ]
+        },
+        {
+          "card": "FAT链接分配与簇链访问",
+          "score": 3,
+          "matchedTerms": [
+            "8b"
           ]
         }
       ]
@@ -28841,6 +29062,20 @@
           "score": 5,
           "matchedTerms": [
             "c2"
+          ]
+        },
+        {
+          "card": "FAT链接分配与簇链访问",
+          "score": 3,
+          "matchedTerms": [
+            "8b"
+          ]
+        },
+        {
+          "card": "动态优先级与饥饿避免",
+          "score": 2,
+          "matchedTerms": [
+            "分别为"
           ]
         }
       ]
@@ -29388,10 +29623,12 @@
           ]
         },
         {
-          "card": "单链表重排与原地逆置",
-          "score": 4,
+          "card": "快速选择与顺序统计量",
+          "score": 5,
           "matchedTerms": [
-            "a1"
+            "下标为",
+            "下标",
+            "元素数"
           ]
         }
       ]
@@ -29958,6 +30195,15 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 6,
+          "matchedTerms": [
+            "非叶结点",
+            "非叶结",
+            "叶结点"
+          ]
+        },
+        {
           "card": "B 树与 B+ 树",
           "score": 6,
           "matchedTerms": [
@@ -29974,14 +30220,6 @@
             "叶结点",
             "非叶结点",
             "根结点"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 4,
-          "matchedTerms": [
-            "关键字",
-            "得到"
           ]
         }
       ]
@@ -30114,19 +30352,19 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "抽象数据类型 ADT",
           "score": 3,
           "matchedTerms": [
             "度取决",
             "取决于",
             "度取决于"
-          ]
-        },
-        {
-          "card": "十字链表与邻接多重表",
-          "score": 3,
-          "matchedTerms": [
-            "v2"
           ]
         }
       ]
@@ -30408,6 +30646,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
         {
           "card": "前缀编码与二叉判定树",
           "score": 3,
@@ -31381,12 +31626,11 @@
           ]
         },
         {
-          "card": "进程间通信 IPC",
+          "card": "动态优先级与饥饿避免",
           "score": 3,
           "matchedTerms": [
-            "用于异",
-            "于异步",
-            "用于异步"
+            "等待时",
+            "优先级"
           ]
         }
       ]
@@ -31457,6 +31701,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "FAT链接分配与簇链访问",
+          "score": 4,
+          "matchedTerms": [
+            "字节"
+          ]
+        },
         {
           "card": "磁盘引导与格式化流程",
           "score": 2,
@@ -31807,10 +32058,10 @@
           ]
         },
         {
-          "card": "后缀最大值与最小值维护",
-          "score": 3,
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
           "matchedTerms": [
-            "res"
+            "因此"
           ]
         }
       ]
@@ -31922,17 +32173,17 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "冒泡排序与简单选择排序",
           "score": 2,
           "matchedTerms": [
             "交换"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "改为"
           ]
         }
       ]
@@ -32481,6 +32732,19 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 14,
+          "matchedTerms": [
+            "高度",
+            "个孩子",
+            "最多",
+            "个结点",
+            "结点数",
+            "点数量",
+            "结点数量"
+          ]
+        },
+        {
           "card": "单链表重排与原地逆置",
           "score": 10,
           "matchedTerms": [
@@ -32504,17 +32768,6 @@
           "matchedTerms": [
             "高度",
             "个结点"
-          ]
-        },
-        {
-          "card": "完全二叉树与编号性质",
-          "score": 5,
-          "matchedTerms": [
-            "每个结",
-            "个结点",
-            "有两个",
-            "个孩子",
-            "每个结点"
           ]
         }
       ]
@@ -32686,6 +32939,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 2,
           "matchedTerms": [
@@ -32718,6 +32978,13 @@
           "score": 4,
           "matchedTerms": [
             "a1"
+          ]
+        },
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
           ]
         },
         {
@@ -33851,6 +34118,14 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 7,
+          "matchedTerms": [
+            "字节",
+            "8b"
+          ]
+        },
+        {
           "card": "改进型 CLOCK 页面置换",
           "score": 4,
           "matchedTerms": [
@@ -33869,13 +34144,6 @@
           "score": 1,
           "matchedTerms": [
             "尽可能"
-          ]
-        },
-        {
-          "card": "文件逻辑结构与物理结构",
-          "score": 1,
-          "matchedTerms": [
-            "的数据"
           ]
         }
       ]
@@ -33998,6 +34266,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 7,
+          "matchedTerms": [
+            "大小",
+            "8b"
+          ]
+        },
+        {
           "card": "磁盘调度与 I/O",
           "score": 5,
           "matchedTerms": [
@@ -34049,6 +34325,13 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 4,
+          "matchedTerms": [
+            "字节"
+          ]
+        },
+        {
           "card": "进程间通信 IPC",
           "score": 2,
           "matchedTerms": [
@@ -34064,13 +34347,6 @@
         },
         {
           "card": "文件逻辑结构与物理结构",
-          "score": 1,
-          "matchedTerms": [
-            "的数据"
-          ]
-        },
-        {
-          "card": "文件系统与目录",
           "score": 1,
           "matchedTerms": [
             "的数据"
@@ -34479,18 +34755,18 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 3,
           "matchedTerms": [
             "得到",
             "/2"
-          ]
-        },
-        {
-          "card": "归并排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "得到"
           ]
         }
       ]
@@ -34709,8 +34985,19 @@
       "answer": "C",
       "analysis": "2022-第4题-解析 高度为 n 的二叉树最多有 1 + 2 + ⋯ + 2 n − 1 = 2 n − 1 个结点，高度为 n 的三叉树最多有 f ( n ) = 1 + 3 + ⋯ + 3 n − 1 = 3 − 1 3 n − 1 ​ − 2 3 n − 1 ​ 。 f ( 5 ) = 121 f ( 6 ) = 364 因为 121 < 244 < 364 ，所以高度至少为 6。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 10,
+          "matchedTerms": [
+            "高度",
+            "最多",
+            "个结点",
+            "叶结点",
+            "3−1"
+          ]
+        },
         {
           "card": "树的基本术语与性质",
           "score": 6,
@@ -34743,16 +35030,6 @@
             "二叉树",
             "个结点",
             "最多有"
-          ]
-        },
-        {
-          "card": "哈夫曼树与带权路径长度",
-          "score": 4,
-          "matchedTerms": [
-            "的二叉",
-            "二叉树",
-            "的二叉树",
-            "叶结点"
           ]
         }
       ]
@@ -34823,10 +35100,12 @@
           ]
         },
         {
-          "card": "递归算法与递归树",
-          "score": 5,
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 7,
           "matchedTerms": [
-            "at"
+            "高度",
+            "个结点",
+            "结点数"
           ]
         }
       ]
@@ -35487,6 +35766,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "单链表与双链表",
           "score": 3,
           "matchedTerms": [
@@ -35500,15 +35786,6 @@
           "score": 3,
           "matchedTerms": [
             "kb"
-          ]
-        },
-        {
-          "card": "拓扑排序与 AOV 网",
-          "score": 3,
-          "matchedTerms": [
-            "访问一",
-            "问一个",
-            "访问一个"
           ]
         }
       ]
@@ -35633,6 +35910,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 2,
+          "matchedTerms": [
+            "最多"
+          ]
+        },
+        {
           "card": "最小生成树与最短路径",
           "score": 1,
           "matchedTerms": [
@@ -35665,6 +35949,13 @@
           "score": 2,
           "matchedTerms": [
             "执行"
+          ]
+        },
+        {
+          "card": "快速选择与顺序统计量",
+          "score": 2,
+          "matchedTerms": [
+            "目标"
           ]
         },
         {
@@ -35711,6 +36002,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 4,
           "matchedTerms": [
@@ -35722,13 +36020,6 @@
           "score": 3,
           "matchedTerms": [
             "cpu"
-          ]
-        },
-        {
-          "card": "比较计数排序与秩排序",
-          "score": 2,
-          "matchedTerms": [
-            "时间"
           ]
         }
       ]
@@ -35940,17 +36231,18 @@
           ]
         },
         {
+          "card": "异步串行通信帧格式与字符速率",
+          "score": 8,
+          "matchedTerms": [
+            "cpu",
+            "ms"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 8,
           "matchedTerms": [
             "执行",
-            "cpu"
-          ]
-        },
-        {
-          "card": "单周期与多周期数据通路",
-          "score": 7,
-          "matchedTerms": [
             "cpu"
           ]
         }
@@ -36723,20 +37015,19 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 5,
+          "matchedTerms": [
+            "大小",
+            "的缓存"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 4,
           "matchedTerms": [
             "服务",
             "完成"
-          ]
-        },
-        {
-          "card": "文件逻辑结构与物理结构",
-          "score": 3,
-          "matchedTerms": [
-            "文件大",
-            "件大小",
-            "文件大小"
           ]
         }
       ]
@@ -36977,6 +37268,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 5,
+          "matchedTerms": [
+            "因此",
+            "中每个"
+          ]
+        },
+        {
           "card": "数组行优先与列优先存储",
           "score": 4,
           "matchedTerms": [
@@ -37007,14 +37306,6 @@
             "内存中",
             "在内存中"
           ]
-        },
-        {
-          "card": "外部排序与多路归并",
-          "score": 3,
-          "matchedTerms": [
-            "磁盘",
-            "的文件"
-          ]
         }
       ]
     },
@@ -37039,6 +37330,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "关键路径与关键活动",
           "score": 3,
           "matchedTerms": [
@@ -37059,13 +37357,6 @@
           "score": 2,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "后缀极值与区间乘积最大值",
-          "score": 2,
-          "matchedTerms": [
-            "=0"
           ]
         }
       ]
@@ -37535,6 +37826,15 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 10,
+          "matchedTerms": [
+            "边数",
+            "因此",
+            "开始"
+          ]
+        },
+        {
           "card": "欧拉路径与欧拉回路",
           "score": 9,
           "matchedTerms": [
@@ -37547,13 +37847,6 @@
             "个顶点",
             "顶点的",
             "个顶点的"
-          ]
-        },
-        {
-          "card": "二叉树遍历与性质",
-          "score": 6,
-          "matchedTerms": [
-            "遍历"
           ]
         }
       ]
@@ -37600,6 +37893,16 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 11,
+          "matchedTerms": [
+            "因此",
+            "高度",
+            "开始",
+            "叶结点"
+          ]
+        },
+        {
           "card": "哈夫曼树与带权路径长度",
           "score": 10,
           "matchedTerms": [
@@ -37621,18 +37924,6 @@
             "叶结点",
             "插入",
             "删除"
-          ]
-        },
-        {
-          "card": "前缀编码与二叉判定树",
-          "score": 6,
-          "matchedTerms": [
-            "位于叶",
-            "于叶结",
-            "叶结点",
-            "位于叶结",
-            "于叶结点",
-            "位于叶结点"
           ]
         }
       ]
@@ -38025,6 +38316,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "后缀极值与区间乘积最大值",
           "score": 2,
           "matchedTerms": [
@@ -38043,13 +38341,6 @@
           "score": 1,
           "matchedTerms": [
             "题目若"
-          ]
-        },
-        {
-          "card": "数据结构三要素",
-          "score": 1,
-          "matchedTerms": [
-            "和存储"
           ]
         }
       ]
@@ -38151,10 +38442,10 @@
           ]
         },
         {
-          "card": "外部排序与多路归并",
-          "score": 3,
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
           "matchedTerms": [
-            "cpu"
+            "因此"
           ]
         }
       ]
@@ -38183,6 +38474,14 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 5,
+          "matchedTerms": [
+            "因此",
+            "的最大"
+          ]
+        },
+        {
           "card": "最小距离三元组的三指针扫描",
           "score": 5,
           "matchedTerms": [
@@ -38203,13 +38502,6 @@
           "score": 4,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "散列表装填因子与查找终止",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
           ]
         }
       ]
@@ -38309,10 +38601,10 @@
           ]
         },
         {
-          "card": "十字链表与邻接多重表",
-          "score": 3,
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
           "matchedTerms": [
-            "v2"
+            "因此"
           ]
         }
       ]
@@ -38444,6 +38736,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 3,
           "matchedTerms": [
@@ -38458,10 +38757,10 @@
           ]
         },
         {
-          "card": "希尔排序与增量序列",
+          "card": "快速选择与顺序统计量",
           "score": 2,
           "matchedTerms": [
-            "结束"
+            "而不是"
           ]
         }
       ]
@@ -38500,18 +38799,18 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 4,
           "matchedTerms": [
             "访问",
             "答案"
-          ]
-        },
-        {
-          "card": "算法五个特性",
-          "score": 3,
-          "matchedTerms": [
-            "输出"
           ]
         }
       ]
@@ -38918,17 +39217,18 @@
           ]
         },
         {
+          "card": "异步串行通信帧格式与字符速率",
+          "score": 8,
+          "matchedTerms": [
+            "cpu",
+            "ms"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 8,
           "matchedTerms": [
             "执行",
-            "cpu"
-          ]
-        },
-        {
-          "card": "单周期与多周期数据通路",
-          "score": 7,
-          "matchedTerms": [
             "cpu"
           ]
         }
@@ -39139,6 +39439,14 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 5,
+          "matchedTerms": [
+            "大小",
+            "=106"
+          ]
+        },
+        {
           "card": "文件物理分配方式",
           "score": 4,
           "matchedTerms": [
@@ -39151,13 +39459,6 @@
           "matchedTerms": [
             "文件分",
             "的数据"
-          ]
-        },
-        {
-          "card": "磁盘引导与格式化流程",
-          "score": 2,
-          "matchedTerms": [
-            "阶段"
           ]
         }
       ]
@@ -39183,6 +39484,13 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 2,
+          "matchedTerms": [
+            "次数"
+          ]
+        },
+        {
           "card": "操作系统功能与特征",
           "score": 1,
           "matchedTerms": [
@@ -39202,13 +39510,6 @@
           "matchedTerms": [
             "的数据"
           ]
-        },
-        {
-          "card": "文件系统与目录",
-          "score": 1,
-          "matchedTerms": [
-            "的数据"
-          ]
         }
       ]
     },
@@ -39224,6 +39525,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "FAT链接分配与簇链访问",
+          "score": 4,
+          "matchedTerms": [
+            "大小"
+          ]
+        },
         {
           "card": "磁盘调度与 I/O",
           "score": 3,
@@ -39249,13 +39557,6 @@
         },
         {
           "card": "SCAN 与 C-SCAN 磁盘调度",
-          "score": 2,
-          "matchedTerms": [
-            "忽略"
-          ]
-        },
-        {
-          "card": "TLB 与快表命中",
           "score": 2,
           "matchedTerms": [
             "忽略"
@@ -39300,6 +39601,15 @@
           ]
         },
         {
+          "card": "动态优先级与饥饿避免",
+          "score": 6,
+          "matchedTerms": [
+            "等待时",
+            "待时间",
+            "等待时间"
+          ]
+        },
+        {
           "card": "SCAN 与 C-SCAN 磁盘调度",
           "score": 6,
           "matchedTerms": [
@@ -39314,13 +39624,6 @@
           "matchedTerms": [
             "等待",
             "=1"
-          ]
-        },
-        {
-          "card": "改进型 CLOCK 页面置换",
-          "score": 4,
-          "matchedTerms": [
-            "再次"
           ]
         }
       ]
@@ -39951,6 +40254,14 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 8,
+          "matchedTerms": [
+            "字节",
+            "大小"
+          ]
+        },
+        {
           "card": "磁盘引导与格式化流程",
           "score": 7,
           "matchedTerms": [
@@ -39965,14 +40276,6 @@
             "rom",
             "os",
             "的数据"
-          ]
-        },
-        {
-          "card": "TLB 与快表命中",
-          "score": 5,
-          "matchedTerms": [
-            "mod",
-            "忽略"
           ]
         }
       ]
@@ -40330,6 +40633,14 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 9,
+          "matchedTerms": [
+            "km",
+            "因此"
+          ]
+        },
+        {
           "card": "循环链表与双向循环链表",
           "score": 5,
           "matchedTerms": [
@@ -40348,14 +40659,6 @@
           "score": 4,
           "matchedTerms": [
             "本题"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 4,
-          "matchedTerms": [
-            "数组",
-            "个元素"
           ]
         }
       ]
@@ -40853,6 +41156,13 @@
           ]
         },
         {
+          "card": "快速选择与顺序统计量",
+          "score": 2,
+          "matchedTerms": [
+            "而不是"
+          ]
+        },
+        {
           "card": "堆排序与优先队列",
           "score": 1,
           "matchedTerms": [
@@ -40864,13 +41174,6 @@
           "score": 1,
           "matchedTerms": [
             "的数据"
-          ]
-        },
-        {
-          "card": "后缀极值与区间乘积最大值",
-          "score": 1,
-          "matchedTerms": [
-            "-1"
           ]
         }
       ]
@@ -40902,6 +41205,13 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "内部排序与稳定性",
           "score": 3,
           "matchedTerms": [
@@ -40914,13 +41224,6 @@
           "matchedTerms": [
             "对应",
             "情况下"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 3,
-          "matchedTerms": [
-            "之间"
           ]
         }
       ]
@@ -41158,14 +41461,15 @@
           ]
         },
         {
-          "card": "快速排序分区过程",
-          "score": 4,
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 6,
           "matchedTerms": [
-            "平均"
+            "因此",
+            "最多"
           ]
         },
         {
-          "card": "冒泡排序与简单选择排序",
+          "card": "快速排序分区过程",
           "score": 4,
           "matchedTerms": [
             "平均"
@@ -41559,17 +41863,17 @@
           ]
         },
         {
+          "card": "异步串行通信帧格式与字符速率",
+          "score": 2,
+          "matchedTerms": [
+            "最大"
+          ]
+        },
+        {
           "card": "RISC 与 CISC",
           "score": 2,
           "matchedTerms": [
             "是简单"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 1,
-          "matchedTerms": [
-            "相等的"
           ]
         }
       ]
@@ -41724,19 +42028,20 @@
           ]
         },
         {
+          "card": "异步串行通信帧格式与字符速率",
+          "score": 10,
+          "matchedTerms": [
+            "cpu",
+            "ms",
+            "周期"
+          ]
+        },
+        {
           "card": "单周期与多周期数据通路",
           "score": 9,
           "matchedTerms": [
             "cpu",
             "一个时"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 8,
-          "matchedTerms": [
-            "执行",
-            "cpu"
           ]
         }
       ]
@@ -42084,6 +42389,13 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 4,
+          "matchedTerms": [
+            "大小"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 3,
           "matchedTerms": [
@@ -42095,13 +42407,6 @@
           "score": 1,
           "matchedTerms": [
             "下一个"
-          ]
-        },
-        {
-          "card": "文件逻辑结构与物理结构",
-          "score": 1,
-          "matchedTerms": [
-            "的数据"
           ]
         }
       ]
@@ -42185,6 +42490,13 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 4,
+          "matchedTerms": [
+            "字节"
+          ]
+        },
+        {
           "card": "读者写者问题",
           "score": 3,
           "matchedTerms": [
@@ -42198,13 +42510,6 @@
           "score": 3,
           "matchedTerms": [
             "c1"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 3,
-          "matchedTerms": [
-            "地址"
           ]
         }
       ]
@@ -42891,13 +43196,12 @@
           ]
         },
         {
-          "card": "树与森林的遍历",
-          "score": 5,
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 6,
           "matchedTerms": [
-            "二叉树",
+            "因此",
             "叉树中",
-            "二叉树中",
-            "树顺序"
+            "每个非"
           ]
         }
       ]
@@ -43224,6 +43528,14 @@
           ]
         },
         {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 6,
+          "matchedTerms": [
+            "高度",
+            "最少"
+          ]
+        },
+        {
           "card": "B 树与 B+ 树",
           "score": 6,
           "matchedTerms": [
@@ -43238,13 +43550,6 @@
           "matchedTerms": [
             "高度",
             "树高度"
-          ]
-        },
-        {
-          "card": "树与森林的存储结构",
-          "score": 4,
-          "matchedTerms": [
-            "二叉树"
           ]
         }
       ]
@@ -43677,11 +43982,10 @@
           ]
         },
         {
-          "card": "最小距离三元组的三指针扫描",
+          "card": "正则k叉树叶结点数与高度界",
           "score": 4,
           "matchedTerms": [
-            "int",
-            "的整数"
+            "因此"
           ]
         }
       ]
@@ -43707,6 +44011,13 @@
           ]
         },
         {
+          "card": "快速选择与顺序统计量",
+          "score": 2,
+          "matchedTerms": [
+            "而不是"
+          ]
+        },
+        {
           "card": "前缀编码与二叉判定树",
           "score": 2,
           "matchedTerms": [
@@ -43725,13 +44036,6 @@
           "score": 1,
           "matchedTerms": [
             "实现的"
-          ]
-        },
-        {
-          "card": "中缀表达式求值",
-          "score": 1,
-          "matchedTerms": [
-            "操作数"
           ]
         }
       ]
@@ -43753,6 +44057,13 @@
           "score": 4,
           "matchedTerms": [
             "执行"
+          ]
+        },
+        {
+          "card": "正则k叉树叶结点数与高度界",
+          "score": 4,
+          "matchedTerms": [
+            "因此"
           ]
         },
         {
@@ -44624,6 +44935,14 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 5,
+          "matchedTerms": [
+            "大小",
+            "=106"
+          ]
+        },
+        {
           "card": "磁盘调度与 I/O",
           "score": 3,
           "matchedTerms": [
@@ -44644,13 +44963,6 @@
           "score": 2,
           "matchedTerms": [
             "忽略"
-          ]
-        },
-        {
-          "card": "进程同步与信号量",
-          "score": 1,
-          "matchedTerms": [
-            "=1"
           ]
         }
       ]
@@ -44895,6 +45207,13 @@
           ]
         },
         {
+          "card": "FAT链接分配与簇链访问",
+          "score": 4,
+          "matchedTerms": [
+            "大小"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 3,
           "matchedTerms": [
@@ -44913,13 +45232,6 @@
           "score": 2,
           "matchedTerms": [
             "阶段"
-          ]
-        },
-        {
-          "card": "临界区与共享缓冲区",
-          "score": 1,
-          "matchedTerms": [
-            "数据的"
           ]
         }
       ]
@@ -45468,19 +45780,5 @@
       ]
     }
   ],
-  "unmatched": [
-    {
-      "year": 2015,
-      "index": 19,
-      "id": 301,
-      "subject": "数据结构",
-      "type": "选择题",
-      "question": "2015-第19题-题目 下列有关总线定时的叙述中，错误的是（ ）。 A. 异步通信方式中，全互锁协议最慢 B. 异步通信方式中，非互锁协议的可靠性最差 C. 同步通信方式中，同步时钟信号可由各设备提供 D. 半同步通信方式中，握手信号的采样由同步时钟控制",
-      "answer": "C",
-      "analysis": "2015-第19题-解析 在 同步通信方式 中，系统采用一个统一的时钟信号，而不是由各设备提供，否则没法实现统一的时钟。",
-      "existingCards": [],
-      "confidence": "no-candidate",
-      "candidates": []
-    }
-  ]
+  "unmatched": []
 }
