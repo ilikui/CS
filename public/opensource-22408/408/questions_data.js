@@ -1,4 +1,4 @@
-/* 408 真题与练习数据；真题来源与核验说明见 verified-solutions.json。 */
+/* 408 真题与练习数据；综合题来源及核验记录见 verified-solutions.json。 */
 window.QUESTIONS_DATA = [
   {
     "id": "ds-001",
@@ -620,5 +620,68 @@ window.QUESTIONS_DATA = [
     "index": 47,
     "score": 9,
     "question": "<p>（9分）主机H登录FTP服务器后，向服务器上传大小为18000B的文件F。H为传输F建立数据连接时选择的初始序号为100，MSS=1000B，拥塞控制初始阈值为4MSS，RTT=10ms，忽略TCP段传输时延；发送过程中均以MSS段发送，且无差错、丢包和乱序。回答：（1）FTP控制连接、数据连接分别是持久还是非持久？登录时建立的是哪种连接？（2）文件第1字节序号是多少？断开数据连接时服务器第二次挥手ACK确认序号是多少？（3）收到ACK=2101和ACK=7101时拥塞窗口分别是多少？（4）从请求建立数据连接到确认文件全部接收至少多长时间？应用层数据平均发送速率是多少？</p><p><a href=\"https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf#page=14\" target=\"_blank\" rel=\"noopener\">查看2023年408原卷第14页</a></p>"
+  },
+  {
+    "id": 586,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2024,
+    "index": 41,
+    "score": 13,
+    "question": "<p>（13分）2023年10月26日，神州十七号载人飞船发射取得圆满成功。载人航天工程包含众多子工程，为保证工程有序开展，需要明确各子工程的前导工程。该问题可抽象为有向图的拓扑序列问题。已知有向图G采用邻接矩阵存储，类型定义如下：</p><pre><code>typedef struct {\n    int numVertices, numEdges;\n    char verticesList[MAXV];\n    int Edge[MAXV][MAXV];\n} MGraph;</code></pre><p>请设计算法 int uniquely(MGraph G)，判定G是否存在唯一的拓扑序列；若是返回1，否则返回0。要求：（1）给出算法基本设计思想；（2）采用C或C++描述算法并注释关键之处。</p><p><a href=\"https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf\" target=\"_blank\" rel=\"noopener\">查看2024年408回忆版原卷（第41题）</a></p>"
+  },
+  {
+    "id": 587,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2024,
+    "index": 42,
+    "score": 10,
+    "question": "<p>（10分）将关键字序列20、3、11、18、9、14、7依次存储到初始为空、长度为11的散列表HT中。散列函数为：</p><p>H(key)=(key×3) mod 11</p><p>发生冲突时，按H1、H2、H3……顺序探查，其中：</p><p>Hk=(H0+k²) mod 11，k=1、2、3……</p><ol><li>画出构造的散列表HT，并计算装填因子。（6分）</li><li>给出在HT中查找关键字14的关键字比较序列。（2分）</li><li>在HT中查找关键字8，确认查找失败时的散列地址是多少？（2分）</li></ol><p><a href=\"https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf\" target=\"_blank\" rel=\"noopener\">查看2024年408回忆版原卷（第42题）</a></p>"
+  },
+  {
+    "id": 588,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2024,
+    "index": 43,
+    "score": 14,
+    "question": "<p>（14分）假定计算机M字长为32位，按字节编址，采用32位定长指令字。指令add、slli和lw的格式、编码和功能如下图。</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2024/2024-43a.png\" alt=\"2024年408第43题指令格式图\" style=\"max-width:100%;height:auto\"></p><p>R[x]表示通用寄存器x的内容，M[x]表示地址为x的存储单元内容，shamt为移位位数，imm为补码偏移量。题目另给出部分数据通路图，其中A、B分别是从rs1和rs2读出的内容，IR[31:20]为指令寄存器高12位；Ext=0、1分别零扩展、符号扩展；ALUctr=000、001、010分别执行加、减、逻辑左移。</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2024/2024-43b.png\" alt=\"2024年408第43题ALU数据通路图\" style=\"max-width:100%;height:auto\"></p><ol><li>M最多有多少个通用寄存器？为什么shamt占5位？（2分）</li><li>执行add时ALUBsrc取值？若rs1、rs2分别为87654321H、98765432H，求ALU输出F、OF、CF；无符号加法溢出看哪个标志？（3分）</li><li>执行slli时Ext可取0或1的原因？（2分）</li><li>执行lw时Ext、ALUctr分别取何值？（2分）</li><li>机器码A040A103H为何一定是lw？（2分）</li><li>若R[01H]=FFFFA2D0H，求该指令读取数据的存储地址。（2分）</li></ol><p><a href=\"https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf\" target=\"_blank\" rel=\"noopener\">查看2024年408回忆版原卷（第43题）</a></p>"
+  },
+  {
+    "id": 589,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2024,
+    "index": 44,
+    "score": 10,
+    "question": "<p>（10分）对题43中的计算机M，C语言语句sum+=a[i]对应的指令序列为：</p><pre><code>slli r4, r2, 2  // R[r4] = R[r2] << 2\nadd  r4, r3, r4 // R[r4] = R[r3] + R[r4]\nlw   r5, 0(r4)  // R[r5] = M[R[r4] + 0]\nadd  r1, r1, r5 // R[r1] = R[r1] + R[r5]</code></pre><p>已知i、sum和数组a均为int型，通用寄存器r1～r5编号为01H～05H。</p><ol><li>写出存放数组a首地址、变量i和sum的通用寄存器编号。（3分）</li><li>已知M为小端方式，采用页式存储管理，页大小4KB。执行第一条指令时i=5，r1=00001332H，r3=0013DFF0H。从该地址开始的存储单元内容如下图。求执行sum+=a[i]后a[i]的地址、a[i]和sum的机器数、a[i]所在页号，以及数组a至少占几页。（5分）</li></ol><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2024/2024-44.png\" alt=\"2024年408第44题内存字节表\" style=\"max-width:100%;height:auto\"></p><p>（3）求slli r4,r2,2的机器码；若数组a改为short型，slli指令应如何修改？（2分）</p><p><a href=\"https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf\" target=\"_blank\" rel=\"noopener\">查看2024年408回忆版原卷（第44题）</a></p>"
+  },
+  {
+    "id": 590,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2024,
+    "index": 45,
+    "score": 7,
+    "question": "<p>（7分）某计算机采用虚拟页式存储管理，虚拟地址和物理地址均为32位，页表项大小为4B，页面大小为4MB。虚拟地址结构如下：</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2024/2024-45.png\" alt=\"2024年408第45题虚拟地址结构\" style=\"max-width:100%;height:auto\"></p><p>进程P的页表起始虚拟地址为B8C00000H，被装载到从物理地址65400000H开始的连续主存空间中。回答：</p><ol><li>CPU访问虚拟地址12345678H时发生缺页，经处理和MMU转换后得到物理地址BAB45678H。求此次更新的页表项虚拟地址、物理地址及页框号。（3分）</li><li>求进程P页表所在页的页号、该页对应页表项的虚拟地址及该页表项中的页框号。（4分）</li></ol><p><a href=\"https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf\" target=\"_blank\" rel=\"noopener\">查看2024年408回忆版原卷（第45题）</a></p>"
+  },
+  {
+    "id": 591,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2024,
+    "index": 46,
+    "score": 8,
+    "question": "<p>（8分）某网络系统中的缓冲区B用于存放一个数据分组。对B的操作有C1、C2和C3：C1将一个数据分组写入B，C2从B中读出一个数据分组，C3对B中的数据分组进行修改。要求B为空时才能执行C1，B非空时才能执行C2和C3。回答：</p><ol><li>假设进程P1和P2均需执行C1，实现C1的代码是否为临界区？为什么？（2分）</li><li>B初始为空，P1执行C1一次，P2执行C2一次。定义尽可能少的信号量，并用wait()、signal()描述同步或互斥关系，说明信号量作用及初值。（3分）</li><li>B初始非空，P1和P2各执行C3一次。定义尽可能少的信号量，并描述同步或互斥关系，说明信号量作用及初值。（3分）</li></ol><p><a href=\"https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf\" target=\"_blank\" rel=\"noopener\">查看2024年408回忆版原卷（第46题）</a></p>"
+  },
+  {
+    "id": 592,
+    "subject": "computer-network",
+    "type": 2,
+    "year": 2024,
+    "index": 47,
+    "score": 8,
+    "question": "<p>（8分）现有4个自治系统互连，AS1运行内部网关协议RIP；AS3规模较小，自治系统内任意两台主机通信经过的路由器数不超过15个；AS4规模较大，自治系统内任意两台主机通信经过的路由器数可能超过20个。网络拓扑如下图：</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2024/2024-47.png\" alt=\"2024年408第47题自治系统拓扑图\" style=\"max-width:100%;height:auto\"></p><ol><li>仅有RIP和OSPF可选，AS4应选择哪个协议？（1分）</li><li>AS3中两主机通信，确保IP分组正常接收，初始TTL至少设为多少？（1分）</li><li>AS1路由器同时启动并立即交换初始距离向量，之后每隔30秒交换最新距离向量。从初始交换时刻算起，R11～R16均获得到达210.2.4.0/24的正确路由至少需要多长时间？（2分）</li><li>R44向R13通告136.5.16.0/20时，使用哪类BGP会话和哪个BGP报文？R13向R14、R15通告时使用哪类会话？（2分）</li><li>根据下表所示的AS路径和下一跳信息，在无策略约束时，R14和R15到136.5.16.0/20的下一跳分别是什么？（2分）</li></ol><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2024/2024-47b.png\" alt=\"2024年408第47题BGP路径信息表\" style=\"max-width:100%;height:auto\"></p><p>本题参考答案依据拓扑图中的AS内IGP距离进行热土豆路由选择。</p><p><a href=\"https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf\" target=\"_blank\" rel=\"noopener\">查看2024年408回忆版原卷（第47题）</a></p>"
   }
 ];
