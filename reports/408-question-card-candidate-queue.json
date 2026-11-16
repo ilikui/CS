@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T14:10:17.578Z",
+  "generatedAt": "2026-11-16T14:13:44.198Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -2969,6 +2969,14 @@
           ]
         },
         {
+          "card": "以太网 CSMA/CD",
+          "score": 7,
+          "matchedTerms": [
+            "信号",
+            "ca"
+          ]
+        },
+        {
           "card": "ARP 与 DHCP",
           "score": 7,
           "matchedTerms": [
@@ -2989,13 +2997,6 @@
           "matchedTerms": [
             "cc",
             "aa"
-          ]
-        },
-        {
-          "card": "IPv6 地址与首部特点",
-          "score": 6,
-          "matchedTerms": [
-            "地址"
           ]
         }
       ]
@@ -5476,6 +5477,13 @@
           ]
         },
         {
+          "card": "以太网 CSMA/CD",
+          "score": 7,
+          "matchedTerms": [
+            "cd"
+          ]
+        },
+        {
           "card": "交换机自学习与转发",
           "score": 5,
           "matchedTerms": [
@@ -5496,13 +5504,6 @@
           "score": 5,
           "matchedTerms": [
             "min"
-          ]
-        },
-        {
-          "card": "以太网 CSMA/CD",
-          "score": 4,
-          "matchedTerms": [
-            "cd"
           ]
         }
       ]
@@ -8241,6 +8242,16 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "以太网 CSMA/CD",
+          "score": 7,
+          "matchedTerms": [
+            "二进制",
+            "是否发",
+            "否发生",
+            "是否发生"
+          ]
+        },
+        {
           "card": "以太网帧与 MAC 地址",
           "score": 5,
           "matchedTerms": [
@@ -8270,13 +8281,6 @@
           "matchedTerms": [
             "r1",
             "二进制"
-          ]
-        },
-        {
-          "card": "网桥与交换机的冲突域广播域",
-          "score": 4,
-          "matchedTerms": [
-            "同一"
           ]
         }
       ]
@@ -10867,18 +10871,18 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "以太网 CSMA/CD",
+          "score": 7,
+          "matchedTerms": [
+            "cd"
+          ]
+        },
+        {
           "card": "路由选择与转发表",
           "score": 4,
           "matchedTerms": [
             "数最多",
             "合并成"
-          ]
-        },
-        {
-          "card": "以太网 CSMA/CD",
-          "score": 4,
-          "matchedTerms": [
-            "cd"
           ]
         },
         {
@@ -11069,10 +11073,14 @@
           ]
         },
         {
-          "card": "CSMA/CA 与无线局域网",
+          "card": "以太网 CSMA/CD",
           "score": 7,
           "matchedTerms": [
-            "ca"
+            "ca",
+            "发生冲",
+            "生冲突",
+            "发生冲突",
+            "过程中"
           ]
         }
       ]
@@ -16326,6 +16334,19 @@
           ]
         },
         {
+          "card": "以太网 CSMA/CD",
+          "score": 10,
+          "matchedTerms": [
+            "二进制",
+            "题目给",
+            "目给出",
+            "给出的",
+            "题目给出",
+            "目给出的",
+            "题目给出的"
+          ]
+        },
+        {
           "card": "IP 地址与子网划分",
           "score": 10,
           "matchedTerms": [
@@ -16339,16 +16360,6 @@
           "matchedTerms": [
             "地址",
             "h2"
-          ]
-        },
-        {
-          "card": "ARP 与 DHCP",
-          "score": 9,
-          "matchedTerms": [
-            "h1",
-            "h2",
-            "地址",
-            "的地址"
           ]
         }
       ]
@@ -24139,6 +24150,14 @@
           ]
         },
         {
+          "card": "以太网 CSMA/CD",
+          "score": 8,
+          "matchedTerms": [
+            "cd",
+            "给出的"
+          ]
+        },
+        {
           "card": "TCP 可靠传输与流量控制",
           "score": 6,
           "matchedTerms": [
@@ -24151,13 +24170,6 @@
           "matchedTerms": [
             "bb",
             "题目"
-          ]
-        },
-        {
-          "card": "卫星链路传播时延与文件发送时延",
-          "score": 5,
-          "matchedTerms": [
-            "ms"
           ]
         }
       ]
@@ -24198,14 +24210,14 @@
           ]
         },
         {
-          "card": "ARP 与 DHCP",
-          "score": 3,
+          "card": "以太网 CSMA/CD",
+          "score": 4,
           "matchedTerms": [
-            "h1"
+            "二进制"
           ]
         },
         {
-          "card": "IPv4 子网划分与 CIDR",
+          "card": "ARP 与 DHCP",
           "score": 3,
           "matchedTerms": [
             "h1"
@@ -32172,11 +32184,11 @@
           ]
         },
         {
-          "card": "IP TTL 与路由转发",
+          "card": "以太网 CSMA/CD",
           "score": 5,
           "matchedTerms": [
-            "初始",
-            "最后一"
+            "二进制",
+            "过程中"
           ]
         }
       ]
@@ -34979,6 +34991,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "以太网 CSMA/CD",
+          "score": 5,
+          "matchedTerms": [
+            "流程",
+            "过程中"
+          ]
+        },
+        {
           "card": "分层体系结构与封装",
           "score": 4,
           "matchedTerms": [
@@ -35009,13 +35029,6 @@
           "score": 4,
           "matchedTerms": [
             "时需"
-          ]
-        },
-        {
-          "card": "IP TTL 与路由转发",
-          "score": 4,
-          "matchedTerms": [
-            "初始"
           ]
         }
       ]
@@ -43098,6 +43111,15 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "以太网 CSMA/CD",
+          "score": 15,
+          "matchedTerms": [
+            "cd",
+            "二进制",
+            "信号"
+          ]
+        },
+        {
           "card": "奈奎斯特与香农信道容量",
           "score": 11,
           "matchedTerms": [
@@ -43130,16 +43152,6 @@
           "matchedTerms": [
             "编址",
             "地址"
-          ]
-        },
-        {
-          "card": "IPv4 首部与分片",
-          "score": 10,
-          "matchedTerms": [
-            "mf",
-            "不能超",
-            "能超过",
-            "不能超过"
           ]
         }
       ]
