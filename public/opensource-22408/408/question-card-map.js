@@ -2740,6 +2740,424 @@ window.QUESTION_CARD_MAP = {
         "status": "verified"
       }
     ]
+  },
+  "2017-41": {
+    "year": 2017,
+    "index": 41,
+    "id": 417,
+    "subject": "数据结构",
+    "subjectCode": "data-structure",
+    "typeName": "应用题",
+    "score": 15,
+    "question": "设计算法，将表达式树（二叉树）转换为等价中缀表达式，用括号反映操作符计算次序。结点data[10]保存操作数或操作符，left、right指向左右孩子。样例输出：(a+b)*(c*(-d)) 和 (a*b)+(-(c-d))。",
+    "answer": "改造中序遍历：访问非根、非叶内部结点时，在遍历左子树前输出左括号，遍历右子树后输出右括号；根结点和叶结点不加括号。",
+    "analysis": "算法是中序遍历的扩展。括号必须包围完整子表达式，且左右括号数量匹配。每个结点只访问一次，时间复杂度O(n)，递归栈空间O(h)，h为树高。",
+    "steps": [
+      "中序遍历顺序为左子表达式、运算符、右子表达式，与中缀表达式顺序一致。",
+      "仅中序遍历不足以体现子表达式的优先级和计算次序，需要给内部子表达式加括号。",
+      "根结点代表整个表达式，最外层括号可省略；叶结点是操作数，不需要括号。",
+      "递归访问每个结点：若其不是根结点且不是叶结点，先输出“(”，再遍历左子树、输出当前运算符、遍历右子树，最后输出“)”。",
+      "单目运算符按表达式树中的孩子位置输出，例如负号结点可只有右子树，从而生成-d或-(c-d)。"
+    ],
+    "code": "void printInfix(BTree *p, int depth) { if (!p) return; int leaf = !p->left && !p->right; int paren = depth > 1 && !leaf; if (paren) printf(\"(\"); printInfix(p->left, depth+1); printf(\"%s\", p->data); printInfix(p->right, depth+1); if (paren) printf(\")\"); }",
+    "audit": {
+      "status": "cross-checked",
+      "note": "原题、参考答案与原卷图像核验完成；核心考点和次级考点已分别人工关联。"
+    },
+    "cards": [
+      {
+        "title": "二叉树遍历与性质",
+        "topic": "二叉树遍历与性质",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "树的基本术语与性质",
+        "topic": "树的基本术语与性质",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "递归算法与递归树",
+        "topic": "递归算法与递归树",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "二叉树遍历与性质"
+    ],
+    "secondaryCards": [
+      "树的基本术语与性质",
+      "递归算法与递归树"
+    ]
+  },
+  "2017-42": {
+    "year": 2017,
+    "index": 42,
+    "id": 418,
+    "subject": "数据结构",
+    "subjectCode": "data-structure",
+    "typeName": "应用题",
+    "score": 8,
+    "question": "使用Prim算法求带权连通图的最小生成树：从A开始依次给出选边；判断MST是否唯一；给出任意带权连通图MST唯一的一个充分条件。",
+    "answer": "选边顺序：(A,D)、(D,E)、(C,E)、(B,C)。该图MST唯一。充分条件：任意一个环中的边权互不相同；更强的充分条件是全图边权均不相同。",
+    "analysis": "Prim每一步只能从树内顶点到树外顶点的跨集合边中选择最小权值边。不能误选不连接两个集合的边。图的边权来自原卷图像：AB=6、AD=4、AE=5、BC=4、CD=6、CE=5、DE=4。",
+    "steps": [
+      "初始S={A}，候选边AB=6、AD=4、AE=5，选择AD(4)。",
+      "S={A,D}，跨集合候选边AB=6、AE=5、DE=4、DC=6，选择DE(4)。",
+      "S={A,D,E}，候选边AB=6、DC=6、CE=5，选择CE(5)。",
+      "S={A,D,E,C}，连接B的候选边AB=6、CB=4，选择CB(4)，所有顶点纳入生成树。",
+      "MST边集为{AD,DE,CE,CB}，总权值4+4+5+4=17。",
+      "图中其他替代连接边权值更大，因此MST唯一。一般地，若每个环内边权均互不相同，则MST唯一。"
+    ],
+    "code": "",
+    "audit": {
+      "status": "cross-checked",
+      "note": "原题、参考答案与原卷图像核验完成；核心考点和次级考点已分别人工关联。"
+    },
+    "cards": [
+      {
+        "title": "最小生成树与最短路径",
+        "topic": "最小生成树与最短路径",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "图的存储与遍历",
+        "topic": "图的存储与遍历",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "算法复杂度",
+        "topic": "算法复杂度",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "最小生成树与最短路径"
+    ],
+    "secondaryCards": [
+      "图的存储与遍历",
+      "算法复杂度"
+    ]
+  },
+  "2017-43": {
+    "year": 2017,
+    "index": 43,
+    "id": 419,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "应用题",
+    "score": 13,
+    "question": "已知f(n)=Σ(i=0..n)2^i=2^(n+1)-1。f1使用32位unsigned循环变量i、n及32位int累加；将f1中的int改为float得到f2，float为IEEE754单精度。求n=0死循环原因、n=23/24结果、n=31整数结果及f1最大正确n、f2(127)含义和f2不溢出/精确计算的最大n。",
+    "answer": "(1) n=0时n−1无符号回绕为2^32−1，循环条件恒真；改为int后0≤−1为假。(2) f1(23)=f2(23)=16777215，机器数分别为00FFFFFFH、4B7FFFFFH。(3) f2(24)舍入为33554432.0，比精确值33554431大1。(4) f1(31)低32位全1，按补码解释为−1；最大正确n=30。(5) 7F800000H为+∞；f2不溢出的最大n=126；完全精确的最大n=23。",
+    "analysis": "本题区分整数范围与浮点有效精度。float可表示很大的数，但超过24位有效精度后不保证逐整数精确。严格按ISO C，signed int溢出属于未定义行为；题目按给定32位机器的低32位结果解释。",
+    "steps": [
+      "n=0时n−1按模2^32运算得到FFFFFFFFH。i从0递增，i≤FFFFFFFFH始终成立；i达到最大值后再加1回绕为0，循环无法退出。",
+      "若i、n均为int，初次比较为0≤−1，条件为假，不进入循环。",
+      "n=23时f=2^24−1=16777215，二进制有24个有效位，恰好能被单精度24位有效精度精确表示。整数机器数为00FFFFFFH，float机器数为4B7FFFFFH。",
+      "n=24时f=2^25−1需要25位有效二进制位，超过单精度24位精度，按最近偶数舍入得到2^25=33554432.0。",
+      "n=31时数学结果2^32−1超过32位有符号int最大值。按题目32位机器低32位解释，结果FFFFFFFFH作为补码为−1。要求2^(n+1)−1≤2^31−1，因此最大n=30。",
+      "7F800000H指数全1且尾数全0，表示正无穷大。n=126时结果2^127仍可表示；n=127时2^128溢出，因此最大不溢出n=126。",
+      "2^(n+1)−1由n+1个连续的1组成，要求单精度完全精确须n+1≤24，因此最大n=23。"
+    ],
+    "code": "",
+    "audit": {
+      "status": "cross-checked",
+      "note": "原题、参考答案与原卷图像核验完成；核心考点和次级考点已分别人工关联。"
+    },
+    "cards": [
+      {
+        "title": "数据表示与补码",
+        "topic": "数据表示与补码",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "IEEE 754 单精度字段",
+        "topic": "IEEE 754 单精度字段",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "定点补码加减与溢出",
+        "topic": "定点补码加减与溢出",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "浮点数表示与规格化",
+        "topic": "浮点数表示与规格化",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "数据表示与补码",
+      "IEEE 754 单精度字段"
+    ],
+    "secondaryCards": [
+      "定点补码加减与溢出",
+      "浮点数表示与规格化"
+    ]
+  },
+  "2017-44": {
+    "year": 2017,
+    "index": 44,
+    "id": 420,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "应用题",
+    "score": 10,
+    "question": "按字节编址的计算机M执行f1，首条指令push ebp地址00401020H，末条ret地址0040107FH；第20条cmp比较i与n−1，第23条shl edx,1实现power*2。判断M属于RISC还是CISC，计算代码长度，求f1(0)时cmp后的CF，以及f2(float版本)能否用shl实现power*2。",
+    "answer": "(1) M为CISC，指令长度不等。(2) 代码长度=0040107FH−00401020H+1=60H=96B。(3) n=0、i=0时n−1=FFFFFFFFH，0−FFFFFFFFH发生无符号借位，CF=1。(4) f2不能用shl实现浮点power×2。",
+    "analysis": "CF是无符号减法借位标志，不能因结果位型为1就误判CF=0。浮点乘2应使用浮点运算或调整指数，而不是把整个IEEE754位串当整数左移。",
+    "steps": [
+      "原卷机器码显示指令长度可变，例如push ebp为1字节、cmp为3字节、shl为2字节，因此M属于CISC。",
+      "按字节编址，首末地址均包含，长度=0x7F−0x20+1=0x60=96字节。",
+      "f1(0)时n=i=0，unsigned的n−1=FFFFFFFFH。cmp执行0−FFFFFFFFH，结果位型为00000001H，但发生借位，所以CF=1。",
+      "shl对整数位串左移；float编码包含符号、阶码和尾数，整体移位会破坏字段含义，不等价于浮点乘2。"
+    ],
+    "code": "",
+    "audit": {
+      "status": "cross-checked",
+      "note": "原题、参考答案与原卷图像核验完成；核心考点和次级考点已分别人工关联。"
+    },
+    "cards": [
+      {
+        "title": "RISC 与 CISC",
+        "topic": "RISC 与 CISC",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "指令系统与寻址方式",
+        "topic": "指令系统与寻址方式",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "定点补码加减与溢出",
+        "topic": "定点补码加减与溢出",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "IEEE 754 单精度字段",
+        "topic": "IEEE 754 单精度字段",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "计算机性能指标 CPI 与 CPU 时间",
+        "topic": "计算机性能指标 CPI 与 CPU 时间",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "RISC 与 CISC",
+      "指令系统与寻址方式"
+    ],
+    "secondaryCards": [
+      "定点补码加减与溢出",
+      "IEEE 754 单精度字段",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
+  },
+  "2017-45": {
+    "year": 2017,
+    "index": 45,
+    "id": 421,
+    "subject": "操作系统",
+    "subjectCode": "operating-system",
+    "typeName": "应用题",
+    "score": 7,
+    "question": "计算机M采用二级分页，虚拟地址由页目录号10位、页表索引10位、页内偏移12位组成。结合题44机器代码，求代码占页数、取首条push ebp指令时访问的页目录和页表项编号；若进程P在调用f1前通过scanf获取n，说明进程状态变化及CPU是否进入内核态。",
+    "answer": "(1) f1机器代码占1页。(2) 首条指令00401020H的页目录号为1、页表索引为1，分别访问第1号页目录项和第1号页表项（从0编号）。(3) scanf等待输入时运行态→阻塞态；输入中断后阻塞态→就绪态；被调度后就绪态→运行态。CPU会进入内核态。",
+    "analysis": "进程状态与CPU特权级是不同概念：进程阻塞并不意味着CPU停在阻塞态，CPU会调度其他进程；处理中断和内核I/O服务时CPU处于内核态。",
+    "steps": [
+      "页大小为2^12=4KB。代码从00401020H到0040107FH，均位于页基址00401000H对应的同一页，因此占1页。",
+      "页目录号为虚拟地址[31:22]：00401020H>>22=1，访问页目录下标1。",
+      "页表索引为虚拟地址[21:12]：(00401020H>>12)&3FFH=1，访问对应页表下标1。",
+      "scanf等待I/O时，进程由运行态变为阻塞态；设备输入完成并产生中断后，进程被唤醒为就绪态；获得CPU后再变为运行态。",
+      "系统调用及中断处理程序在内核态执行，因此CPU会切换到内核态。"
+    ],
+    "code": "",
+    "audit": {
+      "status": "cross-checked",
+      "note": "原题、参考答案与原卷图像核验完成；核心考点和次级考点已分别人工关联。"
+    },
+    "cards": [
+      {
+        "title": "页表结构与地址转换",
+        "topic": "页表结构与地址转换",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "系统调用与用户态内核态",
+        "topic": "系统调用与用户态内核态",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "TLB 与快表命中",
+        "topic": "TLB 与快表命中",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "中断响应与异常处理",
+        "topic": "中断响应与异常处理",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "虚拟内存与页面置换",
+        "topic": "虚拟内存与页面置换",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "页表结构与地址转换",
+      "系统调用与用户态内核态"
+    ],
+    "secondaryCards": [
+      "TLB 与快表命中",
+      "中断响应与异常处理",
+      "虚拟内存与页面置换"
+    ]
+  },
+  "2017-46": {
+    "year": 2017,
+    "index": 46,
+    "id": 422,
+    "subject": "操作系统",
+    "subjectCode": "operating-system",
+    "typeName": "应用题",
+    "score": 8,
+    "question": "三个并发线程共享全局复数x、y、z。thread1读取x、y并执行w=add(x,y)；thread2读取y、z并执行w=add(y,z)；thread3执行z=add(z,w)和y=add(y,w)。设计信号量及P/V操作，保证临界资源互斥并最大程度并发。",
+    "answer": "设置y_mutex1=1、y_mutex2=1、z_mutex=1。thread1读y使用y_mutex1；thread2读y、z分别使用y_mutex2、z_mutex；thread3写z使用z_mutex，写y时同时持有y_mutex1和y_mutex2。thread1与thread2只读y，可并发执行。",
+    "analysis": "最大并发的关键是按共享变量冲突关系细粒度加锁。thread1和thread2同时读取y不冲突；thread3写y时必须同时排斥两者。thread2和thread3对z的读写通过z_mutex互斥。thread3分段释放z和y的锁，缩短临界区。",
+    "steps": [
+      "x仅由thread1访问，不存在共享冲突，不需要信号量。",
+      "y上thread1和thread2均为读操作，可以并发；thread1与thread3、thread2与thread3存在读写冲突，因此分别设置y_mutex1和y_mutex2。",
+      "z上thread2读取、thread3更新，存在读写冲突，设置z_mutex。",
+      "thread1：P(y_mutex1)；读取x、y并计算w=add(x,y)；V(y_mutex1)。",
+      "thread2：P(z_mutex)；P(y_mutex2)；读取y、z并计算w=add(y,z)；V(y_mutex2)；V(z_mutex)。",
+      "thread3先更新z：P(z_mutex)；z=add(z,w)；V(z_mutex)。再更新y：P(y_mutex1)；P(y_mutex2)；y=add(y,w)；V(y_mutex2)；V(y_mutex1)。",
+      "锁只覆盖实际访问共享变量的临界区，后续私有计算不持锁，从而避免用一把全局锁串行化三个线程。"
+    ],
+    "code": "semaphore y_mutex1=1, y_mutex2=1, z_mutex=1;\\nthread1: P(y_mutex1); w=add(x,y); V(y_mutex1);\\nthread2: P(z_mutex); P(y_mutex2); w=add(y,z); V(y_mutex2); V(z_mutex);\\nthread3: P(z_mutex); z=add(z,w); V(z_mutex); P(y_mutex1); P(y_mutex2); y=add(y,w); V(y_mutex2); V(y_mutex1);",
+    "audit": {
+      "status": "cross-checked",
+      "note": "原题、参考答案与原卷图像核验完成；核心考点和次级考点已分别人工关联。"
+    },
+    "cards": [
+      {
+        "title": "进程同步与信号量",
+        "topic": "进程同步与信号量",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "互斥锁、自旋锁与信号量",
+        "topic": "互斥锁、自旋锁与信号量",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "线程模型与多线程映射",
+        "topic": "线程模型与多线程映射",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "临界区互斥访问原则",
+        "topic": "临界区互斥访问原则",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "进程同步与信号量",
+      "互斥锁、自旋锁与信号量"
+    ],
+    "secondaryCards": [
+      "线程模型与多线程映射",
+      "临界区互斥访问原则"
+    ]
+  },
+  "2017-47": {
+    "year": 2017,
+    "index": 47,
+    "id": 423,
+    "subject": "计算机网络",
+    "subjectCode": "computer-network",
+    "typeName": "应用题",
+    "score": 9,
+    "question": "甲乙双方采用GBN后退N帧协议持续双向传输并始终捎带确认。帧长1000B，发送序号和确认序号均为3位，速率100Mbps，RTT=0.96ms。根据两种时序图，求甲方已确认帧、剩余发送额度、超时重传帧和最大信道利用率。",
+    "answer": "(1) 图(a)中乙已正确接收S0,0、S1,0、S2,0，共3帧。(2) 图(a)从t1起最多还能发5帧，首帧S5,2，末帧S1,2（序号模8循环）。(3) 图(b)需重发3帧，首帧S2,3。(4) 最大信道利用率50%。",
+    "analysis": "确认号表示接收方下一期待序号；GBN采用累计确认，超时后重发出错帧及其后尚未确认的帧。捎带确认帧同样占用链路发送时间，因此利用率分母包含Td、RTT和Ta。",
+    "steps": [
+      "图(a)收到R3,3，确认号3表示乙方期待甲方序号3，因此甲方序号0、1、2均已正确接收，即S0,0、S1,0、S2,0。",
+      "3位序号共有8个编号。GBN为避免序号回绕混淆，最大发送窗口为2^3−1=7。",
+      "图(a)中甲已发送S3,0和S4,1，仍有2个未确认帧占用窗口，因此最多还能发送7−2=5帧。后续序号为5、6、7、0、1，首帧S5,2，末帧S1,2。",
+      "图(b)中S2,0超时。GBN超时后重传该帧及其后所有未确认帧，故重传序号2、3、4共3帧。已收到乙方R2，确认号字段为3，首帧S2,3。",
+      "单帧发送时间Td=1000×8/(100×10^6)=0.08ms；捎带确认帧长度相同，Ta=0.08ms。",
+      "U=N×Td/(Td+RTT+Ta)=7×0.08/(0.08+0.96+0.08)=0.56/1.12=0.5=50%。"
+    ],
+    "code": "",
+    "audit": {
+      "status": "cross-checked",
+      "note": "原题、参考答案与原卷图像核验完成；核心考点和次级考点已分别人工关联。"
+    },
+    "cards": [
+      {
+        "title": "GBN 后退 N 帧协议",
+        "topic": "GBN 后退 N 帧协议",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "SR 选择重传协议",
+        "topic": "SR 选择重传协议",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "停止等待协议与利用率",
+        "topic": "停止等待协议与利用率",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "网络性能指标与时延",
+        "topic": "网络性能指标与时延",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "数据链路层与差错检测",
+        "topic": "数据链路层与差错检测",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "GBN 后退 N 帧协议"
+    ],
+    "secondaryCards": [
+      "SR 选择重传协议",
+      "停止等待协议与利用率",
+      "网络性能指标与时延",
+      "数据链路层与差错检测"
+    ]
   }
 };
 window.CARD_QUESTION_LIST = {
@@ -2758,7 +3176,8 @@ window.CARD_QUESTION_LIST = {
     "2015-8"
   ],
   "二叉树遍历与性质": [
-    "2011-5"
+    "2011-5",
+    "2017-41"
   ],
   "树与森林的遍历": [
     "2011-5"
@@ -2790,10 +3209,13 @@ window.CARD_QUESTION_LIST = {
     "2009-9"
   ],
   "数据表示与补码": [
+    "2017-43",
     "2018-13"
   ],
   "IEEE 754 单精度字段": [
-    "2011-13"
+    "2011-13",
+    "2017-43",
+    "2017-44"
   ],
   "Cache 直接映射与组相联": [
     "2009-14",
@@ -2818,7 +3240,8 @@ window.CARD_QUESTION_LIST = {
     "2011-16"
   ],
   "浮点数表示与规格化": [
-    "2015-14"
+    "2015-14",
+    "2017-43"
   ],
   "移位运算与舍入": [
     "2015-14"
@@ -2842,12 +3265,14 @@ window.CARD_QUESTION_LIST = {
     "2012-31"
   ],
   "临界区互斥访问原则": [
-    "2016-27"
+    "2016-27",
+    "2017-46"
   ],
   "进程同步与信号量": [
     "2011-45",
     "2014-47",
-    "2015-45"
+    "2015-45",
+    "2017-46"
   ],
   "银行家算法安全性检查": [
     "2011-27"
@@ -2855,7 +3280,8 @@ window.CARD_QUESTION_LIST = {
   "页表结构与地址转换": [
     "2010-29",
     "2015-46",
-    "2016-45"
+    "2016-45",
+    "2017-45"
   ],
   "进程调度算法": [
     "2009-24",
@@ -2995,14 +3421,16 @@ window.CARD_QUESTION_LIST = {
   ],
   "中断响应与异常处理": [
     "2015-22",
-    "2016-44"
+    "2016-44",
+    "2017-45"
   ],
   "ALOHA 与 CSMA": [
     "2009-37"
   ],
   "图的存储与遍历": [
     "2014-42",
-    "2015-42"
+    "2015-42",
+    "2017-42"
   ],
   "CPU 指令执行过程": [
     "2014-44",
@@ -3018,7 +3446,8 @@ window.CARD_QUESTION_LIST = {
   "虚拟内存与页面置换": [
     "2014-45",
     "2015-46",
-    "2016-45"
+    "2016-45",
+    "2017-45"
   ],
   "ARP 与 DHCP": [
     "2015-47"
@@ -3033,20 +3462,24 @@ window.CARD_QUESTION_LIST = {
     "2016-41"
   ],
   "树的基本术语与性质": [
-    "2016-42"
+    "2016-42",
+    "2017-41"
   ],
   "快速排序分区过程": [
     "2016-43"
   ],
   "算法复杂度": [
-    "2016-43"
+    "2016-43",
+    "2017-42"
   ],
   "计算机性能指标 CPI 与 CPU 时间": [
-    "2016-44"
+    "2016-44",
+    "2017-44"
   ],
   "TLB 与快表命中": [
     "2014-45",
-    "2016-45"
+    "2016-45",
+    "2017-45"
   ],
   "调度评价指标": [
     "2016-46"
@@ -3058,9 +3491,45 @@ window.CARD_QUESTION_LIST = {
     "2016-47"
   ],
   "指令系统与寻址方式": [
-    "2014-44"
+    "2014-44",
+    "2017-44"
   ],
   "互斥锁、自旋锁与信号量": [
-    "2014-47"
+    "2014-47",
+    "2017-46"
+  ],
+  "递归算法与递归树": [
+    "2017-41"
+  ],
+  "最小生成树与最短路径": [
+    "2017-42"
+  ],
+  "定点补码加减与溢出": [
+    "2017-43",
+    "2017-44"
+  ],
+  "RISC 与 CISC": [
+    "2017-44"
+  ],
+  "系统调用与用户态内核态": [
+    "2017-45"
+  ],
+  "线程模型与多线程映射": [
+    "2017-46"
+  ],
+  "GBN 后退 N 帧协议": [
+    "2017-47"
+  ],
+  "SR 选择重传协议": [
+    "2017-47"
+  ],
+  "停止等待协议与利用率": [
+    "2017-47"
+  ],
+  "网络性能指标与时延": [
+    "2017-47"
+  ],
+  "数据链路层与差错检测": [
+    "2017-47"
   ]
 };
