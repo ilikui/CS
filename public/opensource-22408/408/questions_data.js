@@ -1,4 +1,4 @@
-/* 408 真题与原创练习题数据；历年真题原卷来源及核验状态见 verified-solutions.json。 */
+/* 408 真题与练习数据；真题来源与核验说明见 verified-solutions.json。 */
 window.QUESTIONS_DATA = [
   {
     "id": "ds-001",
@@ -564,5 +564,61 @@ window.QUESTIONS_DATA = [
     "question": "<p>（9分）某网络拓扑如题47图所示，R为路由器，S为以太网交换机，AP为802.11接入点。路由器E0接口及DHCP服务器的IP地址配置见图；H1与H2属于同一广播域但不属于同一冲突域；H2和H3属于同一冲突域；H4和H5已接入网络并通过DHCP动态获取IP地址。现有路由器、100BaseT以太网交换机和100BaseT集线器（Hub）三类设备各若干台。</p><ol><li>设备1和设备2分别应选择哪类设备？</li><li>若信号传播速度为2×10^8m/s，以太网最小帧长为64B，信号通过设备2时额外延迟1.51μs，H2与H3之间最远可相距多少？</li><li>H4通过DHCP动态获取IP地址时首先发送的报文M是什么？路由器E0接口能否收到封装M的以太网帧？S向DHCP服务器转发该帧的目的MAC地址是什么？</li><li>若H4向H5发送IP分组P，H5收到的封装P的802.11帧地址1、地址2、地址3分别是什么？</li></ol><p>原卷图中：R的E0为192.168.0.1/25、MAC 00-11-11-11-11-A1；DHCP服务器为192.168.0.2/25、MAC 00-11-11-11-11-B1；AP的MAC为00-11-11-11-11-C1；H4为192.168.0.3/25、MAC 00-11-11-11-11-D1；H5为192.168.0.4/25、MAC 00-11-11-11-11-E1。</p><p><a href=\"https://images.eduego.com/Uploads/files/wenjian/202312/202312260079107.pdf#page=9\" target=\"_blank\" rel=\"noopener\">查看2022年408原卷第9页及原题图</a></p>",
     "answer": "设备1选交换机，设备2选Hub；H2与H3最远距离210m；M为DHCP Discover，路由器E0能收到该广播帧，S转发帧的目的MAC为FF-FF-FF-FF-FF-FF；802.11地址1=H5的00-11-11-11-11-E1，地址2=AP的00-11-11-11-11-C1，地址3=H4的00-11-11-11-11-D1。",
     "analysisHtml": "<p>交换机隔离冲突域但保留同一广播域；Hub共享冲突域。最小帧发送时间为64×8/100Mb/s=5.12μs，扣除两次设备延迟3.02μs后，线路往返传播时间为2.10μs，单程1.05μs，距离210m。DHCP Discover以广播方式发送。AP向无线终端转发时，地址1是接收端，地址2是AP，地址3保留原始发送端地址。</p>"
+  },
+  {
+    "id": 579,
+    "subject": "data-structure",
+    "year": 2023,
+    "index": 41,
+    "score": 13,
+    "question": "<p>（13分）已知有向图G采用邻接矩阵存储，类型定义如下：</p><pre><code>typedef struct {\n    int numVertices, numEdges;\n    char VerticesList[MAXV];\n    int Edge[MAXV][MAXV];\n} MGraph;</code></pre><p>将图中出度大于入度的顶点称为K顶点。例如题41图中，顶点a和b都是K顶点。题图的有向边为：a→b、a→d、b→d、b→c、c→d。</p><p>请设计算法 int printVertices(MGraph G)，对给定的任意非空有向图G，输出图G中所有K顶点，并返回K顶点的个数。要求：（1）给出算法的基本设计思想；（2）采用C或C++描述算法并注释。</p><p><a href=\"https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf#page=8\" target=\"_blank\" rel=\"noopener\">查看2023年408原卷第8页</a></p>"
+  },
+  {
+    "id": 580,
+    "subject": "data-structure",
+    "year": 2023,
+    "index": 42,
+    "score": 10,
+    "question": "<p>（10分）对含有n（n&gt;0）个记录的文件进行外部排序，采用置换-选择排序生成初始归并段时需要使用一个工作区，工作区中能保存m个记录。请回答：</p><ol><li>若文件中含有19个记录，其关键字依次是51、94、37、92、14、63、15、99、48、56、23、60、31、17、43、8、90、166、100，当m=4时，可生成几个初始归并段？各是什么？</li><li>对任意的m（n远大于m且m&gt;0），生成的第一个初始归并段的长度最大值和最小值分别是多少？</li></ol><p><a href=\"https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf#page=8\" target=\"_blank\" rel=\"noopener\">查看2023年408原卷第8页</a></p>"
+  },
+  {
+    "id": 581,
+    "subject": "computer-organization",
+    "year": 2023,
+    "index": 43,
+    "score": 14,
+    "question": "<p>（14分）已知计算机M字长为32位，按字节编址，采用请求调页策略的虚拟存储管理方式，虚拟地址32位，页面大小4KB；数据Cache采用4路组相联映射，数据区大小8KB，主存块大小32B。程序：</p><pre><code>int a[24][64];\nfor (i=0; i&lt;24; i++)\n    for (j=0; j&lt;64; j++) a[i][j]=10;</code></pre><p>二维数组a按行优先存放，虚拟地址空间起始地址为00422000H，sizeof(int)=4。执行前数组a不在主存，执行过程中不会发生页面置换。回答：（1）数组分布在几个页面，访问发生几次缺页，页故障地址是什么？（2）不考虑i、j，数据访问是否具有时间局部性？（3）虚拟地址哪些位用作块内地址和Cache组号？a[1][0]地址及其Cache组号？（4）数组占用多少主存块？原循环和交换i、j顺序后的Cache命中率各是多少？</p><p><a href=\"https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf#page=9\" target=\"_blank\" rel=\"noopener\">查看2023年408原卷第9页</a></p>"
+  },
+  {
+    "id": 582,
+    "subject": "computer-organization",
+    "year": 2023,
+    "index": 44,
+    "score": 9,
+    "question": "<p>（9分）题43中的C程序段在计算机M上的部分机器级代码如下：</p><table><tr><th>指令序号</th><th>虚拟地址</th><th>机器指令</th><th>汇编指令</th></tr><tr><td>1</td><td>00401072</td><td>C7 45 F8 00 00 00 00</td><td>mov [ebp-8],0</td></tr><tr><td>2</td><td>00401079</td><td>EB 09</td><td>jmp 00401084h</td></tr><tr><td>3</td><td>0040107B</td><td>8B 55 F8</td><td>mov eax,[ebp-8]</td></tr><tr><td>7</td><td>00401088</td><td>7D 32</td><td>jge 004010BCh</td></tr><tr><td>8</td><td>0040108A</td><td>C7 45 FC 00 00 00 00</td><td>mov [ebp-4],0</td></tr><tr><td>19</td><td>004010AE</td><td>C7 84 82 00 20 42 00 0A 00 00 00</td><td>mov [ecx+edx*4+00422000h],0Ah</td></tr></table><p>请回答：（1）第20条指令的虚拟地址是多少？（2）第2条jmp和第7条jge的寻址方式是什么？给出第2条jmp跳转目标地址计算过程。（3）第19条mov的源操作数采用什么寻址方式？edx存放变量j时，ecx存放什么？根据机器码判断大端还是小端？（4）第一次执行第19条指令时，取指过程中是否发生缺页异常？为什么？</p><p><a href=\"https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf#page=10\" target=\"_blank\" rel=\"noopener\">查看2023年408原卷第10页</a></p>"
+  },
+  {
+    "id": 583,
+    "subject": "operating-system",
+    "year": 2023,
+    "index": 45,
+    "score": 7,
+    "question": "<p>（7分）现要求使用swap指令和布尔型变量lock实现临界区互斥。lock为线程间共享变量，lock为TRUE时线程不能进入临界区，为FALSE时线程能进入临界区。某同学编写的伪代码：</p><pre><code>bool lock = FALSE; //共享变量\n...\n//进入区\nbool key = TRUE;\nif (key == TRUE)\n    swap key, lock;\n//临界区\n...\n//退出区\nlock = TRUE;\n...</code></pre><p>另给出函数：</p><pre><code>void newSwap(bool *a, bool *b) {\n    bool temp = *a;\n    *a = *b;\n    *b = temp;\n}</code></pre><p>（1）指出伪代码错误并在不增加语句条数的前提下改正。（2）能否用newSwap(&amp;key,&amp;lock)代替原子swap指令实现互斥？为什么？</p><p><a href=\"https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf#page=11\" target=\"_blank\" rel=\"noopener\">查看2023年408原卷第11页</a></p>"
+  },
+  {
+    "id": 584,
+    "subject": "operating-system",
+    "year": 2023,
+    "index": 46,
+    "score": 8,
+    "question": "<p>（8分）进程P通过执行系统调用从键盘接收一个字符输入，过程中涉及以下操作：①将进程P插入就绪队列；②将进程P插入阻塞队列；③将字符从键盘控制器读入系统缓冲区；④启动键盘中断处理程序；⑤进程P系统调用返回；⑥用户在键盘上输入字符。回答：（1）操作①前一个和后一个操作分别是什么？操作⑥后一个操作是什么？（2）哪个操作之后CPU一定从P切换到其他进程？哪个操作之后调度程序才能选中P？（3）哪个操作由键盘驱动程序完成？（4）键盘中断处理程序执行时P是什么状态，CPU处于内核态还是用户态？</p><p><a href=\"https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf#page=12\" target=\"_blank\" rel=\"noopener\">查看2023年408原卷第12页</a></p>"
+  },
+  {
+    "id": 585,
+    "subject": "computer-network",
+    "year": 2023,
+    "index": 47,
+    "score": 9,
+    "question": "<p>（9分）主机H登录FTP服务器后，向服务器上传大小为18000B的文件F。H为传输F建立数据连接时选择的初始序号为100，MSS=1000B，拥塞控制初始阈值为4MSS，RTT=10ms，忽略TCP段传输时延；发送过程中均以MSS段发送，且无差错、丢包和乱序。回答：（1）FTP控制连接、数据连接分别是持久还是非持久？登录时建立的是哪种连接？（2）文件第1字节序号是多少？断开数据连接时服务器第二次挥手ACK确认序号是多少？（3）收到ACK=2101和ACK=7101时拥塞窗口分别是多少？（4）从请求建立数据连接到确认文件全部接收至少多长时间？应用层数据平均发送速率是多少？</p><p><a href=\"https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf#page=14\" target=\"_blank\" rel=\"noopener\">查看2023年408原卷第14页</a></p>"
   }
 ];
