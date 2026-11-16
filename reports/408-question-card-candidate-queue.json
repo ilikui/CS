@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T12:18:06.600Z",
+  "generatedAt": "2026-11-16T12:35:45.071Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -7,8 +7,8 @@
     "uniqueQuestionsAlreadyLinked": 226,
     "questionsWithoutAnyFormalLink": 573,
     "questionsNeedingAdditionalCardReview": 799,
-    "candidateQuestions": 788,
-    "noCandidateQuestions": 11,
+    "candidateQuestions": 792,
+    "noCandidateQuestions": 7,
     "cards": 190,
     "cardsWithFormalLinks": 150,
     "cardsWithoutFormalLinks": [
@@ -1234,10 +1234,10 @@
           ]
         },
         {
-          "card": "数组行优先与列优先存储",
-          "score": 1,
+          "card": "图的存储与遍历",
+          "score": 2,
           "matchedTerms": [
-            "字节数"
+            "时间"
           ]
         }
       ]
@@ -1403,12 +1403,13 @@
       "candidates": [
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 16,
+          "score": 18,
           "matchedTerms": [
             "执行时",
             "行时间",
             "执行时间",
-            "时间"
+            "时间",
+            "执行"
           ]
         },
         {
@@ -1472,6 +1473,13 @@
           "matchedTerms": [
             "执行"
           ]
+        },
+        {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "执行"
+          ]
         }
       ]
     },
@@ -1511,17 +1519,17 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "中断屏蔽与优先级",
           "score": 2,
           "matchedTerms": [
             "由硬件"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 2,
-          "matchedTerms": [
-            "地址"
           ]
         }
       ]
@@ -1592,6 +1600,13 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "得到"
+          ]
+        },
         {
           "card": "Cache 直接映射与组相联",
           "score": 2,
@@ -1734,9 +1749,10 @@
         },
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 4,
+          "score": 6,
           "matchedTerms": [
-            "执行时"
+            "执行时",
+            "执行"
           ]
         },
         {
@@ -1881,9 +1897,10 @@
       "candidates": [
         {
           "card": "改进型 CLOCK 页面置换",
-          "score": 4,
+          "score": 5,
           "matchedTerms": [
-            "最后"
+            "最后",
+            "过程中"
           ]
         },
         {
@@ -1993,6 +2010,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "进程与线程",
+          "score": 2,
+          "matchedTerms": [
+            "的两个",
+            "题考查"
+          ]
+        },
+        {
           "card": "索引结点 inode 与文件控制块",
           "score": 2,
           "matchedTerms": [
@@ -2000,10 +2025,10 @@
           ]
         },
         {
-          "card": "进程与线程",
+          "card": "TLB 与快表命中",
           "score": 1,
           "matchedTerms": [
-            "的两个"
+            "的转换"
           ]
         }
       ]
@@ -2476,10 +2501,11 @@
         },
         {
           "card": "最小正整数缺失值查找",
-          "score": 6,
+          "score": 8,
           "matchedTerms": [
             "时间",
-            "访问"
+            "访问",
+            "返回"
           ]
         },
         {
@@ -2654,17 +2680,18 @@
           ]
         },
         {
+          "card": "算法复杂度",
+          "score": 3,
+          "matchedTerms": [
+            "个元素",
+            "不可能"
+          ]
+        },
+        {
           "card": "算法五个特性",
           "score": 3,
           "matchedTerms": [
             "输出"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 3,
-          "matchedTerms": [
-            "之间"
           ]
         }
       ]
@@ -3667,6 +3694,13 @@
           "matchedTerms": [
             "执行"
           ]
+        },
+        {
+          "card": "最小正整数缺失值查找",
+          "score": 2,
+          "matchedTerms": [
+            "返回"
+          ]
         }
       ]
     },
@@ -3763,6 +3797,16 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 5,
+          "matchedTerms": [
+            "执行",
+            "程序执",
+            "序执行",
+            "程序执行"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 4,
           "matchedTerms": [
@@ -3776,15 +3820,6 @@
             "结构实",
             "构实现",
             "结构实现"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 3,
-          "matchedTerms": [
-            "程序执",
-            "序执行",
-            "程序执行"
           ]
         },
         {
@@ -3870,19 +3905,20 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 6,
+          "matchedTerms": [
+            "时间",
+            "执行"
+          ]
+        },
+        {
           "card": "中断屏蔽与优先级",
           "score": 6,
           "matchedTerms": [
             "优先级",
             "高优先",
             "高优先级"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 4,
-          "matchedTerms": [
-            "时间"
           ]
         },
         {
@@ -4002,10 +4038,10 @@
           ]
         },
         {
-          "card": "指令系统与寻址方式",
+          "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 2,
           "matchedTerms": [
-            "的计算"
+            "每次"
           ]
         }
       ]
@@ -4327,6 +4363,13 @@
           ]
         },
         {
+          "card": "进程与线程",
+          "score": 1,
+          "matchedTerms": [
+            "并更新"
+          ]
+        },
+        {
           "card": "内核态与用户态特权级",
           "score": 1,
           "matchedTerms": [
@@ -4345,6 +4388,29 @@
           "score": 1,
           "matchedTerms": [
             "并更新"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2010,
+      "index": 36,
+      "id": 83,
+      "subject": "操作系统",
+      "type": "选择题",
+      "question": "2010-第36题-题目 若路由器 R 因为拥塞丢弃 IP 分组，则此时 R 可向发出该 IP 分组的源主机发送的 ICMP 报文类型是（ ）。 A. 路由重定向 B. 目的不可达 C. 源点抑制 D. 超时",
+      "answer": "C",
+      "analysis": "2010-第36题-解析 ICMP 差错报文 报文有 5 种：终点不可达、源点抑制、时间超过、参数问题、改变路由（重定向），其中源点抑制是当路由器或主机由于拥塞而丢弃数据报时，就向源点发送源点抑制报文，使源点知道应当把数据报的发送速率放慢。",
+      "existingCards": [
+        "ICMP 差错报告与诊断"
+      ],
+      "confidence": "low-candidate",
+      "candidates": [
+        {
+          "card": "文件物理分配方式",
+          "score": 2,
+          "matchedTerms": [
+            "超过"
           ]
         }
       ]
@@ -4424,6 +4490,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "文件逻辑结构与物理结构",
+          "score": 2,
+          "matchedTerms": [
+            "的数据",
+            "在物理"
+          ]
+        },
+        {
           "card": "目录结构与文件路径",
           "score": 1,
           "matchedTerms": [
@@ -4435,13 +4509,6 @@
           "score": 1,
           "matchedTerms": [
             "在物理"
-          ]
-        },
-        {
-          "card": "文件逻辑结构与物理结构",
-          "score": 1,
-          "matchedTerms": [
-            "的数据"
           ]
         },
         {
@@ -4930,10 +4997,11 @@
           ]
         },
         {
-          "card": "进程调度算法",
+          "card": "改进型 CLOCK 页面置换",
           "score": 2,
           "matchedTerms": [
-            "等待"
+            "题要求",
+            "过程中"
           ]
         }
       ]
@@ -5045,17 +5113,19 @@
           ]
         },
         {
+          "card": "算法复杂度",
+          "score": 3,
+          "matchedTerms": [
+            "所有元",
+            "有元素",
+            "所有元素"
+          ]
+        },
+        {
           "card": "顺序表按位查找与插删",
           "score": 2,
           "matchedTerms": [
             "元素"
-          ]
-        },
-        {
-          "card": "栈与队列",
-          "score": 2,
-          "matchedTerms": [
-            "入栈"
           ]
         }
       ]
@@ -5111,10 +5181,11 @@
           ]
         },
         {
-          "card": "最小正整数缺失值查找",
+          "card": "算法复杂度",
           "score": 4,
           "matchedTerms": [
-            "的值"
+            "数组",
+            "个元素"
           ]
         }
       ]
@@ -5435,7 +5506,7 @@
         },
         {
           "card": "算法复杂度",
-          "score": 19,
+          "score": 20,
           "matchedTerms": [
             "空间复杂度",
             "间复杂",
@@ -5443,6 +5514,7 @@
             "间复杂度",
             "空间复",
             "空间复杂",
+            "排序输",
             "的空间",
             "的空间复",
             "的空间复杂"
@@ -5738,6 +5810,13 @@
           "score": 5,
           "matchedTerms": [
             "at"
+          ]
+        },
+        {
+          "card": "最小生成树与最短路径",
+          "score": 1,
+          "matchedTerms": [
+            "−1"
           ]
         }
       ]
@@ -6171,12 +6250,13 @@
       "candidates": [
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 16,
+          "score": 18,
           "matchedTerms": [
             "执行时",
             "行时间",
             "执行时间",
-            "时间"
+            "时间",
+            "执行"
           ]
         },
         {
@@ -6386,6 +6466,13 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 1,
           "matchedTerms": [
@@ -6530,10 +6617,11 @@
         },
         {
           "card": "Cache 映射与命中率",
-          "score": 4,
+          "score": 5,
           "matchedTerms": [
             "物理地址",
-            "地址"
+            "地址",
+            "采用的"
           ]
         },
         {
@@ -6652,17 +6740,17 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "流水线结构冒险与数据冒险",
           "score": 1,
           "matchedTerms": [
             "执行的"
-          ]
-        },
-        {
-          "card": "中断响应与异常处理",
-          "score": 1,
-          "matchedTerms": [
-            "完成后"
           ]
         }
       ]
@@ -6888,9 +6976,10 @@
       "candidates": [
         {
           "card": "进程与线程",
-          "score": 6,
+          "score": 7,
           "matchedTerms": [
-            "进程"
+            "进程",
+            "题考查"
           ]
         },
         {
@@ -6940,6 +7029,13 @@
           "score": 1,
           "matchedTerms": [
             "第一个"
+          ]
+        },
+        {
+          "card": "改进型 CLOCK 页面置换",
+          "score": 1,
+          "matchedTerms": [
+            "字段是"
           ]
         },
         {
@@ -6994,8 +7090,9 @@
         },
         {
           "card": "图的存储与遍历",
-          "score": 9,
+          "score": 11,
           "matchedTerms": [
+            "时间",
             "邻接矩",
             "接矩阵",
             "维数组",
@@ -7009,10 +7106,11 @@
         },
         {
           "card": "算法复杂度",
-          "score": 8,
+          "score": 10,
           "matchedTerms": [
             "时间",
-            "数组"
+            "数组",
+            "个元素"
           ]
         },
         {
@@ -7152,11 +7250,12 @@
         },
         {
           "card": "算法复杂度",
-          "score": 5,
+          "score": 6,
           "matchedTerms": [
             "标记",
             "对应",
-            "标记值"
+            "标记值",
+            "故t"
           ]
         },
         {
@@ -7683,19 +7782,21 @@
           ]
         },
         {
-          "card": "邻接矩阵与邻接表",
-          "score": 13,
+          "card": "图的存储与遍历",
+          "score": 14,
           "matchedTerms": [
+            "时间",
             "邻接表",
             "每个顶",
             "个顶点",
+            "邻接点",
             "每个顶点",
+            "每条边",
             "用邻接",
-            "表遍历",
-            "用邻接表",
-            "接表的",
-            "复杂度",
-            "邻接表的"
+            "接表存",
+            "表存储",
+            "邻接表存",
+            "接表存储"
           ]
         }
       ]
@@ -8250,6 +8351,13 @@
           "matchedTerms": [
             "正整数"
           ]
+        },
+        {
+          "card": "最小生成树与最短路径",
+          "score": 1,
+          "matchedTerms": [
+            "−1"
+          ]
         }
       ]
     },
@@ -8456,10 +8564,10 @@
           ]
         },
         {
-          "card": "归并排序与稳定性",
-          "score": 1,
+          "card": "图的存储与遍历",
+          "score": 2,
           "matchedTerms": [
-            "的数据"
+            "时间"
           ]
         }
       ]
@@ -8620,10 +8728,10 @@
           ]
         },
         {
-          "card": "计算机系统层次结构",
-          "score": 1,
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
           "matchedTerms": [
-            "用程序"
+            "执行"
           ]
         }
       ]
@@ -8722,6 +8830,17 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 10,
+          "matchedTerms": [
+            "cpu",
+            "执行",
+            "程序执",
+            "序执行",
+            "程序执行"
+          ]
+        },
+        {
           "card": "主存与辅存层次结构",
           "score": 9,
           "matchedTerms": [
@@ -8744,16 +8863,6 @@
           "matchedTerms": [
             "cpu",
             "存储器"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 8,
-          "matchedTerms": [
-            "cpu",
-            "程序执",
-            "序执行",
-            "程序执行"
           ]
         }
       ]
@@ -9199,10 +9308,10 @@
           ]
         },
         {
-          "card": "缺页异常处理流程",
+          "card": "进程与线程",
           "score": 1,
           "matchedTerms": [
-            "在物理"
+            "题考查"
           ]
         }
       ]
@@ -9288,6 +9397,16 @@
           ]
         },
         {
+          "card": "文件逻辑结构与物理结构",
+          "score": 4,
+          "matchedTerms": [
+            "的数据",
+            "多少数",
+            "少数据",
+            "多少数据"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 3,
           "matchedTerms": [
@@ -9296,13 +9415,6 @@
         },
         {
           "card": "分页与分段的区别",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "伙伴系统与内存回收",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -9719,14 +9831,15 @@
           ]
         },
         {
-          "card": "递归算法与递归树",
-          "score": 2,
+          "card": "图的存储与遍历",
+          "score": 3,
           "matchedTerms": [
-            "时间"
+            "时间",
+            "轮扫描"
           ]
         },
         {
-          "card": "空间换时间与辅助数组",
+          "card": "递归算法与递归树",
           "score": 2,
           "matchedTerms": [
             "时间"
@@ -9821,6 +9934,15 @@
           ]
         },
         {
+          "card": "最小生成树与最短路径",
+          "score": 6,
+          "matchedTerms": [
+            "ttl",
+            "的最小",
+            "路由器"
+          ]
+        },
+        {
           "card": "二叉树遍历与性质",
           "score": 4,
           "matchedTerms": [
@@ -9832,13 +9954,6 @@
           "score": 2,
           "matchedTerms": [
             "长度为"
-          ]
-        },
-        {
-          "card": "递归算法与递归树",
-          "score": 2,
-          "matchedTerms": [
-            "时间"
           ]
         }
       ]
@@ -9853,11 +9968,11 @@
       "answer": "D",
       "analysis": "2013-第1题-解析 两个升序链表合并，两两比较表中元素，每比较一次确定一个元素的链接位置（取较小元素，头插法）。当一个链表比较结束后，将另一个链表的剩余元素插入即可。最坏的情况是两个链表中的元素依次进行比较，直到两个链表都到表尾，即每个元素都经过比较，时间复杂度为 O ( m + n ) = O ( max ( m , n )) 。",
       "existingCards": [],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
         {
           "card": "算法复杂度",
-          "score": 18,
+          "score": 26,
           "matchedTerms": [
             "时间",
             "时间复",
@@ -9865,7 +9980,12 @@
             "复杂度",
             "时间复杂",
             "间复杂度",
-            "时间复杂度"
+            "时间复杂度",
+            "个元素",
+            "最坏情",
+            "坏情况",
+            "情况下",
+            "最坏情况"
           ]
         },
         {
@@ -9952,6 +10072,13 @@
             "入栈出",
             "栈出栈",
             "入栈出栈"
+          ]
+        },
+        {
+          "card": "最小生成树与最短路径",
+          "score": 1,
+          "matchedTerms": [
+            "−1"
           ]
         }
       ]
@@ -10065,15 +10192,16 @@
           ]
         },
         {
-          "card": "B 树与 B+ 树",
+          "card": "最小生成树与最短路径",
           "score": 2,
           "matchedTerms": [
-            "叶结点"
+            "生成树",
+            "−1"
           ]
         },
         {
-          "card": "堆的定义与建堆",
-          "score": 1,
+          "card": "B 树与 B+ 树",
+          "score": 2,
           "matchedTerms": [
             "叶结点"
           ]
@@ -10528,6 +10656,13 @@
           "matchedTerms": [
             "转换为"
           ]
+        },
+        {
+          "card": "最小生成树与最短路径",
+          "score": 1,
+          "matchedTerms": [
+            "−1"
+          ]
         }
       ]
     },
@@ -10922,17 +11057,17 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "流水线结构冒险与数据冒险",
           "score": 1,
           "matchedTerms": [
             "执行的"
-          ]
-        },
-        {
-          "card": "指令系统与寻址方式",
-          "score": 1,
-          "matchedTerms": [
-            "的操作"
           ]
         }
       ]
@@ -11144,6 +11279,15 @@
           ]
         },
         {
+          "card": "DMA 工作过程与总线占用",
+          "score": 7,
+          "matchedTerms": [
+            "处理",
+            "除以",
+            "处理和"
+          ]
+        },
+        {
           "card": "指令系统与寻址方式",
           "score": 6,
           "matchedTerms": [
@@ -11156,14 +11300,6 @@
           "score": 6,
           "matchedTerms": [
             "中断处理"
-          ]
-        },
-        {
-          "card": "DMA 工作过程与总线占用",
-          "score": 5,
-          "matchedTerms": [
-            "处理",
-            "处理和"
           ]
         }
       ]
@@ -11280,20 +11416,22 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 13,
+          "matchedTerms": [
+            "cpu",
+            "时间",
+            "执行",
+            "得到"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 13,
           "matchedTerms": [
             "cpu",
             "利用率",
             "得到"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 9,
-          "matchedTerms": [
-            "cpu",
-            "时间"
           ]
         },
         {
@@ -11309,6 +11447,36 @@
           "score": 7,
           "matchedTerms": [
             "cpu"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2013,
+      "index": 32,
+      "id": 220,
+      "subject": "计算机组成原理",
+      "type": "选择题",
+      "question": "2013-第32题-题目 下列关于银行家算法的叙述中，正确的是（ ）。 A. 银行家算法可以预防死锁 B. 当系统处于安全状态时，系统中一定无死锁进程 C. 当系统处于不安全状态时，系统中一定会出现死锁进程 D. 银行家算法破坏了死锁必要条件中的“请求和保持”条件",
+      "answer": "B",
+      "analysis": "2013-第32题-解析 银行家算法 是避免死锁的方法，破坏死锁产生的必要条件是预防死锁的方法。利用银行家算法，系统处于安全状态时就可以避免死锁（即此时必然无死锁）；当系统进入不安全状态后便可能进入死锁状态（但也不是必然）。",
+      "existingCards": [
+        "银行家算法安全性检查"
+      ],
+      "confidence": "low-candidate",
+      "candidates": [
+        {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "不是"
+          ]
+        },
+        {
+          "card": "Cache 替换与写策略",
+          "score": 2,
+          "matchedTerms": [
+            "状态"
           ]
         }
       ]
@@ -11465,6 +11633,14 @@
             "访问控",
             "问控制",
             "访问控制"
+          ]
+        },
+        {
+          "card": "改进型 CLOCK 页面置换",
+          "score": 2,
+          "matchedTerms": [
+            "过程中",
+            "中可能"
           ]
         }
       ]
@@ -12008,10 +12184,11 @@
           ]
         },
         {
-          "card": "KMP 模式匹配与 next 数组",
+          "card": "最小生成树与最短路径",
           "score": 2,
           "matchedTerms": [
-            "缀长度"
+            "不同的",
+            "路由器"
           ]
         }
       ]
@@ -12190,18 +12367,19 @@
           ]
         },
         {
+          "card": "算法复杂度",
+          "score": 5,
+          "matchedTerms": [
+            "数组",
+            "个元素",
+            "情况下"
+          ]
+        },
+        {
           "card": "数组行优先与列优先存储",
           "score": 4,
           "matchedTerms": [
             "维数组"
-          ]
-        },
-        {
-          "card": "线性表与顺序表",
-          "score": 3,
-          "matchedTerms": [
-            "个元素",
-            "元素的"
           ]
         }
       ]
@@ -12590,6 +12768,16 @@
           ]
         },
         {
+          "card": "算法复杂度",
+          "score": 5,
+          "matchedTerms": [
+            "个元素",
+            "从小到",
+            "小到大",
+            "从小到大"
+          ]
+        },
+        {
           "card": "最小生成树与最短路径",
           "score": 4,
           "matchedTerms": [
@@ -12613,15 +12801,6 @@
             "序的定",
             "的定义",
             "序的定义"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 3,
-          "matchedTerms": [
-            "从小到",
-            "小到大",
-            "从小到大"
           ]
         }
       ]
@@ -13274,17 +13453,17 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 2,
           "matchedTerms": [
             "设备"
-          ]
-        },
-        {
-          "card": "总线仲裁方式",
-          "score": 1,
-          "matchedTerms": [
-            "的设备"
           ]
         }
       ]
@@ -13323,17 +13502,17 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "立即数与直接间接寻址",
           "score": 2,
           "matchedTerms": [
             "指令中"
-          ]
-        },
-        {
-          "card": "冯·诺依曼结构与存储程序",
-          "score": 1,
-          "matchedTerms": [
-            "指令和"
           ]
         }
       ]
@@ -13360,6 +13539,14 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 6,
+          "matchedTerms": [
+            "时间",
+            "得到"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 5,
           "matchedTerms": [
@@ -13367,13 +13554,6 @@
             "程的时",
             "的时间",
             "程的时间"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 4,
-          "matchedTerms": [
-            "时间"
           ]
         },
         {
@@ -13406,6 +13586,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "Cache 映射与命中率",
+          "score": 4,
+          "matchedTerms": [
+            "bit",
+            "是否被"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 2,
           "matchedTerms": [
@@ -13417,13 +13605,6 @@
           "score": 2,
           "matchedTerms": [
             "有一个"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 1,
-          "matchedTerms": [
-            "是否被"
           ]
         }
       ]
@@ -13518,17 +13699,17 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "大小端存储",
           "score": 1,
           "matchedTerms": [
             "内存中"
-          ]
-        },
-        {
-          "card": "总线带宽与突发传输",
-          "score": 1,
-          "matchedTerms": [
-            "的数据"
           ]
         }
       ]
@@ -13835,6 +14016,16 @@
           ]
         },
         {
+          "card": "文件逻辑结构与物理结构",
+          "score": 4,
+          "matchedTerms": [
+            "的数据",
+            "多少数",
+            "少数据",
+            "多少数据"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 3,
           "matchedTerms": [
@@ -13843,13 +14034,6 @@
         },
         {
           "card": "SCAN 与 C-SCAN 磁盘调度",
-          "score": 2,
-          "matchedTerms": [
-            "忽略"
-          ]
-        },
-        {
-          "card": "TLB 与快表命中",
           "score": 2,
           "matchedTerms": [
             "忽略"
@@ -13991,10 +14175,10 @@
           ]
         },
         {
-          "card": "文件逻辑结构与物理结构",
+          "card": "改进型 CLOCK 页面置换",
           "score": 1,
           "matchedTerms": [
-            "的数据"
+            "过程中"
           ]
         }
       ]
@@ -14034,6 +14218,13 @@
           "score": 2,
           "matchedTerms": [
             "服务"
+          ]
+        },
+        {
+          "card": "虚拟内存与页面置换",
+          "score": 1,
+          "matchedTerms": [
+            "的访问"
           ]
         }
       ]
@@ -14236,6 +14427,14 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "最小生成树与最短路径",
+          "score": 4,
+          "matchedTerms": [
+            "ttl",
+            "路由器"
+          ]
+        },
         {
           "card": "最小正整数缺失值查找",
           "score": 3,
@@ -15534,10 +15733,11 @@
           ]
         },
         {
-          "card": "查找算法与散列表",
-          "score": 1,
+          "card": "算法复杂度",
+          "score": 2,
           "matchedTerms": [
-            "数据是"
+            "不可能",
+            "情况下"
           ]
         }
       ]
@@ -15558,9 +15758,10 @@
       "candidates": [
         {
           "card": "最小正整数缺失值查找",
-          "score": 4,
+          "score": 6,
           "matchedTerms": [
-            "出现"
+            "出现",
+            "返回"
           ]
         },
         {
@@ -15662,19 +15863,20 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 11,
+          "matchedTerms": [
+            "cpu",
+            "执行时",
+            "执行"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 9,
           "matchedTerms": [
             "cpu",
             "中断"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 9,
-          "matchedTerms": [
-            "cpu",
-            "执行时"
           ]
         },
         {
@@ -15741,19 +15943,20 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 4,
+          "matchedTerms": [
+            "执行",
+            "得到"
+          ]
+        },
+        {
           "card": "总线仲裁方式",
           "score": 4,
           "matchedTerms": [
             "优先级",
             "高优先",
             "高优先级"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 4,
-          "matchedTerms": [
-            "执行"
           ]
         }
       ]
@@ -15792,6 +15995,21 @@
           "score": 3,
           "matchedTerms": [
             "处理"
+          ]
+        },
+        {
+          "card": "Cache 替换与写策略",
+          "score": 3,
+          "matchedTerms": [
+            "状态",
+            "用顺序"
+          ]
+        },
+        {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "执行"
           ]
         }
       ]
@@ -16324,6 +16542,14 @@
           ]
         },
         {
+          "card": "文件物理分配方式",
+          "score": 5,
+          "matchedTerms": [
+            "kb",
+            "接分配"
+          ]
+        },
+        {
           "card": "页表结构与地址转换",
           "score": 5,
           "matchedTerms": [
@@ -16339,13 +16565,6 @@
         },
         {
           "card": "分页与分段的区别",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "连续内存分配与动态分区",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -16495,10 +16714,11 @@
         },
         {
           "card": "最小生成树与最短路径",
-          "score": 3,
+          "score": 4,
           "matchedTerms": [
             "个顶点",
-            "的路径"
+            "的路径",
+            "−1"
           ]
         },
         {
@@ -16914,17 +17134,19 @@
           ]
         },
         {
+          "card": "算法复杂度",
+          "score": 4,
+          "matchedTerms": [
+            "个元素",
+            "情况下",
+            "有元素"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 3,
           "matchedTerms": [
             "之间"
-          ]
-        },
-        {
-          "card": "二叉搜索树查找与删除",
-          "score": 2,
-          "matchedTerms": [
-            "次序"
           ]
         }
       ]
@@ -16961,6 +17183,14 @@
           ]
         },
         {
+          "card": "算法复杂度",
+          "score": 4,
+          "matchedTerms": [
+            "数组",
+            "个元素"
+          ]
+        },
+        {
           "card": "树与森林的存储结构",
           "score": 3,
           "matchedTerms": [
@@ -16974,13 +17204,6 @@
           "score": 2,
           "matchedTerms": [
             "元素"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 2,
-          "matchedTerms": [
-            "数组"
           ]
         }
       ]
@@ -17149,15 +17372,20 @@
           ]
         },
         {
-          "card": "希尔排序与增量序列",
+          "card": "图的存储与遍历",
           "score": 12,
           "matchedTerms": [
-            "时间复",
-            "间复杂",
-            "复杂度",
-            "时间复杂",
-            "间复杂度",
-            "时间复杂度"
+            "时间",
+            "邻接表",
+            "每个顶",
+            "个顶点",
+            "每个顶点",
+            "用邻接",
+            "接表存",
+            "表存储",
+            "邻接表存",
+            "接表存储",
+            "邻接表存储"
           ]
         }
       ]
@@ -17267,18 +17495,19 @@
           ]
         },
         {
+          "card": "算法复杂度",
+          "score": 4,
+          "matchedTerms": [
+            "数组",
+            "个元素"
+          ]
+        },
+        {
           "card": "线性表与顺序表",
           "score": 3,
           "matchedTerms": [
             "个元素",
             "元素的"
-          ]
-        },
-        {
-          "card": "内部排序与稳定性",
-          "score": 2,
-          "matchedTerms": [
-            "关键字"
           ]
         }
       ]
@@ -17535,17 +17764,17 @@
           ]
         },
         {
+          "card": "最小生成树与最短路径",
+          "score": 3,
+          "matchedTerms": [
+            "ttl"
+          ]
+        },
+        {
           "card": "稀疏矩阵三元组表示",
           "score": 2,
           "matchedTerms": [
             "开始"
-          ]
-        },
-        {
-          "card": "数组行优先与列优先存储",
-          "score": 1,
-          "matchedTerms": [
-            "内存中"
           ]
         }
       ]
@@ -17564,10 +17793,12 @@
       "candidates": [
         {
           "card": "算法复杂度",
-          "score": 4,
+          "score": 7,
           "matchedTerms": [
             "数组",
-            "对应"
+            "对应",
+            "个元素",
+            "的两次"
           ]
         },
         {
@@ -17832,9 +18063,10 @@
         },
         {
           "card": "算法复杂度",
-          "score": 6,
+          "score": 7,
           "matchedTerms": [
-            "时间"
+            "时间",
+            "情况下"
           ]
         },
         {
@@ -17954,10 +18186,11 @@
         },
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 9,
+          "score": 11,
           "matchedTerms": [
             "cpu",
-            "执行时"
+            "执行时",
+            "执行"
           ]
         },
         {
@@ -18008,10 +18241,11 @@
         },
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 10,
+          "score": 12,
           "matchedTerms": [
             "cpu",
             "时间",
+            "执行",
             "序执行"
           ]
         },
@@ -18058,6 +18292,20 @@
           "score": 3,
           "matchedTerms": [
             "r1"
+          ]
+        },
+        {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
+          "card": "Cache 替换与写策略",
+          "score": 2,
+          "matchedTerms": [
+            "状态"
           ]
         }
       ]
@@ -18160,10 +18408,11 @@
           ]
         },
         {
-          "card": "硬布线控制器与微程序控制器",
+          "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 7,
           "matchedTerms": [
-            "cpu"
+            "cpu",
+            "执行"
           ]
         }
       ]
@@ -18190,6 +18439,14 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 3,
+          "matchedTerms": [
+            "得到",
+            "的结果"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 2,
           "matchedTerms": [
@@ -18208,13 +18465,6 @@
           "score": 2,
           "matchedTerms": [
             "之间的"
-          ]
-        },
-        {
-          "card": "主存与辅存层次结构",
-          "score": 2,
-          "matchedTerms": [
-            "缺失"
           ]
         }
       ]
@@ -18291,8 +18541,9 @@
         },
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 1,
+          "score": 3,
           "matchedTerms": [
+            "执行",
             "的结果"
           ]
         },
@@ -18402,6 +18653,14 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 4,
+          "matchedTerms": [
+            "每次",
+            "执行"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 4,
           "matchedTerms": [
@@ -18413,13 +18672,6 @@
           "score": 2,
           "matchedTerms": [
             "每次"
-          ]
-        },
-        {
-          "card": "Cache 直接映射与组相联",
-          "score": 2,
-          "matchedTerms": [
-            "有一个"
           ]
         }
       ]
@@ -18452,6 +18704,13 @@
         },
         {
           "card": "缺页异常处理流程",
+          "score": 1,
+          "matchedTerms": [
+            "在物理"
+          ]
+        },
+        {
+          "card": "文件逻辑结构与物理结构",
           "score": 1,
           "matchedTerms": [
             "在物理"
@@ -18540,6 +18799,13 @@
           "score": 1,
           "matchedTerms": [
             "传输时"
+          ]
+        },
+        {
+          "card": "改进型 CLOCK 页面置换",
+          "score": 1,
+          "matchedTerms": [
+            "过程中"
           ]
         }
       ]
@@ -18646,6 +18912,13 @@
           ]
         },
         {
+          "card": "改进型 CLOCK 页面置换",
+          "score": 1,
+          "matchedTerms": [
+            "中可能"
+          ]
+        },
+        {
           "card": "信号与异步事件通知",
           "score": 1,
           "matchedTerms": [
@@ -18666,6 +18939,18 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "改进型 CLOCK 页面置换",
+          "score": 6,
+          "matchedTerms": [
+            "过程中",
+            "程中可",
+            "中可能",
+            "过程中可",
+            "程中可能",
+            "过程中可能"
+          ]
+        },
         {
           "card": "调度评价指标",
           "score": 4,
@@ -18695,13 +18980,6 @@
           "score": 2,
           "matchedTerms": [
             "请求"
-          ]
-        },
-        {
-          "card": "索引结点 inode 与文件控制块",
-          "score": 2,
-          "matchedTerms": [
-            "最多"
           ]
         }
       ]
@@ -18740,6 +19018,14 @@
           ]
         },
         {
+          "card": "改进型 CLOCK 页面置换",
+          "score": 5,
+          "matchedTerms": [
+            "最后",
+            "过程中"
+          ]
+        },
+        {
           "card": "连续内存分配与动态分区",
           "score": 5,
           "matchedTerms": [
@@ -18748,18 +19034,11 @@
           ]
         },
         {
-          "card": "页表结构与地址转换",
+          "card": "文件物理分配方式",
           "score": 5,
           "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "TLB 与快表命中",
-          "score": 5,
-          "matchedTerms": [
-            "ch",
-            "忽略"
+            "kb",
+            "接分配"
           ]
         }
       ]
@@ -18896,18 +19175,19 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "最小正整数缺失值查找",
+          "score": 8,
+          "matchedTerms": [
+            "时间",
+            "答案",
+            "返回"
+          ]
+        },
+        {
           "card": "算法复杂度",
           "score": 6,
           "matchedTerms": [
             "时间"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
-          "score": 6,
-          "matchedTerms": [
-            "时间",
-            "答案"
           ]
         },
         {
@@ -18968,10 +19248,11 @@
         },
         {
           "card": "空间换时间与辅助数组",
-          "score": 6,
+          "score": 7,
           "matchedTerms": [
             "标记",
-            "时间"
+            "时间",
+            "标记数"
           ]
         },
         {
@@ -19007,19 +19288,20 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 15,
+          "matchedTerms": [
+            "cpu",
+            "行时间",
+            "时间",
+            "执行"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 13,
           "matchedTerms": [
             "cpu",
-            "时间"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 13,
-          "matchedTerms": [
-            "cpu",
-            "行时间",
             "时间"
           ]
         },
@@ -20430,10 +20712,11 @@
           ]
         },
         {
-          "card": "硬布线控制器与微程序控制器",
+          "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 7,
           "matchedTerms": [
-            "cpu"
+            "cpu",
+            "执行"
           ]
         }
       ]
@@ -20526,22 +20809,24 @@
       "answer": "B",
       "analysis": "2017-第27题-解析 进程切换带来系统开销，切换次数越多，开销越大，A 正确。当前进程的时间片用完后，它的状态由执行态变为就绪态，B 错误。时钟中断是系统中特定的周期性时钟节拍。操作系统通过它来确定时间间隔，实现时间的延时和任务的超时，C 正确。现代操作系统为了保证性能最优，通常根据响应时间、系统开销、进程数量、进程运行时间、进程切换开销等因素确定 时间片大小，D 正确。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 12,
+          "matchedTerms": [
+            "行时间",
+            "时间",
+            "执行",
+            "周期"
+          ]
+        },
         {
           "card": "程序查询与中断驱动 I/O",
           "score": 8,
           "matchedTerms": [
             "时间",
             "中断"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 8,
-          "matchedTerms": [
-            "行时间",
-            "时间"
           ]
         },
         {
@@ -20615,10 +20900,11 @@
           ]
         },
         {
-          "card": "硬布线控制器与微程序控制器",
+          "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 7,
           "matchedTerms": [
-            "cpu"
+            "cpu",
+            "执行"
           ]
         }
       ]
@@ -20751,6 +21037,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "程序查询与中断驱动 I/O",
+          "score": 2,
+          "matchedTerms": [
+            "即使"
+          ]
+        },
+        {
           "card": "计算机系统层次结构",
           "score": 2,
           "matchedTerms": [
@@ -20758,32 +21051,24 @@
           ]
         },
         {
-          "card": "Cache 映射与命中率",
-          "score": 2,
-          "matchedTerms": [
-            "即使"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 2,
-          "matchedTerms": [
-            "的过程",
-            "相同的"
-          ]
-        },
-        {
-          "card": "DMA 工作过程与总线占用",
+          "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 2,
           "matchedTerms": [
             "得到"
           ]
         },
         {
-          "card": "定点补码加减与溢出",
-          "score": 1,
+          "card": "Cache 替换与写策略",
+          "score": 2,
           "matchedTerms": [
-            "是同一"
+            "即使"
+          ]
+        },
+        {
+          "card": "Cache 映射与命中率",
+          "score": 2,
+          "matchedTerms": [
+            "即使"
           ]
         }
       ]
@@ -21185,6 +21470,13 @@
           "score": 1,
           "matchedTerms": [
             "传输时"
+          ]
+        },
+        {
+          "card": "改进型 CLOCK 页面置换",
+          "score": 1,
+          "matchedTerms": [
+            "过程中"
           ]
         },
         {
@@ -21711,10 +22003,11 @@
         },
         {
           "card": "算法复杂度",
-          "score": 4,
+          "score": 6,
           "matchedTerms": [
             "数组",
-            "对应"
+            "对应",
+            "个元素"
           ]
         },
         {
@@ -22306,6 +22599,13 @@
           ]
         },
         {
+          "card": "最小生成树与最短路径",
+          "score": 1,
+          "matchedTerms": [
+            "−1"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 1,
           "matchedTerms": [
@@ -22361,10 +22661,10 @@
           ]
         },
         {
-          "card": "算法复杂度",
-          "score": 2,
+          "card": "最小生成树与最短路径",
+          "score": 3,
           "matchedTerms": [
-            "对应"
+            "ttl"
           ]
         }
       ]
@@ -22735,11 +23035,12 @@
         },
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 13,
+          "score": 15,
           "matchedTerms": [
             "cpu",
             "时间",
-            "平均"
+            "平均",
+            "执行"
           ]
         },
         {
@@ -22798,19 +23099,20 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 6,
+          "matchedTerms": [
+            "机器",
+            "执行"
+          ]
+        },
+        {
           "card": "中断响应与异常处理",
           "score": 6,
           "matchedTerms": [
             "指令执",
             "令执行",
             "指令执行"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 4,
-          "matchedTerms": [
-            "机器"
           ]
         },
         {
@@ -22843,9 +23145,17 @@
         },
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 1,
+          "score": 3,
           "matchedTerms": [
+            "执行",
             "的结果"
+          ]
+        },
+        {
+          "card": "Cache 替换与写策略",
+          "score": 2,
+          "matchedTerms": [
+            "状态"
           ]
         },
         {
@@ -22857,13 +23167,6 @@
         },
         {
           "card": "中断响应与异常处理",
-          "score": 1,
-          "matchedTerms": [
-            "完成后"
-          ]
-        },
-        {
-          "card": "中断与 DMA",
           "score": 1,
           "matchedTerms": [
             "完成后"
@@ -22952,6 +23255,13 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
           "card": "Cache 直接映射与组相联",
           "score": 2,
           "matchedTerms": [
@@ -22977,17 +23287,18 @@
       "answer": "D",
       "analysis": "2018-第29题-解析 时钟中断的主要工作是处理和时间有关的信息以及决定是否执行调度程序，和时间有关的所有信息，包括系统时间、进程的时间片、延时、使用 CPU 的时间、各种定时器，故 Ⅰ、Ⅱ、Ⅲ 均正确，选 D。",
       "existingCards": [],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 21,
+          "score": 23,
           "matchedTerms": [
             "cpu",
             "执行时",
             "行时间",
             "执行时间",
-            "时间"
+            "时间",
+            "执行"
           ]
         },
         {
@@ -23498,6 +23809,13 @@
           ]
         },
         {
+          "card": "改进型 CLOCK 页面置换",
+          "score": 1,
+          "matchedTerms": [
+            "字段是"
+          ]
+        },
+        {
           "card": "死锁资源分配图",
           "score": 1,
           "matchedTerms": [
@@ -23544,17 +23862,17 @@
           ]
         },
         {
+          "card": "改进型 CLOCK 页面置换",
+          "score": 1,
+          "matchedTerms": [
+            "过程中"
+          ]
+        },
+        {
           "card": "进程创建与终止",
           "score": 1,
           "matchedTerms": [
             "制所有"
-          ]
-        },
-        {
-          "card": "文件系统与目录",
-          "score": 1,
-          "matchedTerms": [
-            "的数据"
           ]
         }
       ]
@@ -24616,18 +24934,22 @@
           ]
         },
         {
+          "card": "算法复杂度",
+          "score": 6,
+          "matchedTerms": [
+            "个元素",
+            "不可能",
+            "所有元",
+            "有元素",
+            "所有元素"
+          ]
+        },
+        {
           "card": "归并排序与稳定性",
           "score": 2,
           "matchedTerms": [
             "将序列",
             "子序列"
-          ]
-        },
-        {
-          "card": "顺序表按位查找与插删",
-          "score": 2,
-          "matchedTerms": [
-            "元素"
           ]
         }
       ]
@@ -24667,6 +24989,14 @@
           ]
         },
         {
+          "card": "最小生成树与最短路径",
+          "score": 3,
+          "matchedTerms": [
+            "的最小",
+            "−1"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 3,
           "matchedTerms": [
@@ -24678,14 +25008,6 @@
           "card": "并查集与路径压缩",
           "score": 2,
           "matchedTerms": [
-            "的结点"
-          ]
-        },
-        {
-          "card": "二叉搜索树查找与删除",
-          "score": 2,
-          "matchedTerms": [
-            "于结点",
             "的结点"
           ]
         }
@@ -25279,9 +25601,10 @@
         },
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 4,
+          "score": 6,
           "matchedTerms": [
-            "时间"
+            "时间",
+            "执行"
           ]
         },
         {
@@ -25428,11 +25751,12 @@
         },
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 13,
+          "score": 15,
           "matchedTerms": [
             "cpu",
             "时间",
-            "平均"
+            "平均",
+            "执行"
           ]
         },
         {
@@ -25542,6 +25866,15 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 6,
+          "matchedTerms": [
+            "每次",
+            "执行",
+            "不是"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 5,
           "matchedTerms": [
@@ -25555,13 +25888,6 @@
           "matchedTerms": [
             "每次",
             "过程中"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 2,
-          "matchedTerms": [
-            "每次"
           ]
         }
       ]
@@ -25590,6 +25916,13 @@
           "score": 3,
           "matchedTerms": [
             "处理"
+          ]
+        },
+        {
+          "card": "Cache 替换与写策略",
+          "score": 2,
+          "matchedTerms": [
+            "状态"
           ]
         }
       ]
@@ -25695,6 +26028,13 @@
           "matchedTerms": [
             "要求最"
           ]
+        },
+        {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "每次"
+          ]
         }
       ]
     },
@@ -25791,6 +26131,13 @@
           "score": 2,
           "matchedTerms": [
             "限制"
+          ]
+        },
+        {
+          "card": "文件物理分配方式",
+          "score": 2,
+          "matchedTerms": [
+            "超过"
           ]
         },
         {
@@ -26249,10 +26596,11 @@
         },
         {
           "card": "最小正整数缺失值查找",
-          "score": 6,
+          "score": 8,
           "matchedTerms": [
             "之间",
-            "因为"
+            "因为",
+            "返回"
           ]
         },
         {
@@ -26399,6 +26747,15 @@
           ]
         },
         {
+          "card": "算法复杂度",
+          "score": 6,
+          "matchedTerms": [
+            "数组",
+            "对应",
+            "个元素"
+          ]
+        },
+        {
           "card": "稀疏矩阵三元组表示",
           "score": 6,
           "matchedTerms": [
@@ -26425,14 +26782,6 @@
           "matchedTerms": [
             "数组下标从",
             "元素"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 4,
-          "matchedTerms": [
-            "数组",
-            "对应"
           ]
         }
       ]
@@ -27362,6 +27711,13 @@
           ]
         },
         {
+          "card": "最小正整数缺失值查找",
+          "score": 2,
+          "matchedTerms": [
+            "返回"
+          ]
+        },
+        {
           "card": "循环队列判空与判满",
           "score": 1,
           "matchedTerms": [
@@ -27609,6 +27965,13 @@
             "空间的",
             "存储空间"
           ]
+        },
+        {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "不是"
+          ]
         }
       ]
     },
@@ -27702,12 +28065,13 @@
       "candidates": [
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 16,
+          "score": 18,
           "matchedTerms": [
             "执行时",
             "行时间",
             "执行时间",
-            "时间"
+            "时间",
+            "执行"
           ]
         },
         {
@@ -27753,6 +28117,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "得到"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 2,
           "matchedTerms": [
@@ -27792,12 +28163,13 @@
         },
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 15,
+          "score": 17,
           "matchedTerms": [
             "cpu",
             "时间",
             "平均",
-            "频率"
+            "频率",
+            "执行"
           ]
         },
         {
@@ -28016,10 +28388,11 @@
         },
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 9,
+          "score": 11,
           "matchedTerms": [
             "cpu",
-            "时间"
+            "时间",
+            "执行"
           ]
         },
         {
@@ -28660,8 +29033,20 @@
       "answer": null,
       "analysis": "2020-第46题-解析 1） ①页面大小= 2 12 B = 4096B = 4KB。每个数组元素 4B，每个页面可以存放 4KB/4B= 1024 个数组元素，正好是数组的一行，数组 a 按行优先方式存放。10800000H 的虚 页号为 10800H，因此 a[0] 行存放在虚页号为 10800H 的页面中，a[1] 行存放在页号 为 10801H 的页面中。a[1][2] 的虚拟地址为 10801000H+4×2=10801008H。 ②转换为二进制 0001 0000 1000 0000 0001 0000 0000 1000，根据虚拟地址结构可知，对 应的页目录号为 042H，页号为 001H。 ③进程的页目录表起始地址为 00201000H，每个页目录项长 4B，因此 042H 号页目录 项的物理地址是 00201000H+4×42H=00201108H。 ④页目录项存放的页框号为 00301H，二级页表的起始地址为 00301000H，因此 a[1][2] 所在页的页号为 001H，每个页表项 4B，因此对应的页表项物理地址是 00301000H + 001H×4 = 00301004H。 2）根据数组的随机存取特点，数组 a 在虚拟地址空间中所占的区域必须连续，由于数组 a 不止占用一页，相邻逻辑页在物理上不一定相邻，因此数组 a 在物理地址空间中所占的 区域可以不连续。 3）由 1）可知每个页面正好可以存放一整行的数组元素，“按行优先方式存放”意味着数 组的同一行的所有元素都存放在同一个页面中，同一列的各个元素都存放在不同的页面 中，因此数组 a 按行遍历的局部性较好。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "算法复杂度",
+          "score": 9,
+          "matchedTerms": [
+            "数组",
+            "对应",
+            "个元素",
+            "所有元",
+            "有元素",
+            "所有元素"
+          ]
+        },
         {
           "card": "二叉树遍历与性质",
           "score": 6,
@@ -28676,14 +29061,6 @@
             "行优先",
             "起始",
             "在物理"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 4,
-          "matchedTerms": [
-            "数组",
-            "对应"
           ]
         },
         {
@@ -29212,6 +29589,16 @@
           ]
         },
         {
+          "card": "图的存储与遍历",
+          "score": 4,
+          "matchedTerms": [
+            "顶点集",
+            "加入顶",
+            "入顶点",
+            "加入顶点"
+          ]
+        },
+        {
           "card": "最小生成树与最短路径",
           "score": 3,
           "matchedTerms": [
@@ -29226,13 +29613,6 @@
           "matchedTerms": [
             "路径长",
             "个最小"
-          ]
-        },
-        {
-          "card": "十字链表与邻接多重表",
-          "score": 2,
-          "matchedTerms": [
-            "顶点的"
           ]
         }
       ]
@@ -30092,10 +30472,11 @@
         },
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 12,
+          "score": 14,
           "matchedTerms": [
             "cpu",
             "时间",
+            "执行",
             "程序执",
             "序执行",
             "程序执行"
@@ -30761,11 +31142,13 @@
         },
         {
           "card": "最小正整数缺失值查找",
-          "score": 17,
+          "score": 21,
           "matchedTerms": [
             "复杂度",
             "遍历",
             "时间",
+            "则返回",
+            "返回",
             "空间复",
             "间复杂",
             "空间复杂",
@@ -31165,6 +31548,16 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "算法复杂度",
+          "score": 5,
+          "matchedTerms": [
+            "对应",
+            "所有元",
+            "有元素",
+            "所有元素"
+          ]
+        },
+        {
           "card": "栈的顺序存储与共享栈",
           "score": 4,
           "matchedTerms": [
@@ -31192,13 +31585,6 @@
           "score": 2,
           "matchedTerms": [
             "得到"
-          ]
-        },
-        {
-          "card": "顺序表按位查找与插删",
-          "score": 2,
-          "matchedTerms": [
-            "元素"
           ]
         }
       ]
@@ -31677,6 +32063,14 @@
           ]
         },
         {
+          "card": "算法复杂度",
+          "score": 4,
+          "matchedTerms": [
+            "数组",
+            "个元素"
+          ]
+        },
+        {
           "card": "外部排序与多路归并",
           "score": 4,
           "matchedTerms": [
@@ -31688,15 +32082,6 @@
           "score": 4,
           "matchedTerms": [
             "的值"
-          ]
-        },
-        {
-          "card": "查找算法与散列表",
-          "score": 3,
-          "matchedTerms": [
-            "的有序",
-            "有序表",
-            "的有序表"
           ]
         }
       ]
@@ -31733,7 +32118,7 @@
         },
         {
           "card": "空间换时间与辅助数组",
-          "score": 29,
+          "score": 32,
           "matchedTerms": [
             "空间复",
             "间复杂",
@@ -31744,7 +32129,26 @@
             "时间",
             "时间复",
             "时间复杂",
-            "时间复杂度"
+            "时间复杂度",
+            "实现简",
+            "现简单"
+          ]
+        },
+        {
+          "card": "算法复杂度",
+          "score": 29,
+          "matchedTerms": [
+            "时间",
+            "空间复杂度",
+            "时间复",
+            "间复杂",
+            "复杂度",
+            "时间复杂",
+            "间复杂度",
+            "时间复杂度",
+            "空间复",
+            "空间复杂",
+            "情况下"
           ]
         },
         {
@@ -31763,22 +32167,6 @@
             "相等元",
             "等元素",
             "相等元素"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 28,
-          "matchedTerms": [
-            "时间",
-            "空间复杂度",
-            "时间复",
-            "间复杂",
-            "复杂度",
-            "时间复杂",
-            "间复杂度",
-            "时间复杂度",
-            "空间复",
-            "空间复杂"
           ]
         },
         {
@@ -31883,6 +32271,13 @@
           "matchedTerms": [
             "最小值"
           ]
+        },
+        {
+          "card": "最小生成树与最短路径",
+          "score": 1,
+          "matchedTerms": [
+            "−1"
+          ]
         }
       ]
     },
@@ -31910,6 +32305,13 @@
           "score": 2,
           "matchedTerms": [
             "对应"
+          ]
+        },
+        {
+          "card": "最小生成树与最短路径",
+          "score": 1,
+          "matchedTerms": [
+            "−1"
           ]
         }
       ]
@@ -32107,6 +32509,27 @@
     },
     {
       "year": 2022,
+      "index": 19,
+      "id": 630,
+      "subject": "数据结构",
+      "type": "选择题",
+      "question": "2022-第19题-题目 设计某指令系统时，假设采用 16 位定长指令字格式，操作码使用扩展编码方式，地址码为 6 位，包含零地址、一地址和二地址 3 种格式的指令。若二地址指令有 12 条，一地址指令有 254 条，则零地址指令的条数最多为（ ）。 A. 0 B. 2 C. 64 D. 128",
+      "answer": "D",
+      "analysis": "2022-第19题-解析 本题考察 N 地址指令 如下图所示：零地址指令的 OP 字段位数相比一地址和二地址指令更短，但是需要注意的是，零地址指令的 OP 字段前缀与一地址和二地址指令的 OP 字段不能相同。 OP ADDR OP ADDR ADDR OP 16 位 10 位 4 位 6 位 6 位 6 位 零地址指令 一地址指令 二地址指令 所以零地址指令的条数为 2 16 − 254 × 2 6 − 12 × 2 12 = 128 。",
+      "existingCards": [],
+      "confidence": "low-candidate",
+      "candidates": [
+        {
+          "card": "最小生成树与最短路径",
+          "score": 1,
+          "matchedTerms": [
+            "−1"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2022,
       "index": 20,
       "id": 631,
       "subject": "数据结构",
@@ -32257,10 +32680,11 @@
         },
         {
           "card": "程序查询与中断驱动 I/O",
-          "score": 10,
+          "score": 12,
           "matchedTerms": [
             "cpu",
-            "处理"
+            "处理",
+            "即使"
           ]
         },
         {
@@ -32279,10 +32703,11 @@
           ]
         },
         {
-          "card": "硬布线控制器与微程序控制器",
+          "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 7,
           "matchedTerms": [
-            "cpu"
+            "cpu",
+            "执行"
           ]
         }
       ]
@@ -32336,10 +32761,10 @@
           ]
         },
         {
-          "card": "中断屏蔽与优先级",
+          "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 2,
           "matchedTerms": [
-            "或软件"
+            "不是"
           ]
         }
       ]
@@ -32360,13 +32785,14 @@
       "candidates": [
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 21,
+          "score": 23,
           "matchedTerms": [
             "cpu",
             "执行时",
             "行时间",
             "执行时间",
-            "时间"
+            "时间",
+            "执行"
           ]
         },
         {
@@ -32417,6 +32843,13 @@
         {
           "card": "CPU 指令执行过程",
           "score": 4,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
           "matchedTerms": [
             "执行"
           ]
@@ -32473,10 +32906,11 @@
           ]
         },
         {
-          "card": "DMA 工作过程与总线占用",
+          "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 7,
           "matchedTerms": [
-            "cpu"
+            "cpu",
+            "执行"
           ]
         }
       ]
@@ -32504,9 +32938,10 @@
         },
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 4,
+          "score": 6,
           "matchedTerms": [
-            "时间"
+            "时间",
+            "执行"
           ]
         },
         {
@@ -32523,6 +32958,13 @@
             "设备",
             "中可能",
             "的时间"
+          ]
+        },
+        {
+          "card": "Cache 替换与写策略",
+          "score": 2,
+          "matchedTerms": [
+            "状态"
           ]
         }
       ]
@@ -33039,6 +33481,15 @@
           ]
         },
         {
+          "card": "文件逻辑结构与物理结构",
+          "score": 3,
+          "matchedTerms": [
+            "文件大",
+            "件大小",
+            "文件大小"
+          ]
+        },
+        {
           "card": "伙伴系统与内存回收",
           "score": 2,
           "matchedTerms": [
@@ -33050,14 +33501,6 @@
           "score": 2,
           "matchedTerms": [
             "请求"
-          ]
-        },
-        {
-          "card": "银行家算法安全性检查",
-          "score": 2,
-          "matchedTerms": [
-            "已完成",
-            "到全部"
           ]
         }
       ]
@@ -33232,6 +33675,19 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "IP TTL 与路由转发",
+          "score": 13,
+          "matchedTerms": [
+            "字段",
+            "之间的",
+            "主机之",
+            "机之间",
+            "主机之间",
+            "机之间的",
+            "主机之间的"
+          ]
+        },
+        {
           "card": "IPv6 地址与首部特点",
           "score": 11,
           "matchedTerms": [
@@ -33256,14 +33712,6 @@
           "matchedTerms": [
             "log",
             "bit"
-          ]
-        },
-        {
-          "card": "IP TTL 与路由转发",
-          "score": 8,
-          "matchedTerms": [
-            "字段",
-            "之间的"
           ]
         },
         {
@@ -33484,7 +33932,7 @@
         },
         {
           "card": "算法复杂度",
-          "score": 18,
+          "score": 20,
           "matchedTerms": [
             "时间",
             "时间复",
@@ -33492,7 +33940,8 @@
             "复杂度",
             "时间复杂",
             "间复杂度",
-            "时间复杂度"
+            "时间复杂度",
+            "个元素"
           ]
         },
         {
@@ -34834,11 +35283,12 @@
       "candidates": [
         {
           "card": "Cache 映射与命中率",
-          "score": 7,
+          "score": 8,
           "matchedTerms": [
             "组索引",
             "地址",
-            "索引和"
+            "索引和",
+            "采用的"
           ]
         },
         {
@@ -34964,14 +35414,15 @@
           ]
         },
         {
-          "card": "硬布线控制器与微程序控制器",
+          "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 7,
           "matchedTerms": [
-            "cpu"
+            "cpu",
+            "执行"
           ]
         },
         {
-          "card": "DMA 工作过程与总线占用",
+          "card": "硬布线控制器与微程序控制器",
           "score": 7,
           "matchedTerms": [
             "cpu"
@@ -35024,10 +35475,11 @@
           ]
         },
         {
-          "card": "硬布线控制器与微程序控制器",
+          "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 7,
           "matchedTerms": [
-            "cpu"
+            "cpu",
+            "执行"
           ]
         }
       ]
@@ -35105,14 +35557,15 @@
       "candidates": [
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 25,
+          "score": 27,
           "matchedTerms": [
             "cpu",
             "执行时",
             "行时间",
             "执行时间",
             "时间",
-            "平均"
+            "平均",
+            "执行"
           ]
         },
         {
@@ -35486,6 +35939,29 @@
     },
     {
       "year": 2023,
+      "index": 37,
+      "id": 695,
+      "subject": "操作系统",
+      "type": "选择题",
+      "question": "2023-第37题-题目 若甲向乙发送数据时采用 CRC 校验，生成多项式为 G ( x ) = x 4 + x + 1 （即 G=10011），则乙接收到下列比特串时，可以断定其在传输过程中未发生错误的是（ ） A. 101110000 B. 101110100 C. 101111000 D. 101111100",
+      "answer": "D",
+      "analysis": "2023-第37题-解析 在 循环冗余码 中： 若接收端将接收到的比特串除以 G(x)，余数为 0，则认为“未发生错误”。 即，我们要对每一个选项做模 2 除法（异或除法），看余数是否为 0。 经过计算，可以得到 D 选项余数为 0，所以答案选择 D。",
+      "existingCards": [
+        "CRC 检错与生成多项式"
+      ],
+      "confidence": "low-candidate",
+      "candidates": [
+        {
+          "card": "改进型 CLOCK 页面置换",
+          "score": 1,
+          "matchedTerms": [
+            "过程中"
+          ]
+        }
+      ]
+    },
+    {
+      "year": 2023,
       "index": 38,
       "id": 696,
       "subject": "操作系统",
@@ -35831,21 +36307,22 @@
           ]
         },
         {
+          "card": "图的存储与遍历",
+          "score": 6,
+          "matchedTerms": [
+            "时间",
+            "二维数",
+            "维数组",
+            "二维数组",
+            "为每个"
+          ]
+        },
+        {
           "card": "递归算法与递归树",
           "score": 5,
           "matchedTerms": [
             "+f",
             "时间"
-          ]
-        },
-        {
-          "card": "稀疏矩阵三元组表示",
-          "score": 5,
-          "matchedTerms": [
-            "行优先",
-            "二维数",
-            "维数组",
-            "二维数组"
           ]
         }
       ]
@@ -35979,6 +36456,14 @@
           ]
         },
         {
+          "card": "最小正整数缺失值查找",
+          "score": 6,
+          "matchedTerms": [
+            "标记",
+            "返回"
+          ]
+        },
+        {
           "card": "红黑树性质与高度",
           "score": 4,
           "matchedTerms": [
@@ -35988,13 +36473,6 @@
         },
         {
           "card": "空间换时间与辅助数组",
-          "score": 4,
-          "matchedTerms": [
-            "标记"
-          ]
-        },
-        {
-          "card": "最小正整数缺失值查找",
           "score": 4,
           "matchedTerms": [
             "标记"
@@ -36400,6 +36878,14 @@
           ]
         },
         {
+          "card": "算法复杂度",
+          "score": 4,
+          "matchedTerms": [
+            "数组",
+            "个元素"
+          ]
+        },
+        {
           "card": "单链表头插法与尾插法",
           "score": 3,
           "matchedTerms": [
@@ -36411,13 +36897,6 @@
           "score": 2,
           "matchedTerms": [
             "元素"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 2,
-          "matchedTerms": [
-            "数组"
           ]
         }
       ]
@@ -36555,19 +37034,19 @@
           ]
         },
         {
+          "card": "算法复杂度",
+          "score": 4,
+          "matchedTerms": [
+            "数组",
+            "个元素"
+          ]
+        },
+        {
           "card": "线性表与顺序表",
           "score": 3,
           "matchedTerms": [
             "个元素",
             "元素的"
-          ]
-        },
-        {
-          "card": "最小生成树与最短路径",
-          "score": 3,
-          "matchedTerms": [
-            "排序",
-            "存在相"
           ]
         }
       ]
@@ -36917,6 +37396,13 @@
           "matchedTerms": [
             "的数据"
           ]
+        },
+        {
+          "card": "最小生成树与最短路径",
+          "score": 1,
+          "matchedTerms": [
+            "−1"
+          ]
         }
       ]
     },
@@ -36940,17 +37426,18 @@
           ]
         },
         {
+          "card": "算法复杂度",
+          "score": 3,
+          "matchedTerms": [
+            "对应",
+            "情况下"
+          ]
+        },
+        {
           "card": "最小正整数缺失值查找",
           "score": 3,
           "matchedTerms": [
             "之间"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 2,
-          "matchedTerms": [
-            "对应"
           ]
         },
         {
@@ -37362,12 +37849,12 @@
           ]
         },
         {
-          "card": "CPU 指令执行过程",
-          "score": 10,
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 11,
           "matchedTerms": [
-            "执行",
             "cpu",
-            "处理器"
+            "执行时",
+            "执行"
           ]
         }
       ]
@@ -37403,25 +37890,27 @@
           ]
         },
         {
+          "card": "程序查询与中断驱动 I/O",
+          "score": 4,
+          "matchedTerms": [
+            "设备",
+            "即使"
+          ]
+        },
+        {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 4,
+          "matchedTerms": [
+            "执行",
+            "周期"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 4,
           "matchedTerms": [
             "周期",
             "设备"
-          ]
-        },
-        {
-          "card": "单周期与多周期数据通路",
-          "score": 3,
-          "matchedTerms": [
-            "pc"
-          ]
-        },
-        {
-          "card": "冯·诺依曼结构与存储程序",
-          "score": 3,
-          "matchedTerms": [
-            "pc"
           ]
         }
       ]
@@ -37546,19 +38035,20 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 5,
+          "matchedTerms": [
+            "执行",
+            "执行速",
+            "行速度",
+            "执行速度"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 4,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 3,
-          "matchedTerms": [
-            "执行速",
-            "行速度",
-            "执行速度"
           ]
         },
         {
@@ -37669,6 +38159,13 @@
           ]
         },
         {
+          "card": "Cache 替换与写策略",
+          "score": 3,
+          "matchedTerms": [
+            "write"
+          ]
+        },
+        {
           "card": "单周期与多周期数据通路",
           "score": 2,
           "matchedTerms": [
@@ -37700,6 +38197,17 @@
           ]
         },
         {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 15,
+          "matchedTerms": [
+            "cpu",
+            "时间",
+            "每次",
+            "执行",
+            "周期"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 14,
           "matchedTerms": [
@@ -37715,14 +38223,6 @@
           "matchedTerms": [
             "cpu",
             "一个时"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 9,
-          "matchedTerms": [
-            "cpu",
-            "时间"
           ]
         },
         {
@@ -37882,6 +38382,13 @@
             "信息的",
             "的绝对"
           ]
+        },
+        {
+          "card": "进程与线程",
+          "score": 1,
+          "matchedTerms": [
+            "题考查"
+          ]
         }
       ]
     },
@@ -38009,6 +38516,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "文件物理分配方式",
+          "score": 6,
+          "matchedTerms": [
+            "f1",
+            "f2"
+          ]
+        },
+        {
           "card": "上下文切换",
           "score": 1,
           "matchedTerms": [
@@ -38096,9 +38611,10 @@
       "candidates": [
         {
           "card": "改进型 CLOCK 页面置换",
-          "score": 4,
+          "score": 5,
           "matchedTerms": [
-            "最后"
+            "最后",
+            "过程中"
           ]
         },
         {
@@ -38558,7 +39074,7 @@
         },
         {
           "card": "IP TTL 与路由转发",
-          "score": 24,
+          "score": 27,
           "matchedTerms": [
             "ttl",
             "路由器",
@@ -38569,7 +39085,9 @@
             "每经过一",
             "目的网",
             "的路由",
-            "的路由器"
+            "的路由器",
+            "主机之",
+            "机之间"
           ]
         },
         {
@@ -39231,19 +39749,25 @@
           ]
         },
         {
+          "card": "算法复杂度",
+          "score": 8,
+          "matchedTerms": [
+            "个元素",
+            "最坏情",
+            "坏情况",
+            "情况下",
+            "最坏情况",
+            "坏情况下",
+            "最坏情况下"
+          ]
+        },
+        {
           "card": "希尔排序与增量序列",
           "score": 6,
           "matchedTerms": [
             "插入排",
             "入排序",
             "插入排序"
-          ]
-        },
-        {
-          "card": "算法五个特性",
-          "score": 4,
-          "matchedTerms": [
-            "算法的"
           ]
         }
       ]
@@ -39367,6 +39891,13 @@
           "matchedTerms": [
             "得到"
           ]
+        },
+        {
+          "card": "最小生成树与最短路径",
+          "score": 1,
+          "matchedTerms": [
+            "−1"
+          ]
         }
       ]
     },
@@ -39394,6 +39925,13 @@
           "score": 4,
           "matchedTerms": [
             "的值"
+          ]
+        },
+        {
+          "card": "最小生成树与最短路径",
+          "score": 1,
+          "matchedTerms": [
+            "−1"
           ]
         }
       ]
@@ -39969,14 +40507,15 @@
       "answer": "B",
       "analysis": "2025-第26题-解析 在 LRU 算法中，每当需要访问一个不在当前内存中的页面时，就需要进行置换操作，并选择当前内存中最久未使用的页面进行替换。我们按照给定的页面访问序列进行模拟： 初始状态：内存中页面为 {0, 1, 2}，访问序列： 访问页面 是否命中/缺页 之后的内存页面 0 命中 {1, 2, 0} 1 命中 {2, 0, 1} 2 命中 {0, 1, 2} 0 命中 {1, 2, 0} 5 缺页，替换页面 1 {2, 0, 5} 1 缺页，替换页面 2 {0, 5, 1} 4 缺页，替换页面 0 {5, 1, 4} 3 缺页，替换页面 5 {1, 4, 3} 0 缺页，替换页面 1 {4, 3, 0} 2 缺页，替换页面 4 {3, 0, 2} 3 命中 {0, 2, 3} 2 命中 {0, 3, 2} 0 命中 {3, 2, 0} 总计缺页次数为 6 次。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
         {
           "card": "Cache 替换与写策略",
-          "score": 7,
+          "score": 9,
           "matchedTerms": [
             "lru",
-            "换策略"
+            "换策略",
+            "状态"
           ]
         },
         {
@@ -40110,6 +40649,13 @@
             "用程序",
             "应用程序"
           ]
+        },
+        {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "不是"
+          ]
         }
       ]
     },
@@ -40125,6 +40671,14 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 4,
+          "matchedTerms": [
+            "执行",
+            "不是"
+          ]
+        },
         {
           "card": "CPU 指令执行过程",
           "score": 4,
@@ -40236,10 +40790,24 @@
           ]
         },
         {
+          "card": "Cache 替换与写策略",
+          "score": 2,
+          "matchedTerms": [
+            "状态"
+          ]
+        },
+        {
           "card": "总线带宽与突发传输",
           "score": 1,
           "matchedTerms": [
             "的数据"
+          ]
+        },
+        {
+          "card": "Cache 映射与命中率",
+          "score": 1,
+          "matchedTerms": [
+            "元数据"
           ]
         }
       ]
@@ -40380,6 +40948,13 @@
           "matchedTerms": [
             "最多"
           ]
+        },
+        {
+          "card": "文件物理分配方式",
+          "score": 2,
+          "matchedTerms": [
+            "超过"
+          ]
         }
       ]
     },
@@ -40480,10 +41055,10 @@
           ]
         },
         {
-          "card": "缓冲区与缓冲池",
+          "card": "改进型 CLOCK 页面置换",
           "score": 1,
           "matchedTerms": [
-            "的目的"
+            "过程中"
           ]
         }
       ]
@@ -40503,6 +41078,20 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "改进型 CLOCK 页面置换",
+          "score": 8,
+          "matchedTerms": [
+            "修改的",
+            "字段是",
+            "过程中",
+            "程中可",
+            "中可能",
+            "过程中可",
+            "程中可能",
+            "过程中可能"
+          ]
+        },
+        {
           "card": "操作系统功能与特征",
           "score": 6,
           "matchedTerms": [
@@ -40518,24 +41107,17 @@
           ]
         },
         {
+          "card": "虚拟内存与页面置换",
+          "score": 2,
+          "matchedTerms": [
+            "区分"
+          ]
+        },
+        {
           "card": "分页与分段的区别",
           "score": 1,
           "matchedTerms": [
             "段可能"
-          ]
-        },
-        {
-          "card": "改进型 CLOCK 页面置换",
-          "score": 1,
-          "matchedTerms": [
-            "修改的"
-          ]
-        },
-        {
-          "card": "进程间通信 IPC",
-          "score": 1,
-          "matchedTerms": [
-            "号通常"
           ]
         }
       ]
@@ -40801,14 +41383,15 @@
       "candidates": [
         {
           "card": "算法复杂度",
-          "score": 16,
+          "score": 18,
           "matchedTerms": [
             "时间",
             "存储空",
             "储空间",
             "存储空间",
             "数组",
-            "对应"
+            "对应",
+            "个元素"
           ]
         },
         {
@@ -41100,21 +41683,6 @@
       "candidates": []
     },
     {
-      "year": 2010,
-      "index": 36,
-      "id": 83,
-      "subject": "操作系统",
-      "type": "选择题",
-      "question": "2010-第36题-题目 若路由器 R 因为拥塞丢弃 IP 分组，则此时 R 可向发出该 IP 分组的源主机发送的 ICMP 报文类型是（ ）。 A. 路由重定向 B. 目的不可达 C. 源点抑制 D. 超时",
-      "answer": "C",
-      "analysis": "2010-第36题-解析 ICMP 差错报文 报文有 5 种：终点不可达、源点抑制、时间超过、参数问题、改变路由（重定向），其中源点抑制是当路由器或主机由于拥塞而丢弃数据报时，就向源点发送源点抑制报文，使源点知道应当把数据报的发送速率放慢。",
-      "existingCards": [
-        "ICMP 差错报告与诊断"
-      ],
-      "confidence": "no-candidate",
-      "candidates": []
-    },
-    {
       "year": 2013,
       "index": 12,
       "id": 200,
@@ -41137,21 +41705,6 @@
       "answer": "A",
       "analysis": "2013-第14题-解析 x*2，将 x 算术左移一位为 1 1101000；y/2，将 y 算术右移一位为 1 1011000, 均无溢出或丢失精度。补码相加为 1 1101000 + 1 1011000 = 1 1000000, 亦无溢出。",
       "existingCards": [],
-      "confidence": "no-candidate",
-      "candidates": []
-    },
-    {
-      "year": 2013,
-      "index": 32,
-      "id": 220,
-      "subject": "计算机组成原理",
-      "type": "选择题",
-      "question": "2013-第32题-题目 下列关于银行家算法的叙述中，正确的是（ ）。 A. 银行家算法可以预防死锁 B. 当系统处于安全状态时，系统中一定无死锁进程 C. 当系统处于不安全状态时，系统中一定会出现死锁进程 D. 银行家算法破坏了死锁必要条件中的“请求和保持”条件",
-      "answer": "B",
-      "analysis": "2013-第32题-解析 银行家算法 是避免死锁的方法，破坏死锁产生的必要条件是预防死锁的方法。利用银行家算法，系统处于安全状态时就可以避免死锁（即此时必然无死锁）；当系统进入不安全状态后便可能进入死锁状态（但也不是必然）。",
-      "existingCards": [
-        "银行家算法安全性检查"
-      ],
       "confidence": "no-candidate",
       "candidates": []
     },
@@ -41204,34 +41757,6 @@
       "answer": "C",
       "analysis": "2020-第35题-解析 参考网络设备总结： 网络层设备路由器可以隔离广播域和冲突域；链路层设备普通交换机只能隔离冲突域；物 理层设备集线器、中继器既不能隔离冲突域又不能隔离广播域。因此，题中共有 2 个广播 域、4 个冲突域。",
       "existingCards": [],
-      "confidence": "no-candidate",
-      "candidates": []
-    },
-    {
-      "year": 2022,
-      "index": 19,
-      "id": 630,
-      "subject": "数据结构",
-      "type": "选择题",
-      "question": "2022-第19题-题目 设计某指令系统时，假设采用 16 位定长指令字格式，操作码使用扩展编码方式，地址码为 6 位，包含零地址、一地址和二地址 3 种格式的指令。若二地址指令有 12 条，一地址指令有 254 条，则零地址指令的条数最多为（ ）。 A. 0 B. 2 C. 64 D. 128",
-      "answer": "D",
-      "analysis": "2022-第19题-解析 本题考察 N 地址指令 如下图所示：零地址指令的 OP 字段位数相比一地址和二地址指令更短，但是需要注意的是，零地址指令的 OP 字段前缀与一地址和二地址指令的 OP 字段不能相同。 OP ADDR OP ADDR ADDR OP 16 位 10 位 4 位 6 位 6 位 6 位 零地址指令 一地址指令 二地址指令 所以零地址指令的条数为 2 16 − 254 × 2 6 − 12 × 2 12 = 128 。",
-      "existingCards": [],
-      "confidence": "no-candidate",
-      "candidates": []
-    },
-    {
-      "year": 2023,
-      "index": 37,
-      "id": 695,
-      "subject": "操作系统",
-      "type": "选择题",
-      "question": "2023-第37题-题目 若甲向乙发送数据时采用 CRC 校验，生成多项式为 G ( x ) = x 4 + x + 1 （即 G=10011），则乙接收到下列比特串时，可以断定其在传输过程中未发生错误的是（ ） A. 101110000 B. 101110100 C. 101111000 D. 101111100",
-      "answer": "D",
-      "analysis": "2023-第37题-解析 在 循环冗余码 中： 若接收端将接收到的比特串除以 G(x)，余数为 0，则认为“未发生错误”。 即，我们要对每一个选项做模 2 除法（异或除法），看余数是否为 0。 经过计算，可以得到 D 选项余数为 0，所以答案选择 D。",
-      "existingCards": [
-        "CRC 检错与生成多项式"
-      ],
       "confidence": "no-candidate",
       "candidates": []
     }
