@@ -38,6 +38,24 @@ let timer=null;function draw(){const n=+p.dataset.step,s=d.s[n];p.querySelector(
 p.addEventListener('click',e=>{const a=e.target.dataset.a;if(!a)return;let n=+p.dataset.step;if(a==='play'){if(timer){clearInterval(timer);timer=null;draw();return;}if(n>=d.s.length-1){n=0;p.dataset.step='0';draw();}timer=setInterval(()=>{let current=+p.dataset.step;if(current>=d.s.length-1){clearInterval(timer);timer=null;draw();return;}p.dataset.step=String(current+1);draw();},1000);draw();return;}if(timer){clearInterval(timer);timer=null;}if(a==='prev')n--;if(a==='next')n++;if(a==='reset')n=0;p.dataset.step=Math.max(0,Math.min(d.s.length-1,n));draw()});draw();return p}
 const css='.concept-lab{margin:18px 0;padding:15px;border:1px solid #d8e4ef;border-radius:13px;background:linear-gradient(135deg,#f1f7ff,#fbfdff)}.lab-head{display:flex;justify-content:space-between;gap:12px;color:#244d76}.lab-count{font:12px ui-monospace;color:#56738f}.lab-desc,.lab-explain{font-size:12px;color:#637b91;margin:5px 0 9px}.lab-stage{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;align-items:center;min-height:76px;padding:12px;background:#fff;border:1px solid #e1eaf2;border-radius:10px}.lab-token{padding:10px 12px;min-width:62px;text-align:center;border:1px solid #91b4d5;border-radius:9px;background:#edf5ff;color:#244d76;font-size:12px;animation:labIn .28s ease both;animation-delay:calc(var(--i)*45ms);overflow-wrap:anywhere}.lab-progress{height:5px;background:#e4ebf2;border-radius:9px;margin:12px 0 8px;overflow:hidden}.lab-progress i{display:block;height:100%;background:#5f91bd;transition:width .25s}.lab-controls{display:flex;gap:7px}.lab-controls button{border:1px solid #cbd9e7;background:#fff;border-radius:7px;padding:6px 11px;color:#315b83;cursor:pointer}.lab-controls button:disabled{opacity:.4;cursor:not-allowed}@keyframes labIn{from{opacity:.2;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){.lab-token{animation:none}.lab-progress i{transition:none}}';
 const st=document.createElement('style');st.textContent=css;document.head.append(st);
-function scan(){document.querySelectorAll('#cards .card').forEach(c=>{if(c.dataset.labReady)return;const t=c.querySelector('.ctitle')?.textContent||'';const d=[...labs].reverse().find(x=>x.key.some(k=>t.includes(k)||k.includes(t)));if(!d)return;const inside=c.querySelector('.inside');if(!inside)return;c.dataset.labReady='1';const anchor=inside.querySelector('.visual-box')||inside.querySelector('.quiz');if(anchor)anchor.after(make(d));else inside.prepend(make(d))})}
+function cardDerivedLab(card,title){
+ const inside=card.querySelector('.inside');
+ const textFor=label=>{const h=[...inside.querySelectorAll('h3')].find(x=>x.textContent.includes(label));return h?.nextElementSibling?.textContent?.trim()||''};
+ const definition=textFor('一、定义与概念');
+ const principle=textFor('二、核心原理');
+ const conditions=textFor('三、适用条件');
+ const steps=textFor('四、标准学习/解题步骤');
+ const example=textFor('五、例题');
+ const pitfalls=textFor('七、易错点');
+ let parts=steps.split(/(?:→|->|；|;|\\n|。)/).map(x=>x.trim()).filter(x=>x.length>3);
+ if(parts.length<2)parts=[definition,principle,conditions,steps].filter(x=>x.length>3);
+ parts=parts.slice(0,5);
+ const sequence=parts.map((part,i)=>['第 '+(i+1)+' 步',[title,'操作：'+part.slice(0,70)],part]);
+ if(example)sequence.push(['例题验证',['典型输入',example.slice(0,72)],'把刚才的步骤放进本卡片的例题中，检查中间结果和最终结论。']);
+ if(sequence.length<3&&pitfalls)sequence.push(['易错检查',[title,'检查边界'],pitfalls.slice(0,120)]);
+ if(!sequence.length)sequence.push(['理解概念',[title,definition.slice(0,70)],definition||'先读懂概念，再结合原理和例题理解。']);
+ return {title:title+' · 专属步骤演示',desc:'本动画直接依据这张知识卡的定义、解题步骤和例题拆解；可逐步查看，也可自动播放。',s:sequence,derived:true};
+}
+function scan(){document.querySelectorAll('#cards .card').forEach(c=>{if(c.dataset.labReady)return;const t=c.querySelector('.ctitle')?.textContent||'';const inside=c.querySelector('.inside');if(!inside)return;const d=[...labs].reverse().find(x=>x.key.some(k=>t.includes(k)||k.includes(t)))||cardDerivedLab(c,t);c.dataset.labReady='1';const anchor=inside.querySelector('.visual-box')||inside.querySelector('.quiz');if(anchor)anchor.after(make(d));else inside.prepend(make(d))})}
 new MutationObserver(scan).observe(document.getElementById('cards')||document.body,{childList:true,subtree:true});scan();
 })();
