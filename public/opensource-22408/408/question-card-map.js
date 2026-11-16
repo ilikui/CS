@@ -3839,6 +3839,279 @@ window.QUESTION_CARD_MAP = {
       "网桥与交换机的冲突域广播域",
       "路由选择与转发表"
     ]
+  },
+  "2020-41": {
+    "year": 2020,
+    "index": 41,
+    "id": 558,
+    "subject": "数据结构",
+    "subjectCode": "data-structure",
+    "typeName": "应用题",
+    "score": 13,
+    "question": "定义三元组距离D=|a−b|+|b−c|+|c−a|，三个集合均已升序，求所有组合中的最小距离。",
+    "answer": "D=2(max−min)；三指针扫描，每轮移动当前最小值所在数组的下标，直到任一数组耗尽。",
+    "analysis": "D=2(max−min)；三指针扫描，每轮移动当前最小值所在数组的下标，直到任一数组耗尽。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "最小距离三元组的三指针扫描",
+        "topic": "最小距离三元组的三指针扫描",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "多路归并与双指针",
+        "topic": "多路归并与双指针",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "算法复杂度",
+        "topic": "算法复杂度",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "最小距离三元组的三指针扫描"
+    ],
+    "secondaryCards": [
+      "多路归并与双指针",
+      "算法复杂度"
+    ]
+  },
+  "2020-42": {
+    "year": 2020,
+    "index": 42,
+    "id": 559,
+    "subject": "数据结构",
+    "subjectCode": "data-structure",
+    "typeName": "应用题",
+    "score": 10,
+    "question": "给定最长L位的二进制前缀编码，说明存储结构、译码和前缀特性判定。",
+    "answer": "用二叉树表示编码路径，0左1右，叶结点存字符；译码到叶输出后回根；插入编码时检测已有叶前缀及终点已有子树/字符。",
+    "analysis": "用二叉树表示编码路径，0左1右，叶结点存字符；译码到叶输出后回根；插入编码时检测已有叶前缀及终点已有子树/字符。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "前缀编码与二叉判定树",
+        "topic": "前缀编码与二叉判定树",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "哈夫曼树与带权路径长度",
+        "topic": "哈夫曼树与带权路径长度",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "树与森林的存储结构",
+        "topic": "树与森林的存储结构",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "前缀编码与二叉判定树"
+    ],
+    "secondaryCards": [
+      "哈夫曼树与带权路径长度",
+      "树与森林的存储结构"
+    ]
+  },
+  "2020-43": {
+    "year": 2020,
+    "index": 43,
+    "id": 560,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "应用题",
+    "score": 13,
+    "question": "比较软件移位加法、ALU/移位器迭代乘法指令和阵列乘法器，并判断32位signed/unsigned乘法溢出。",
+    "answer": "x=7FFFFFFFH、y=2，完整64位乘积00000000FFFFFFFEH；unsigned低32位合法，signed int结果溢出；无符号高32位非0表示溢出。",
+    "analysis": "x=7FFFFFFFH、y=2，完整64位乘积00000000FFFFFFFEH；unsigned低32位合法，signed int结果溢出；无符号高32位非0表示溢出。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "移位加法乘法与阵列乘法器",
+        "topic": "移位加法乘法与阵列乘法器",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "定点补码加减与溢出",
+        "topic": "定点补码加减与溢出",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "计算机性能指标 CPI 与 CPU 时间",
+        "topic": "计算机性能指标 CPI 与 CPU 时间",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "移位加法乘法与阵列乘法器"
+    ],
+    "secondaryCards": [
+      "定点补码加减与溢出",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
+  },
+  "2020-44": {
+    "year": 2020,
+    "index": 44,
+    "id": 561,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "应用题",
+    "score": 10,
+    "question": "32位主存地址、8路组相联、64B块、32KB数据区，计算Cache字段、数组访问缺失和指令Cache首次缺失。",
+    "answer": "块内偏移6位、组索引6位、Tag20位；64组；数组占64个主存块，数据Cache缺失64次；指令地址00010003H映射第0组。",
+    "analysis": "块内偏移6位、组索引6位、Tag20位；64组；数组占64个主存块，数据Cache缺失64次；指令地址00010003H映射第0组。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "Cache 映射与命中率",
+        "topic": "Cache 映射与命中率",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "Cache 替换与写策略",
+        "topic": "Cache 替换与写策略",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "存储器层次与主存组织",
+        "topic": "存储器层次与主存组织",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "Cache 映射与命中率",
+      "Cache 替换与写策略"
+    ],
+    "secondaryCards": [
+      "存储器层次与主存组织"
+    ]
+  },
+  "2020-45": {
+    "year": 2020,
+    "index": 45,
+    "id": 562,
+    "subject": "操作系统",
+    "subjectCode": "operating-system",
+    "typeName": "应用题",
+    "score": 7,
+    "question": "操作A、B完成后执行C，C和D完成后执行E，使用P/V操作描述先后关系。",
+    "answer": "设置SAC、SBC、SCE、SDE四个初值0的同步信号量，C等待A/B，E等待C/D。",
+    "analysis": "设置SAC、SBC、SCE、SDE四个初值0的同步信号量，C等待A/B，E等待C/D。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "进程同步与信号量",
+        "topic": "进程同步与信号量",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "临界区互斥访问原则",
+        "topic": "临界区互斥访问原则",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "进程同步与信号量"
+    ],
+    "secondaryCards": [
+      "临界区互斥访问原则"
+    ]
+  },
+  "2020-46": {
+    "year": 2020,
+    "index": 46,
+    "id": 563,
+    "subject": "操作系统",
+    "subjectCode": "operating-system",
+    "typeName": "应用题",
+    "score": 8,
+    "question": "二级页表、4KB页、10/10/12位地址结构，计算数组元素虚拟地址、PDE/PTE物理地址及行列遍历局部性。",
+    "answer": "a[1][2]=10801008H；页目录号042H、页号001H；PDE=00201108H，PTE=00301004H；虚拟区连续、物理页框可不连续，按行访问局部性更好。",
+    "analysis": "a[1][2]=10801008H；页目录号042H、页号001H；PDE=00201108H，PTE=00301004H；虚拟区连续、物理页框可不连续，按行访问局部性更好。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "页表结构与地址转换",
+        "topic": "页表结构与地址转换",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "数组行优先与列优先存储",
+        "topic": "数组行优先与列优先存储",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "虚拟内存与页面置换",
+        "topic": "虚拟内存与页面置换",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "页表结构与地址转换",
+      "数组行优先与列优先存储"
+    ],
+    "secondaryCards": [
+      "虚拟内存与页面置换"
+    ]
+  },
+  "2020-47": {
+    "year": 2020,
+    "index": 47,
+    "id": 564,
+    "subject": "计算机网络",
+    "subjectCode": "computer-network",
+    "typeName": "应用题",
+    "score": 9,
+    "question": "校园网两个使用重复私有地址的LAN经R1/R2/R3连接，配置Web服务器端口映射并追踪H2发包时源/目的IP变化。",
+    "answer": "R2映射203.10.2.2:80→192.168.1.2:80；H2→R3后源IP变203.10.2.6；经R2后目的IP变192.168.1.2。",
+    "analysis": "R2映射203.10.2.2:80→192.168.1.2:80；H2→R3后源IP变203.10.2.6；经R2后目的IP变192.168.1.2。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "NAT 与端口映射",
+        "topic": "NAT 与端口映射",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "路由选择与转发表",
+        "topic": "路由选择与转发表",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "IPv4 地址与子网划分",
+        "topic": "IPv4 地址与子网划分",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "NAT 与端口映射"
+    ],
+    "secondaryCards": [
+      "路由选择与转发表",
+      "IPv4 地址与子网划分"
+    ]
   }
 };
 window.CARD_QUESTION_LIST = {
@@ -3876,7 +4149,8 @@ window.CARD_QUESTION_LIST = {
   ],
   "哈夫曼树与带权路径长度": [
     "2014-41",
-    "2019-3"
+    "2019-3",
+    "2020-42"
   ],
   "邻接矩阵与邻接表": [
     "2011-8",
@@ -3934,7 +4208,8 @@ window.CARD_QUESTION_LIST = {
     "2014-45",
     "2015-16",
     "2016-45",
-    "2018-44"
+    "2018-44",
+    "2020-44"
   ],
   "程序查询与中断驱动 I/O": [
     "2009-43",
@@ -3942,7 +4217,8 @@ window.CARD_QUESTION_LIST = {
     "2018-43"
   ],
   "存储器层次与主存组织": [
-    "2010-17"
+    "2010-17",
+    "2020-44"
   ],
   "进程状态与 PCB": [
     "2014-26"
@@ -3953,14 +4229,16 @@ window.CARD_QUESTION_LIST = {
   ],
   "临界区互斥访问原则": [
     "2016-27",
-    "2017-46"
+    "2017-46",
+    "2020-45"
   ],
   "进程同步与信号量": [
     "2011-45",
     "2014-47",
     "2015-45",
     "2017-46",
-    "2019-43"
+    "2019-43",
+    "2020-45"
   ],
   "银行家算法安全性检查": [
     "2011-27"
@@ -3972,7 +4250,8 @@ window.CARD_QUESTION_LIST = {
     "2017-45",
     "2018-44",
     "2018-45",
-    "2019-46"
+    "2019-46",
+    "2020-46"
   ],
   "进程调度算法": [
     "2009-24",
@@ -4030,7 +4309,8 @@ window.CARD_QUESTION_LIST = {
   "路由选择与转发表": [
     "2014-43",
     "2015-38",
-    "2019-47"
+    "2019-47",
+    "2020-47"
   ],
   "TCP 序号确认与累计确认": [
     "2013-39",
@@ -4150,7 +4430,8 @@ window.CARD_QUESTION_LIST = {
     "2015-46",
     "2016-45",
     "2017-45",
-    "2018-45"
+    "2018-45",
+    "2020-46"
   ],
   "ARP 与 DHCP": [
     "2015-47"
@@ -4175,12 +4456,14 @@ window.CARD_QUESTION_LIST = {
     "2016-43",
     "2017-42",
     "2018-41",
-    "2019-41"
+    "2019-41",
+    "2020-41"
   ],
   "计算机性能指标 CPI 与 CPU 时间": [
     "2016-44",
     "2017-44",
-    "2018-43"
+    "2018-43",
+    "2020-43"
   ],
   "TLB 与快表命中": [
     "2014-45",
@@ -4217,7 +4500,8 @@ window.CARD_QUESTION_LIST = {
   "定点补码加减与溢出": [
     "2017-43",
     "2017-44",
-    "2019-45"
+    "2019-45",
+    "2020-43"
   ],
   "RISC 与 CISC": [
     "2017-44"
@@ -4258,7 +4542,8 @@ window.CARD_QUESTION_LIST = {
   ],
   "Cache 映射与命中率": [
     "2018-44",
-    "2019-46"
+    "2019-46",
+    "2020-44"
   ],
   "改进型 CLOCK 页面置换": [
     "2018-45"
@@ -4288,9 +4573,31 @@ window.CARD_QUESTION_LIST = {
     "2019-45"
   ],
   "NAT 与端口映射": [
-    "2019-47"
+    "2019-47",
+    "2020-47"
   ],
   "网桥与交换机的冲突域广播域": [
     "2019-47"
+  ],
+  "最小距离三元组的三指针扫描": [
+    "2020-41"
+  ],
+  "多路归并与双指针": [
+    "2020-41"
+  ],
+  "前缀编码与二叉判定树": [
+    "2020-42"
+  ],
+  "树与森林的存储结构": [
+    "2020-42"
+  ],
+  "移位加法乘法与阵列乘法器": [
+    "2020-43"
+  ],
+  "数组行优先与列优先存储": [
+    "2020-46"
+  ],
+  "IPv4 地址与子网划分": [
+    "2020-47"
   ]
 };
