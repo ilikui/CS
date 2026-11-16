@@ -3380,7 +3380,7 @@ window.QUESTION_CARD_MAP = {
       "为接入CS必须选择CS—QD(3)；连接左右分量可选择BJ—TL(3)或WH—QD(3)，因此有两棵MST。",
       "每棵树共7条边，总费用10+3+3=16。",
       "邻接矩阵适合稠密图，邻接表适合稀疏图；Prim逐步扩展生成树，Kruskal按边权排序并用并查集避免成环。",
-      "TTL逐路由器转发递减：直连TL—BJ的方案可到达；另一方案需TL→JN→QD→WH→BJ，TTL在BJ路由器转发到H2前耗尽。"
+      "TTL逐路由器转发递减：直连TL—BJ的方案可到达；另一方案需经TL→JN→QD→WH→XA→BJ，沿途在TL、JN、QD、WH、XA五台路由器转发时TTL依次递减，TTL在XA处耗尽，H2收不到。"
     ],
     "code": "",
     "audit": {
