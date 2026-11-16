@@ -151,9 +151,11 @@ function setYear(y) {
     if (window.innerWidth <= 768) toggleSidebar();
 }
 
+function questionSubjectCode(q) { return window.QUESTION_CARD_MAP?.[String(q.year)+'-'+String(q.index)]?.subjectCode || q.subject; }
+
 function applyFilters() {
     filtered = QUESTIONS_DATA.filter(q => {
-        if (filters.subject !== 'all' && q.subject !== filters.subject) return false;
+        if (filters.subject !== 'all' && questionSubjectCode(q) !== filters.subject) return false;
         if (filters.type !== 'all' && q.type !== parseInt(filters.type)) return false;
         if (filters.year !== 'all' && q.year !== parseInt(filters.year)) return false;
         if (targetIndex && q.index !== targetIndex) return false;
@@ -180,7 +182,8 @@ function renderQuestions() {
     container.innerHTML = page.map(q => {
         const typeName = {1:'选择题',2:'应用题',3:'算法题'}[q.type] || '选择题';
         const typeClass = 'type-' + q.type;
-        const subjName = SUBJECT_MAP[q.subject] || q.subject;
+        const indexedSubject = window.QUESTION_CARD_MAP?.[String(q.year)+'-'+String(q.index)]?.subject;
+        const subjName = indexedSubject || SUBJECT_MAP[questionSubjectCode(q)] || q.subject;
         const ansId = 'ans-' + q.id;
 
         let answerHtml = '';
