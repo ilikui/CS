@@ -321,7 +321,7 @@ if (window.__408_QUESTION_DATA_ERROR__ || !Array.isArray(loadedQuestionData) || 
         const original = solution.originalAnalysis ? '<details><summary>查看题库原始解析</summary><div class="q-body">' + solution.originalAnalysis + '</div></details>' : '';
         return '<div class="verified-solution"><strong>逐题复核答案</strong><div><strong>答案：</strong>' + escapeHtml(solution.answer || '') + '</div><h4>解题步骤</h4><ol>' + steps + '</ol>' + matrix + code + complexity + explanation + correction + original + '<small>本条已人工复核；修订记录保留在仓库 data/408/verified-solutions-2009-2011.json。</small></div>';
     };
-    fetch('./verified-solutions-2009-2011.json')
+    fetch('./verified-solutions.json')
         .then(response => { if (!response.ok) throw new Error('verified solutions unavailable'); return response.json(); })
         .then(payload => {
             const supplements = new Map((payload.questions || []).map(item => [String(item.year) + '-' + String(item.index), item]));
