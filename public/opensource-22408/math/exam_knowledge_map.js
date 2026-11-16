@@ -4592,244 +4592,524 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "区间左端 0 不属于定义域，需比较 x→0⁺ 的极限与驻点值；不能把 x=0 当可取端点。"
   },
   "360": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2009-填空题-14",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-D"
+    ],
+    "secondary": [
+      "LA-02-A"
+    ],
+    "rationale": "秩一外积矩阵的非零特征值等于迹，且 tr(αβᵀ)=βᵀα。",
+    "methods": "利用相似不变量先读出特征值，再用迹等于特征值之和及外积迹公式求值。",
+    "pitfalls": "不要把 αβᵀ 与 βᵀα 混为同阶矩阵；后者是标量。"
   },
   "361": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2009-解答题-15",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-01-G"
+    ],
+    "rationale": "分子由 1−cos x 与 x−ln(1+tan x) 的局部等价展开决定，分母 sin⁴x 与 x⁴ 等价。",
+    "methods": "分别求两个因子的主阶：1−cos x~x²/2，x−ln(1+tan x)~x²/2，再相除。",
+    "pitfalls": "必须展开到足以确定第二个因子的首个非零项，不能只用 tan x~x。"
   },
   "362": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2009-解答题-16",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-A"
+    ],
+    "rationale": "该不定积分先作根式代换，再用分部积分并进行有理函数部分分式分解。",
+    "methods": "令 t=√((1+x)/x) 化简根式关系，对对数因子分部积分，最后部分分式积分并回代。",
+    "pitfalls": "注意 x>0 的定义域及代换后的 t>1；回代时对数绝对值要结合定义域处理。"
   },
   "363": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2009-解答题-17",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "三元复合函数的两个中间变量分别为 x+y、x−y、xy，需用多元链式法则求一阶及混合二阶偏导。",
+    "methods": "先列出各中间变量对 x、y 的偏导，再求 z_x、z_y；对 z_x 再关于 y 求导并合并二阶偏导项。",
+    "pitfalls": "混合求导时不要漏掉系数 y 对 y 的导数所产生的 f₃′ 项。"
   },
   "364": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2009-解答题-18",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-D"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "先解二阶微分方程并利用过原点条件和面积积分确定常数，再用绕 y 轴旋转体积公式。",
+    "methods": "令 p=y′，解 xp′−p+2=0 得 y=C₁+2x+C₂x²；代入边界及面积条件求常数，再用圆盘/垫片法积分。",
+    "pitfalls": "旋转轴是 y 轴，半径应写成 x(y)；不能直接把 y 当半径。"
   },
   "365": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2009-解答题-19",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-F"
+    ],
+    "secondary": [
+      "CAL-08-E"
+    ],
+    "rationale": "圆盘与半平面交域适合极坐标，面积元及被积函数需同步转换。",
+    "methods": "设 x=r cosθ、y=r sinθ，由 y≥x 确定角域，由圆方程确定径向上界，再积分。",
+    "pitfalls": "核对角域方向和径向边界；极坐标面积元包含 r。"
   },
   "366": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2009-解答题-20",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "左段由法线过原点得到一阶关系并积分；右段是二阶常系数非齐次方程，连接处用光滑条件确定常数。",
+    "methods": "左段写法线斜率 −x/y=y′，积分得 x²+y²=C；右段解特征方程，并在 x=0 匹配函数值与一阶导数。",
+    "pitfalls": "法线斜率是 −x/y，不是切线斜率 y/x；光滑连接至少匹配 y 与 y′。"
   },
   "367": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2009-解答题-21",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A"
+    ],
+    "secondary": [
+      "CAL-03-C"
+    ],
+    "rationale": "第一问是拉格朗日中值定理；第二问将差商转化为区间内导数值并令端点趋近。",
+    "methods": "构造减去割线的辅助函数用罗尔定理证明；第二问对 [0,x] 使用中值定理后取右极限。",
+    "pitfalls": "需分别检查闭区间连续、开区间可导的条件，不能直接把导数极限当作端点导数。"
   },
   "368": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2009-解答题-22",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-E"
+    ],
+    "secondary": [
+      "LA-04-B"
+    ],
+    "rationale": "通过 Aξ₂=ξ₁、A²ξ₃=ξ₁ 构造广义特征向量链，并用行列式证明三向量线性无关。",
+    "methods": "分别解两个线性方程组的通解，再把任意参数形式代入三阶行列式验证非零。",
+    "pitfalls": "求 A²ξ₃ 时不能误写成 Aξ₃=ξ₁；需保留零空间中的任意参数。"
   },
   "369": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2009-解答题-23",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-06-D"
+    ],
+    "secondary": [
+      "LA-05-A"
+    ],
+    "rationale": "二次型矩阵为实对称矩阵，规范形的正负项数由特征值符号（惯性）决定。",
+    "methods": "写出对称矩阵，求特征多项式与特征值；根据规范形有两个正项、一个零项筛选参数。",
+    "pitfalls": "规范形系数的正负数目不等于特征值大小排序；零特征值必须单独检查。"
   },
   "370": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-03-B"
+    ],
+    "secondary": [
+      "CAL-01-B"
+    ],
+    "rationale": "先确定定义域排除点，再比较各点左右极限以区分无穷间断点、跳跃间断点和可去间断点。",
+    "methods": "因式约分后分别考察 x=0、1、−1 的单侧极限。",
+    "pitfalls": "约分不代表原函数在被约掉的点有定义；左右极限必须分别判断。"
   },
   "371": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-B"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "两个非齐次特解的线性组合仍满足原方程需系数和为 1；组合成为齐次解需系数差为 0。",
+    "methods": "利用线性微分算子作用于线性组合，分别比较非齐次项系数，解 λ=μ、λ+μ=1。",
+    "pitfalls": "不要把齐次解空间的线性组合条件与非齐次方程特解条件混淆。"
   },
   "372": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "相切条件要求函数值相等且导数相等，联立确定切点与参数。",
+    "methods": "分别求两曲线导数，令斜率相等，再代入两曲线方程求切点和 a。",
+    "pitfalls": "只令导数相等不足以保证相切，还必须满足两曲线经过同一点。"
   },
   "373": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-02-C"
+    ],
+    "rationale": "反常积分的敛散性由两个端点的局部幂次/对数行为决定。",
+    "methods": "在 x→0⁺ 用 ln(1−x)~−x 化为幂函数判别；在 x→1⁻ 用对数增长慢于任意负幂判断。",
+    "pitfalls": "要分别检查 0 和 1 两个瑕点，不能只分析一个端点。"
   },
   "374": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "由 F(y/x,z/x)=0 隐式确定 z，需对 x、y 求偏导并组合成齐次函数的欧拉型关系。",
+    "methods": "分别隐式求 z_x、z_y，代入 xz_x+yz_y，消去 F₁′ 项得到 z。",
+    "pitfalls": "链式求导时 y/x、z/x 对 x 的导数均带负号，注意整理。"
   },
   "375": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-选择题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-E"
+    ],
+    "secondary": [
+      "CAL-02-A"
+    ],
+    "rationale": "双重求和拆成两个一维黎曼和，极限转化为单位正方形上的二重积分。",
+    "methods": "将 n/((n+i)(n²+j²)) 拆成 1/(n+i) 与 n/(n²+j²) 的乘积求和，分别识别黎曼和。",
+    "pitfalls": "求和指标 i、j 各自归一化；区域是 [0,1]×[0,1]，不是三角形。"
   },
   "376": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-选择题-7",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-03-A"
+    ],
+    "secondary": [
+      "LA-03-C"
+    ],
+    "rationale": "向量组 I 可由向量组 II 线性表示，意味着 I 的秩不超过 II 的秩，进而不超过向量个数 s。",
+    "methods": "用秩不等式 r(I)≤r(II)≤s；若 I 线性无关则 r(I)=r。",
+    "pitfalls": "线性相关只说明秩小于向量个数，不推出 r>s。"
   },
   "377": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-选择题-8",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-C"
+    ],
+    "secondary": [
+      "LA-05-A"
+    ],
+    "rationale": "实对称矩阵可正交对角化，且 A²+A=0 限制特征值只能为 0 或 −1；秩确定非零特征值个数。",
+    "methods": "对特征值代入 λ²+λ=0，再由秩为 3 确定三个 −1 和一个 0。",
+    "pitfalls": "题干选项问相似标准形，不能误把特征值 −1 写成 +1。"
   },
   "378": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-填空题-9",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "三阶常系数齐次方程通过特征方程分解为一个实根和一对共轭复根。",
+    "methods": "写特征多项式并因式分解，按实根与复根写出指数、正弦和余弦解。",
+    "pitfalls": "复根 ±i 对应 cos x、sin x 两个实线性无关解。"
   },
   "379": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-填空题-10",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-H"
+    ],
+    "secondary": [
+      "CAL-05-C"
+    ],
+    "rationale": "斜渐近线由 y/x 的极限确定斜率，再由 y−kx 的极限确定截距。",
+    "methods": "先求 k=lim(y/x)，再求 b=lim(y−kx)。",
+    "pitfalls": "不能只求斜率而漏掉截距；还需区分 x→+∞ 与 x→−∞。"
   },
   "380": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-填空题-11",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "对数函数的高阶导数可按递推/公式求得，代入 x=0 得麦克劳林系数对应的导数值。",
+    "methods": "连续求导归纳得到 y⁽ⁿ⁾(x)=−2ⁿ(n−1)!/(1−2x)ⁿ，再令 x=0。",
+    "pitfalls": "n 阶导数与麦克劳林展开系数相差 n!，不要混用。"
   },
   "381": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-填空题-12",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-04-E"
+    ],
+    "rationale": "极坐标曲线弧长使用 √(r²+(r′)²) 的积分公式。",
+    "methods": "由 r=e^θ 得 r′=e^θ，代入 0 到 π 的弧长积分。",
+    "pitfalls": "极坐标弧长不是简单积分 r；必须包含 r′ 项。"
   },
   "382": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-填空题-13",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-B"
+    ],
+    "secondary": [
+      "CAL-05-B"
+    ],
+    "rationale": "对角线长度由勾股关系表示，对时间求导使用隐式求导/相关变化率。",
+    "methods": "设 S²=l²+w²，两边对 t 求导，代入 l′、w′ 和瞬时长宽。",
+    "pitfalls": "速率单位统一为 cm/s；不要把边长变化率直接相加。"
   },
   "383": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-填空题-14",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-01-E"
+    ],
+    "secondary": [
+      "LA-02-A"
+    ],
+    "rationale": "利用矩阵因式分解及行列式乘法、逆矩阵行列式公式计算目标行列式。",
+    "methods": "将 A+B⁻¹ 写为 A(A⁻¹+B)B⁻¹，再对乘积取行列式。",
+    "pitfalls": "矩阵乘法顺序不可交换；|B⁻¹|=1/|B|。"
   },
   "384": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-解答题-15",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-F"
+    ],
+    "secondary": [
+      "CAL-05-B"
+    ],
+    "rationale": "含变上限积分的函数先用莱布尼茨公式求导，再通过导数符号判断单调区间和极值。",
+    "methods": "对积分上限 x² 求导并结合外层因子求 f′，分区间判断符号，再计算候选点函数值。",
+    "pitfalls": "积分上限为 x²，链式法则必须乘 2x；极值点还需比较左右符号。"
   },
   "385": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-解答题-16",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-02-C"
+    ],
+    "rationale": "先利用 0<ln(1+t)<t 建立被积函数比较，再用夹逼定理求数列极限。",
+    "methods": "对 0<t<1 建立 n 次幂不等式，积分后用 ∫₀¹tⁿ|ln t|dt=1/(n+1)² 夹逼。",
+    "pitfalls": "比较时因子 |ln t| 非负；端点奇异性需确认积分收敛。"
   },
   "386": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-解答题-17",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-E"
+    ],
+    "secondary": [
+      "CAL-04-C"
+    ],
+    "rationale": "参数方程的二阶导数公式把 ψ 的导数联系起来，随后解一阶线性方程并用初值积分。",
+    "methods": "先写 dy/dx=ψ′/x′，再求 d²y/dx²=(1/x′)d/dt(dy/dx)，解 ψ′ 的方程并积分。",
+    "pitfalls": "二阶参数导数还需再除以 dx/dt；不能把 d²y/dx² 误当成 d²y/dt²。"
   },
   "387": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-解答题-18",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-E"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "椭圆截面油量由截面积二重积分/定积分求出，再乘柱体长度与密度。",
+    "methods": "由椭圆方程解出横向半宽，对高度变量积分求截面积，最后乘 lρ。",
+    "pitfalls": "油面高度 3b/2 对应积分上限 y=b/2（以椭圆中心为原点），注意坐标原点位置。"
   },
   "388": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-解答题-19",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "线性变量替换下二阶偏导按链式法则展开，令 ξξ、ηη 项系数为零以消去纯二阶项。",
+    "methods": "分别写 ∂x、∂y 的算子表达式，代入原方程，解两个特征方向对应的二次方程并选不同根。",
+    "pitfalls": "a、b 必须取不同根，否则变换退化；还需保证 ξ、η 独立。"
   },
   "389": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-解答题-20",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-F"
+    ],
+    "secondary": [
+      "CAL-08-E"
+    ],
+    "rationale": "将极坐标区域与被积函数换成直角坐标后，得到简单三角域上的二重积分。",
+    "methods": "用 x=r cosθ、y=r sinθ，结合 r≤secθ 转为 0≤y≤x≤1，再按次序积分。",
+    "pitfalls": "原式已写 dr dθ 而非 dxdy，转换时要核对雅可比 r 是否已包含在被积表达式中。"
   },
   "390": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-解答题-21",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A"
+    ],
+    "secondary": [
+      "CAL-05-D"
+    ],
+    "rationale": "构造 F(x)=f(x)−x³/3，使端点函数值相等，再在两个半区间分别使用拉格朗日中值定理。",
+    "methods": "分别在 [0,1/2]、[1/2,1] 应用中值定理，所得差商相加为零。",
+    "pitfalls": "第二段差商的端点顺序要与区间方向一致；最后代回 F′=f′−x²。"
   },
   "391": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-解答题-22",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-04-D"
+    ],
+    "secondary": [
+      "LA-04-C"
+    ],
+    "rationale": "方程组有两个不同解意味着相容且系数矩阵秩小于未知数个数，利用秩判定与行化简求参数及通解。",
+    "methods": "令 det A=0 求 λ，再代入相容条件求 a；对增广矩阵消元并保留自由变量。",
+    "pitfalls": "det A=0 只是必要条件，仍要检查增广矩阵秩相等。"
   },
   "392": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2010-解答题-23",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-C"
+    ],
+    "secondary": [
+      "LA-05-A"
+    ],
+    "rationale": "实对称矩阵的正交对角化以标准正交特征向量为列，已知列向量先确定参数，再求其余特征向量。",
+    "methods": "由 Av=λv 比较分量求 a、特征值；在正交补空间求其余特征向量并单位化。",
+    "pitfalls": "特征向量需单位化且两两正交；列顺序决定对角矩阵中特征值顺序。"
   },
   "393": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2011-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-C"
+    ],
+    "secondary": [
+      "CAL-05-D"
+    ],
+    "rationale": "三角函数差可用三倍角恒等式化为 4sin³x，再与 x³ 比较主阶。",
+    "methods": "使用 sin3x=3sinx−4sin³x，得到 f(x)=4sin³x~4x³。",
+    "pitfalls": "不要只分别对两项使用 sin x~x 后相减，会丢失首个非零阶。"
   },
   "394": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2011-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-A"
+    ],
+    "secondary": [
+      "CAL-02-C"
+    ],
+    "rationale": "由 f 在 0 可导且 f(0)=0，将两个分式分别改写为导数定义中的差商。",
+    "methods": "拆成 [f(x)−f(0)]/x−2[f(x³)−f(0)]/x³，分别取极限。",
+    "pitfalls": "第二项分母是 x³，必须以变量 h=x³ 识别导数定义。"
   },
   "395": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2011-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "驻点由一阶导数为零确定，对数绝对值求导后转化为有理函数分子方程。",
+    "methods": "利用 ln|u|′=u′/u，求和后解二次方程并排除函数无定义点。",
+    "pitfalls": "驻点必须在定义域内；x=1、2、3 是函数无定义点，不是驻点。"
   },
   "396": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2011-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "右端指数项与齐次方程特征根重复，待定特解需乘 x 消除共振。",
+    "methods": "求特征根 ±λ，按待定系数法对两个共振指数项分别乘 x。",
+    "pitfalls": "两个指数项都与齐次解重复，不能只给其中一项乘 x。"
   },
   "397": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2011-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-D"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "z=f(x)g(y) 的二元极值由 Hessian 判别式决定，混合偏导为零。",
+    "methods": "计算 z_xx=f″g、z_yy=fg″、z_xy=0，要求 z_xx>0 且 z_xx z_yy>0。",
+    "pitfalls": "注意 g(0)<0，乘积符号会反转 f″ 的条件。"
   },
   "398": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2011-选择题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-06-E"
+    ],
+    "rationale": "三个定积分的被积函数在区间内可逐点比较，积分保序；端点的对数奇异性仍可积。",
+    "methods": "由 sin x<cos x<1<cot x 及 ln 单调性，逐点比较后积分。",
+    "pitfalls": "区间端点 x=0 处存在对数奇异性，但为可积瑕点；比较不等式在开区间成立即可。"
   },
   "399": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2011-选择题-7",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-B"
+    ],
+    "secondary": [
+      "LA-02-A"
+    ],
+    "rationale": "列变换对应右乘初等矩阵，行交换对应左乘置换矩阵，反向还原得到 A。",
+    "methods": "由 AP₁=B、P₂B=I 得 B=P₂，进而 A=P₂P₁⁻¹。",
+    "pitfalls": "行变换和列变换的乘法方向相反，不能将 P₁ 与 P₂ 的次序互换。"
   },
   "400": {
     "status": "pending",
