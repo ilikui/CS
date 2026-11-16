@@ -1,5 +1,5 @@
 // Audit source identity, target card existence, and candidate coverage; never auto-promote candidates.
-// Re-run source-backed audit after Cache, TCP, sorting and layer-function mappings.
+// Re-run source-backed audit after restoring the 2016 pipeline sequence and diagram questions.
 // Refresh audit after the third batch of source-backed associations.
 // Re-run after application-question solutions and status-label corrections.
 // Refresh audit after round-five source-backed question links.
