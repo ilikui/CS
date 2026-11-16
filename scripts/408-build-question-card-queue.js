@@ -70,11 +70,11 @@ function termsForCard(card) {
   return [...weighted.entries()].map(([term,weight])=>({term,weight})).sort((a,b)=>b.weight-a.weight);
 }
 function loadQuestions() {
-  const context = {};
+  const context = {window:{}};
   const source = fs.readFileSync('data/408/questions_data.js','utf8');
-  vm.runInNewContext(source + String.fromCharCode(10) + ';globalThis.__QUESTIONS_DATA__ = QUESTIONS_DATA;',context,{timeout:120000});
-  const data = context.__QUESTIONS_DATA__ || context.QUESTIONS_DATA || (context.window && context.window.QUESTIONS_DATA);
-  if (!Array.isArray(data)) throw new Error('QUESTIONS_DATA export not found');
+  vm.runInNewContext(source,context,{timeout:120000});
+  const data = context.window.QUESTIONS_DATA || context.QUESTIONS_DATA;
+  if (!Array.isArray(data)) throw new Error('QUESTIONS_DATA export not found in data/408/questions_data.js (expected window.QUESTIONS_DATA or global QUESTIONS_DATA)');
   return data;
 }
 const questions = loadQuestions();
