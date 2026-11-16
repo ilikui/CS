@@ -8877,244 +8877,528 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "二次求导时xz项产生2zx；不要漏掉e^z(zx)²项。"
   },
   "680": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-填空题-14",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "由隐式方程求出 dy/dx=9/11，再用法线斜率为切线斜率负倒数，得到 -11/9。",
+    "methods": "先代入 x=1 求对应点 (1,1)，对方程两边求导，再取负倒数。",
+    "pitfalls": "不要把切线斜率直接当作法线斜率；法线斜率是 -1/y'。"
   },
   "681": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-填空题-15",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-E"
+    ],
+    "rationale": "利用 f(x+2)=f(x)+x 将区间 [2,3] 平移到 [0,1]，再用 [0,2] 上积分为零消去 f 的积分项。",
+    "methods": "拆分积分区间，对第二段作变量代换 u=x-2，再代入函数递推关系。",
+    "pitfalls": "平移积分时同步变换被积函数；不能把 f(u+2) 直接当成 f(u)。"
   },
   "682": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-填空题-16",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-04-D"
+    ],
+    "secondary": [
+      "LA-01-D",
+      "LA-01-B"
+    ],
+    "rationale": "四元增广矩阵行列式为零的展开关系，结合已知三阶行列式值，直接得到目标三阶行列式为 8。",
+    "methods": "由方程组有解建立增广矩阵秩条件，按最后一列展开四阶行列式。",
+    "pitfalls": "按列展开时注意代数余子式符号；首列/末列展开的符号不能混淆。"
   },
   "683": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-解答题-17",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-B"
+    ],
+    "secondary": [
+      "CAL-04-C"
+    ],
+    "rationale": "切线在 y 轴截距为 y-xy'，结合题设距离条件及经过点 (e²,0)，得到一阶线性微分方程 y'-(1/x)y=-1。",
+    "methods": "先写切线方程并令横坐标为零求截距，再解一阶线性方程并代入初值。",
+    "pitfalls": "题设是截距的距离；需结合连续性和给定点确定正号分支，不能无条件省略绝对值。"
   },
   "684": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-解答题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-B"
+    ],
+    "secondary": [
+      "CAL-04-C"
+    ],
+    "rationale": "将切线 y 轴截距写为 y-xy'，由题设取正分支得到 y'-(1/x)y=-1，积分因子法给出 y=x(C-ln x)，初值确定 C=2。",
+    "methods": "使用积分因子 μ=1/x，解线性方程并代入 (e²,0)。",
+    "pitfalls": "检查积分因子乘法后的导数形式；常数由 ln(e²)=2 决定。"
   },
   "685": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-解答题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "切线与坐标轴截距分别为 x/(ln x-1) 和 x，三角形面积为 x²/[2(ln x-1)]；求导得最小点 x=e^(3/2)，最小面积 e³。",
+    "methods": "分别令切线方程中的 X=0、Y=0 求截距，再对面积函数求极值并检验单调性。",
+    "pitfalls": "需确保 x>e 时截距符号与面积取绝对值一致；最小面积不是把 x=e^(3/2) 直接代入分母而漏掉 1/2。"
   },
   "686": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-解答题-18",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-D"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "求两个一阶偏导得到驻点，再用 Hessian 判别式 AC-B² 判断；(−e,2kπ) 为极小点，另一族为鞍点。",
+    "methods": "先解 fx=fy=0，分驻点计算二阶偏导及判别式。",
+    "pitfalls": "驻点不等于极值点；AC-B²<0 时为鞍点，>0 时还要看 fxx 符号。"
   },
   "687": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-解答题-19",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "区域面积和绕 x 轴旋转体体积均化为无穷区间反常积分，核心是建立正确积分表达式并判断收敛。",
+    "methods": "分别使用面积积分 ∫y dx 和圆盘法体积 π∫y² dx。",
+    "pitfalls": "上限为无穷，必须按反常积分定义处理；体积公式中半径要平方。"
   },
   "688": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-解答题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "面积积分 ∫₁∞[x√(1+x²)]⁻¹dx 经 x=tan t 化为 csc t 的积分，结果 ln(1+√2)。",
+    "methods": "作三角代换 x=tan t，化简被积函数并计算端点极限。",
+    "pitfalls": "无穷上限对应 t→π/2 的极限；原函数对数表达式要正确处理绝对值。"
   },
   "689": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-解答题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-06-C",
+      "CAL-06-B"
+    ],
+    "rationale": "旋转体体积为 π∫₁∞1/[x²(1+x²)]dx，部分分式拆成 1/x²−1/(1+x²)，得到 π(1−π/4)。",
+    "methods": "先用圆盘法建立体积积分，再部分分式积分并取无穷上限极限。",
+    "pitfalls": "不要遗漏 π；反常积分上限需取极限，且第二项积分为 π/4。"
   },
   "690": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-解答题-20",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-F"
+    ],
+    "secondary": [
+      "CAL-08-E"
+    ],
+    "rationale": "极坐标将两条二次曲线化为径向边界、两条直线化为角度范围；被积函数含雅可比 r，径向积分给出 ln√2。",
+    "methods": "写出 r、θ 的上下限，代入 dxdy=r drdθ，再先对 r 积分。",
+    "pitfalls": "分母 3x²+y² 应变为 r²(3cos²θ+sin²θ)，不能漏掉雅可比因子 r。"
   },
   "691": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-解答题-21",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-05-A"
+    ],
+    "rationale": "两部分证明都以二阶 Taylor 中值余项为核心，结合 f'' 连续性或极值点处 f'=0 建立所需估计。",
+    "methods": "围绕 0 或极值点作二阶 Taylor 展开，再相加/相减并使用连续性与三角不等式。",
+    "pitfalls": "第二问要利用 |a−c|²+|a+c|²=2(a²+c²)≤4a²；不能把两个余项的中间点误认为相同。"
   },
   "692": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-解答题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-05-A"
+    ],
+    "rationale": "分别在 0 处向 ±a 作带 Lagrange 余项的二阶展开，相加后由 f'' 连续及介值定理得到指定 ξ。",
+    "methods": "写出 f(a)、f(−a) 的二阶 Taylor 公式，消去一阶项并应用介值定理。",
+    "pitfalls": "两侧余项点 ξ₁、ξ₂ 一般不同；需用连续函数 f'' 的介值性，而非直接令两者相等。"
   },
   "693": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-解答题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-05-A",
+      "CAL-05-B"
+    ],
+    "rationale": "在极值点 c 处 f'(c)=0，分别向两端作二阶 Taylor 展开，相减并以两个二阶导数绝对值的较大者估计。",
+    "methods": "选取 |f''(η₁)|、|f''(η₂)| 中较大者，利用平方和上界推出结论。",
+    "pitfalls": "平方和为 2(a²+c²)≤4a²；最终系数是 1/(2a²)，不是 1/a²。"
   },
   "694": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-解答题-22",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-B"
+    ],
+    "secondary": [
+      "LA-05-A"
+    ],
+    "rationale": "由线性变换对任意向量的表达式读出矩阵 A，再求特征值和特征向量构造 P、Λ 实现相似对角化。",
+    "methods": "按各分量对 x₁、x₂、x₃ 的系数写矩阵列/行，再解特征方程。",
+    "pitfalls": "矩阵按输出分量的系数排列；P 的列向量应按 Λ 对角元顺序放置。"
   },
   "695": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-解答题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-A"
+    ],
+    "secondary": [
+      "LA-05-A"
+    ],
+    "rationale": "线性映射的三个输出分量分别给出矩阵的三行，故 A 的行向量由各分量系数直接确定。",
+    "methods": "逐个读取 x₁、x₂、x₃ 在每个输出分量中的系数。",
+    "pitfalls": "不要把按变量系数排列的行误写成列；本题矩阵为 [[1,1,1],[2,-1,1],[0,1,-1]]。"
   },
   "696": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2023-解答题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-A"
+    ],
+    "secondary": [
+      "LA-05-B",
+      "LA-05-E"
+    ],
+    "rationale": "特征多项式分解为 (λ+2)(λ+1)(λ−2)，三个互异特征值对应线性无关特征向量，组成 P 后可对角化。",
+    "methods": "分别解 (A−λI)α=0，按特征值顺序将特征向量作为 P 的列。",
+    "pitfalls": "核对每个特征向量满足 Aα=λα；P 的列顺序必须与 Λ 对角线顺序一致。"
   },
   "697": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-03-B"
+    ],
+    "secondary": [
+      "CAL-01-F"
+    ],
+    "rationale": "可能间断点为 0、1、2；x→1 时函数极限为 e 且函数值缺失，属于可去间断点；0、2 处至少一侧无穷或极限不匹配，属第二类。",
+    "methods": "先找底数/指数失定义点，再对正底数取对数计算左右极限。",
+    "pitfalls": "第一类间断点要求左右极限有限；无穷间断点不能计入第一类。"
   },
   "698": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-E"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "参数方程在 x=2 对应 t=1，dy/dx=(dy/dt)/(dx/dt)=2e/3；原极限是 2f'(2)，故为 4e/3。",
+    "methods": "先由 x=1+t³ 求 t，再用参数求导公式，最后套导数定义型极限。",
+    "pitfalls": "极限中的增量是 2/x，外部还乘 x，因此结果为 2f'(2)，不能漏掉系数 2。"
   },
   "699": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-01-A"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "h(x)=∫₀ˣsin(t³)dt 为偶函数，f(x)=h(sin x)仍为偶函数，偶函数从 0 到 x 的积分 g 为奇函数。",
+    "methods": "先判断被积函数奇偶性，再用变上限积分的奇偶性逐层判断复合函数。",
+    "pitfalls": "积分上限反号会改变积分方向；不要把“偶函数的原函数”误判为偶函数。"
   },
   "700": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-A"
+    ],
+    "secondary": [
+      "CAL-01-C"
+    ],
+    "rationale": "φ(x)=eˣ−e⁻ˣ 在实数域连续严格递增且可逆；若 φ(aₙ) 收敛，则 aₙ=φ⁻¹(φ(aₙ)) 收敛，反证 D。",
+    "methods": "逐项分析反例排除 A、B、C；对 D 利用严格单调连续双射的逆函数连续性。",
+    "pitfalls": "发散序列的连续变换未必发散；必须证明该变换存在连续逆函数。"
   },
   "701": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-A"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "用 |f(x,y)|≤x²+y² 得原点处可微且偏导数为零；但一般点的 fx 含振荡项，沿适当路径极限不存在。",
+    "methods": "分别按可微定义估计增量，再求一般点偏导并构造趋近路径检验连续性。",
+    "pitfalls": "可微不意味着偏导数连续；需区分偏导存在、函数可微和偏导连续。"
   },
   "702": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-选择题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-E"
+    ],
+    "secondary": [
+      "CAL-08-C"
+    ],
+    "rationale": "积分区域由 π/6≤x≤π/2、sin x≤y≤1 描述，换序后 y∈[1/2,1]、x∈[π/6,arcsin y]，对应 A。",
+    "methods": "先画出区域，固定 y 后重新确定 x 的左右边界。",
+    "pitfalls": "换序时外层 y 的范围是 [1/2,1]，内层下限始终 π/6；不能误用 arcsin y 作内层下限。"
   },
   "703": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-选择题-7",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "命题(1)可用 f=1/(1+x) 反例否定；(2)由 x^p f(x) 有有限极限推出 f=O(x⁻ᵖ) 从而积分收敛；(3)给出的对数型函数否定统一幂次渐近结论。",
+    "methods": "逐项判定：构造反例、比较 p-积分、再检查第三命题中任意 p>1 的极限。",
+    "pitfalls": "(2)使用的是极限有限从而最终有界；(3)不能把积分收敛误认为存在某个固定幂次的点态衰减率。"
   },
   "704": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-选择题-8",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-A"
+    ],
+    "secondary": [
+      "LA-02-C"
+    ],
+    "rationale": "由 P 可逆，从 PᵀAP²=M 左右乘相应逆矩阵可解出 A，矩阵乘法化简后为 diag(a,b,c)，对应 C。",
+    "methods": "计算 A=(Pᵀ)⁻¹M(P²)⁻¹，按矩阵乘法顺序逐步化简。",
+    "pitfalls": "矩阵乘法不可交换；左右逆矩阵的位置必须与原等式对应。"
   },
   "705": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-选择题-9",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-D"
+    ],
+    "secondary": [
+      "LA-02-E"
+    ],
+    "rationale": "若 A 可逆会推出 A=A* 与题设矛盾；故 detA=0，利用 AA*=det(A)I 得 A²=0，进而 2r(A)≤4 且 A 非零。",
+    "methods": "先排除可逆情形，再由伴随矩阵恒等式推出幂零关系并使用秩不等式。",
+    "pitfalls": "n=4 时 A* 的伴随恒等式适用；A≠A* 只能推出 A 非零，结合 A²=0 得秩为 1 或 2。"
   },
   "706": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-选择题-10",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-B"
+    ],
+    "secondary": [
+      "LA-05-E"
+    ],
+    "rationale": "A 有两个不同特征值时其特征向量构成二维基；AB=BA 保证 B 保持 A 的两个一维特征子空间，故 B 可对角化。反向用 A=B=I 反例。",
+    "methods": "证明充分性时对 A 的特征向量应用交换关系，必要性用反例否定。",
+    "pitfalls": "不要把“B 可对角化”反推为 A 有两个不同特征值；单位矩阵即反例。"
   },
   "707": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-填空题-11",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-A"
+    ],
+    "secondary": [
+      "CAL-05-C"
+    ],
+    "rationale": "将曲线改写为 x=y²，以 y 为参数计算曲率 κ=2，曲率半径 1/2；曲率中心沿法线方向为 (1/2,0)。",
+    "methods": "使用平面曲线参数形式的曲率公式，确定曲率中心方向后写圆方程。",
+    "pitfalls": "曲线 y²=x 在原点切线为 y 轴，法线沿 x 轴；曲率中心位于 x 正向，不能误取负向。"
   },
   "708": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-填空题-12",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-D"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "解 fx=fy=0 得 (1,1)、(2,1)；Hessian 在 (1,1) 处正判别且 fxx<0，为极大点，在 (2,1) 处判别式为负。",
+    "methods": "求驻点后逐点计算二阶偏导和 Hessian 判别式。",
+    "pitfalls": "题目问极值点而非极小点；本题 (1,1) 实际为极大点，驻点 (2,1) 是鞍点。"
   },
   "709": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-填空题-13",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-A"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "令 u=x+y 将方程化为 u'=1+u⁻²，分离变量积分得到 x=u−arctan u+C，再用 y(1)=0 确定常数。",
+    "methods": "作代换 u=x+y，分离变量积分并回代隐式变量。",
+    "pitfalls": "代换后 y'=u'−1；初值对应 u(1)=1，常数 C=π/4。"
   },
   "710": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-填空题-14",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-B"
+    ],
+    "secondary": [
+      "CAL-05-D"
+    ],
+    "rationale": "对 x²(eˣ−1) 使用 Leibniz 求导公式，五阶导数为 (x²+10x+20)eˣ，代入 x=1 得 31e。",
+    "methods": "将 f=x²eˣ−x²，利用乘积高阶求导公式计算。",
+    "pitfalls": "多项式 x² 的五阶导数为零；指数项的系数需按二项式系数累加。"
   },
   "711": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-填空题-15",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-04-A"
+    ],
+    "rationale": "平均速度等于位移除以时间，即 (1/3)∫₀³v(t)dt；积分 sin(πt) 后解得 k=3π/2。",
+    "methods": "建立定积分平均值方程，分别计算 t 项和正弦项积分。",
+    "pitfalls": "平均速度不是速度函数在端点的算术平均；注意区间长度为 3。"
   },
   "712": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-填空题-16",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-03-C"
+    ],
+    "secondary": [
+      "LA-03-B"
+    ],
+    "rationale": "三个四维向量线性相关且任意两向量无关，故列向量组秩恰为 2；行化简给出 a=−2、b=2，乘积 −4。",
+    "methods": "将三个向量作为矩阵列，利用秩为 2 的条件令化简后的独立约束为零。",
+    "pitfalls": "“任意两个线性无关”排除秩 1；不能仅由行列式为零就忽略秩恰为 2 的条件。"
   },
   "713": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-解答题-17",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-F"
+    ],
+    "secondary": [
+      "CAL-08-E"
+    ],
+    "rationale": "区域关于 y=x 对称，积分 x−y 抵消，原积分化为区域面积；极坐标边界给出面积 (8/3)ln3。",
+    "methods": "先利用对称性简化被积函数，再用极坐标描述双曲线边界并计算面积。",
+    "pitfalls": "角度范围为 arctan(1/3) 至 arctan3；径向上下限来自 xy=1/3 与 xy=3，面积元必须含 r。"
   },
   "714": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-解答题-18",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "这是 Cauchy–Euler 方程，令 x=eᵗ 后化为 y_tt−9y=0；初值确定 y=2x³。",
+    "methods": "使用 x=eᵗ，将 x²y''+xy' 转化为 y_tt，再解常系数方程。",
+    "pitfalls": "二阶导数变换含 −y_t 项，和 xy' 项合并后才得到 y_tt；不能漏掉链式法则项。"
   },
   "715": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-解答题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "换元后常系数方程通解为 C₁x³+C₂x⁻³，结合 y(1)=2、y'(1)=6 得 C₁=2、C₂=0。",
+    "methods": "先写 Euler 方程通解，再将两个初值代入联立求常数。",
+    "pitfalls": "y'(1)=3C₁−3C₂；与 y(1)=C₁+C₂ 联立，避免把导数条件误写成 6C₁。"
   },
   "716": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-解答题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "代入 y=2x³ 后令 u=4−x²，将积分转为 ∫₀³(4−u)u^(1/2)du，结果 22√3/5。",
+    "methods": "先代入已求函数，再作根式常用代换并计算幂函数积分。",
+    "pitfalls": "换元后上下限由 x=1、2 对应 u=3、0，反向积分需同步改变符号。"
   },
   "717": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-解答题-19",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-05-B"
+    ],
+    "rationale": "圆盘法得 V(t)=π∫ₜ²ᵗ xe⁻²ˣdx；求导得到 V'(t)=πt e⁻²ᵗ(4e⁻²ᵗ−1)，在 t=ln2 由增转减。",
+    "methods": "用 Leibniz 公式对变上下限积分求导，再判断导数符号并代回求最大值。",
+    "pitfalls": "上限为 2t，求导必须乘上链式因子 2；最大值表达式要同时代入两个积分端点。"
   },
   "718": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-解答题-20",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "对 u=2x+y、v=3x−y 使用二元复合函数二阶链式法则，题设线性组合中 fuu、fvv 系数抵消，得到 25fuv=1。",
+    "methods": "先求 gx、gy，再求 gxx、gxy、gyy 并按题设系数组合。",
+    "pitfalls": "混合二阶项的系数需计入两个交叉项；本题组合为 25fuv，不能误写成 13 或 24。"
   },
   "719": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2024-解答题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-B"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "对 g(x,y)=f(2x+y,3x−y) 连续使用链式法则，得到 gxx、gxy、gyy 的二阶表达式，并由线性组合解出 fuv=1/25。",
+    "methods": "先列 u、v 对 x、y 的一阶偏导，再逐次求二阶偏导并代入约束。",
+    "pitfalls": "混合偏导系数来自两组链式项；需核对 gxy 中 fuv 系数以及 −6gyy 的贡献。"
   },
   "720": {
     "status": "pending",
