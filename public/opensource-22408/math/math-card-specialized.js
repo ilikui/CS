@@ -70,12 +70,37 @@ else if(/分段/.test(t)){body=graph(x=>x<0?x+1:x*x/4,'<path d="M230 135V20" str
 else{body=graph(x=>x*x/4);desc='沿蓝色曲线从输入 x 读取唯一输出 y=f(x)；定义域是允许输入，值域是实际输出，复合函数还需满足内外层定义域衔接。';}
 }else{body=graph(x=>Math.sin(x*p)+x/4);desc='蓝色函数图像随参数变化；从图像观察定义域、值域、周期与单调区间。';}
 }else if(k==='limit'){
-if(/数列|子列|柯西|单调有界/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 230H432 M28 20V240" stroke="#9aaabd"/><path d="'+Array.from({length:30},(_,i)=>{let n=i+1,x=28+n*12.8,y=230-180/(n*p+1);return(i?'L':'M')+x+' '+y}).join(' ')+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.5"/><path d="M28 50H432" stroke="'+COLORS.orange+'" stroke-dasharray="5 5"/><text x="390" y="42" fill="'+COLORS.orange+'">极限 L</text></svg>';desc='离散数列点列逐项靠近极限；ε 带内最终包含全部后续项。';}
+if(/ε-N|ε-δ|epsilon|柯西准则/.test(t)){
+const eps=.12+.32*p,delta=eps/3,a=1,X=x=>230+x*48,Y=y=>135-y*35;
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(x=>x*x)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M28 '+Y(1+eps)+'H432 M28 '+Y(1-eps)+'H432" stroke="'+COLORS.orange+'" stroke-dasharray="5 4"/><path d="M'+X(a-delta)+' 18V245 M'+X(a+delta)+' 18V245" stroke="'+COLORS.green+'" stroke-dasharray="5 4"/><circle cx="'+X(a)+'" cy="'+Y(1)+'" r="6" fill="'+COLORS.blue+'"/><text x="35" y="25" fill="'+COLORS.orange+'">ε='+eps.toFixed(2)+'</text><text x="280" y="245" fill="'+COLORS.green+'">δ≈ε/3='+delta.toFixed(2)+'</text></svg>';
+desc='以 f(x)=x²、a=1、L=1 为例。先给定纵向误差 ε，再选 δ≤ε/3；当 |x−1|<δ 时，|x²−1|=|x−1||x+1|<3δ≤ε。橙色是 ε 带，绿色是 δ 邻域。';
+}else if(/单侧极限|左右极限/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="M45 205L230 205" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M230 65L415 65" stroke="'+COLORS.orange+'" stroke-width="3"/><circle cx="230" cy="205" r="6" fill="white" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="65" r="6" fill="white" stroke="'+COLORS.orange+'" stroke-width="3"/><text x="70" y="190" fill="'+COLORS.blue+'">左极限 = −1</text><text x="285" y="52" fill="'+COLORS.orange+'">右极限 = 1</text><text x="245" y="240">左右不等，双侧极限不存在</text></svg>';
+desc='示例 f(x)=x/|x|：从左侧趋近 0 时函数值趋于 −1，从右侧趋近 0 时趋于 1。双侧极限存在的必要充分条件是左右极限都存在且相等。';
+}else if(/洛必达/.test(t)){
+const z=.2+.55*(1.8-p)/1.45;
+body=graph(x=>(1-Math.cos(x*z))/(x*x*z*z||1));
+desc='以 limₓ→0 (1−cos x)/x²=1/2 为例。洛必达把 0/0 型商式求导为 sin x/(2x)，但必须先确认未定式、可导及导数商极限存在等条件；不能对非未定式滥用。';
+}else if(/数列|子列|柯西|单调有界/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 230H432 M28 20V240" stroke="#9aaabd"/><path d="'+Array.from({length:30},(_,i)=>{let n=i+1,x=28+n*12.8,y=230-180/(n*p+1);return(i?'L':'M')+x+' '+y}).join(' ')+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.5"/><path d="M28 50H432" stroke="'+COLORS.orange+'" stroke-dasharray="5 5"/><text x="390" y="42" fill="'+COLORS.orange+'">极限 L</text></svg>';desc='离散数列点列逐项靠近极限；ε 带内最终包含全部后续项。';}
 else if(/夹逼/.test(t)){body=graph(x=>Math.sin(x*3)/(Math.abs(x)+.25),'');desc='被夹函数位于上下界之间；上下界共同趋向 L 时，中间函数也趋向 L。';}
 else if(/等价|阶的比较|无穷小/.test(t)){body=graph(x=>Math.sin(x)/x);desc='比较 sin x、x 与 x² 等函数在原点附近的趋近速度；局部放大观察主导阶。';}
 else{body=graph(x=>Math.sin(x*p)/(x===0?1:x));desc='横轴位置逐渐靠近目标点，纵坐标逼近极限；左右极限需分别核验。';}
 }else if(k==='continuity'){
-body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="M35 220L230 50L425 220" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="50" r="6" fill="white" stroke="'+COLORS.orange+'" stroke-width="3"/><circle cx="230" cy="'+(50+70*p)+'" r="6" fill="'+COLORS.orange+'"/><path d="M230 50V'+(50+70*p)+'" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="255" y="38" fill="'+COLORS.blue+'">左右极限</text><text x="255" y="'+(70+70*p)+'" fill="'+COLORS.orange+'">函数值</text></svg>';desc=/间断/.test(t)?'空心圆表示极限位置，实心圆表示函数值；比较左右极限与点值分类。':'连续要求左右极限相等并等于函数值；闭区间性质依赖连续条件。';
+if(/介值|零点/.test(t)){
+const c=.35+1.45*p/1.8,root=Math.sqrt(c),X=x=>230+x*48,Y=y=>135-y*35;
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(x=>x*x-c,-4,4,-3,4)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="'+X(root)+'" cy="135" r="6" fill="'+COLORS.green+'"/><circle cx="'+X(-root)+'" cy="135" r="6" fill="'+COLORS.green+'"/><path d="M'+X(-2)+' '+Y(4-c)+'L'+X(2)+' '+Y(4-c)+'" stroke="'+COLORS.orange+'" stroke-dasharray="5 5"/><text x="40" y="25" fill="'+COLORS.blue+'">f(x)=x²−'+c.toFixed(2)+'</text><text x="270" y="45" fill="'+COLORS.green+'">至少存在一个零点</text></svg>';
+desc='连续函数在闭区间 [−2,2] 上取到端点函数值之间的每一个值。此例端点异号，因此至少有一个零点；介值定理不保证零点唯一。';
+}else if(/一致连续/.test(t)){
+const near=.12+.5*(1.8-p)/1.45;
+body=graph(x=>1/(x*x+.08),'').replace('</svg>','<path d="M'+(230+near*48)+' 20V245" stroke="'+COLORS.orange+'" stroke-dasharray="5 5"/><text x="260" y="25" fill="'+COLORS.orange+'">靠近边界 0</text></svg>');
+desc='用 f(x)=1/x 在 (0,1) 说明：越靠近 0，曲线越陡，同样大小的函数值变化需要越来越小的横向间隔，因此它在该区间不一致连续。闭区间连续函数则一致连续。';
+}else if(/间断/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="M35 220L230 50L425 220" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="50" r="6" fill="white" stroke="'+COLORS.orange+'" stroke-width="3"/><circle cx="230" cy="'+(50+70*p)+'" r="6" fill="'+COLORS.orange+'"/><path d="M230 50V'+(50+70*p)+'" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="255" y="38" fill="'+COLORS.blue+'">极限位置</text><text x="255" y="'+(70+70*p)+'" fill="'+COLORS.orange+'">函数值</text></svg>';
+desc='空心圆表示左右极限共同趋近的位置，实心圆表示实际函数值；两者不一致时为可去间断。跳跃和无穷间断还需分别检查左右极限。';
+}else{
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="M35 220L230 50L425 220" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="50" r="6" fill="'+COLORS.orange+'"/><path d="M230 50V'+(50+40*p)+'" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="255" y="38" fill="'+COLORS.blue+'">连续曲线</text><text x="255" y="'+(70+40*p)+'" fill="'+COLORS.orange+'">极限 = 函数值</text></svg>';
+desc='连续要求函数值存在、极限存在且极限等于函数值；四则运算与复合连续都要检查表达式在对应点有定义。';
+}
 }else if(k==='derivative'){
 if(/隐函数|参数方程/.test(t)){
 const theta=.3+(p-.35)/1.45*1.8,x=Math.cos(theta),y=Math.sin(theta),X=q=>230+q*95,Y=q=>135-q*95,dx=-Math.sin(theta),dy=-Math.cos(theta);
