@@ -7837,244 +7837,524 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "特征值相同是必要非充分条件；构造 P 后应验证 P 可逆及 P⁻¹AP=B。"
   },
   "600": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-E"
+    ],
+    "secondary": [
+      "CAL-06-F"
+    ],
+    "rationale": "逐项展开被积函数并累积积分阶数：A为x³阶、B为x^(5/2)阶、C为x⁶阶、D为x⁵阶，因此C的阶最高。",
+    "methods": "用等价无穷小确定被积函数主阶，再对变上限积分求阶。",
+    "pitfalls": "注意积分上限sin x与1−cos x的阶分别为x与x²。"
   },
   "601": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-03-B"
+    ],
+    "secondary": [
+      "CAL-02-B"
+    ],
+    "rationale": "检查x=−1、0、1、2四处：对数因子发散、e^x−1为零、指数因子在1非有限、x−2为零，均为第二类间断点，共4处。",
+    "methods": "找出表达式无定义点，逐一考察左右极限是否有限。",
+    "pitfalls": "区分可去间断点与第二类间断点；x=1需独立判断指数因子。"
   },
   "602": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-B"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "令u=arcsin√x，积分化为2∫₀^{π/2}u du=π²/4。",
+    "methods": "整体换元消去反三角函数和根式。",
+    "pitfalls": "换元后区间为[0,π/2]，勿漏dx的雅可比因子。"
   },
   "603": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "由ln(1−x)=−∑x^k/k，乘x²后x^n系数为−1/(n−2)，故f⁽ⁿ⁾(0)=−n!/(n−2)。",
+    "methods": "用麦克劳林级数读取系数，再乘n!。",
+    "pitfalls": "注意乘x²造成幂次平移。"
   },
   "604": {
     "status": "pending",
     "questionKey": "2020-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-A"
+    ],
+    "secondary": [
+      "CAL-08-B"
+    ],
+    "rationale": "沿坐标轴可得fx(0,0)=1；但题面分段定义下所需混合偏导在原点按迭代偏导定义并不成立，题库未给答案解析，不能确认正确结论数。",
+    "methods": "按偏导定义分别检查坐标轴，再检验混合偏导是否存在。",
+    "pitfalls": "不能把xy区域的表达式直接延拓到坐标轴；保留待核验。"
   },
   "605": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-选择题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A"
+    ],
+    "secondary": [
+      "CAL-05-B"
+    ],
+    "rationale": "f′>f>0推出(ln f)′>1；积分得ln[f(b)/f(a)]>b−a，逐项比较区间长度和函数比值。",
+    "methods": "对正函数取对数，将微分不等式积分。",
+    "pitfalls": "严格不等号和区间端点顺序不可颠倒。"
   },
   "606": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-选择题-7",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-D"
+    ],
+    "secondary": [
+      "LA-04-A"
+    ],
+    "rationale": "A奇异且一个三阶子式非零，故rank(A)=3；伴随矩阵秩为1，A* x=0的解空间维数为3，再结合余子式结构确定通解。",
+    "methods": "先确定A的秩，再用伴随矩阵秩和齐次方程组维数分析。",
+    "pitfalls": "A*的零空间不能与A的零空间混为一谈。"
   },
   "607": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-选择题-8",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-E"
+    ],
+    "secondary": [
+      "LA-05-B"
+    ],
+    "rationale": "P的列向量需依次属于特征值1、−1、1的特征空间；选项D的列为α1+α2、−α3、α2，且线性无关。",
+    "methods": "逐列核对特征值关系并验证列向量组可逆。",
+    "pitfalls": "列顺序必须匹配目标对角阵；不同特征值的特征向量不可随意相加。"
   },
   "608": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-填空题-9",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-E"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "参数方程二阶导使用d²y/dx²=(d/dt(y′/x′))/x′；先求x′、y′再代入t=1。",
+    "methods": "先求dy/dx，再对参数t求导并除以dx/dt。",
+    "pitfalls": "不能把参数二阶导误写为y″(t)/x″(t)。"
   },
   "609": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-填空题-10",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-E"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "积分区域√y≤x≤1等价于0≤y≤x²、0≤x≤1；换序后为∫₀¹x²√(x³+1)dx，再令u=x³+1。",
+    "methods": "画出区域后交换积分次序，再作幂函数代换。",
+    "pitfalls": "边界是y≤x²，不是y≤x。"
   },
   "610": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-填空题-11",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-A"
+    ],
+    "secondary": [
+      "CAL-08-B"
+    ],
+    "rationale": "令u=xy+sin(x+y)，dz=du/(1+u²)；在(0,π)处u=0，du=(π−1)dx−dy。",
+    "methods": "用复合函数全微分链式法则。",
+    "pitfalls": "外层arctan导数为1/(1+u²)，且cosπ=−1。"
   },
   "611": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-填空题-12",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-E"
+    ],
+    "rationale": "水深y处压强ρgy，三角形水平微元宽度随深度线性变化；对压强乘微元面积沿深度积分求合力。",
+    "methods": "建立深度坐标和水平微元宽度，积分压强分布。",
+    "pitfalls": "先确认三角形顶点与水面的相对位置；压力是面分布积分。"
   },
   "612": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-填空题-13",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-06-I"
+    ],
+    "rationale": "特征方程(r+1)²=0，初值解得y=xe^(−x)，故∫₀∞xe^(−x)dx=1。",
+    "methods": "解重根二阶常系数方程，再计算反常积分。",
+    "pitfalls": "重根通解含(A+Bx)e^(−x)，并确认积分收敛。"
   },
   "613": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-填空题-14",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-01-A"
+    ],
+    "secondary": [
+      "LA-01-B"
+    ],
+    "rationale": "利用矩阵的对称结构作行列变换或按行列展开，将四阶行列式化为低阶多项式。",
+    "methods": "观察相同行/列组合，使用初等行变换并追踪行列式因子。",
+    "pitfalls": "交换行、倍乘行、行倍加对行列式的影响不同。"
   },
   "614": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-解答题-15",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-H"
+    ],
+    "secondary": [
+      "CAL-05-D"
+    ],
+    "rationale": "取对数展开：ln y=ln x−1+1/(2x)+O(x⁻²)，故y=x/e+1/(2e)+o(1)，斜渐近线为y=x/e+1/(2e)。",
+    "methods": "先取对数作无穷远处展开，再求斜率和截距。",
+    "pitfalls": "求截距必须保留1/x项，不能只求等价无穷大。"
   },
   "615": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-解答题-16",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-F"
+    ],
+    "secondary": [
+      "CAL-06-H"
+    ],
+    "rationale": "换元得g(x)=x⁻¹∫₀ˣf(u)du；求导为[xf(x)−∫₀ˣf]/x²。由f(x)/x→1得g′(x)→1/2，且g′(0)=1/2。",
+    "methods": "用变上限积分求导和商法则，0点另用极限证明连续。",
+    "pitfalls": "x=0须单独按导数定义处理。"
   },
   "616": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-解答题-17",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-D"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "求驻点解3x²−y=0、24y²−x=0，再用二阶偏导构成Hessian判断各驻点类型。",
+    "methods": "求一阶偏导、解驻点方程、用二阶判别法。",
+    "pitfalls": "驻点不必然是极值；判别式为零时需进一步分析。"
   },
   "617": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-解答题-18",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-06-F"
+    ],
+    "rationale": "将函数方程中的x换成1/x，联立消元求f(x)；再由给定水平线确定积分区间，用圆盘/垫片法计算旋转体体积。",
+    "methods": "函数方程代换消元，随后用π∫f(x)²dx计算体积。",
+    "pitfalls": "注意互换后x²系数；明确旋转轴和积分区间。"
   },
   "618": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-解答题-19",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-E"
+    ],
+    "secondary": [
+      "CAL-08-F"
+    ],
+    "rationale": "区域1≤x≤2、0≤y≤x；可令y=xt，积分被积项化为√(1+t²)，dy=xdt。",
+    "methods": "作变量代换y=xt将三角区域化为矩形区域。",
+    "pitfalls": "雅可比因子为x，不能遗漏。"
   },
   "619": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-解答题-20",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A"
+    ],
+    "secondary": [
+      "CAL-06-H"
+    ],
+    "rationale": "第一问构造辅助函数并用端点异号及介值定理；第二问对正连续权函数应用积分中值定理。",
+    "methods": "构造辅助函数验证端点符号，使用积分中值定理。",
+    "pitfalls": "端点异号必须严格；积分中值定理中的权函数不能漏。"
   },
   "620": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-解答题-21",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-A"
+    ],
+    "secondary": [
+      "CAL-07-B"
+    ],
+    "rationale": "将曲线与x轴围成的面积写为积分，切线与x轴交点由切线方程确定；面积比给出积分方程，求导后化为一阶微分方程。",
+    "methods": "把几何条件代数化，建立积分方程后求导降阶。",
+    "pitfalls": "切线截距与面积比方向要准确。"
   },
   "621": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-解答题-22",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-06-A"
+    ],
+    "secondary": [
+      "LA-06-B"
+    ],
+    "rationale": "写出两侧二次型矩阵，利用合同变换保持秩与惯性指数的性质确定参数，再由PᵀAP=B求可逆变换。",
+    "methods": "比较秩、正负惯性指数等合同不变量，再解矩阵方程。",
+    "pitfalls": "合同不等于相似；合同不保持特征值逐项相等。"
   },
   "622": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-解答题-23",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-05-F"
+    ],
+    "secondary": [
+      "LA-05-B"
+    ],
+    "rationale": "若(α,Aα)不可逆则Aα与α相关，α将为特征向量，与题设矛盾；第二问以(α,Aα)为基计算A的表示矩阵并求其特征值。",
+    "methods": "用循环向量构造基，求A作用于基向量的坐标。",
+    "pitfalls": "表示矩阵的列对应各基向量的像，注意列坐标顺序。"
   },
   "623": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-选择题-1",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-E"
+    ],
+    "secondary": [
+      "CAL-06-F"
+    ],
+    "rationale": "e^t−1∼t，积分主阶为∫₀^{x²}t dt=x⁴/2，故相对于x⁷为高阶无穷小。",
+    "methods": "等价无穷小替换后积分比较幂次。",
+    "pitfalls": "上限是x²，积分结果主阶为x⁴。"
   },
   "624": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-选择题-2",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-02-E"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "函数在0处连续；由导数定义lim[(e^x−1−x)/x²]=1/2，故可导且导数非零。",
+    "methods": "先求连续性，再用导数定义和指数函数展开。",
+    "pitfalls": "不能把x≠0时的表达式直接求导后代入0。"
   },
   "625": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-选择题-3",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-B"
+    ],
+    "secondary": [
+      "CAL-08-A"
+    ],
+    "rationale": "对V=πr²h、S=2πrh+2πr²关于时间求导，代入r=10、h=5、r′=2、h′=−3得V′=−100π、S′=40π。",
+    "methods": "对复合量作相关变化率求导。",
+    "pitfalls": "保留半径和高度变化率的正负号。"
   },
   "626": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-选择题-4",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-B"
+    ],
+    "secondary": [
+      "CAL-05-E"
+    ],
+    "rationale": "f′=a−b/x，极小点x=b/a；两个零点要求极小值严格小于0，即b[1−ln(b/a)]<0，故b/a>e。",
+    "methods": "求极小点并用极小值符号判断零点个数。",
+    "pitfalls": "极小值等于0时只有一个零点，不满足两个零点。"
   },
   "627": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-选择题-5",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "sec(0)=1、sec′(0)=0、sec″(0)=1，二阶Taylor多项式为1+x²/2。",
+    "methods": "使用二阶Taylor公式计算函数值及前两阶导数。",
+    "pitfalls": "二次项系数为f″(0)/2!。"
   },
   "628": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-选择题-6",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-08-A"
+    ],
+    "secondary": [
+      "CAL-08-B"
+    ],
+    "rationale": "沿(x+1,eˣ)在参数0处求导得fx+fy=1；沿(x,x²)在x=1处求导得fx+2fy=2，解得fx=0、fy=1，故df=dy。",
+    "methods": "对两条参数曲线分别使用多元链式法则，联立求偏导。",
+    "pitfalls": "两条曲线经过(1,1)对应参数值不同，分别为0和1。"
   },
   "629": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-选择题-7",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-E"
+    ],
+    "secondary": [
+      "CAL-06-C"
+    ],
+    "rationale": "将[0,1]等分n份，步长1/n，中点为(2k−1)/(2n)，相应中点黎曼和权重为1/n。",
+    "methods": "按黎曼和定义匹配分割长度和取样点。",
+    "pitfalls": "中点位置正确时，权重仍应为每段长度1/n。"
   },
   "630": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-选择题-8",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-06-D"
+    ],
+    "secondary": [
+      "LA-06-B"
+    ],
+    "rationale": "展开二次型得到对称矩阵，特征值为−1、0、3，因此正惯性指数1、负惯性指数1。",
+    "methods": "写出对称矩阵并求特征值符号或合同标准形。",
+    "pitfalls": "零特征值不计入正、负惯性指数；交叉项系数要平分。"
   },
   "631": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-选择题-9",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-03-A"
+    ],
+    "secondary": [
+      "LA-03-D"
+    ],
+    "rationale": "向量组可由B组线性表出意味着A=BP；若Bᵀx=0，则Aᵀx=PᵀBᵀx=0。",
+    "methods": "将线性表示写成矩阵分解，再转置并作用于向量。",
+    "pitfalls": "转置会反转乘法次序；注意解集包含方向。"
   },
   "632": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-选择题-10",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-02-B"
+    ],
+    "secondary": [
+      "LA-02-A"
+    ],
+    "rationale": "左乘给定下三角矩阵实施行消元，右乘上三角矩阵实施列消元，验证选项C使PAQ为对角矩阵。",
+    "methods": "逐项计算PAQ并检查P、Q可逆。",
+    "pitfalls": "左乘对应行变换，右乘对应列变换。"
   },
   "633": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-填空题-11",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-I"
+    ],
+    "secondary": [
+      "CAL-06-B"
+    ],
+    "rationale": "被积函数为偶函数，原积分化为2∫₀∞x3^(−x²)dx；令u=x²，得到∫₀∞3^(−u)du=1/ln3。",
+    "methods": "利用偶函数对称性和u=x²换元。",
+    "pitfalls": "du=2x dx，系数抵消后仍需除以ln3。"
   },
   "634": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-填空题-12",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-E"
+    ],
+    "secondary": [
+      "CAL-04-B"
+    ],
+    "rationale": "先求x′=2eᵗ+1、y′=4teᵗ+2t，再用d²y/dx²=(d/dt(y′/x′))/x′，t=0得2/3。",
+    "methods": "参数一阶导后再对t求导并除以x′。",
+    "pitfalls": "不能把参数二阶导简化为y″/x″。"
   },
   "635": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-填空题-13",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-04-C"
+    ],
+    "secondary": [
+      "CAL-08-B"
+    ],
+    "rationale": "先代入(0,2)求z=1，再对隐式方程关于x求偏导并代入，解得zx=1。",
+    "methods": "先求指定点的隐函数值，再作隐函数偏导。",
+    "pitfalls": "arctan(2xy)的导数需用链式法则。"
   },
   "636": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-填空题-14",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-06-F"
+    ],
+    "secondary": [
+      "CAL-06-G"
+    ],
+    "rationale": "先用微积分基本定理对外层变上限积分求导，得到内层含参积分；再交换积分次序/换元计算并代入t=π/2。",
+    "methods": "先处理外层上限，再处理内层参数积分。",
+    "pitfalls": "内层被积函数仍含参数，不能漏掉参数依赖。"
   },
   "637": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-填空题-15",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-07-C"
+    ],
+    "secondary": [
+      "CAL-07-D"
+    ],
+    "rationale": "特征方程r³−1=0，根为1和−1/2±(√3/2)i，按一实根与一对共轭复根写出三阶常系数方程通解。",
+    "methods": "求特征根并按实根、复根形式构造通解。",
+    "pitfalls": "本题为三阶方程，需把常系数特征方程法从二阶推广。"
   },
   "638": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-填空题-16",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "LA-01-B"
+    ],
+    "secondary": [
+      "LA-01-D"
+    ],
+    "rationale": "沿第一列作代数余子式展开，收集各子式产生的x³项，系数合计−1−4=−5。",
+    "methods": "按行列式展开并只保留目标次数项。",
+    "pitfalls": "注意代数余子式符号和各子式次数。"
   },
   "639": {
     "status": "pending",
     "questionKey": "2021-解答题-17",
-    "primary": [],
-    "secondary": []
+    "primary": [
+      "CAL-05-D"
+    ],
+    "secondary": [
+      "CAL-02-E"
+    ],
+    "rationale": "按通分式分子sin x−x−∫₀ˣe^(t²)dt展开，三次项为−x³/6−x³/3=−x³/2，分母主阶为x²；题库解析给出的+1/2与此符号相反，故暂不确认。",
+    "methods": "通分后分别展开sin x和积分项，比较分子分母主阶。",
+    "pitfalls": "源解析存在符号矛盾，保留pending，不把疑似答案写入正式映射。"
   },
   "640": {
     "status": "pending",
