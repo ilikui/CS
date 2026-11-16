@@ -29,10 +29,10 @@
       "steps": [
         "fast、slow 均指向头结点（哨兵），先让 fast 前进 k 次；若提前遇到 NULL，说明 k 大于链表长度。",
         "前置移动后 fast 与 slow 相距 k 个数据结点。",
-        "当 fast->link 不为空时，fast、slow 同步后移；循环结束时 fast 指向最后一个数据结点，slow 指向倒数第 k 个结点。",
+        "随后 fast、slow 同步后移，直到 fast 变为 NULL。此时 slow 指向倒数第 k 个数据结点。",
         "输出 slow->data 并返回 1。"
       ],
-      "code": "typedef struct Node { int data; struct Node *link; } Node;\nint FindKthFromEnd(Node *head, int k) {\n    if (head == NULL || k <= 0) return 0;\n    Node *fast = head, *slow = head; // head 为哨兵头结点\n    for (int i = 0; i < k; ++i) {\n        fast = fast->link;\n        if (fast == NULL) return 0;\n    }\n    while (fast->link != NULL) {\n        fast = fast->link;\n        slow = slow->link;\n    }\n    printf(\"%d\\n\", slow->data);\n    return 1;\n}",
+      "code": "typedef struct Node { int data; struct Node *link; } Node;\nint FindKthFromEnd(Node *head, int k) {\n    if (head == NULL || k <= 0) return 0;\n    Node *fast = head, *slow = head; // head 为哨兵头结点\n    for (int i = 0; i < k; ++i) {\n        fast = fast->link;\n        if (fast == NULL) return 0;\n    }\n    while (fast != NULL) {\n        fast = fast->link;\n        slow = slow->link;\n    }\n    printf(\"%d\\n\", slow->data);\n    return 1;\n}",
       "complexity": "时间 O(n)，额外空间 O(1)。",
       "correction": "明确处理空链表、k 非正数和 k 超长；保持原解析的一趟双指针算法。",
       "verification": "已核对原题要求与原解析算法。"
