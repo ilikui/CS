@@ -315,7 +315,8 @@ if (window.__408_QUESTION_DATA_ERROR__ || !Array.isArray(loadedQuestionData) || 
         const matrix = solution.correctedAdjacencyMatrix
             ? '<h4>复核后的邻接矩阵</h4><table class="verified-matrix">' + solution.correctedAdjacencyMatrix.map(row => '<tr>' + row.map(cell => '<td>' + escapeHtml(cell) + '</td>').join('') + '</tr>').join('') + '</table>'
             : '';
-        const explanation = solution.explanation ? '<p>' + escapeHtml(solution.explanation) + '</p>' : '';
+        const explanationText = solution.explanation || solution.analysis || '';
+        const explanation = explanationText ? '<p>' + escapeHtml(explanationText) + '</p>' : '';
         const correction = solution.correction ? '<div class="verified-correction"><strong>复核说明：</strong>' + escapeHtml(solution.correction) + '</div>' : '';
         const complexity = solution.complexity ? '<p><strong>复杂度：</strong>' + escapeHtml(solution.complexity) + '</p>' : '';
         const original = solution.originalAnalysis ? '<details><summary>查看题库原始解析</summary><div class="q-body">' + solution.originalAnalysis + '</div></details>' : '';
