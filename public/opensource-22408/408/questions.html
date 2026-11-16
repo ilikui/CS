@@ -103,6 +103,7 @@
 </div>
 <div id="data-status" class="tag" style="display:block;color:#a33">正在连接 408 真题数据源…</div>
 <script src="./cards-questions.js"></script>
+<script src="./question-card-map.js"></script>
 <script src="./questions_data.js?v=408-real-20261115-2" onload="window.__408_QUESTION_DATA_LOADED__=true" onerror="window.__408_QUESTION_DATA_ERROR__=true"></script>
 <script>
 const PAGE_SIZE = 20;
@@ -190,9 +191,9 @@ function renderQuestions() {
             answerHtml += `<div class="q-body">${q.answerHtml}</div>`;
         }
 
-        const linkedTopics = Object.entries(window.CARD_QUESTION_MAP || {}).filter(([, item]) => Number(item.year) === Number(q.year) && Number(item.index) === Number(q.index));
-        const linkedCards = linkedTopics.map(([topic]) => ({ topic, card: (window.CARD_EXAM_TOPIC_MAP || {})[topic] })).filter(x => x.card);
-        const knowledgeLink = linkedCards.length ? linkedCards.map(({card}) => `<a class="q-knowledge-link" href="./cards.html?card=${encodeURIComponent(card)}">${card} →</a>`).join('') : '';
+        const indexed = window.QUESTION_CARD_MAP?.[String(q.year)+'-'+String(q.index)];
+        const linkedCards = indexed?.cards || [];
+        const knowledgeLink = linkedCards.length ? linkedCards.map(link => '<a class="q-knowledge-link" href="./cards.html?card='+encodeURIComponent(link.title)+'" title="'+(link.status==='verified'?'已核验关联':'自动匹配，待人工复核')+'">'+link.title+' '+(link.status==='verified'?'✓':'·待核验')+' →</a>').join('') : '';
         return `<div id="q-${q.year}-${q.index}" class="q-card ${targetIndex ? 'target-question' : ''}">
             <div class="q-header">
                 <div class="q-meta">
