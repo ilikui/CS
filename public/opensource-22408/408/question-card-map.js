@@ -3053,7 +3053,7 @@ window.QUESTION_CARD_MAP = {
       "thread3先更新z：P(z_mutex)；z=add(z,w)；V(z_mutex)。再更新y：P(y_mutex1)；P(y_mutex2)；y=add(y,w)；V(y_mutex2)；V(y_mutex1)。",
       "锁只覆盖实际访问共享变量的临界区，后续私有计算不持锁，从而避免用一把全局锁串行化三个线程。"
     ],
-    "code": "semaphore y_mutex1=1, y_mutex2=1, z_mutex=1;\\nthread1: P(y_mutex1); w=add(x,y); V(y_mutex1);\\nthread2: P(z_mutex); P(y_mutex2); w=add(y,z); V(y_mutex2); V(z_mutex);\\nthread3: P(z_mutex); z=add(z,w); V(z_mutex); P(y_mutex1); P(y_mutex2); y=add(y,w); V(y_mutex2); V(y_mutex1);",
+    "code": "semaphore y_mutex1=1, y_mutex2=1, z_mutex=1;\n\nthread1:\n    P(y_mutex1);\n    w = add(x, y);\n    V(y_mutex1);\n\nthread2:\n    P(z_mutex);\n    P(y_mutex2);\n    w = add(y, z);\n    V(y_mutex2);\n    V(z_mutex);\n\nthread3:\n    cnum w = {1, 1};  // 原卷图像\n    P(z_mutex);\n    z = add(z, w);\n    V(z_mutex);\n\n    P(y_mutex1);\n    P(y_mutex2);\n    y = add(y, w);\n    V(y_mutex2);\n    V(y_mutex1);",
     "audit": {
       "status": "cross-checked",
       "note": "原题、参考答案与原卷图像核验完成；核心考点和次级考点已分别人工关联。"
