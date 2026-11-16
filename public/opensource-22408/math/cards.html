@@ -375,6 +375,24 @@ function atomWorkedExample(a){
   ['写出值域并解释端点','函数连续且在闭区间上递增，所有中间函数值均能取得；两个端点也属于定义域，因此值域包含 0 和 4，为 [0,4]。']
  ],result:'值域为 [0,4]。',check:'闭区间端点属于定义域，端点函数值通常要纳入比较；若定义域换成开区间，端点处的极限值未必能取到。',variant:'若定义域改为 (1,3)，函数值只能满足 0<y<4，值域变为 (0,4)。'}
  };
+ exact['CAL-02-A']={label:'数列极限与收敛',steps:[
+ ['写出数列的一般项','题设 a_n=1−1/n。求 n→∞ 时的极限，关键是判断 1/n 随 n 增大如何变化。'],
+ ['先观察数值与变化趋势','前几项为 0、1/2、2/3、3/4、……，数值逐渐增大并接近 1。但观察只能帮助猜测，不能代替极限证明。'],
+ ['用极限运算法则计算','lim(n→∞)a_n=lim(n→∞)(1−1/n)=1−lim(n→∞)(1/n)=1−0=1。这里使用了常数列极限和商的极限法则。'],
+ ['补充收敛性理解','也可注意到 0≤1−1/n<1（n≥1），且 a_(n+1)−a_n=1/[n(n+1)]>0，因此数列单调递增且有上界 1；由单调有界定理可知它收敛。结合极限计算，极限为 1。']
+ ],result:'lim(n→∞)(1−1/n)=1。',check:'数列前几项接近某个数不构成证明。可直接使用已知极限运算法则；若题目要求证明收敛，应补充单调有界或 ε-N 论证。',variant:'若 a_n=1+1/n，则数列单调递减、有下界 1，仍有 lim a_n=1，但每一项都大于 1，极限 1 并未被数列取到。'};
+ exact['CAL-02-B']={label:'左右极限与双侧极限',steps:[
+ ['拆开绝对值','当 x>0 时 |x|=x，所以 x/|x|=x/x=1；当 x<0 时 |x|=−x，所以 x/|x|=x/(−x)=−1。'],
+ ['计算左极限','x→0⁻ 时始终处于 x<0 的一侧，函数值恒为 −1，因此 lim(x→0⁻)x/|x|=−1。'],
+ ['计算右极限','x→0⁺ 时始终处于 x>0 的一侧，函数值恒为 1，因此 lim(x→0⁺)x/|x|=1。'],
+ ['比较左右结果','左极限 −1 与右极限 1 不相等。有限双侧极限存在的充要条件是左右极限都存在且相等，因此 x→0 时双侧极限不存在。注意 x=0 处原式无定义，并不妨碍分别讨论去心邻域内的左右极限。']
+ ],result:'左极限为 −1，右极限为 1；二者不相等，所以 lim(x→0)x/|x| 不存在。',check:'极限研究的是“趋近时”的函数值，不是直接代入 x=0。分段或含绝对值表达式必须先按趋近方向拆分。',variant:'若改为 f(x)=|x|/x，则左极限为 −1、右极限为 1，双侧极限仍不存在；若改为 f(x)=|x|，左右极限都为 0，双侧极限存在且为 0。'};
+ exact['CAL-02-C']={label:'重要极限与等价无穷小',steps:[
+ ['识别标准结构','要求 lim(x→0)(1−cos2x)/x²。利用恒等式 1−cosθ=2sin²(θ/2)，令 θ=2x，得 1−cos2x=2sin²x。'],
+ ['拆成重要极限','原式变为 2·sin²x/x²=2·(sin x/x)²。这样就出现了标准重要极限 lim(x→0)sin x/x=1。'],
+ ['分别取极限','当 x→0 时，sin x/x→1，因此 2·(sin x/x)²→2·1²=2。'],
+ ['核对等价无穷小使用','也可用 1−cos2x~(2x)²/2=2x²，故原比值趋于 2。这里是乘除型比值，等价替换合法；不能把等价无穷小不加判断地用于两个近似量相减的场景。']
+ ],result:'lim(x→0)(1−cos2x)/x²=2。',check:'角度必须使用弧度制；sin(kx)~kx、1−cos(kx)~k²x²/2。等价无穷小通常用于乘除因子，加减结构要先判断主项是否抵消。',variant:'求 lim(x→0)(1−cos3x)/x²：由 1−cos3x~(3x)²/2，极限为 9/2。'};
  const detail=exact[a[0]];
  if(detail)return '<section class="atom-worked"><div class="worked-head"><b>典型例题 · 逐步推导（已展开核算）</b><span>'+esc(a[0])+'</span></div><div class="worked-box"><b>'+esc(detail.label)+'｜题目</b><p>'+esc(a[6])+'</p></div><div class="worked-box"><b>先理解用到的概念</b><p>'+esc(a[3])+'</p><p>'+esc(a[4])+'</p></div><ol class="worked-steps">'+detail.steps.map((s,i)=>'<li><b>'+esc(s[0])+'</b><p>'+esc(s[1])+'</p></li>').join('')+'</ol><div class="worked-box worked-answer"><b>最终结论</b><p>'+esc(detail.result)+'</p></div><div class="worked-box worked-error"><b>易错点与自检</b><p>'+esc(detail.check)+'</p></div><div class="worked-box"><b>举一反三</b><p>'+esc(detail.variant)+'</p></div></section>';
  return '<section class="atom-worked"><div class="worked-head"><b>典型例题 · 完整推导过程</b><span>'+esc(a[0])+'</span></div><div class="worked-box"><b>题目</b><p>'+esc(a[6])+'</p></div><div class="worked-box"><b>定义与推导依据</b><p>'+esc(a[3])+'</p><p>'+esc(a[4])+'</p></div><ol class="worked-steps">'+frame.map((x,i)=>'<li><b>第 '+(i+1)+' 步</b><p>'+esc(x)+'</p></li>').join('')+'</ol><div class="worked-box"><b>本卡解题方法拆解</b><ol>'+actions.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol></div><div class="worked-box worked-answer"><b>结果</b><p>'+esc(a[7])+'</p></div><div class="worked-box worked-error"><b>易错点与自检</b><p>'+esc(a[8])+'</p><p>检查：回到定义和定理前提，逐项核验定义域、运算合法性、区间/维数条件，并将结果代回原题。</p></div></section>';
