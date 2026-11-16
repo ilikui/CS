@@ -1,5 +1,5 @@
 // Audit source identity, target card existence, and candidate coverage; never auto-promote candidates.
-// Re-run source-backed audit after instruction, file, process, and dual-subnet mappings.
+// Re-run source-backed audit after Huffman, scheduling and interrupt-I/O teaching solutions.
 // Refresh audit after the third batch of source-backed associations.
 // Re-run after application-question solutions and status-label corrections.
 // Refresh audit after round-five source-backed question links.
