@@ -3043,9 +3043,9 @@ window.QUESTION_CARD_MAP = {
     "score": 8,
     "question": "三个并发线程共享全局复数x、y、z。thread1读取x、y并执行w=add(x,y)；thread2读取y、z并执行w=add(y,z)；thread3执行z=add(z,w)和y=add(y,w)。设计信号量及P/V操作，保证临界资源互斥并最大程度并发。",
     "answer": "设置y_mutex1=1、y_mutex2=1、z_mutex=1。thread1读y使用y_mutex1；thread2读y、z分别使用y_mutex2、z_mutex；thread3写z使用z_mutex，写y时同时持有y_mutex1和y_mutex2。thread1与thread2只读y，可并发执行。",
-    "analysis": "最大并发的关键是按共享变量冲突关系细粒度加锁。thread1和thread2同时读取y不冲突；thread3写y时必须同时排斥两者。thread2和thread3对z的读写通过z_mutex互斥。thread3分段释放z和y的锁，缩短临界区。",
+    "analysis": "最大并发的关键是按共享变量冲突关系细粒度加锁。thread1和thread2同时读取y不冲突；原卷图像中thread3的w.a和w.b均初始化为1，公开文字转录有将w.b误录为2的情况；thread3写y时必须同时排斥两者。thread2和thread3对z的读写通过z_mutex互斥。thread3分段释放z和y的锁，缩短临界区。",
     "steps": [
-      "x仅由thread1访问，不存在共享冲突，不需要信号量。",
+      "x仅由thread1访问，不存在共享冲突，不需要信号量。thread3局部复数w按原卷图像初始化为(1,1)，该数值不影响后续互斥关系。",
       "y上thread1和thread2均为读操作，可以并发；thread1与thread3、thread2与thread3存在读写冲突，因此分别设置y_mutex1和y_mutex2。",
       "z上thread2读取、thread3更新，存在读写冲突，设置z_mutex。",
       "thread1：P(y_mutex1)；读取x、y并计算w=add(x,y)；V(y_mutex1)。",
