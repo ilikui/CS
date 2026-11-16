@@ -47,7 +47,7 @@ function cardDerivedLab(card,title){
  const steps=textFor('四、标准学习/解题步骤');
  const example=textFor('五、例题');
  const pitfalls=textFor('七、易错点');
- let parts=steps.split(/(?:→|->|；|;|\\n|。)/).map(x=>x.trim()).filter(x=>x.length>3);
+ let parts=steps.split(/(?:→|->|；|;|\n|。)/).map(x=>x.trim()).filter(x=>x.length>3);
  if(parts.length<2)parts=[definition,principle,conditions,steps].filter(x=>x.length>3);
  parts=parts.slice(0,5);
  const sequence=parts.map((part,i)=>['第 '+(i+1)+' 步',[title,'操作：'+part.slice(0,70)],part]);
