@@ -6337,9 +6337,18 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "原函数在 x=0 不存在，不能称连续；先确定定义域再分类间断点。"
   },
   "487": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2015-选择题-3",
-    "reason": "题库给出的选项条件 α−β>0 与解析推导的 α−β>1 不一致，当前答案无法由题面严格推出；暂不确认关联。"
+    "primary": [
+      "CAL-04-A"
+    ],
+    "secondary": [
+      "CAL-04-B",
+      "CAL-03-A"
+    ],
+    "rationale": "由导数定义，f'(0)=lim x^(α−1)cos(1/x^β)=0，故 α>1。对 x>0 求导后，振荡项 βx^(α−β−1)sin(1/x^β) 连续趋零要求 α−β−1>0，即 α−β>1。因此选项A（α−β>0）必然成立；B、C、D均非必然结论。",
+    "methods": "先用导数定义确定 α>1，再对 x>0 求导，利用振荡因子不趋于零，判断其幂次系数必须趋零。",
+    "pitfalls": "题目问必然成立的选项，不要求选项给出充要条件；推得 α−β>1 后，A 是必然结论。"
   },
   "488": {
     "status": "pending",
@@ -7889,17 +7898,18 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "注意乘x²造成幂次平移。"
   },
   "604": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2020-选择题-5",
     "primary": [
       "CAL-08-A"
     ],
     "secondary": [
-      "CAL-08-B"
+      "CAL-08-B",
+      "CAL-03-A"
     ],
-    "rationale": "沿坐标轴可得fx(0,0)=1；但题面分段定义下所需混合偏导在原点按迭代偏导定义并不成立，题库未给答案解析，不能确认正确结论数。",
-    "methods": "按偏导定义分别检查坐标轴，再检验混合偏导是否存在。",
-    "pitfalls": "不能把xy区域的表达式直接延拓到坐标轴；保留待核验。"
+    "rationale": "结论1成立：f(x,0)=x，故 f_x(0,0)=1。结论2不成立：对 x≠0，点(x,0)处 y 偏导的差商为(xh−x)/h，不存在有限极限。结论3成立，因 xy 区域内 xy→0，坐标轴上的函数值也趋于0。结论4成立，按题目所给迭代顺序内层极限为0。因此恰有3项正确，选B。",
+    "methods": "逐项按偏导定义、二元极限定义和迭代极限顺序计算；混合偏导需先检查内层偏导函数是否存在。",
+    "pitfalls": "不能只计算 f_y(0,0) 就认定混合偏导存在；混合偏导要求相应偏导函数在邻域内可定义。"
   },
   "605": {
     "status": "verified",
@@ -8344,20 +8354,21 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "注意代数余子式符号和各子式次数。"
   },
   "639": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-解答题-17",
     "primary": [
       "CAL-05-D"
     ],
     "secondary": [
+      "CAL-02-C",
       "CAL-02-E"
     ],
-    "rationale": "按通分式分子sin x−x−∫₀ˣe^(t²)dt展开，三次项为−x³/6−x³/3=−x³/2，分母主阶为x²；题库解析给出的+1/2与此符号相反，故暂不确认。",
-    "methods": "通分后分别展开sin x和积分项，比较分子分母主阶。",
-    "pitfalls": "源解析存在符号矛盾，保留pending，不把疑似答案写入正式映射。"
+    "rationale": "通分分子应为 sin x·(1+I(x))−(e^x−1)，其中 I(x)=∫₀ˣe^(t²)dt=x+x³/3+o(x³)。于是 sin x(1+I)=x+x²+x³/6+o(x³)，e^x−1=x+x²/2+x³/6+o(x³)，分子为x²/2+o(x²)；分母为x²+o(x²)，极限为1/2。题库化简过程错误，但最终答案正确。",
+    "methods": "严格通分后分别展开 sin x、e^x 与积分项，比较分子分母最低非零阶。",
+    "pitfalls": "不能沿用题库中将分子写成 sin x−x−I(x) 的错误化简；遗漏了 sin x·I(x) 项。"
   },
   "640": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-解答题-18",
     "primary": [
       "CAL-05-C"
@@ -8365,9 +8376,9 @@ window.EXAM_KNOWLEDGE_MAP = {
     "secondary": [
       "CAL-05-H"
     ],
-    "rationale": "题目给出的负无穷方向斜渐近线符号有误：f(x)=−x²/(1+x)，故f(x)+x→1，斜渐近线应为y=−x+1；正无穷方向为y=x−1。原解析写成y=−x−1，不能照录。",
-    "methods": "分别按定义求斜率lim f(x)/x及截距lim(f(x)−kx)，并分左右无穷方向计算。",
-    "pitfalls": "负无穷方向的截距是+1而非−1；原解析有符号错误，暂列待核验。"
+    "rationale": "x>0 时 f=x²/(1+x)=x−1+1/(1+x)，故正无穷斜渐近线 y=x−1；x<0 时 f=−x²/(1+x)=−x+1−1/(1+x)，故负无穷斜渐近线 y=−x+1。垂直渐近线为 x=−1。题库负无穷方向的截距符号错误，现按正确结果修正。",
+    "methods": "分 x>0、x<0 求二阶导数；分别计算两端斜率极限和截距极限确定斜渐近线。",
+    "pitfalls": "负无穷方向 lim(f(x)+x)=1，故斜渐近线为 y=−x+1，而非 y=−x−1。"
   },
   "641": {
     "status": "verified",
@@ -9617,7 +9628,7 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "初等变换不改变秩；仅秩相同不足以证明行等价，还要确认行空间一致。"
   },
   "736": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-选择题-10",
     "primary": [
       "LA-02-E"
@@ -9626,9 +9637,9 @@ window.EXAM_KNOWLEDGE_MAP = {
       "LA-04-A",
       "LA-04-B"
     ],
-    "rationale": "由 r(AB)=r(BA)+1 且三阶矩阵可推出 AB 的秩至少为 1，BA 的秩至多为 2；所给构造验证 A、B、C 均非必然，而 D 由 AB 与 BA 的公共零空间结构成立。",
-    "methods": "利用乘积矩阵列空间与零空间关系，结合秩差约束分析 ABAB 与 BABA 的核，再检验选项。",
-    "pitfalls": "题库解析仅用一个反例排除 A、B、C，并未完整证明 D 对所有矩阵成立；此题解答论证不充分，需独立补证后再视为完全核验。"
+    "rationale": "令 r(BA)=r，则 r≤2，且 r(AB)=r+1。若 B 可逆，则 r(AB)=r(A)=r(BA)，与题设矛盾，故 B 奇异，存在非零 x∈ker(B)。于是 BAx=0，故 ABAx=A(BAx)=0；又 Bx=0，故 BABx=BA(Bx)=0。同一个非零 x 满足两方程，D 恒成立。",
+    "methods": "先由秩关系证明 B 必不可逆，再取 B 的非零零空间向量，直接代入两个三重乘积验证。",
+    "pitfalls": "仅用反例排除其他选项不足以证明D；关键是证明 B 必奇异并从 ker(B) 构造公共非零解。"
   },
   "737": {
     "status": "verified",
