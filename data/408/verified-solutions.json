@@ -2100,8 +2100,8 @@
           "role": "secondary"
         },
         {
-          "title": "IPv4 地址与子网划分",
-          "topic": "IPv4 地址与子网划分",
+          "title": "IPv4 子网划分与 CIDR",
+          "topic": "IPv4 子网划分与 CIDR",
           "status": "verified",
           "role": "secondary"
         }
@@ -2111,7 +2111,7 @@
       ],
       "secondaryCards": [
         "路由选择与转发表",
-        "IPv4 地址与子网划分"
+        "IPv4 子网划分与 CIDR"
       ]
     }
   ]
