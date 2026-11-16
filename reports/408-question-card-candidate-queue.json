@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T13:04:57.240Z",
+  "generatedAt": "2026-11-16T13:06:28.880Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -12595,6 +12595,13 @@
           "matchedTerms": [
             "个数据"
           ]
+        },
+        {
+          "card": "Cache平均访问时间与缺失损失",
+          "score": 2,
+          "matchedTerms": [
+            "总时间"
+          ]
         }
       ]
     },
@@ -14934,10 +14941,12 @@
           ]
         },
         {
-          "card": "立即数扩展与移位指令",
-          "score": 2,
+          "card": "Cache平均访问时间与缺失损失",
+          "score": 3,
           "matchedTerms": [
-            "因此"
+            "解析采",
+            "析采用",
+            "解析采用"
           ]
         }
       ]
@@ -28411,10 +28420,10 @@
           ]
         },
         {
-          "card": "Cache平均访问时间与缺失损失",
+          "card": "CPU异常响应与现场保护",
           "score": 2,
           "matchedTerms": [
-            "本题"
+            "状态"
           ]
         }
       ]
@@ -39036,10 +39045,10 @@
           ]
         },
         {
-          "card": "Cache平均访问时间与缺失损失",
+          "card": "TLB 组相联映射与 LRU 替换",
           "score": 2,
           "matchedTerms": [
-            "本题"
+            "访问"
           ]
         }
       ]
