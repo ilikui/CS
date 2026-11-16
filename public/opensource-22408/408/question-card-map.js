@@ -5597,7 +5597,7 @@ window.QUESTION_CARD_MAP = {
     "subjectCode": "data-structure",
     "typeName": "应用题",
     "score": 13,
-    "question": "2024年408综合题41：载人航天工程各子工程的前导关系抽象为有向图G，G采用邻接矩阵存储，含numVertices、numEdges、verticesList和Edge[MAXV][MAXV]。设计int uniquely(MGraph G)，判定G是否存在唯一拓扑序列；唯一返回1，否则返回0。要求给出基本设计思想和C/C++算法。",
+    "question": "（13分）2023年10月26日，神州十七号载人飞船发射取得圆满成功。载人航天工程包含众多子工程，为保证工程有序开展，需要明确各子工程的前导工程。该问题可抽象为有向图的拓扑序列问题。已知有向图G采用邻接矩阵存储，类型定义如下： typedef struct { int numVertices, numEdges; char verticesList[MAXV]; int Edge[MAXV][MAXV]; } MGraph; 请设计算法 int uniquely(MGraph G)，判定G是否存在唯一的拓扑序列；若是返回1，否则返回0。要求：（1）给出算法基本设计思想；（2）采用C或C++描述算法并注释关键之处。 查看2024年408回忆版原卷（第41题）",
     "answer": "每轮Kahn拓扑排序时，若当前未删除顶点中入度为0的顶点恰好一个，则唯一地选择并删除；若为0则有环，若多于1则存在不同选择、拓扑序不唯一。全部顶点唯一删除后返回1。时间O(V²)，辅助空间O(V)。",
     "analysis": "拓扑序的每一个位置都必须从当前入度为0的顶点中选择。若某轮有两个或更多候选，任选其中不同顶点都会形成不同的拓扑前缀，因此序列不唯一；若无候选则剩余子图有环。每轮唯一选择是拓扑序唯一的充要判据。邻接矩阵下初始化入度O(V²)，每轮扫描顶点和一行矩阵，V轮总计O(V²)。",
     "steps": [
@@ -5626,7 +5626,20 @@ window.QUESTION_CARD_MAP = {
     ],
     "secondaryCards": [
       "Kahn拓扑排序与入度维护"
-    ]
+    ],
+    "code": "int uniquely(MGraph G) {\\n    int n = G.numVertices;\\n    int inDegree[MAXV] = {0};\\n    for (int i = 0; i < n; ++i)\\n        for (int j = 0; j < n; ++j)\\n            if (G.Edge[i][j] != 0) ++inDegree[j];\\n    for (int k = 0; k < n; ++k) {\\n        int target = -1;\\n        for (int i = 0; i < n; ++i) {\\n            if (inDegree[i] == 0) {\\n                if (target != -1) return 0; // 本轮不唯一\\n                target = i;\\n            }\\n        }\\n        if (target == -1) return 0; // 有环\\n        inDegree[target] = -1;       // 标记删除\\n        for (int j = 0; j < n; ++j)\\n            if (G.Edge[target][j] != 0) --inDegree[j];\\n    }\\n    return 1;\\n}",
+    "complexity": "时间O(V²)，辅助空间O(V)。",
+    "verification": "原卷回忆版PDF第41题与PGCode全卷题面一致。逐轮唯一零入度顶点是拓扑序唯一的充要条件；邻接矩阵下复杂度O(V²)。",
+    "audit": {
+      "status": "cross-checked",
+      "sources": [
+        "2024年408回忆版试卷PDF",
+        "PGCode 2024完整试卷预览"
+      ],
+      "note": "原卷回忆版PDF第41题与PGCode全卷题面一致。逐轮唯一零入度顶点是拓扑序唯一的充要条件；邻接矩阵下复杂度O(V²)。"
+    },
+    "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
+    "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf"
   },
   "2024-42": {
     "year": 2024,
@@ -5636,7 +5649,7 @@ window.QUESTION_CARD_MAP = {
     "subjectCode": "data-structure",
     "typeName": "应用题",
     "score": 10,
-    "question": "2024年408综合题42：将20、3、11、18、9、14、7依次插入长度为11的初始空散列表。H(key)=(key×3) mod 11；冲突时按Hk=(H0+k²) mod 11（k=1,2,3,…）探查。求散列表与装填因子；查找14的关键字比较序列；查找8失败时确认失败的散列地址。",
+    "question": "（10分）将关键字序列20、3、11、18、9、14、7依次存储到初始为空、长度为11的散列表HT中。散列函数为： H(key)=(key×3) mod 11 发生冲突时，按H1、H2、H3……顺序探查，其中： Hk=(H0+k²) mod 11，k=1、2、3…… 画出构造的散列表HT，并计算装填因子。（6分） 给出在HT中查找关键字14的关键字比较序列。（2分） 在HT中查找关键字8，确认查找失败时的散列地址是多少？（2分） 查看2024年408回忆版原卷（第42题）",
     "answer": "最终表（地址0～10）为[11,空,14,7,空,20,9,空,空,3,18]，装填因子α=7/11≈0.6364。查找14比较序列为3、18、14；查找8探测地址2、3、6、0、7，在地址7遇空，失败地址为7。",
     "analysis": "二次探测的平方项必须先对表长取模。表构造过程中的碰撞路径决定后续关键字落点，因此不能只把每个关键字独立计算初始地址。查找与插入使用相同探测序列。失败时第一次遇到从未占用的空单元即可停止。",
     "steps": [
@@ -5666,7 +5679,20 @@ window.QUESTION_CARD_MAP = {
     ],
     "secondaryCards": [
       "散列表装填因子与查找终止"
-    ]
+    ],
+    "code": "HT[0..10] = {11, EMPTY, 14, 7, EMPTY, 20, 9, EMPTY, EMPTY, 3, 18};\\nalpha = 7.0 / 11;\\nfind(14): 9 -> 10 -> 2, compare 3,18,14;\\nfind(8): 2 -> 3 -> 6 -> 0 -> 7(EMPTY), fail.",
+    "complexity": "本题表长11；装填因子7/11；查找14探测3次，查找8探测5个地址后失败。",
+    "verification": "原卷回忆版PDF第42题与PGCode全卷题面一致。散列表逐次插入和查找探测地址已独立复算，表地址0至10为[11,空,14,7,空,20,9,空,空,3,18]。",
+    "audit": {
+      "status": "cross-checked",
+      "sources": [
+        "2024年408回忆版试卷PDF",
+        "PGCode 2024完整试卷预览"
+      ],
+      "note": "原卷回忆版PDF第42题与PGCode全卷题面一致。散列表逐次插入和查找探测地址已独立复算，表地址0至10为[11,空,14,7,空,20,9,空,空,3,18]。"
+    },
+    "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
+    "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf"
   },
   "2024-43": {
     "year": 2024,
@@ -5676,7 +5702,7 @@ window.QUESTION_CARD_MAP = {
     "subjectCode": "computer-organization",
     "typeName": "应用题",
     "score": 14,
-    "question": "2024年408综合题43：32位字长、按字节编址、32位定长指令字。题图给出add、slli、lw格式及部分ALU数据通路。寄存器字段宽5位；Ext=0零扩展、Ext=1符号扩展；ALUctr=000加、001减、010逻辑左移。问寄存器数与shamt位数；add的ALUBsrc、F/OF/CF及无符号溢出标志；slli的Ext；lw的Ext/ALUctr；机器码A040A103H的译码和有效地址。",
+    "question": "（14分）假定计算机M字长为32位，按字节编址，采用32位定长指令字。指令add、slli和lw的格式、编码和功能如下图。 R[x]表示通用寄存器x的内容，M[x]表示地址为x的存储单元内容，shamt为移位位数，imm为补码偏移量。题目另给出部分数据通路图，其中A、B分别是从rs1和rs2读出的内容，IR[31:20]为指令寄存器高12位；Ext=0、1分别零扩展、符号扩展；ALUctr=000、001、010分别执行加、减、逻辑左移。 M最多有多少个通用寄存器？为什么shamt占5位？（2分） 执行add时ALUBsrc取值？若rs1、rs2分别为87654321H、98765432H，求ALU输出F、OF、CF；无符号加法溢出看哪个标志？（3分） 执行slli时Ext可取0或1的原因？（2分） 执行lw时Ext、ALUctr分别取何值？（2分） 机器码A040A103H为何一定是lw？（2分） 若R[01H]=FFFFA2D0H，求该指令读取数据的存储地址。（2分） 查看2024年408回忆版原卷（第43题）",
     "answer": "最多32个通用寄存器，shamt为5位可表示0～31。add时ALUBsrc=0；F=1FDB9753H，OF=1，CF=1；无符号溢出看CF。slli的Ext可为0或1，因为其移位立即数高位为0。lw的Ext=1、ALUctr=000。A040A103H为lw r2,-1532(r1)；R[01H]=FFFFA2D0H时有效地址FFFF9CD4H。",
     "analysis": "该题的关键是按题目给出的指令编码表逐字段译码，不能把标准RISC-V的全部规则或其他自定义格式混入。CF与OF针对不同数值解释：CF描述无符号进位，OF描述有符号补码溢出。lw的立即数是有符号偏移，因此地址生成必须符号扩展。",
     "steps": [
@@ -5722,7 +5748,20 @@ window.QUESTION_CARD_MAP = {
     "secondaryCards": [
       "立即数扩展与移位指令",
       "指令译码与有效地址计算"
-    ]
+    ],
+    "code": "87654321H + 98765432H = 1_1FDB9753H\\nF = 1FDB9753H, CF = 1, OF = 1\\nA040A103H -> lw r2,-1532(r1)\\nEA = FFFFA2D0H + FFFFFA04H = FFFF9CD4H",
+    "complexity": "寄存器编码32种；shamt范围0～31；ALU加法结果F=1FDB9753H；有效地址FFFF9CD4H。",
+    "verification": "题面和图43(a)/(b)按PGCode完整预览核对，指令字段、ALU标志位和地址计算已复算。分值存在来源差异：回忆版PDF列14分，PGCode列13分；本库按回忆版PDF分配14分。",
+    "audit": {
+      "status": "cross-checked",
+      "sources": [
+        "2024年408回忆版试卷PDF",
+        "PGCode 2024完整试卷预览"
+      ],
+      "note": "题面和图43(a)/(b)按PGCode完整预览核对，指令字段、ALU标志位和地址计算已复算。分值存在来源差异：回忆版PDF列14分，PGCode列13分；本库按回忆版PDF分配14分。"
+    },
+    "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
+    "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf"
   },
   "2024-44": {
     "year": 2024,
@@ -5732,7 +5771,7 @@ window.QUESTION_CARD_MAP = {
     "subjectCode": "computer-organization",
     "typeName": "应用题",
     "score": 10,
-    "question": "2024年408综合题44：对题43计算机M，sum+=a[i]对应slli r4,r2,2；add r4,r3,r4；lw r5,0(r4)；add r1,r1,r5。int型i、sum和数组a，r1～r5编号01H～05H。i=5，r1=00001332H，r3=0013DFF0H；题图给出0013DFF0H起始的字节内容。求a首地址/i/sum寄存器编号，a[i]地址和值、更新后sum、页号及数组页数，slli机器码以及short时的指令。",
+    "question": "（10分）对题43中的计算机M，C语言语句sum+=a[i]对应的指令序列为： slli r4, r2, 2 // R[r4] = R[r2] 已知i、sum和数组a均为int型，通用寄存器r1～r5编号为01H～05H。 写出存放数组a首地址、变量i和sum的通用寄存器编号。（3分） 已知M为小端方式，采用页式存储管理，页大小4KB。执行第一条指令时i=5，r1=00001332H，r3=0013DFF0H。从该地址开始的存储单元内容如下图。求执行sum+=a[i]后a[i]的地址、a[i]和sum的机器数、a[i]所在页号，以及数组a至少占几页。（5分） （3）求slli r4,r2,2的机器码；若数组a改为short型，slli指令应如何修改？（2分） 查看2024年408回忆版原卷（第44题）",
     "answer": "a首地址在r3（03H），i在r2（02H），sum在r1（01H）。a[5]地址=0013E004H；小端四字节DC EC FF FF组成FFFFECDCH；sum更新为0000000EH。a[5]所在页号为0013EH；数组至少跨2页。slli r4,r2,2机器码为00212213H；short时改为slli r4,r2,1。",
     "analysis": "数组地址计算由元素宽度决定。小端方式只影响字节到整数的组合，不改变地址。FFFFECDCH按32位补码解释为负数，累加时发生模2^32回绕。页面边界在0013E000H，数组基址0013DFF0H距边界仅16字节，访问a[5]已经跨页。",
     "steps": [
@@ -5777,7 +5816,20 @@ window.QUESTION_CARD_MAP = {
     "secondaryCards": [
       "虚拟地址分页与页内偏移",
       "RISC-V 指令格式与寄存器编码"
-    ]
+    ],
+    "code": "&a[5] = 0013DFF0H + 5*4 = 0013E004H\\na[5] bytes: DC EC FF FF -> FFFFECDCH\\nsum = 00001332H + FFFFECDCH = 0000000EH (32-bit)\\npage = 0013E004H >> 12 = 0013EH\\nslli r4,r2,2 = 00212213H; short: slli r4,r2,1",
+    "complexity": "int数组元素偏移20B；a[5]地址0013E004H；跨页2页；sum=0000000EH。",
+    "verification": "原卷回忆版PDF第44题与PGCode题面及内存图一致。寄存器分工、a[5]地址、小端读数、32位累加、页号及指令机器码已复算。",
+    "audit": {
+      "status": "cross-checked",
+      "sources": [
+        "2024年408回忆版试卷PDF",
+        "PGCode 2024完整试卷预览"
+      ],
+      "note": "原卷回忆版PDF第44题与PGCode题面及内存图一致。寄存器分工、a[5]地址、小端读数、32位累加、页号及指令机器码已复算。"
+    },
+    "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
+    "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf"
   },
   "2024-45": {
     "year": 2024,
@@ -5787,7 +5839,7 @@ window.QUESTION_CARD_MAP = {
     "subjectCode": "operating-system",
     "typeName": "应用题",
     "score": 7,
-    "question": "2024年408综合题45：32位虚拟地址和物理地址，页表项4B，页大小4MB，虚拟地址由10位页号和22位页内偏移组成。进程P页表虚拟基址B8C00000H，页表装载物理基址65400000H。访问12345678H缺页，处理后物理地址BAB45678H。求对应PTE的虚拟/物理地址与新页框号；再求页表所在页号、对应PTE虚拟地址和页框号。",
+    "question": "（7分）某计算机采用虚拟页式存储管理，虚拟地址和物理地址均为32位，页表项大小为4B，页面大小为4MB。虚拟地址结构如下： 进程P的页表起始虚拟地址为B8C00000H，被装载到从物理地址65400000H开始的连续主存空间中。回答： CPU访问虚拟地址12345678H时发生缺页，经处理和MMU转换后得到物理地址BAB45678H。求此次更新的页表项虚拟地址、物理地址及页框号。（3分） 求进程P页表所在页的页号、该页对应页表项的虚拟地址及该页表项中的页框号。（4分） 查看2024年408回忆版原卷（第45题）",
     "answer": "VPN=048H、偏移=345678H；该页PTE虚拟地址B8C00120H、物理地址65400120H；新页框号=2EAH。页表所在虚拟页号=2E3H；该页PTE虚拟地址B8C00B8CH；页框号=195H。",
     "analysis": "页号与页框号分别属于虚拟地址和物理地址。PTE地址计算使用虚页号乘以PTE字节数；目标页框号通过物理地址去掉22位页内偏移得到。页表所在页本身也有一个虚页号，因此需要再用该页号定位它自己的PTE。",
     "steps": [
@@ -5825,7 +5877,20 @@ window.QUESTION_CARD_MAP = {
     ],
     "secondaryCards": [
       "缺页异常与页表更新"
-    ]
+    ],
+    "code": "VPN(12345678H)=048H; offset=345678H\\nPTE_VA=B8C00000H+048H*4=B8C00120H\\nPTE_PA=65400000H+048H*4=65400120H\\nPFN(BAB45678H)=2EAH\\nVPN(page table)=2E3H\\nPTE_VA(page table)=B8C00000H+2E3H*4=B8C00B8CH\\nPFN(page table)=65400000H>>22=195H",
+    "complexity": "PTE偏移120H和B8CH；目标页框号2EAH；页表页框号195H。",
+    "verification": "原卷回忆版PDF第45题与PGCode题面一致。页号10位、页内偏移22位，页表项地址和页框号均已按4字节PTE独立复算。",
+    "audit": {
+      "status": "cross-checked",
+      "sources": [
+        "2024年408回忆版试卷PDF",
+        "PGCode 2024完整试卷预览"
+      ],
+      "note": "原卷回忆版PDF第45题与PGCode题面一致。页号10位、页内偏移22位，页表项地址和页框号均已按4字节PTE独立复算。"
+    },
+    "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
+    "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf"
   },
   "2024-46": {
     "year": 2024,
@@ -5835,7 +5900,7 @@ window.QUESTION_CARD_MAP = {
     "subjectCode": "operating-system",
     "typeName": "应用题",
     "score": 8,
-    "question": "2024年408综合题46：共享缓冲区B存放一个数据分组，C1写入、C2读出、C3修改；B为空时才能执行C1，B非空时才能执行C2和C3。分别讨论两个进程都执行C1时C1是否为临界区；B初始为空、P1执行C1一次而P2执行C2一次时的最少信号量；B初始非空、P1和P2各执行C3一次时的最少信号量。",
+    "question": "（8分）某网络系统中的缓冲区B用于存放一个数据分组。对B的操作有C1、C2和C3：C1将一个数据分组写入B，C2从B中读出一个数据分组，C3对B中的数据分组进行修改。要求B为空时才能执行C1，B非空时才能执行C2和C3。回答： 假设进程P1和P2均需执行C1，实现C1的代码是否为临界区？为什么？（2分） B初始为空，P1执行C1一次，P2执行C2一次。定义尽可能少的信号量，并用wait()、signal()描述同步或互斥关系，说明信号量作用及初值。（3分） B初始非空，P1和P2各执行C3一次。定义尽可能少的信号量，并描述同步或互斥关系，说明信号量作用及初值。（3分） 查看2024年408回忆版原卷（第46题）",
     "answer": "（1）C1是临界区，因为两个进程写同一共享缓冲区必须互斥。（2）只需同步信号量done=0：P1执行C1后signal(done)，P2先wait(done)再执行C2。（3）只需互斥信号量mutex=1，两个进程执行C3前wait(mutex)，完成后signal(mutex)。",
     "analysis": "第（2）问是一次性的先后同步，而不是完整的多槽生产者消费者模型。因为缓冲区初始为空、只有一次写和一次读，done=0足以让读者等待写者；不需要再定义empty和full。第（3）问两个C3都修改同一个非空缓冲区，没有先后要求，只需互斥信号量。",
     "steps": [
@@ -5864,7 +5929,20 @@ window.QUESTION_CARD_MAP = {
     ],
     "secondaryCards": [
       "临界区与共享缓冲区"
-    ]
+    ],
+    "code": "semaphore done = 0;\\nP1() { C1; signal(done); }\\nP2() { wait(done); C2; }\\n\\nsemaphore mutex = 1;\\nP1() { wait(mutex); C3; signal(mutex); }\\nP2() { wait(mutex); C3; signal(mutex); }",
+    "complexity": "每个进程各一次操作；第（2）问1个同步信号量，第（3）问1个互斥信号量。",
+    "verification": "原卷回忆版PDF第46题与PGCode题面一致。第（2）问仅需done=0完成一次性先后同步；第（3）问仅需mutex=1完成互斥。",
+    "audit": {
+      "status": "cross-checked",
+      "sources": [
+        "2024年408回忆版试卷PDF",
+        "PGCode 2024完整试卷预览"
+      ],
+      "note": "原卷回忆版PDF第46题与PGCode题面一致。第（2）问仅需done=0完成一次性先后同步；第（3）问仅需mutex=1完成互斥。"
+    },
+    "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
+    "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf"
   },
   "2024-47": {
     "year": 2024,
@@ -5874,7 +5952,7 @@ window.QUESTION_CARD_MAP = {
     "subjectCode": "computer-network",
     "typeName": "应用题",
     "score": 8,
-    "question": "2024年408综合题47：四个AS互连。AS1运行RIP；AS3规模较小，任意两主机间经过路由器不超过15个；AS4规模较大，可能超过20个。题图给出R11～R16拓扑、AS2/AS3/AS4边界路由器及136.5.16.0/20路由通告表。问AS4选RIP还是OSPF；AS3通信所需最小TTL；RIP传播210.2.4.0/24的最短时间；R44向R13及R13向R14/R15的BGP会话和报文；R14、R15在无策略约束下的下一跳。",
+    "question": "（8分）现有4个自治系统互连，AS1运行内部网关协议RIP；AS3规模较小，自治系统内任意两台主机通信经过的路由器数不超过15个；AS4规模较大，自治系统内任意两台主机通信经过的路由器数可能超过20个。网络拓扑如下图： 仅有RIP和OSPF可选，AS4应选择哪个协议？（1分） AS3中两主机通信，确保IP分组正常接收，初始TTL至少设为多少？（1分） AS1路由器同时启动并立即交换初始距离向量，之后每隔30秒交换最新距离向量。从初始交换时刻算起，R11～R16均获得到达210.2.4.0/24的正确路由至少需要多长时间？（2分） R44向R13通告136.5.16.0/20时，使用哪类BGP会话和哪个BGP报文？R13向R14、R15通告时使用哪类会话？（2分） 根据下表所示的AS路径和下一跳信息，在无策略约束时，R14和R15到136.5.16.0/20的下一跳分别是什么？（2分） 本题参考答案依据拓扑图中的AS内IGP距离进行热土豆路由选择。 查看2024年408回忆版原卷（第47题）",
     "answer": "（1）AS4选OSPF。（2）AS3初始TTL至少16。（3）R11～R16均获正确210.2.4.0/24路由至少60s。（4）R44→R13使用eBGP、UPDATE报文；R13→R14/R15使用iBGP。（5）R14下一跳R11，R15下一跳R13。",
     "analysis": "该题分为IGP协议能力、TTL逐跳递减、距离向量收敛、BGP会话类型/报文和BGP路径选择五层。RIP的15跳限制决定AS4选OSPF；TTL必须比最大路由器转发数至少多1；同步初始交换视为t=0，之后每30秒扩散一跳。BGP先比较AS_PATH长度，再在等长候选间根据本AS内部到出口的IGP代价选择热土豆出口。",
     "steps": [
@@ -5939,7 +6017,20 @@ window.QUESTION_CARD_MAP = {
       "BGP eBGP 与 iBGP 会话",
       "BGP UPDATE 报文与路由通告",
       "热土豆路由与 IGP 出口距离"
-    ]
+    ],
+    "code": "AS4: OSPF (RIP max 15 hops)\\nAS3: TTL_min = 15 + 1 = 16\\nRIP propagation: t=0 R13/R15; t=30 R12/R14; t=60 R11 -> 60s\\nR44 -> R13: eBGP UPDATE\\nR13 -> R14/R15: iBGP\\nNext hop: R14 -> R11; R15 -> R13",
+    "complexity": "RIP传播3个时刻层级：0s、30s、60s；AS_PATH候选长度3、4、3。",
+    "verification": "详细拓扑、RIP更新时序和BGP路径表以PGCode完整题面/原题图为准。回忆版PDF第47题只保留简化回忆题干，且列8分；PGCode列9分。两来源总分均为70分，但43/47分值分配不同，本库按回忆版PDF记录8分，并保留此来源差异。",
+    "audit": {
+      "status": "cross-checked",
+      "sources": [
+        "2024年408回忆版试卷PDF",
+        "PGCode 2024完整试卷预览"
+      ],
+      "note": "详细拓扑、RIP更新时序和BGP路径表以PGCode完整题面/原题图为准。回忆版PDF第47题只保留简化回忆题干，且列8分；PGCode列9分。两来源总分均为70分，但43/47分值分配不同，本库按回忆版PDF记录8分，并保留此来源差异。"
+    },
+    "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
+    "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf"
   },
   "2025-41": {
     "year": 2025,
