@@ -3,15 +3,15 @@ const vm = require('vm');
 function extractArray(source, marker) {
   const at=source.indexOf(marker); if(at<0)throw new Error('Missing '+marker);
   const start=source.indexOf('[',at+marker.length);let depth=0,quote='',escaped=false;
-  for(let i=start;i<source.length;i++){const ch=source[i];if(quote){if(escaped)escaped=false;else if(ch==='\\\\')escaped=true;else if(ch===quote)quote='';continue;}if(ch==='"'||ch==="'"){quote=ch;continue;}if(ch==='[')depth++;if(ch===']'&&--depth===0)return JSON.parse(source.slice(start,i+1));}
+  for(let i=start;i<source.length;i++){const ch=source[i];if(quote){if(escaped)escaped=false;else if(ch==='\\')escaped=true;else if(ch===quote)quote='';continue;}if(ch==='"'||ch==="'"){quote=ch;continue;}if(ch==='[')depth++;if(ch===']'&&--depth===0)return JSON.parse(source.slice(start,i+1));}
   throw new Error('Unclosed array');
 }
-function plain(s){return String(s||'').replace(/<script[\\s\\S]*?<\\/script>/gi,' ').replace(/<style[\\s\\S]*?<\\/style>/gi,' ').replace(/<[^>]*>/g,' ').replace(/&nbsp;|&#160;/gi,' ').replace(/&amp;/gi,'&').replace(/&lt;/gi,'<').replace(/&gt;/gi,'>').replace(/&quot;/gi,'"').replace(/&#39;|&apos;/gi,"'").replace(/\\s+/g,' ').trim();}
-function norm(s){return plain(s).toLowerCase().replace(/[\\s，。；：！？、,.!?;:（）()【】\\[\\]{}“”‘’"']/g,'');}
-function splitTerms(s){const stop=new Set(['原理','性质','定义','基础','结构','过程','方式','方法','管理','操作','机制','系统','概念','算法','与','和','及','的','考点']);return [...new Set(String(s||'').split(/[与和及、，,：:／/（）()\\s·；;]+/).map(x=>x.trim()).filter(x=>x.length>=2&&!stop.has(x)))];}
-function bigrams(s){const x=norm(s),out=new Map();for(let i=0;i<x.length-1;i++){const g=x.slice(i,i+2);if(/[\\u3400-\\u9fff]/.test(g))out.set(g,(out.get(g)||0)+1);}return out;}
+function plain(s){return String(s||'').replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]*>/g,' ').replace(/&nbsp;|&#160;/gi,' ').replace(/&amp;/gi,'&').replace(/&lt;/gi,'<').replace(/&gt;/gi,'>').replace(/&quot;/gi,'"').replace(/&#39;|&apos;/gi,"'").replace(/\s+/g,' ').trim();}
+function norm(s){return plain(s).toLowerCase().replace(/[\s，。；：！？、,.!?;:（）()【】\[\]{}“”‘’"']/g,'');}
+function splitTerms(s){const stop=new Set(['原理','性质','定义','基础','结构','过程','方式','方法','管理','操作','机制','系统','概念','算法','与','和','及','的','考点']);return [...new Set(String(s||'').split(/[与和及、，,：:／/（）()\s·；;]+/).map(x=>x.trim()).filter(x=>x.length>=2&&!stop.has(x)))];}
+function bigrams(s){const x=norm(s),out=new Map();for(let i=0;i<x.length-1;i++){const g=x.slice(i,i+2);if(/[\u3400-\u9fff]/.test(g))out.set(g,(out.get(g)||0)+1);}return out;}
 function cosine(a,b,idf){let dot=0,na=0,nb=0;for(const[k,v]of a){const w=idf.get(k)||1,z=v*w;na+=z*z;dot+=z*(b.get(k)||0)*w;}for(const[k,v]of b){const z=v*(idf.get(k)||1);nb+=z*z;}return na&&nb?dot/Math.sqrt(na*nb):0;}
-const qctx={};vm.runInNewContext(fs.readFileSync('data/408/questions_data.js','utf8')+'\\n;globalThis.__Q=QUESTIONS_DATA;',qctx,{timeout:120000});
+const qctx={};vm.runInNewContext(fs.readFileSync('data/408/questions_data.js','utf8')+'\n;globalThis.__Q=QUESTIONS_DATA;',qctx,{timeout:120000});
 const questions=qctx.__Q;if(!Array.isArray(questions)||!questions.length)throw new Error('QUESTIONS_DATA unavailable');
 const cards=extractArray(fs.readFileSync('public/opensource-22408/408/cards.html','utf8'),'const cards=');
 const mapCtx={window:{}};vm.runInNewContext(fs.readFileSync('public/opensource-22408/408/cards-questions.js','utf8'),mapCtx,{timeout:30000});
@@ -43,6 +43,6 @@ for(const list of Object.values(cardQuestionList))list.sort((a,b)=>a.year-b.year
 const linkedCards=Object.values(cardQuestionList).filter(x=>x.length).length;
 const report={sourceQuestions:questions.length,linkedQuestions:Object.keys(questionMap).length,verifiedQuestions,suggestedQuestions,lowConfidenceSuggestions:lowConfidence,cards:cards.length,cardsWithQuestions:linkedCards,cardsWithoutQuestions:cards.length-linkedCards,subjectStats};
 fs.mkdirSync('public/opensource-22408/408',{recursive:true});
-fs.writeFileSync('public/opensource-22408/408/question-card-map.js','window.QUESTION_CARD_MAP = '+JSON.stringify(questionMap)+';\\nwindow.CARD_QUESTION_LIST = '+JSON.stringify(cardQuestionList)+';\\nwindow.QUESTION_CARD_COVERAGE = '+JSON.stringify(report)+';\\n');
+fs.writeFileSync('public/opensource-22408/408/question-card-map.js','window.QUESTION_CARD_MAP = '+JSON.stringify(questionMap)+';\nwindow.CARD_QUESTION_LIST = '+JSON.stringify(cardQuestionList)+';\nwindow.QUESTION_CARD_COVERAGE = '+JSON.stringify(report)+';\n');
 fs.mkdirSync('reports',{recursive:true});fs.writeFileSync('reports/408-question-card-coverage.json',JSON.stringify({generatedAt:new Date().toISOString(),...report},null,2));
 console.log(JSON.stringify(report));
