@@ -5701,7 +5701,7 @@ window.QUESTION_CARD_MAP = {
     "subject": "计算机组成原理",
     "subjectCode": "computer-organization",
     "typeName": "应用题",
-    "score": 14,
+    "score": 13,
     "question": "（14分）假定计算机M字长为32位，按字节编址，采用32位定长指令字。指令add、slli和lw的格式、编码和功能如下图。 R[x]表示通用寄存器x的内容，M[x]表示地址为x的存储单元内容，shamt为移位位数，imm为补码偏移量。题目另给出部分数据通路图，其中A、B分别是从rs1和rs2读出的内容，IR[31:20]为指令寄存器高12位；Ext=0、1分别零扩展、符号扩展；ALUctr=000、001、010分别执行加、减、逻辑左移。 M最多有多少个通用寄存器？为什么shamt占5位？（2分） 执行add时ALUBsrc取值？若rs1、rs2分别为87654321H、98765432H，求ALU输出F、OF、CF；无符号加法溢出看哪个标志？（3分） 执行slli时Ext可取0或1的原因？（2分） 执行lw时Ext、ALUctr分别取何值？（2分） 机器码A040A103H为何一定是lw？（2分） 若R[01H]=FFFFA2D0H，求该指令读取数据的存储地址。（2分） 查看2024年408回忆版原卷（第43题）",
     "answer": "最多32个通用寄存器，shamt为5位可表示0～31。add时ALUBsrc=0；F=1FDB9753H，OF=1，CF=1；无符号溢出看CF。slli的Ext可为0或1，因为其移位立即数高位为0。lw的Ext=1、ALUctr=000。A040A103H为lw r2,-1532(r1)；R[01H]=FFFFA2D0H时有效地址FFFF9CD4H。",
     "analysis": "该题的关键是按题目给出的指令编码表逐字段译码，不能把标准RISC-V的全部规则或其他自定义格式混入。CF与OF针对不同数值解释：CF描述无符号进位，OF描述有符号补码溢出。lw的立即数是有符号偏移，因此地址生成必须符号扩展。",
@@ -5761,7 +5761,8 @@ window.QUESTION_CARD_MAP = {
       "note": "题面和图43(a)/(b)按PGCode完整预览核对，指令字段、ALU标志位和地址计算已复算。分值存在来源差异：回忆版PDF列14分，PGCode列13分；本库按回忆版PDF分配14分。"
     },
     "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
-    "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf"
+    "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf",
+    "correction": "分值来源存在差异：回忆版PDF总览列第43题14分，但其列出的各小问分值合计13分；PGCode完整题目按13分列示。本库采用PGCode详细题目分值13分。"
   },
   "2024-44": {
     "year": 2024,
@@ -5951,7 +5952,7 @@ window.QUESTION_CARD_MAP = {
     "subject": "计算机网络",
     "subjectCode": "computer-network",
     "typeName": "应用题",
-    "score": 8,
+    "score": 9,
     "question": "（8分）现有4个自治系统互连，AS1运行内部网关协议RIP；AS3规模较小，自治系统内任意两台主机通信经过的路由器数不超过15个；AS4规模较大，自治系统内任意两台主机通信经过的路由器数可能超过20个。网络拓扑如下图： 仅有RIP和OSPF可选，AS4应选择哪个协议？（1分） AS3中两主机通信，确保IP分组正常接收，初始TTL至少设为多少？（1分） AS1路由器同时启动并立即交换初始距离向量，之后每隔30秒交换最新距离向量。从初始交换时刻算起，R11～R16均获得到达210.2.4.0/24的正确路由至少需要多长时间？（2分） R44向R13通告136.5.16.0/20时，使用哪类BGP会话和哪个BGP报文？R13向R14、R15通告时使用哪类会话？（2分） 根据下表所示的AS路径和下一跳信息，在无策略约束时，R14和R15到136.5.16.0/20的下一跳分别是什么？（2分） 本题参考答案依据拓扑图中的AS内IGP距离进行热土豆路由选择。 查看2024年408回忆版原卷（第47题）",
     "answer": "（1）AS4选OSPF。（2）AS3初始TTL至少16。（3）R11～R16均获正确210.2.4.0/24路由至少60s。（4）R44→R13使用eBGP、UPDATE报文；R13→R14/R15使用iBGP。（5）R14下一跳R11，R15下一跳R13。",
     "analysis": "该题分为IGP协议能力、TTL逐跳递减、距离向量收敛、BGP会话类型/报文和BGP路径选择五层。RIP的15跳限制决定AS4选OSPF；TTL必须比最大路由器转发数至少多1；同步初始交换视为t=0，之后每30秒扩散一跳。BGP先比较AS_PATH长度，再在等长候选间根据本AS内部到出口的IGP代价选择热土豆出口。",
@@ -6020,7 +6021,7 @@ window.QUESTION_CARD_MAP = {
     ],
     "code": "AS4: OSPF (RIP max 15 hops)\\nAS3: TTL_min = 15 + 1 = 16\\nRIP propagation: t=0 R13/R15; t=30 R12/R14; t=60 R11 -> 60s\\nR44 -> R13: eBGP UPDATE\\nR13 -> R14/R15: iBGP\\nNext hop: R14 -> R11; R15 -> R13",
     "complexity": "RIP传播3个时刻层级：0s、30s、60s；AS_PATH候选长度3、4、3。",
-    "verification": "详细拓扑、RIP更新时序和BGP路径表以PGCode完整题面/原题图为准。回忆版PDF第47题只保留简化回忆题干，且列8分；PGCode列9分。两来源总分均为70分，但43/47分值分配不同，本库按回忆版PDF记录8分，并保留此来源差异。",
+    "verification": "详细拓扑、RIP更新时序和BGP路径表以PGCode完整题面/原题图为准。回忆版PDF第47题为简化回忆题干并列8分；PGCode完整题目列9分。全卷两种来源总分均为70分，但分值分配不同，本库按完整题目小问分值记录9分。",
     "audit": {
       "status": "cross-checked",
       "sources": [
@@ -6030,7 +6031,8 @@ window.QUESTION_CARD_MAP = {
       "note": "详细拓扑、RIP更新时序和BGP路径表以PGCode完整题面/原题图为准。回忆版PDF第47题只保留简化回忆题干，且列8分；PGCode列9分。两来源总分均为70分，但43/47分值分配不同，本库按回忆版PDF记录8分，并保留此来源差异。"
     },
     "sourceUrl": "https://pgcode.cn/exams/408/years/2024/preview",
-    "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf"
+    "originalPaperUrl": "https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf",
+    "correction": "分值来源存在差异：回忆版PDF总览列第47题8分且题干为简化回忆版；PGCode完整题目列9分，五小问分值合计9分。本库采用PGCode完整题目分值9分。"
   },
   "2025-41": {
     "year": 2025,
