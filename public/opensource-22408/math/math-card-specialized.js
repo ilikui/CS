@@ -124,6 +124,15 @@ const c=(p-1.075)*.45;
 body=graph(x=>1/(x-c)+.2*x).replace('</svg>','<path d="M'+(230+c*48)+' 12V250" stroke="'+COLORS.orange+'" stroke-dasharray="5 5" stroke-width="2"/><text x="'+Math.min(355,230+c*48+5)+'" y="25" fill="'+COLORS.orange+'">x='+c.toFixed(2)+'</text></svg>');
 desc='滑块移动竖直渐近线 x=c；蓝色曲线在 x→c 时发散。此例另有斜渐近线 y=0.2x；判断渐近线必须回到相应极限定义。';
 }
+else if(/二阶导数判别|极值二阶|充分判别/.test(t)){
+const a=p-1.075,fn=x=>a*x*x,X=x=>230+x*48,Y=y=>135-y*35;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="二阶导数判别极大值与极小值"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(fn,-4,4,-3,4)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="135" r="6" fill="'+COLORS.orange+'"/><text x="40" y="25" fill="'+COLORS.blue+'">f(x)='+a.toFixed(2)+'x²</text><text x="40" y="47" fill="'+COLORS.orange+'">f′′(0)='+(2*a).toFixed(2)+(a>0?'：极小值':a<0?'：极大值':'：判别失效')+'</text></svg>';
+desc=a>0?'f′′(0)>0，曲线开口向上，临界点 x=0 是严格局部极小值。':a<0?'f′′(0)<0，曲线开口向下，临界点 x=0 是严格局部极大值。':'f′′(0)=0，二阶导数判别法不能下结论；例如 x³ 在 0 处没有极值。';
+}
+else if(/费马|导数零点/.test(t)){
+body=graph(x=>x*x*x/3,'<path d="M'+(230-55)+' 135L'+(230+55)+' 135" stroke="'+COLORS.orange+'" stroke-width="2.5"/><circle cx="230" cy="135" r="6" fill="'+COLORS.green+'"/><text x="255" y="118" fill="'+COLORS.green+'">f′(0)=0</text>');
+desc='反例 f(x)=x³：f′(0)=0，但函数在 0 附近仍严格递增，没有极大或极小值。费马引理说明可导内点极值必满足 f′=0，反过来不成立。';
+}
 else if(/凹凸|拐点/.test(t)){
 const x=(p-1.075)*3.2,y=x*x*x/12,dy=x*x/4,ddy=x/2,X=q=>230+q*48,Y=q=>135-q*35;
 const tangent=q=>y+dy*(q-x);
