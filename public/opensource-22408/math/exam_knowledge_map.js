@@ -7845,9 +7845,9 @@ window.EXAM_KNOWLEDGE_MAP = {
     "secondary": [
       "CAL-06-F"
     ],
-    "rationale": "逐项展开被积函数并累积积分阶数：A为x³阶、B为x^(5/2)阶、C为x⁶阶、D为x⁵阶，因此C的阶最高。",
-    "methods": "用等价无穷小确定被积函数主阶，再对变上限积分求阶。",
-    "pitfalls": "注意积分上限sin x与1−cos x的阶分别为x与x²。"
+    "rationale": "A与C均为x³阶，B为x^(5/2)阶；D中√(sin³t)∼t^(3/2)，积分上限1−cos x∼x²/2，故D积分主阶为x⁵，趋零最快，阶最高。 由此应选D。",
+    "methods": "分别对被积函数作等价无穷小替换，并结合积分上限的阶数计算积分主阶；比较A、B、C、D。",
+    "pitfalls": "A与C同为x³阶；D的积分上限是1−cos x，阶为x²，不能误判为x。"
   },
   "601": {
     "status": "verified",
@@ -7923,9 +7923,9 @@ window.EXAM_KNOWLEDGE_MAP = {
     "secondary": [
       "LA-04-A"
     ],
-    "rationale": "A奇异且一个三阶子式非零，故rank(A)=3；伴随矩阵秩为1，A* x=0的解空间维数为3，再结合余子式结构确定通解。",
-    "methods": "先确定A的秩，再用伴随矩阵秩和齐次方程组维数分析。",
-    "pitfalls": "A*的零空间不能与A的零空间混为一谈。"
+    "rationale": "A奇异且A12代数余子式非零，说明删除第1行第2列所得三阶子式非零，故列向量α1、α3、α4线性无关。又A* A=det(A)I=0且rank(A)=3，因此A*的零空间等于A的列空间，维数为3，通解由α1、α3、α4张成，选C。",
+    "methods": "先由非零代数余子式确定三列线性无关，再利用A*A=0及rank(A*)=1确定零空间等于A的列空间。",
+    "pitfalls": "A*的零空间不是A的零空间；非零余子式对应删除的行列要准确识别。"
   },
   "607": {
     "status": "verified",
@@ -8201,7 +8201,7 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "二次项系数为f″(0)/2!。"
   },
   "628": {
-    "status": "verified",
+    "status": "pending",
     "questionKey": "2021-选择题-6",
     "primary": [
       "CAL-08-A"
@@ -8209,9 +8209,9 @@ window.EXAM_KNOWLEDGE_MAP = {
     "secondary": [
       "CAL-08-B"
     ],
-    "rationale": "沿(x+1,eˣ)在参数0处求导得fx+fy=1；沿(x,x²)在x=1处求导得fx+2fy=2，解得fx=0、fy=1，故df=dy。",
-    "methods": "对两条参数曲线分别使用多元链式法则，联立求偏导。",
-    "pitfalls": "两条曲线经过(1,1)对应参数值不同，分别为0和1。"
+    "rationale": "题库给出的解析在第一条参数曲线处有求导代入错误：对x²(x+1)求导得3x²+2x，在x=0处为0，而解析写成fx(1,1)+fy(1,1)=1。按题面应得到fx+fy=0；第二条曲线给出fx+2fy=2，故题库所列答案C不成立。需进一步核对原始题面/官方答案，暂不确认为已核验。",
+    "methods": "分别对两条参数曲线使用链式法则，在经过(1,1)的参数值处建立偏导方程组。",
+    "pitfalls": "不要照抄题库解析的第一条导数等式；右端x²(x+1)在x=0处导数为0。"
   },
   "629": {
     "status": "verified",
