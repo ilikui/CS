@@ -2283,7 +2283,9 @@ window.QUESTION_CARD_MAP = {
     "secondaryCards": [
       "TCP 三次握手与四次挥手",
       "TCP 序号确认与累计确认"
-    ]
+    ],
+    "source": "https://github.com/csseky/cskaoyan/blob/master/联考408/408-2016-真题和答案.pdf",
+    "complexity": "第8个ACK后rwnd=12KB、cwnd=9KB、发送窗口9KB；下一序号20581；平均速率20KiB/s=163.84kbit/s；释放时间300ms。"
   },
   "2016-42": {
     "year": 2016,
@@ -2330,7 +2332,9 @@ window.QUESTION_CARD_MAP = {
     ],
     "secondaryCards": [
       "树的基本术语与性质"
-    ]
+    ],
+    "source": "https://github.com/csseky/cskaoyan/blob/master/联考408/408-2016-真题和答案.pdf",
+    "complexity": "叶结点数(k−1)m+1；最大结点数(k^h−1)/(k−1)；最小结点数1+(h−1)k。"
   },
   "2016-43": {
     "year": 2016,
@@ -2383,7 +2387,9 @@ window.QUESTION_CARD_MAP = {
     "secondaryCards": [
       "快速排序分区过程",
       "算法复杂度"
-    ]
+    ],
+    "source": "https://github.com/csseky/cskaoyan/blob/master/联考408/408-2016-真题和答案.pdf",
+    "complexity": "平均时间O(n)，最坏O(n²)，迭代原地实现额外空间O(1)。"
   },
   "2016-44": {
     "year": 2016,
@@ -2445,7 +2451,9 @@ window.QUESTION_CARD_MAP = {
       "异步串行通信帧格式与字符速率",
       "中断响应与异常处理",
       "计算机性能指标 CPI 与 CPU 时间"
-    ]
+    ],
+    "source": "https://github.com/csseky/cskaoyan/blob/master/联考408/408-2016-真题和答案.pdf",
+    "complexity": "每字符10位；2000字符/s；总历时25,070,000时钟周期；CPU占用90,000时钟周期。"
   },
   "2016-45": {
     "year": 2016,
@@ -2508,7 +2516,10 @@ window.QUESTION_CARD_MAP = {
       "虚拟地址分页与页内偏移",
       "TLB 与快表命中",
       "Cache 替换与写策略"
-    ]
+    ],
+    "source": "https://github.com/csseky/cskaoyan/blob/master/联考408/408-2016-真题和答案.pdf",
+    "diagram": "https://zhenti.beokayy.club/content-images/2016-45-1-redraw-20260927.77cce99c386e.png",
+    "complexity": "虚页号19位、页内偏移13位、物理页框号11位；Cache共512组，块4099映射组3、标记8。"
   },
   "2016-46": {
     "year": 2016,
@@ -2561,7 +2572,9 @@ window.QUESTION_CARD_MAP = {
     "secondaryCards": [
       "进程调度算法",
       "调度评价指标"
-    ]
+    ],
+    "source": "https://github.com/csseky/cskaoyan/blob/master/联考408/408-2016-真题和答案.pdf",
+    "complexity": "priority=nice+k₁×cpuTime−k₂×waitTime，k₁、k₂>0。"
   },
   "2016-47": {
     "year": 2016,
@@ -2623,7 +2636,10 @@ window.QUESTION_CARD_MAP = {
       "目录结构与文件路径",
       "文件物理分配方式",
       "文件逻辑结构与物理结构"
-    ]
+    ],
+    "source": "https://github.com/csseky/cskaoyan/blob/master/联考408/408-2016-真题和答案.pdf",
+    "diagram": "https://zhenti.beokayy.club/content-images/2016-47-1-redraw-20260927.2349a7629502.png",
+    "complexity": "FAT最大128KiB；最大文件256MiB；file1的FAT链100→106→108；读取第5000字节访问目录簇48与数据簇106。"
   },
   "2014-41": {
     "year": 2014,
