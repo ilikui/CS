@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-16T14:13:44.198Z",
+  "generatedAt": "2026-11-16T14:15:40.634Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
-    "formalMappingRecords": 262,
-    "uniqueQuestionsAlreadyLinked": 226,
-    "questionsWithoutAnyFormalLink": 573,
+    "formalMappingRecords": 275,
+    "uniqueQuestionsAlreadyLinked": 239,
+    "questionsWithoutAnyFormalLink": 560,
     "questionsNeedingAdditionalCardReview": 799,
     "candidateQuestions": 798,
     "noCandidateQuestions": 1,
     "cards": 257,
-    "cardsWithFormalLinks": 150,
+    "cardsWithFormalLinks": 157,
     "cardsWithoutFormalLinks": [
       {
         "subject": "操作系统",
@@ -198,10 +198,6 @@
       },
       {
         "subject": "数据结构",
-        "title": "多路归并与双指针"
-      },
-      {
-        "subject": "数据结构",
         "title": "前缀编码与二叉判定树"
       },
       {
@@ -243,10 +239,6 @@
       {
         "subject": "计算机组成原理",
         "title": "RISC-V 指令格式与寄存器编码"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "ALU 标志位 CF 与 OF"
       },
       {
         "subject": "计算机组成原理",
@@ -299,10 +291,6 @@
       {
         "subject": "计算机网络",
         "title": "BGP eBGP 与 iBGP 会话"
-      },
-      {
-        "subject": "计算机网络",
-        "title": "BGP UPDATE 报文与路由通告"
       },
       {
         "subject": "计算机网络",
@@ -423,22 +411,6 @@
       {
         "subject": "操作系统",
         "title": "FAT链接分配与簇链访问"
-      },
-      {
-        "subject": "数据结构",
-        "title": "有序数组中位数的二分缩减"
-      },
-      {
-        "subject": "数据结构",
-        "title": "摩尔投票法与主元素"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "TLB 与多级页表联合转换"
-      },
-      {
-        "subject": "计算机网络",
-        "title": "IP TTL 与逐跳转发"
       }
     ]
   },
