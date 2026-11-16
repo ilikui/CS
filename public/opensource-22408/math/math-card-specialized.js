@@ -79,7 +79,7 @@ body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V25
 desc='示例 f(x)=x/|x|：从左侧趋近 0 时函数值趋于 −1，从右侧趋近 0 时趋于 1。双侧极限存在的必要充分条件是左右极限都存在且相等。';
 }else if(/洛必达/.test(t)){
 const z=.2+.55*(1.8-p)/1.45;
-body=graph(x=>(1-Math.cos(x*z))/(x*x*z*z||1));
+body=graph(x=>Math.abs(x)<1e-8?.5:(1-Math.cos(x*z))/(x*x*z*z));
 desc='以 limₓ→0 (1−cos x)/x²=1/2 为例。洛必达把 0/0 型商式求导为 sin x/(2x)，但必须先确认未定式、可导及导数商极限存在等条件；不能对非未定式滥用。';
 }else if(/数列|子列|柯西|单调有界/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 230H432 M28 20V240" stroke="#9aaabd"/><path d="'+Array.from({length:30},(_,i)=>{let n=i+1,x=28+n*12.8,y=230-180/(n*p+1);return(i?'L':'M')+x+' '+y}).join(' ')+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.5"/><path d="M28 50H432" stroke="'+COLORS.orange+'" stroke-dasharray="5 5"/><text x="390" y="42" fill="'+COLORS.orange+'">极限 L</text></svg>';desc='离散数列点列逐项靠近极限；ε 带内最终包含全部后续项。';}
 else if(/夹逼/.test(t)){body=graph(x=>Math.sin(x*3)/(Math.abs(x)+.25),'');desc='被夹函数位于上下界之间；上下界共同趋向 L 时，中间函数也趋向 L。';}
