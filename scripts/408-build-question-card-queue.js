@@ -99,10 +99,9 @@ const unmatched = [];
 for (const q of questions) {
   const key = String(q.year)+'-'+String(q.index);
   const existing = [...(linked.get(key) || [])];
-  if (existing.length) continue;
   const subject = subjectAliases[String(q.subject || '')] || subjectForIndex(Number(q.index));
   const body = norm([q.question,q.analysisHtml,q.answerHtml,q.analysis,q.answer].filter(Boolean).join(' '));
-  const pool = indexedCards.filter(card => !subject || card.subject === subject);
+  const pool = indexedCards.filter(card => (!subject || card.subject === subject) && !existing.includes(card.title));
   const ranked = pool.map(card => {
     let score = 0; const hits = [];
     for (const item of card.terms) {
@@ -116,17 +115,17 @@ for (const q of questions) {
   }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score || a.card.localeCompare(b.card,'zh-CN')).slice(0,5);
   const top = ranked[0]?.score || 0, second = ranked[1]?.score || 0;
   const confidence = top >= 20 && top-second >= 5 ? 'high-candidate' : top >= 9 ? 'medium-candidate' : top > 0 ? 'low-candidate' : 'no-candidate';
-  const record = {year:q.year,index:q.index,id:q.id,subject:subject || q.subject || null,type:q.typeName || q.type || null,question:htmlText(q.question),answer:q.answer || null,analysis:htmlText(q.analysis || q.analysisHtml || ''),confidence,candidates:ranked};
+  const record = {year:q.year,index:q.index,id:q.id,subject:subject || q.subject || null,type:q.typeName || q.type || null,question:htmlText(q.question),answer:q.answer || null,analysis:htmlText(q.analysis || q.analysisHtml || ''),existingCards:existing,confidence,candidates:ranked};
   if (ranked.length) queue.push(record); else unmatched.push(record);
 }
 const linkedCards = new Set(Object.values(topicMap));
 const report = {
   generatedAt:new Date().toISOString(),
-  policy:'Machine-ranked candidates only. No candidate is a formal association until question wording and the directly tested concept are manually verified.',
+  policy:'Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.',
   counts:{
     sourceQuestions:questions.length,formalMappingRecords:Object.keys(mapping).length,
-    uniqueQuestionsAlreadyLinked:linked.size,unmatchedQuestions:queue.length+unmatched.length,
-    candidateQuestions:queue.length,noCandidateQuestions:unmatched.length,
+    uniqueQuestionsAlreadyLinked:linked.size,questionsWithoutAnyFormalLink:questions.filter(q=>!linked.has(String(q.year)+'-'+String(q.index))).length,
+    questionsNeedingAdditionalCardReview:queue.length+unmatched.length,candidateQuestions:queue.length,noCandidateQuestions:unmatched.length,
     cards:cards.length,cardsWithFormalLinks:linkedCards.size,cardsWithoutFormalLinks:cards.filter(c=>!linkedCards.has(c[1])).map(c=>({subject:c[0],title:c[1]}))
   },
   queue,unmatched
