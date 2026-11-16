@@ -1778,13 +1778,13 @@
         "使用long long计算high−low及2×差值，避免两个32位int相减或乘2发生溢出。"
       ],
       "complexity": "时间复杂度O(n1+n2+n3)，辅助空间复杂度O(1)。",
-      "analysis": "三元组距离只取决于最大值与最小值，与中间值无关。三个数组均升序，三指针归并式扫描可在不枚举n1×n2×n3个组合的情况下找到全局最优。题面转录写有a、b、c均为正数，但示例集合含负数；距离公式及算法对任意整数同样成立，题面措辞需以原卷版面为准。",
+      "analysis": "三元组距离只取决于最大值与最小值，与中间值无关。三个数组均升序，三指针归并式扫描可在不枚举n1×n2×n3个组合的情况下找到全局最优。已对照2020年原卷PDF文本核验，题干实际为a、b、c均为整数；部分网页转录成“正数”属于转录错误，示例中的负数与原卷一致。",
       "code": "long long minDistance(const int A[], int n1,\\n                      const int B[], int n2,\\n                      const int C[], int n3,\\n                      int *ra, int *rb, int *rc) {\\n    int i = 0, j = 0, k = 0;\\n    long long best = LLONG_MAX;\\n    while (i < n1 && j < n2 && k < n3) {\\n        long long a = A[i], b = B[j], c = C[k];\\n        long long low = a, high = a;\\n        if (b < low) low = b; if (c < low) low = c;\\n        if (b > high) high = b; if (c > high) high = c;\\n        long long d = 2LL * (high - low);\\n        if (d < best) {\\n            best = d; *ra = (int)a; *rb = (int)b; *rc = (int)c;\\n        }\\n        if (best == 0) break;\\n        if (a == low) ++i;\\n        else if (b == low) ++j;\\n        else ++k;\\n    }\\n    return best;\\n}",
-      "correction": "参考答案给出的三指针推进规则为每轮移动当前最小值；若多个值并列最小，移动其中任意一个均可保持正确性。题干“正数”与负数示例存在文本矛盾，正式卡片保留该提示，不擅自改写原题。",
-      "verification": "已对照2020年原题页面、公开参考解析和给定样例核对距离恒等式、指针推进策略及复杂度；题面正数措辞与负数样例的矛盾已标记待原卷图像复核。",
+      "correction": "原卷PDF题干为“a、b、c均为整数”；PGCode等网页转录的“均为正数”与负数示例矛盾，不能照抄该网页措辞。",
+      "verification": "已对照2020年原卷PDF文本（题目41）与PGCode参考解析核验，原卷明确写“a、b、c均为整数”；三指针算法、样例和复杂度已复核。",
       "audit": {
         "status": "cross-checked",
-        "note": "算法与参考解析已核验；原题关于正数/负数样例的措辞冲突已显式标注。"
+        "note": "原卷题干措辞已回查PDF，纠正网页转录“正数”为原卷“整数”；算法及复杂度已复核。"
       },
       "cards": [
         {
