@@ -67,7 +67,7 @@ else{body=graph(x=>Math.sin(x*p)/(x===0?1:x));desc='横轴位置逐渐靠近目�
 body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="M35 220L230 50L425 220" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="50" r="6" fill="white" stroke="'+COLORS.orange+'" stroke-width="3"/><circle cx="230" cy="'+(50+70*p)+'" r="6" fill="'+COLORS.orange+'"/><path d="M230 50V'+(50+70*p)+'" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="255" y="38" fill="'+COLORS.blue+'">左右极限</text><text x="255" y="'+(70+70*p)+'" fill="'+COLORS.orange+'">函数值</text></svg>';desc=/间断/.test(t)?'空心圆表示极限位置，实心圆表示函数值；比较左右极限与点值分类。':'连续要求左右极限相等并等于函数值；闭区间性质依赖连续条件。';
 }else if(k==='derivative'){
 if(/隐函数|参数方程/.test(t)){
-const theta=.3+(p-.35)/1.45*1.8,x=Math.cos(theta),y=Math.sin(theta),X=q=>230+q*145,Y=q=>135-q*95,dx=-Math.sin(theta),dy=-Math.cos(theta);
+const theta=.3+(p-.35)/1.45*1.8,x=Math.cos(theta),y=Math.sin(theta),X=q=>230+q*95,Y=q=>135-q*95,dx=-Math.sin(theta),dy=-Math.cos(theta);
 body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="圆的隐函数与参数方程切线动态演示"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><circle cx="230" cy="135" r="95" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+(X(x)-dx*55)+' '+(Y(y)-dy*55)+'L'+(X(x)+dx*55)+' '+(Y(y)+dy*55)+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M230 135L'+X(x)+' '+Y(y)+'" stroke="'+COLORS.green+'" stroke-dasharray="5 4"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.orange+'"/><text x="40" y="25" fill="'+COLORS.blue+'">x²+y²=1；x=cos t，y=sin t</text><text x="40" y="47" fill="'+COLORS.orange+'">dy/dx=−x/y='+(-x/y).toFixed(2)+'</text></svg>';
 desc='拖动参数 t：点 (cos t,sin t) 沿单位圆移动，橙色切线斜率 dy/dx=−x/y。隐式求导 2x+2yy′=0；当 y=0 时切线竖直，不能直接用有限斜率表示。';
 }else if(/链式|复合函数/.test(t)){
@@ -86,12 +86,13 @@ desc='蓝线为 y=x²/2，橙线为切线；拖动参数移动切点，斜率 m=
 }
 }else if(k==='mvt'){
 if(/罗尔/.test(t)){
-const a=.5+1.5*p,b=-a,X=x=>230+x*48,Y=y=>135-y*35,xi=0;
+const a=.4+.75*p,b=-a,X=x=>230+x*48,Y=y=>135-y*35,xi=0;
 body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="罗尔定理：端点函数值相同，内部存在水平切线"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(x=>x*x,-2.8,2.8,-1,5)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(-a)+' '+Y(a*a)+'L'+X(a)+' '+Y(a*a)+'" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="6 5"/><path d="M'+X(xi-1.2)+' '+Y(0)+'L'+X(xi+1.2)+' '+Y(0)+'" stroke="'+COLORS.green+'" stroke-width="2.5"/><circle cx="'+X(-a)+'" cy="'+Y(a*a)+'" r="5" fill="'+COLORS.orange+'"/><circle cx="'+X(a)+'" cy="'+Y(a*a)+'" r="5" fill="'+COLORS.orange+'"/><circle cx="'+X(xi)+'" cy="'+Y(0)+'" r="6" fill="'+COLORS.green+'"/><text x="45" y="25" fill="'+COLORS.orange+'">f(a)=f(b)</text><text x="270" y="25" fill="'+COLORS.green+'">f′(ξ)=0，ξ=0</text></svg>';
 desc='罗尔定理示例 f(x)=x²−a²，区间 [−a,a]。拖动改变 a；端点函数值始终相等，内部 ξ=0 处切线水平。连续、开区间可导、端点函数值相等，三项条件缺一不可。';
 }else if(/柯西/.test(t)){
-const b=.6+1.2*p,xi=b/2,X=x=>230+x*105,Y=y=>220-y*26;
-body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="柯西中值定理：两函数增量比等于某点导数比"><path d="M35 220H430 M45 20V235" stroke="#9aaabd"/><path d="'+graphPath(x=>x*x,0,2.4,0,5)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+graphPath(x=>x*x+x,0,2.4,0,8)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M'+X(xi)+' 220V'+Y(xi*xi)+'" stroke="'+COLORS.green+'" stroke-dasharray="5 4"/><circle cx="'+X(xi)+'" cy="'+Y(xi*xi)+'" r="6" fill="'+COLORS.green+'"/><text x="65" y="28" fill="'+COLORS.blue+'">f(x)=x²</text><text x="65" y="49" fill="'+COLORS.orange+'">g(x)=x²+x</text><text x="250" y="245" fill="'+COLORS.green+'">ξ=b/2='+xi.toFixed(2)+'</text></svg>';
+const b=.6+1.2*p,xi=b/2,X=x=>55+x*125,Y=y=>220-y*14;
+const cpath=fn=>{let d='';for(let i=0;i<=100;i++){const x=b*i/100;d+=(i?'L':'M')+X(x).toFixed(1)+','+Y(fn(x)).toFixed(1);}return d;};
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="柯西中值定理：两函数增量比等于某点导数比"><path d="M35 220H430 M55 20V235" stroke="#9aaabd"/><path d="'+cpath(x=>x*x)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+cpath(x=>x*x+x)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M'+X(xi)+' 220V'+Y(xi*xi)+'" stroke="'+COLORS.green+'" stroke-dasharray="5 4"/><circle cx="'+X(xi)+'" cy="'+Y(xi*xi)+'" r="6" fill="'+COLORS.green+'"/><text x="65" y="28" fill="'+COLORS.blue+'">f(x)=x²</text><text x="65" y="49" fill="'+COLORS.orange+'">g(x)=x²+x</text><text x="250" y="245" fill="'+COLORS.green+'">ξ=b/2='+xi.toFixed(2)+'</text></svg>';
 desc='取 f(x)=x²、g(x)=x²+x，区间 [0,b]。此时 [f(b)−f(0)]/[g(b)−g(0)]=b/(b+1)，且 f′(ξ)/g′(ξ)=2ξ/(2ξ+1)；令 ξ=b/2 两者相等。';
 }else{
 const a=-2,b=-.5+1.5*p,c=(a+b)/2,fa=a*a/3,fb=b*b/3,fc=c*c/3,slope=(fb-fa)/(b-a),X=x=>230+x*48,Y=y=>135-y*35;
