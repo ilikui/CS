@@ -475,7 +475,7 @@
     {
       "year": 2014,
       "index": 41,
-      "id": 236,
+      "id": 276,
       "subject": "数据结构",
       "answer": "WPL=Σ(wᵢ×depthᵢ)，其中根结点深度取 0。可用先序递归遍历：到达叶结点时累加 depth×weight；也可用层次遍历记录层数并累加叶结点权值。",
       "steps": [
@@ -488,12 +488,13 @@
       "code": "typedef struct BiTNode {\\n    int weight;\\n    struct BiTNode *lchild, *rchild;\\n} BiTNode, *BiTree;\\n\\nint WPL(BiTree root, int depth) {\\n    if (root == NULL) return 0;\\n    if (root->lchild == NULL && root->rchild == NULL)\\n        return depth * root->weight;\\n    return WPL(root->lchild, depth + 1)\\n         + WPL(root->rchild, depth + 1);\\n}\\n\\n/* 调用：WPL(root, 0) */",
       "explanation": "层次遍历也可实现：队列保存结点，按层处理；每遇到叶结点累加当前层数×权值。递归法代码更简洁。注意本题权值只在叶结点有意义。",
       "complexity": "时间 O(n)，递归栈空间 O(h)，h 为树高；最坏 O(n) 栈空间。",
-      "verification": "题干及两种标准算法与公开真题答案逐项核对；递归终止条件和深度定义已明确。"
+      "verification": "题干及两种标准算法与公开真题答案逐项核对；递归终止条件和深度定义已明确。",
+      "correction": "已按题库全卷编号规律修正 ID：2014 年第 41—47 题对应 276—282。"
     },
     {
       "year": 2014,
       "index": 42,
-      "id": 237,
+      "id": 277,
       "subject": "数据结构",
       "answer": "（1）图，具体为无向带权图。（2）采用邻接表式链式存储：路由器表头结点指向 Link/Net 信息链，Link 与 Net 用 union 存储，Metric 保存链路代价。（3）R1 到各子网最短路径：192.1.1.0/24 直接到达，费用 1；192.1.5.0/24 经 R1-R3，费用 3；192.1.6.0/24 经 R1-R2，费用 4；192.1.7.0/24 经 R1-R2-R4，费用 8。",
       "steps": [
@@ -505,13 +506,13 @@
       ],
       "code": "typedef struct { unsigned int ID, IP; } LinkInfo;\\ntypedef struct { unsigned int Prefix, Mask; } NetInfo;\\ntypedef struct ArcNode {\\n    int flag; /* 1: Link, 2: Net */\\n    union { LinkInfo link; NetInfo net; } info;\\n    unsigned int metric;\\n    struct ArcNode *next;\\n} ArcNode;\\ntypedef struct RouterNode {\\n    unsigned int routerID;\\n    ArcNode *lsi;\\n    struct RouterNode *next;\\n} RouterNode;",
       "explanation": "LSI 不是简单的普通边集：每台路由器的链路状态信息既包含相邻路由器 Link，也包含直连网络 Net。用带表头的多重链式结构可完整表示。最短路径费用应按题图中 Metric 累加，而不是按经过的路由器数量计数。",
-      "correction": "本题路径表依赖原卷题 42 拓扑图和 LSI 表。当前可读取的公开答案给出了路径与费用，但图像未随仓库原始题库文本提供；链路细节和 Dijkstra 每轮候选距离暂标记为依赖原图核验。",
+      "correction": "本题路径表依赖原卷题 42 拓扑图和 LSI 表。当前可读取的公开答案给出了路径与费用，但图像未随仓库原始题库文本提供；链路细节和 Dijkstra 每轮候选距离暂标记为依赖原图核验。；已按题库全卷编号规律修正 ID：2014 年第 41—47 题对应 276—282。",
       "verification": "逻辑结构、链式结点设计和最终路径/费用与公开标准答案交叉核对；因原题拓扑图未留存，未伪造完整邻接矩阵或中间迭代表。"
     },
     {
       "year": 2014,
       "index": 43,
-      "id": 238,
+      "id": 278,
       "subject": "计算机网络",
       "answer": "（1）R1 路由表最少 3 项：192.1.1.0/24 直连 E0；192.1.6.0/23 下一跳 10.1.1.2、接口 L0；192.1.5.0/24 下一跳 10.1.1.10、接口 L1。（2）经 L0 转发，目的主机收到 TTL=61。（3）增加默认路由 0.0.0.0/0，Metric=10。",
       "steps": [
@@ -523,12 +524,13 @@
         "新增到 Internet 的 Metric=10 链路时，R1 的 LSI 增加默认网络前缀 0.0.0.0/0，Metric=10。"
       ],
       "explanation": "192.1.6.0/24 与 192.1.7.0/24 的前 23 位相同，能够聚合为 192.1.6.0/23。TTL 由路由器逐跳递减，不是交换机每转发一帧就递减。",
-      "verification": "路由表、下一跳、接口、TTL 与默认路由信息和公开标准答案逐项核对；聚合范围通过 CIDR 前缀独立检查。"
+      "verification": "路由表、下一跳、接口、TTL 与默认路由信息和公开标准答案逐项核对；聚合范围通过 CIDR 前缀独立检查。",
+      "correction": "已按题库全卷编号规律修正 ID：2014 年第 41—47 题对应 276—282。"
     },
     {
       "year": 2014,
       "index": 44,
-      "id": 239,
+      "id": 279,
       "subject": "计算机组成原理",
       "answer": "（1）按字节编址。（2）数组 A 每个元素 32 位，即 4B。（3）bne 的 OFFSET 字段为 FFFAH（补码 −6），转移目标地址=(PC)+4+OFFSET×4。（4）因数据相关发生阻塞的是第 2、3、4、6 条指令；第 6 条 bne 发生控制冒险。指令 1 不因与指令 5 的跨循环相关而阻塞，是因为 bne 后 3 个周期的阻塞覆盖了该相关。",
       "steps": [
@@ -540,13 +542,13 @@
         "第 6 条是 bne，分支改变 PC，发生控制冒险。分支引起的 3 周期阻塞使下一轮指令 1 的取数时机晚于指令 5 的写回，因此跨循环相关不再形成额外阻塞。"
       ],
       "explanation": "本题关键在于 OFFSET 的缩放单位：字段值不是直接按字节加到 PC，而是乘以 4。流水线相关按题设无转发、按序发射/完成分析。",
-      "correction": "将机器码 FFFAH 明确解释为 16 位补码 −6；分支目标公式保留 PC 当前指令地址的语义，避免把 PC 与 PC+4 混淆。",
+      "correction": "将机器码 FFFAH 明确解释为 16 位补码 −6；分支目标公式保留 PC 当前指令地址的语义，避免把 PC 与 PC+4 混淆。；已按题库全卷编号规律修正 ID：2014 年第 41—47 题对应 276—282。",
       "verification": "与公开答案逐项交叉核对；字节编址、元素宽度、补码偏移及分支目标地址独立复算。汇编表/指令格式图未附在仓库文本中，具体寄存器字段依赖原图。"
     },
     {
       "year": 2014,
       "index": 45,
-      "id": 240,
+      "id": 280,
       "subject": "计算机组成原理",
       "answer": "（1）P 执行结束时 R2=1000。（2）指令 Cache 容量 512B，命中率约 99.98%。（3）可能发生溢出异常的是指令 4（加法）；可能发生缺页异常的是指令 3（访存）；数组 A 访问需读磁盘 1 次，TLB 至少访问 1001 次。",
       "steps": [
@@ -559,12 +561,13 @@
         "每次 A[i] 数据访问需要地址转换；首次缺页后重试也会再次进行地址转换，因此 TLB 至少访问 1000+1=1001 次。"
       ],
       "explanation": "本题要区分指令 Cache 与数据访问：数组页缺失影响的是数据访存，不能把它计入指令 Cache 的缺失次数。1000 次数组读取加上首次缺页处理后的重试，得到 1001 次 TLB 访问。",
-      "verification": "R2、Cache 容量、指令 Cache 命中率、异常指令及磁盘/TLB 次数与公开标准答案交叉核对；命中率独立计算为 5999/6000。"
+      "verification": "R2、Cache 容量、指令 Cache 命中率、异常指令及磁盘/TLB 次数与公开标准答案交叉核对；命中率独立计算为 5999/6000。",
+      "correction": "已按题库全卷编号规律修正 ID：2014 年第 41—47 题对应 276—282。"
     },
     {
       "year": 2014,
       "index": 46,
-      "id": 241,
+      "id": 281,
       "subject": "操作系统",
       "answer": "（1）连续分配：最少访问 59 次磁盘块；FCB 中起始块号和文件长度需更新。（2）链接分配：访问 31 次磁盘块；最大文件长度为 4080GB（按十进制 GB 表述；精确值为 1020×2^32 字节）。",
       "steps": [
@@ -575,13 +578,13 @@
         "每块数据区为 1024−4=1020B。32 位块地址可表示 2^32 个块，因此最大文件数据量=1020×2^32=4,380,866,641,920 字节=4080GiB（常按 4080GB 记）。"
       ],
       "explanation": "连续分配移动方向应选择文件前方有空闲空间的一侧，移动较少的 29 条记录，而不是移动后面的 171 条记录。链接分配按题目将每个块的指针视为 4B、块号为 32 位处理。容量精确值为 4,380,866,641,920 字节，即 4080GiB；不同资料把 GiB 简写为 GB。",
-      "correction": "将最大长度写成精确表达式 1020×2^32 字节；公开题解常写 4080GB，严格换算时该数值对应约 4080GiB（约 4.375TB 十进制）。",
+      "correction": "将最大长度写成精确表达式 1020×2^32 字节；公开题解常写 4080GB，严格换算时该数值对应约 4080GiB（约 4.375TB 十进制）。；已按题库全卷编号规律修正 ID：2014 年第 41—47 题对应 276—282。",
       "verification": "59 次、31 次访问次数与公开答案核对；每块数据区 1020B、块数 2^32 的容量表达式独立计算。"
     },
     {
       "year": 2014,
       "index": 47,
-      "id": 242,
+      "id": 282,
       "subject": "操作系统",
       "answer": "信号量初值：mutex1=1（消费者批次互斥）、mutex2=1（缓冲区互斥）、empty=1000（空缓冲区数）、full=0（产品数）。生产者先 P(empty)、P(mutex2)，放入产品后 V(mutex2)、V(full)。消费者先 P(mutex1)，连续执行 10 次 P(full)、P(mutex2)、取产品、V(mutex2)、V(empty)，完成 10 次后 V(mutex1)。",
       "steps": [
@@ -594,7 +597,8 @@
       ],
       "code": "semaphore mutex1 = 1, mutex2 = 1;\\nsemaphore empty = 1000, full = 0;\\n\\nproducer() {\\n    while (true) {\\n        produce(x);\\n        P(empty);\\n        P(mutex2);\\n        insert_into_ring_buffer(x);\\n        V(mutex2);\\n        V(full);\\n    }\\n}\\n\\nconsumer() {\\n    while (true) {\\n        P(mutex1);              // 独占连续10次消费批次\\n        for (int i = 0; i < 10; ++i) {\\n            P(full);            // 等待缓冲区非空\\n            P(mutex2);\\n            remove_from_ring_buffer();\\n            V(mutex2);\\n            V(empty);\\n            consume_item();\\n        }\\n        V(mutex1);\\n    }\\n}",
       "explanation": "mutex1 必须覆盖完整的 10 次取货过程，而不能只在每次取货时短暂加锁，否则多个消费者可能交替取货，无法满足“一个消费者连续取出 10 件后其他消费者才可以取”的要求。mutex2 只保护缓冲区单次操作。",
-      "verification": "信号量含义、初值和 P/V 顺序与公开标准答案交叉核对；检查了缓冲区满/空阻塞及消费者批次独占逻辑。"
+      "verification": "信号量含义、初值和 P/V 顺序与公开标准答案交叉核对；检查了缓冲区满/空阻塞及消费者批次独占逻辑。",
+      "correction": "已按题库全卷编号规律修正 ID：2014 年第 41—47 题对应 276—282。"
     },
     {
       "year": 2015,
