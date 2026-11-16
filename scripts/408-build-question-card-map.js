@@ -9,6 +9,7 @@ function extractArray(source, marker) {
 function plain(s){return String(s||'').replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]*>/g,' ').replace(/&nbsp;|&#160;/gi,' ').replace(/&amp;/gi,'&').replace(/&lt;/gi,'<').replace(/&gt;/gi,'>').replace(/&quot;/gi,'"').replace(/&#39;|&apos;/gi,"'").replace(/\s+/g,' ').trim();}
 function norm(s){return plain(s).toLowerCase().replace(/[\s，。；：！？、,.!?;:（）()【】\[\]{}“”‘’"']/g,'');}
 function subjectForIndex(i){if(i>=1&&i<=10)return '数据结构';if(i>=11&&i<=20)return '计算机组成原理';if(i>=21&&i<=30)return '操作系统';if(i>=31&&i<=40)return '计算机网络';return null;}
+function normalizeSubject(subject){return ({'data-structure':'数据结构','computer-organization':'计算机组成原理','operating-system':'操作系统','computer-network':'计算机网络'})[subject]||subject;}
 function subjectCode(subject){return ({'数据结构':'data-structure','计算机组成原理':'computer-organization','操作系统':'operating-system','计算机网络':'computer-network'})[subject]||null;}
 function splitTerms(s){const stop=new Set(['原理','性质','定义','基础','结构','过程','方式','方法','管理','操作','机制','系统','概念','算法','与','和','及','的','考点']);return [...new Set(String(s||'').split(/[与和及、，,：:／/（）()\s·；;]+/).map(x=>x.trim()).filter(x=>x.length>=2&&!stop.has(x)))];}
 function bigrams(s){const x=norm(s),out=new Map();for(let i=0;i<x.length-1;i++){const g=x.slice(i,i+2);if(/[\u3400-\u9fff]/.test(g))out.set(g,(out.get(g)||0)+1);}return out;}
@@ -27,7 +28,7 @@ const bySubject=new Map();for(const c of cardDocs){if(!bySubject.has(c.subject))
 const questionMap={},cardQuestionList=Object.fromEntries(cards.map(c=>[c[1],[]])),subjectStats={};
 let verifiedQuestions=0,suggestedQuestions=0,lowConfidence=0;
 for(const q of questions){
- const inferredSubject=subjectForIndex(Number(q.index))||q.subject;
+ const inferredSubject=subjectForIndex(Number(q.index))||normalizeSubject(q.subject);
  const key=String(q.year)+'-'+String(q.index),text=plain((q.question||'')+' '+(q.analysis||'')),qNorm=norm(text),qGrams=bigrams(text);
  let links=oldLinks.get(key)||[];if(links.length)verifiedQuestions++;
  else{
