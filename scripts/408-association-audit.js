@@ -1,4 +1,5 @@
 // Audit source identity, target card existence, and candidate coverage; never auto-promote candidates.
+// Re-run source-backed audit after exhaustive 799-question card index generation.
 // Re-run source-backed audit after seven historical complexity questions were linked.
 // Refresh audit after the third batch of source-backed associations.
 // Re-run after application-question solutions and status-label corrections.
