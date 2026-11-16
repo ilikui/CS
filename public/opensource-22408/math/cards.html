@@ -439,6 +439,30 @@ function atomWorkedExample(a){
  ['区分垂直与斜渐近线的判断方式','若 x→a 时 f(x)→±∞，则 x=a 为垂直渐近线。若 x→±∞ 时 f(x)−(kx+b)→0，可判断 y=kx+b 为斜渐近线；通常先求 k=lim f(x)/x，再求 b=lim[f(x)−kx]，两个极限均须存在且有限。'],
  ['整理做题顺序','求凹凸与拐点：求 f′′、找 f′′=0 或不存在的点、分区间判符号、确认变号后写拐点坐标。求渐近线：先检查定义域边界的垂直渐近线，再检查正负无穷处的水平或斜渐近线。']
  ],result:'对 f(x)=x³−3x，(0,0) 是拐点，因为二阶导数在 0 两侧变号；对 f(x)=1/x，y=0 是水平渐近线。',check:'f′′(a)=0 只是拐点候选条件，不是充分条件；必须验证凹凸性改变。渐近线也不能只凭图形猜测，应按极限定义检查，并区分 x→a 与 x→±∞。',variant:'f(x)=x⁴ 在 x=0 处 f′′(0)=0，但二阶导数两侧不变号，所以 (0,0) 不是拐点。f(x)=2+1/x 在无穷远处的水平渐近线为 y=2。'};
+ exact['CAL-06-A']={label:'原函数、不定积分与积分常数',steps:[
+ ['先理解原函数是什么','若 F′(x)=f(x)，就称 F 是 f 的一个原函数。求 ∫f(x)dx，本质上是在反向寻找“求导前的函数”。例如 (x³)′=3x²，所以 x³ 是 3x² 的一个原函数。'],
+ ['利用积分的线性性质拆分','∫(3x²+2x)dx=3∫x²dx+2∫x dx。把和式拆成容易处理的基本幂函数积分。'],
+ ['逐项使用幂函数积分公式','当 n≠−1 时，∫xⁿdx=xⁿ⁺¹/(n+1)+C。于是 3∫x²dx=3·x³/3=x³；2∫x dx=2·x²/2=x²。'],
+ ['合并结果并保留积分常数','得到 ∫(3x²+2x)dx=x³+x²+C。常数 C 不能省略，因为任意常数求导都为零，所以 x³+x²、x³+x²+5 等都是原函数。'],
+ ['用求导反向验算','对 F(x)=x³+x²+C 求导，F′(x)=3x²+2x+0，恰好还原被积函数，计算正确。']
+ ],result:'∫(3x²+2x)dx=x³+x²+C。所有原函数构成相差一个常数的函数族。',check:'不定积分必须写 +C；幂函数公式 n=−1 时不能直接套用，∫1/x dx=ln|x|+C。最后求导验算是最可靠的自检。',variant:'求 ∫(4x³−6x+2)dx=x⁴−3x²+2x+C；求导可还原 4x³−6x+2。'};
+ exact['CAL-06-B']={label:'换元积分与分部积分的选择和完整计算',steps:[
+ ['先判断适合哪种方法','换元法适合出现“复合函数及其内层导数”的结构；分部积分适合两个因子相乘，且一个因子求导后会简化。题目 ∫x eˣdx 是乘积，适合分部积分。'],
+ ['写出分部积分公式并选 u、dv','由 (uv)′=u′v+uv′ 积分得到 ∫u dv=uv−∫v du。取 u=x、dv=eˣdx，则 du=dx、v=eˣ。选择 x 作 u，是因为它求导后变成 1。'],
+ ['代入公式逐步计算','∫x eˣdx=xeˣ−∫eˣdx=xeˣ−eˣ+C=eˣ(x−1)+C。注意第二项前面是减号。'],
+ ['通过求导验算分部结果','对 eˣ(x−1) 求导，得 eˣ(x−1)+eˣ=xeˣ，恰好等于原被积函数。'],
+ ['再看换元法如何识别','例如 ∫2x cos(x²)dx。令 u=x²，则 du=2x dx，原积分变成 ∫cos u du=sin u+C。'],
+ ['换回原变量并核对','将 u=x² 代回，得到 sin(x²)+C。求导为 cos(x²)·2x，正好还原 2x cos(x²)。换元后不能把 u 和 x 混用。'],
+ ['若是定积分，别忘了同步换上下限','例如 ∫₀¹2x cos(x²)dx，令 u=x²，x=0 对应 u=0，x=1 对应 u=1，因此积分变为 ∫₀¹cos u du=sin1。也可以先求原函数再代入原上下限，两种做法结果一致。']
+ ],result:'∫x eˣdx=eˣ(x−1)+C；∫2x cos(x²)dx=sin(x²)+C。换元与分部的选择取决于被积结构。',check:'分部积分记住 uv−∫vdu；换元要同时替换微分，定积分换元还要换上下限。完成后对结果求导，检查是否还原原被积函数。',variant:'求 ∫x cos x dx，取 u=x、dv=cos x dx，得 x sin x−∫sin x dx=x sin x+cos x+C。'};
+ exact['CAL-06-C']={label:'定积分、变上限积分与几何面积',steps:[
+ ['区分定积分的有向累积','定积分 ∫ₐᵇf(x)dx 可理解为带符号的累积：曲线在 x 轴上方贡献正值，在 x 轴下方贡献负值。它不总等于几何面积。'],
+ ['用牛顿—莱布尼茨公式计算定积分','若 F′=f 且 f 在 [a,b] 连续，则 ∫ₐᵇf(x)dx=F(b)−F(a)。例如 ∫₋₁²x dx=[x²/2]₋₁²=2−1/2=3/2。'],
+ ['把有向积分改成几何面积','同一例子中，x 在 [−1,0] 位于 x 轴下方，在 [0,2] 位于上方。几何面积应计算 ∫₋₁²|x|dx=∫₋₁⁰(−x)dx+∫₀²x dx=1/2+2=5/2，而不是 3/2。'],
+ ['理解变上限积分是一个新函数','设 A(x)=∫₀^{x²}cos t dt。积分变量 t 是哑变量，x 是上限参数；每个 x 都对应一个累积值 A(x)。'],
+ ['先对上限求函数值，再用链式法则求导','由微积分基本定理，若 A(x)=∫₀^{φ(x)}f(t)dt，则 A′(x)=f(φ(x))φ′(x)。这里 φ(x)=x²、φ′(x)=2x、f(t)=cos t，所以 A′(x)=cos(x²)·2x。'],
+ ['用具体点检查链式因子','例如 x=1 时 A′(1)=2cos1；x=0 时 A′(0)=0。若漏掉上限导数 2x，就会得到错误的 cos(x²)。']
+ ],result:'A′(x)=2x cos(x²)。定积分是有向累积；几何面积要对函数取绝对值后分段积分。',check:'牛顿—莱布尼茨公式是上限原函数值减下限原函数值；变上限求导必须乘上限函数的导数；面积题先判断曲线与 x 轴的位置，跨轴时分段。',variant:'若 B(x)=∫_{x}^{3x}e^{t²}dt，则 B′(x)=3e^{9x²}−e^{x²}：上限项乘 3，下限项还要减去下限函数值乘 1。'};
  const detail=exact[a[0]];
  if(detail)return '<section class="atom-worked"><div class="worked-head"><b>典型例题 · 逐步推导（已展开核算）</b><span>'+esc(a[0])+'</span></div><div class="worked-box"><b>'+esc(detail.label)+'｜题目</b><p>'+esc(a[6])+'</p></div><div class="worked-box"><b>先理解用到的概念</b><p>'+esc(a[3])+'</p><p>'+esc(a[4])+'</p></div><ol class="worked-steps">'+detail.steps.map((s,i)=>'<li><b>'+esc(s[0])+'</b><p>'+esc(s[1])+'</p></li>').join('')+'</ol><div class="worked-box worked-answer"><b>最终结论</b><p>'+esc(detail.result)+'</p></div><div class="worked-box worked-error"><b>易错点与自检</b><p>'+esc(detail.check)+'</p></div><div class="worked-box"><b>举一反三</b><p>'+esc(detail.variant)+'</p></div></section>';
  return '<section class="atom-worked"><div class="worked-head"><b>典型例题 · 完整推导过程</b><span>'+esc(a[0])+'</span></div><div class="worked-box"><b>题目</b><p>'+esc(a[6])+'</p></div><div class="worked-box"><b>定义与推导依据</b><p>'+esc(a[3])+'</p><p>'+esc(a[4])+'</p></div><ol class="worked-steps">'+frame.map((x,i)=>'<li><b>第 '+(i+1)+' 步</b><p>'+esc(x)+'</p></li>').join('')+'</ol><div class="worked-box"><b>本卡解题方法拆解</b><ol>'+actions.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol></div><div class="worked-box worked-answer"><b>结果</b><p>'+esc(a[7])+'</p></div><div class="worked-box worked-error"><b>易错点与自检</b><p>'+esc(a[8])+'</p><p>检查：回到定义和定理前提，逐项核验定义域、运算合法性、区间/维数条件，并将结果代回原题。</p></div></section>';
