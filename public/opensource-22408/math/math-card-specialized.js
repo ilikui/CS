@@ -54,10 +54,19 @@ function svgFor(k,t,p){
 let body='',desc='';
 const graph=(fn,extra='')=>'<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="'+esc(t)+'专属函数图像">'+axes()+'<path d="'+graphPath(fn)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/>'+extra+'</svg>';
 if(k==='function'){
-if(/奇|偶/.test(t)){body=graph(x=>x*x/5,'<path d="M'+(230-2*48)+' 135L230 135L'+(230+2*48)+' 135" stroke="'+COLORS.orange+'"/>');desc='关于 y 轴对称的偶函数；可切换奇函数的原点对称理解。';}
-else if(/反函数/.test(t)){body=graph(x=>x,'<path d="M38 230L422 38" stroke="'+COLORS.orange+'" stroke-dasharray="7 5" stroke-width="2"/><text x="340" y="45" fill="'+COLORS.orange+'">y=x</text>');desc='函数与反函数图像关于 y=x 对称；水平线检验一一对应。';}
-else if(/定义域|分段|复合/.test(t)){body=graph(x=>x<0?x+1:x*x/4,'<path d="M230 135V20" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/>');desc='按定义域限制分段观察输入区间与对应输出；空心点表示该点不取。';}
-else{body=graph(x=>Math.sin(x*p)+x/4);desc='函数图像随参数变化；注意定义域、值域、周期与单调区间。';}
+if(/奇|偶/.test(t)){
+const odd=/奇/.test(t)&&!/偶/.test(t),fn=odd?x=>x*x*x/8:x=>x*x/5;
+body=graph(fn,'<path d="M'+(230-2*48)+' 135L230 135L'+(230+2*48)+' 135" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="315" y="28" fill="'+COLORS.orange+'">'+(odd?'奇函数：原点对称':'偶函数：y轴对称')+'</text>');
+desc=odd?'蓝色曲线为奇函数示例 y=x³/8，满足 f(−x)=−f(x)，图像绕原点旋转 180° 后重合。':'蓝色曲线为偶函数示例 y=x²/5，满足 f(−x)=f(x)，图像关于 y 轴对称。';
+}else if(/反函数/.test(t)){body=graph(x=>x,'<path d="M38 230L422 38" stroke="'+COLORS.orange+'" stroke-dasharray="7 5" stroke-width="2"/><text x="340" y="45" fill="'+COLORS.orange+'">y=x</text>');desc='函数与反函数图像关于 y=x 对称；水平线检验一一对应。';}
+else if(/周期/.test(t)){body=graph(x=>Math.sin(p*x*2));desc='滑块改变角频率 ω，周期 T=2π/ω 随之变化；周期函数满足 f(x+T)=f(x)。';}
+else if(/有界/.test(t)){body=graph(x=>Math.sin(x*p),'<path d="M28 100H432 M28 170H432" stroke="'+COLORS.orange+'" stroke-dasharray="6 5"/><text x="380" y="92" fill="'+COLORS.orange+'">M=1</text><text x="380" y="185" fill="'+COLORS.orange+'">m=−1</text>');desc='正弦函数始终夹在 −1 与 1 之间；橙色水平线表示上下界，改变频率不会改变有界范围。';}
+else if(/单调性定义/.test(t)){body=graph(x=>x*x*x/12);desc='示例函数在全实数上严格递增；任取 x₁<x₂，都有 f(x₁)<f(x₂)。单调性比较的是输入顺序与输出顺序。';}
+else if(/定义域|分段|复合|函数三要素|值域/.test(t)){
+if(/定义域/.test(t)){body=graph(x=>x<0?NaN:x*x/4,'<path d="M230 135V20" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="245" y="25" fill="'+COLORS.orange+'">x≥0</text>');desc='只绘制 x≥0 的函数图像，左侧无定义；先确定输入集合，再求对应输出范围。';}
+else if(/分段/.test(t)){body=graph(x=>x<0?x+1:x*x/4,'<path d="M230 135V20" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/>');desc='分界点两侧使用不同解析式；比较左右趋近值与点值，空心/实心点区分是否取到。';}
+else{body=graph(x=>x*x/4);desc='沿蓝色曲线从输入 x 读取唯一输出 y=f(x)；定义域是允许输入，值域是实际输出，复合函数还需满足内外层定义域衔接。';}
+}else{body=graph(x=>Math.sin(x*p)+x/4);desc='蓝色函数图像随参数变化；从图像观察定义域、值域、周期与单调区间。';}
 }else if(k==='limit'){
 if(/数列|子列|柯西|单调有界/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 230H432 M28 20V240" stroke="#9aaabd"/><path d="'+Array.from({length:30},(_,i)=>{let n=i+1,x=28+n*12.8,y=230-180/(n*p+1);return(i?'L':'M')+x+' '+y}).join(' ')+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.5"/><path d="M28 50H432" stroke="'+COLORS.orange+'" stroke-dasharray="5 5"/><text x="390" y="42" fill="'+COLORS.orange+'">极限 L</text></svg>';desc='离散数列点列逐项靠近极限；ε 带内最终包含全部后续项。';}
 else if(/夹逼/.test(t)){body=graph(x=>Math.sin(x*3)/(Math.abs(x)+.25),'');desc='被夹函数位于上下界之间；上下界共同趋向 L 时，中间函数也趋向 L。';}
