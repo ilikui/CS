@@ -3531,19 +3531,329 @@ window.QUESTION_CARD_MAP = {
     "secondaryCards": [
       "IP TTL 与路由转发"
     ]
+  },
+  "2019-41": {
+    "year": 2019,
+    "index": 41,
+    "id": 511,
+    "subject": "数据结构",
+    "subjectCode": "data-structure",
+    "typeName": "应用题",
+    "score": 13,
+    "question": "给定带头结点单链表L=(a1,…,an)，原地重排为(a1,an,a2,a(n−1),…)。",
+    "answer": "快慢指针找中点→后半段原地逆置→两段交替合并；O(n)时间、O(1)辅助空间。",
+    "analysis": "快慢指针找中点→后半段原地逆置→两段交替合并；O(n)时间、O(1)辅助空间。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "单链表重排与原地逆置",
+        "topic": "单链表重排与原地逆置",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "单链表与双链表",
+        "topic": "单链表与双链表",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "算法复杂度",
+        "topic": "算法复杂度",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "单链表重排与原地逆置"
+    ],
+    "secondaryCards": [
+      "单链表与双链表",
+      "算法复杂度"
+    ]
+  },
+  "2019-42": {
+    "year": 2019,
+    "index": 42,
+    "id": 512,
+    "subject": "数据结构",
+    "subjectCode": "data-structure",
+    "typeName": "应用题",
+    "score": 10,
+    "question": "设计可动态增加空间、出队结点可复用且入队/出队始终O(1)的队列。",
+    "answer": "采用两段式单向循环链表；front==rear判空，front==rear->next表示需要扩展空闲结点。",
+    "analysis": "采用两段式单向循环链表；front==rear判空，front==rear->next表示需要扩展空闲结点。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "循环链式队列与空闲结点复用",
+        "topic": "循环链式队列与空闲结点复用",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "链式栈与链式队列",
+        "topic": "链式栈与链式队列",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "循环队列判空与判满",
+        "topic": "循环队列判空与判满",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "循环链式队列与空闲结点复用"
+    ],
+    "secondaryCards": [
+      "链式栈与链式队列",
+      "循环队列判空与判满"
+    ]
+  },
+  "2019-43": {
+    "year": 2019,
+    "index": 43,
+    "id": 513,
+    "subject": "操作系统",
+    "subjectCode": "operating-system",
+    "typeName": "应用题",
+    "score": 8,
+    "question": "n位哲学家共享n根筷子和m个碗，使用P/V操作避免死锁并尽可能提高并发。",
+    "answer": "fork[i]=1；plate=min(m,n−1)；先P(plate)，再申请左右筷子，进餐后释放。",
+    "analysis": "fork[i]=1；plate=min(m,n−1)；先P(plate)，再申请左右筷子，进餐后释放。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "哲学家进餐与死锁避免",
+        "topic": "哲学家进餐与死锁避免",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "进程同步与信号量",
+        "topic": "进程同步与信号量",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "死锁必要条件与处理",
+        "topic": "死锁必要条件与处理",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "哲学家进餐与死锁避免",
+      "进程同步与信号量"
+    ],
+    "secondaryCards": [
+      "死锁必要条件与处理"
+    ]
+  },
+  "2019-44": {
+    "year": 2019,
+    "index": 44,
+    "id": 514,
+    "subject": "操作系统",
+    "subjectCode": "operating-system",
+    "typeName": "应用题",
+    "score": 7,
+    "question": "根据柱面/磁道/扇区/簇参数计算容量、SSTF请求顺序及簇号到物理地址映射。",
+    "answer": "每柱面1000簇；SSTF顺序100260→101660→110560→60005；簇100530映射柱面100、磁道5、扇区60。",
+    "analysis": "每柱面1000簇；SSTF顺序100260→101660→110560→60005；簇100530映射柱面100、磁道5、扇区60。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "磁盘结构与平均访问时间",
+        "topic": "磁盘结构与平均访问时间",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "磁盘调度 FCFS 与 SSTF",
+        "topic": "磁盘调度 FCFS 与 SSTF",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "文件物理分配方式",
+        "topic": "文件物理分配方式",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "磁盘结构与平均访问时间",
+      "磁盘调度 FCFS 与 SSTF"
+    ],
+    "secondaryCards": [
+      "文件物理分配方式"
+    ]
+  },
+  "2019-45": {
+    "year": 2019,
+    "index": 45,
+    "id": 515,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "应用题",
+    "score": 16,
+    "question": "分析阶乘递归的机器级代码、CALL相对位移、大小端、32位整数溢出和OF标志。",
+    "answer": "CALL下一条地址0040102AH；相对位移FFFFFFD6H，小端字节D6 FF FF FF；13!超出32位int范围。",
+    "analysis": "CALL下一条地址0040102AH；相对位移FFFFFFD6H，小端字节D6 FF FF FF；13!超出32位int范围。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "递归算法与递归树",
+        "topic": "递归算法与递归树",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "x86 CALL/JMP/RET 控制转移与相对寻址",
+        "topic": "x86 CALL/JMP/RET 控制转移与相对寻址",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "定点补码加减与溢出",
+        "topic": "定点补码加减与溢出",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "整数溢出检测与异常处理",
+        "topic": "整数溢出检测与异常处理",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "大小端存储",
+        "topic": "大小端存储",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "递归算法与递归树",
+      "x86 CALL/JMP/RET 控制转移与相对寻址"
+    ],
+    "secondaryCards": [
+      "定点补码加减与溢出",
+      "整数溢出检测与异常处理",
+      "大小端存储"
+    ]
+  },
+  "2019-46": {
+    "year": 2019,
+    "index": 46,
+    "id": 516,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "应用题",
+    "score": 7,
+    "question": "根据4KB分页、64行4路组相联Cache和64B块计算页号、Tag、组索引与块内偏移。",
+    "answer": "页内偏移12位；Cache为16组，块内偏移[5:0]、组索引[9:6]、Tag[31:10]；CALL地址映射第0组。",
+    "analysis": "页内偏移12位；Cache为16组，块内偏移[5:0]、组索引[9:6]、Tag[31:10]；CALL地址映射第0组。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "页表结构与地址转换",
+        "topic": "页表结构与地址转换",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "Cache 直接映射与组相联",
+        "topic": "Cache 直接映射与组相联",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "Cache 映射与命中率",
+        "topic": "Cache 映射与命中率",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "指令系统与寻址方式",
+        "topic": "指令系统与寻址方式",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "页表结构与地址转换",
+      "Cache 直接映射与组相联"
+    ],
+    "secondaryCards": [
+      "Cache 映射与命中率",
+      "指令系统与寻址方式"
+    ]
+  },
+  "2019-47": {
+    "year": 2019,
+    "index": 47,
+    "id": 517,
+    "subject": "计算机网络",
+    "subjectCode": "computer-network",
+    "typeName": "应用题",
+    "score": 9,
+    "question": "根据主机IP/掩码和拓扑图选择路由器/交换机、配置接口地址、判断NAT与子网广播接收范围。",
+    "answer": "设备1为路由器，设备2/3为交换机；IF1=.254/30、IF2=.1/26、IF3=.65/26；R提供NAT，192.168.1.127是LAN2广播，仅H4接收。",
+    "analysis": "设备1为路由器，设备2/3为交换机；IF1=.254/30、IF2=.1/26、IF3=.65/26；R提供NAT，192.168.1.127是LAN2广播，仅H4接收。",
+    "steps": [],
+    "cards": [
+      {
+        "title": "IPv4 子网划分与 CIDR",
+        "topic": "IPv4 子网划分与 CIDR",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "NAT 与端口映射",
+        "topic": "NAT 与端口映射",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "网桥与交换机的冲突域广播域",
+        "topic": "网桥与交换机的冲突域广播域",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "路由选择与转发表",
+        "topic": "路由选择与转发表",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "IPv4 子网划分与 CIDR",
+      "NAT 与端口映射"
+    ],
+    "secondaryCards": [
+      "网桥与交换机的冲突域广播域",
+      "路由选择与转发表"
+    ]
   }
 };
 window.CARD_QUESTION_LIST = {
   "单链表与双链表": [
     "2012-42",
     "2015-41",
-    "2016-2"
+    "2016-2",
+    "2019-41"
   ],
   "栈与队列": [
     "2010-1"
   ],
   "循环队列判空与判满": [
-    "2011-3"
+    "2011-3",
+    "2019-42"
   ],
   "KMP 模式匹配与 next 数组": [
     "2015-8"
@@ -3593,7 +3903,8 @@ window.CARD_QUESTION_LIST = {
   "Cache 直接映射与组相联": [
     "2009-14",
     "2014-45",
-    "2016-45"
+    "2016-45",
+    "2019-46"
   ],
   "流水线结构冒险与数据冒险": [
     "2014-44",
@@ -3648,7 +3959,8 @@ window.CARD_QUESTION_LIST = {
     "2011-45",
     "2014-47",
     "2015-45",
-    "2017-46"
+    "2017-46",
+    "2019-43"
   ],
   "银行家算法安全性检查": [
     "2011-27"
@@ -3659,23 +3971,27 @@ window.CARD_QUESTION_LIST = {
     "2016-45",
     "2017-45",
     "2018-44",
-    "2018-45"
+    "2018-45",
+    "2019-46"
   ],
   "进程调度算法": [
     "2009-24",
     "2016-46"
   ],
   "死锁必要条件与处理": [
-    "2015-26"
+    "2015-26",
+    "2019-43"
   ],
   "哲学家进餐与死锁避免": [
-    "2015-26"
+    "2015-26",
+    "2019-43"
   ],
   "文件物理分配方式": [
     "2009-28",
     "2014-46",
     "2016-47",
-    "2018-46"
+    "2018-46",
+    "2019-44"
   ],
   "文件逻辑结构与物理结构": [
     "2009-28",
@@ -3684,7 +4000,8 @@ window.CARD_QUESTION_LIST = {
     "2018-46"
   ],
   "磁盘调度 FCFS 与 SSTF": [
-    "2009-29"
+    "2009-29",
+    "2019-44"
   ],
   "工作集与抖动": [
     "2016-29"
@@ -3707,11 +4024,13 @@ window.CARD_QUESTION_LIST = {
   "IPv4 子网划分与 CIDR": [
     "2014-43",
     "2025-47",
-    "2018-47"
+    "2018-47",
+    "2019-47"
   ],
   "路由选择与转发表": [
     "2014-43",
-    "2015-38"
+    "2015-38",
+    "2019-47"
   ],
   "TCP 序号确认与累计确认": [
     "2013-39",
@@ -3855,7 +4174,8 @@ window.CARD_QUESTION_LIST = {
   "算法复杂度": [
     "2016-43",
     "2017-42",
-    "2018-41"
+    "2018-41",
+    "2019-41"
   ],
   "计算机性能指标 CPI 与 CPU 时间": [
     "2016-44",
@@ -3879,14 +4199,16 @@ window.CARD_QUESTION_LIST = {
   ],
   "指令系统与寻址方式": [
     "2014-44",
-    "2017-44"
+    "2017-44",
+    "2019-46"
   ],
   "互斥锁、自旋锁与信号量": [
     "2014-47",
     "2017-46"
   ],
   "递归算法与递归树": [
-    "2017-41"
+    "2017-41",
+    "2019-45"
   ],
   "最小生成树与最短路径": [
     "2017-42",
@@ -3894,7 +4216,8 @@ window.CARD_QUESTION_LIST = {
   ],
   "定点补码加减与溢出": [
     "2017-43",
-    "2017-44"
+    "2017-44",
+    "2019-45"
   ],
   "RISC 与 CISC": [
     "2017-44"
@@ -3934,12 +4257,40 @@ window.CARD_QUESTION_LIST = {
     "2018-43"
   ],
   "Cache 映射与命中率": [
-    "2018-44"
+    "2018-44",
+    "2019-46"
   ],
   "改进型 CLOCK 页面置换": [
     "2018-45"
   ],
   "索引结点 inode 与文件控制块": [
     "2018-46"
+  ],
+  "单链表重排与原地逆置": [
+    "2019-41"
+  ],
+  "循环链式队列与空闲结点复用": [
+    "2019-42"
+  ],
+  "链式栈与链式队列": [
+    "2019-42"
+  ],
+  "磁盘结构与平均访问时间": [
+    "2019-44"
+  ],
+  "x86 CALL/JMP/RET 控制转移与相对寻址": [
+    "2019-45"
+  ],
+  "整数溢出检测与异常处理": [
+    "2019-45"
+  ],
+  "大小端存储": [
+    "2019-45"
+  ],
+  "NAT 与端口映射": [
+    "2019-47"
+  ],
+  "网桥与交换机的冲突域广播域": [
+    "2019-47"
   ]
 };
