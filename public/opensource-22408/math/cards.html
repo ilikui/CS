@@ -355,6 +355,28 @@ function atomWorkedExample(a){
  };
  const frame=frames[parent]||['提取题设条件、未知量与目标，明确所用定义。','把题目转化为数学表达式，按本卡方法逐步推理。','保留关键中间式并完成运算，写出结论。','将结果代回原条件，检查范围、符号和边界。'];
  const actions=steps.length?steps:['依据题目条件建立关系式。','按本卡核心结论完成计算并保留中间步骤。'];
+ const exact={
+ 'CAL-01-A':{label:'函数相同的判断',steps:[
+  ['先比较定义域','f(x)=x² 未附加限制，默认定义域为 R；g(x)=x²（x≥0）的定义域明确为 [0,+∞)。'],
+  ['再比较对应法则','两个函数在各自定义域内都按“自变量平方”对应函数值，解析式相同。'],
+  ['检查函数相等的充要要求','函数相同必须定义域相同且对应法则相同。这里 R≠[0,+∞)，因此即使解析式一致，也不是同一个函数。'],
+  ['用具体输入验证差异','取 x=−1：−1∈D_f，所以 f(−1)=1；但 −1∉D_g，g(−1)无定义。这直接说明两个函数的输入范围不同。']
+ ],result:'f 与 g 不相同；差异在定义域，而不在表达式。',check:'不要只看解析式。判断两个函数是否相同，依次核对定义域、对应法则；值域是由前两者决定的结果，不是独立替代条件。',variant:'若把 g 的定义域也改为 R，则 f(x)=x² 与 g(x)=x² 是同一个函数。'},
+ 'CAL-01-B':{label:'对数函数定义域',steps:[
+  ['识别限制来源','题目为 y=ln(4−x²)。自然对数 ln(u) 有意义的必要且充分条件是 u>0，而不是 u≥0。'],
+  ['建立不等式','令对数真数大于零：4−x²>0。移项得 x²<4。'],
+  ['解绝对值不等式','x²<4 等价于 |x|<2，因此 −2<x<2。也可因式分解为 (2−x)(2+x)>0，得到同一区间。'],
+  ['检查端点与区间内部','x=2 或 x=−2 时真数等于 0，ln 0 无定义，端点必须排除；例如 x=0 时真数为 4>0，区间内部满足条件。']
+ ],result:'定义域为 (−2,2)。',check:'对数真数必须严格大于零；分母不能为零；偶次根式被开方数可以等于零（若不在分母中）。',variant:'若题目改为 y=1/ln(4−x²)，还要增加 ln(4−x²)≠0，即 4−x²≠1，排除 x=±√3。'},
+ 'CAL-01-C':{label:'二次函数在给定区间上的值域',steps:[
+  ['先看定义域与函数形状','y=(x−1)²，x∈[1,3]。这是开口向上的抛物线，顶点为 (1,0)，且顶点恰好是给定区间的左端点。'],
+  ['求单调性','求导得 y′=2(x−1)。在 [1,3] 上 y′≥0，且在 (1,3] 上 y′>0，所以函数在 [1,3] 上严格递增。'],
+  ['计算区间端点函数值','最小值在左端点 x=1 处取得：y(1)=0；最大值在右端点 x=3 处取得：y(3)=4。'],
+  ['写出值域并解释端点','函数连续且在闭区间上递增，所有中间函数值均能取得；两个端点也属于定义域，因此值域包含 0 和 4，为 [0,4]。']
+ ],result:'值域为 [0,4]。',check:'闭区间端点属于定义域，端点函数值通常要纳入比较；若定义域换成开区间，端点处的极限值未必能取到。',variant:'若定义域改为 (1,3)，函数值只能满足 0<y<4，值域变为 (0,4)。'}
+ };
+ const detail=exact[a[0]];
+ if(detail)return '<section class="atom-worked"><div class="worked-head"><b>典型例题 · 逐步推导（已展开核算）</b><span>'+esc(a[0])+'</span></div><div class="worked-box"><b>'+esc(detail.label)+'｜题目</b><p>'+esc(a[6])+'</p></div><div class="worked-box"><b>先理解用到的概念</b><p>'+esc(a[3])+'</p><p>'+esc(a[4])+'</p></div><ol class="worked-steps">'+detail.steps.map((s,i)=>'<li><b>'+esc(s[0])+'</b><p>'+esc(s[1])+'</p></li>').join('')+'</ol><div class="worked-box worked-answer"><b>最终结论</b><p>'+esc(detail.result)+'</p></div><div class="worked-box worked-error"><b>易错点与自检</b><p>'+esc(detail.check)+'</p></div><div class="worked-box"><b>举一反三</b><p>'+esc(detail.variant)+'</p></div></section>';
  return '<section class="atom-worked"><div class="worked-head"><b>典型例题 · 完整推导过程</b><span>'+esc(a[0])+'</span></div><div class="worked-box"><b>题目</b><p>'+esc(a[6])+'</p></div><div class="worked-box"><b>定义与推导依据</b><p>'+esc(a[3])+'</p><p>'+esc(a[4])+'</p></div><ol class="worked-steps">'+frame.map((x,i)=>'<li><b>第 '+(i+1)+' 步</b><p>'+esc(x)+'</p></li>').join('')+'</ol><div class="worked-box"><b>本卡解题方法拆解</b><ol>'+actions.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol></div><div class="worked-box worked-answer"><b>结果</b><p>'+esc(a[7])+'</p></div><div class="worked-box worked-error"><b>易错点与自检</b><p>'+esc(a[8])+'</p><p>检查：回到定义和定理前提，逐项核验定义域、运算合法性、区间/维数条件，并将结果代回原题。</p></div></section>';
 }
 function renderAtoms(parent){
