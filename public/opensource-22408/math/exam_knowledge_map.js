@@ -4496,9 +4496,20 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "题目给的是曲率圆而非曲线本身；应先取圆在切点的切线方向，且 f''不变号需结合图示确定符号。"
   },
   "352": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2009-选择题-6",
-    "rationale": "题库文本注明原题图示略，选项图形也未提供；现有解析虽标注答案 D，但缺少原图无法独立核验积分函数图像与选项对应关系，暂不标记为人工确认。"
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-05-B",
+      "CAL-03-B"
+    ],
+    "rationale": "原卷图显示f在[−1,0)为常数正值，在(0,1)为负，在(1,2)为正，在[2,3]为零。由F(x)=∫₀ˣf(t)dt，得x<0时F=x为负线段；(0,1)递减且为负；(1,2)递增；(2,3)保持常值。四个选项中只有D符合。",
+    "methods": "利用变上限积分基本定理F′(x)=f(x)判断单调性；用定积分累积面积判断F的正负与连续性。",
+    "pitfalls": "x<0时积分方向反转；即使f在0处间断，F仍连续。",
+    "sourceUrl": "https://doc.kmf.com/ky_material/8b/1a/8b1ac02f8091b6be3d76dba35f00bfdc.pdf#page=1",
+    "sourceLabel": "查看2009年原卷第6题图（PDF第1–2页）"
   },
   "353": {
     "status": "verified",
@@ -6351,14 +6362,26 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "题目问必然成立的选项，不要求选项给出充要条件；推得 α−β>1 后，A 是必然结论。"
   },
   "488": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2015-选择题-4",
-    "reason": "题目依赖原始图形（f''/f' 图像），当前题库文本未包含图像，无法独立核验拐点/极值数量；暂不确认知识卡映射。"
+    "primary": [
+      "CAL-05-G"
+    ],
+    "secondary": [
+      "CAL-05-C"
+    ],
+    "rationale": "原卷图中f''在左侧A点仅与x轴相切，符号不变；右侧B点穿过x轴，只有一次变号。因此f的凹凸性只改变一次，拐点个数为1，选B。",
+    "methods": "拐点需检查二阶导数是否变号，不能只数f''(x)=0的点。",
+    "pitfalls": "A点虽满足f''=0，但左右同号，不是拐点；B点才是拐点。",
+    "sourceUrl": "https://math.mnnu.edu.cn/__local/9/6C/06/E40CA58379CB232AEBF10076867_080F66DF_608BF.pdf?e=.pdf#page=1",
+    "sourceLabel": "查看2015年原卷第4题图（PDF第1页）"
   },
   "489": {
     "status": "pending",
     "questionKey": "2015-选择题-5",
-    "reason": "题目给定 u=x+y/x、v=y 后，题库解析声称 x=uv/(1+v)，该反解不成立，且 (u,v)=(1,1) 处无法按该变换确定实数 x；源解析存在实质错误，暂不确认关联。"
+    "reason": "已找到原卷扫描：题干确为f(x+y/x,y)=x²−y²。令(u,v)=(1,1)要求x+1/x=1，该方程无实数解，因此(1,1)不在参数映射像集中，无法由题设确定该点处两个偏导数；原卷题面疑有印刷/转录错误。暂不虚构答案或卡片关联。",
+    "sourceUrl": "https://math.mnnu.edu.cn/__local/9/6C/06/E40CA58379CB232AEBF10076867_080F66DF_608BF.pdf?e=.pdf#page=2",
+    "sourceLabel": "查看2015年原卷第5题（PDF第2页）"
   },
   "490": {
     "status": "verified",
@@ -6676,9 +6699,19 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "两积分在 x=0 与无穷端点的变换方向不同；不能仅因原函数相同就认为敛散性相同。"
   },
   "511": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2016-选择题-4",
-    "reason": "题目依赖原始图形（f''/f' 图像），当前题库文本未包含图像，无法独立核验拐点/极值数量；暂不确认知识卡映射。"
+    "primary": [
+      "CAL-05-E"
+    ],
+    "secondary": [
+      "CAL-05-G"
+    ],
+    "rationale": "原卷及配套解析确认答案B：f′的符号变化2次，对应f有2个极值点；f′的单调性改变3次，对应f的凹凸性改变3次，故有3个拐点。",
+    "methods": "从f′图像读出符号变化判断极值；从f′的单调性变化判断f''的符号变化与拐点。",
+    "pitfalls": "极值看f′是否变号；拐点看f′是否改变单调性，不能混为一谈。",
+    "sourceUrl": "https://www.yqsjzs.com/__local/E/F1/4C/324245A19BF40287C299283A784_D59BAC21_643AB.pdf?e=.pdf#page=1",
+    "sourceLabel": "查看2016年原卷第4题图（PDF第1页）"
   },
   "512": {
     "status": "verified",
@@ -7012,22 +7045,34 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "比较点时每一步只改变一个坐标，并注意 y 方向是递减。"
   },
   "536": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2017-选择题-6",
-    "primary": [],
-    "secondary": [],
-    "rationale": "题目依赖速度曲线图及阴影区域的位置关系，当前题库文本未包含原图，无法独立核对面积正负累积与追及区间，暂不确认。",
-    "methods": "待补充原始题面/图示后再核验。",
-    "pitfalls": "不得根据不完整文本猜测考点映射。"
+    "primary": [
+      "CAL-06-C"
+    ],
+    "secondary": [
+      "CAL-05-B"
+    ],
+    "rationale": "原卷图标出三段面积10、20、3，第一段[0,10]为v₁>v₂，第二段[10,25]为v₂>v₁。甲初始领先10m，第一段再领先10m，至t=10领先20m；第二段乙追回20m，恰在t=25追平。因此t₀=25，选C。",
+    "methods": "写出位置差Δs(t)=10+∫₀ᵗ(v₁−v₂)dt，按图中速度差面积分段累加。",
+    "pitfalls": "必须区分阴影面积的正负及其时间区间；原题正确答案不是B而是C。",
+    "sourceUrl": "https://math.mnnu.edu.cn/__local/6/B2/21/08C5267AFAC0ECF0E3B08C5DB4A_01E9BA27_6FD2A.pdf?e=.pdf#page=2",
+    "sourceLabel": "查看2017年原卷第6题图（PDF第2页）"
   },
   "537": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2017-选择题-7",
-    "primary": [],
-    "secondary": [],
-    "rationale": "题面写作 P⁻¹AP 等于 3×1 列向量，左右维数不一致，矩阵等式无法成立；解析按该列向量直接运算，说明源题排版/矩阵缺失，暂不确认。",
-    "methods": "待补充原始题面/图示后再核验。",
-    "pitfalls": "不得根据不完整文本猜测考点映射。"
+    "primary": [
+      "LA-05-A"
+    ],
+    "secondary": [
+      "LA-02-A"
+    ],
+    "rationale": "原卷矩阵为P⁻¹AP=diag(0,1,2)，旧题库把对角矩阵误录成3×1列向量。由AP=PΛ可得Aα₁=0、Aα₂=α₂、Aα₃=2α₃，故A(α₁+α₂+α₃)=α₂+2α₃，选B。",
+    "methods": "将相似对角化等式右乘P，得到AP=PΛ，再按列向量逐列比较。",
+    "pitfalls": "必须保留矩阵的3×3对角结构；不能把对角矩阵误读为列向量。",
+    "sourceUrl": "https://math.mnnu.edu.cn/__local/6/B2/21/08C5267AFAC0ECF0E3B08C5DB4A_01E9BA27_6FD2A.pdf?e=.pdf#page=2",
+    "sourceLabel": "查看2017年原卷第7题图（PDF第2页）"
   },
   "538": {
     "status": "verified",
@@ -8211,7 +8256,7 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "二次项系数为f″(0)/2!。"
   },
   "628": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2021-选择题-6",
     "primary": [
       "CAL-08-A"
@@ -8219,9 +8264,11 @@ window.EXAM_KNOWLEDGE_MAP = {
     "secondary": [
       "CAL-08-B"
     ],
-    "rationale": "题库给出的解析在第一条参数曲线处有求导代入错误：对x²(x+1)求导得3x²+2x，在x=0处为0，而解析写成fx(1,1)+fy(1,1)=1。按题面应得到fx+fy=0；第二条曲线给出fx+2fy=2，故题库所列答案C不成立。需进一步核对原始题面/官方答案，暂不确认为已核验。",
-    "methods": "分别对两条参数曲线使用链式法则，在经过(1,1)的参数值处建立偏导方程组。",
-    "pitfalls": "不要照抄题库解析的第一条导数等式；右端x²(x+1)在x=0处导数为0。"
+    "rationale": "原卷第一式右端是x(x+1)²，而非旧题库误录的x²(x+1)。对第一式求导并取x=0，得fₓ(1,1)+fᵧ(1,1)=1；第二式求导并取x=1，得fₓ(1,1)+2fᵧ(1,1)=2。解得fₓ=0、fᵧ=1，故df(1,1)=dy，选C。",
+    "methods": "对两条参数曲线分别使用多元链式法则，选取分别经过(1,1)的参数值建立关于两个偏导的线性方程组。",
+    "pitfalls": "注意原卷右端的括号位置：x(x+1)²；误录成x²(x+1)会改变导数方程。",
+    "sourceUrl": "https://edu.xaiu.edu.cn/__local/D/5F/F6/88A32B7ECE68D893E18592D39FE_D23856BD_4735B.pdf#page=1",
+    "sourceLabel": "查看2021年原卷第6题（PDF第1页）"
   },
   "629": {
     "status": "verified",
@@ -9561,7 +9608,7 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "A 的比值趋于 1 而非 0；D 需要额外控制 g，不能从 f=o(g) 推出 f=o(g²)。"
   },
   "731": {
-    "status": "pending",
+    "status": "verified",
     "questionKey": "2025-选择题-5",
     "primary": [
       "CAL-08-E"
@@ -9569,9 +9616,11 @@ window.EXAM_KNOWLEDGE_MAP = {
     "secondary": [
       "CAL-08-C"
     ],
-    "rationale": "原区域为 −2≤x≤2、4−x²≤y≤2，换序后 y 从 0 到 2，且 x 位于两段外侧；需注意题面选项及积分上下限。",
-    "methods": "先画抛物线 y=4−x² 与水平线 y=2 的区域，再按固定 y 分解左右区间。",
-    "pitfalls": "题干给出的积分上限是 2、下限是 4−x²，形式为有向积分；若按通常区域换序，区域应为 y∈[0,2]，而选项写 y∈[0,4]，源题/选项数据疑似错误。"
+    "rationale": "原卷积分上限为4。区域为−2≤x≤2且4−x²≤y≤4。固定y∈[0,4]时，x位于抛物线外侧两段[−2,−√(4−y)]与[√(4−y),2]，因此换序后正是选项A。旧题库把积分上限4误录为2，导致区域与选项矛盾。",
+    "methods": "先根据原卷确定积分上下限，再画出抛物线y=4−x²与水平线y=4围成的区域，按固定y分成左右两段。",
+    "pitfalls": "积分上限4不能误读为2；换序时区域在每条水平线上是左右两个不连通区间。",
+    "sourceUrl": "https://edu.xaiu.edu.cn/__local/3/0D/19/B4D5520F03FC57305C10AE7A14F_A8C628A7_45CE3.pdf#page=2",
+    "sourceLabel": "查看2025年原卷第5题图（PDF第2页）"
   },
   "732": {
     "status": "verified",
