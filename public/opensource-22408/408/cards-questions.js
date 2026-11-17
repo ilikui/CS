@@ -6710,8 +6710,8 @@ window.CARD_QUESTION_MAP = {
       "变量乘法也可用逐位移位、条件累加循环实现，D错误。"
     ],
     "relatedCards": [
-      "补码恢复余数除法器",
-      "指令系统与寻址方式"
+      "移位加法乘法与阵列乘法器",
+      "ALU 算术逻辑单元"
     ],
     "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
     "sourcePage": 2,
