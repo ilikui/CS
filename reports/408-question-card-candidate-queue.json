@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T12:54:18.517Z",
+  "generatedAt": "2026-11-17T12:54:54.759Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
@@ -4754,7 +4754,7 @@
         },
         {
           "card": "单周期与多周期数据通路",
-          "score": 36,
+          "score": 51,
           "matchedTerms": [
             "cpu",
             "数据通",
@@ -4762,12 +4762,30 @@
             "数据通路",
             "alu",
             "时钟周期",
+            "取指",
+            "阶段",
             "个时钟",
             "时钟周",
             "钟周期",
-            "个时钟周",
-            "个时钟周期",
-            "周期控"
+            "个时钟周"
+          ]
+        },
+        {
+          "card": "指令格式与操作码扩展",
+          "score": 34,
+          "matchedTerms": [
+            "寄存器",
+            "rs",
+            "md",
+            "rd",
+            "mar",
+            "mdr",
+            "个寄存器",
+            "最多",
+            "个通用寄存器",
+            "主存",
+            "至少",
+            "指令"
           ]
         },
         {
@@ -4800,22 +4818,6 @@
             "译码器选中",
             "目标",
             "址译码器"
-          ]
-        },
-        {
-          "card": "整数溢出检测与异常处理",
-          "score": 31,
-          "matchedTerms": [
-            "of",
-            "溢出标",
-            "出标志",
-            "溢出标志",
-            "加法",
-            "减法",
-            "最高位",
-            "符号",
-            "操作数",
-            "的标志"
           ]
         }
       ]
@@ -6105,6 +6107,19 @@
           ]
         },
         {
+          "card": "指令格式与操作码扩展",
+          "score": 18,
+          "matchedTerms": [
+            "寄存器",
+            "kb",
+            "r4",
+            "r5",
+            "寄存器编号",
+            "至少",
+            "指令"
+          ]
+        },
+        {
           "card": "中断响应与异常处理",
           "score": 18,
           "matchedTerms": [
@@ -6130,18 +6145,6 @@
             "寄存器编",
             "存器编号",
             "寄存器编号"
-          ]
-        },
-        {
-          "card": "Cache 替换与写策略",
-          "score": 14,
-          "matchedTerms": [
-            "kb",
-            "int",
-            "至少",
-            "页大小",
-            "数组",
-            "地址"
           ]
         }
       ]
