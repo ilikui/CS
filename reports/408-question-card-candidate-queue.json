@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T12:56:31.320Z",
+  "generatedAt": "2026-11-17T12:56:39.069Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
@@ -1134,7 +1134,7 @@
         },
         {
           "card": "中断响应与异常处理",
-          "score": 26,
+          "score": 27,
           "matchedTerms": [
             "pc",
             "cpu",
@@ -1518,7 +1518,7 @@
         },
         {
           "card": "中断响应与异常处理",
-          "score": 20,
+          "score": 21,
           "matchedTerms": [
             "控制",
             "pc",
@@ -1527,7 +1527,8 @@
             "一条指令",
             "当前指",
             "前指令",
-            "当前指令"
+            "当前指令",
+            "的指令"
           ]
         }
       ]
@@ -4875,7 +4876,7 @@
         },
         {
           "card": "DMA 工作过程与总线占用",
-          "score": 33,
+          "score": 38,
           "matchedTerms": [
             "dma",
             "cpu",
@@ -4886,19 +4887,22 @@
             "512b扇区",
             "扇区",
             "周期",
-            "过程中"
+            "主存",
+            "过程中",
+            "获得总"
           ]
         },
         {
           "card": "程序查询与中断驱动 I/O",
-          "score": 26,
+          "score": 27,
           "matchedTerms": [
             "cpu",
             "时间",
             "dma",
             "周期",
             "ms",
-            "控制器"
+            "控制器",
+            "时间约"
           ]
         },
         {
@@ -6090,6 +6094,22 @@
           ]
         },
         {
+          "card": "中断响应与异常处理",
+          "score": 19,
+          "matchedTerms": [
+            "通用寄",
+            "用寄存",
+            "寄存器",
+            "通用寄存",
+            "用寄存器",
+            "通用寄存器",
+            "一条指",
+            "条指令",
+            "一条指令",
+            "的指令"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 19,
           "matchedTerms": [
@@ -6117,21 +6137,6 @@
             "寄存器编号",
             "至少",
             "指令"
-          ]
-        },
-        {
-          "card": "中断响应与异常处理",
-          "score": 18,
-          "matchedTerms": [
-            "通用寄",
-            "用寄存",
-            "寄存器",
-            "通用寄存",
-            "用寄存器",
-            "通用寄存器",
-            "一条指",
-            "条指令",
-            "一条指令"
           ]
         },
         {
