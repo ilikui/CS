@@ -5778,7 +5778,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "已逐题核对原始题干与原始教学解析；答案中的 C5–C10 控制信号及可合并节拍方案均摘自原题库参考解析，分别关联数据通路与指令执行微操作知识卡。"
-    }
+    },
+    "steps": [
+      "先按指令语义确定数据流：读取M[(R1)]，与R0相加，再把结果写回M[(R1)]。",
+      "C5：R1out、MARin，将R1内容送入MAR；C6：MemR、MDRinE，从主存读出操作数到MDR。",
+      "C7：MDRout、Ain，将内存操作数送ALU暂存器A；C8：R0out、Add、ACin，完成A+R0并锁存到AC。",
+      "C9：ACout、MDRin，将结果送入MDR；C10：MDRoutE、MemW，将结果写回MAR指向的主存单元。",
+      "若C6时可以同时执行R0out、Ain，则可提前准备第二个操作数，后续节拍合并；是否可并行取决于独立数据通路和总线冲突。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-02-输出受限双端队列": {
     "year": 2010,
