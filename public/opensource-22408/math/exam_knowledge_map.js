@@ -1,4 +1,5 @@
-window.EXAM_KNOWLEDGE_MAP = {
+/* Math II exam-to-knowledge-card mapping. Keep question indices aligned with exam_data.js. */
+{
   "0": {
     "status": "verified",
     "primary": [
@@ -482,14 +483,14 @@ window.EXAM_KNOWLEDGE_MAP = {
   "40": {
     "status": "verified",
     "primary": [
-      "CAL-05-C"
+      "CAL-05-H"
     ],
     "secondary": [
       "CAL-02-C"
     ],
-    "rationale": "考查 x→∞ 的水平渐近线及 x→0+ 时是否存在铅直渐近线。",
-    "methods": "分别计算无穷远极限和定义域边界极限。",
-    "pitfalls": "只检查 x→∞ 而漏掉 x→0+。"
+    "rationale": "题目直接考查渐近线：x→+∞ 时判断水平渐近线，x→0⁺ 时判断是否存在铅直渐近线；凹凸性不是本题考点。",
+    "methods": "分别计算 x→+∞ 的函数极限与 x→0⁺ 的单侧极限，按渐近线定义判断。",
+    "pitfalls": "只检查无穷远极限会漏掉定义域边界；有界振荡不等于铅直渐近线。"
   },
   "41": {
     "status": "verified",
@@ -830,14 +831,14 @@ window.EXAM_KNOWLEDGE_MAP = {
   "69": {
     "status": "verified",
     "primary": [
-      "CAL-05-C"
+      "CAL-05-H"
     ],
     "secondary": [
       "CAL-02-B"
     ],
-    "rationale": "分别考察 x→±∞ 与 x→0，确定水平渐近线和铅直渐近线。",
-    "methods": "函数极限与渐近线判定。",
-    "pitfalls": "只检查无穷远渐近线，漏掉分母为零的点。"
+    "rationale": "题目直接考查水平与铅直渐近线的条数，应归入渐近线判定，而不是凹凸性。",
+    "methods": "分别计算 x→±∞ 的函数极限，再检查 x→0 附近的单侧极限是否发散。",
+    "pitfalls": "水平渐近线需分别检查正、负无穷；定义域边界处必须看函数极限是否无穷。"
   },
   "70": {
     "status": "verified",
@@ -3121,14 +3122,12 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2004-解答题-16",
     "primary": [
-      "CAL-05-B"
+      "CAL-04-A"
     ],
-    "secondary": [
-      "CAL-05-E"
-    ],
-    "rationale": "（Ⅰ）当 $-2\\le x\\le0$ 时，\n$$\nf(x)=kf(x+2)=k(x+2)\\big[(x+2)^2-4\\big]=kx(x+2)(x+4).\n$$\n\n（Ⅱ）右导数\n$$\nf'_+(0)=\\big[x(x^{2}-4)\\big]'_{x=0}=-4,\n$$\n左导数\n$$\nf'_-(0)=\\big[kx(x+2)(x+4)\\big]'_{x=0}=8k.\n$$\n可导需 $8k=-4$，故 $k=-\\dfrac12$。",
-    "methods": "函数平移关系与左右导数；由 f(x)=k f(x+2) 求出左侧表达式，分别计算 x=0 左右导数并令其相等。",
-    "pitfalls": "分段点可导要求函数连续且左右导数相等；本题先用关系式确定左段。"
+    "secondary": [],
+    "rationale": "本题考查分段函数在拼接点的可导性，核心是左右导数相等，不属于单调性或极值题。",
+    "methods": "先用函数关系写出拼接点左侧表达式，再分别计算左导数和右导数，令两者相等求参数。",
+    "pitfalls": "可导要求函数在该点连续且左右导数相等；不要只比较两侧导数而忽略函数值连续性。"
   },
   "247": {
     "status": "verified",
@@ -5542,14 +5541,12 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2012-解答题-17",
     "primary": [
-      "CAL-05-A"
-    ],
-    "secondary": [
       "CAL-06-C"
     ],
-    "rationale": "切点由切线经过指定点确定，区域面积用曲线反函数积分，旋转体体积用圆盘/垫片积分。",
-    "methods": "设切点 x₀，令切线过 (0,1) 求 x₀=e²；分别建立面积与绕 x 轴旋转体积积分。",
-    "pitfalls": "注意切点坐标为 (e²,2)，曲线与 x 轴交点为 (1,0)；体积积分需区分内外边界。"
+    "secondary": [],
+    "rationale": "本题核心是切线确定积分区域后求面积和旋转体体积，属于定积分几何应用；题目没有要求应用中值定理。",
+    "methods": "先由切线过指定点确定切点，再建立面积积分与圆盘/垫片体积积分。",
+    "pitfalls": "区分曲线与坐标轴交点、切点；旋转体体积需按内外半径建立被积函数。"
   },
   "433": {
     "status": "verified",
@@ -8163,14 +8160,12 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2020-解答题-21",
     "primary": [
-      "CAL-05-A"
-    ],
-    "secondary": [
       "CAL-07-B"
     ],
-    "rationale": "将曲线与x轴围成的面积写为积分，切线与x轴交点由切线方程确定；面积比给出积分方程，求导后化为一阶微分方程。",
-    "methods": "把几何条件代数化，建立积分方程后求导降阶。",
-    "pitfalls": "切线截距与面积比方向要准确。"
+    "secondary": [],
+    "rationale": "本题核心是由面积比建立积分方程，再求导转化为微分方程，属于微分方程建模；切线只用于确定几何量，不是中值定理考点。",
+    "methods": "写出曲线与 x 轴围成的面积表达式，利用切线截距构造面积比方程，对积分方程求导并求解。",
+    "pitfalls": "切线截距和面积比方向要准确；求导后还需利用初始条件确定常数。"
   },
   "621": {
     "status": "verified",
@@ -10154,4 +10149,4 @@ window.EXAM_KNOWLEDGE_MAP = {
     "methods": "先用向量线性表示证明秩为 2 并构造 H，再用 (GH)^n=G(HG)^(n−1)H 降低矩阵幂的阶数。",
     "pitfalls": "A 是 4×4 而 H、G 分别为 2×4 与 4×2；乘法顺序不能颠倒，幂次公式中 HG 的指数是 n−1。"
   }
-};
+}
