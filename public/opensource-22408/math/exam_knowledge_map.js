@@ -8156,11 +8156,14 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2020-解答题-21",
     "primary": [
-      "CAL-07-B"
+      "CAL-07-A"
     ],
-    "secondary": [],
-    "rationale": "本题核心是由面积比建立积分方程，再求导转化为微分方程，属于微分方程建模；切线只用于确定几何量，不是中值定理考点。",
-    "methods": "写出曲线与 x 轴围成的面积表达式，利用切线截距构造面积比方程，对积分方程求导并求解。",
+    "secondary": [
+      "CAL-06-C",
+      "CAL-04-A"
+    ],
+    "rationale": "由曲线下面积 A(x)=∫₀ˣf(t)dt 与切线三角形面积建立 4Af′=3f²，再用 A′=f 化为可分离微分方程，得到 f=Cx³（C>0）。",
+    "methods": "几何面积比建模 → 设 A(x)=∫₀ˣf → 写切线截距和三角形面积 → 建立 4Af′=3f² → 分离变量求 f=Cx³。",
     "pitfalls": "切线截距和面积比方向要准确；求导后还需利用初始条件确定常数。"
   },
   "621": {
@@ -8978,10 +8981,11 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-07-B"
     ],
     "secondary": [
-      "CAL-04-C"
+      "CAL-04-C",
+      "CAL-05-B"
     ],
     "rationale": "切线在 y 轴截距为 y-xy'，结合题设距离条件及经过点 (e²,0)，得到一阶线性微分方程 y'-(1/x)y=-1。",
-    "methods": "先写切线方程并令横坐标为零求截距，再解一阶线性方程并代入初值。",
+    "methods": "第（1）问：写切线在 y 轴截距 y−xy′，结合距离条件建立一阶线性方程并用积分因子求 y=x(2−ln x)；第（2）问：写切线与坐标轴截距，建立三角形面积函数，求导确定最小值点。",
     "pitfalls": "题设是截距的距离；需结合连续性和给定点确定正号分支，不能无条件省略绝对值。"
   },
   "684": {
@@ -9097,7 +9101,8 @@ window.EXAM_KNOWLEDGE_MAP = {
       "LA-05-B"
     ],
     "secondary": [
-      "LA-05-A"
+      "LA-05-A",
+      "LA-02-A"
     ],
     "rationale": "由线性变换对任意向量的表达式读出矩阵 A，再求特征值和特征向量构造 P、Λ 实现相似对角化。",
     "methods": "按各分量对 x₁、x₂、x₃ 的系数写矩阵列/行，再解特征方程。",
@@ -9349,7 +9354,8 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-07-C"
     ],
     "secondary": [
-      "CAL-07-D"
+      "CAL-07-D",
+      "CAL-06-B"
     ],
     "rationale": "这是 Cauchy–Euler 方程，令 x=eᵗ 后化为 y_tt−9y=0；初值确定 y=2x³。",
     "methods": "使用 x=eᵗ，将 x²y''+xy' 转化为 y_tt，再解常系数方程。",
@@ -9393,7 +9399,8 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-08-B"
     ],
     "secondary": [
-      "CAL-08-A"
+      "CAL-08-A",
+      "CAL-06-A"
     ],
     "rationale": "对 u=2x+y、v=3x−y 使用二元复合函数二阶链式法则，题设线性组合中 fuu、fvv 系数抵消，得到 25fuv=1。",
     "methods": "先求 gx、gy，再求 gxx、gxy、gyy 并按题设系数组合。",
@@ -9457,7 +9464,9 @@ window.EXAM_KNOWLEDGE_MAP = {
     ],
     "secondary": [
       "LA-03-A",
-      "LA-02-B"
+      "LA-02-B",
+      "LA-06-A",
+      "LA-05-C"
     ],
     "rationale": "两个齐次方程组的解空间包含关系且不相同，结合 A 的秩为 2 可确定堆叠矩阵秩仍为 2，进而求 a、b。",
     "methods": "把 A 与 Bᵀ 纵向拼接，利用核空间包含关系转化为行空间/秩条件并行化简。",
@@ -9488,10 +9497,11 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-08-B"
     ],
     "secondary": [
-      "CAL-04-D"
+      "CAL-04-D",
+      "CAL-06-F"
     ],
     "rationale": "对隐式方程分别关于 x、y 求偏导，积分上限与下限贡献相反符号，相加得到 z_x+z_y=z/(z+1)(e^{-x²}−e^{-y²})。",
-    "methods": "使用隐函数求导和变上限积分求导公式，分别求 z_x、z_y 后相加。",
+    "methods": "设 F(x,y,z)=z+ln z−∫ᵧˣe^(−t²)dt=0；分别对 x、y 求偏导，使用变上限积分求导得到 F_x、F_y，再用 z_x=−F_x/F_z、z_y=−F_y/F_z，最后合并化简。",
     "pitfalls": "对下限 y 求导会带负号；外层方程中 ln z 的导数为 z_y/z。"
   },
   "728": {
@@ -9665,10 +9675,11 @@ window.EXAM_KNOWLEDGE_MAP = {
     ],
     "secondary": [
       "CAL-04-C",
-      "CAL-08-B"
+      "CAL-08-B",
+      "CAL-06-F"
     ],
     "rationale": "由 x=ln(1+2t) 得 x=0 对应 t=0；隐式方程对 t 求导得 y_t=2e，且 x_t=2，故 dy/dx=e。",
-    "methods": "先求参数对应点，再对隐式积分方程求 t 导数，最后用参数求导公式。",
+    "methods": "先由参数方程求 dx/dt；对含积分上限 y+t² 的隐式方程关于 t 求导，使用莱布尼茨公式得到 dy/dt；最后用 dy/dx=(dy/dt)/(dx/dt)，代入指定参数值。",
     "pitfalls": "上限 y+t² 的导数为 y_t+2t；代入 t=0 后再除以 dx/dt。"
   },
   "741": {
@@ -9733,10 +9744,11 @@ window.EXAM_KNOWLEDGE_MAP = {
     ],
     "secondary": [
       "CAL-08-A",
-      "CAL-08-B"
+      "CAL-08-B",
+      "CAL-06-A"
     ],
     "rationale": "由全微分读出 fx、fy，积分恢复 f(x,y)=e^{-y}(−x²+y+2)，驻点 (0,−1) 的 Hessian 正定判别式且 fxx<0，故为极大点。",
-    "methods": "先对 x 积分并保留 C(y)，再用 fy 确定 C(y)，最后求驻点和二阶判别。",
+    "methods": "由 df 读出 f_x、f_y；先对 f_x 关于 x 积分并保留只依赖 y 的函数 C(y)，再对 y 求偏导与 f_y 比较确定 C′(y)，最后求驻点并用 Hessian 判别极值。",
     "pitfalls": "积分“常数”是 y 的函数；极值判别要同时检查 AC−B² 与 fxx 符号。"
   },
   "746": {
