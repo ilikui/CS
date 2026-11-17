@@ -1759,9 +1759,7 @@
     "primary": [
       "CAL-06-C"
     ],
-    "secondary": [
-      "CAL-05-B"
-    ],
+    "secondary": [],
     "rationale": "曲线与 y=2 的交点满足 x+1/x=2，即 x=1（另一根重合），在 [1,2] 上曲线位于直线上方。",
     "methods": "解交点确定积分限，计算 ∫₁²(x+1/x−2)dx。",
     "pitfalls": "漏掉交点；面积上下函数顺序或积分限错误。"
@@ -8564,11 +8562,9 @@
     "status": "verified",
     "questionKey": "2022-选择题-7",
     "primary": [
-      "CAL-05-B"
-    ],
-    "secondary": [
       "CAL-06-E"
     ],
+    "secondary": [],
     "rationale": "对0<x<1有ln(1+x)>x/2，故I2>I1；又ln(1+x)<x且1+cosx>1、1+sinx<2，得I2的被积函数<x< I3的被积函数，故I1<I2<I3。",
     "methods": "先建立逐点不等式，再在相同积分区间积分比较。",
     "pitfalls": "比较被积函数时需确认分母正且不等式方向不变。"
