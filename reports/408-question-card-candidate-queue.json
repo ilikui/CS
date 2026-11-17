@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T12:46:14.039Z",
+  "generatedAt": "2026-11-17T12:46:59.162Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
@@ -1390,20 +1390,20 @@
           ]
         },
         {
+          "card": "存储芯片容量扩展",
+          "score": 6,
+          "matchedTerms": [
+            "ram",
+            "rom"
+          ]
+        },
+        {
           "card": "冯·诺依曼结构与存储程序",
           "score": 6,
           "matchedTerms": [
             "存储器",
             "储器中",
             "存储器中"
-          ]
-        },
-        {
-          "card": "总线与总线事务",
-          "score": 4,
-          "matchedTerms": [
-            "ram",
-            "存储器"
           ]
         }
       ]
@@ -1585,17 +1585,21 @@
           ]
         },
         {
-          "card": "中断响应与异常处理",
+          "card": "冯·诺依曼结构与存储程序",
           "score": 20,
           "matchedTerms": [
-            "控制",
+            "控制器",
+            "存储器",
             "pc",
-            "一条指",
-            "条指令",
-            "一条指令",
-            "当前指",
-            "前指令",
-            "当前指令"
+            "指令地",
+            "令地址",
+            "指令地址",
+            "储器读",
+            "器读出",
+            "存储器读",
+            "储器读出",
+            "存储器读出",
+            "前指令"
           ]
         }
       ]
