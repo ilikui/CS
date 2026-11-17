@@ -168,7 +168,7 @@ desc='专属拐点个数演示：f(x)=x⁴−2x²，f′′(x)=12x²−4。候�
 const x=(p-1.075)*2.5,y=x*x*x/3-3*x,slope=x*x-3,X=q=>230+q*42,Y=q=>135-q*24;
 body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="单调区间专属动态图"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>q*q*q/3-3*q,-4,4,-4,4)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(x-1)+' '+Y(y-slope)+'L'+X(x+1)+' '+Y(y+slope)+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.green+'"/><text x="38" y="24" fill="'+COLORS.blue+'">f′(x)=x²−3</text><text x="38" y="46" fill="'+COLORS.orange+'">切线斜率 '+slope.toFixed(2)+'</text><text x="38" y="245" fill="'+COLORS.green+'">+ / − / + 对应 增 / 减 / 增</text></svg>';
 desc='专属单调性演示：f=x³/3−3x，f′=x²−3。滑块移动切点，临界点 ±√3 将曲线分为增、减、增三个区间。';
-}else if(/二阶导数判别/.test(t)){
+}else if(/二阶导数判别|极值与极值判别法/.test(t)){
 const a=(p-1.075)*1.1,second=2*a;
 body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="二阶导数判别法专属动态图"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>a*q*q,-4,4,-3,4)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="135" r="6" fill="'+COLORS.green+'"/><text x="38" y="24" fill="'+COLORS.blue+'">f(x)='+a.toFixed(2)+'x²</text><text x="38" y="46" fill="'+COLORS.orange+'">f′′(0)='+second.toFixed(2)+'</text><text x="38" y="245" fill="'+COLORS.green+'">'+(second>0?'严格局部极小':second<0?'严格局部极大':'判别法失效')+'</text></svg>';
 desc='专属二阶导数判别：拖动参数改变抛物线开口。驻点 x=0 处 f′′>0 为严格极小，f′′<0 为严格极大；f′′=0 时本判别法不能下结论。';
