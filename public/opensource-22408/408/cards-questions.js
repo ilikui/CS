@@ -648,7 +648,8 @@ window.CARD_QUESTION_MAP = {
     "relatedCards": [
       "存储器层次与主存组织",
       "TLB 与快表命中",
-      "Cache 映射与命中率"
+      "Cache 映射与命中率",
+      "主存与辅存层次结构"
     ]
   },
   "进程状态与转换": {
@@ -2945,7 +2946,8 @@ window.CARD_QUESTION_MAP = {
     "relatedCards": [
       "磁盘 CHS 地址与平均访问时间",
       "磁盘存储结构与旋转延迟",
-      "DMA 周期挪用与总线仲裁"
+      "DMA 周期挪用与总线仲裁",
+      "总线仲裁方式"
     ]
   },
   "中断I_O与DMA的CPU时间占比": {
@@ -3101,7 +3103,8 @@ window.CARD_QUESTION_MAP = {
     "relatedCards": [
       "Cache 直接映射与组相联",
       "Cache 命中率与空间局部性",
-      "二维数组行优先存储与局部性"
+      "二维数组行优先存储与局部性",
+      "Cache 组相联映射与地址划分"
     ]
   },
   "请求分页与组相联Cache循环访问": {
@@ -3138,7 +3141,9 @@ window.CARD_QUESTION_MAP = {
       "Cache 命中率与空间局部性",
       "二维数组行优先存储与局部性",
       "数组跨页与缺页次数",
-      "虚拟地址分页与页内偏移"
+      "虚拟地址分页与页内偏移",
+      "页式存储与缺页异常",
+      "Cache 组相联映射与地址划分"
     ]
   },
   "Cache缺失率与主存带宽计算": {
@@ -5553,7 +5558,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2009 年原始题干、标准答案与解析，并按题目实际考查的概念人工匹配知识卡；不是依据题号机械归类。"
-    }
+    },
+    "relatedCards": [
+      "x86 CALL/JMP/RET 控制转移与相对寻址",
+      "x86 相对寻址与转移目标计算"
+    ]
   },
   "2009-18-流水线时钟周期": {
     "year": 2009,
@@ -6927,7 +6936,8 @@ window.CARD_QUESTION_MAP = {
       "存储器层次与主存组织",
       "Cache 映射与命中率",
       "虚拟内存与页面置换",
-      "Cache 替换与写策略"
+      "Cache 替换与写策略",
+      "主存与辅存层次结构"
     ],
     "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
     "sourcePage": 3,
