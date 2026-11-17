@@ -44,7 +44,7 @@ const EXAM_DATA = [
     "解答题",
     1,
     "若 $f\\left(x\\right)$ 在 $\\left(a,b\\right)$ 内可导，且导数 $f^{\\prime}\\left(x\\right)$ 恒大于零，则 $f\\left(x\\right)$ 在 $\\left(a,b\\right)$ 内单调增加。",
-    "",
+    "$f(x)$ 在 $(a,b)$ 内严格单调增加。",
     "任取 $x_{1},x_{2}\\in\\left(a,b\\right)$，且 $x_{1}<x_{2}$。由拉格朗日中值定理，存在 $\\xi\\in\\left(x_{1},x_{2}\\right)$，使\n\n$f\\left(x_{2}\\right)-f\\left(x_{1}\\right)=f^{\\prime}\\left(\\xi\\right)\\left(x_{2}-x_{1}\\right)$。\n\n由于 $f^{\\prime}\\left(\\xi\\right)>0$，故 $f\\left(x_{2}\\right)>f\\left(x_{1}\\right)$，从而 $f\\left(x\\right)$ 在 $\\left(a,b\\right)$ 内单调增加。"
   ],
   [
@@ -52,7 +52,7 @@ const EXAM_DATA = [
     "解答题",
     2,
     "若 $g\\left(x\\right)$ 在 $x=c$ 处二阶导数存在，且 $g^{\\prime}\\left(c\\right)=0$，$g^{\\prime\\prime}\\left(c\\right)<0$，则 $g\\left(c\\right)$ 为 $g\\left(x\\right)$ 的一个极大值。",
-    "",
+    "$g(c)$ 是 $g(x)$ 在 $x=c$ 处的严格极大值。",
     "由\n\n$g^{\\prime\\prime}\\left(c\\right)=\\lim_{x\\to c}\\dfrac{g^{\\prime}\\left(x\\right)-g^{\\prime}\\left(c\\right)}{x-c}=\\lim_{x\\to c}\\dfrac{g^{\\prime}\\left(x\\right)}{x-c}<0$，\n\n可知在 $c$ 的某邻域内，当 $x<c$ 时 $g^{\\prime}\\left(x\\right)>0$，当 $x>c$ 时 $g^{\\prime}\\left(x\\right)<0$。因此 $g\\left(x\\right)$ 在 $x=c$ 左侧递增、右侧递减，故 $g\\left(c\\right)$ 为极大值。"
   ],
   [
