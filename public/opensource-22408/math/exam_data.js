@@ -4461,7 +4461,7 @@ const EXAM_DATA = [
     4,
     "设函数 $f(x)$ 在 $[0,1]$ 上二阶可导，且\n\n$$\n\\int_0^1 f(x)\\,\\mathrm{d}x=0,\n$$\n\n则 $\\left(\\ \\right)$\n\n（A）当 $f'(x)<0$ 时，$f\\left(\\dfrac12\\right)<0$\n\n（B）当 $f''(x)<0$ 时，$f\\left(\\dfrac12\\right)<0$\n\n（C）当 $f'(x)>0$ 时，$f\\left(\\dfrac12\\right)<0$\n\n（D）当 $f''(x)>0$ 时，$f\\left(\\dfrac12\\right)<0$\n\n> **答案：** D",
     "D。",
-    "若 $f''(x)>0$，则 $f$ 严格凸，图像严格位于任一点切线的上方。特别在 $x=\\tfrac12$ 处，对 $x\\ne\\tfrac12$ 有\n$$\nf(x)>f\\left(\\frac12\\right)+f'\\left(\\frac12\\right)\\left(x-\\frac12\\right).\n$$\n在 $[0,1]$ 上积分，线性项的积分为零，故\n$$\n0=\\int_0^1f(x)\\,dx>f\\left(\\frac12\\right).\n$$\n因此 D 正确。A、C 可分别取 $f(x)=\\frac12-x$、$f(x)=x-\\frac12$ 反例排除；B 可取严格凹函数 $f(x)=\\frac12-x(1-x)$，其积分为 $1/3$，减去常数 $1/3$ 后仍严格凹且积分为零，但中点值为 $-1/12$，所以 B 不构成必然结论。"
+    "若 $f''(x)>0$，则 $f$ 严格凸，图像严格位于任一点切线的上方。特别在 $x=\\frac12$ 处，对 $x\\ne\\frac12$ 有\n$$\nf(x)>f\\left(\\frac12\\right)+f'\\left(\\frac12\\right)\\left(x-\\frac12\\right).\n$$\n在 $[0,1]$ 上积分，线性项的积分为零，故\n$$\n0=\\int_0^1f(x)\\,dx>f\\left(\\frac12\\right).\n$$\n因此 D 正确。A、C 分别取 $f(x)=\\frac12-x$、$f(x)=x-\\frac12$，均满足积分为零而中点函数值为零，排除。B 取\n$$\nf(x)=x(1-x)-\\frac16,\n$$\n则 $f''(x)=-2<0$、$\\int_0^1f(x)\\,dx=0$，但 $f(\\frac12)=\\frac1{12}>0$，故 B 不成立。"
   ],
   [
     "2018",
