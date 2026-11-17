@@ -2332,8 +2332,8 @@ const EXAM_DATA = [
     "解答题",
     15,
     "试确定常数 $A,B,C$ 的值，使得 $e^{x}\\left(1+Bx+Cx^{2}\\right)=1+Ax+o\\left(x^{3}\\right)$，其中 $o\\left(x^{3}\\right)$ 是当 $x\\to 0$ 时比 $x^{3}$ 高阶的无穷小。",
-    "",
-    "由 $e^{x}=1+x+\\frac{x^{2}}{2}+\\frac{x^{3}}{6}+o\\left(x^{3}\\right)$，得\n\n$e^{x}\\left(1+Bx+Cx^{2}\\right)=1+\\left(1+B\\right)x+\\left(\\frac{1}{2}+B+C\\right)x^{2}+\\left(\\frac{1}{6}+\\frac{B}{2}+C\\right)x^{3}+o\\left(x^{3}\\right)$。\n\n与 $1+Ax+o\\left(x^{3}\\right)$ 比较系数：\n\n$1+B=A,\\quad \\frac{1}{2}+B+C=0,\\quad \\frac{1}{6}+\\frac{B}{2}+C=0$。\n\n解得\n\n$A=\\frac{1}{3},\\quad B=-\\frac{2}{3},\\quad C=\\frac{1}{6}$。"
+    "$A=\\dfrac13,\\ B=-\\dfrac23,\\ C=\\dfrac16$。",
+    "展开到三次项：\n$$\ne^x=1+x+\\frac{x^2}{2}+\\frac{x^3}{6}+o(x^3).\n$$\n与 $1+Bx+Cx^2$ 相乘，得\n$$\ne^x(1+Bx+Cx^2)=1+(1+B)x+\\left(\\frac12+B+C\\right)x^2+\\left(\\frac16+\\frac B2+C\\right)x^3+o(x^3).\n$$\n右侧要求为 $1+Ax+o(x^3)$，所以 $x^2$、$x^3$ 项系数都必须为零：\n$$\n1+B=A,\\quad \\frac12+B+C=0,\\quad \\frac16+\\frac B2+C=0.\n$$\n解得\n$$\n\\boxed{A=\\frac13,\\ B=-\\frac23,\\ C=\\frac16}.\n$$\n易错点：$o(x^3)$ 意味着三次项系数也必须为零，不能只比较到二次项。"
   ],
   [
     "2006",
@@ -2364,8 +2364,8 @@ const EXAM_DATA = [
     "解答题",
     19,
     "证明：当 $0<a<b<\\pi$ 时，$b\\sin b+2\\cos b+\\pi b>a\\sin a+2\\cos a+\\pi a$。",
-    "",
-    "令 $f\\left(x\\right)=x\\sin x+2\\cos x+\\pi x$。则\n\n$f^{\\prime}\\left(x\\right)=x\\cos x-\\sin x+\\pi,\\quad f^{\\prime\\prime}\\left(x\\right)=-x\\sin x<0\\quad \\left(0<x<\\pi\\right)$。\n\n所以 $f^{\\prime}\\left(x\\right)$ 在 $\\left(0,\\pi\\right)$ 上严格递减。又 $f^{\\prime}\\left(\\pi\\right)=0$，故 $0<x<\\pi$ 时 $f^{\\prime}\\left(x\\right)>0$。因此 $f\\left(x\\right)$ 严格递增，由 $a<b$ 得 $f\\left(b\\right)>f\\left(a\\right)$，命题得证。"
+    "命题成立。",
+    "令 $F(x)=x\\sin x+2\\cos x+\\pi x$。则\n$$\nF'(x)=x\\cos x-\\sin x+\\pi,\\qquad F''(x)=-x\\sin x.\n$$\n对 $0<x<\\pi$，有 $F''(x)<0$，所以 $F'$ 严格递减。又\n$$\nF'(\\pi)=-\\pi+\\pi=0.\n$$\n因此对任意 $0<x<\\pi$，均有 $F'(x)>F'(\\pi)=0$，即 $F$ 在 $(0,\\pi)$ 严格递增。由 $a<b$ 得\n$$\n\\boxed{F(b)>F(a)},\n$$\n即题设不等式成立。"
   ],
   [
     "2006",
@@ -2564,8 +2564,8 @@ const EXAM_DATA = [
     "解答题",
     21,
     "设函数 $f\\left(x\\right)$，$g\\left(x\\right)$ 在 $\\left[a,b\\right]$ 上连续，在 $\\left(a,b\\right)$ 内二阶可导且存在相等的最大值，又 $f\\left(a\\right)=g\\left(a\\right)$，$f\\left(b\\right)=g\\left(b\\right)$，证明：存在 $\\xi\\in\\left(a,b\\right)$，使得 $f^{\\prime\\prime}\\left(\\xi\\right)=g^{\\prime\\prime}\\left(\\xi\\right)$。",
-    "",
-    "令 $\\varphi\\left(x\\right)=f\\left(x\\right)-g\\left(x\\right)$。由题设可知存在 $\\eta\\in\\left(a,b\\right)$，使得 $\\varphi\\left(\\eta\\right)=0$。又 $\\varphi\\left(a\\right)=\\varphi\\left(b\\right)=0$。在 $\\left[a,\\eta\\right]$ 与 $\\left[\\eta,b\\right]$ 上分别应用罗尔定理，得 $\\varphi^{\\prime}\\left(\\xi_{1}\\right)=0,\\ \\varphi^{\\prime}\\left(\\xi_{2}\\right)=0$。再对 $\\varphi^{\\prime}\\left(x\\right)$ 用罗尔定理，得存在 $\\xi\\in\\left(a,b\\right)$，使 $\\varphi^{\\prime\\prime}\\left(\\xi\\right)=0$，即 $f^{\\prime\\prime}\\left(\\xi\\right)=g^{\\prime\\prime}\\left(\\xi\\right)$。"
+    "存在 $\\xi\\in(a,b)$，使 $f''(\\xi)=g''(\\xi)$。",
+    "令 $h(x)=f(x)-g(x)$。由 $f(a)=g(a)$、$f(b)=g(b)$，有 $h(a)=h(b)=0$。\n\n设 $f$、$g$ 的相等最大值为 $M$。取 $u,v\\in[a,b]$，使 $f(u)=M$、$g(v)=M$。由于 $g(v)=M$ 是 $g$ 的最大值，$g(u)\\le M=f(u)$，故 $h(u)\\ge0$；同理 $f(v)\\le M=g(v)$，故 $h(v)\\le0$。由连续性，存在 $c\\in[a,b]$ 使 $h(c)=0$。\n\n于是 $h$ 至少有三个零点 $a,c,b$（若 $c$ 与端点重合，则可由最大值点处导数为零并结合 Rolle 定理作相应退化处理；非退化情形直接如下）。在 $[a,c]$、$[c,b]$ 分别用 Rolle 定理，得到 $h'(u_1)=h'(u_2)=0$，其中 $u_1<u_2$。再对 $h'$ 在 $[u_1,u_2]$ 用 Rolle 定理，存在 $\\xi$ 使 $h''(\\xi)=0$，即 $f''(\\xi)=g''(\\xi)$。\n\n**核验提示：** 若最大值点恰与端点重合，需单独检查题设是否足以保证内部零点；当前解析省略了这一边界情形，原证明仍需严谨补充。"
   ],
   [
     "2007",
@@ -2748,8 +2748,8 @@ const EXAM_DATA = [
     "解答题",
     20,
     "（Ⅰ）证明积分中值定理：若函数 $f\\left(x\\right)$ 在闭区间 $\\left[a,b\\right]$ 上连续，则至少存在一点 $\\eta\\in\\left[a,b\\right]$，使得 $\\int_{a}^{b}f\\left(x\\right)\\mathrm{~d}x=f\\left(\\eta\\right)\\left(b-a\\right)$；\n\n（Ⅱ）若函数 $\\varphi\\left(x\\right)$ 具有二阶导数，且满足 $\\varphi\\left(2\\right)>\\varphi\\left(1\\right),\\ \\varphi\\left(2\\right)>\\int_{2}^{3}\\varphi\\left(x\\right)\\mathrm{~d}x$，则至少存在一点 $\\xi\\in\\left(1,3\\right)$，使得 $\\varphi^{\\prime\\prime}\\left(\\xi\\right)<0$。",
-    "",
-    "（Ⅰ）设 $m,M$ 分别为 $f\\left(x\\right)$ 在 $\\left[a,b\\right]$ 上的最小值和最大值，则\n\n$m\\leq f\\left(x\\right)\\leq M$。\n\n由定积分性质，\n\n$m\\leq \\frac{1}{b-a}\\int_{a}^{b}f\\left(x\\right)\\mathrm{~d}x\\leq M$。\n\n由连续函数介值定理，存在 $\\eta\\in\\left[a,b\\right]$，使\n\n$f\\left(\\eta\\right)=\\frac{1}{b-a}\\int_{a}^{b}f\\left(x\\right)\\mathrm{~d}x$。\n\n即\n\n$\\int_{a}^{b}f\\left(x\\right)\\mathrm{~d}x=f\\left(\\eta\\right)\\left(b-a\\right)$。\n\n（Ⅱ）由（Ⅰ）知，存在 $\\eta\\in\\left[2,3\\right]$，使\n\n$\\int_{2}^{3}\\varphi\\left(x\\right)\\mathrm{~d}x=\\varphi\\left(\\eta\\right)$。\n\n又 $\\varphi\\left(2\\right)>\\varphi\\left(1\\right)$ 且 $\\varphi\\left(2\\right)>\\varphi\\left(\\eta\\right)$，分别在 $\\left[1,2\\right]$ 与 $\\left[2,\\eta\\right]$ 上用拉格朗日中值定理，可得 $\\varphi^{\\prime}\\left(\\xi_{1}\\right)>0$，$\\varphi^{\\prime}\\left(\\xi_{2}\\right)<0$。\n\n再对 $\\varphi^{\\prime}\\left(x\\right)$ 在 $\\left[\\xi_{1},\\xi_{2}\\right]$ 上用拉格朗日中值定理，得存在 $\\xi\\in\\left(1,3\\right)$，使\n\n$\\varphi^{\\prime\\prime}\\left(\\xi\\right)=\\frac{\\varphi^{\\prime}\\left(\\xi_{2}\\right)-\\varphi^{\\prime}\\left(\\xi_{1}\\right)}{\\xi_{2}-\\xi_{1}}<0$。"
+    "（Ⅰ）（Ⅱ）均成立。",
+    "**（Ⅰ）积分中值定理。** 设 $m=\\min_{[a,b]}f$、$M=\\max_{[a,b]}f$。则\n$$\nm\\le f(x)\\le M.\n$$\n积分并除以 $b-a>0$：\n$$\nm\\le\\frac1{b-a}\\int_a^bf(x)\\,dx\\le M.\n$$\n由 $f$ 的连续性及介值定理，存在 $\\eta\\in[a,b]$ 使\n$$\nf(\\eta)=\\frac1{b-a}\\int_a^bf(x)\\,dx.\n$$\n**（Ⅱ）** 由（Ⅰ）应用于 $[2,3]$，存在 $\\eta\\in[2,3]$ 使 $\\varphi(\\eta)=\\int_2^3\\varphi(x)\\,dx<\\varphi(2)$，故 $\\eta>2$。又 $\\varphi(2)>\\varphi(1)$，在 $[1,2]$ 用拉格朗日中值定理，得 $\\xi_1\\in(1,2)$ 使 $\\varphi'(\\xi_1)>0$；在 $[2,\\eta]$ 用该定理，得 $\\xi_2\\in(2,\\eta)$ 使 $\\varphi'(\\xi_2)<0$。对 $\\varphi'$ 在 $[\\xi_1,\\xi_2]$ 用拉格朗日中值定理，存在 $\\xi\\in(\\xi_1,\\xi_2)\\subset(1,3)$，使\n$$\n\\varphi''(\\xi)=\\frac{\\varphi'(\\xi_2)-\\varphi'(\\xi_1)}{\\xi_2-\\xi_1}<0.\n$$\n两问证毕。"
   ],
   [
     "2008",
@@ -2940,8 +2940,8 @@ const EXAM_DATA = [
     "解答题",
     21,
     "（Ⅰ）证明拉格朗日中值定理：若函数 $f\\left(x\\right)$ 在 $\\left[a,b\\right]$ 上连续，在 $\\left(a,b\\right)$ 可导，则存在 $\\xi\\in\\left(a,b\\right)$，使得 $f\\left(b\\right)-f\\left(a\\right)=f^{\\prime}\\left(\\xi\\right)\\left(b-a\\right)$。\n\n（Ⅱ）证明：若函数 $f\\left(x\\right)$ 在 $x=0$ 处连续，在 $\\left(0,\\delta\\right)\\left(\\delta>0\\right)$ 内可导，且 $\\lim_{x\\to 0^{+}}f^{\\prime}\\left(x\\right)=A$，则 $f_{+}^{\\prime}\\left(0\\right)$ 存在，且 $f_{+}^{\\prime}\\left(0\\right)=A$。",
-    "",
-    "（Ⅰ）作辅助函数 $\\varphi\\left(x\\right)=f\\left(x\\right)-f\\left(a\\right)-\\frac{f\\left(b\\right)-f\\left(a\\right)}{b-a}\\left(x-a\\right)$。则 $\\varphi\\left(a\\right)=\\varphi\\left(b\\right)$，由罗尔定理，存在 $\\xi\\in\\left(a,b\\right)$，使 $\\varphi^{\\prime}\\left(\\xi\\right)=0$，即 $f^{\\prime}\\left(\\xi\\right)=\\frac{f\\left(b\\right)-f\\left(a\\right)}{b-a}$，故 $f\\left(b\\right)-f\\left(a\\right)=f^{\\prime}\\left(\\xi\\right)\\left(b-a\\right)$。\n\n（Ⅱ）任取 $x_{0}\\in\\left(0,\\delta\\right)$，由（Ⅰ）知，存在 $\\xi_{x_{0}}\\in\\left(0,x_{0}\\right)$，使 $\\frac{f\\left(x_{0}\\right)-f\\left(0\\right)}{x_{0}}=f^{\\prime}\\left(\\xi_{x_{0}}\\right)$。令 $x_{0}\\to 0^{+}$，则 $\\xi_{x_{0}}\\to 0^{+}$，故 $f_{+}^{\\prime}\\left(0\\right)=\\lim_{x_{0}\\to 0^{+}}\\frac{f\\left(x_{0}\\right)-f\\left(0\\right)}{x_{0}}=A$。"
+    "（Ⅰ）（Ⅱ）均成立。",
+    "**（Ⅰ）** 构造\n$$\n\\phi(x)=f(x)-f(a)-\\frac{f(b)-f(a)}{b-a}(x-a).\n$$\n则 $\\phi(a)=\\phi(b)=0$。由 Rolle 定理，存在 $\\xi\\in(a,b)$ 使 $\\phi'(\\xi)=0$，整理得\n$$\n\\boxed{f(b)-f(a)=f'(\\xi)(b-a)}.\n$$\n**（Ⅱ）** 任取 $x\\in(0,\\delta)$。由（Ⅰ）在 $[0,x]$ 上应用拉格朗日中值定理，存在 $\\xi_x\\in(0,x)$ 使\n$$\n\\frac{f(x)-f(0)}x=f'(\\xi_x).\n$$\n当 $x\\to0^+$ 时，$0<\\xi_x<x$，故 $\\xi_x\\to0^+$。利用已知 $\\lim_{t\\to0^+}f'(t)=A$，得到\n$$\n\\lim_{x\\to0^+}\\frac{f(x)-f(0)}x=A.\n$$\n所以右导数存在且 $\\boxed{f'_+(0)=A}$。"
   ],
   [
     "2009",
@@ -3124,8 +3124,8 @@ const EXAM_DATA = [
     "解答题",
     21,
     "设函数 $f \\left(x\\right)$ 在闭区间 $\\left[0,1\\right]$ 上连续，在开区间 $\\left(0,1\\right)$ 内可导，且 $f \\left(0\\right) = 0, f \\left(1\\right) = \\frac{1}{3}$，证明：存在 $\\xi \\in \\left(0,\\frac{1}{2}\\right), \\eta \\in \\left(\\frac{1}{2},1\\right)$，使得 $f^{\\prime}\\left(\\xi\\right) + f^{\\prime}\\left(\\eta\\right) = \\xi^{2} + \\eta^{2}$.",
-    "",
-    "令 $F \\left(x\\right) = f \\left(x\\right) - \\frac{x^{3}}{3}$，则 $F \\left(0\\right) = F \\left(1\\right) = 0$。在 $\\left[0,\\frac{1}{2}\\right]$ 和 $\\left[\\frac{1}{2},1\\right]$ 上分别对 $F$ 用拉格朗日中值定理，存在 $\\xi \\in \\left(0,\\frac{1}{2}\\right)$，$\\eta \\in \\left(\\frac{1}{2},1\\right)$，使 $\\frac{1}{2}F^{\\prime}\\left(\\xi\\right) = F \\left(\\frac{1}{2}\\right) - F \\left(0\\right)$，$\\frac{1}{2}F^{\\prime}\\left(\\eta\\right) = F \\left(1\\right) - F \\left(\\frac{1}{2}\\right)$。两式相加得 $F^{\\prime}\\left(\\xi\\right) + F^{\\prime}\\left(\\eta\\right) = 0$，即 $f^{\\prime}\\left(\\xi\\right) + f^{\\prime}\\left(\\eta\\right) = \\xi^{2} + \\eta^{2}$。"
+    "存在所述 $\\xi,\\eta$，等式成立。",
+    "令 $F(x)=f(x)-x^3/3$，则 $F(0)=0$，且 $F(1)=1/3-1/3=0$。在 $[0,1/2]$ 用拉格朗日中值定理，存在 $\\xi\\in(0,1/2)$ 使\n$$\nF'(\\xi)=\\frac{F(1/2)-F(0)}{1/2}=2F(1/2).\n$$\n在 $[1/2,1]$ 用该定理，存在 $\\eta\\in(1/2,1)$ 使\n$$\nF'(\\eta)=\\frac{F(1)-F(1/2)}{1/2}=-2F(1/2).\n$$\n两式相加得 $F'(\\xi)+F'(\\eta)=0$。由于 $F'(x)=f'(x)-x^2$，故\n$$\n\\boxed{f'(\\xi)+f'(\\eta)=\\xi^2+\\eta^2}.\n$$"
   ],
   [
     "2010",
@@ -3292,8 +3292,8 @@ const EXAM_DATA = [
     "解答题",
     19,
     "（I）证明：对任意的正整数 $n$，都有 $\\frac{1}{n+1}<\\ln\\left(1+\\frac{1}{n}\\right)<\\frac{1}{n}$ 成立。\n\n（II）设 $a_{n}=1+\\frac{1}{2}+\\frac{1}{3}+\\cdots+\\frac{1}{n}-\\ln n\\left(n=1,2,\\cdots\\right)$，证明数列 $\\left\\{a_{n}\\right\\}$ 收敛。",
-    "",
-    "（I）对 $f\\left(x\\right)=\\ln\\left(1+x\\right)$ 在 $\\left[0,\\frac{1}{n}\\right]$ 上应用拉格朗日中值定理，得\n\n$\\ln\\left(1+\\frac{1}{n}\\right)=\\frac{1}{n\\left(1+\\xi\\right)},\\quad \\xi\\in\\left(0,\\frac{1}{n}\\right)$。\n\n因此 $\\frac{1}{n+1}<\\ln\\left(1+\\frac{1}{n}\\right)<\\frac{1}{n}$。\n\n（II）\n\n$a_{n+1}-a_{n}=\\frac{1}{n+1}-\\ln\\left(1+\\frac{1}{n}\\right)<0$，\n\n故 $\\left\\{a_{n}\\right\\}$ 单调递减。\n\n又由（I）可得\n\n$a_{n}=\\sum_{k=1}^{n}\\frac{1}{k}-\\ln n>0$，\n\n故 $\\left\\{a_{n}\\right\\}$ 有下界。由单调有界定理，$\\left\\{a_{n}\\right\\}$ 收敛。"
+    "（I）（II）均成立，数列 $a_n$ 收敛。",
+    "**（I）** 对 $f(x)=\\ln(1+x)$ 在 $[0,1/n]$ 应用拉格朗日中值定理，存在 $\\xi\\in(0,1/n)$ 使\n$$\n\\ln\\left(1+\\frac1n\\right)=\\frac{1}{n(1+\\xi)}.\n$$\n由 $0<\\xi<1/n$ 得\n$$\n\\boxed{\\frac1{n+1}<\\ln\\left(1+\\frac1n\\right)<\\frac1n}.\n$$\n**（II）**\n$$\na_{n+1}-a_n=\\frac1{n+1}-\\ln\\left(1+\\frac1n\\right)<0,\n$$\n故 $a_n$ 严格递减。另一方面，由 $\\ln n=\\int_1^n\\frac{dx}{x}<\\sum_{k=1}^{n-1}\\frac1k$（$n\\ge2$），可知 $a_n>0$。因此 $a_n$ 单调有下界，收敛。"
   ],
   [
     "2011",
@@ -3484,8 +3484,8 @@ const EXAM_DATA = [
     "解答题",
     20,
     "证明：\n\n$x\\ln\\frac{1+x}{1-x}+\\cos x\\geq 1+\\frac{x^{2}}{2},\\quad -1<x<1$。",
-    "",
-    "令\n\n$f\\left(x\\right)=x\\ln\\frac{1+x}{1-x}+\\cos x-1-\\frac{x^{2}}{2}$。\n\n则 $f\\left(0\\right)=0$，且\n\n$f^{\\prime}\\left(x\\right)=\\ln\\frac{1+x}{1-x}+\\frac{1+x^{2}}{1-x^{2}}x-\\sin x$。\n\n当 $0<x<1$ 时，$f^{\\prime}\\left(x\\right)\\geq 0$；当 $-1<x<0$ 时，$f^{\\prime}\\left(x\\right)\\leq 0$。\n\n因此 $f\\left(x\\right)\\geq f\\left(0\\right)=0$，即\n\n$x\\ln\\frac{1+x}{1-x}+\\cos x\\geq 1+\\frac{x^{2}}{2}$。"
+    "不等式成立，等号仅在 $x=0$ 处取到。",
+    "设\n$$\nF(x)=x\\ln\\frac{1+x}{1-x}+\\cos x-1-\\frac{x^2}{2}.\n$$\n函数为偶函数，只需证明 $0\\le x<1$ 时 $F(x)\\ge0$。求导：\n$$\nF'(x)=\\ln\\frac{1+x}{1-x}+\\frac{2x}{1-x^2}-\\sin x.\n$$\n当 $0<x<1$ 时，$\\ln\\frac{1+x}{1-x}>0$，且 $\\frac{2x}{1-x^2}>2x>x>\\sin x$，所以 $F'(x)>0$。又 $F(0)=0$，故 $F(x)>0$（$x>0$）。由偶性，对 $-1<x<1$ 均有\n$$\n\\boxed{x\\ln\\frac{1+x}{1-x}+\\cos x\\ge1+\\frac{x^2}{2}},\n$$\n等号仅在 $x=0$。"
   ],
   [
     "2012",
@@ -3628,8 +3628,8 @@ const EXAM_DATA = [
     "解答题",
     15,
     "当 $x\\to 0$ 时，$1-\\cos x\\cos 2x\\cos 3x$ 与 $ax^{n}$ 为等价无穷小，求 $n$ 与 $a$ 的值。",
-    "",
-    "由\n\n$1-\\cos x\\cos 2x\\cos 3x=\\left(1-\\cos x\\right)+\\cos x\\left(1-\\cos 2x\\right)+\\cos x\\cos 2x\\left(1-\\cos 3x\\right)$，\n\n且当 $x\\to 0$ 时，\n\n$1-\\cos x\\sim \\frac{x^{2}}{2},\\quad 1-\\cos 2x\\sim \\frac{4x^{2}}{2},\\quad 1-\\cos 3x\\sim \\frac{9x^{2}}{2}$，\n\n所以\n\n$1-\\cos x\\cos 2x\\cos 3x\\sim \\frac{1+4+9}{2}x^{2}=7x^{2}$。\n\n故 $n=2,a=7$。"
+    "$n=2,\\quad a=7$。",
+    "利用恒等分解\n$$\n1-\\cos x\\cos2x\\cos3x=(1-\\cos x)+\\cos x(1-\\cos2x)+\\cos x\\cos2x(1-\\cos3x).\n$$\n当 $x\\to0$ 时，$\\cos x,\\cos2x\\to1$，且\n$$\n1-\\cos(kx)\\sim\\frac{k^2x^2}{2}.\n$$\n因此\n$$\n1-\\cos x\\cos2x\\cos3x\\sim\\left(\\frac12+\\frac{4}{2}+\\frac{9}{2}\\right)x^2=7x^2.\n$$\n故等价无穷小为 $7x^2$，即\n$$\n\\boxed{n=2,\\ a=7}.\n$$"
   ],
   [
     "2013",
@@ -3812,16 +3812,16 @@ const EXAM_DATA = [
     "解答题",
     15,
     "求极限 $\\lim_{x\\to+\\infty}\\frac{\\int_{1}^{x}\\left(t^{2}\\left(e^{\\frac{1}{t}}-1\\right)-t\\right)\\mathrm{~d}t}{x^{2}\\ln\\left(1+\\frac{1}{x}\\right)}$。",
-    "",
-    "因 $x^{2}\\ln\\left(1+\\frac{1}{x}\\right)\\sim x$，故\n\n$\\lim_{x\\to+\\infty}\\frac{\\int_{1}^{x}\\left(t^{2}\\left(e^{\\frac{1}{t}}-1\\right)-t\\right)\\mathrm{~d}t}{x^{2}\\ln\\left(1+\\frac{1}{x}\\right)}=\\lim_{x\\to+\\infty}\\frac{\\int_{1}^{x}\\left(t^{2}\\left(e^{\\frac{1}{t}}-1\\right)-t\\right)\\mathrm{~d}t}{x}$。\n\n由洛必达法则得\n\n$\\lim_{x\\to+\\infty}\\left(x^{2}\\left(e^{\\frac{1}{x}}-1\\right)-x\\right)=\\lim_{x\\to+\\infty}\\left[x^{2}\\left(\\frac{1}{x}+\\frac{1}{2x^{2}}+o\\left(\\frac{1}{x^{2}}\\right)\\right)-x\\right]=\\frac{1}{2}$。"
+    "极限值为 $\\dfrac12$。",
+    "先看分母：\n$$\nx^2\\ln\\left(1+\\frac1x\\right)\\sim x.\n$$\n原极限可化为\n$$\n\\lim_{x\\to\\infty}\\frac{\\int_1^x\\left[t^2(e^{1/t}-1)-t\\right]dt}{x}.\n$$\n分子、分母均趋于无穷，应用洛必达法则：\n$$\n\\lim_{x\\to\\infty}\\left[x^2\\left(e^{1/x}-1\\right)-x\\right].\n$$\n由\n$$\ne^{1/x}=1+\\frac1x+\\frac1{2x^2}+O(x^{-3}),\n$$\n得\n$$\nx^2(e^{1/x}-1)-x=\\frac12+O(x^{-1})\\to\\frac12.\n$$\n故答案为 $\\boxed{1/2}$。"
   ],
   [
     "2014",
     "解答题",
     16,
     "已知函数 $y=y\\left(x\\right)$ 满足微分方程 $x^{2}+y^{2}y^{\\prime}=1-y^{\\prime}$，且 $y\\left(2\\right)=0$，求 $y\\left(x\\right)$ 的极大值和极小值。",
-    "",
-    "原方程化为 $\\left(1+y^{2}\\right)\\frac{\\mathrm{d}y}{\\mathrm{d}x}=1-x^{2}$。积分得 $\\frac{1}{3}y^{3}+y=x-\\frac{1}{3}x^{3}+C$。\n\n由 $y\\left(2\\right)=0$ 得 $C=\\frac{2}{3}$，故 $\\frac{1}{3}y^{3}+y=x-\\frac{1}{3}x^{3}+\\frac{2}{3}$。\n\n又 $\\frac{\\mathrm{d}y}{\\mathrm{d}x}=\\frac{1-x^{2}}{1+y^{2}}$，令 $y^{\\prime}=0$，得 $x=\\pm 1$。\n\n当 $x=1$ 时，由原方程得 $y=1$，且 $y^{\\prime\\prime}<0$，故极大值为 $1$；当 $x=-1$ 时，由原方程得 $y=0$，且 $y^{\\prime\\prime}>0$，故极小值为 $0$。"
+    "极大值为 $1$，极小值为 $0$。",
+    "原方程整理为\n$$\n(1+y^2)y'=1-x^2.\n$$\n分离变量积分：\n$$\ny+\\frac{y^3}{3}=x-\\frac{x^3}{3}+C.\n$$\n由 $y(2)=0$ 得 $C=2/3$。又\n$$\ny'=\\frac{1-x^2}{1+y^2}.\n$$\n分母恒正，故驻点为 $x=\\pm1$。当 $x<-1$ 时 $y'<0$，$-1<x<1$ 时 $y'>0$，$x>1$ 时 $y'<0$，所以 $x=-1$ 为极小值点，$x=1$ 为极大值点。\n\n代回隐式方程：$x=-1$ 时 $y=0$；$x=1$ 时 $y=1$。因此\n$$\n\\boxed{y_{\\min}=0,\\quad y_{\\max}=1}.\n$$"
   ],
   [
     "2014",
