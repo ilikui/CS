@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T12:46:59.162Z",
+  "generatedAt": "2026-11-17T12:47:53.346Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
@@ -1277,24 +1277,24 @@
       "answer": "B",
       "analysis": "直接映射中，主存块只能映射到唯一 Cache 行，行号 = 主存块号 mod Cache 行数。",
       "existingCards": [],
-      "confidence": "high-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
         {
           "card": "Cache 映射与命中率",
-          "score": 53,
+          "score": 47,
           "matchedTerms": [
             "cache",
             "mod",
-            "主存块号",
             "行数",
-            "主存块",
-            "存块号",
-            "直接映射",
+            "主存块号",
             "块号",
-            "替换",
-            "主存",
+            "直接映射",
             "直接映",
-            "接映射"
+            "接映射",
+            "映射中",
+            "射中主",
+            "中主存",
+            "主存块"
           ]
         },
         {
@@ -1393,17 +1393,15 @@
           "card": "存储芯片容量扩展",
           "score": 6,
           "matchedTerms": [
-            "ram",
-            "rom"
+            "rom",
+            "ram"
           ]
         },
         {
-          "card": "冯·诺依曼结构与存储程序",
-          "score": 6,
+          "card": "CPU 指令执行过程",
+          "score": 4,
           "matchedTerms": [
-            "存储器",
-            "储器中",
-            "存储器中"
+            "存储器"
           ]
         }
       ]
@@ -1418,26 +1416,8 @@
       "answer": "1024 行；块内地址 4 位；行号 10 位。",
       "analysis": "行数 = 16 KB / 16 B = 1024 = 2^10；块内偏移位数 log₂16=4；行号位数 log₂1024=10。",
       "existingCards": [],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
-        {
-          "card": "Cache 映射与命中率",
-          "score": 46,
-          "matchedTerms": [
-            "cache",
-            "块大小",
-            "字节",
-            "块内偏移",
-            "行数",
-            "kb",
-            "按字节",
-            "主存块",
-            "直接映射",
-            "地址",
-            "偏移",
-            "主存"
-          ]
-        },
         {
           "card": "Cache组相联映射与地址字段",
           "score": 43,
@@ -1454,6 +1434,24 @@
             "据区容",
             "区容量",
             "数据区容"
+          ]
+        },
+        {
+          "card": "Cache 映射与命中率",
+          "score": 33,
+          "matchedTerms": [
+            "cache",
+            "块大小",
+            "行数",
+            "偏移",
+            "地址",
+            "直接映射",
+            "直接映",
+            "接映射",
+            "主存块",
+            "数据区",
+            "=4",
+            "块内偏"
           ]
         },
         {
@@ -1549,24 +1547,6 @@
           ]
         },
         {
-          "card": "ALU 算术逻辑单元",
-          "score": 28,
-          "matchedTerms": [
-            "ir",
-            "pc",
-            "mar",
-            "指令",
-            "并写回",
-            "写回",
-            "结果",
-            "送入",
-            "发出",
-            "控制信",
-            "制信号",
-            "控制信号"
-          ]
-        },
-        {
           "card": "硬布线控制器与微程序控制器",
           "score": 24,
           "matchedTerms": [
@@ -1585,21 +1565,30 @@
           ]
         },
         {
-          "card": "冯·诺依曼结构与存储程序",
+          "card": "中断响应与异常处理",
           "score": 20,
           "matchedTerms": [
-            "控制器",
-            "存储器",
+            "控制",
             "pc",
-            "指令地",
-            "令地址",
-            "指令地址",
+            "一条指",
+            "条指令",
+            "一条指令",
+            "当前指",
+            "前指令",
+            "当前指令"
+          ]
+        },
+        {
+          "card": "单总线数据通路与暂存器",
+          "score": 17,
+          "matchedTerms": [
+            "mdr",
+            "存储器",
             "储器读",
-            "器读出",
             "存储器读",
-            "储器读出",
-            "存储器读出",
-            "前指令"
+            "控制信",
+            "制信号",
+            "控制信号"
           ]
         }
       ]
@@ -3069,26 +3058,8 @@
       "answer": "push和ret位于同一4KB页；Cache共16组，块内偏移为[5:0]、组号为[9:6]、Tag为[31:10]；CALL指令映射到第0组。",
       "analysis": "页大小决定页内偏移12位；Cache块大小决定块内偏移6位；64行4路组相联得到16组和4位组索引。",
       "existingCards": [],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
-        {
-          "card": "Cache 映射与命中率",
-          "score": 57,
-          "matchedTerms": [
-            "cache",
-            "组相联",
-            "tag",
-            "块大小",
-            "块内偏移",
-            "组索引",
-            "kb",
-            "主存块",
-            "地址",
-            "偏移",
-            "组号",
-            "命中"
-          ]
-        },
         {
           "card": "Cache组相联映射与地址字段",
           "score": 54,
@@ -3105,6 +3076,24 @@
             "kb",
             "索引",
             "块内偏"
+          ]
+        },
+        {
+          "card": "Cache 映射与命中率",
+          "score": 47,
+          "matchedTerms": [
+            "cache",
+            "组相联",
+            "tag",
+            "块大小",
+            "偏移",
+            "组索引",
+            "地址",
+            "组号",
+            "组号和",
+            "路组相联",
+            "主存块",
+            "路组相"
           ]
         },
         {
@@ -3467,24 +3456,6 @@
           ]
         },
         {
-          "card": "ALU 算术逻辑单元",
-          "score": 60,
-          "matchedTerms": [
-            "alu",
-            "无符号",
-            "溢出标志",
-            "移位器",
-            "指令",
-            "符号",
-            "结果",
-            "和逻辑",
-            "逻辑运",
-            "辑运算",
-            "和逻辑运",
-            "逻辑运算"
-          ]
-        },
-        {
           "card": "移位加法乘法与阵列乘法器",
           "score": 46,
           "matchedTerms": [
@@ -3537,6 +3508,24 @@
             "号溢出",
             "有符号溢"
           ]
+        },
+        {
+          "card": "定点补码加减与溢出",
+          "score": 28,
+          "matchedTerms": [
+            "alu",
+            "减法",
+            "溢出",
+            "加法",
+            "超出",
+            "超出范围",
+            "有符号",
+            "符号溢",
+            "号溢出",
+            "无符号",
+            "有符号溢",
+            "符号溢出"
+          ]
         }
       ]
     },
@@ -3553,24 +3542,6 @@
       "confidence": "high-candidate",
       "candidates": [
         {
-          "card": "Cache 映射与命中率",
-          "score": 110,
-          "matchedTerms": [
-            "cache",
-            "lru",
-            "组相联",
-            "tag",
-            "块大小",
-            "字节",
-            "块内偏移",
-            "组数",
-            "组索引",
-            "cpu",
-            "kb",
-            "int"
-          ]
-        },
-        {
           "card": "Cache组相联映射与地址字段",
           "score": 64,
           "matchedTerms": [
@@ -3586,6 +3557,24 @@
             "地址",
             "kb",
             "组索引6位"
+          ]
+        },
+        {
+          "card": "Cache 映射与命中率",
+          "score": 55,
+          "matchedTerms": [
+            "cache",
+            "lru",
+            "组相联",
+            "tag",
+            "块大小",
+            "组数",
+            "偏移",
+            "组索引",
+            "地址",
+            "路组相联",
+            "tag20位",
+            "主存块"
           ]
         },
         {
@@ -4125,42 +4114,6 @@
       "confidence": "high-candidate",
       "candidates": [
         {
-          "card": "ALU 算术逻辑单元",
-          "score": 62,
-          "matchedTerms": [
-            "alu",
-            "cpu",
-            "r2",
-            "r1",
-            "rs",
-            "rd",
-            "ir",
-            "mar",
-            "表示",
-            "指令",
-            "最多",
-            "符号"
-          ]
-        },
-        {
-          "card": "指令格式与操作码扩展",
-          "score": 52,
-          "matchedTerms": [
-            "指令格",
-            "令格式",
-            "操作码",
-            "指令格式",
-            "op",
-            "rs",
-            "md",
-            "rd",
-            "mar",
-            "mdr",
-            "定长指",
-            "长指令"
-          ]
-        },
-        {
           "card": "CPU 指令执行过程",
           "score": 44,
           "matchedTerms": [
@@ -4210,6 +4163,37 @@
             "寄存器编",
             "存器编号",
             "寄存器编号"
+          ]
+        },
+        {
+          "card": "ALU 算术逻辑单元",
+          "score": 28,
+          "matchedTerms": [
+            "alu",
+            "r1",
+            "r2",
+            "r3",
+            "寄存器",
+            "指令可",
+            "执行",
+            "有符号",
+            "符号溢",
+            "号溢出",
+            "有符号溢",
+            "符号溢出"
+          ]
+        },
+        {
+          "card": "单总线数据通路与暂存器",
+          "score": 27,
+          "matchedTerms": [
+            "alu",
+            "mdr",
+            "功能",
+            "r3",
+            "r1",
+            "r2",
+            "寄存器"
           ]
         }
       ]
@@ -4264,20 +4248,20 @@
         },
         {
           "card": "Cache 映射与命中率",
-          "score": 46,
+          "score": 45,
           "matchedTerms": [
             "lru",
             "组相联",
             "tag",
-            "字节",
-            "kb",
-            "按字节",
-            "地址",
             "偏移",
+            "地址",
             "组号",
-            "次访问",
-            "替换",
-            "主存"
+            "tlb",
+            "路组相联",
+            "2路组相联",
+            "路组相",
+            "8组",
+            "2路"
           ]
         },
         {
@@ -6038,26 +6022,8 @@
         "立即数扩展与移位指令",
         "指令译码与有效地址计算"
       ],
-      "confidence": "high-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
-        {
-          "card": "ALU 算术逻辑单元",
-          "score": 67,
-          "matchedTerms": [
-            "alu",
-            "cf",
-            "of",
-            "aluctr",
-            "alubsrc",
-            "r0",
-            "rs",
-            "ir",
-            "无符号",
-            "符号加",
-            "号加法",
-            "无符号加"
-          ]
-        },
         {
           "card": "整数溢出检测与异常处理",
           "score": 47,
@@ -6092,6 +6058,23 @@
             "rs2",
             "寄存器",
             "通用寄"
+          ]
+        },
+        {
+          "card": "ALU 算术逻辑单元",
+          "score": 32,
+          "matchedTerms": [
+            "alu",
+            "cf",
+            "of",
+            "执行加减",
+            "r3",
+            "数据通",
+            "据通路",
+            "数据通路",
+            "寄存器",
+            "执行",
+            "个标志"
           ]
         },
         {
@@ -6138,26 +6121,8 @@
         "虚拟地址分页与页内偏移",
         "RISC-V 指令格式与寄存器编码"
       ],
-      "confidence": "high-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
-        {
-          "card": "ALU 算术逻辑单元",
-          "score": 27,
-          "matchedTerms": [
-            "r2",
-            "r1",
-            "ir",
-            "指令",
-            "对应",
-            "至少",
-            "寄存器",
-            "通用寄",
-            "用寄存",
-            "通用寄存",
-            "用寄存器",
-            "通用寄存器"
-          ]
-        },
         {
           "card": "流水线结构冒险与数据冒险",
           "score": 21,
@@ -6171,23 +6136,6 @@
             "寄存器",
             "一条指",
             "一条指令"
-          ]
-        },
-        {
-          "card": "指令格式与操作码扩展",
-          "score": 21,
-          "matchedTerms": [
-            "kb",
-            "r5",
-            "r4",
-            "条指令",
-            "至少",
-            "对应",
-            "寄存器编号",
-            "寄存器",
-            "存储单",
-            "储单元",
-            "存储单元"
           ]
         },
         {
@@ -6220,6 +6168,32 @@
             "一条指",
             "条指令",
             "一条指令"
+          ]
+        },
+        {
+          "card": "寄存器组读写端口与译码",
+          "score": 14,
+          "matchedTerms": [
+            "ir",
+            "寄存器",
+            "存器编",
+            "器编号",
+            "寄存器编",
+            "存器编号",
+            "寄存器编号"
+          ]
+        },
+        {
+          "card": "计算机系统层次结构",
+          "score": 13,
+          "matchedTerms": [
+            "寄存器",
+            "的指令",
+            "通用寄存器",
+            "指令",
+            "语言语",
+            "言语句",
+            "语言语句"
           ]
         }
       ]
