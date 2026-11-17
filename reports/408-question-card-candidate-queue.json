@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T12:17:14.199Z",
+  "generatedAt": "2026-11-17T12:18:01.780Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -13833,14 +13833,14 @@
           ]
         },
         {
-          "card": "大小端存储",
+          "card": "数组下标寻址与元素宽度",
           "score": 2,
           "matchedTerms": [
             "不是"
           ]
         },
         {
-          "card": "数组下标寻址与元素宽度",
+          "card": "中断与 DMA",
           "score": 2,
           "matchedTerms": [
             "不是"
@@ -19485,18 +19485,18 @@
           ]
         },
         {
-          "card": "大小端存储",
-          "score": 6,
-          "matchedTerms": [
-            "字节序",
-            "不是"
-          ]
-        },
-        {
           "card": "小端字节序与补码读取",
           "score": 6,
           "matchedTerms": [
             "字节序"
+          ]
+        },
+        {
+          "card": "Cache 直接映射与组相联",
+          "score": 6,
+          "matchedTerms": [
+            "字节",
+            "中每个"
           ]
         }
       ]
@@ -30714,12 +30714,11 @@
           ]
         },
         {
-          "card": "大小端存储",
+          "card": "Cache 替换与写策略",
           "score": 7,
           "matchedTerms": [
-            "d6",
-            "页号",
-            "不是"
+            "lru",
+            "换策略"
           ]
         }
       ]
