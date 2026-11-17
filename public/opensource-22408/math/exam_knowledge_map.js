@@ -6780,8 +6780,7 @@
     "status": "verified",
     "questionKey": "2016-填空题-9",
     "primary": [
-      "CAL-05-H",
-      "CAL-05-C"
+      "CAL-05-H"
     ],
     "secondary": [
       "CAL-02-C",
