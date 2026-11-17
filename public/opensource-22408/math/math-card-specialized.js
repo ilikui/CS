@@ -144,7 +144,19 @@ const poly=x=>{let sum=0,term=1;for(let j=0;j<=n;j++){if(j===0)term=1;else term*
 body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="泰勒多项式阶数变化与原函数逼近"><path d="M35 205H430 M230 18V238" stroke="#9aaabd"/><path d="'+path(x=>Math.exp(x))+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+path(poly)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="6 4"/><text x="48" y="25" fill="'+COLORS.blue+'">原函数 eˣ</text><text x="48" y="47" fill="'+COLORS.orange+'">Tₙ(x)，n='+n+'</text><text x="300" y="250" fill="'+COLORS.ink+'">蓝：原函数；橙：近似</text></svg>';
 desc='拖动改变麦克劳林多项式阶数 n='+n+'。橙色 Tₙ(x)=1+x+x²/2!+…+xⁿ/n! 与蓝色 eˣ 在 x=0 附近逐阶贴合；阶数越高，局部近似通常越精确。';
 }else if(k==='shape'){
-if(/渐近/.test(t)){
+if(/单调性|单调区间/.test(t)){
+const x=(p-1.075)*2.5,y=x*x*x/3-3*x,slope=x*x-3,X=q=>230+q*42,Y=q=>135-q*24;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="单调区间专属动态图"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>q*q*q/3-3*q,-4,4,-4,4)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(x-1)+' '+Y(y-slope)+'L'+X(x+1)+' '+Y(y+slope)+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.green+'"/><text x="38" y="24" fill="'+COLORS.blue+'">f′(x)=x²−3</text><text x="38" y="46" fill="'+COLORS.orange+'">切线斜率 '+slope.toFixed(2)+'</text><text x="38" y="245" fill="'+COLORS.green+'">+ / − / + 对应 增 / 减 / 增</text></svg>';
+desc='专属单调性演示：f=x³/3−3x，f′=x²−3。滑块移动切点，临界点 ±√3 将曲线分为增、减、增三个区间。';
+}else if(/极值|费马|驻点|最值候选/.test(t)){
+const x=(p-1.075)*1.8,y=x*x*x/3-3*x,slope=x*x-3,X=q=>230+q*42,Y=q=>135-q*24;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="极值专属动态图"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>q*q*q/3-3*q,-4,4,-4,4)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(x-1.1)+' '+Y(y-1.1*slope)+'L'+X(x+1.1)+' '+Y(y+1.1*slope)+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.green+'"/><path d="M'+X(x)+' '+Y(y)+'V245" stroke="'+COLORS.green+'" stroke-dasharray="4 4"/><text x="38" y="24" fill="'+COLORS.blue+'">f′(x)=x²−3</text><text x="38" y="46" fill="'+COLORS.orange+'">当前 f′='+slope.toFixed(2)+'</text><text x="38" y="245" fill="'+COLORS.green+'">+→− 极大；−→+ 极小</text></svg>';
+desc='专属极值演示：f=x³/3−3x。在 −√3 处导数由正变负形成极大，在 √3 处由负变正形成极小。驻点不自动等于极值点。';
+}else if(/凹凸|拐点|二阶导数/.test(t)){
+const x=(p-1.075)*2.6,y=x*x*x/3,slope=x*x,second=2*x,X=q=>230+q*40,Y=q=>135-q*26;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="凹凸性与拐点专属动态图"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>q*q*q/3,-4,4,-4,4)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(x-1.2)+' '+Y(y-1.2*slope)+'L'+X(x+1.2)+' '+Y(y+1.2*slope)+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M'+X(x)+' 20V245" stroke="'+COLORS.green+'" stroke-dasharray="4 4"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.green+'"/><text x="38" y="24" fill="'+COLORS.blue+'">f′′(x)=2x</text><text x="38" y="46" fill="'+COLORS.orange+'">当前 f′′='+second.toFixed(2)+'</text><text x="38" y="245" fill="'+COLORS.green+'">穿过 0：f′′ 由负变正</text></svg>';
+desc='专属凹凸/拐点演示：f=x³/3，f′′=2x。观察点穿过 0 时，二阶导数由负变正，曲线弯曲方向改变，原点为拐点；必须验证变号。';
+}else if(/渐近/.test(t)){
 const c=(p-1.075)*.45;
 body=graph(x=>1/(x-c)+.2*x).replace('</svg>','<path d="M'+(230+c*48)+' 12V250" stroke="'+COLORS.orange+'" stroke-dasharray="5 5" stroke-width="2"/><text x="'+Math.min(355,230+c*48+5)+'" y="25" fill="'+COLORS.orange+'">x='+c.toFixed(2)+'</text></svg>');
 desc='滑块移动竖直渐近线 x=c；蓝色曲线在 x→c 时发散。此例另有斜渐近线 y=0.2x；判断渐近线必须回到相应极限定义。';
