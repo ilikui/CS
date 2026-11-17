@@ -5531,7 +5531,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2009 年原始题干、标准答案与解析，并按题目实际考查的概念人工匹配知识卡；不是依据题号机械归类。"
-    }
+    },
+    "steps": [
+      "先确认题目描述的是冯·诺依曼结构：指令和数据都以二进制存放在存储器中。",
+      "CPU在取指阶段按PC取出的内容解释为指令；在执行阶段按指令要求访问的数据才作为操作数。",
+      "因此区分依据是指令周期所处阶段，而不是操作码译码结果、寻址方式或存储单元位置，选C。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2009-12-short整型符号扩展": {
     "year": 2009,
@@ -5545,7 +5551,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2009 年原始题干、标准答案与解析，并按题目实际考查的概念人工匹配知识卡；不是依据题号机械归类。"
-    }
+    },
+    "steps": [
+      "先按16位补码表示short y=−9：9=0009H，取反加1得FFF7H。",
+      "int为32位，y参与x+y前先符号扩展：FFF7H→FFFFFFF7H。",
+      "x=127=0000007FH，计算0000007FH+FFFFFFF7H=00000076H（保留32位）。",
+      "所以x=0000007FH、y=FFF7H、z=00000076H，选D。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2009-16-相对寻址目标地址": {
     "year": 2009,
@@ -5564,7 +5577,13 @@ window.CARD_QUESTION_MAP = {
       "x86 CALL/JMP/RET 控制转移与相对寻址",
       "x86 相对寻址与转移目标计算"
     ],
-    "topic": "计算机组成原理"
+    "topic": "计算机组成原理",
+    "steps": [
+      "相对寻址的有效地址以取完当前指令后的PC为基准。",
+      "指令起始地址2000H，指令长度2字节，因此NextPC=2000H+2=2002H。",
+      "位移字段06H按正数解释，目标地址=2002H+06H=2008H，选C。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2009-18-流水线时钟周期": {
     "year": 2009,
@@ -5578,7 +5597,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2009 年原始题干、标准答案与解析，并按题目实际考查的概念人工匹配知识卡；不是依据题号机械归类。"
-    }
+    },
+    "steps": [
+      "流水线时钟周期必须不小于任一流水段的组合逻辑延迟。",
+      "比较四段延迟90、80、70、60ns，最慢段为90ns。",
+      "因此最小时钟周期为90ns，选A。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2009-21-Cache命中率": {
     "year": 2009,
@@ -5592,7 +5617,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2009 年原始题干、标准答案与解析，并按题目实际考查的概念人工匹配知识卡；不是依据题号机械归类。"
-    }
+    },
+    "steps": [
+      "总访存次数为1000次，缺失次数为50次。",
+      "命中次数=1000−50=950次。",
+      "命中率=950/1000=95%，选D。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2009-22-外部中断事件": {
     "year": 2009,
@@ -5606,7 +5637,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2009 年原始题干、标准答案与解析，并按题目实际考查的概念人工匹配知识卡；不是依据题号机械归类。"
-    }
+    },
+    "steps": [
+      "外部中断由CPU执行指令之外的外设/外部事件触发。",
+      "键盘输入来自外部设备，属于外部中断。",
+      "除数为0和访存缺页属于执行指令引起的同步异常；浮点下溢按题目给定机器处理，故选A。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2009-25-打印机资源死锁": {
     "year": 2009,
@@ -5718,7 +5755,16 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "已逐题核对原始题干与原始教学解析；答案中的 C5–C10 控制信号及可合并节拍方案均摘自原题库参考解析，分别关联数据通路与指令执行微操作知识卡。"
-    }
+    },
+    "steps": [
+      "指令功能为M[(R1)]←M[(R1)]+R0，先读取R1所指主存单元。",
+      "C5：R1out、MARin，将地址装入MAR；C6：MemR、MDRinE，从主存读入MDR。",
+      "C7：MDRout、Ain，将内存操作数送入ALU暂存器A。",
+      "C8：R0out、Add、ACin，ALU执行A+R0并将结果写入AC。",
+      "C9：ACout、MDRin，将结果送MDR；C10：MDRoutE、MemW，将结果写回M[MAR]。",
+      "若硬件允许C6同时执行R0out、Ain，可把R0预装入A，后续C7直接相加，节拍可减少；是否可合并要检查总线资源冲突。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2009-44-ADD指令微操作与执行周期": {
     "year": 2009,
@@ -5844,7 +5890,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "CPU执行时间=指令条数×平均CPI×时钟周期=指令条数×CPI/主频。",
+      "提高主频可缩短时钟周期；优化数据通路可能减少CPI或提高时钟频率；编译优化可能减少指令条数或降低平均CPI。",
+      "因此题目列出的三种优化都可能缩短CPU执行时间，选D。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-14-整数浮点数类型转换": {
     "year": 2010,
@@ -5858,7 +5910,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "785可由binary32精确表示，int→float→int仍为785，I正确。",
+      "1567.8转int会截去小数部分成为1567，再转float为1567.0，不等于1567.8，II错误。",
+      "float→double→float恢复原float值，III正确。",
+      "1.5e100远大于1567.8，计算d+f时f可能被舍入掉，(d+f)-d不等于f，IV错误。",
+      "因此仅I、III正确，选B。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-15-存储芯片地址扩展": {
     "year": 2010,
@@ -5872,7 +5932,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "先算目标存储器为8K×8，芯片为2K×4。",
+      "字扩展组数=8K/2K=4；位扩展并联数=8/4=2。",
+      "总芯片数=4×2=8片；每组两片并联形成2K×8。",
+      "四组地址区间依次为0000H～07FFH、0800H～0FFFH、1000H～17FFH、1800H～1FFFH；地址0B1FH落在第二组，组起始地址0800H，选D。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-16-RAM与ROM特性": {
     "year": 2010,
@@ -5886,7 +5953,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "RAM包括SRAM和DRAM，断电后数据丢失；ROM断电后仍可保存信息。",
+      "RAM和ROM均可随机访问，随机存取不等于RAM这一存储器类别。",
+      "Cache通常由SRAM实现；ROM不能直接替代Cache。",
+      "DRAM需要周期刷新，ROM不需要，因此按题目选项判断仅A正确。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-18-汇编程序员可见寄存器": {
     "year": 2010,
@@ -5900,7 +5974,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "汇编程序员可见寄存器是指可通过指令显式读取/修改的寄存器。",
+      "PC可通过跳转、调用等控制转移指令改变，属于程序员可见状态。",
+      "MAR、MDR和指令寄存器IR属于CPU内部工作/接口寄存器，程序通常不能直接访问，选B。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-19-流水线转发与阻塞": {
     "year": 2010,
@@ -5914,7 +5994,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "流水线冒险分结构冒险、数据冒险和控制冒险。",
+      "数据旁路/转发把生产者结果直接送给消费者，避免等待写回寄存器后再读取。",
+      "结构冒险需增加或分离硬件资源；控制冒险需分支预测、延迟槽或冲刷流水线处理。",
+      "按题目选项，旁路转发针对数据相关，可减少相应停顿，选A。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-20-总线标准识别": {
     "year": 2010,
@@ -5928,7 +6015,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "识别常见总线标准：ISA、EISA、VESA、PCI、PCI-Express、AGP等。",
+      "排除CRT（显示设备类型）、CPI（性能指标）、RAM（存储器类型）和MIPS（性能指标）。",
+      "剩余符合总线标准的选项D。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-22-显示存储器带宽计算": {
     "year": 2010,
@@ -5942,7 +6035,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "每帧显示数据量=分辨率×每像素位数=1600×1200×24bit。",
+      "每秒刷新85帧，刷新带宽=1600×1200×24×85=3,916,800,000bit/s=3916.8Mbps。",
+      "若刷新占显存总带宽50%，则总带宽至少=3916.8/0.5=7833.6Mbps≈7834Mbps，选D。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-24-进程创建事件": {
     "year": 2010,
@@ -6026,7 +6125,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "键盘是外部输入设备，输入事件到来时可向CPU发出中断请求。",
+      "CPU响应后转入键盘中断服务程序，读取设备数据/状态并完成必要处理。",
+      "因此键盘输入采用中断驱动I/O，选B。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-35-RIP距离矢量不可达": {
     "year": 2010,
@@ -6396,7 +6501,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "按严格上三角矩阵行优先填入 15 个元素，分行长度为 5、4、3、2、1，得到边：0→1(4)、0→2(6)、1→2(5)、2→3(4)、2→4(3)、3→5(3)、4→5(3)。",
+      "正向计算 ve：ve(0)=0，ve(1)=4，ve(2)=max(6,4+5)=9，ve(3)=13，ve(4)=12，ve(5)=max(13+3,12+3)=16。",
+      "逆向计算 vl：vl(5)=16，vl(4)=13，vl(3)=13，vl(2)=min(13-4,13-3)=9，vl(1)=4，vl(0)=min(4-4,9-6)=0。",
+      "活动时差为零的边是 0→1、1→2、2→3、3→5，故关键路径长度 4+5+4+3=16。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2011-42::有序数组中位数的二分缩减": {
     "year": 2011,
@@ -6414,7 +6526,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "分别求当前区间的中位数 a、b；若 a=b，直接返回。",
+      "若 a<b，舍弃 A 中较小的一半，同时舍弃 B 中较大的一半，保留中位数边界；若 a>b 则对称处理。",
+      "当前区间长度为奇数时保留两侧中位数；长度为偶数时舍弃相应中位数所在半区的一端，确保两个区间长度相等。",
+      "区间缩小至各剩一个元素时，返回两者较小值（题目定义的是合并后第 n 个，即下中位数）。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2011-43::定点补码加减与溢出": {
     "year": 2011,
@@ -6434,7 +6553,16 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "134=86H=10000110B；246=F6H=11110110B，因此 R1=86H。",
+      "无符号减法 x-y：86H-F6H 等价于 86H+0AH=90H，低 8 位结果为 R5=90H。",
+      "无符号加法 x+y：86H+F6H=17CH，截取低 8 位得 R6=7CH。",
+      "将 86H 按 8 位补码解释为 -122；m=-122，n=F6H 按补码解释为 -10；k1=-122-(-10)=-112，结果 90H，范围内。",
+      "k2=-122+(-10)=-132，超出 8 位有符号数范围 [-128,127]，发生溢出。",
+      "加法器通过对减数按位取反并令最低位进位输入为 1 实现减法；补码有符号与无符号运算共享模 2^8 加法硬件。溢出判断需结合符号位/最高位与次高位进位，而无符号溢出看最高位进位。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2011-44::TLB 与多级页表联合转换": {
     "year": 2011,
@@ -6453,7 +6581,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "16MB=2^24B，所以虚拟地址 24 位；4KB=2^12B，页内偏移 12 位，虚页号 12 位。1MB=2^20B，物理地址 20 位，页框号 8 位。",
+      "Cache 块 32B=2^5B，块内偏移 5 位；8 行需要 3 位行号；Tag=20-5-3=12 位。",
+      "VA 001C60H 的 VPN=001H、页内偏移=C60H。页表项 001H 有效且 PFN=04H，故 PA=04C60H。",
+      "PA 04C60H 的 Cache 行号为 (04C60H>>5)&7=3；Tag=04C60H>>8=04CH。Cache 第 3 行有效但存储 Tag=105H，与 04CH 不同，因此不命中。",
+      "VA 024BACH 的 VPN=024H。8 项、4 路组相联的 TLB 有 2 组，最低 1 位 VPN 作为组号，剩余 11 位为 Tag。VPN 024H 的组号为 0、Tag=012H；组 0 存在有效 Tag=012H 项，TLB 命中，表示页面驻留主存。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2011-44::Cache 直接映射与组相联": {
     "year": 2011,
@@ -6472,7 +6608,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "16MB=2^24B，所以虚拟地址 24 位；4KB=2^12B，页内偏移 12 位，虚页号 12 位。1MB=2^20B，物理地址 20 位，页框号 8 位。",
+      "Cache 块 32B=2^5B，块内偏移 5 位；8 行需要 3 位行号；Tag=20-5-3=12 位。",
+      "VA 001C60H 的 VPN=001H、页内偏移=C60H。页表项 001H 有效且 PFN=04H，故 PA=04C60H。",
+      "PA 04C60H 的 Cache 行号为 (04C60H>>5)&7=3；Tag=04C60H>>8=04CH。Cache 第 3 行有效但存储 Tag=105H，与 04CH 不同，因此不命中。",
+      "VA 024BACH 的 VPN=024H。8 项、4 路组相联的 TLB 有 2 组，最低 1 位 VPN 作为组号，剩余 11 位为 Tag。VPN 024H 的组号为 0、Tag=012H；组 0 存在有效 Tag=012H 项，TLB 命中，表示页面驻留主存。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2012-41::多路归并与双指针": {
     "year": 2012,
@@ -6493,7 +6637,17 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "两表长度分别为 m、n 时，最坏比较次数为 m+n-1。",
+      "合并最短的 A(10) 与 B(35)，得到 AB(45)，代价 44。",
+      "合并 AB(45) 与 C(40)，得到 ABC(85)，代价 84。",
+      "合并 D(50) 与 E(60)，得到 DE(110)，代价 109。",
+      "合并 ABC(85) 与 DE(110)，得到 ABCDE(195)，代价 194。",
+      "合并 ABCDE(195) 与 F(200)，得到 395，代价 394。",
+      "总比较次数 44+84+109+194+394=825。对 N 个不等长有序表，反复取长度最小的两个合并，等价于构造哈夫曼树，可最小化加权路径长度及总合并代价。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2012-41::外部排序与多路归并": {
     "year": 2012,
@@ -6514,7 +6668,17 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "两表长度分别为 m、n 时，最坏比较次数为 m+n-1。",
+      "合并最短的 A(10) 与 B(35)，得到 AB(45)，代价 44。",
+      "合并 AB(45) 与 C(40)，得到 ABC(85)，代价 84。",
+      "合并 D(50) 与 E(60)，得到 DE(110)，代价 109。",
+      "合并 ABC(85) 与 DE(110)，得到 ABCDE(195)，代价 194。",
+      "合并 ABCDE(195) 与 F(200)，得到 395，代价 394。",
+      "总比较次数 44+84+109+194+394=825。对 N 个不等长有序表，反复取长度最小的两个合并，等价于构造哈夫曼树，可最小化加权路径长度及总合并代价。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2012-44::流水线结构冒险与数据冒险": {
     "year": 2012,
@@ -6532,7 +6696,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "x=-513 的 16 位补码为 FDFFH。原解析按保留符号位的右移得到 FEFFH；由于题目指令格式表在 OCR 文本中缺失，SHR 的具体移位语义需以原卷指令定义为准，不能仅凭助记符断言。",
+      "五段流水线无阻塞时，首条指令 5 周期完成，之后每周期完成一条；4 条指令共 5+(4-1)=8 周期。",
+      "无转发且寄存器同周期不能读写，I3 的 ID 必须等待 I1、I2 的结果写回；按序发射使后续 I4 不能越过停滞的 I3，因此 IF 也被阻塞。",
+      "赋值 x=x*2+a 可用 LOAD x、LOAD a、SHL x（或 ADD x,x）、ADD x,a、STORE x 五条指令；原题流水线图及寄存器依赖时序未被完整 OCR，原解析给出最少 17 周期，需对照原卷图表完成最终周期表复核。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2012-44::移位运算与舍入": {
     "year": 2012,
@@ -6550,7 +6721,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "x=-513 的 16 位补码为 FDFFH。原解析按保留符号位的右移得到 FEFFH；由于题目指令格式表在 OCR 文本中缺失，SHR 的具体移位语义需以原卷指令定义为准，不能仅凭助记符断言。",
+      "五段流水线无阻塞时，首条指令 5 周期完成，之后每周期完成一条；4 条指令共 5+(4-1)=8 周期。",
+      "无转发且寄存器同周期不能读写，I3 的 ID 必须等待 I1、I2 的结果写回；按序发射使后续 I4 不能越过停滞的 I3，因此 IF 也被阻塞。",
+      "赋值 x=x*2+a 可用 LOAD x、LOAD a、SHL x（或 ADD x,x）、ADD x,a、STORE x 五条指令；原题流水线图及寄存器依赖时序未被完整 OCR，原解析给出最少 17 周期，需对照原卷图表完成最终周期表复核。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2012-46::文件物理分配方式": {
     "year": 2012,
@@ -6568,7 +6746,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "磁盘块总数=4TB/1KB=2^32，块号至少 32 位，即 4B。512B 直接索引区可存 512/4=128 项，单文件最大 128×1KB=128KB。",
+      "原方案连续区的块数字段为 2B，可表示 2^16 个块，即 64MB；直接索引区有 504/6=84 项，可表示 84KB。两部分相加为 64MB+84KB=65620KB。",
+      "若重新分配 8B，起始块号至少需要 4B 才能表示整个 2^32 块地址空间；块数字段分配 4B 可表示最多 2^32 个块，即 4TB。",
+      "由于整个文件系统总容量只有 4TB，单个文件的实际长度不能超过 4TB；不能把“4TB 连续区容量”再与 84KB 直接索引容量相加，得到超过全盘容量的结果。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2012-46::文件控制块 FCB 与目录查找": {
     "year": 2012,
@@ -6586,7 +6771,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "磁盘块总数=4TB/1KB=2^32，块号至少 32 位，即 4B。512B 直接索引区可存 512/4=128 项，单文件最大 128×1KB=128KB。",
+      "原方案连续区的块数字段为 2B，可表示 2^16 个块，即 64MB；直接索引区有 504/6=84 项，可表示 84KB。两部分相加为 64MB+84KB=65620KB。",
+      "若重新分配 8B，起始块号至少需要 4B 才能表示整个 2^32 块地址空间；块数字段分配 4B 可表示最多 2^32 个块，即 4TB。",
+      "由于整个文件系统总容量只有 4TB，单个文件的实际长度不能超过 4TB；不能把“4TB 连续区容量”再与 84KB 直接索引容量相加，得到超过全盘容量的结果。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2012-47::TCP 三次握手与四次挥手": {
     "year": 2012,
@@ -6605,7 +6797,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "检查 IP 源地址：1、3、4 号分组源地址为 192.168.0.8，因此由 H 发送。",
+      "1 号段 SYN=1、ACK=0；2 号段 SYN=1、ACK=1；3 号段 ACK=1，三者构成三次握手。",
+      "以太网最小有效载荷为 46B；3、5 号 IP 分组总长度为 0x28=40B，需填充至最小帧长。",
+      "3 号段的数据起始序号为 846B41C6H；5 号段 ACK 为 846B41D6H，差值 0x10=16B，因此 S 已收到 16B 应用数据。",
+      "对应 S 发出的 IP 分组标识为 68H；TTL 从 40H 降至 31H，差值 0x0F=15，因此经过 15 个路由器。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2012-47::以太网帧与 MAC 地址": {
     "year": 2012,
@@ -6624,7 +6824,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "检查 IP 源地址：1、3、4 号分组源地址为 192.168.0.8，因此由 H 发送。",
+      "1 号段 SYN=1、ACK=0；2 号段 SYN=1、ACK=1；3 号段 ACK=1，三者构成三次握手。",
+      "以太网最小有效载荷为 46B；3、5 号 IP 分组总长度为 0x28=40B，需填充至最小帧长。",
+      "3 号段的数据起始序号为 846B41C6H；5 号段 ACK 为 846B41D6H，差值 0x10=16B，因此 S 已收到 16B 应用数据。",
+      "对应 S 发出的 IP 分组标识为 68H；TTL 从 40H 降至 31H，差值 0x0F=15，因此经过 15 个路由器。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2012-47::IP TTL 与逐跳转发": {
     "year": 2012,
@@ -6643,7 +6851,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "检查 IP 源地址：1、3、4 号分组源地址为 192.168.0.8，因此由 H 发送。",
+      "1 号段 SYN=1、ACK=0；2 号段 SYN=1、ACK=1；3 号段 ACK=1，三者构成三次握手。",
+      "以太网最小有效载荷为 46B；3、5 号 IP 分组总长度为 0x28=40B，需填充至最小帧长。",
+      "3 号段的数据起始序号为 846B41C6H；5 号段 ACK 为 846B41D6H，差值 0x10=16B，因此 S 已收到 16B 应用数据。",
+      "对应 S 发出的 IP 分组标识为 68H；TTL 从 40H 降至 31H，差值 0x0F=15，因此经过 15 个路由器。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2013-41::摩尔投票法与主元素": {
     "year": 2013,
@@ -6661,7 +6877,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "主元素出现次数超过 n/2，因此把数组元素两两配对时，不同元素相互抵消后，若主元素存在，最终候选必为主元素。",
+      "第一遍维护 candidate 和 count：相同则 count++；不同则 count--；count 为 0 时用当前元素替换候选并令 count=1。",
+      "候选阶段不能证明主元素一定存在，必须第二遍统计 candidate 的真实出现次数。",
+      "若 occurrences > n/2，返回 candidate；否则返回 -1。注意题目要求严格大于，而不是大于等于。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2013-44::指令系统与寻址方式": {
     "year": 2013,
@@ -6681,7 +6904,16 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "目标地址公式为 PC+2+2×OFFSET，PC 每条 16 位指令递增 2 字节，因此存储器按字节编址。",
+      "OFFSET=E3H，按 8 位补码解释为 -29；符号扩展后左移 1 位得到 FFC6H（即 -58）。",
+      "条件检测位 C=0、Z=1、N=1，表示检测 ZF 或 NF，任一被检测标志为 1 即转移。CF=0、ZF=0、NF=1 时转移：200CH+2+FFC6H=1FD4H。",
+      "CF=1、ZF=0、NF=0 时，被检测的 ZF、NF 均为 0，因此不转移，PC=200CH+2=200EH。",
+      "无符号数比较小于等于等价于 CF=1 或 ZF=1，因此 C=1、Z=1；不需要检测符号标志，N=0。",
+      "数据通路部件按公开答案对应为 IR、移位寄存器、加法器。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2013-44::ALU 标志位 CF 与 OF": {
     "year": 2013,
@@ -6701,7 +6933,16 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "目标地址公式为 PC+2+2×OFFSET，PC 每条 16 位指令递增 2 字节，因此存储器按字节编址。",
+      "OFFSET=E3H，按 8 位补码解释为 -29；符号扩展后左移 1 位得到 FFC6H（即 -58）。",
+      "条件检测位 C=0、Z=1、N=1，表示检测 ZF 或 NF，任一被检测标志为 1 即转移。CF=0、ZF=0、NF=1 时转移：200CH+2+FFC6H=1FD4H。",
+      "CF=1、ZF=0、NF=0 时，被检测的 ZF、NF 均为 0，因此不转移，PC=200CH+2=200EH。",
+      "无符号数比较小于等于等价于 CF=1 或 ZF=1，因此 C=1、Z=1；不需要检测符号标志，N=0。",
+      "数据通路部件按公开答案对应为 IR、移位寄存器、加法器。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2013-45::进程同步与信号量": {
     "year": 2013,
@@ -6720,7 +6961,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "empty 初值 500，表示尚可容纳的人数；mutex 初值 1，表示出入口一次只允许一个人通过。",
+      "进门前先 P(empty)，确保馆内人数不会超过 500；再 P(mutex) 独占出入口，执行进门，随后 V(mutex)。",
+      "参观过程不占用出入口互斥量。",
+      "离馆时 P(mutex)，执行出门，再 V(mutex)；最后 V(empty) 归还一个容量名额。",
+      "容量信号量应在进门前申请、离馆后释放；不能在进门后才申请容量，否则可能短暂超员。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2013-46::页表结构与地址转换": {
     "year": 2013,
@@ -6740,7 +6989,16 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "一级页表地址划分为 20 位页号和 12 位页内偏移，因此页大小=2^12=4096B=4KB。",
+      "逻辑页号共有 2^20 项，每个页表项 4B，页表最大空间=2^20×4=2^22B=4MB。",
+      "二级页表将 20 位页号拆为 10 位页目录号和 10 位页表索引；页目录号取 LA[31:22]，页表索引取 LA[21:12]。",
+      "页面大小 4KB，代码段起始 LA=00008000H，对应逻辑页号 8；8KB 长度覆盖页号 8、9。",
+      "页表基址 00200000H，每项 4B：页号 8 的 PTE 地址=00200000H+8×4=00200020H；页号 9 的 PTE 地址=00200000H+9×4=00200024H。",
+      "装载起始物理地址 00900000H，连续 8KB 占用页框 00900H、00901H；第二页起始物理地址=00900000H+1000H=00901000H。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2013-47::路由选择与转发表": {
     "year": 2013,
@@ -6759,7 +7017,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "依据题图中 AS1/AS2 的子网地址，将可连续聚合的网络前缀合并，减少 R2 路由表项。",
+      "按公开答案，R2 到 153.14.5.0/24 经下一跳 153.14.3.2、接口 S0。",
+      "到 194.17.20.0/23 的聚合路由经下一跳 194.17.24.2、接口 S1；194.17.20.128/25 是直连网段，接口 E0。",
+      "目的地址 194.17.20.200 属于 194.17.20.128/25；该 /25 比聚合的 /23 更长，按最长前缀匹配选择 E0。",
+      "R1 与 R2 属于不同自治系统边界的路由信息交换，使用 BGP（BGP-4）；BGP 使用 TCP 传输。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2013-47::BGP UPDATE 报文与路由通告": {
     "year": 2013,
@@ -6778,7 +7044,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "依据题图中 AS1/AS2 的子网地址，将可连续聚合的网络前缀合并，减少 R2 路由表项。",
+      "按公开答案，R2 到 153.14.5.0/24 经下一跳 153.14.3.2、接口 S0。",
+      "到 194.17.20.0/23 的聚合路由经下一跳 194.17.24.2、接口 S1；194.17.20.128/25 是直连网段，接口 E0。",
+      "目的地址 194.17.20.200 属于 194.17.20.128/25；该 /25 比聚合的 /23 更长，按最长前缀匹配选择 E0。",
+      "R1 与 R2 属于不同自治系统边界的路由信息交换，使用 BGP（BGP-4）；BGP 使用 TCP 传输。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "2024-CO-12-int转short再符号扩展": {
     "year": 2024,
