@@ -4572,8 +4572,8 @@ const EXAM_DATA = [
     "解答题",
     18,
     "已知常数 $k\\geq \\ln2-1$。证明：\n\n$$\n(x-1)(x-\\ln^2x+2k\\ln x-1)\\geq 0,\\qquad x>0.\n$$",
-    "",
-    "令\n\n$$\nf(x)=x-\\ln^2x+2k\\ln x-1,\n\\qquad\ng(x)=x-2\\ln x+2k.\n$$\n\n则\n\n$$\nf'(x)=\\frac{g(x)}{x}.\n$$\n\n当 $0<x<1$ 时，$g'(x)=1-\\dfrac2x<0$，故\n\n$$\ng(x)>g(1)=1+2k\\geq 2\\ln2-1>0.\n$$\n\n于是 $f'(x)>0$，所以 $f(x)\\leq f(1)=0$。此时 $x-1<0$，结论成立。\n\n当 $x>1$ 时，$g(x)$ 在 $(1,2)$ 递减、在 $(2,+\\infty)$ 递增，故\n\n$$\ng(x)\\geq g(2)=2-2\\ln2+2k\\geq 0.\n$$\n\n于是 $f'(x)\\geq 0$，所以 $f(x)\\geq f(1)=0$。此时 $x-1>0$，结论也成立。\n\n综上，原不等式成立。"
+    "原不等式对一切 $x>0$ 成立。",
+    "令 $F(x)=x-\\ln^2x+2k\\ln x-1$，$G(x)=x-2\\ln x+2k$，则 $F'(x)=G(x)/x$。\n\n当 $0<x<1$ 时，$G'(x)=1-2/x<0$，故 $G(x)>G(1)=1+2k\\ge2\\ln2-1>0$，所以 $F'(x)>0$。于是 $F(x)<F(1)=0$，而 $x-1<0$，乘积非负。\n\n当 $x>1$ 时，$G$ 在 $(1,2)$ 递减、在 $(2,+\\infty)$ 递增，故\n$$G(x)\\ge G(2)=2-2\\ln2+2k\\ge0.$$\n因此 $F'(x)\\ge0$，从而 $F(x)\\ge F(1)=0$。此时 $x-1>0$，乘积仍非负。$x=1$ 时乘积为零。综上原不等式成立。"
   ],
   [
     "2018",
@@ -4732,8 +4732,8 @@ const EXAM_DATA = [
     "解答题",
     15,
     "已知\n\n$$\nf(x)=\n\\begin{cases}\nx^{2x}, & x>0,\\\\\nxe^x+1, & x\\le 0,\n\\end{cases}\n$$\n\n求 $f(x)$ 的极值。",
-    "",
-    "当 $x>0$ 时，\n\n$$\nf'(x)=x^{2x}(2\\ln x+2).\n$$\n\n当 $x<0$ 时，\n\n$$\nf'(x)=(1+x)e^x.\n$$\n\n又 $x=0$ 处不可导。令 $f'(x)=0$，得\n\n$$\nx=-1,\\qquad x=\\frac1e.\n$$\n\n符号变化如下：\n\n| 区间或点 | $(-\\infty,-1)$ | $-1$ | $(-1,0)$ | $0$ | $\\left(0,\\frac1e\\right)$ | $\\frac1e$ | $\\left(\\frac1e,+\\infty\\right)$ |\n|---|---:|:---:|:---:|:---:|:---:|:---:|:---:|\n| $f'(x)$ | $-$ | $0$ | $+$ | 不存在 | $-$ | $0$ | $+$ |\n| $f(x)$ | $\\downarrow$ | 极小 | $\\uparrow$ | 极大 | $\\downarrow$ | 极小 | $\\uparrow$ |\n\n因此：\n\n$$\nf(-1)=1-e^{-1}\n$$\n\n和\n\n$$\nf\\left(\\frac1e\\right)=\\left(\\frac1e\\right)^{2/e}\n$$\n\n为极小值；\n\n$$\nf(0)=1\n$$\n\n为极大值。"
+    "极小值为 $1-e^{-1}$（$x=-1$ 处）和 $e^{-2/e}$（$x=e^{-1}$ 处）；极大值为 $1$（$x=0$ 处）。",
+    "当 $x<0$ 时，$f'(x)=(1+x)e^x$，故在 $(-\\infty,-1)$ 为负、在 $(-1,0)$ 为正，$x=-1$ 是极小值点，$f(-1)=1-e^{-1}$。\n\n当 $x>0$ 时，$f'(x)=x^{2x}(2\\ln x+2)$。因 $x^{2x}>0$，导数在 $(0,e^{-1})$ 为负、在 $(e^{-1},+\\infty)$ 为正，故 $x=e^{-1}$ 是极小值点，且\n$$f(e^{-1})=(e^{-1})^{2/e}=e^{-2/e}.$$\n\n在 $x=0$ 处，左右函数值均趋于 $1$，且函数在左侧递增、右侧递减，故 $x=0$ 为极大值点，$f(0)=1$。右导数不存在（趋于 $-\\infty$），但极值判定不要求该点可导。"
   ],
   [
     "2019",
@@ -4780,8 +4780,8 @@ const EXAM_DATA = [
     "解答题",
     21,
     "已知函数 $f(x)$ 在 $[0,1]$ 上具有二阶导数，且\n\n$$\nf(0)=0,\\qquad f(1)=1,\\qquad \\int_0^1f(x)\\,\\mathrm{d}x=1.\n$$\n\n证明：\n\n（1）存在 $\\xi\\in(0,1)$，使得 $f'(\\xi)=0$；\n\n（2）存在 $\\eta\\in(0,1)$，使得 $f''(\\eta)<-2$。",
-    "",
-    "（1）由积分中值定理，存在 $a\\in(0,1)$，使得\n\n$$\nf(a)=\\int_0^1f(x)\\,\\mathrm{d}x=1.\n$$\n\n又 $f(a)=f(1)=1$，由罗尔定理，存在 $\\xi\\in(a,1)\\subset(0,1)$，使得\n\n$$\nf'(\\xi)=0.\n$$\n\n（2）设 $x_0\\in(0,1)$ 为 $f(x)$ 的最大值点。由 $\\int_0^1f(x)\\,\\mathrm{d}x=1$ 可知\n\n$$\nf(x_0)\\ge 1,\\qquad f'(x_0)=0.\n$$\n\n对 $f(0)$ 与 $f(1)$ 在 $x_0$ 处作泰勒展开：\n\n$$\n0=f(x_0)+\\frac{x_0^2}{2}f''(\\zeta_1),\n$$\n\n$$\n1=f(x_0)+\\frac{(1-x_0)^2}{2}f''(\\zeta_2).\n$$\n\n两式相加，并取二阶导较小者 $f''(\\eta)$，得\n\n$$\n1-2f(x_0)\n\\ge\n\\frac{x_0^2+(1-x_0)^2}{2}f''(\\eta).\n$$\n\n由于 $f(x_0)\\ge1$，且\n\n$$\n\\frac12\\le x_0^2+(1-x_0)^2<1,\n$$\n\n可推出\n\n$$\nf''(\\eta)<-2.\n$$"
+    "（1）存在 $\\xi\\in(0,1)$ 使 $f'(\\xi)=0$；（2）存在 $\\eta\\in(0,1)$ 使 $f''(\\eta)<-2$。",
+    "（1）由 $\\int_0^1f(x)\\,dx=1$ 且 $f(0)=0$、$f(1)=1$，函数在某个内点必取到值 $1$：否则若 $f(x)<1$ 对所有 $x\\in[0,1)$ 成立，则积分严格小于 $1$。由连续性可取 $a\\in(0,1)$ 使 $f(a)=1=f(1)$。在 $[a,1]$ 上用罗尔定理，存在 $\\xi\\in(a,1)$ 使 $f'(\\xi)=0$。\n\n（2）反设 $f''(x)\\ge-2$ 对所有 $x\\in(0,1)$ 成立。令\n$$q(x)=f(x)-2x+x^2.$$\n则 $q''(x)=f''(x)+2\\ge0$，故 $q$ 为凸函数。又 $q(0)=q(1)=0$，凸函数位于端点连线下方，故 $q(x)\\le0$，即 $f(x)\\le2x-x^2$。积分得\n$$1=\\int_0^1f(x)\\,dx\\le\\int_0^1(2x-x^2)\\,dx=\\frac23,$$\n矛盾。因此至少存在一点 $\\eta\\in(0,1)$ 使 $f''(\\eta)<-2$。"
   ],
   [
     "2019",
@@ -5116,16 +5116,16 @@ const EXAM_DATA = [
     "解答题",
     17,
     "求极限\n$$\n\\lim_{x \\to 0} \\left(\\frac{1+\\int_{0}^{x} e^{t^{2}} \\,\\mathrm{d} t}{e^{x}-1}-\\frac{1}{\\sin x}\\right).\n$$",
-    "",
-    "原式可化为\n$$\n\\lim_{x\\to0}\\frac{\\sin x-x-\\int_0^x e^{t^2}\\,\\mathrm{d}t}{(e^x-1)\\sin x}.\n$$\n又\n$$\n\\int_0^x e^{t^2}\\,\\mathrm{d}t\n=\\int_0^x\\left(1+t^2+o(t^2)\\right)\\,\\mathrm{d}t\n=x+\\frac13x^3+o(x^3),\n$$\n并用 $\\sin x=x-\\dfrac{x^3}{6}+o(x^3)$、$e^x-1=x+o(x)$，可得原极限为\n$$\n\\frac12.\n$$"
+    "\\dfrac12。",
+    "通分得\n$$\nL=\\lim_{x\\to0}\\frac{(1+I(x))\\sin x-(e^x-1)}{(e^x-1)\\sin x},\\qquad I(x)=\\int_0^xe^{t^2}\\,dt.\n$$\n由 $e^{t^2}=1+t^2+O(t^4)$，得 $I(x)=x+\\frac{x^3}{3}+O(x^5)$。又\n$$\\sin x=x-\\frac{x^3}{6}+O(x^5),\\quad e^x-1=x+\\frac{x^2}{2}+\\frac{x^3}{6}+O(x^4).$$\n因此\n$$\n(1+I(x))\\sin x=x+x^2+\\frac{x^3}{6}+O(x^4),\n$$\n分子为 $\\frac{x^2}{2}+O(x^4)$，分母为 $x^2+O(x^3)$，故 $L=\\frac12$。注意不能把原式错误化成 $(\\sin x-x-I(x))/((e^x-1)\\sin x)$。"
   ],
   [
     "2021",
     "解答题",
     18,
     "已知\n$$\nf(x)=\\frac{x|x|}{1+x},\n$$\n求 $f(x)$ 的凹凸性及渐近线。",
-    "",
-    "分段写成\n$$\nf(x)=\n\\begin{cases}\n\\dfrac{x^2}{1+x}, & x>0,\\\\[4pt]\n-\\dfrac{x^2}{1+x}, & x<0.\n\\end{cases}\n$$\n\n分别求导得\n$$\nf''(x)=\n\\begin{cases}\n\\dfrac{2}{(1+x)^3}, & x>0,\\\\[6pt]\n-\\dfrac{2}{(1+x)^3}, & x<0.\n\\end{cases}\n$$\n\n因此 $f''(x)>0$ 于 $(-\\infty,-1)$ 与 $(0,+\\infty)$，$f''(x)<0$ 于 $(-1,0)$。按本题采用的教材约定，前两段为凹区间，后一段为凸区间。\n\n在 $x=-1$ 附近，函数趋于无穷，故有铅直渐近线 $x=-1$。\n\n当 $x\\to+\\infty$ 时，\n$$\nf(x)=\\frac{x^2}{1+x}=x-1+\\frac1{1+x},\n$$\n故正无穷方向的斜渐近线为 $y=x-1$。\n\n当 $x\\to-\\infty$ 时，\n$$\nf(x)=-\\frac{x^2}{1+x}=-x+1-\\frac1{1+x},\n$$\n故负无穷方向的斜渐近线为 $y=-x+1$。\n\n最终：铅直渐近线 $\\boxed{x=-1}$；两条斜渐近线分别为 $\\boxed{y=x-1}$、$\\boxed{y=-x+1}$。特别注意，负无穷方向截距是 $+1$，不是 $-1$。"
+    "凹凸性：$f''(x)>0$ 于 $(-\\infty,-1)$、$(0,+\\infty)$，$f''(x)<0$ 于 $(-1,0)$；渐近线为 $x=-1$、$y=x-1$（$x\\to+\\infty$）、$y=-x+1$（$x\\to-\\infty$）。",
+    "按 $x=-1,0$ 分段：$f(x)=-x^2/(1+x)$（$x<0$），$f(x)=x^2/(1+x)$（$x>0$）。二阶导数为\n$$\nf''(x)=\\begin{cases}-\\dfrac{2}{(1+x)^3},&x<0,\\\\[4pt]\\dfrac{2}{(1+x)^3},&x>0.\\end{cases}\n$$\n所以 $f''>0$ 于 $(-\\infty,-1)$ 和 $(0,+\\infty)$，图像在这两段为凸（凹口向上）；$f''<0$ 于 $(-1,0)$，图像在该段为凹（凹口向下）。在 $x=0$ 处函数连续且凹凸性改变，是拐点；$x=-1$ 处函数发散，故铅直渐近线为 $x=-1$。\n\n当 $x\\to+\\infty$，$f(x)=x-1+1/(1+x)$，斜渐近线为 $y=x-1$；当 $x\\to-\\infty$，$f(x)=-x+1-1/(1+x)$，斜渐近线为 $y=-x+1$。注意负无穷方向截距为 $+1$。"
   ],
   [
     "2021",
@@ -5324,8 +5324,8 @@ const EXAM_DATA = [
     "解答题",
     21,
     "设函数 $f\\left( x \\right)$ 在 $\\left( -\\infty,+\\infty \\right)$ 上有二阶连续导数，证明：\n\n$f^{\\prime\\prime}\\left( x \\right) \\ge 0$\n\n的充分必要条件是对任意不同的实数 $a,b$，都有\n\n$f\\left( \\frac{a+b}{2} \\right) \\le \\frac{1}{b-a}\\int_{a}^{b} f\\left( x \\right) \\mathrm{~d}x$\n\n成立.",
-    "",
-    "记 $m=\\frac{a+b}{2}$.\n\n**必要性：** 若 $f''(x)\\ge0$，则 $f$ 为凸函数.在点 $m$ 处有\n\n$$\nf(x)\\ge f(m)+f'(m)(x-m)\\quad(x\\in[a,b]).\n$$\n\n两边在 $[a,b]$ 上积分，且 $\\int_a^b(x-m)\\,\\mathrm{d}x=0$，即得\n\n$$\nf\\left(\\frac{a+b}{2}\\right)\\le \\frac1{b-a}\\int_a^b f(x)\\,\\mathrm{d}x.\n$$\n\n**充分性：** 反设存在 $x_0$ 使 $f''(x_0)<0$.由连续性，存在邻域 $[a_0,b_0]$ 使 $f''<0$，即该区间上 $f$ 为凹函数，从而有\n\n$$\nf\\left(\\frac{a_0+b_0}{2}\\right)>\\frac1{b_0-a_0}\\int_{a_0}^{b_0} f(x)\\,\\mathrm{d}x,\n$$\n\n与题设矛盾.故 $f''(x)\\ge0$."
+    "$f''(x)\\ge0$ 对所有 $x$ 成立，当且仅当对任意 $a\\ne b$（取 $a<b$），有 $\\displaystyle f\\left(\\frac{a+b}{2}\\right)\\le\\frac1{b-a}\\int_a^bf(x)\\,dx$。",
+    "记 $m=(a+b)/2$。\n\n**必要性：** 若 $f''\\ge0$，则 $f$ 为凸函数，故\n$$f(x)\\ge f(m)+f'(m)(x-m).$$\n在 $[a,b]$ 上积分，利用 $\\int_a^b(x-m)\\,dx=0$，得\n$$f(m)\\le\\frac1{b-a}\\int_a^bf(x)\\,dx.$$\n\n**充分性：** 反设存在 $x_0$ 使 $f''(x_0)<0$。由 $f''$ 连续，存在以 $x_0$ 为中心的充分小区间 $[a_0,b_0]$，使 $f''<0$。此时 $f$ 严格凹，严格凹函数在区间中点的函数值严格大于区间平均值，即\n$$f\\left(\\frac{a_0+b_0}{2}\\right)>\\frac1{b_0-a_0}\\int_{a_0}^{b_0}f(x)\\,dx,$$\n与题设矛盾。因此 $f''\\ge0$。"
   ],
   [
     "2022",
@@ -5532,8 +5532,8 @@ const EXAM_DATA = [
     "解答题",
     21,
     "设函数 $f(x)$ 在 $[-a,a]$ 上具有二阶连续导数。证明：\n\n1. 若 $f(0)=0$，则存在 $\\xi\\in(-a,a)$，使得\n   $\n   f''(\\xi)=\\frac{f(a)+f(-a)}{a^2};\n   $\n2. 若 $f(x)$ 在 $(-a,a)$ 内取得极值，则存在 $\\eta\\in(-a,a)$，使得\n   $\n   |f''(\\eta)|\\ge \\frac{|f(a)-f(-a)|}{2a^2}.\n   $",
-    "",
-    "**第（1）问：** 分别在 $0$ 点向 $a$、$-a$ 作带拉格朗日余项的二阶 Taylor 展开：\n$\nf(a)=f'(0)a+\\frac{f''(\\xi_1)}2a^2,\\quad f(-a)=-f'(0)a+\\frac{f''(\\xi_2)}2a^2.\n$\n相加得\n$\n\\frac{f''(\\xi_1)+f''(\\xi_2)}2=\\frac{f(a)+f(-a)}{a^2}.\n$\n由于 $f''$ 连续，介值定理保证存在 $\\xi\\in(-a,a)$ 使\n$\nf''(\\xi)=\\frac{f(a)+f(-a)}{a^2}.\n$\n\n**第（2）问：** 设 $c\\in(-a,a)$ 为极值点，则 $f'(c)=0$。分别在 $c$ 点向两端作二阶 Taylor 展开：\n$\nf(a)=f(c)+\\frac{f''(\\eta_1)}2(a-c)^2,\\quad\nf(-a)=f(c)+\\frac{f''(\\eta_2)}2(a+c)^2.\n$\n两式相减并取绝对值，令 $M=\\max\\{|f''(\\eta_1)|,|f''(\\eta_2)|\\}$，则\n$\n|f(a)-f(-a)|\\le\\frac{(a-c)^2+(a+c)^2}{2}M.\n$\n又 $(a-c)^2+(a+c)^2=2(a^2+c^2)\\le4a^2$，故至少有一个点 $\\eta\\in(-a,a)$ 满足\n$\n|f''(\\eta)|\\ge\\frac{|f(a)-f(-a)|}{2a^2}.\n$\n两问均证毕。"
+    "（1）存在 $\\xi\\in(-a,a)$ 使 $\\displaystyle f''(\\xi)=\\frac{f(a)+f(-a)}{a^2}$；（2）存在 $\\eta\\in(-a,a)$ 使 $\\displaystyle |f''(\\eta)|\\ge\\frac{|f(a)-f(-a)|}{2a^2}$。",
+    "**（1）** 在 $0$ 处分别向 $a$、$-a$ 作二阶 Taylor 展开，存在 $\\xi_1\\in(0,a)$、$\\xi_2\\in(-a,0)$，使\n$$f(a)=af'(0)+\\frac{a^2}{2}f''(\\xi_1),\\quad f(-a)=-af'(0)+\\frac{a^2}{2}f''(\\xi_2).$$\n相加得 $[f''(\\xi_1)+f''(\\xi_2)]/2=[f(a)+f(-a)]/a^2$。因 $f''$ 连续，介值定理保证存在 $\\xi$ 位于 $\\xi_1,\\xi_2$ 之间，使其取到该平均值。\n\n**（2）** 设 $c\\in(-a,a)$ 为极值点，则 $f'(c)=0$。在 $c$ 处分别向 $a$、$-a$ 作二阶 Taylor 展开，存在 $\\eta_1$、$\\eta_2$ 位于相应开区间内，使\n$$f(a)=f(c)+\\frac{(a-c)^2}{2}f''(\\eta_1),\\quad f(-a)=f(c)+\\frac{(a+c)^2}{2}f''(\\eta_2).$$\n令 $M=\\max(|f''(\\eta_1)|,|f''(\\eta_2)|)$，相减并取绝对值，得\n$$|f(a)-f(-a)|\\le\\frac{(a-c)^2+(a+c)^2}{2}M=(a^2+c^2)M\\le2a^2M.$$\n故 $\\eta_1,\\eta_2$ 中至少一个满足所需不等式。"
   ],
   [
     "2023",
@@ -5772,8 +5772,8 @@ const EXAM_DATA = [
     "解答题",
     21,
     "设函数 $f(x)$ 具有二阶导数，且\n$\nf'(0)=f'(1),\\qquad |f''(x)|\\le 1.\n$\n证明：\n\n1. 当 $x\\in(0,1)$ 时，\n   $\n   \\left|f(x)-f(0)(1-x)-f(1)x\\right|\\le \\frac{x(1-x)}{2};\n   $\n2. \n   $\n   \\left|\\int_0^1 f(x)\\,dx-\\frac{f(0)+f(1)}{2}\\right|\\le \\frac{1}{12}.\n   $",
-    "",
-    "**第（1）问：** 构造\n$\ng(x)=f(x)-f(0)(1-x)-f(1)x-\\frac{x(1-x)}2.\n$\n则 $g(0)=g(1)=0$，且 $g''(x)=f''(x)+1\\ge0$，所以 $g$ 为凸函数，位于端点弦线下方，得到 $g(x)\\le0$。对\n$\n\\widetilde g(x)=f(x)-f(0)(1-x)-f(1)x+\\frac{x(1-x)}2\n$\n同理可得 $\\widetilde g(x)\\ge0$。合并即\n$\n\\left|f(x)-f(0)(1-x)-f(1)x\\right|\\le\\frac{x(1-x)}2.\n$\n\n**第（2）问：** 对第（1）问的不等式在 $[0,1]$ 上积分。注意\n$\n\\int_0^1\\bigl(f(0)(1-x)+f(1)x\\bigr)\\,dx=\\frac{f(0)+f(1)}2,\n$\n且\n$\n\\int_0^1\\frac{x(1-x)}2\\,dx=\\frac1{12}.\n$\n由积分绝对值不等式得到\n$\n\\left|\\int_0^1f(x)\\,dx-\\frac{f(0)+f(1)}2\\right|\n\\le\\int_0^1\\frac{x(1-x)}2\\,dx=\\frac1{12}.\n$\n两问证毕。"
+    "（1）$\\displaystyle\\left|f(x)-f(0)(1-x)-f(1)x\\right|\\le\\frac{x(1-x)}2$；（2）$\\displaystyle\\left|\\int_0^1f(x)\\,dx-\\frac{f(0)+f(1)}2\\right|\\le\\frac1{12}$。",
+    "令 $L(x)=f(0)(1-x)+f(1)x$。\n\n**（1）上界：** 设 $g(x)=f(x)-L(x)-x(1-x)/2$，则 $g(0)=g(1)=0$，且 $g''=f''+1\\ge0$，故 $g$ 凸，位于端点弦线下方，$g(x)\\le0$，即 $f(x)-L(x)\\le x(1-x)/2$。\n\n**下界：** 设 $h(x)=f(x)-L(x)+x(1-x)/2$，则 $h''=f''-1\\le0$，故 $h$ 凹，位于端点弦线上方，$h(x)\\ge0$，即 $f(x)-L(x)\\ge-x(1-x)/2$。合并得到第（1）问。\n\n**（2）** 对第（1）问积分并用积分绝对值不等式：\n$$\n\\left|\\int_0^1(f(x)-L(x))\\,dx\\right|\\le\\int_0^1\\frac{x(1-x)}2\\,dx=\\frac1{12}.\n$$\n又 $\\int_0^1L(x)\\,dx=[f(0)+f(1)]/2$，结论成立。"
   ],
   [
     "2024",
@@ -5980,8 +5980,8 @@ const EXAM_DATA = [
     "解答题",
     21,
     "（本题满分 12 分）\n\n设函数 $f\\left( x \\right)$ 在区间 $\\left( a, b \\right)$ 内可导，证明：导函数 $f^{\\prime}\\left( x \\right)$ 在 $\\left( a, b \\right)$ 内严格单调递增的充分必要条件是：对 $\\left( a, b \\right)$ 内任意的 $x_{1}$，$x_{2}$，$x_{3}$，当 $x_{1} < x_{2} < x_{3}$ 时，有\n$\\frac{f\\left( x_{2} \\right) - f\\left( x_{1} \\right)}{x_{2} - x_{1}} < \\frac{f\\left( x_{3} \\right) - f\\left( x_{2} \\right)}{x_{3} - x_{2}}$.",
-    "",
-    "必要性：由拉格朗日中值定理，存在\n$\\xi_{1} \\in \\left( x_{1}, x_{2} \\right)$，$\\xi_{2} \\in \\left( x_{2}, x_{3} \\right)$，使得\n\n$\\frac{f\\left( x_{2} \\right) - f\\left( x_{1} \\right)}{x_{2} - x_{1}} = f^{\\prime}\\left( \\xi_{1} \\right)$，\n$\\frac{f\\left( x_{3} \\right) - f\\left( x_{2} \\right)}{x_{3} - x_{2}} = f^{\\prime}\\left( \\xi_{2} \\right)$.\n\n由于 $f^{\\prime}\\left( x \\right)$ 在 $\\left( a, b \\right)$ 内严格单调递增，且 $\\xi_{1} < \\xi_{2}$，故\n$f^{\\prime}\\left( \\xi_{1} \\right) < f^{\\prime}\\left( \\xi_{2} \\right)$.\n\n于是\n$\\frac{f\\left( x_{2} \\right) - f\\left( x_{1} \\right)}{x_{2} - x_{1}} < \\frac{f\\left( x_{3} \\right) - f\\left( x_{2} \\right)}{x_{3} - x_{2}}$.\n\n充分性：任取 $c_{1} < c_{2}$，其中 $c_{1}, c_{2} \\in \\left( a, b \\right)$.对任意满足 $c_{1} < x < c_{2}$ 的 $x$，由题设有\n$\\frac{f\\left( c_{1} \\right) - f\\left( a \\right)}{c_{1} - a} < \\frac{f\\left( x \\right) - f\\left( c_{1} \\right)}{x - c_{1}} < \\frac{f\\left( c_{2} \\right) - f\\left( x \\right)}{c_{2} - x} < \\frac{f\\left( b \\right) - f\\left( c_{2} \\right)}{b - c_{2}}$.\n\n特别地，只需利用\n$\\frac{f\\left( c_{1} \\right) - f\\left( a \\right)}{c_{1} - a} < \\frac{f\\left( x \\right) - f\\left( c_{1} \\right)}{x - c_{1}} < \\frac{f\\left( c_{2} \\right) - f\\left( x \\right)}{c_{2} - x}$\n并分别令 $x \\to c_{1}^{+}$ 与 $x \\to c_{2}^{-}$，得\n\n$f^{\\prime}\\left( c_{1} \\right) \\le \\frac{f\\left( c_{2} \\right) - f\\left( c_{1} \\right)}{c_{2} - c_{1}} \\le f^{\\prime}\\left( c_{2} \\right)$.\n\n故 $f^{\\prime}\\left( x \\right)$ 在 $\\left( a, b \\right)$ 上单调递增.再结合题设中的严格不等号，可排除在某子区间上恒等的情形，因此 $f^{\\prime}\\left( x \\right)$ 在 $\\left( a, b \\right)$ 上严格单调递增."
+    "导函数 $f'(x)$ 在 $(a,b)$ 内严格单调递增，当且仅当对任意 $a<x_1<x_2<x_3<b$，相邻两段割线斜率满足题设严格不等式。",
+    "**必要性：** 对 $[x_1,x_2]$、$[x_2,x_3]$ 分别用拉格朗日中值定理，存在 $\\xi_1\\in(x_1,x_2)$、$\\xi_2\\in(x_2,x_3)$，使两段割线斜率分别等于 $f'(\\xi_1)$、$f'(\\xi_2)$。因 $\\xi_1<\\xi_2$ 且 $f'$ 严格递增，前一斜率严格小于后一斜率。\n\n**充分性：** 任取 $u<v$。对任意 $h>0$ 足够小，题设应用于三点 $u<u+h<v$，得\n$$\\frac{f(u+h)-f(u)}h<\\frac{f(v)-f(u+h)}{v-u-h}.$$\n令 $h\\to0^+$，得\n$$f'(u)\\le\\frac{f(v)-f(u)}{v-u}.$$\n再将题设应用于 $u<v-h<v$ 并令 $h\\to0^+$，得\n$$\\frac{f(v)-f(u)}{v-u}\\le f'(v).$$\n所以 $f'(u)\\le f'(v)$，即 $f'$ 单调不减。若存在 $u<v$ 使 $f'(u)=f'(v)$，则单调不减迫使 $f'$ 在 $[u,v]$ 上恒定，$f$ 在该区间为一次函数。取 $u<r<s<v$，则相邻割线斜率相等，与题设严格不等式矛盾。因此 $f'$ 严格递增。\n\n注意全程只使用开区间内的点，不需要假设 $f$ 在端点 $a,b$ 处有定义。"
   ],
   [
     "2025",
