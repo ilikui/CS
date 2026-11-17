@@ -48,7 +48,7 @@ function termsFor(title) {
 function pickQuestion(q) {
   return {year:q.year,index:q.index,id:q.id,sourceSubject:q.subject,inferredSubject:subjectForIndex(Number(q.index)),type:q.type,typeName:q.typeName,score:q.score,question:htmlText(q.question),answer:q.answer||null,analysis:htmlText(q.analysis)};
 }
-const source = fs.readFileSync('data/408/questions_data.js','utf8');
+const source = fs.readFileSync('public/opensource-22408/408/questions_data.js','utf8');
 const dataContext = {};
 vm.runInNewContext(source + String.fromCharCode(10) + ';globalThis.__QUESTIONS_DATA__ = QUESTIONS_DATA;', dataContext, {timeout:120000});
 const data = dataContext.__QUESTIONS_DATA__ || dataContext.QUESTIONS_DATA || (dataContext.window && dataContext.window.QUESTIONS_DATA);
