@@ -7029,7 +7029,7 @@ window.CARD_QUESTION_MAP = {
       "从指令序列反推寄存器用途：R2=i，R3=a首地址，R1=sum，R4临时地址，R5加载元素。",
       "a[5]地址=0013DFF0H+5×4=0013E004H。",
       "读取0013E004H至0013E007H：DC EC FF FF；小端机器数为FFFFECDCH。",
-      "sum=00001332H+FFFFECDCH=000000FEH（32位回绕）。",
+      "sum=00001332H+FFFFECDCH=0000000EH（32位回绕）。",
       "4KB页边界为0013E000H，基址在0013D页，a[5]在0013E页，至少2页。",
       "slli编码字段：shamt=2、rs1=2、funct3=010、rd=4、opcode=0010011，得到00212213H；short乘2改为左移1位。"
     ],
