@@ -7913,9 +7913,9 @@
     "secondary": [
       "CAL-02-B"
     ],
-    "rationale": "检查x=−1、0、1、2四处：对数因子发散、e^x−1为零、指数因子在1非有限、x−2为零，均为第二类间断点，共4处。",
-    "methods": "找出表达式无定义点，逐一考察左右极限是否有限。",
-    "pitfalls": "区分可去间断点与第二类间断点；x=1需独立判断指数因子。"
+    "rationale": "第二类间断点为 x=−1、1、2；x=0 处 ln(1+x)/(e^x−1)→1，函数极限有限，是可去间断点。因此共有 3 个第二类间断点。",
+    "methods": "逐个检查 x=−1、0、1、2 的左右极限；特别用 ln(1+x)∼x、e^x−1∼x 判断 x=0 可去。",
+    "pitfalls": "不能仅因分母为零就判第二类间断；x=0 的 0/0 型极限有限。正确选项为 C。"
   },
   "602": {
     "status": "verified",
@@ -8985,25 +8985,22 @@
     "pitfalls": "题设是截距的距离；需结合连续性和给定点确定正号分支，不能无条件省略绝对值。"
   },
   "684": {
-    "status": "verified",
-    "questionKey": "2023-解答题-1",
-    "primary": [
-      "CAL-07-B"
-    ],
-    "secondary": [
-      "CAL-04-C"
-    ],
-    "rationale": "将切线 y 轴截距写为 y-xy'，由题设取正分支得到 y'-(1/x)y=-1，积分因子法给出 y=x(C-ln x)，初值确定 C=2。",
-    "methods": "使用积分因子 μ=1/x，解线性方程并代入 (e²,0)。",
-    "pitfalls": "检查积分因子乘法后的导数形式；常数由 ln(e²)=2 决定。"
-  },
-  "685": {
-    "status": "source-corrupt-needs-verification",
+    "status": "duplicate-answer-fragment",
     "primary": [],
     "secondary": [],
-    "rationale": "该索引题干字段实际为解题过程而非可核验的原始题面，暂不作为独立真题关联；需找回原始题图或可靠题面后再恢复映射。",
-    "methods": "待补原题后重新判定考点。",
-    "pitfalls": "不得把解题过程冒充题目原文。"
+    "parentQuestionIndex": 683,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
+  },
+  "685": {
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 683,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "686": {
     "status": "verified",
@@ -9032,31 +9029,22 @@
     "pitfalls": "上限为无穷，必须按反常积分定义处理；体积公式中半径要平方。"
   },
   "688": {
-    "status": "verified",
-    "questionKey": "2023-解答题-1",
-    "primary": [
-      "CAL-06-I"
-    ],
-    "secondary": [
-      "CAL-06-B"
-    ],
-    "rationale": "面积积分 ∫₁∞[x√(1+x²)]⁻¹dx 经 x=tan t 化为 csc t 的积分，结果 ln(1+√2)。",
-    "methods": "作三角代换 x=tan t，化简被积函数并计算端点极限。",
-    "pitfalls": "无穷上限对应 t→π/2 的极限；原函数对数表达式要正确处理绝对值。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 687,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "689": {
-    "status": "verified",
-    "questionKey": "2023-解答题-2",
-    "primary": [
-      "CAL-06-I"
-    ],
-    "secondary": [
-      "CAL-06-C",
-      "CAL-06-B"
-    ],
-    "rationale": "旋转体体积为 π∫₁∞1/[x²(1+x²)]dx，部分分式拆成 1/x²−1/(1+x²)，得到 π(1−π/4)。",
-    "methods": "先用圆盘法建立体积积分，再部分分式积分并取无穷上限极限。",
-    "pitfalls": "不要遗漏 π；反常积分上限需取极限，且第二项积分为 π/4。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 687,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "690": {
     "status": "verified",
@@ -9085,20 +9073,22 @@
     "pitfalls": "第二问要利用 |a−c|²+|a+c|²=2(a²+c²)≤4a²；不能把两个余项的中间点误认为相同。"
   },
   "692": {
-    "status": "duplicate-answer-fragment",
+    "status": "orphan-answer-fragment-needs-source",
     "primary": [],
     "secondary": [],
-    "rationale": "该记录原本误把对应解答过程放在题干字段，已将内容合并回原始完整题目解析；此索引不作为独立真题，也不建立知识卡关联。",
-    "methods": "请查看对应完整真题记录及其解析。",
-    "pitfalls": "不要将答案片段重复计为一题。"
+    "parentQuestionIndex": null,
+    "rationale": "该记录只有解答片段，未找到可可靠归并的完整原题；不计作独立真题，待找回原始题面。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "693": {
-    "status": "duplicate-answer-fragment",
+    "status": "orphan-answer-fragment-needs-source",
     "primary": [],
     "secondary": [],
-    "rationale": "该记录原本误把对应解答过程放在题干字段，已将内容合并回原始完整题目解析；此索引不作为独立真题，也不建立知识卡关联。",
-    "methods": "请查看对应完整真题记录及其解析。",
-    "pitfalls": "不要将答案片段重复计为一题。"
+    "parentQuestionIndex": null,
+    "rationale": "该记录只有解答片段，未找到可可靠归并的完整原题；不计作独立真题，待找回原始题面。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "694": {
     "status": "verified",
@@ -9114,31 +9104,22 @@
     "pitfalls": "矩阵按输出分量的系数排列；P 的列向量应按 Λ 对角元顺序放置。"
   },
   "695": {
-    "status": "verified",
-    "questionKey": "2023-解答题-1",
-    "primary": [
-      "LA-02-A"
-    ],
-    "secondary": [
-      "LA-05-A"
-    ],
-    "rationale": "线性映射的三个输出分量分别给出矩阵的三行，故 A 的行向量由各分量系数直接确定。",
-    "methods": "逐个读取 x₁、x₂、x₃ 在每个输出分量中的系数。",
-    "pitfalls": "不要把按变量系数排列的行误写成列；本题矩阵为 [[1,1,1],[2,-1,1],[0,1,-1]]。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 694,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "696": {
-    "status": "verified",
-    "questionKey": "2023-解答题-2",
-    "primary": [
-      "LA-05-A"
-    ],
-    "secondary": [
-      "LA-05-B",
-      "LA-05-E"
-    ],
-    "rationale": "特征多项式分解为 (λ+2)(λ+1)(λ−2)，三个互异特征值对应线性无关特征向量，组成 P 后可对角化。",
-    "methods": "分别解 (A−λI)α=0，按特征值顺序将特征向量作为 P 的列。",
-    "pitfalls": "核对每个特征向量满足 Aα=λα；P 的列顺序必须与 Λ 对角线顺序一致。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 694,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "697": {
     "status": "verified",
@@ -9375,30 +9356,22 @@
     "pitfalls": "二阶导数变换含 −y_t 项，和 xy' 项合并后才得到 y_tt；不能漏掉链式法则项。"
   },
   "715": {
-    "status": "verified",
-    "questionKey": "2024-解答题-1",
-    "primary": [
-      "CAL-07-C"
-    ],
-    "secondary": [
-      "CAL-07-D"
-    ],
-    "rationale": "换元后常系数方程通解为 C₁x³+C₂x⁻³，结合 y(1)=2、y'(1)=6 得 C₁=2、C₂=0。",
-    "methods": "先写 Euler 方程通解，再将两个初值代入联立求常数。",
-    "pitfalls": "y'(1)=3C₁−3C₂；与 y(1)=C₁+C₂ 联立，避免把导数条件误写成 6C₁。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 714,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "716": {
-    "status": "verified",
-    "questionKey": "2024-解答题-2",
-    "primary": [
-      "CAL-06-B"
-    ],
-    "secondary": [
-      "CAL-06-C"
-    ],
-    "rationale": "代入 y=2x³ 后令 u=4−x²，将积分转为 ∫₀³(4−u)u^(1/2)du，结果 22√3/5。",
-    "methods": "先代入已求函数，再作根式常用代换并计算幂函数积分。",
-    "pitfalls": "换元后上下限由 x=1、2 对应 u=3、0，反向积分需同步改变符号。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 714,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "717": {
     "status": "verified",
@@ -9427,30 +9400,22 @@
     "pitfalls": "混合二阶项的系数需计入两个交叉项；本题组合为 25fuv，不能误写成 13 或 24。"
   },
   "719": {
-    "status": "verified",
-    "questionKey": "2024-解答题-1",
-    "primary": [
-      "CAL-08-B"
-    ],
-    "secondary": [
-      "CAL-08-A"
-    ],
-    "rationale": "对 g(x,y)=f(2x+y,3x−y) 连续使用链式法则，得到 gxx、gxy、gyy 的二阶表达式，并由线性组合解出 fuv=1/25。",
-    "methods": "先列 u、v 对 x、y 的一阶偏导，再逐次求二阶偏导并代入约束。",
-    "pitfalls": "混合偏导系数来自两组链式项；需核对 gxy 中 fuv 系数以及 −6gyy 的贡献。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 718,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "720": {
-    "status": "verified",
-    "questionKey": "2024-解答题-2",
-    "primary": [
-      "CAL-08-B"
-    ],
-    "secondary": [
-      "CAL-08-A"
-    ],
-    "rationale": "由已求得 f_uv=1/25，先对 u 积分并用 f_u(u,0)=ue^{-u}确定函数项，再由 f(0,v)确定仅依赖 v 的积分函数。",
-    "methods": "先恢复 f_u，再对 u 积分，最后代入 v=0 的边界条件。",
-    "pitfalls": "积分常数可依赖另一变量；不能把 ψ(v) 当作数值常数。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 718,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "721": {
     "status": "verified",
@@ -9467,25 +9432,22 @@
     "pitfalls": "二阶导数有界要分别构造上下界；积分 x(1−x)/2 得 1/12。"
   },
   "722": {
-    "status": "duplicate-answer-fragment",
+    "status": "orphan-answer-fragment-needs-source",
     "primary": [],
     "secondary": [],
-    "rationale": "该记录原本误把对应解答过程放在题干字段，已将内容合并回原始完整题目解析；此索引不作为独立真题，也不建立知识卡关联。",
-    "methods": "请查看对应完整真题记录及其解析。",
-    "pitfalls": "不要将答案片段重复计为一题。"
+    "parentQuestionIndex": null,
+    "rationale": "该记录只有解答片段，未找到可可靠归并的完整原题；不计作独立真题，待找回原始题面。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "723": {
-    "status": "verified",
-    "questionKey": "2024-解答题-2",
-    "primary": [
-      "CAL-06-C"
-    ],
-    "secondary": [
-      "CAL-05-D"
-    ],
-    "rationale": "对第 1 问的点态误差不等式在 [0,1] 积分，端点线性插值的积分等于端点函数值平均，误差上界积分为 1/12。",
-    "methods": "对不等式逐项积分并计算 ∫₀¹x(1−x)/2 dx。",
-    "pitfalls": "端点线性插值积分为 (f(0)+f(1))/2，不能遗漏系数 1/2。"
+    "status": "orphan-answer-fragment-needs-source",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": null,
+    "rationale": "该记录只有解答片段，未找到可可靠归并的完整原题；不计作独立真题，待找回原始题面。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "724": {
     "status": "verified",
@@ -9502,32 +9464,22 @@
     "pitfalls": "注意题干是“Ax=0 的解是 Bᵀx=0 的解”，方向不可颠倒；不同解意味着核空间包含为真包含。"
   },
   "725": {
-    "status": "verified",
-    "questionKey": "2024-解答题-1",
-    "primary": [
-      "LA-02-B"
-    ],
-    "secondary": [
-      "LA-03-D",
-      "LA-04-D"
-    ],
-    "rationale": "将 A 与 Bᵀ 纵向拼接后，其行空间不增加，秩仍为 2；行化简给出 a=1、b=2。",
-    "methods": "利用同解条件 r([A;Bᵀ])=r(A)，再对拼接矩阵消元。",
-    "pitfalls": "同解条件不仅是两矩阵秩相等，还需利用原方程组解空间包含关系确定拼接秩。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 724,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "726": {
-    "status": "verified",
-    "questionKey": "2024-解答题-2",
-    "primary": [
-      "LA-06-A"
-    ],
-    "secondary": [
-      "LA-05-C",
-      "LA-06-B"
-    ],
-    "rationale": "代入 a=1、b=2 得 BA 为对称秩一矩阵 (1,1,2)ᵀ(1,1,2)，其唯一非零特征值为 6，正交对角化后标准形为 6y₁²。",
-    "methods": "先计算 BA 并识别秩一外积，再构造单位特征向量及其正交补。",
-    "pitfalls": "二次型由 xᵀBAx 决定，需确认 BA 对称；正交矩阵列向量必须单位且两两正交。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 724,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "727": {
     "status": "verified",
