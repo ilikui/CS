@@ -586,7 +586,10 @@ const CARD_EXAM_TOPIC_MAP={
   "以太网帧格式": "以太网帧与 MAC 地址",
   "IPv4 分片与重组": "IPv4 首部与分片",
   "TCP 四次挥手": "TCP 三次握手与四次挥手",
-  "TCP 三次握手": "TCP 三次握手与四次挥手"
+  "TCP 三次握手": "TCP 三次握手与四次挥手",
+  "2010-46-FIFO与CLOCK页面置换": "虚拟内存与页面置换",
+  "DMA 传输过程": "中断与 DMA",
+  "中断I_O与DMA的CPU时间占比": "中断与 DMA"
 };
 function escExam(value){return String(value??'').replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));}
 function examsForCard(title){const list=window.CARD_QUESTION_LIST?.[title];if(Array.isArray(list))return list.map(key=>window.QUESTION_CARD_MAP?.[key]).filter(Boolean).map(q=>{const link=q.cards?.find(x=>x.title===title)||{};return{topic:link.topic||title,q,link,detail:link.recordTopic?(window.CARD_QUESTION_MAP?.[link.recordTopic]||q):q};}).sort((a,b)=>a.q.year-b.q.year||a.q.index-b.q.index);const topics=Object.entries(CARD_EXAM_TOPIC_MAP).filter(([,target])=>target===title).map(([topic])=>topic);const rows=topics.flatMap(topic=>{const q=window.CARD_QUESTION_MAP?.[topic];return q?[{topic,q,link:{status:['answer-verified-question-source-pending','answer-recomputed-question-source-pending'].includes(q.audit?.status)?'pending-source':'verified',role:window.CARD_EXAM_ROLE_MAP?.[topic]||'core'},detail:q}]:[]});return [...new Map(rows.map(row=>[String(row.q.year)+'-'+String(row.q.index),row])).values()].sort((a,b)=>a.q.year-b.q.year||a.q.index-b.q.index);}
