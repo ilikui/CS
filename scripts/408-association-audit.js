@@ -126,7 +126,10 @@ for (const v of validation) {
 const duplicateQuestionLinks = [...questionGroups.entries()].filter(([,v])=>v.length>1).map(([question,topics])=>({question,topics}));
 const counts = {
   cards:cards.length,mappings:Object.keys(mapping).length,sourceQuestions:data.length,
-  sourceIdentityConfirmed:validation.filter(x=>x.sourceIdentityConfirmed).length,\n  sourceFromQuestionDataset:validation.filter(x=>x.sourceKind==='question-dataset').length,\n  sourceFromVerifiedSolutions:validation.filter(x=>x.sourceKind==='verified-solutions').length,\n  legacyMapOnly:validation.filter(x=>x.sourceKind==='legacy-map-only').length,
+  sourceIdentityConfirmed:validation.filter(x=>x.sourceIdentityConfirmed).length,
+  sourceFromQuestionDataset:validation.filter(x=>x.sourceKind==='question-dataset').length,
+  sourceFromVerifiedSolutions:validation.filter(x=>x.sourceKind==='verified-solutions').length,
+  legacyMapOnly:validation.filter(x=>x.sourceKind==='legacy-map-only').length,
   identityOrTargetErrors:validation.filter(x=>x.errors.some(e=>e!=='answer-key-mismatch')).length,
   answerKeyMismatches:validation.filter(x=>x.answerMatch===false).length,
   questionTextContained:validation.filter(x=>x.questionTextContains).length,
