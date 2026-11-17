@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T12:23:27.571Z",
+  "generatedAt": "2026-11-17T12:23:53.539Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -2426,19 +2426,19 @@
           ]
         },
         {
+          "card": "磁盘结构与平均访问时间",
+          "score": 4,
+          "matchedTerms": [
+            "磁道",
+            "个磁道"
+          ]
+        },
+        {
           "card": "大小端存储",
           "score": 4,
           "matchedTerms": [
             "得到",
             "位于"
-          ]
-        },
-        {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 4,
-          "matchedTerms": [
-            "访问序列",
-            "访问"
           ]
         }
       ]
@@ -6159,7 +6159,7 @@
         },
         {
           "card": "磁盘结构与平均访问时间",
-          "score": 42,
+          "score": 44,
           "matchedTerms": [
             "ssd",
             "rpm",
@@ -11203,12 +11203,13 @@
       "candidates": [
         {
           "card": "磁盘结构与平均访问时间",
-          "score": 16,
+          "score": 17,
           "matchedTerms": [
             "磁盘访",
             "盘访问",
             "时间与",
-            "磁盘访问"
+            "磁盘访问",
+            "缓冲区"
           ]
         },
         {
@@ -13480,7 +13481,7 @@
       "answer": "C",
       "analysis": "2013-第25题-解析 计算磁盘号、磁头号和扇区号的工作是由 设备驱动程序 完成的。题中的功能因设备硬件的不同而不同，因此应由厂家提供的设备驱动程序实现。",
       "existingCards": [],
-      "confidence": "high-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
         {
           "card": "磁盘 CHS 地址与平均访问时间",
@@ -13494,29 +13495,30 @@
           ]
         },
         {
-          "card": "磁盘存储结构与旋转延迟",
-          "score": 14,
-          "matchedTerms": [
-            "柱面",
-            "扇区",
-            "磁头"
-          ]
-        },
-        {
           "card": "磁盘结构与平均访问时间",
-          "score": 13,
+          "score": 19,
           "matchedTerms": [
             "柱面",
             "扇区",
+            "面号",
+            "柱面号",
+            "扇区号",
             "驱动程",
             "动程序",
             "程序完",
             "序完成",
             "驱动程序",
             "动程序完",
-            "程序完成",
-            "驱动程序完",
-            "动程序完成"
+            "程序完成"
+          ]
+        },
+        {
+          "card": "磁盘存储结构与旋转延迟",
+          "score": 14,
+          "matchedTerms": [
+            "柱面",
+            "扇区",
+            "磁头"
           ]
         },
         {
@@ -19425,6 +19427,17 @@
           ]
         },
         {
+          "card": "磁盘结构与平均访问时间",
+          "score": 6,
+          "matchedTerms": [
+            "平均寻道",
+            "寻道时",
+            "道时间",
+            "寻道时间",
+            "缓冲区"
+          ]
+        },
+        {
           "card": "DMA 周期挪用与总线仲裁",
           "score": 6,
           "matchedTerms": [
@@ -19437,14 +19450,6 @@
           "matchedTerms": [
             "平均",
             "时间"
-          ]
-        },
-        {
-          "card": "中断与 DMA",
-          "score": 4,
-          "matchedTerms": [
-            "减少",
-            "缓冲区"
           ]
         }
       ]
@@ -19696,18 +19701,19 @@
           ]
         },
         {
+          "card": "磁盘结构与平均访问时间",
+          "score": 4,
+          "matchedTerms": [
+            "磁道",
+            "个磁道"
+          ]
+        },
+        {
           "card": "CPU异常响应与现场保护",
           "score": 4,
           "matchedTerms": [
             "处理完",
             "返回"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 3,
-          "matchedTerms": [
-            "处理"
           ]
         }
       ]
@@ -28093,6 +28099,17 @@
           ]
         },
         {
+          "card": "磁盘结构与平均访问时间",
+          "score": 7,
+          "matchedTerms": [
+            "磁道",
+            "个磁道",
+            "寻道时",
+            "道时间",
+            "寻道时间"
+          ]
+        },
+        {
           "card": "补码加减与溢出判断",
           "score": 6,
           "matchedTerms": [
@@ -28112,15 +28129,6 @@
           "score": 6,
           "matchedTerms": [
             "寻道"
-          ]
-        },
-        {
-          "card": "指令系统与寻址方式",
-          "score": 6,
-          "matchedTerms": [
-            "cf",
-            "故选",
-            "故选a"
           ]
         }
       ]
@@ -33843,11 +33851,12 @@
         },
         {
           "card": "磁盘结构与平均访问时间",
-          "score": 13,
+          "score": 16,
           "matchedTerms": [
             "访问时",
             "问时间",
             "访问时间",
+            "cpu",
             "存访问"
           ]
         }
