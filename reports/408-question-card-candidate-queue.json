@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T14:29:16.912Z",
+  "generatedAt": "2026-11-17T10:22:31.052Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -636,10 +636,7 @@
           "score": 14,
           "matchedTerms": [
             "avl",
-            "的平衡",
-            "平衡二",
-            "衡二叉",
-            "平衡二叉",
+            "高度",
             "不超过",
             "子树高",
             "树高度",
@@ -2077,10 +2074,10 @@
           ]
         },
         {
-          "card": "立即数扩展与移位指令",
-          "score": 2,
+          "card": "Cache 替换与写策略",
+          "score": 3,
           "matchedTerms": [
-            "因此"
+            "随机"
           ]
         }
       ]
@@ -2428,6 +2425,14 @@
           ]
         },
         {
+          "card": "TLB 与快表命中",
+          "score": 6,
+          "matchedTerms": [
+            "最后",
+            "后续"
+          ]
+        },
+        {
           "card": "改进型 CLOCK 页面置换",
           "score": 5,
           "matchedTerms": [
@@ -2440,15 +2445,6 @@
           "score": 4,
           "matchedTerms": [
             "本题"
-          ]
-        },
-        {
-          "card": "读者写者问题",
-          "score": 3,
-          "matchedTerms": [
-            "最后一",
-            "后一个",
-            "最后一个"
           ]
         }
       ]
@@ -2774,18 +2770,6 @@
           ]
         },
         {
-          "card": "红黑树性质与高度",
-          "score": 6,
-          "matchedTerms": [
-            "路径长",
-            "径长度",
-            "路径长度",
-            "最短路",
-            "短路径",
-            "最短路径"
-          ]
-        },
-        {
           "card": "关键路径与 AOE 网",
           "score": 5,
           "matchedTerms": [
@@ -2800,6 +2784,15 @@
           "matchedTerms": [
             "之间",
             "答案"
+          ]
+        },
+        {
+          "card": "红黑树性质与高度",
+          "score": 3,
+          "matchedTerms": [
+            "最短路",
+            "短路径",
+            "最短路径"
           ]
         }
       ]
@@ -3366,20 +3359,6 @@
           ]
         },
         {
-          "card": "红黑树性质与高度",
-          "score": 11,
-          "matchedTerms": [
-            "avl",
-            "插入",
-            "的平衡",
-            "平衡二",
-            "衡二叉",
-            "的平衡二",
-            "平衡二叉",
-            "的平衡二叉"
-          ]
-        },
-        {
           "card": "关键路径与 AOE 网",
           "score": 8,
           "matchedTerms": [
@@ -3403,6 +3382,14 @@
           "matchedTerms": [
             "a1",
             "变为"
+          ]
+        },
+        {
+          "card": "红黑树性质与高度",
+          "score": 6,
+          "matchedTerms": [
+            "avl",
+            "插入"
           ]
         }
       ]
@@ -3529,18 +3516,6 @@
           ]
         },
         {
-          "card": "红黑树性质与高度",
-          "score": 9,
-          "matchedTerms": [
-            "任一结",
-            "一结点",
-            "任一结点",
-            "路径长",
-            "径长度",
-            "路径长度"
-          ]
-        },
-        {
           "card": "二叉搜索树查找与删除",
           "score": 8,
           "matchedTerms": [
@@ -3552,6 +3527,16 @@
             "大于结",
             "大于结点",
             "的结点"
+          ]
+        },
+        {
+          "card": "红黑树性质与高度",
+          "score": 7,
+          "matchedTerms": [
+            "任一结",
+            "一结点",
+            "任一结点",
+            "的二叉"
           ]
         }
       ]
@@ -3701,6 +3686,15 @@
           ]
         },
         {
+          "card": "红黑树性质与高度",
+          "score": 8,
+          "matchedTerms": [
+            "log",
+            "高度",
+            "因此最"
+          ]
+        },
+        {
           "card": "比较计数排序与秩排序",
           "score": 6,
           "matchedTerms": [
@@ -3709,14 +3703,6 @@
         },
         {
           "card": "快速排序分区过程",
-          "score": 6,
-          "matchedTerms": [
-            "log",
-            "的元素"
-          ]
-        },
-        {
-          "card": "有序数组中位数的二分缩减",
           "score": 6,
           "matchedTerms": [
             "log",
@@ -5383,6 +5369,13 @@
           ]
         },
         {
+          "card": "TLB 与快表命中",
+          "score": 3,
+          "matchedTerms": [
+            "缓存"
+          ]
+        },
+        {
           "card": "磁盘调度 FCFS 与 SSTF",
           "score": 2,
           "matchedTerms": [
@@ -5401,13 +5394,6 @@
           "score": 2,
           "matchedTerms": [
             "分别为"
-          ]
-        },
-        {
-          "card": "管道与消息传递",
-          "score": 2,
-          "matchedTerms": [
-            "消息"
           ]
         }
       ]
@@ -7079,6 +7065,15 @@
           ]
         },
         {
+          "card": "堆排序与优先队列",
+          "score": 3,
+          "matchedTerms": [
+            "高优先",
+            "优先级",
+            "高优先级"
+          ]
+        },
+        {
           "card": "后缀极值与区间乘积最大值",
           "score": 2,
           "matchedTerms": [
@@ -7090,13 +7085,6 @@
           "score": 2,
           "matchedTerms": [
             "表示可"
-          ]
-        },
-        {
-          "card": "中缀表达式求值",
-          "score": 2,
-          "matchedTerms": [
-            "优先级"
           ]
         }
       ]
@@ -8775,19 +8763,6 @@
           ]
         },
         {
-          "card": "红黑树性质与高度",
-          "score": 8,
-          "matchedTerms": [
-            "结点数",
-            "的平衡",
-            "平衡二",
-            "衡二叉",
-            "的平衡二",
-            "平衡二叉",
-            "的平衡二叉"
-          ]
-        },
-        {
           "card": "堆的定义与建堆",
           "score": 7,
           "matchedTerms": [
@@ -8798,6 +8773,14 @@
             "非叶结",
             "叶结点",
             "非叶结点"
+          ]
+        },
+        {
+          "card": "单链表重排与原地逆置",
+          "score": 6,
+          "matchedTerms": [
+            "a1",
+            "n−1"
           ]
         }
       ]
@@ -9131,11 +9114,10 @@
           ]
         },
         {
-          "card": "红黑树性质与高度",
-          "score": 3,
+          "card": "并查集与路径压缩",
+          "score": 2,
           "matchedTerms": [
-            "删除",
-            "的平衡"
+            "的结点"
           ]
         }
       ]
@@ -11418,19 +11400,6 @@
           ]
         },
         {
-          "card": "红黑树性质与高度",
-          "score": 8,
-          "matchedTerms": [
-            "插入",
-            "的平衡",
-            "平衡二",
-            "衡二叉",
-            "的平衡二",
-            "平衡二叉",
-            "的平衡二叉"
-          ]
-        },
-        {
           "card": "B 树与 B+ 树",
           "score": 8,
           "matchedTerms": [
@@ -11453,6 +11422,14 @@
           "matchedTerms": [
             "个关键字",
             "关键字"
+          ]
+        },
+        {
+          "card": "树与森林的存储结构",
+          "score": 5,
+          "matchedTerms": [
+            "二叉树",
+            "结点的"
           ]
         }
       ]
@@ -11503,20 +11480,18 @@
           ]
         },
         {
-          "card": "红黑树性质与高度",
-          "score": 3,
-          "matchedTerms": [
-            "路径长",
-            "径长度",
-            "路径长度"
-          ]
-        },
-        {
           "card": "最小生成树与最短路径",
           "score": 3,
           "matchedTerms": [
             "生成树",
             "=0"
+          ]
+        },
+        {
+          "card": "关键路径与 AOE 网",
+          "score": 2,
+          "matchedTerms": [
+            "长度"
           ]
         }
       ]
@@ -11650,14 +11625,13 @@
           ]
         },
         {
-          "card": "哈夫曼树与带权路径长度",
-          "score": 6,
+          "card": "红黑树性质与高度",
+          "score": 7,
           "matchedTerms": [
-            "再将",
-            "的二叉",
-            "二叉树",
-            "的二叉树",
-            "叶结点"
+            "结点不",
+            "插入",
+            "删除",
+            "的二叉"
           ]
         }
       ]
@@ -12059,6 +12033,13 @@
           "score": 4,
           "matchedTerms": [
             "a1"
+          ]
+        },
+        {
+          "card": "并查集与路径压缩",
+          "score": 2,
+          "matchedTerms": [
+            "xy"
           ]
         },
         {
@@ -12575,10 +12556,10 @@
           ]
         },
         {
-          "card": "立即数扩展与移位指令",
-          "score": 2,
+          "card": "Cache 替换与写策略",
+          "score": 3,
           "matchedTerms": [
-            "因此"
+            "随机"
           ]
         }
       ]
@@ -16808,20 +16789,6 @@
           ]
         },
         {
-          "card": "红黑树性质与高度",
-          "score": 11,
-          "matchedTerms": [
-            "avl",
-            "插入",
-            "的平衡",
-            "平衡二",
-            "衡二叉",
-            "的平衡二",
-            "平衡二叉",
-            "的平衡二叉"
-          ]
-        },
-        {
           "card": "树与森林的存储结构",
           "score": 9,
           "matchedTerms": [
@@ -16830,6 +16797,14 @@
             "结点的",
             "根结点的",
             "的结点"
+          ]
+        },
+        {
+          "card": "关键路径与 AOE 网",
+          "score": 8,
+          "matchedTerms": [
+            "vl",
+            "不一定"
           ]
         }
       ]
@@ -18217,19 +18192,22 @@
           ]
         },
         {
+          "card": "Cache 替换与写策略",
+          "score": 9,
+          "matchedTerms": [
+            "策略与",
+            "换策略",
+            "分配策",
+            "配策略",
+            "分配策略"
+          ]
+        },
+        {
           "card": "数组跨页与缺页次数",
           "score": 7,
           "matchedTerms": [
             "分页",
             "页面数"
-          ]
-        },
-        {
-          "card": "Cache 替换与写策略",
-          "score": 6,
-          "matchedTerms": [
-            "策略与",
-            "换策略"
           ]
         },
         {
@@ -18650,6 +18628,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "TLB 与快表命中",
+          "score": 8,
+          "matchedTerms": [
+            "缓存",
+            "kb",
+            "忽略"
+          ]
+        },
+        {
           "card": "进程虚拟地址空间与段布局",
           "score": 6,
           "matchedTerms": [
@@ -18676,14 +18663,6 @@
           "score": 5,
           "matchedTerms": [
             "c1"
-          ]
-        },
-        {
-          "card": "FAT链接分配与簇链访问",
-          "score": 5,
-          "matchedTerms": [
-            "大小",
-            "接分配"
           ]
         }
       ]
@@ -21333,17 +21312,17 @@
           ]
         },
         {
+          "card": "TLB 与快表命中",
+          "score": 3,
+          "matchedTerms": [
+            "缓存"
+          ]
+        },
+        {
           "card": "磁盘调度 FCFS 与 SSTF",
           "score": 2,
           "matchedTerms": [
             "请求"
-          ]
-        },
-        {
-          "card": "工作集与抖动",
-          "score": 2,
-          "matchedTerms": [
-            "可能发"
           ]
         }
       ]
@@ -21361,21 +21340,23 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "TLB 与快表命中",
+          "score": 14,
+          "matchedTerms": [
+            "缓存",
+            "最后",
+            "ch",
+            "kb",
+            "忽略"
+          ]
+        },
+        {
           "card": "FAT链接分配与簇链访问",
           "score": 9,
           "matchedTerms": [
             "字节",
             "大小",
             "接分配"
-          ]
-        },
-        {
-          "card": "TLB 与快表命中",
-          "score": 8,
-          "matchedTerms": [
-            "ch",
-            "kb",
-            "忽略"
           ]
         },
         {
@@ -22767,11 +22748,11 @@
           ]
         },
         {
-          "card": "并查集与路径压缩",
+          "card": "快速选择与顺序统计量",
           "score": 3,
           "matchedTerms": [
-            "直接指",
-            "元素所"
+            "下标",
+            "标顺序"
           ]
         }
       ]
@@ -23126,10 +23107,10 @@
           ]
         },
         {
-          "card": "树与森林的存储结构",
+          "card": "堆排序与优先队列",
           "score": 1,
           "matchedTerms": [
-            "结束的"
+            "与当前"
           ]
         }
       ]
@@ -23992,6 +23973,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "TLB 与快表命中",
+          "score": 6,
+          "matchedTerms": [
+            "缓存",
+            "kb"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 5,
           "matchedTerms": [
@@ -24017,13 +24006,6 @@
           "score": 3,
           "matchedTerms": [
             "kb"
-          ]
-        },
-        {
-          "card": "临界区与共享缓冲区",
-          "score": 3,
-          "matchedTerms": [
-            "c1"
           ]
         }
       ]
@@ -24406,6 +24388,13 @@
           ]
         },
         {
+          "card": "并查集与路径压缩",
+          "score": 2,
+          "matchedTerms": [
+            "xy"
+          ]
+        },
+        {
           "card": "红黑树性质与高度",
           "score": 2,
           "matchedTerms": [
@@ -24417,13 +24406,6 @@
           "score": 2,
           "matchedTerms": [
             "冲突"
-          ]
-        },
-        {
-          "card": "正则k叉树叶结点数与高度界",
-          "score": 2,
-          "matchedTerms": [
-            "最多"
           ]
         }
       ]
@@ -25275,17 +25257,17 @@
           ]
         },
         {
+          "card": "并查集与路径压缩",
+          "score": 2,
+          "matchedTerms": [
+            "xy"
+          ]
+        },
+        {
           "card": "查找算法与散列表",
           "score": 2,
           "matchedTerms": [
             "结果"
-          ]
-        },
-        {
-          "card": "算法复杂度",
-          "score": 2,
-          "matchedTerms": [
-            "对应"
           ]
         }
       ]
@@ -26446,8 +26428,9 @@
         },
         {
           "card": "TLB 与快表命中",
-          "score": 5,
+          "score": 8,
           "matchedTerms": [
+            "最后",
             "kb",
             "忽略"
           ]
@@ -27380,22 +27363,6 @@
           ]
         },
         {
-          "card": "红黑树性质与高度",
-          "score": 14,
-          "matchedTerms": [
-            "avl",
-            "插入",
-            "删除",
-            "的平衡",
-            "平衡二",
-            "衡二叉",
-            "的平衡二",
-            "平衡二叉",
-            "的平衡二叉",
-            "删除后"
-          ]
-        },
-        {
           "card": "单链表与双链表",
           "score": 12,
           "matchedTerms": [
@@ -27420,6 +27387,20 @@
             "叶结点",
             "一个孩",
             "一个孩子"
+          ]
+        },
+        {
+          "card": "二叉树遍历与性质",
+          "score": 11,
+          "matchedTerms": [
+            "二叉树",
+            "个孩子",
+            "右孩子",
+            "只有一",
+            "有一个",
+            "只有一个",
+            "叉树不",
+            "二叉树不"
           ]
         }
       ]
@@ -29173,6 +29154,13 @@
           ]
         },
         {
+          "card": "TLB 与快表命中",
+          "score": 3,
+          "matchedTerms": [
+            "缓存"
+          ]
+        },
+        {
           "card": "索引结点 inode 与文件控制块",
           "score": 2,
           "matchedTerms": [
@@ -29184,13 +29172,6 @@
           "score": 1,
           "matchedTerms": [
             "缓存的"
-          ]
-        },
-        {
-          "card": "死锁必要条件与处理",
-          "score": 1,
-          "matchedTerms": [
-            "一定会"
           ]
         }
       ]
@@ -31287,17 +31268,17 @@
           ]
         },
         {
+          "card": "Cache 替换与写策略",
+          "score": 3,
+          "matchedTerms": [
+            "随机"
+          ]
+        },
+        {
           "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 2,
           "matchedTerms": [
             "不是"
-          ]
-        },
-        {
-          "card": "指令系统与寻址方式",
-          "score": 2,
-          "matchedTerms": [
-            "长度"
           ]
         }
       ]
@@ -32911,13 +32892,11 @@
         },
         {
           "card": "红黑树性质与高度",
-          "score": 8,
+          "score": 7,
           "matchedTerms": [
             "avl",
             "插入",
-            "平衡二",
-            "衡二叉",
-            "平衡二叉"
+            "结点为"
           ]
         },
         {
@@ -33312,6 +33291,13 @@
           "score": 4,
           "matchedTerms": [
             "因此"
+          ]
+        },
+        {
+          "card": "并查集与路径压缩",
+          "score": 2,
+          "matchedTerms": [
+            "xy"
           ]
         },
         {
@@ -34311,6 +34297,13 @@
           ]
         },
         {
+          "card": "Cache 替换与写策略",
+          "score": 3,
+          "matchedTerms": [
+            "随机"
+          ]
+        },
+        {
           "card": "CPU异常响应与现场保护",
           "score": 3,
           "matchedTerms": [
@@ -34331,13 +34324,6 @@
           "score": 1,
           "matchedTerms": [
             "只需要"
-          ]
-        },
-        {
-          "card": "数组跨页与缺页次数",
-          "score": 1,
-          "matchedTerms": [
-            "的页面"
           ]
         }
       ]
@@ -34531,6 +34517,14 @@
           ]
         },
         {
+          "card": "TLB 与快表命中",
+          "score": 6,
+          "matchedTerms": [
+            "最后",
+            "后续"
+          ]
+        },
+        {
           "card": "改进型 CLOCK 页面置换",
           "score": 4,
           "matchedTerms": [
@@ -34542,13 +34536,6 @@
           "score": 2,
           "matchedTerms": [
             "偏移"
-          ]
-        },
-        {
-          "card": "共享铁锹互斥与资源锁",
-          "score": 1,
-          "matchedTerms": [
-            "尽可能"
           ]
         }
       ]
@@ -35463,6 +35450,20 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "红黑树性质与高度",
+          "score": 16,
+          "matchedTerms": [
+            "高度",
+            "结点数",
+            "点数相",
+            "数相同",
+            "结点数相",
+            "点数相同",
+            "结点数相同",
+            "的二叉"
+          ]
+        },
+        {
           "card": "哈夫曼树与带权路径长度",
           "score": 13,
           "matchedTerms": [
@@ -35478,19 +35479,6 @@
             "叉树表示",
             "用二叉树表",
             "二叉树表示"
-          ]
-        },
-        {
-          "card": "红黑树性质与高度",
-          "score": 13,
-          "matchedTerms": [
-            "结点数",
-            "点数相",
-            "数相同",
-            "结点数相",
-            "点数相同",
-            "结点数相同",
-            "是满足"
           ]
         },
         {
@@ -38254,22 +38242,6 @@
           ]
         },
         {
-          "card": "红黑树性质与高度",
-          "score": 11,
-          "matchedTerms": [
-            "点到其",
-            "路径长",
-            "径长度",
-            "路径长度",
-            "最短路",
-            "短路径",
-            "路径的",
-            "最短路径",
-            "短路径的",
-            "最短路径的"
-          ]
-        },
-        {
           "card": "正则k叉树叶结点数与高度界",
           "score": 10,
           "matchedTerms": [
@@ -38291,6 +38263,19 @@
             "个顶点",
             "顶点的",
             "个顶点的"
+          ]
+        },
+        {
+          "card": "红黑树性质与高度",
+          "score": 8,
+          "matchedTerms": [
+            "点到其",
+            "最短路",
+            "短路径",
+            "路径的",
+            "最短路径",
+            "短路径的",
+            "最短路径的"
           ]
         }
       ]
@@ -38324,19 +38309,6 @@
           ]
         },
         {
-          "card": "并查集与路径压缩",
-          "score": 11,
-          "matchedTerms": [
-            "结点直",
-            "点直接",
-            "结点直接",
-            "合并",
-            "合并两",
-            "并两个",
-            "合并两个"
-          ]
-        },
-        {
           "card": "正则k叉树叶结点数与高度界",
           "score": 11,
           "matchedTerms": [
@@ -38361,13 +38333,23 @@
           ]
         },
         {
-          "card": "B 树与 B+ 树",
+          "card": "并查集与路径压缩",
           "score": 8,
           "matchedTerms": [
-            "关键字",
-            "叶结点",
+            "结点直",
+            "点直接",
+            "结点直接",
+            "合并"
+          ]
+        },
+        {
+          "card": "红黑树性质与高度",
+          "score": 8,
+          "matchedTerms": [
+            "高度",
             "插入",
-            "删除"
+            "删除",
+            "删除后"
           ]
         }
       ]
@@ -42472,17 +42454,17 @@
           ]
         },
         {
+          "card": "Cache 替换与写策略",
+          "score": 4,
+          "matchedTerms": [
+            "write"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 4,
           "matchedTerms": [
             "取数"
-          ]
-        },
-        {
-          "card": "TLB 与多级页表联合转换",
-          "score": 4,
-          "matchedTerms": [
-            "查找"
           ]
         }
       ]
@@ -42796,6 +42778,17 @@
           ]
         },
         {
+          "card": "TLB 与快表命中",
+          "score": 11,
+          "matchedTerms": [
+            "缓存",
+            "时直接",
+            "物理地",
+            "理地址",
+            "物理地址"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 10,
           "matchedTerms": [
@@ -42814,16 +42807,6 @@
             "的物理地",
             "物理地址",
             "的物理地址"
-          ]
-        },
-        {
-          "card": "TLB 与快表命中",
-          "score": 8,
-          "matchedTerms": [
-            "时直接",
-            "物理地",
-            "理地址",
-            "物理地址"
           ]
         }
       ]
@@ -42862,18 +42845,18 @@
           ]
         },
         {
+          "card": "TLB 与快表命中",
+          "score": 5,
+          "matchedTerms": [
+            "最后",
+            "忽略"
+          ]
+        },
+        {
           "card": "改进型 CLOCK 页面置换",
           "score": 4,
           "matchedTerms": [
             "最后"
-          ]
-        },
-        {
-          "card": "伙伴系统与内存回收",
-          "score": 4,
-          "matchedTerms": [
-            "分配",
-            "请求"
           ]
         }
       ]
@@ -44000,16 +43983,6 @@
           ]
         },
         {
-          "card": "并查集与路径压缩",
-          "score": 4,
-          "matchedTerms": [
-            "查找元",
-            "找元素",
-            "元素所",
-            "查找元素"
-          ]
-        },
-        {
           "card": "单链表与双链表",
           "score": 4,
           "matchedTerms": [
@@ -44018,6 +43991,13 @@
         },
         {
           "card": "堆排序与优先队列",
+          "score": 4,
+          "matchedTerms": [
+            "复杂度"
+          ]
+        },
+        {
+          "card": "多路归并与双指针",
           "score": 4,
           "matchedTerms": [
             "复杂度"
