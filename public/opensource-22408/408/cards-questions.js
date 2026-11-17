@@ -6779,7 +6779,8 @@ window.CARD_QUESTION_MAP = {
     "relatedCards": [
       "TLB 与快表命中",
       "TLB 组相联映射与 LRU 替换",
-      "虚拟地址分页与页内偏移"
+      "虚拟地址分页与页内偏移",
+      "TLB 与多级页表联合转换"
     ],
     "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
     "sourcePage": 3,
@@ -7447,7 +7448,9 @@ window.CARD_QUESTION_MAP = {
       "VIPT Cache索引与页内偏移",
       "Cache平均访问时间与缺失损失",
       "虚拟地址分页与页内偏移",
-      "缺页异常与页表更新"
+      "缺页异常与页表更新",
+      "Cache组相联映射与地址字段",
+      "Cache跨块访问与缺失率"
     ],
     "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
     "sourcePage": 8,
@@ -7486,7 +7489,9 @@ window.CARD_QUESTION_MAP = {
       "补码恢复余数除法器",
       "有符号除法异常与商溢出",
       "CPU异常响应与现场保护",
-      "整数溢出检测与异常处理"
+      "整数溢出检测与异常处理",
+      "ALU 算术逻辑单元",
+      "移位运算与舍入"
     ],
     "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
     "sourcePage": 9,
