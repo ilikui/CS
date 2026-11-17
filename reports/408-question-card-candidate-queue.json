@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T11:38:04.036Z",
+  "generatedAt": "2026-11-17T11:41:31.253Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -2074,12 +2074,12 @@
           ]
         },
         {
-          "card": "计算机系统层次结构",
+          "card": "存储器层次与主存组织",
           "score": 9,
           "matchedTerms": [
-            "机系统",
             "cpu",
-            "同一"
+            "ns",
+            "因此"
           ]
         }
       ]
@@ -2110,6 +2110,14 @@
           ]
         },
         {
+          "card": "流水线与冒险",
+          "score": 7,
+          "matchedTerms": [
+            "等待",
+            "ns"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 6,
           "matchedTerms": [
@@ -2117,24 +2125,18 @@
           ]
         },
         {
+          "card": "总线与总线事务",
+          "score": 6,
+          "matchedTerms": [
+            "等待",
+            "ns"
+          ]
+        },
+        {
           "card": "流水线结构冒险与数据冒险",
           "score": 4,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 4,
-          "matchedTerms": [
-            "执行"
-          ]
-        },
-        {
-          "card": "存储器层次与主存组织",
-          "score": 3,
-          "matchedTerms": [
-            "ns"
           ]
         }
       ]
@@ -2186,7 +2188,7 @@
           ]
         },
         {
-          "card": "异步串行通信帧格式与字符速率",
+          "card": "流水线与冒险",
           "score": 3,
           "matchedTerms": [
             "ns"
@@ -2209,10 +2211,27 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "Cache 映射与命中率",
+          "score": 7,
+          "matchedTerms": [
+            "ns",
+            "地址",
+            "程序"
+          ]
+        },
+        {
           "card": "CPU异常响应与现场保护",
           "score": 6,
           "matchedTerms": [
             "中断"
+          ]
+        },
+        {
+          "card": "存储器层次与主存组织",
+          "score": 5,
+          "matchedTerms": [
+            "ns",
+            "因此"
           ]
         },
         {
@@ -2227,20 +2246,6 @@
           "score": 4,
           "matchedTerms": [
             "地址"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 4,
-          "matchedTerms": [
-            "执行"
-          ]
-        },
-        {
-          "card": "存储器层次与主存组织",
-          "score": 3,
-          "matchedTerms": [
-            "ns"
           ]
         }
       ]
@@ -2257,8 +2262,17 @@
       "existingCards": [
         "分页与分段的区别"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "Cache 映射与命中率",
+          "score": 9,
+          "matchedTerms": [
+            "字节",
+            "ns",
+            "地址"
+          ]
+        },
         {
           "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
           "score": 8,
@@ -2269,34 +2283,29 @@
           ]
         },
         {
+          "card": "总线与总线事务",
+          "score": 7,
+          "matchedTerms": [
+            "字节",
+            "ns"
+          ]
+        },
+        {
+          "card": "流水线与冒险",
+          "score": 6,
+          "matchedTerms": [
+            "ns",
+            "的最大",
+            "最大值",
+            "的最大值"
+          ]
+        },
+        {
           "card": "小端字节序与补码读取",
           "score": 6,
           "matchedTerms": [
             "地址",
             "字节"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 6,
-          "matchedTerms": [
-            "字节",
-            "地址"
-          ]
-        },
-        {
-          "card": "x86 相对寻址与转移目标计算",
-          "score": 6,
-          "matchedTerms": [
-            "位移"
-          ]
-        },
-        {
-          "card": "异步串行通信帧格式与字符速率",
-          "score": 5,
-          "matchedTerms": [
-            "ns",
-            "最大"
           ]
         }
       ]
@@ -2325,6 +2334,14 @@
         },
         {
           "card": "存储器层次与主存组织",
+          "score": 5,
+          "matchedTerms": [
+            "ns",
+            "因此"
+          ]
+        },
+        {
+          "card": "流水线与冒险",
           "score": 3,
           "matchedTerms": [
             "ns"
@@ -2342,13 +2359,6 @@
           "score": 3,
           "matchedTerms": [
             "ns"
-          ]
-        },
-        {
-          "card": "Cache 替换与写策略",
-          "score": 3,
-          "matchedTerms": [
-            "随机"
           ]
         }
       ]
@@ -2398,7 +2408,7 @@
           ]
         },
         {
-          "card": "异步串行通信帧格式与字符速率",
+          "card": "流水线与冒险",
           "score": 3,
           "matchedTerms": [
             "ns"
@@ -2428,6 +2438,14 @@
           ]
         },
         {
+          "card": "存储器层次与主存组织",
+          "score": 4,
+          "matchedTerms": [
+            "ns",
+            "的数据"
+          ]
+        },
+        {
           "card": "数组下标寻址与元素宽度",
           "score": 4,
           "matchedTerms": [
@@ -2435,21 +2453,15 @@
           ]
         },
         {
-          "card": "存储器层次与主存组织",
-          "score": 3,
+          "card": "总线与总线事务",
+          "score": 4,
           "matchedTerms": [
-            "ns"
+            "ns",
+            "的数据"
           ]
         },
         {
-          "card": "异步串行通信帧格式与字符速率",
-          "score": 3,
-          "matchedTerms": [
-            "ns"
-          ]
-        },
-        {
-          "card": "总线带宽与突发传输",
+          "card": "流水线与冒险",
           "score": 3,
           "matchedTerms": [
             "ns"
@@ -2480,6 +2492,23 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 7,
+          "matchedTerms": [
+            "ns",
+            "a0",
+            "访问时"
+          ]
+        },
+        {
+          "card": "浮点数表示与规格化",
+          "score": 6,
+          "matchedTerms": [
+            "-1",
+            "1f"
+          ]
+        },
+        {
           "card": "磁盘结构与平均访问时间",
           "score": 4,
           "matchedTerms": [
@@ -2491,20 +2520,6 @@
           "score": 4,
           "matchedTerms": [
             "直接"
-          ]
-        },
-        {
-          "card": "Cache 直接映射与组相联",
-          "score": 4,
-          "matchedTerms": [
-            "访问时"
-          ]
-        },
-        {
-          "card": "浮点数表示与规格化",
-          "score": 3,
-          "matchedTerms": [
-            "-1"
           ]
         }
       ]
@@ -2544,21 +2559,23 @@
           ]
         },
         {
+          "card": "总线与总线事务",
+          "score": 5,
+          "matchedTerms": [
+            "ns",
+            "主设备"
+          ]
+        },
+        {
+          "card": "Cache 映射与命中率",
+          "score": 5,
+          "matchedTerms": [
+            "ns",
+            "程序"
+          ]
+        },
+        {
           "card": "流水线结构冒险与数据冒险",
-          "score": 4,
-          "matchedTerms": [
-            "执行"
-          ]
-        },
-        {
-          "card": "数组下标寻址与元素宽度",
-          "score": 4,
-          "matchedTerms": [
-            "通常"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
           "score": 4,
           "matchedTerms": [
             "执行"
@@ -4852,6 +4869,22 @@
           ]
         },
         {
+          "card": "流水线与冒险",
+          "score": 7,
+          "matchedTerms": [
+            "id",
+            "i2"
+          ]
+        },
+        {
+          "card": "浮点数表示与规格化",
+          "score": 6,
+          "matchedTerms": [
+            "iii",
+            "ii"
+          ]
+        },
+        {
           "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 5,
           "matchedTerms": [
@@ -4866,22 +4899,6 @@
           "score": 4,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "计算机系统层次结构",
-          "score": 3,
-          "matchedTerms": [
-            "结构实",
-            "构实现",
-            "结构实现"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 2,
-          "matchedTerms": [
-            "设备"
           ]
         }
       ]
@@ -4908,31 +4925,31 @@
           ]
         },
         {
-          "card": "Cache 组相联映射与地址划分",
+          "card": "流水线与冒险",
+          "score": 4,
+          "matchedTerms": [
+            "等待"
+          ]
+        },
+        {
+          "card": "总线与总线事务",
+          "score": 3,
+          "matchedTerms": [
+            "等待"
+          ]
+        },
+        {
+          "card": "Cache 映射与命中率",
           "score": 3,
           "matchedTerms": [
             "a0"
           ]
         },
         {
-          "card": "RISC-V 指令格式与寄存器编码",
+          "card": "Cache 组相联映射与地址划分",
           "score": 3,
           "matchedTerms": [
-            "使用"
-          ]
-        },
-        {
-          "card": "中断屏蔽与优先级",
-          "score": 1,
-          "matchedTerms": [
-            "当前可"
-          ]
-        },
-        {
-          "card": "ALU 标志位 CF 与 OF",
-          "score": 1,
-          "matchedTerms": [
-            "表示有"
+            "a0"
           ]
         }
       ]
@@ -4984,12 +5001,10 @@
           ]
         },
         {
-          "card": "总线仲裁方式",
+          "card": "流水线与冒险",
           "score": 4,
           "matchedTerms": [
-            "优先级",
-            "高优先",
-            "高优先级"
+            "等待"
           ]
         }
       ]
@@ -5072,14 +5087,6 @@
           ]
         },
         {
-          "card": "存储器层次与主存组织",
-          "score": 7,
-          "matchedTerms": [
-            "主存",
-            "mb"
-          ]
-        },
-        {
           "card": "DMA 工作过程与总线占用",
           "score": 7,
           "matchedTerms": [
@@ -5092,6 +5099,14 @@
           "score": 5,
           "matchedTerms": [
             "mb"
+          ]
+        },
+        {
+          "card": "Cache 映射与命中率",
+          "score": 5,
+          "matchedTerms": [
+            "mb",
+            "主存"
           ]
         },
         {
@@ -5168,12 +5183,14 @@
           ]
         },
         {
-          "card": "VIPT Cache索引与页内偏移",
-          "score": 8,
+          "card": "Cache 映射与命中率",
+          "score": 11,
           "matchedTerms": [
-            "页内偏移",
-            "内偏移",
-            "页内偏"
+            "字节",
+            "地址",
+            "按字节编址",
+            "偏移",
+            "内偏移"
           ]
         }
       ]
@@ -5219,7 +5236,7 @@
             "块大小",
             "kb",
             "地址",
-            "=64"
+            "=6"
           ]
         },
         {
@@ -5231,11 +5248,12 @@
           ]
         },
         {
-          "card": "Cache 直接映射与组相联",
+          "card": "存储器层次与主存组织",
           "score": 6,
           "matchedTerms": [
-            "块大小",
-            "索引"
+            "kb",
+            "因此",
+            "的数据"
           ]
         }
       ]
@@ -5269,13 +5287,6 @@
           ]
         },
         {
-          "card": "Cache 映射与命中率",
-          "score": 2,
-          "matchedTerms": [
-            "中间"
-          ]
-        },
-        {
           "card": "RISC 与 CISC",
           "score": 2,
           "matchedTerms": [
@@ -5287,6 +5298,13 @@
           "score": 2,
           "matchedTerms": [
             "访问"
+          ]
+        },
+        {
+          "card": "总线带宽与突发传输",
+          "score": 1,
+          "matchedTerms": [
+            "的访问"
           ]
         }
       ]
@@ -7669,10 +7687,10 @@
           ]
         },
         {
-          "card": "Cache跨块访问与缺失率",
+          "card": "流水线与冒险",
           "score": 4,
           "matchedTerms": [
-            "长度"
+            "等待"
           ]
         }
       ]
@@ -7763,6 +7781,13 @@
           ]
         },
         {
+          "card": "存储器层次与主存组织",
+          "score": 2,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "立即数扩展与移位指令",
           "score": 2,
           "matchedTerms": [
@@ -7841,12 +7866,11 @@
           ]
         },
         {
-          "card": "磁盘结构与平均访问时间",
-          "score": 3,
+          "card": "Cache 映射与命中率",
+          "score": 4,
           "matchedTerms": [
-            "驱动程",
-            "动程序",
-            "驱动程序"
+            "程序",
+            "一次"
           ]
         }
       ]
@@ -7948,6 +7972,14 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 8,
+          "matchedTerms": [
+            "有效位",
+            "程序"
+          ]
+        },
+        {
           "card": "TLB 组相联映射与 LRU 替换",
           "score": 8,
           "matchedTerms": [
@@ -7958,15 +7990,6 @@
             "物理页框",
             "理页框号",
             "物理页框号"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 7,
-          "matchedTerms": [
-            "处理",
-            "中断",
-            "设备"
           ]
         }
       ]
@@ -8000,25 +8023,27 @@
           ]
         },
         {
+          "card": "浮点数表示与规格化",
+          "score": 7,
+          "matchedTerms": [
+            "iii",
+            "ii",
+            "的有效"
+          ]
+        },
+        {
+          "card": "流水线与冒险",
+          "score": 7,
+          "matchedTerms": [
+            "id",
+            "i2"
+          ]
+        },
+        {
           "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 4,
           "matchedTerms": [
             "时间"
-          ]
-        },
-        {
-          "card": "数组下标寻址与元素宽度",
-          "score": 4,
-          "matchedTerms": [
-            "通常"
-          ]
-        },
-        {
-          "card": "中断与 DMA",
-          "score": 4,
-          "matchedTerms": [
-            "减少",
-            "优先级"
           ]
         }
       ]
@@ -8060,19 +8085,20 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 8,
+          "matchedTerms": [
+            "物理地址",
+            "地址",
+            "程序"
+          ]
+        },
+        {
           "card": "ALU 算术逻辑单元",
           "score": 6,
           "matchedTerms": [
             "cf",
             "of"
-          ]
-        },
-        {
-          "card": "DMA 工作过程与总线占用",
-          "score": 6,
-          "matchedTerms": [
-            "处理",
-            "预处理"
           ]
         }
       ]
@@ -8112,6 +8138,16 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 12,
+          "matchedTerms": [
+            "块大小",
+            "cpu",
+            "相同",
+            "主存"
+          ]
+        },
+        {
           "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 9,
           "matchedTerms": [
@@ -8127,14 +8163,6 @@
             "块数",
             "缓冲区",
             "数据传"
-          ]
-        },
-        {
-          "card": "DMA 周期挪用与总线仲裁",
-          "score": 9,
-          "matchedTerms": [
-            "缓冲区",
-            "cpu"
           ]
         }
       ]
@@ -8170,6 +8198,14 @@
           ]
         },
         {
+          "card": "浮点数表示与规格化",
+          "score": 5,
+          "matchedTerms": [
+            "-1",
+            "结果"
+          ]
+        },
+        {
           "card": "流水线结构冒险与数据冒险",
           "score": 4,
           "matchedTerms": [
@@ -8181,13 +8217,6 @@
           "score": 4,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "浮点数表示与规格化",
-          "score": 3,
-          "matchedTerms": [
-            "-1"
           ]
         }
       ]
@@ -10750,14 +10779,14 @@
           ]
         },
         {
-          "card": "虚拟地址分页与页内偏移",
+          "card": "流水线与冒险",
           "score": 3,
           "matchedTerms": [
-            "va"
+            "r1"
           ]
         },
         {
-          "card": "Cache组相联映射与地址字段",
+          "card": "虚拟地址分页与页内偏移",
           "score": 3,
           "matchedTerms": [
             "va"
@@ -10968,6 +10997,14 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 4,
+          "matchedTerms": [
+            "地址",
+            "程序"
+          ]
+        },
+        {
           "card": "磁盘结构与平均访问时间",
           "score": 3,
           "matchedTerms": [
@@ -10979,13 +11016,6 @@
         {
           "card": "二维数组行优先存储与局部性",
           "score": 3,
-          "matchedTerms": [
-            "地址"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 2,
           "matchedTerms": [
             "地址"
           ]
@@ -13245,6 +13275,14 @@
           ]
         },
         {
+          "card": "存储器层次与主存组织",
+          "score": 5,
+          "matchedTerms": [
+            "rom",
+            "因此"
+          ]
+        },
+        {
           "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 4,
           "matchedTerms": [
@@ -13256,13 +13294,6 @@
           "score": 4,
           "matchedTerms": [
             "直接"
-          ]
-        },
-        {
-          "card": "Cache 替换与写策略",
-          "score": 3,
-          "matchedTerms": [
-            "随机"
           ]
         }
       ]
@@ -13441,10 +13472,11 @@
           ]
         },
         {
-          "card": "总线带宽与突发传输",
-          "score": 2,
+          "card": "总线与总线事务",
+          "score": 4,
           "matchedTerms": [
-            "个数据"
+            "个数据",
+            "总时间"
           ]
         }
       ]
@@ -13534,6 +13566,14 @@
           ]
         },
         {
+          "card": "存储器层次与主存组织",
+          "score": 6,
+          "matchedTerms": [
+            "rom",
+            "ram"
+          ]
+        },
+        {
           "card": "大小端存储",
           "score": 3,
           "matchedTerms": [
@@ -13581,24 +13621,26 @@
           ]
         },
         {
+          "card": "流水线与冒险",
+          "score": 7,
+          "matchedTerms": [
+            "id",
+            "i2"
+          ]
+        },
+        {
+          "card": "浮点数表示与规格化",
+          "score": 6,
+          "matchedTerms": [
+            "iii",
+            "ii"
+          ]
+        },
+        {
           "card": "虚拟地址与指令取指缺页",
           "score": 6,
           "matchedTerms": [
             "缺页"
-          ]
-        },
-        {
-          "card": "中断屏蔽与优先级",
-          "score": 6,
-          "matchedTerms": [
-            "中断系统"
-          ]
-        },
-        {
-          "card": "CPU异常响应与现场保护",
-          "score": 6,
-          "matchedTerms": [
-            "中断"
           ]
         }
       ]
@@ -16118,6 +16160,14 @@
           ]
         },
         {
+          "card": "流水线与冒险",
+          "score": 5,
+          "matchedTerms": [
+            "等待",
+            "选a"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 5,
           "matchedTerms": [
@@ -16132,14 +16182,6 @@
           "score": 4,
           "matchedTerms": [
             "本题"
-          ]
-        },
-        {
-          "card": "CPU异常响应与现场保护",
-          "score": 4,
-          "matchedTerms": [
-            "完成后",
-            "状态"
           ]
         }
       ]
@@ -16174,22 +16216,22 @@
         },
         {
           "card": "Cache 映射与命中率",
-          "score": 7,
+          "score": 6,
           "matchedTerms": [
             "bit",
-            "kb",
-            "是否被"
-          ]
-        },
-        {
-          "card": "数组跨页与缺页次数",
-          "score": 5,
-          "matchedTerms": [
             "kb"
           ]
         },
         {
-          "card": "虚拟地址分页与页内偏移",
+          "card": "存储器层次与主存组织",
+          "score": 5,
+          "matchedTerms": [
+            "kb",
+            "因此"
+          ]
+        },
+        {
+          "card": "数组跨页与缺页次数",
           "score": 5,
           "matchedTerms": [
             "kb"
@@ -16242,22 +16284,20 @@
           ]
         },
         {
-          "card": "TLB 组相联映射与 LRU 替换",
+          "card": "流水线与冒险",
           "score": 7,
           "matchedTerms": [
-            "tlb"
+            "id",
+            "i2"
           ]
         },
         {
-          "card": "大小端存储",
-          "score": 6,
+          "card": "Cache 映射与命中率",
+          "score": 7,
           "matchedTerms": [
-            "在内存",
-            "内存中",
-            "存中的",
-            "在内存中",
-            "内存中的",
-            "在内存中的"
+            "物理地址",
+            "地址",
+            "选c"
           ]
         }
       ]
@@ -16337,6 +16377,16 @@
           ]
         },
         {
+          "card": "流水线与冒险",
+          "score": 12,
+          "matchedTerms": [
+            "if",
+            "id",
+            "i2",
+            "选a"
+          ]
+        },
+        {
           "card": "Cache 替换与写策略",
           "score": 10,
           "matchedTerms": [
@@ -16345,24 +16395,19 @@
           ]
         },
         {
+          "card": "浮点数表示与规格化",
+          "score": 7,
+          "matchedTerms": [
+            "iii",
+            "ii",
+            "选a"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 7,
           "matchedTerms": [
             "lru"
-          ]
-        },
-        {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 7,
-          "matchedTerms": [
-            "lru"
-          ]
-        },
-        {
-          "card": "虚拟地址与指令取指缺页",
-          "score": 6,
-          "matchedTerms": [
-            "缺页"
           ]
         }
       ]
@@ -16421,10 +16466,12 @@
           ]
         },
         {
-          "card": "数组下标寻址与元素宽度",
+          "card": "存储器层次与主存组织",
           "score": 4,
           "matchedTerms": [
-            "通常"
+            "因此",
+            "的数据",
+            "可能被"
           ]
         }
       ]
@@ -18779,17 +18826,19 @@
         },
         {
           "card": "存储器层次与主存组织",
-          "score": 9,
+          "score": 11,
           "matchedTerms": [
             "cache",
+            "tlb",
             "寄存器"
           ]
         },
         {
-          "card": "指令周期与微操作控制",
-          "score": 7,
+          "card": "Cache 映射与命中率",
+          "score": 9,
           "matchedTerms": [
-            "pc"
+            "cache",
+            "程序"
           ]
         }
       ]
@@ -18825,6 +18874,16 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 10,
+          "matchedTerms": [
+            "cpu",
+            "int",
+            "地址",
+            "存数据"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 9,
           "matchedTerms": [
@@ -18839,15 +18898,6 @@
             "int",
             "r1",
             "寄存器"
-          ]
-        },
-        {
-          "card": "存储器层次与主存组织",
-          "score": 8,
-          "matchedTerms": [
-            "cpu",
-            "寄存器",
-            "的可能"
           ]
         }
       ]
@@ -18923,6 +18973,23 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "流水线与冒险",
+          "score": 8,
+          "matchedTerms": [
+            "等待",
+            "max",
+            "的最大"
+          ]
+        },
+        {
+          "card": "浮点数表示与规格化",
+          "score": 6,
+          "matchedTerms": [
+            "iii",
+            "ii"
+          ]
+        },
+        {
           "card": "流水线结构冒险与数据冒险",
           "score": 4,
           "matchedTerms": [
@@ -18930,32 +18997,18 @@
           ]
         },
         {
+          "card": "总线与总线事务",
+          "score": 4,
+          "matchedTerms": [
+            "等待",
+            "题目若"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 4,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "DMA 工作过程与总线占用",
-          "score": 4,
-          "matchedTerms": [
-            "处理"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 3,
-          "matchedTerms": [
-            "处理"
-          ]
-        },
-        {
-          "card": "Cache 替换与写策略",
-          "score": 3,
-          "matchedTerms": [
-            "状态",
-            "用顺序"
           ]
         }
       ]
@@ -19078,6 +19131,20 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "Cache 映射与命中率",
+          "score": 21,
+          "matchedTerms": [
+            "块大小",
+            "字节",
+            "mb",
+            "kb",
+            "地址",
+            "按字节编址",
+            "偏移",
+            "=6"
+          ]
+        },
+        {
           "card": "虚拟地址分页与页内偏移",
           "score": 18,
           "matchedTerms": [
@@ -19085,17 +19152,6 @@
             "mb",
             "本题",
             "偏移"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 14,
-          "matchedTerms": [
-            "块大小",
-            "字节",
-            "kb",
-            "地址",
-            "=64"
           ]
         },
         {
@@ -19117,11 +19173,14 @@
           ]
         },
         {
-          "card": "Cache组相联映射与地址字段",
-          "score": 8,
+          "card": "存储器层次与主存组织",
+          "score": 9,
           "matchedTerms": [
             "kb",
-            "块大小"
+            "mb",
+            "访问的",
+            "的数据",
+            "地址可"
           ]
         }
       ]
@@ -19213,7 +19272,7 @@
           "score": 7,
           "matchedTerms": [
             "字节",
-            "编号",
+            "块号",
             "和块内"
           ]
         },
@@ -21604,6 +21663,17 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "存储器层次与主存组织",
+          "score": 7,
+          "matchedTerms": [
+            "答案",
+            "因此",
+            "被访问",
+            "代价和",
+            "页表项"
+          ]
+        },
+        {
           "card": "TLB 与多级页表联合转换",
           "score": 7,
           "matchedTerms": [
@@ -21630,14 +21700,6 @@
           "score": 4,
           "matchedTerms": [
             "写回"
-          ]
-        },
-        {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 4,
-          "matchedTerms": [
-            "访问",
-            "淘汰"
           ]
         }
       ]
@@ -21732,6 +21794,25 @@
           ]
         },
         {
+          "card": "总线与总线事务",
+          "score": 8,
+          "matchedTerms": [
+            "起始地",
+            "始地址",
+            "起始地址",
+            "缺失"
+          ]
+        },
+        {
+          "card": "Cache 映射与命中率",
+          "score": 8,
+          "matchedTerms": [
+            "物理地址",
+            "地址",
+            "缺失"
+          ]
+        },
+        {
           "card": "CPU异常响应与现场保护",
           "score": 8,
           "matchedTerms": [
@@ -21746,24 +21827,6 @@
             "地址转换",
             "地址转",
             "址转换"
-          ]
-        },
-        {
-          "card": "总线带宽与突发传输",
-          "score": 6,
-          "matchedTerms": [
-            "起始地",
-            "始地址",
-            "起始地址"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 6,
-          "matchedTerms": [
-            "缺失",
-            "物理地址",
-            "地址"
           ]
         }
       ]
@@ -21884,6 +21947,17 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "总线与总线事务",
+          "score": 8,
+          "matchedTerms": [
+            "设备同",
+            "备同时",
+            "设备同时",
+            "的数据",
+            "数据传"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 7,
           "matchedTerms": [
@@ -21915,15 +21989,6 @@
             "备同时",
             "设备同时"
           ]
-        },
-        {
-          "card": "CPU异常响应与现场保护",
-          "score": 3,
-          "matchedTerms": [
-            "外部设",
-            "部设备",
-            "外部设备"
-          ]
         }
       ]
     },
@@ -21952,6 +22017,14 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 5,
+          "matchedTerms": [
+            "组数",
+            "能进入"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 5,
           "matchedTerms": [
@@ -21972,13 +22045,6 @@
           "score": 4,
           "matchedTerms": [
             "每次",
-            "执行"
-          ]
-        },
-        {
-          "card": "流水线结构冒险与数据冒险",
-          "score": 4,
-          "matchedTerms": [
             "执行"
           ]
         }
@@ -24277,6 +24343,13 @@
           ]
         },
         {
+          "card": "存储器层次与主存组织",
+          "score": 2,
+          "matchedTerms": [
+            "因此"
+          ]
+        },
+        {
           "card": "立即数扩展与移位指令",
           "score": 2,
           "matchedTerms": [
@@ -24285,13 +24358,6 @@
         },
         {
           "card": "中断屏蔽与优先级",
-          "score": 2,
-          "matchedTerms": [
-            "优先级"
-          ]
-        },
-        {
-          "card": "总线仲裁方式",
           "score": 2,
           "matchedTerms": [
             "优先级"
@@ -24354,10 +24420,12 @@
           ]
         },
         {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 7,
+          "card": "Cache 映射与命中率",
+          "score": 8,
           "matchedTerms": [
-            "cpu"
+            "cpu",
+            "地址",
+            "程序"
           ]
         }
       ]
@@ -24375,6 +24443,26 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "Cache 映射与命中率",
+          "score": 11,
+          "matchedTerms": [
+            "字节",
+            "kb",
+            "地址",
+            "按字节编址"
+          ]
+        },
+        {
+          "card": "总线与总线事务",
+          "score": 10,
+          "matchedTerms": [
+            "字节",
+            "起始地",
+            "始地址",
+            "起始地址"
+          ]
+        },
+        {
           "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
           "score": 10,
           "matchedTerms": [
@@ -24385,15 +24473,6 @@
             "地址和",
             "始地址和",
             "起始地址和"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 9,
-          "matchedTerms": [
-            "字节",
-            "kb",
-            "地址"
           ]
         },
         {
@@ -24414,15 +24493,6 @@
             "始地址",
             "起始地址",
             "字节"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 7,
-          "matchedTerms": [
-            "字节",
-            "每次",
-            "区大小"
           ]
         }
       ]
@@ -24462,14 +24532,15 @@
           ]
         },
         {
-          "card": "数组跨页与缺页次数",
-          "score": 5,
+          "card": "Cache 映射与命中率",
+          "score": 6,
           "matchedTerms": [
-            "kb"
+            "kb",
+            "a10"
           ]
         },
         {
-          "card": "虚拟地址分页与页内偏移",
+          "card": "数组跨页与缺页次数",
           "score": 5,
           "matchedTerms": [
             "kb"
@@ -24556,6 +24627,17 @@
           ]
         },
         {
+          "card": "浮点数表示与规格化",
+          "score": 12,
+          "matchedTerms": [
+            "iii",
+            "ii",
+            "iv",
+            "编码",
+            "选d"
+          ]
+        },
+        {
           "card": "程序查询与中断驱动 I/O",
           "score": 9,
           "matchedTerms": [
@@ -24577,13 +24659,6 @@
           "score": 8,
           "matchedTerms": [
             "执行",
-            "cpu"
-          ]
-        },
-        {
-          "card": "单周期与多周期数据通路",
-          "score": 7,
-          "matchedTerms": [
             "cpu"
           ]
         }
@@ -24622,6 +24697,16 @@
           ]
         },
         {
+          "card": "浮点数表示与规格化",
+          "score": 10,
+          "matchedTerms": [
+            "iii",
+            "ii",
+            "iv",
+            "选b"
+          ]
+        },
+        {
           "card": "DMA 周期挪用与总线仲裁",
           "score": 8,
           "matchedTerms": [
@@ -24640,13 +24725,6 @@
           "matchedTerms": [
             "控制器",
             "初始化"
-          ]
-        },
-        {
-          "card": "硬布线控制器与微程序控制器",
-          "score": 6,
-          "matchedTerms": [
-            "控制器"
           ]
         }
       ]
@@ -24693,17 +24771,19 @@
           ]
         },
         {
+          "card": "浮点数表示与规格化",
+          "score": 4,
+          "matchedTerms": [
+            "写入",
+            "选d",
+            "二进制"
+          ]
+        },
+        {
           "card": "流水线结构冒险与数据冒险",
           "score": 4,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "Cache 直接映射与组相联",
-          "score": 4,
-          "matchedTerms": [
-            "位数"
           ]
         }
       ]
@@ -24721,10 +24801,28 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "Cache 映射与命中率",
+          "score": 6,
+          "matchedTerms": [
+            "即使",
+            "相同",
+            "偏移"
+          ]
+        },
+        {
           "card": "VIPT Cache索引与页内偏移",
           "score": 6,
           "matchedTerms": [
             "索引"
+          ]
+        },
+        {
+          "card": "存储器层次与主存组织",
+          "score": 5,
+          "matchedTerms": [
+            "答案",
+            "因此",
+            "和数据"
           ]
         },
         {
@@ -24740,20 +24838,6 @@
           "score": 4,
           "matchedTerms": [
             "偏移"
-          ]
-        },
-        {
-          "card": "指令译码与有效地址计算",
-          "score": 4,
-          "matchedTerms": [
-            "偏移量"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 2,
-          "matchedTerms": [
-            "即使"
           ]
         }
       ]
@@ -27136,17 +27220,20 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 10,
+          "matchedTerms": [
+            "cpu",
+            "a5",
+            "一次",
+            "=4"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 8,
           "matchedTerms": [
             "执行",
-            "cpu"
-          ]
-        },
-        {
-          "card": "单周期与多周期数据通路",
-          "score": 7,
-          "matchedTerms": [
             "cpu"
           ]
         }
@@ -27193,19 +27280,23 @@
           ]
         },
         {
+          "card": "流水线与冒险",
+          "score": 8,
+          "matchedTerms": [
+            "r1",
+            "指令执",
+            "令执行",
+            "指令执行",
+            "选b",
+            "的指令"
+          ]
+        },
+        {
           "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 6,
           "matchedTerms": [
             "机器",
             "执行"
-          ]
-        },
-        {
-          "card": "数组下标寻址与元素宽度",
-          "score": 6,
-          "matchedTerms": [
-            "r2",
-            "r1"
           ]
         }
       ]
@@ -27252,11 +27343,11 @@
           ]
         },
         {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "card": "浮点数表示与规格化",
           "score": 3,
           "matchedTerms": [
-            "执行",
-            "的结果"
+            "结果",
+            "选a"
           ]
         }
       ]
@@ -27305,12 +27396,11 @@
           ]
         },
         {
-          "card": "中断屏蔽与优先级",
+          "card": "存储器层次与主存组织",
           "score": 6,
           "matchedTerms": [
-            "优先级",
-            "高优先",
-            "高优先级"
+            "cpu",
+            "答案"
           ]
         }
       ]
@@ -27346,6 +27436,16 @@
           ]
         },
         {
+          "card": "总线与总线事务",
+          "score": 7,
+          "matchedTerms": [
+            "的使用",
+            "使用权",
+            "的使用权",
+            "题目若"
+          ]
+        },
+        {
           "card": "流水线结构冒险与数据冒险",
           "score": 4,
           "matchedTerms": [
@@ -27365,13 +27465,6 @@
           "matchedTerms": [
             "在同一",
             "访问"
-          ]
-        },
-        {
-          "card": "RISC-V 指令格式与寄存器编码",
-          "score": 3,
-          "matchedTerms": [
-            "使用"
           ]
         }
       ]
@@ -27524,8 +27617,19 @@
       "answer": "D",
       "analysis": "2018-第31题-解析 II 和 IV 显然均能提高文件访问速度。对于 I，提前读是指在读当前盘块时，将下一个可能要访问的盘块数据读入缓冲区，以便需要时直接从缓冲区中读取，提高了文件的访问速度。对于 III，延迟写是先将写数据写入缓冲区，并置上“延迟写”标志，以备不久之后访问，当缓冲区需要再次被分配出去时才将缓冲区数据写入磁盘，减少了访问磁盘的次数，提高了文件的访问速度，III 也正确，答案选 D。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "浮点数表示与规格化",
+          "score": 12,
+          "matchedTerms": [
+            "iii",
+            "ii",
+            "iv",
+            "写入",
+            "选d"
+          ]
+        },
         {
           "card": "中断与 DMA",
           "score": 6,
@@ -27543,24 +27647,19 @@
           ]
         },
         {
+          "card": "存储器层次与主存组织",
+          "score": 4,
+          "matchedTerms": [
+            "答案",
+            "访问的",
+            "选d"
+          ]
+        },
+        {
           "card": "指令系统与寻址方式",
           "score": 4,
           "matchedTerms": [
             "直接"
-          ]
-        },
-        {
-          "card": "整数溢出检测与异常处理",
-          "score": 3,
-          "matchedTerms": [
-            "标志"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 2,
-          "matchedTerms": [
-            "缓冲区"
           ]
         }
       ]
@@ -27586,6 +27685,20 @@
           ]
         },
         {
+          "card": "流水线与冒险",
+          "score": 4,
+          "matchedTerms": [
+            "等待"
+          ]
+        },
+        {
+          "card": "总线与总线事务",
+          "score": 3,
+          "matchedTerms": [
+            "等待"
+          ]
+        },
+        {
           "card": "Cache 直接映射与组相联",
           "score": 2,
           "matchedTerms": [
@@ -27597,13 +27710,6 @@
           "score": 1,
           "matchedTerms": [
             "步需要"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 1,
-          "matchedTerms": [
-            "满足有"
           ]
         }
       ]
@@ -29929,6 +30035,13 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 2,
+          "matchedTerms": [
+            "程序"
+          ]
+        },
+        {
           "card": "补码加减与溢出判断",
           "score": 1,
           "matchedTerms": [
@@ -29940,13 +30053,6 @@
           "score": 1,
           "matchedTerms": [
             "有一个"
-          ]
-        },
-        {
-          "card": "机器指令编码与指令长度",
-          "score": 1,
-          "matchedTerms": [
-            "由操作"
           ]
         }
       ]
@@ -29998,10 +30104,10 @@
           ]
         },
         {
-          "card": "CPU 指令执行过程",
+          "card": "流水线与冒险",
           "score": 4,
           "matchedTerms": [
-            "执行"
+            "等待"
           ]
         }
       ]
@@ -30106,17 +30212,18 @@
           ]
         },
         {
+          "card": "存储器层次与主存组织",
+          "score": 3,
+          "matchedTerms": [
+            "因此",
+            "的数据"
+          ]
+        },
+        {
           "card": "浮点数表示与规格化",
           "score": 3,
           "matchedTerms": [
             "-1"
-          ]
-        },
-        {
-          "card": "立即数扩展与移位指令",
-          "score": 2,
-          "matchedTerms": [
-            "因此"
           ]
         }
       ]
@@ -30193,6 +30300,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "Cache 映射与命中率",
+          "score": 8,
+          "matchedTerms": [
+            "物理地址",
+            "地址",
+            "相同"
+          ]
+        },
+        {
           "card": "TLB 与多级页表联合转换",
           "score": 7,
           "matchedTerms": [
@@ -30214,14 +30330,6 @@
           "score": 4,
           "matchedTerms": [
             "本题"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 4,
-          "matchedTerms": [
-            "物理地址",
-            "地址"
           ]
         },
         {
@@ -30248,6 +30356,17 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "Cache 映射与命中率",
+          "score": 12,
+          "matchedTerms": [
+            "lru",
+            "一次",
+            "换策略",
+            "次访问",
+            "选c"
+          ]
+        },
+        {
           "card": "TLB 组相联映射与 LRU 替换",
           "score": 10,
           "matchedTerms": [
@@ -30263,14 +30382,6 @@
             "页号",
             "次缺页",
             "的页面"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 8,
-          "matchedTerms": [
-            "lru",
-            "次访问"
           ]
         },
         {
@@ -30400,6 +30511,19 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 16,
+          "matchedTerms": [
+            "字节",
+            "a0",
+            "地址",
+            "主存",
+            "按字节编址",
+            "偏移",
+            "内偏移"
+          ]
+        },
+        {
           "card": "VIPT Cache索引与页内偏移",
           "score": 11,
           "matchedTerms": [
@@ -30409,16 +30533,6 @@
             "虚拟地",
             "拟地址",
             "虚拟地址"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 10,
-          "matchedTerms": [
-            "字节",
-            "匹配",
-            "地址",
-            "内偏移"
           ]
         }
       ]
@@ -30453,7 +30567,7 @@
           "card": "Cache 映射与命中率",
           "score": 3,
           "matchedTerms": [
-            "匹配"
+            "相等"
           ]
         },
         {
@@ -32771,6 +32885,13 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 2,
+          "matchedTerms": [
+            "相同"
+          ]
+        },
+        {
           "card": "VIPT Cache索引与页内偏移",
           "score": 2,
           "matchedTerms": [
@@ -32782,13 +32903,6 @@
           "score": 1,
           "matchedTerms": [
             "有一个"
-          ]
-        },
-        {
-          "card": "硬布线控制器与微程序控制器",
-          "score": 1,
-          "matchedTerms": [
-            "可通过"
           ]
         }
       ]
@@ -32838,10 +32952,11 @@
           ]
         },
         {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "card": "存储器层次与主存组织",
           "score": 2,
           "matchedTerms": [
-            "不是"
+            "访问的",
+            "次访问"
           ]
         }
       ]
@@ -32957,6 +33072,14 @@
           ]
         },
         {
+          "card": "浮点数表示与规格化",
+          "score": 6,
+          "matchedTerms": [
+            "ii",
+            "iv"
+          ]
+        },
+        {
           "card": "磁盘 CHS 地址与平均访问时间",
           "score": 4,
           "matchedTerms": [
@@ -32965,13 +33088,6 @@
         },
         {
           "card": "流水线结构冒险与数据冒险",
-          "score": 4,
-          "matchedTerms": [
-            "执行"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
           "score": 4,
           "matchedTerms": [
             "执行"
@@ -33020,10 +33136,10 @@
           ]
         },
         {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
+          "card": "浮点数表示与规格化",
           "score": 2,
           "matchedTerms": [
-            "得到"
+            "结果"
           ]
         }
       ]
@@ -33042,13 +33158,14 @@
       "candidates": [
         {
           "card": "存储器层次与主存组织",
-          "score": 20,
+          "score": 22,
           "matchedTerms": [
             "平均访",
             "访问时",
             "问时间",
             "访问时间",
-            "cpu"
+            "cpu",
+            "访存"
           ]
         },
         {
@@ -33230,6 +33347,22 @@
           ]
         },
         {
+          "card": "总线与总线事务",
+          "score": 6,
+          "matchedTerms": [
+            "字节",
+            "若每个"
+          ]
+        },
+        {
+          "card": "Cache 映射与命中率",
+          "score": 6,
+          "matchedTerms": [
+            "字节",
+            "相同"
+          ]
+        },
+        {
           "card": "Cache 直接映射与组相联",
           "score": 6,
           "matchedTerms": [
@@ -33242,21 +33375,6 @@
           "score": 6,
           "matchedTerms": [
             "索引"
-          ]
-        },
-        {
-          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
-          "score": 6,
-          "matchedTerms": [
-            "字节",
-            "长度"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 4,
-          "matchedTerms": [
-            "字节"
           ]
         }
       ]
@@ -35497,6 +35615,15 @@
           ]
         },
         {
+          "card": "流水线与冒险",
+          "score": 11,
+          "matchedTerms": [
+            "等待",
+            "id",
+            "i2"
+          ]
+        },
+        {
           "card": "中断响应与异常处理",
           "score": 11,
           "matchedTerms": [
@@ -35512,14 +35639,6 @@
             "执行",
             "cpu",
             "pc"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 10,
-          "matchedTerms": [
-            "cpu",
-            "处理"
           ]
         }
       ]
@@ -35569,18 +35688,19 @@
           ]
         },
         {
+          "card": "浮点数表示与规格化",
+          "score": 9,
+          "matchedTerms": [
+            "iii",
+            "ii",
+            "iv"
+          ]
+        },
+        {
           "card": "流水线结构冒险与数据冒险",
           "score": 5,
           "matchedTerms": [
             "id"
-          ]
-        },
-        {
-          "card": "DMA 工作过程与总线占用",
-          "score": 5,
-          "matchedTerms": [
-            "处理",
-            "的时间"
           ]
         }
       ]
@@ -35700,14 +35820,13 @@
           ]
         },
         {
-          "card": "中断与 DMA",
-          "score": 10,
+          "card": "浮点数表示与规格化",
+          "score": 11,
           "matchedTerms": [
-            "cpu",
-            "执行",
-            "执行结",
-            "行结束",
-            "执行结束"
+            "iii",
+            "ii",
+            "iv",
+            "可能引"
           ]
         }
       ]
@@ -35791,16 +35910,17 @@
           ]
         },
         {
-          "card": "VIPT Cache索引与页内偏移",
-          "score": 16,
+          "card": "Cache 映射与命中率",
+          "score": 21,
           "matchedTerms": [
-            "页内偏移",
+            "字节",
+            "物理地址",
             "kb",
-            "内偏移",
-            "页内偏",
-            "虚拟地",
-            "拟地址",
-            "虚拟地址"
+            "a0",
+            "地址",
+            "按字节编址",
+            "偏移",
+            "内偏移"
           ]
         }
       ]
@@ -35847,6 +35967,15 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 10,
+          "matchedTerms": [
+            "物理地址",
+            "cpu",
+            "地址"
+          ]
+        },
+        {
           "card": "数组跨页与缺页次数",
           "score": 9,
           "matchedTerms": [
@@ -35865,18 +35994,6 @@
             "拟地址",
             "虚拟地址"
           ]
-        },
-        {
-          "card": "指令系统与寻址方式",
-          "score": 9,
-          "matchedTerms": [
-            "寄存器",
-            "基址寄",
-            "址寄存",
-            "基址寄存",
-            "址寄存器",
-            "基址寄存器"
-          ]
         }
       ]
     },
@@ -35892,6 +36009,15 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "存储器层次与主存组织",
+          "score": 7,
+          "matchedTerms": [
+            "mb",
+            "答案",
+            "因此"
+          ]
+        },
         {
           "card": "寄存器组读写端口与译码",
           "score": 7,
@@ -35919,13 +36045,6 @@
           "matchedTerms": [
             "映射"
           ]
-        },
-        {
-          "card": "Cache组相联映射与地址字段",
-          "score": 6,
-          "matchedTerms": [
-            "映射"
-          ]
         }
       ]
     },
@@ -35941,6 +36060,21 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "流水线与冒险",
+          "score": 4,
+          "matchedTerms": [
+            "等待"
+          ]
+        },
+        {
+          "card": "总线与总线事务",
+          "score": 4,
+          "matchedTerms": [
+            "等待",
+            "题目若"
+          ]
+        },
         {
           "card": "单总线数据通路与暂存器",
           "score": 3,
@@ -38307,11 +38441,13 @@
           ]
         },
         {
-          "card": "存储器层次与主存组织",
-          "score": 8,
+          "card": "Cache 映射与命中率",
+          "score": 10,
           "matchedTerms": [
+            "cpu",
+            "即使",
             "主存",
-            "cpu"
+            "程序"
           ]
         },
         {
@@ -38580,19 +38716,17 @@
           ]
         },
         {
+          "card": "流水线与冒险",
+          "score": 4,
+          "matchedTerms": [
+            "等待"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 4,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "DMA 工作过程与总线占用",
-          "score": 4,
-          "matchedTerms": [
-            "设备",
-            "中可能",
-            "的时间"
           ]
         }
       ]
@@ -38707,17 +38841,18 @@
           ]
         },
         {
+          "card": "流水线与冒险",
+          "score": 7,
+          "matchedTerms": [
+            "if",
+            "写回"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 7,
           "matchedTerms": [
             "lru"
-          ]
-        },
-        {
-          "card": "虚拟地址与指令取指缺页",
-          "score": 6,
-          "matchedTerms": [
-            "缺页"
           ]
         }
       ]
@@ -38792,13 +38927,13 @@
           ]
         },
         {
-          "card": "CPU 指令执行过程",
+          "card": "Cache 映射与命中率",
           "score": 11,
           "matchedTerms": [
-            "执行",
             "cpu",
-            "通用寄存器",
-            "的过程"
+            "int",
+            "地址",
+            "程序"
           ]
         }
       ]
@@ -41147,8 +41282,17 @@
       "existingCards": [
         "操作系统功能与特征"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "浮点数表示与规格化",
+          "score": 9,
+          "matchedTerms": [
+            "iii",
+            "ii",
+            "iv"
+          ]
+        },
         {
           "card": "指令系统与寻址方式",
           "score": 7,
@@ -41178,14 +41322,6 @@
           "matchedTerms": [
             "pc",
             "功能"
-          ]
-        },
-        {
-          "card": "冯·诺依曼结构与存储程序",
-          "score": 5,
-          "matchedTerms": [
-            "pc",
-            "空间的"
           ]
         }
       ]
@@ -41221,13 +41357,13 @@
         },
         {
           "card": "Cache 映射与命中率",
-          "score": 10,
+          "score": 11,
           "matchedTerms": [
             "组索引",
             "地址",
+            "程序",
             "数组",
-            "索引和",
-            "采用的"
+            "索引和"
           ]
         },
         {
@@ -41273,6 +41409,17 @@
           ]
         },
         {
+          "card": "存储器层次与主存组织",
+          "score": 12,
+          "matchedTerms": [
+            "kb",
+            "mb",
+            "的位数",
+            "答案",
+            "因此"
+          ]
+        },
+        {
           "card": "TLB 组相联映射与 LRU 替换",
           "score": 7,
           "matchedTerms": [
@@ -41295,13 +41442,6 @@
           "matchedTerms": [
             "/8",
             "mb"
-          ]
-        },
-        {
-          "card": "页式存储与缺页异常",
-          "score": 5,
-          "matchedTerms": [
-            "kb"
           ]
         }
       ]
@@ -41477,6 +41617,15 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 10,
+          "matchedTerms": [
+            "地址映射",
+            "地址",
+            "主存"
+          ]
+        },
+        {
           "card": "Cache组相联映射与地址字段",
           "score": 9,
           "matchedTerms": [
@@ -41493,14 +41642,6 @@
             "统定义",
             "系统定义",
             "和操作"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 8,
-          "matchedTerms": [
-            "地址映射",
-            "地址"
           ]
         }
       ]
@@ -41612,6 +41753,17 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 17,
+          "matchedTerms": [
+            "地址映射",
+            "物理地址",
+            "相等",
+            "地址",
+            "相同"
+          ]
+        },
+        {
           "card": "页式存储与缺页异常",
           "score": 15,
           "matchedTerms": [
@@ -41632,17 +41784,6 @@
             "理页框",
             "页框号",
             "物理页框"
-          ]
-        },
-        {
-          "card": "虚拟地址与指令取指缺页",
-          "score": 11,
-          "matchedTerms": [
-            "虚拟地址",
-            "数据页",
-            "虚拟地",
-            "拟地址",
-            "地址所"
           ]
         }
       ]
@@ -41680,6 +41821,14 @@
           ]
         },
         {
+          "card": "存储器层次与主存组织",
+          "score": 4,
+          "matchedTerms": [
+            "答案",
+            "因此"
+          ]
+        },
+        {
           "card": "虚拟地址分页与页内偏移",
           "score": 4,
           "matchedTerms": [
@@ -41691,13 +41840,6 @@
           "score": 2,
           "matchedTerms": [
             "因此"
-          ]
-        },
-        {
-          "card": "Cache 直接映射与组相联",
-          "score": 2,
-          "matchedTerms": [
-            "索引"
           ]
         }
       ]
@@ -41725,6 +41867,15 @@
           ]
         },
         {
+          "card": "浮点数表示与规格化",
+          "score": 9,
+          "matchedTerms": [
+            "iii",
+            "ii",
+            "iv"
+          ]
+        },
+        {
           "card": "Cache 直接映射与组相联",
           "score": 7,
           "matchedTerms": [
@@ -41740,18 +41891,12 @@
           ]
         },
         {
-          "card": "虚拟地址分页与页内偏移",
+          "card": "流水线与冒险",
           "score": 5,
           "matchedTerms": [
-            "本题",
-            "与物理"
-          ]
-        },
-        {
-          "card": "流水线与冒险",
-          "score": 4,
-          "matchedTerms": [
-            "资源冲突"
+            "资源冲突",
+            "资源冲",
+            "源冲突"
           ]
         }
       ]
@@ -44247,6 +44392,17 @@
           ]
         },
         {
+          "card": "流水线与冒险",
+          "score": 10,
+          "matchedTerms": [
+            "id",
+            "i2",
+            "指令的",
+            "寄存器",
+            "的指令"
+          ]
+        },
+        {
           "card": "x86 相对寻址与转移目标计算",
           "score": 8,
           "matchedTerms": [
@@ -44259,14 +44415,6 @@
           "card": "指令周期与微操作控制",
           "score": 7,
           "matchedTerms": [
-            "pc"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 7,
-          "matchedTerms": [
-            "执行",
             "pc"
           ]
         }
@@ -44306,17 +44454,17 @@
           ]
         },
         {
-          "card": "Cache 映射与命中率",
-          "score": 2,
-          "matchedTerms": [
-            "个块"
-          ]
-        },
-        {
           "card": "Cache 命中率与空间局部性",
           "score": 1,
           "matchedTerms": [
             "一个块"
+          ]
+        },
+        {
+          "card": "DMA 周期挪用与总线仲裁",
+          "score": 1,
+          "matchedTerms": [
+            "用一个"
           ]
         }
       ]
@@ -44405,26 +44553,28 @@
           ]
         },
         {
+          "card": "流水线与冒险",
+          "score": 11,
+          "matchedTerms": [
+            "if",
+            "id",
+            "i2"
+          ]
+        },
+        {
+          "card": "浮点数表示与规格化",
+          "score": 6,
+          "matchedTerms": [
+            "iii",
+            "ii"
+          ]
+        },
+        {
           "card": "Cache 命中率与空间局部性",
           "score": 5,
           "matchedTerms": [
             "其余",
             "可共享"
-          ]
-        },
-        {
-          "card": "小端字节序与补码读取",
-          "score": 4,
-          "matchedTerms": [
-            "地址"
-          ]
-        },
-        {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 4,
-          "matchedTerms": [
-            "在同一",
-            "访问"
           ]
         }
       ]
@@ -44654,6 +44804,14 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 4,
+          "matchedTerms": [
+            "a5",
+            "=4"
+          ]
+        },
+        {
           "card": "浮点数表示与规格化",
           "score": 3,
           "matchedTerms": [
@@ -44665,13 +44823,6 @@
           "score": 3,
           "matchedTerms": [
             "减少"
-          ]
-        },
-        {
-          "card": "Cache 组相联映射与地址划分",
-          "score": 3,
-          "matchedTerms": [
-            "a5"
           ]
         }
       ]
@@ -47080,17 +47231,19 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 7,
+          "matchedTerms": [
+            "int",
+            "即使",
+            "相同"
+          ]
+        },
+        {
           "card": "RISC 与 CISC",
           "score": 7,
           "matchedTerms": [
             "isa"
-          ]
-        },
-        {
-          "card": "x86 相对寻址与转移目标计算",
-          "score": 7,
-          "matchedTerms": [
-            "x86"
           ]
         }
       ]
@@ -47161,6 +47314,17 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "Cache 映射与命中率",
+          "score": 14,
+          "matchedTerms": [
+            "lru",
+            "a5",
+            "总计",
+            "换策略",
+            "列访问"
+          ]
+        },
+        {
           "card": "TLB 组相联映射与 LRU 替换",
           "score": 11,
           "matchedTerms": [
@@ -47176,14 +47340,6 @@
             "lru",
             "换策略",
             "状态"
-          ]
-        },
-        {
-          "card": "Cache 映射与命中率",
-          "score": 9,
-          "matchedTerms": [
-            "lru",
-            "总计"
           ]
         },
         {
@@ -47269,15 +47425,13 @@
           ]
         },
         {
-          "card": "TLB 与多级页表联合转换",
-          "score": 9,
+          "card": "Cache 映射与命中率",
+          "score": 10,
           "matchedTerms": [
-            "物理地",
-            "理地址",
             "物理地址",
-            "虚拟地",
-            "拟地址",
-            "虚拟地址"
+            "地址",
+            "条指令",
+            "每条"
           ]
         }
       ]
@@ -47319,17 +47473,17 @@
           ]
         },
         {
+          "card": "Cache 映射与命中率",
+          "score": 2,
+          "matchedTerms": [
+            "程序"
+          ]
+        },
+        {
           "card": "Cache组相联映射与地址字段",
           "score": 2,
           "matchedTerms": [
             "不是"
-          ]
-        },
-        {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 2,
-          "matchedTerms": [
-            "访问"
           ]
         }
       ]
@@ -47419,6 +47573,16 @@
           ]
         },
         {
+          "card": "浮点数表示与规格化",
+          "score": 11,
+          "matchedTerms": [
+            "iii",
+            "ii",
+            "iv",
+            "写入"
+          ]
+        },
+        {
           "card": "TLB 与多级页表联合转换",
           "score": 10,
           "matchedTerms": [
@@ -47432,20 +47596,14 @@
           ]
         },
         {
-          "card": "流水线结构冒险与数据冒险",
-          "score": 8,
+          "card": "Cache 映射与命中率",
+          "score": 9,
           "matchedTerms": [
-            "id",
-            "i2"
-          ]
-        },
-        {
-          "card": "虚拟地址与指令取指缺页",
-          "score": 8,
-          "matchedTerms": [
-            "虚拟地址",
-            "虚拟地",
-            "拟地址"
+            "物理地址",
+            "地址",
+            "直接映",
+            "接映射",
+            "直接映射"
           ]
         }
       ]
@@ -47480,9 +47638,8 @@
           "card": "存储器层次与主存组织",
           "score": 3,
           "matchedTerms": [
-            "的元数",
-            "元数据",
-            "的元数据"
+            "因此",
+            "的数据"
           ]
         },
         {
