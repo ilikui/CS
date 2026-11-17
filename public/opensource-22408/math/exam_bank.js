@@ -144,6 +144,22 @@
     button.disabled = true;
   }
 
+  // 将原题中的换行、选择题选项和 Markdown 粗体转换为语义化展示行；不改写数学表达式。
+  function formatExamContent(value, kind) {
+    const source = String(value || '').replace(/\r\n?/g, '\n').trim();
+    if (!source) return '';
+    return source.split('\n').map(line => {
+      const raw = line.trim();
+      if (!raw) return '<div class="q-content-gap" aria-hidden="true"></div>';
+      const text = raw.replace(/^\s*>\s?/, '').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      const option = /^(?:[-*]\s*)?(?:[（(]?[A-DＡ-Ｄ][）)、.．、]|[A-DＡ-Ｄ][.．、)）]|（[A-DＡ-Ｄ]）)\s*/.test(raw);
+      const className = kind === 'question' && option ? 'q-content-line q-option-line' :
+        kind === 'solution' && /^(?:解：|证明：|解答：|[（(]?[一二三四五六七八九十0-9]+[）)、.．、])/.test(raw) ? 'q-content-line q-step-line' :
+        'q-content-line';
+      return '<div class="' + className + '">' + text + '</div>';
+    }).join('');
+  }
+
   function renderExamQuestions() {
     const filtered = getFiltered();
     const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
@@ -173,22 +189,22 @@
     let html = '';
     for (let i = 0; i < pageItems.length; i++) {
       const [year, type, num, question, answer, solution] = pageItems[i];
-      html += `<div class="q-card">
-        <div class="q-header">
+      html += `<article class="q-card">
+        <header class="q-header">
           <div class="q-meta">
             <span class="q-year">${year}年</span>
             <span class="q-type ${type}">${type}</span>
             <span class="q-number">第${num}题</span>
           </div>
-          <button class="q-toggle" onclick="toggleExamAnswer(this)">查看解答</button>
-        </div>
-        <div class="q-text">${question}</div>
+          <button class="q-toggle" onclick="toggleExamAnswer(this)" aria-expanded="false">查看解答</button>
+        </header>
+        <section class="q-text" aria-label="题目">${formatExamContent(question, 'question')}</section>
         ${renderKnowledgeLinks(pageItems[i])}
         <div class="q-hidden">
-          ${answer ? `<div class="q-answer-box"><div class="q-answer-label">&#9989; 答案</div><div>${answer}</div></div>` : ''}
-          ${solution ? `<div class="q-solution"><div class="q-answer-label">&#128161; 解析</div><div>${solution}</div></div>` : ''}
+          ${answer ? `<section class="q-answer-box"><div class="q-answer-label">&#9989; 参考答案</div><div class="q-answer-content">${formatExamContent(answer, 'answer')}</div></section>` : ''}
+          ${solution ? `<section class="q-solution"><div class="q-answer-label">&#128161; 解题解析</div><div class="q-solution-content">${formatExamContent(solution, 'solution')}</div></section>` : ''}
         </div>
-      </div>`;
+      </article>`;
     }
 
     // Pagination controls
