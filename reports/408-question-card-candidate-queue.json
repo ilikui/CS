@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T11:35:37.305Z",
+  "generatedAt": "2026-11-17T11:36:46.921Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -2661,7 +2661,7 @@
           ]
         },
         {
-          "card": "连续内存分配与动态分区",
+          "card": "内存分配与页面管理",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -2819,6 +2819,14 @@
           ]
         },
         {
+          "card": "连续内存分配与动态分区",
+          "score": 5,
+          "matchedTerms": [
+            "mb",
+            "的最小"
+          ]
+        },
+        {
           "card": "TLB 与快表命中",
           "score": 4,
           "matchedTerms": [
@@ -2837,13 +2845,6 @@
         },
         {
           "card": "页表结构与地址转换",
-          "score": 3,
-          "matchedTerms": [
-            "mb"
-          ]
-        },
-        {
-          "card": "inode 直接与多级间接索引",
           "score": 3,
           "matchedTerms": [
             "mb"
@@ -2944,10 +2945,13 @@
           ]
         },
         {
-          "card": "工作集与抖动",
-          "score": 4,
+          "card": "银行家算法安全性检查",
+          "score": 5,
           "matchedTerms": [
-            "大小"
+            "避免",
+            "避免算",
+            "免算法",
+            "避免算法"
           ]
         },
         {
@@ -5382,6 +5386,13 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
+        {
           "card": "文件访问路径与磁盘 I/O",
           "score": 2,
           "matchedTerms": [
@@ -5393,13 +5404,6 @@
           "score": 2,
           "matchedTerms": [
             "因此"
-          ]
-        },
-        {
-          "card": "缓冲区与缓冲池",
-          "score": 1,
-          "matchedTerms": [
-            "使用的"
           ]
         }
       ]
@@ -5535,6 +5539,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
+        {
           "card": "系统调用与用户态内核态",
           "score": 1,
           "matchedTerms": [
@@ -5633,18 +5644,17 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
+        {
           "card": "临界区与共享缓冲区",
           "score": 2,
           "matchedTerms": [
             "只有"
-          ]
-        },
-        {
-          "card": "文件逻辑结构与物理结构",
-          "score": 2,
-          "matchedTerms": [
-            "的数据",
-            "在物理"
           ]
         },
         {
@@ -6214,11 +6224,12 @@
           ]
         },
         {
-          "card": "进程与线程的并发执行",
+          "card": "多级反馈队列调度",
           "score": 6,
           "matchedTerms": [
-            "t1",
-            "t2"
+            "ms",
+            "等待",
+            "长时间"
           ]
         }
       ]
@@ -8200,6 +8211,13 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
+        {
           "card": "文件控制块 FCB 与目录查找",
           "score": 1,
           "matchedTerms": [
@@ -8227,6 +8245,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
         {
           "card": "索引结点 inode 与文件控制块",
           "score": 1,
@@ -8293,17 +8318,17 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
+        {
           "card": "死锁资源分配图",
           "score": 2,
           "matchedTerms": [
             "是否有"
-          ]
-        },
-        {
-          "card": "硬链接与 inode 共享",
-          "score": 2,
-          "matchedTerms": [
-            "因此"
           ]
         }
       ]
@@ -8345,19 +8370,17 @@
           ]
         },
         {
-          "card": "文件逻辑结构与物理结构",
-          "score": 3,
-          "matchedTerms": [
-            "到的数",
-            "的数据",
-            "到的数据"
-          ]
-        },
-        {
           "card": "信号量同步与前驱关系",
           "score": 3,
           "matchedTerms": [
             "ac"
+          ]
+        },
+        {
+          "card": "调度评价指标",
+          "score": 2,
+          "matchedTerms": [
+            "到达"
           ]
         }
       ]
@@ -8439,6 +8462,13 @@
           "score": 3,
           "matchedTerms": [
             "地址"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
           ]
         },
         {
@@ -11119,10 +11149,10 @@
           ]
         },
         {
-          "card": "进程同步与信号量",
+          "card": "工作集与抖动",
           "score": 2,
           "matchedTerms": [
-            "顺序"
+            "题目"
           ]
         }
       ]
@@ -11148,6 +11178,14 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 3,
+          "matchedTerms": [
+            "题目",
+            "也不要"
+          ]
+        },
+        {
           "card": "信号量同步与前驱关系",
           "score": 3,
           "matchedTerms": [
@@ -11166,13 +11204,6 @@
           "score": 1,
           "matchedTerms": [
             "求对方"
-          ]
-        },
-        {
-          "card": "文件逻辑结构与物理结构",
-          "score": 1,
-          "matchedTerms": [
-            "的数据"
           ]
         }
       ]
@@ -11279,7 +11310,7 @@
           ]
         },
         {
-          "card": "进程调度算法",
+          "card": "多级反馈队列调度",
           "score": 2,
           "matchedTerms": [
             "运行"
@@ -11323,17 +11354,17 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
+        {
           "card": "TLB 与快表命中",
           "score": 2,
           "matchedTerms": [
             "查询"
-          ]
-        },
-        {
-          "card": "文件逻辑结构与物理结构",
-          "score": 1,
-          "matchedTerms": [
-            "的数据"
           ]
         }
       ]
@@ -11430,10 +11461,10 @@
           ]
         },
         {
-          "card": "伙伴系统与内存回收",
+          "card": "工作集与抖动",
           "score": 2,
           "matchedTerms": [
-            "请求"
+            "题目"
           ]
         }
       ]
@@ -13702,16 +13733,6 @@
           ]
         },
         {
-          "card": "文件逻辑结构与物理结构",
-          "score": 6,
-          "matchedTerms": [
-            "os",
-            "用户看",
-            "的数据",
-            "格式化"
-          ]
-        },
-        {
           "card": "磁盘引导与格式化流程",
           "score": 5,
           "matchedTerms": [
@@ -13728,6 +13749,13 @@
         },
         {
           "card": "缺页异常处理流程",
+          "score": 4,
+          "matchedTerms": [
+            "os"
+          ]
+        },
+        {
+          "card": "缺页异常与页表更新",
           "score": 4,
           "matchedTerms": [
             "os"
@@ -13756,6 +13784,13 @@
           ]
         },
         {
+          "card": "连续内存分配与动态分区",
+          "score": 3,
+          "matchedTerms": [
+            "mb"
+          ]
+        },
+        {
           "card": "页表结构与地址转换",
           "score": 3,
           "matchedTerms": [
@@ -13774,13 +13809,6 @@
           "score": 2,
           "matchedTerms": [
             "后一个"
-          ]
-        },
-        {
-          "card": "共享铁锹互斥与资源锁",
-          "score": 1,
-          "matchedTerms": [
-            "的信号"
           ]
         }
       ]
@@ -13885,10 +13913,10 @@
           ]
         },
         {
-          "card": "FIFO、LRU 与 OPT 页面置换",
+          "card": "工作集与抖动",
           "score": 2,
           "matchedTerms": [
-            "访问"
+            "题目"
           ]
         }
       ]
@@ -13920,6 +13948,13 @@
           "score": 2,
           "matchedTerms": [
             "开始"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
           ]
         },
         {
@@ -13974,17 +14009,18 @@
           ]
         },
         {
-          "card": "页表结构与地址转换",
+          "card": "工作集与抖动",
           "score": 3,
           "matchedTerms": [
-            "mb"
+            "题目",
+            "题目对"
           ]
         },
         {
-          "card": "FAT链接分配与簇链访问",
+          "card": "连续内存分配与动态分区",
           "score": 3,
           "matchedTerms": [
-            "8b"
+            "mb"
           ]
         }
       ]
@@ -14059,6 +14095,13 @@
           "score": 2,
           "matchedTerms": [
             "服务"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
           ]
         },
         {
@@ -16544,10 +16587,11 @@
           ]
         },
         {
-          "card": "进程虚拟地址空间与段布局",
-          "score": 3,
+          "card": "工作集与抖动",
+          "score": 4,
           "matchedTerms": [
-            "text"
+            "口外的",
+            "题目"
           ]
         }
       ]
@@ -16572,6 +16616,13 @@
           "matchedTerms": [
             "直接",
             "限制"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
           ]
         },
         {
@@ -16646,10 +16697,12 @@
           ]
         },
         {
-          "card": "改进型 CLOCK 页面置换",
-          "score": 4,
+          "card": "连续内存分配与动态分区",
+          "score": 6,
           "matchedTerms": [
-            "其次"
+            "mb",
+            "答案",
+            "第一个"
           ]
         }
       ]
@@ -16786,24 +16839,24 @@
           ]
         },
         {
+          "card": "多级反馈队列调度",
+          "score": 2,
+          "matchedTerms": [
+            "答案"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
+        {
           "card": "进程间通信 IPC",
           "score": 2,
           "matchedTerms": [
             "机制"
-          ]
-        },
-        {
-          "card": "临界区互斥访问原则",
-          "score": 2,
-          "matchedTerms": [
-            "正确同"
-          ]
-        },
-        {
-          "card": "改进型 CLOCK 页面置换",
-          "score": 1,
-          "matchedTerms": [
-            "过程中"
           ]
         }
       ]
@@ -16846,16 +16899,15 @@
           ]
         },
         {
-          "card": "互斥锁、自旋锁与信号量",
-          "score": 3,
+          "card": "工作集与抖动",
+          "score": 4,
           "matchedTerms": [
-            "可能使",
-            "能使用",
-            "可能使用"
+            "的访问",
+            "题目"
           ]
         },
         {
-          "card": "进程调度算法",
+          "card": "多级反馈队列调度",
           "score": 3,
           "matchedTerms": [
             "p2"
@@ -19255,6 +19307,13 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
+        {
           "card": "缓冲区与缓冲池",
           "score": 1,
           "matchedTerms": [
@@ -19289,6 +19348,13 @@
           "score": 2,
           "matchedTerms": [
             "后一个"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
           ]
         },
         {
@@ -19404,10 +19470,10 @@
           ]
         },
         {
-          "card": "管道与消息传递",
+          "card": "工作集与抖动",
           "score": 2,
           "matchedTerms": [
-            "用于有"
+            "题目"
           ]
         }
       ]
@@ -19427,6 +19493,14 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "工作集与抖动",
+          "score": 3,
+          "matchedTerms": [
+            "题目",
+            "的一组"
+          ]
+        },
         {
           "card": "文件控制块 FCB 与目录查找",
           "score": 3,
@@ -19455,13 +19529,6 @@
           "score": 2,
           "matchedTerms": [
             "构成"
-          ]
-        },
-        {
-          "card": "硬链接与 inode 共享",
-          "score": 2,
-          "matchedTerms": [
-            "因此"
           ]
         }
       ]
@@ -19496,6 +19563,13 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
+        {
           "card": "伙伴系统与内存回收",
           "score": 2,
           "matchedTerms": [
@@ -19507,13 +19581,6 @@
           "score": 2,
           "matchedTerms": [
             "只有"
-          ]
-        },
-        {
-          "card": "缓冲区与缓冲池",
-          "score": 1,
-          "matchedTerms": [
-            "的目的"
           ]
         }
       ]
@@ -21972,6 +22039,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "多级反馈队列调度",
+          "score": 8,
+          "matchedTerms": [
+            "rr",
+            "答案",
+            "答案c"
+          ]
+        },
+        {
           "card": "页表结构与地址转换",
           "score": 5,
           "matchedTerms": [
@@ -22000,13 +22076,6 @@
           "matchedTerms": [
             "kb"
           ]
-        },
-        {
-          "card": "伙伴系统与内存回收",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
         }
       ]
     },
@@ -22027,6 +22096,13 @@
           "score": 6,
           "matchedTerms": [
             "物理"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
           ]
         },
         {
@@ -22080,14 +22156,14 @@
           ]
         },
         {
-          "card": "页表结构与地址转换",
+          "card": "连续内存分配与动态分区",
           "score": 3,
           "matchedTerms": [
             "mb"
           ]
         },
         {
-          "card": "inode 直接与多级间接索引",
+          "card": "页表结构与地址转换",
           "score": 3,
           "matchedTerms": [
             "mb"
@@ -22229,6 +22305,13 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
+        {
           "card": "目录项与索引节点 inode",
           "score": 2,
           "matchedTerms": [
@@ -22240,13 +22323,6 @@
           "score": 2,
           "matchedTerms": [
             "访问"
-          ]
-        },
-        {
-          "card": "读者写者问题",
-          "score": 1,
-          "matchedTerms": [
-            "不能与"
           ]
         }
       ]
@@ -24795,11 +24871,10 @@
           ]
         },
         {
-          "card": "文件逻辑结构与物理结构",
-          "score": 4,
+          "card": "工作集与抖动",
+          "score": 2,
           "matchedTerms": [
-            "os",
-            "的数据"
+            "题目"
           ]
         }
       ]
@@ -24838,17 +24913,17 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
+        {
           "card": "操作系统功能与特征",
           "score": 1,
           "matchedTerms": [
             "理计算"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 1,
-          "matchedTerms": [
-            "题目若"
           ]
         }
       ]
@@ -24881,14 +24956,6 @@
           ]
         },
         {
-          "card": "文件逻辑结构与物理结构",
-          "score": 4,
-          "matchedTerms": [
-            "rom",
-            "的数据"
-          ]
-        },
-        {
           "card": "进程同步与信号量",
           "score": 3,
           "matchedTerms": [
@@ -24900,6 +24967,13 @@
           "score": 3,
           "matchedTerms": [
             "地址"
+          ]
+        },
+        {
+          "card": "原子交换指令与自旋锁",
+          "score": 3,
+          "matchedTerms": [
+            "if"
           ]
         }
       ]
@@ -24947,10 +25021,10 @@
           ]
         },
         {
-          "card": "文件逻辑结构与物理结构",
-          "score": 1,
+          "card": "工作集与抖动",
+          "score": 2,
           "matchedTerms": [
-            "的数据"
+            "题目"
           ]
         }
       ]
@@ -24986,6 +25060,14 @@
           ]
         },
         {
+          "card": "多级反馈队列调度",
+          "score": 8,
+          "matchedTerms": [
+            "cpu",
+            "p2"
+          ]
+        },
+        {
           "card": "进程调度算法",
           "score": 7,
           "matchedTerms": [
@@ -24998,14 +25080,6 @@
           "score": 6,
           "matchedTerms": [
             "直接"
-          ]
-        },
-        {
-          "card": "阻塞式 I/O 与进程状态转换",
-          "score": 6,
-          "matchedTerms": [
-            "cpu",
-            "是直接"
           ]
         }
       ]
@@ -25053,10 +25127,11 @@
           ]
         },
         {
-          "card": "进程创建与终止",
-          "score": 2,
+          "card": "工作集与抖动",
+          "score": 3,
           "matchedTerms": [
-            "分配"
+            "题目",
+            "分配的"
           ]
         }
       ]
@@ -25096,14 +25171,14 @@
           ]
         },
         {
-          "card": "分页与分段的区别",
+          "card": "多级反馈队列调度",
           "score": 3,
           "matchedTerms": [
-            "kb"
+            "ms"
           ]
         },
         {
-          "card": "伙伴系统与内存回收",
+          "card": "分页与分段的区别",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -25140,6 +25215,13 @@
           ]
         },
         {
+          "card": "多级反馈队列调度",
+          "score": 3,
+          "matchedTerms": [
+            "p2"
+          ]
+        },
+        {
           "card": "进程调度算法",
           "score": 3,
           "matchedTerms": [
@@ -25148,13 +25230,6 @@
         },
         {
           "card": "临界区与共享缓冲区",
-          "score": 3,
-          "matchedTerms": [
-            "p2"
-          ]
-        },
-        {
-          "card": "死锁资源分配图",
           "score": 3,
           "matchedTerms": [
             "p2"
@@ -25555,25 +25630,27 @@
           ]
         },
         {
+          "card": "连续内存分配与动态分区",
+          "score": 6,
+          "matchedTerms": [
+            "mb",
+            "答案",
+            "第一个"
+          ]
+        },
+        {
+          "card": "多级反馈队列调度",
+          "score": 5,
+          "matchedTerms": [
+            "ms",
+            "答案"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 5,
           "matchedTerms": [
             "mb"
-          ]
-        },
-        {
-          "card": "改进型 CLOCK 页面置换",
-          "score": 4,
-          "matchedTerms": [
-            "最后"
-          ]
-        },
-        {
-          "card": "索引结点 inode 与文件控制块",
-          "score": 4,
-          "matchedTerms": [
-            "向数据",
-            "最多"
           ]
         }
       ]
@@ -27545,6 +27622,13 @@
           ]
         },
         {
+          "card": "多级反馈队列调度",
+          "score": 3,
+          "matchedTerms": [
+            "p2"
+          ]
+        },
+        {
           "card": "进程调度算法",
           "score": 3,
           "matchedTerms": [
@@ -27563,13 +27647,6 @@
           "score": 3,
           "matchedTerms": [
             "p2"
-          ]
-        },
-        {
-          "card": "TLB 与快表命中",
-          "score": 3,
-          "matchedTerms": [
-            "ns"
           ]
         }
       ]
@@ -27677,11 +27754,10 @@
           ]
         },
         {
-          "card": "文件逻辑结构与物理结构",
-          "score": 4,
+          "card": "磁盘引导与格式化流程",
+          "score": 3,
           "matchedTerms": [
-            "os",
-            "的数据"
+            "os"
           ]
         }
       ]
@@ -27724,10 +27800,11 @@
           ]
         },
         {
-          "card": "工作集与抖动",
-          "score": 4,
+          "card": "多级反馈队列调度",
+          "score": 5,
           "matchedTerms": [
-            "大小"
+            "ms",
+            "答案"
           ]
         },
         {
@@ -27836,10 +27913,10 @@
           ]
         },
         {
-          "card": "同步图与偏序关系",
+          "card": "多级反馈队列调度",
           "score": 2,
           "matchedTerms": [
-            "之后"
+            "答案"
           ]
         }
       ]
@@ -27916,20 +27993,24 @@
           ]
         },
         {
-          "card": "文件逻辑结构与物理结构",
-          "score": 4,
-          "matchedTerms": [
-            "的数据",
-            "文本文",
-            "本文件",
-            "文本文件"
-          ]
-        },
-        {
           "card": "信号量同步与前驱关系",
           "score": 3,
           "matchedTerms": [
             "ce"
+          ]
+        },
+        {
+          "card": "多级反馈队列调度",
+          "score": 2,
+          "matchedTerms": [
+            "答案"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
           ]
         },
         {
@@ -27938,13 +28019,6 @@
           "matchedTerms": [
             "不需要",
             "使用者"
-          ]
-        },
-        {
-          "card": "文件访问路径与磁盘 I/O",
-          "score": 2,
-          "matchedTerms": [
-            "的内容"
           ]
         }
       ]
@@ -30470,6 +30544,13 @@
           ]
         },
         {
+          "card": "连续内存分配与动态分区",
+          "score": 3,
+          "matchedTerms": [
+            "mb"
+          ]
+        },
+        {
           "card": "页表结构与地址转换",
           "score": 3,
           "matchedTerms": [
@@ -30481,13 +30562,6 @@
           "score": 3,
           "matchedTerms": [
             "mb"
-          ]
-        },
-        {
-          "card": "缓冲区与缓冲池",
-          "score": 1,
-          "matchedTerms": [
-            "使用的"
           ]
         }
       ]
@@ -30507,6 +30581,18 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "银行家算法安全性检查",
+          "score": 6,
+          "matchedTerms": [
+            "一定会",
+            "定会出",
+            "会出现",
+            "一定会出",
+            "定会出现",
+            "一定会出现"
+          ]
+        },
+        {
           "card": "FAT链接分配与簇链访问",
           "score": 5,
           "matchedTerms": [
@@ -30516,9 +30602,10 @@
         },
         {
           "card": "工作集与抖动",
-          "score": 4,
+          "score": 3,
           "matchedTerms": [
-            "大小"
+            "题目",
+            "题目对"
           ]
         },
         {
@@ -30533,13 +30620,6 @@
           "score": 3,
           "matchedTerms": [
             "缓存"
-          ]
-        },
-        {
-          "card": "索引结点 inode 与文件控制块",
-          "score": 2,
-          "matchedTerms": [
-            "限制"
           ]
         }
       ]
@@ -30565,6 +30645,14 @@
           ]
         },
         {
+          "card": "连续内存分配与动态分区",
+          "score": 5,
+          "matchedTerms": [
+            "mb",
+            "答案"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 5,
           "matchedTerms": [
@@ -30584,13 +30672,6 @@
           "score": 3,
           "matchedTerms": [
             "c1"
-          ]
-        },
-        {
-          "card": "死锁必要条件与处理",
-          "score": 3,
-          "matchedTerms": [
-            "s2"
           ]
         }
       ]
@@ -30617,6 +30698,14 @@
           ]
         },
         {
+          "card": "连续内存分配与动态分区",
+          "score": 4,
+          "matchedTerms": [
+            "的最小",
+            "分配"
+          ]
+        },
+        {
           "card": "虚拟内存与页面置换",
           "score": 4,
           "matchedTerms": [
@@ -30631,17 +30720,11 @@
           ]
         },
         {
-          "card": "伙伴系统与内存回收",
-          "score": 2,
+          "card": "工作集与抖动",
+          "score": 3,
           "matchedTerms": [
-            "分配"
-          ]
-        },
-        {
-          "card": "进程创建与终止",
-          "score": 2,
-          "matchedTerms": [
-            "分配"
+            "题目",
+            "分配的"
           ]
         }
       ]
@@ -30735,17 +30818,17 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
+        {
           "card": "目录项与索引节点 inode",
           "score": 2,
           "matchedTerms": [
             "号分别为"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 1,
-          "matchedTerms": [
-            "题目若"
           ]
         }
       ]
@@ -33311,14 +33394,14 @@
           ]
         },
         {
-          "card": "伙伴系统与内存回收",
+          "card": "工作集与抖动",
           "score": 2,
           "matchedTerms": [
-            "分配"
+            "题目"
           ]
         },
         {
-          "card": "进程创建与终止",
+          "card": "伙伴系统与内存回收",
           "score": 2,
           "matchedTerms": [
             "分配"
@@ -33350,6 +33433,13 @@
           "score": 4,
           "matchedTerms": [
             "普通"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
           ]
         },
         {
@@ -33395,6 +33485,13 @@
           ]
         },
         {
+          "card": "多级反馈队列调度",
+          "score": 3,
+          "matchedTerms": [
+            "ms"
+          ]
+        },
+        {
           "card": "分页与分段的区别",
           "score": 3,
           "matchedTerms": [
@@ -33403,13 +33500,6 @@
         },
         {
           "card": "伙伴系统与内存回收",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "连续内存分配与动态分区",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -33510,14 +33600,15 @@
           ]
         },
         {
-          "card": "分页与分段的区别",
-          "score": 3,
+          "card": "多级反馈队列调度",
+          "score": 4,
           "matchedTerms": [
-            "kb"
+            "ms",
+            "长时间"
           ]
         },
         {
-          "card": "伙伴系统与内存回收",
+          "card": "分页与分段的区别",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -33568,10 +33659,10 @@
           ]
         },
         {
-          "card": "临界区与共享缓冲区",
-          "score": 1,
+          "card": "工作集与抖动",
+          "score": 2,
           "matchedTerms": [
-            "数据的"
+            "题目"
           ]
         }
       ]
@@ -33619,18 +33710,21 @@
           ]
         },
         {
+          "card": "多级反馈队列调度",
+          "score": 7,
+          "matchedTerms": [
+            "ms",
+            "时间分别",
+            "长时间",
+            "20ms"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 7,
           "matchedTerms": [
             "页面",
             "地址"
-          ]
-        },
-        {
-          "card": "索引结点 inode 与文件控制块",
-          "score": 6,
-          "matchedTerms": [
-            "直接"
           ]
         }
       ]
@@ -35992,6 +36086,13 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
+        {
           "card": "管道与消息传递",
           "score": 2,
           "matchedTerms": [
@@ -36010,13 +36111,6 @@
           "score": 1,
           "matchedTerms": [
             "的信号"
-          ]
-        },
-        {
-          "card": "进程间通信 IPC",
-          "score": 1,
-          "matchedTerms": [
-            "常用于"
           ]
         }
       ]
@@ -36261,17 +36355,17 @@
           ]
         },
         {
-          "card": "工作集与抖动",
-          "score": 4,
+          "card": "文件控制块 FCB 与目录查找",
+          "score": 3,
           "matchedTerms": [
             "大小"
           ]
         },
         {
-          "card": "文件控制块 FCB 与目录查找",
-          "score": 3,
+          "card": "工作集与抖动",
+          "score": 2,
           "matchedTerms": [
-            "大小"
+            "题目"
           ]
         },
         {
@@ -38851,17 +38945,17 @@
           ]
         },
         {
-          "card": "连续内存分配与动态分区",
+          "card": "内存分配与页面管理",
           "score": 3,
           "matchedTerms": [
             "kb"
           ]
         },
         {
-          "card": "内存分配与页面管理",
+          "card": "死锁必要条件与处理",
           "score": 3,
           "matchedTerms": [
-            "kb"
+            "s2"
           ]
         }
       ]
@@ -38901,15 +38995,15 @@
           ]
         },
         {
-          "card": "伙伴系统与内存回收",
+          "card": "工作集与抖动",
           "score": 2,
           "matchedTerms": [
-            "地址可"
+            "题目"
           ]
         },
         {
-          "card": "缺页异常与页表更新",
-          "score": 1,
+          "card": "伙伴系统与内存回收",
+          "score": 2,
           "matchedTerms": [
             "地址可"
           ]
@@ -38936,13 +39030,6 @@
           ]
         },
         {
-          "card": "工作集与抖动",
-          "score": 3,
-          "matchedTerms": [
-            "最近"
-          ]
-        },
-        {
           "card": "页表项地址计算与页框号",
           "score": 3,
           "matchedTerms": [
@@ -38954,6 +39041,13 @@
           "score": 2,
           "matchedTerms": [
             "离当前"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
           ]
         },
         {
@@ -38986,6 +39080,13 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
+        {
           "card": "设备驱动与设备独立性",
           "score": 2,
           "matchedTerms": [
@@ -39004,13 +39105,6 @@
           "score": 2,
           "matchedTerms": [
             "控制器"
-          ]
-        },
-        {
-          "card": "缓冲区与缓冲池",
-          "score": 1,
-          "matchedTerms": [
-            "使用的"
           ]
         }
       ]
@@ -39046,6 +39140,17 @@
           ]
         },
         {
+          "card": "银行家算法安全性检查",
+          "score": 6,
+          "matchedTerms": [
+            "避免",
+            "避免算",
+            "免算法",
+            "避免算法",
+            "后执行"
+          ]
+        },
+        {
           "card": "进程与线程的并发执行",
           "score": 5,
           "matchedTerms": [
@@ -39058,13 +39163,6 @@
           "score": 5,
           "matchedTerms": [
             "kb"
-          ]
-        },
-        {
-          "card": "改进型 CLOCK 页面置换",
-          "score": 4,
-          "matchedTerms": [
-            "再次"
           ]
         }
       ]
@@ -41684,18 +41782,19 @@
           ]
         },
         {
-          "card": "页表项地址计算与页框号",
-          "score": 5,
+          "card": "银行家算法安全性检查",
+          "score": 6,
           "matchedTerms": [
-            "mb"
+            "全部",
+            "答案"
           ]
         },
         {
-          "card": "FAT链接分配与簇链访问",
+          "card": "多级反馈队列调度",
           "score": 5,
           "matchedTerms": [
-            "大小",
-            "=106"
+            "ms",
+            "答案"
           ]
         }
       ]
@@ -41721,6 +41820,15 @@
           ]
         },
         {
+          "card": "连续内存分配与动态分区",
+          "score": 5,
+          "matchedTerms": [
+            "mb",
+            "最大的",
+            "为最大"
+          ]
+        },
+        {
           "card": "页表结构与地址转换",
           "score": 3,
           "matchedTerms": [
@@ -41735,17 +41843,10 @@
           ]
         },
         {
-          "card": "FAT链接分配与簇链访问",
+          "card": "工作集与抖动",
           "score": 2,
           "matchedTerms": [
-            "次数"
-          ]
-        },
-        {
-          "card": "操作系统功能与特征",
-          "score": 1,
-          "matchedTerms": [
-            "理计算"
+            "题目"
           ]
         }
       ]
@@ -41762,13 +41863,6 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
-        {
-          "card": "工作集与抖动",
-          "score": 4,
-          "matchedTerms": [
-            "大小"
-          ]
-        },
         {
           "card": "FAT链接分配与簇链访问",
           "score": 4,
@@ -41791,10 +41885,17 @@
           ]
         },
         {
-          "card": "目录项与索引节点 inode",
+          "card": "多级反馈队列调度",
           "score": 2,
           "matchedTerms": [
-            "同一"
+            "答案"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
           ]
         }
       ]
@@ -41811,6 +41912,20 @@
       "existingCards": [],
       "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "多级反馈队列调度",
+          "score": 13,
+          "matchedTerms": [
+            "等待时间",
+            "时间片",
+            "等待",
+            "长时间",
+            "个时间",
+            "个时间片",
+            "等待时",
+            "待时间"
+          ]
+        },
         {
           "card": "进程调度算法",
           "score": 13,
@@ -41846,15 +41961,6 @@
             "最长时",
             "长时间",
             "最长时间"
-          ]
-        },
-        {
-          "card": "SCAN 与 C-SCAN 磁盘调度",
-          "score": 6,
-          "matchedTerms": [
-            "等待时",
-            "待时间",
-            "等待时间"
           ]
         }
       ]
@@ -41897,17 +42003,17 @@
           ]
         },
         {
-          "card": "死锁资源分配图",
+          "card": "多级反馈队列调度",
           "score": 2,
           "matchedTerms": [
-            "在循环"
+            "答案"
           ]
         },
         {
-          "card": "改进型 CLOCK 页面置换",
-          "score": 1,
+          "card": "工作集与抖动",
+          "score": 2,
           "matchedTerms": [
-            "过程中"
+            "题目"
           ]
         }
       ]
@@ -41936,6 +42042,29 @@
           ]
         },
         {
+          "card": "连续内存分配与动态分区",
+          "score": 10,
+          "matchedTerms": [
+            "分配",
+            "答案",
+            "第一个",
+            "一个可",
+            "个可用",
+            "第一个可",
+            "一个可用",
+            "第一个可用"
+          ]
+        },
+        {
+          "card": "银行家算法安全性检查",
+          "score": 8,
+          "matchedTerms": [
+            "work",
+            "答案",
+            "一个可"
+          ]
+        },
+        {
           "card": "读者写者问题",
           "score": 7,
           "matchedTerms": [
@@ -41952,21 +42081,6 @@
             "本题",
             "地址"
           ]
-        },
-        {
-          "card": "操作系统功能与特征",
-          "score": 6,
-          "matchedTerms": [
-            "功能"
-          ]
-        },
-        {
-          "card": "死锁资源分配图",
-          "score": 6,
-          "matchedTerms": [
-            "r1",
-            "r2"
-          ]
         }
       ]
     },
@@ -41982,6 +42096,16 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "连续内存分配与动态分区",
+          "score": 7,
+          "matchedTerms": [
+            "的最小",
+            "分配",
+            "答案",
+            "最小可"
+          ]
+        },
         {
           "card": "信号量同步与互斥",
           "score": 5,
@@ -42009,13 +42133,6 @@
           "score": 3,
           "matchedTerms": [
             "分配"
-          ]
-        },
-        {
-          "card": "临界区与共享缓冲区",
-          "score": 3,
-          "matchedTerms": [
-            "c1"
           ]
         }
       ]
@@ -44591,10 +44708,10 @@
           ]
         },
         {
-          "card": "临界区与共享缓冲区",
+          "card": "连续内存分配与动态分区",
           "score": 3,
           "matchedTerms": [
-            "c1"
+            "mb"
           ]
         }
       ]
@@ -44630,7 +44747,7 @@
           "card": "工作集与抖动",
           "score": 2,
           "matchedTerms": [
-            "不是"
+            "题目"
           ]
         },
         {
@@ -44761,17 +44878,18 @@
           ]
         },
         {
+          "card": "连续内存分配与动态分区",
+          "score": 5,
+          "matchedTerms": [
+            "mb",
+            "分配"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 5,
           "matchedTerms": [
             "c3"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 5,
-          "matchedTerms": [
-            "mb"
           ]
         }
       ]
@@ -44790,14 +44908,6 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
-        {
-          "card": "工作集与抖动",
-          "score": 6,
-          "matchedTerms": [
-            "大小",
-            "不是"
-          ]
-        },
         {
           "card": "进程与线程的并发执行",
           "score": 6,
@@ -44825,6 +44935,13 @@
           "score": 3,
           "matchedTerms": [
             "大小"
+          ]
+        },
+        {
+          "card": "信号量同步与前驱关系",
+          "score": 3,
+          "matchedTerms": [
+            "ac"
           ]
         }
       ]
@@ -44858,6 +44975,15 @@
           ]
         },
         {
+          "card": "多级反馈队列调度",
+          "score": 6,
+          "matchedTerms": [
+            "ms",
+            "等待",
+            "程通常"
+          ]
+        },
+        {
           "card": "虚拟内存与页面置换",
           "score": 5,
           "matchedTerms": [
@@ -44870,13 +44996,6 @@
           "matchedTerms": [
             "ns",
             "忽略"
-          ]
-        },
-        {
-          "card": "进程状态与 PCB",
-          "score": 4,
-          "matchedTerms": [
-            "状态"
           ]
         }
       ]
@@ -47477,17 +47596,17 @@
           ]
         },
         {
-          "card": "工作集与抖动",
-          "score": 4,
+          "card": "多级反馈队列调度",
+          "score": 3,
           "matchedTerms": [
-            "大小"
+            "ms"
           ]
         },
         {
-          "card": "死锁必要条件与处理",
+          "card": "连续内存分配与动态分区",
           "score": 3,
           "matchedTerms": [
-            "s1"
+            "mb"
           ]
         }
       ]
@@ -47519,6 +47638,13 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "题目"
+          ]
+        },
+        {
           "card": "索引结点 inode 与文件控制块",
           "score": 2,
           "matchedTerms": [
@@ -47526,17 +47652,10 @@
           ]
         },
         {
-          "card": "硬链接与 inode 共享",
+          "card": "银行家算法安全性检查",
           "score": 2,
           "matchedTerms": [
-            "因此"
-          ]
-        },
-        {
-          "card": "生产者消费者与有界缓冲区",
-          "score": 1,
-          "matchedTerms": [
-            "不超过"
+            "检测"
           ]
         }
       ]
@@ -47553,6 +47672,15 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "多级反馈队列调度",
+          "score": 6,
+          "matchedTerms": [
+            "ms",
+            "等待",
+            "个时间"
+          ]
+        },
         {
           "card": "文件物理分配方式",
           "score": 6,
@@ -47583,13 +47711,6 @@
           "matchedTerms": [
             "再次"
           ]
-        },
-        {
-          "card": "死锁必要条件与处理",
-          "score": 3,
-          "matchedTerms": [
-            "s2"
-          ]
         }
       ]
     },
@@ -47608,6 +47729,13 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "多级反馈队列调度",
+          "score": 5,
+          "matchedTerms": [
+            "rr"
+          ]
+        },
         {
           "card": "信号量同步与互斥",
           "score": 5,
@@ -47634,13 +47762,6 @@
           "score": 2,
           "matchedTerms": [
             "请求"
-          ]
-        },
-        {
-          "card": "磁盘引导与格式化流程",
-          "score": 2,
-          "matchedTerms": [
-            "阶段"
           ]
         }
       ]
@@ -47681,6 +47802,15 @@
           ]
         },
         {
+          "card": "多级反馈队列调度",
+          "score": 5,
+          "matchedTerms": [
+            "运行",
+            "答案",
+            "在多个"
+          ]
+        },
+        {
           "card": "进程状态与 PCB",
           "score": 5,
           "matchedTerms": [
@@ -47695,15 +47825,6 @@
             "重新计",
             "新计算",
             "重新计算"
-          ]
-        },
-        {
-          "card": "内存分配与页面管理",
-          "score": 3,
-          "matchedTerms": [
-            "保持不",
-            "持不变",
-            "保持不变"
           ]
         }
       ]
@@ -47723,10 +47844,11 @@
       "confidence": "low-candidate",
       "candidates": [
         {
-          "card": "工作集与抖动",
-          "score": 4,
+          "card": "多级反馈队列调度",
+          "score": 5,
           "matchedTerms": [
-            "大小"
+            "ms",
+            "答案"
           ]
         },
         {
@@ -47735,6 +47857,14 @@
           "matchedTerms": [
             "ac",
             "之间的"
+          ]
+        },
+        {
+          "card": "银行家算法安全性检查",
+          "score": 4,
+          "matchedTerms": [
+            "前已经",
+            "答案"
           ]
         },
         {
@@ -47749,13 +47879,6 @@
           "score": 3,
           "matchedTerms": [
             "t1"
-          ]
-        },
-        {
-          "card": "文件控制块 FCB 与目录查找",
-          "score": 3,
-          "matchedTerms": [
-            "大小"
           ]
         }
       ]
@@ -47789,6 +47912,14 @@
           ]
         },
         {
+          "card": "多级反馈队列调度",
+          "score": 5,
+          "matchedTerms": [
+            "ms",
+            "时间分别"
+          ]
+        },
+        {
           "card": "临界区与共享缓冲区",
           "score": 3,
           "matchedTerms": [
@@ -47802,13 +47933,6 @@
             "请求服",
             "求服务",
             "请求服务"
-          ]
-        },
-        {
-          "card": "磁盘调度 FCFS 与 SSTF",
-          "score": 2,
-          "matchedTerms": [
-            "请求"
           ]
         }
       ]
@@ -47847,17 +47971,19 @@
           ]
         },
         {
+          "card": "银行家算法安全性检查",
+          "score": 4,
+          "matchedTerms": [
+            "答案",
+            "而不是",
+            "在一个"
+          ]
+        },
+        {
           "card": "TLB 与快表命中",
           "score": 3,
           "matchedTerms": [
             "ns"
-          ]
-        },
-        {
-          "card": "磁盘调度与 I/O",
-          "score": 2,
-          "matchedTerms": [
-            "在一个"
           ]
         }
       ]
