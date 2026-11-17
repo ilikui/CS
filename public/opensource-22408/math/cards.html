@@ -60,6 +60,7 @@ main{max-width:1180px;margin:28px auto;padding:0 20px}.hero{background:#fff;bord
 <p class="foot">复习建议：不会 → 1 天后再看；模糊 → 3 天后；掌握 → 7 天后。此页面的记录仅保存在本设备浏览器；清理浏览器数据可能导致记录丢失，请定期导出备份。</p>
 </main>
 <script src="./exam_data.js"></script>
+<script src="./exam_knowledge_map.js?v=20261117-1"></script>
 <script>
 const cards=[
 ["CAL-01","函数定义域与值域","高等数学","第01章","cal","定义域是使表达式有意义的全部输入；值域是这些输入对应的输出集合。","分母不为 0；偶次根式被开方数 ≥0（在分母时 >0）；对数真数 >0；反三角函数自变量在 [-1,1]。多重限制取交集。","求 $f(x)=1/\\sqrt{x^2-4}$ 的定义域。","$x^2-4>0$，所以定义域为 $(-\\infty,-2)\\cup(2,+\\infty)$。","CAL-01","定义域和值域分别描述输入与输出；求值域常用配方、反解、单调性与端点分析。"],
@@ -283,17 +284,32 @@ Object.entries(EXAM_TOPIC_TERMS).forEach(([id,words])=>{const parent=id.slice(0,
 function examEscape(value){return String(value??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/\*\*(.+?)\*\*/gs,'<strong>$1</strong>').replace(/\n/g,'<br>');}
 function renderExamLinks(id,title,parent,scope='atom'){
  const rows=Array.isArray(EXAM_DATA)?EXAM_DATA:[];
- const exact=scope==='chapter'?(EXAM_PARENT_TERMS[parent]||[]):(EXAM_TOPIC_TERMS[id]||EXAM_PARENT_TERMS[parent]||[]);
- const generic=new Set(['导数','积分','数列','矩阵','行列式','秩','极限','连续','函数','方程','向量','面积']);
- const scoreRows=(words)=>rows.map(q=>{const question=String(q[3]||''),solution=String(q[5]||''),body=question+' '+solution;const hits=words.filter(w=>w&&!generic.has(w)&&body.includes(w));const questionHits=hits.filter(w=>question.includes(w));const score=hits.reduce((n,w)=>n+(w.length>=4?3:w.length===3?2:1),0)+questionHits.length*2;return {q,hits,score,questionHits:questionHits.length};}).filter(x=>x.score>=2).sort((a,b)=>b.score-a.score||b.questionHits-a.questionHits||Number(b.q[0])-Number(a.q[0])||Number(a.q[2])-Number(b.q[2]));
- const matches=scoreRows(exact);
- const years=[...new Set(matches.map(x=>String(x.q[0])))].sort();
- const byType={};matches.forEach(x=>{const t=String(x.q[1]||'其他');byType[t]=(byType[t]||0)+1;});
- const shown=matches.slice(0,5);
- const list=shown.map(({q,hits})=>'<details class="exam-q"><summary><span class="exam-year">'+examEscape(q[0])+'</span><span class="exam-type">'+examEscape(q[1])+'</span><b>第'+examEscape(q[2])+'题</b><span class="exam-hits">命中：'+examEscape(hits.slice(0,2).join('、'))+'</span></summary><div class="exam-q-body"><div class="exam-part"><b>真题原文</b><div class="exam-text">'+examEscape(q[3])+'</div></div>'+(q[4]?'<div class="exam-part"><b>参考答案</b><div class="exam-text">'+examEscape(q[4])+'</div></div>':'')+'<div class="exam-part"><b>解析</b><div class="exam-text">'+examEscape(q[5])+'</div></div></div></details>').join('');
- const scopeLabel=scope==='chapter'?'章节关联候选':'知识点关联候选';
+ const map=window.EXAM_KNOWLEDGE_MAP||{};
+ const targets=scope==='chapter'
+  ?new Set([parent,...atomicCards.filter(a=>a[2]===parent).map(a=>a[0])])
+  :new Set([id]);
+ const linked=Object.entries(map).map(([index,meta])=>{
+  if(!meta||meta.status!=='verified')return null;
+  const q=rows[Number(index)];
+  if(!q)return null;
+  const primary=(Array.isArray(meta.primary)?meta.primary:[]).filter(x=>targets.has(x));
+  const secondary=(Array.isArray(meta.secondary)?meta.secondary:[]).filter(x=>targets.has(x));
+  if(!primary.length&&!secondary.length)return null;
+  return {q,meta,primary,secondary,index:Number(index)};
+ }).filter(Boolean).sort((a,b)=>Number(b.q[0])-Number(a.q[0])||Number(a.q[2])-Number(b.q[2]));
+ const years=[...new Set(linked.map(x=>String(x.q[0])))].sort();
+ const byType={};linked.forEach(x=>{const t=String(x.q[1]||'其他');byType[t]=(byType[t]||0)+1;});
+ const limit=scope==='chapter'?10:8;
+ const shown=linked.slice(0,limit);
+ const list=shown.map(({q,meta,primary,secondary})=>{
+  const relation=primary.length
+   ?'<span class="exam-relation primary">核心考点：'+examEscape(primary.join('、'))+'</span>'
+   :'<span class="exam-relation secondary">次级考点：'+examEscape(secondary.join('、'))+'</span>';
+  return '<details class="exam-q"><summary><span class="exam-year">'+examEscape(q[0])+'</span><span class="exam-type">'+examEscape(q[1])+'</span><b>第'+examEscape(q[2])+'题</b>'+relation+'</summary><div class="exam-q-body"><div class="exam-map-reason"><b>考点关联依据</b><p>'+examEscape(meta.rationale||'按正式知识点映射关联')+'</p><p><b>解题方法：</b>'+examEscape(meta.methods||'见题目解析')+'</p><p><b>易错提醒：</b>'+examEscape(meta.pitfalls||'按题目条件逐项检查')+'</p></div><div class="exam-part"><b>真题原文</b><div class="exam-text">'+examEscape(q[3]||'')+'</div></div>'+(q[4]?'<div class="exam-part"><b>参考答案</b><div class="exam-text">'+examEscape(q[4])+'</div></div>':'<div class="exam-part"><b>参考答案</b><div class="exam-text">当前记录未提供答案，需补充核验；不自动推测。</div></div>')+'<div class="exam-part"><b>解析</b><div class="exam-text">'+examEscape(q[5]||'当前记录未提供解析，需补充核验。')+'</div></div></div></details>';
+ }).join('');
+ const scopeLabel=scope==='chapter'?'本章知识点正式关联':'本原子知识点正式关联';
  const typeSummary=Object.entries(byType).map(([k,v])=>k+' '+v+'题').join(' · ');
- return '<section class="exam-linked"><div class="exam-linked-head"><b>历年真题关联</b><span>'+scopeLabel+' · '+matches.length+' 道关键词命中</span></div><div class="exam-stats"><span>涉及 '+years.length+' 个年份</span><span>'+examEscape(years.length?years[0]+'—'+years[years.length-1]:'暂无')+'</span><span>'+examEscape(typeSummary||'暂无题型统计')+'</span></div>'+(shown.length?'<div class="exam-q-list">'+list+'</div>':'<p class="exam-empty">暂未检索到关键词命中题。建议补充考点别名或人工指定真题，不以同章无关题目填充。</p>')+'<small class="exam-source">关联方式：按知识点关键词匹配题干与解析，属于候选关联，需结合题目内容人工复核；命中数量不等于该考点的真实考频。题库来源：math/exam_data.js。</small></section>';
+ return '<section class="exam-linked"><div class="exam-linked-head"><b>历年真题实战</b><span>'+scopeLabel+' · '+linked.length+' 道已核验映射</span></div><div class="exam-stats"><span>涉及 '+years.length+' 个年份</span><span>'+examEscape(years.length?years[0]+'—'+years[years.length-1]:'暂无')+'</span><span>'+examEscape(typeSummary||'暂无题型统计')+'</span></div>'+(shown.length?'<div class="exam-q-list">'+list+'</div>':'<p class="exam-empty">当前正式映射中暂无该知识点的已核验真题。请先人工核对题目考点，再补充映射；不使用同章关键词命中题冒充关联题。</p>')+(linked.length>limit?'<p class="exam-more">当前展示 '+limit+' 道，正式关联共 '+linked.length+' 道；其余题目仍计入本卡关联统计。</p>':'')+'<small class="exam-source">数据依据：math/exam_knowledge_map.js 与 math/exam_data.js。只展示 status=verified 的正式映射；核心考点与次级考点分别标识。题目、答案和解析直接读取原始题库，不由卡片生成或改写。</small></section>';
 }
 
 function atomVisual(a,parent){
