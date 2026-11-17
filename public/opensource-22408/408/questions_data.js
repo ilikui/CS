@@ -1,4 +1,4 @@
-// 408 原创基础练习题（非历年真题）。题目与解析为本项目原创整理，后续持续扩充。
+/* 408 真题与练习数据；综合题来源及核验记录见 verified-solutions.json。 */
 window.QUESTIONS_DATA = [
   {
     "id": "ds-001",
@@ -263,5 +263,425 @@ window.QUESTIONS_DATA = [
     "question": "<p>描述浏览器访问一个 HTTPS 网站时，从输入域名到收到网页内容的主要网络过程，至少包含 DNS、TCP、TLS 和 HTTP。</p>",
     "answer": "DNS 解析 → TCP 三次握手 → TLS 握手 → HTTP 请求/响应 → 连接复用或关闭。",
     "analysisHtml": "<ol><li>查询 DNS，获得服务器 IP 地址。</li><li>客户端与服务器建立 TCP 连接。</li><li>执行 TLS 握手，验证证书并协商密钥。</li><li>通过加密连接发送 HTTP 请求。</li><li>服务器返回 HTTP 响应，浏览器解析 HTML 并继续请求相关资源。</li></ol>"
+  },
+  {
+    "id": 511,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2019,
+    "index": 41,
+    "score": 13,
+    "question": "<p>（13分）设线性表 L=(a1,a2,a3,…,a(n−2),a(n−1),an) 采用带头结点的单链表保存，结点定义为：</p><pre><code>typedef struct node {\n    int data;\n    struct node *next;\n} NODE;</code></pre><p>请设计一个空间复杂度为 O(1) 且时间上尽可能高效的算法，重新排列 L 中的各结点，得到 L'=(a1,an,a2,a(n−1),a3,a(n−2),…)。</p><p>要求：（1）给出算法的基本设计思想；（2）用 C 或 C++ 描述算法并注释关键步骤；（3）说明时间复杂度。</p>",
+    "answer": "快慢指针找中点，断开并原地逆置后半段，再将前后两段交替合并；时间O(n)，辅助空间O(1)。",
+    "analysisHtml": "<p>原题要求对结点重新链接，不能使用辅助数组或栈。完整算法、边界处理和复杂度见逐题复核解析。</p>"
+  },
+  {
+    "id": 512,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2019,
+    "index": 42,
+    "score": 10,
+    "question": "<p>（10分）请设计一个队列，要求满足：①初始时队列为空；②入队时允许增加队列占用空间；③出队后，出队元素所占用的空间可重复使用，即整个队列所占用的空间只增不减；④入队和出队操作的时间复杂度始终保持为 O(1)。</p><p>回答：（1）选择链式还是顺序存储结构；（2）画出初始状态并给出队空、队满条件；（3）画出第一个元素入队后的状态；（4）给出入队和出队操作的基本过程。</p>",
+    "answer": "采用两段式单向循环链表；front==rear判空，front==rear->next表示当前空闲结点即将被占用，需要扩展。",
+    "analysisHtml": "<p>采用带一个空闲结点的循环单链表。front指向队头数据结点，rear指向待写入的空闲结点；出队不释放结点，使空间可循环复用。</p>"
+  },
+  {
+    "id": 513,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2019,
+    "index": 43,
+    "score": 8,
+    "question": "<p>（8分）有 n（n≥3）位哲学家围坐在圆桌边，每位哲学家交替就餐和思考。圆桌中心有 m（m≥1）个碗，每两位哲学家之间有一根筷子。每位哲学家必须取到一个碗和两侧的筷子后才能就餐；进餐完毕，将碗和筷子放回原位并继续思考。</p><p>为使尽可能多的哲学家同时就餐且防止死锁，请使用信号量的 P、V 操作（wait、signal）描述互斥与同步，并说明所用信号量及初值的含义。</p>",
+    "answer": "每根筷子设互斥信号量fork[i]=1；设置plate=min(m,n−1)，哲学家先P(plate)，再P左右筷子，进餐后释放两根筷子并V(plate)。",
+    "analysisHtml": "<p>用碗信号量限制同时进入筷子竞争阶段的哲学家数量，最多min(m,n−1)，从而避免所有哲学家各持一根筷子形成环路等待。</p>"
+  },
+  {
+    "id": 514,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2019,
+    "index": 44,
+    "score": 7,
+    "question": "<p>（7分）某计算机系统中的磁盘有300个柱面，每个柱面有10个磁道，每个磁道有200个扇区，扇区大小为512B。文件系统的每个簇包含2个扇区。</p><p>（1）磁盘容量是多少？（2）磁头在85号柱面上，有4个磁盘访问请求，簇号分别为100260、60005、101660和110560。采用最短寻道时间优先（SSTF）时，访问簇的先后次序是什么？（3）第100530簇在磁盘上的物理地址是什么？簇号到磁盘物理地址的转换由I/O系统的什么程序完成？</p>",
+    "answer": "容量307,200,000B（300,000KiB）；SSTF顺序100260→101660→110560→60005；第100530簇对应柱面100、磁道5、扇区60；由磁盘驱动程序完成转换。",
+    "analysisHtml": "<p>每柱面1000簇，每磁道100簇。SSTF按当前磁头所在柱面与请求柱面的寻道距离选择下一个请求。</p>"
+  },
+  {
+    "id": 515,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2019,
+    "index": 45,
+    "score": 16,
+    "question": "<p>（16分）已知 f(n)=n!=n×(n−1)×…×2×1，计算 f(n) 的 C 语言函数 f1 及其在32位计算机 M 上的部分机器级代码如下：</p><pre><code>int f1(int n) {\n  ...\n  11 00401018 83 7D 08 01   cmp dword ptr [ebp+8],1\n  12 0040101C 7E 17         jle f1+35h (00401035)\n  13 0040101E 8B 45 08      mov eax,dword ptr [ebp+8]\n  14 00401021 83 E8 01      sub eax,1\n  15 00401024 50            push eax\n  16 00401025 E8 D6 FF FF FF call f1 (00401000)\n  ...\n  19 00401030 0F AF C1      imul eax,ecx\n  20 00401033 EB 05         jmp f1+3Ah (0040103a)\n  ...\n  21 00401035 B8 01 00 00 00 mov eax,1\n  ...\n  30 0040104A C3            ret\n}</code></pre><p>机器级代码行包括行号、虚拟地址、机器指令和汇编指令；M按字节编址，int占32位。</p><ol><li>计算f(10)需要调用f1多少次？哪条指令执行递归调用？</li><li>哪条是条件转移指令？哪些指令一定改变控制流？</li><li>求第17行虚拟地址、CALL相对偏移量，并判断大端或小端方式。</li><li>解释f(13)=6227020800而f1(13)=1932053504的原因，并说明如何修改源程序。</li><li>说明IMUL乘积高、低32位满足什么条件时OF=1，以及应在IMUL后增加什么指令以便溢出时转异常处理。</li></ol>",
+    "answer": "f1调用10次；递归调用为第16行CALL；第12行JLE为条件转移，CALL/JMP/RET改变控制流；第17行地址0040102AH，相对偏移FFFFFFD6H，小端；改用long long；高32位不是低32位符号位的扩展时OF=1，随后使用INTO。",
+    "analysisHtml": "<p>本题综合递归调用、x86控制转移、相对寻址、大小端、整数溢出和OF标志。完整逐问推导见逐题复核解析。</p>"
+  },
+  {
+    "id": 516,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2019,
+    "index": 46,
+    "score": 7,
+    "question": "<p>（7分）对于第45题，若计算机M的主存地址为32位，采用分页存储管理方式，页大小为4KB：</p><ol><li>第1行push指令和第30行ret指令是否在同一页中？说明理由。</li><li>若指令Cache有64行，采用4路组相联映射，主存块大小为64B，则32位主存地址中哪几位表示块内地址、Cache组号和标记（Tag）？</li><li>读取第16行call指令时，只可能在指令Cache的哪一组中命中？说明理由。</li></ol>",
+    "answer": "push和ret位于同一4KB页；Cache共16组，块内偏移为[5:0]、组号为[9:6]、Tag为[31:10]；CALL指令映射到第0组。",
+    "analysisHtml": "<p>页大小决定页内偏移12位；Cache块大小决定块内偏移6位；64行4路组相联得到16组和4位组索引。</p>"
+  },
+  {
+    "id": 517,
+    "subject": "computer-network",
+    "type": 2,
+    "year": 2019,
+    "index": 47,
+    "score": 9,
+    "question": "<p>（9分）某网络拓扑图中，R为路由器，主机H1～H4的IP地址配置以及R的各接口IP地址配置见原题图。现有无VLAN功能的以太网交换机和路由器可供选择。</p><p>原题网络拓扑图（含R外网接口101.1.2.10、R内网接口192.168.1.253/30、设备1/2/3及H1～H4的连接关系）：</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2019/2019-47.png\" alt=\"2019年408第47题原始网络拓扑图\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></p><p>原图主机地址：H1=192.168.1.2/26，H2=192.168.1.3/26，H3=192.168.1.66/26，H4=192.168.1.67/26；R与设备1互连接口地址为192.168.1.253/30；LAN1、LAN2默认网关分别为192.168.1.1和192.168.1.65。</p><ol><li>设备1、设备2、设备3分别应选择什么类型？</li><li>哪些设备接口需要配置IP地址？给出正确地址。</li><li>为确保H1～H4访问Internet，R需要提供什么服务？</li><li>若H3发送目的地址为192.168.1.127的IP数据报，哪些主机会接收？</li></ol><p>注：拓扑连接关系以原题图为准。</p>",
+    "answer": "设备1为路由器，设备2和3为以太网交换机；设备1的IF1=.254/30、IF2=.1/26、IF3=.65/26；R提供NAT；目的地址192.168.1.127为LAN2广播地址，只有H4接收。",
+    "analysisHtml": "<p>按/26掩码划分LAN1与LAN2两个广播域；路由器隔离广播域，私有地址访问Internet需NAT。</p>"
+  },
+  {
+    "id": 558,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2020,
+    "index": 41,
+    "score": 13,
+    "question": "<p>（13分）定义三元组（a，b，c）（其中a、b、c均为<strong>正数</strong>）的距离 D=|a−b|+|b−c|+|c−a|。给定3个非空整数集合S1、S2和S3，按升序分别存储在3个数组中。设计一个尽可能高效的算法，计算并输出所有可能的三元组（a，b，c）（a∈S1，b∈S2，c∈S3）中的最小距离。例如S1={−1，0，9}，S2={−25，−10，10，11}，S3={2，9，17，30，41}，则最小距离为2，相应的三元组为（9，10，9）。<ol><li>给出算法的基本设计思想。</li><li>采用C或C++语言描述算法，关键之处给出注释。</li><li>说明时间复杂度和空间复杂度。</li></ol></p>",
+    "answer": "最小距离为2，对应三元组(9,10,9)。采用三个指针分别扫描三个升序数组，每轮推进当前最小值所在数组的指针；时间O(n1+n2+n3)，辅助空间O(1)。",
+    "analysisHtml": "<p><strong>原卷勘误说明：</strong>原始PDF确实写“a、b、c均为正数”，但示例集合含−1、−25、−10，题面存在矛盾。下方参考算法按字面正数限制跳过非正元素；若将“正数”视为笔误、按整数集合求解，则不跳过非正元素。给定样例两种处理均得到最小距离2，三元组(9,10,9)。</p>"
+  },
+  {
+    "id": 559,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2020,
+    "index": 42,
+    "score": 10,
+    "question": "<p>（10分）若任一个字符的编码都不是其他字符编码的前缀，则称这种编码具有前缀特性。现有某字符集（字符个数≥2）的不等长编码，每个字符的编码均为二进制的0、1序列，最长为L位，且具有前缀特性。请回答：</p><ol><li>哪种数据结构适宜保存上述具有前缀特性的不等长编码？</li><li>基于所设计的数据结构，简述从0/1串到字符串的译码过程。</li><li>简述判定某字符集的不等长编码是否具有前缀特性的过程。</li></ol>",
+    "answer": "使用二叉树/前缀树保存编码，0走左、1走右，字符存于叶结点；译码到叶输出字符后回根；插入时同时检查中途遇叶及编码终点已有字符/子树两类冲突。",
+    "analysisHtml": "<p>前缀码可唯一译码。构建二叉树时每条编码对应根到叶的一条路径。</p>"
+  },
+  {
+    "id": 560,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2020,
+    "index": 43,
+    "score": 13,
+    "question": "<p>（13分）有实现x×y的两个C语言函数：</p><pre><code>unsigned umul (unsigned x, unsigned y) { return x*y; }\nint imul (int x, int y) { return x * y; }</code></pre><p>假定某计算机M中ALU只能进行加减运算和逻辑运算。回答：</p><ol><li>若M的指令系统中没有乘法指令，但有加法、减法和移位等指令，则在M上也能实现上述两个函数中的乘法运算，为什么？</li><li>若M的指令系统中有乘法指令，基于ALU、移位器、寄存器以及相应控制逻辑实现乘法指令时，控制逻辑的作用是什么？</li><li>对于①没有乘法指令；②使用ALU和移位器实现的乘法指令；③使用阵列乘法器实现的乘法指令，umul()在哪种情况下执行时间最长、哪种情况下最短？说明理由。</li><li>n位整数乘法指令可保存2n位乘积，当仅取低n位作为乘积时可能溢出。当n=32、x=2^31−1、y=2时，带符号和无符号整数乘法指令得到的2n位乘积分别是什么（十六进制）？umul()和imul()是否溢出？无符号乘法仅取低n位时如何用2n位乘积判断溢出？</li></ol>",
+    "answer": "完整64位乘积均为00000000FFFFFFFEH；umul的32位无符号结果4294967294合法、不溢出；imul的32位有符号结果超出范围、发生机器级溢出。无符号乘积高32位非0即溢出。",
+    "analysisHtml": "<p>乘法可由移位和加法实现；阵列乘法器可并行生成部分积，通常最快。注意C语言有符号溢出属于未定义行为，应与机器指令溢出标志区分。</p>"
+  },
+  {
+    "id": 561,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2020,
+    "index": 44,
+    "score": 10,
+    "question": "<p>（10分）假定主存地址为32位，按字节编址，指令Cache和数据Cache与主存之间均采用8路组相联映射方式、直写（Write Through）写策略和LRU替换算法，主存块大小为64B，数据区容量各为32KB。开始时Cache均为空。回答：</p><ol><li>Cache每一行中标记（Tag）、LRU位各占几位？是否有修改位？</li><li>程序段<pre><code>for (k = 0; k &lt; 1024; k++)\n    s[k] = 2 * s[k];</code></pre>若数组s及变量k均为int型，int占4B，k分配在寄存器中，数组s在主存中的起始地址为008000C0H，求执行过程中访问数组s的数据Cache缺失次数。</li><li>若CPU最先开始的访问操作是读取主存单元00010003H中的指令，简述从Cache中访问该指令的过程，包括Cache缺失处理过程。</li></ol>",
+    "answer": "块内偏移6位，组数64、组索引6位、Tag20位；每行LRU状态3位，无修改位；数组访问缺失64次；指令地址00010003H映射到指令Cache第0组，初始为空故缺失，装入主存块后按块内偏移3取指。",
+    "analysisHtml": "<p>32KB/(64B×8)=64组；数组4096B，恰好64个主存块，每块首次读缺失一次。</p>"
+  },
+  {
+    "id": 562,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2020,
+    "index": 45,
+    "score": 7,
+    "question": "<p>（7分）现有5个操作A、B、C、D和E，操作C必须在A和B完成后执行，操作E必须在C和D完成后执行。请使用信号量的wait()、signal()操作（P、V操作）描述上述操作之间的同步关系，并说明所用信号量及其初值。</p>",
+    "answer": "设置SAC、SBC、SCE、SDE四个初值为0的同步信号量；C等待A、B完成，E等待C、D完成。",
+    "analysisHtml": "<p>本题只有先后同步关系，没有临界区互斥要求，不需要额外互斥信号量。</p>"
+  },
+  {
+    "id": 563,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2020,
+    "index": 46,
+    "score": 8,
+    "question": "<p>（8分）某32位系统采用基于二级页表的请求分页存储管理方式，按字节编址，页目录项和页表项长度均为4字节，虚拟地址结构如下图所示。</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2020/2020-46.png\" alt=\"2020年408第46题虚拟地址字段划分图\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></p><p>页目录号（10位）｜页号（10位）｜页内偏移量（12位）。某C程序中数组a[1024][1024]的起始虚拟地址为10800000H，数组元素占4字节，进程页目录起始物理地址为00201000H。回答：</p><ol><li>a[1][2]的虚拟地址、页目录号和页号分别是什么？对应页目录项物理地址是什么？若该目录项中存放的页框号为00301H，则a[1][2]所在页对应页表项的物理地址是什么？</li><li>数组a在虚拟地址空间和物理地址空间中所占区域是否必须连续？</li><li>数组按行优先方式存放，按行遍历和按列遍历哪一种局部性更好？</li></ol>",
+    "answer": "a[1][2]虚拟地址10801008H；页目录号042H、页号001H；PDE物理地址00201108H；PTE物理地址00301004H。虚拟地址区域必须连续，物理页框不必连续；按行遍历局部性更好。",
+    "analysisHtml": "<p>每行1024×4B=4KB，恰好占一页；根据10/10/12位地址拆分计算PDE和PTE地址。</p>"
+  },
+  {
+    "id": 564,
+    "subject": "computer-network",
+    "type": 2,
+    "year": 2020,
+    "index": 47,
+    "score": 9,
+    "question": "<p>（9分）某校园网有两个局域网，通过路由器R1、R2和R3互联后接入Internet，S1和S2为以太网交换机。局域网采用静态IP地址配置，路由器部分接口以及各主机IP地址如下图所示。</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2020/2020-47a.png\" alt=\"2020年408第47题校园网拓扑图\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></p><p>NAT转换表包含外部IP、外部端口、内部IP和内部端口四个字段。</p><ol><li>为使H2和H3能够访问Web服务器（使用默认端口号），需要进行什么配置？</li><li>若H2主动访问Web服务器时，将HTTP请求报文封装到IP数据报P中发送，H2发送P时源IP和目的IP分别是什么？经过R3转发后，源IP和目的IP分别是什么？经过R2转发后，源IP和目的IP分别是什么？</li></ol>",
+    "answer": "在R2配置静态端口映射203.10.2.2:80→192.168.1.2:80。H2发出时(源192.168.1.2，目的203.10.2.2)；经R3后(源203.10.2.6，目的203.10.2.2)；经R2后(源203.10.2.6，目的192.168.1.2)。",
+    "analysisHtml": "<p>R3执行源NAT，R2执行目的NAT/端口映射。H2与Web服务器的私网IP相同，但位于不同LAN，必须依赖公网映射与源地址转换区分。</p>"
+  },
+  {
+    "id": 565,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2021,
+    "index": 41,
+    "score": 15,
+    "question": "<p>（15分）已知无向连通图G由顶点集V和边集E组成，|E|&gt;0，当G中度为奇数的顶点个数为不大于2的偶数时，G存在包含所有边且长度为|E|的路径（称为EL路径）。设图G采用邻接矩阵存储，类型定义如下：</p><pre><code>typedef struct {                    // 图的定义\n    int numVertices, numEdges;      // 图中实际的顶点数和边数\n    char VerticesList[MAXV];        // 顶点表，MAXV为已定义常量\n    int Edge[MAXV][MAXV];           // 邻接矩阵\n} MGraph;</code></pre><p>请设计算法 <code>int IsExistEL(MGraph G)</code>，判断G是否存在EL路径，若存在返回1，否则返回0。</p><ol><li>给出算法的基本设计思想。</li><li>采用C或C++语言描述算法，关键之处给出注释。</li><li>说明时间复杂度和空间复杂度。</li></ol>",
+    "answer": "无向连通图存在欧拉路径当且仅当奇度顶点数为0或2。逐行统计邻接矩阵的非零元素数得到各顶点度；奇度顶点数为0或2返回1，否则返回0。时间O(n²)，辅助空间O(1)。"
+  },
+  {
+    "id": 566,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2021,
+    "index": 42,
+    "score": 8,
+    "question": "<p>（8分）已知某排序算法：</p><pre><code>void cmpCountSort(int a[], int b[], int n) {\n    int i, j, *count;\n    count = (int *)malloc(sizeof(int) * n);\n    for (i = 0; i &lt; n; ++i) count[i] = 0;\n    for (i = 0; i &lt; n - 1; ++i)\n        for (j = i + 1; j &lt; n; ++j)\n            if (a[i] &lt; a[j]) ++count[j];\n            else ++count[i];\n    for (i = 0; i &lt; n; ++i) b[count[i]] = a[i];\n    free(count);\n}</code></pre><p>（1）若 <code>int a[]={25,-10,25,10,11,19}, b[6]</code>，调用后数组b的内容是什么？（2）若a含n个元素，元素之间比较次数是多少？（3）该算法稳定吗？若不稳定，修改为稳定排序算法。</p>",
+    "answer": "（1）b={−10,10,11,19,25,25}。（2）比较n(n−1)/2次。（3）原算法不稳定；将判断改为if(a[i]<=a[j]) count[j]++; else count[i]++;即可稳定。时间O(n²)，辅助空间O(n)。"
+  },
+  {
+    "id": 567,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2021,
+    "index": 43,
+    "score": 15,
+    "question": "<p>（15分）假定计算机M字长为16位，按字节编址，连接CPU和主存的系统总线中地址线为20位、数据线为8位，采用16位定长指令字，指令格式及说明如下图。</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2021/2021-43.png\" alt=\"2021年408第43题R型、I型、J型指令格式图\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></p><p>其中op1～op3为操作码，rs、rt和rd为通用寄存器编号，R[r]表示寄存器r的内容，imm为立即数，target为转移目标形式地址。回答：</p><ol><li>ALU宽度、可寻址主存空间大小，以及IR、MAR、MDR的位数分别是多少？</li><li>R型格式最多定义多少种操作？I型和J型格式合计最多定义多少种操作？通用寄存器最多有多少个？</li><li>若op1=0010和0011分别表示带符号整数减法和带符号整数乘法，指令01B2H的功能是什么？寄存器1、2、3内容分别为B052H、0008H、0020H时，执行01B2H和01B3H后，R3内容各是什么？是否溢出？</li><li>I型访存指令的imm为带符号偏移量，地址计算时应零扩展还是符号扩展？</li><li>无条件转移指令可采用哪种格式？</li></ol>",
+    "answer": "ALU 16位；可寻址空间2^20B=1MB；IR 16位、MAR 20位、MDR 8位。R型16种，I/J合计63种，通用寄存器4个。01B2H执行R[3]←R[1]−R[2]，结果B04AH，不溢出；01B3H执行乘法，低16位8290H，发生有符号溢出。imm符号扩展；无条件转移用J型。"
+  },
+  {
+    "id": 568,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2021,
+    "index": 44,
+    "score": 8,
+    "question": "<p>（8分）假设计算机M的主存地址为24位，按字节编址；采用分页存储管理方式，虚拟地址为30位，页大小为4KB；TLB采用2路组相联方式和LRU替换策略，共8组。回答：</p><ol><li>虚拟地址中哪几位表示虚页号？哪几位表示页内地址？</li><li>TLB访问时虚页号高位作标记、低位作组号，虚拟地址中哪几位是TLB标记、哪几位是TLB组号？</li><li>TLB初始为空，依次访问虚页号10、12、16、7、26、4、12、20，哪个虚页号对应的表项被替换？说明理由。</li><li>若虚拟地址位数增加到32位，TLB表项位数增加几位？</li></ol>",
+    "answer": "页内偏移VA[11:0]共12位，VPN为VA[29:12]共18位；TLB组号VA[14:12]共3位，Tag为VA[29:15]共15位；访问20时组4中的VPN=4被LRU替换；虚拟地址增加2位，TLB Tag增加2位。"
+  },
+  {
+    "id": 569,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2021,
+    "index": 45,
+    "score": 7,
+    "question": "<p>（7分）下述代码给出了整型信号量S的wait()和signal()操作功能描述，以及采用开/关中断指令实现信号量操作互斥的两种方法。</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2021/2021-45.png\" alt=\"2021年408第45题整型信号量wait和signal方法1、方法2代码图\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></p><p>功能描述：<code>wait(S){while(S&lt;=0); S=S-1;}</code>，<code>signal(S){S=S+1;}</code>。方法1在wait和signal开始时关中断、结束时开中断；方法2在wait的while循环体内先开中断再关中断，signal仍在关中断后执行S++再开中断。</p><ol><li>为什么wait和signal中对S的访问必须互斥？</li><li>分别说明方法1和方法2是否正确，若不正确说明理由。</li><li>用户程序能否使用开/关中断指令实现临界区互斥？为什么？</li></ol>",
+    "answer": "S是多进程共享变量，wait和signal都要读写S，必须互斥以避免竞态。方法1错误：S≤0时关中断忙等，signal无法运行而死等。方法2正确：等待时开中断让其他进程推进，重新检查及S--时关中断保护。用户程序不能执行开/关中断，因为它们是特权指令。"
+  },
+  {
+    "id": 570,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2021,
+    "index": 46,
+    "score": 8,
+    "question": "<p>（8分）某计算机用硬盘作为启动盘。硬盘第一个扇区存放主引导记录，包含磁盘引导程序和分区表；磁盘引导程序用于选择引导哪个分区的操作系统。各分区第一个扇区存放分区引导程序，用于引导该分区操作系统。系统采用多阶段引导方式，除磁盘引导程序和分区引导程序外，还需要执行ROM中的引导程序。回答：</p><ol><li>操作系统初始化程序、分区引导程序、ROM引导程序、磁盘引导程序的执行顺序是什么？</li><li>制作启动盘时，操作系统安装、磁盘物理格式化、逻辑格式化、磁盘分区四项操作的正确顺序是什么？</li><li>磁盘扇区划分和文件系统根目录建立分别在哪项操作中完成？</li></ol>",
+    "answer": "启动顺序：ROM引导程序→磁盘引导程序（MBR）→分区引导程序→操作系统初始化程序。制作顺序：物理格式化→分区→逻辑格式化→安装操作系统。扇区划分在物理格式化完成，根目录在逻辑格式化完成。"
+  },
+  {
+    "id": 571,
+    "subject": "computer-network",
+    "type": 2,
+    "year": 2021,
+    "index": 47,
+    "score": 9,
+    "question": "<p>（9分）某网络拓扑如题图所示，以太网交换机S通过路由器R与Internet互联。路由器部分接口、本地域名服务器、H1、H2的IP地址和MAC地址如图所示。</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2021/2021-47.png\" alt=\"2021年408第47题网络拓扑图，含路由器、交换机、DNS服务器、H1和H2\" loading=\"lazy\" style=\"max-width:100%;height:auto\"></p><p>在t0时刻H1的ARP表和S的交换表均为空，H1此刻通过浏览器使用域名www.abc.com访问Web服务器；t1时刻S第一次收到封装HTTP请求报文的以太网帧。假设期间没有与此次访问无关的网络通信。回答：</p><ol><li>从t0到t1期间，H1除HTTP外还运行哪个应用层协议？该协议报文从应用层到数据链路层如何逐层封装？</li><li>若S的交换表结构为[MAC地址，端口]，t1时刻交换表内容是什么？</li><li>从t0到t1期间，H2至少收到几个与此次Web访问相关的帧？是什么帧？目的MAC地址是什么？</li></ol>",
+    "answer": "除HTTP外还运行DNS；封装为DNS→UDP→IP→以太网帧。S的交换表：00-11-22-33-44-CC→端口4，00-11-22-33-44-BB→端口1，00-11-22-33-44-AA→端口2。H2至少收到2个ARP请求广播帧，目的MAC均为FF-FF-FF-FF-FF-FF。"
+  },
+  {
+    "id": 572,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2022,
+    "index": 41,
+    "score": 13,
+    "question": "<p>（13分）已知非空二叉树T的结点值均为正整数，采用顺序存储方式保存，数据结构定义如下：</p><pre><code>typedef struct {\n    int SqBiTNode[MAX_SIZE]; // 保存二叉树结点值的数组\n    int ElemNum;             // 实际占用的数组元素个数\n} SqBiTree;</code></pre><p>T中不存在的结点在数组SqBiTNode中用−1表示。根结点存储在下标0处，左、右孩子分别按完全二叉树顺序存储规则定位。原卷给出两棵示例树：</p><ul><li>T1：根40，左25、右60；25的右孩子30，30的左孩子27；60的右孩子80。数组：<code>[40,25,60,-1,30,-1,80,-1,-1,27]</code>，ElemNum=10。</li><li>T2：根40，左50、右60；50的右孩子30，30的右孩子35。数组：<code>[40,50,60,-1,30,-1,-1,-1,-1,-1,35]</code>，ElemNum=11。</li></ul><p>请设计尽可能高效的算法，判定采用这种方式存储的二叉树是否为二叉搜索树，是则返回true，否则返回false。要求给出基本设计思想、C/C++算法及关键注释。</p><p><a href=\"https://images.eduego.com/Uploads/files/wenjian/202312/202312260079107.pdf#page=6\" target=\"_blank\" rel=\"noopener\">查看2022年408原卷第6页及原题图</a></p>",
+    "answer": "对顺序存储二叉树进行中序遍历，检查所有实际结点值是否严格递增；严格递增则为二叉搜索树。",
+    "analysisHtml": "<p>BST的中序遍历序列严格递增。孩子下标为左2k+1、右2k+2；下标越界或数组值为−1时，该位置为空。不能只检查父子结点的局部大小关系。</p>"
+  },
+  {
+    "id": 573,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2022,
+    "index": 42,
+    "score": 10,
+    "question": "<p>（10分）现有n（n&gt;100000）个数保存在一维数组M中，需要查找M中最小的10个数。请回答：</p><ol><li>设计一个完成上述查找任务的算法，要求平均情况下的比较次数尽可能少，简述算法思想（不需要程序实现）。</li><li>说明所设计算法平均情况下的时间复杂度和空间复杂度。</li></ol><p><a href=\"https://images.eduego.com/Uploads/files/wenjian/202312/202312260079107.pdf#page=7\" target=\"_blank\" rel=\"noopener\">查看2022年408原卷第7页及原题图</a></p>",
+    "answer": "使用容量为10的大根堆维护当前最小的10个候选值。扫描新元素x，若x小于堆顶则替换堆顶并向下调整，否则丢弃。扫描结束后堆中即为最小10个数。时间O(n)，空间O(1)（k=10为常数）。",
+    "analysisHtml": "<p>先取前10个元素建大根堆；堆顶是当前候选中的最大值。每个后续元素只需先与堆顶比较，只有更小才需要O(log10)调整。若要求升序输出，最后只需排序10个元素。</p>"
+  },
+  {
+    "id": 574,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2022,
+    "index": 43,
+    "score": 15,
+    "question": "<p>（15分）某CPU中部分数据通路如题43图所示，其中GPRs为通用寄存器组，FR为标志寄存器，用于存放ALU产生的标志信息；带箭头虚线表示控制信号，如Read、Write分别表示主存读、主存写，MDRin表示内部总线上数据写入MDR，MDRout表示MDR内容送内部总线。</p><p>题图数据通路包含系统总线、MAR、MDR、PC、IR、内部总线、GPRs、ALU、暂存器Y/Z及标志寄存器FR。</p><ol><li>设ALU输入端A、B及输出端F的最高位分别为A15、B15、F15，FR中的符号标志和溢出标志分别为SF和OF，求SF、A加B及A减B时OF的逻辑表达式（输入变量为A15、B15、F15）。</li><li>为什么要设置暂存器Y和Z？</li><li>若GPRs的输入端rs、rd分别为所读、写通用寄存器的编号，GPRs最多有多少个通用寄存器？rs和rd来自哪个寄存器？rd应连接地址译码器还是多路选择器？</li><li>取指令阶段（不考虑PC增量）的控制信号序列是什么？若发出主存读命令到数据传送到MDR共需5个时钟周期，取指阶段至少需要几个周期？</li><li>控制信号由什么部件产生？哪些寄存器输出连接到该部件输入端？</li></ol><p><a href=\"https://images.eduego.com/Uploads/files/wenjian/202312/202312260079107.pdf#page=7\" target=\"_blank\" rel=\"noopener\">查看2022年408原卷第7页及原题图</a></p>",
+    "answer": "SF=F15；OF加法=¬A15¬B15F15+A15B15¬F15；OF减法=¬A15B15F15+A15¬B15¬F15。Y暂存ALU一个输入，Z暂存ALU输出。rs、rd均4位，最多16个GPR，来自IR，rd连接地址译码器。取指序列PCout、MARin→Read→MDRout、IRin，至少7周期。CU产生控制信号，IR和FR输出接入CU。",
+    "analysisHtml": "<p>单总线每一时刻只能有一个有效数据源。ALU有两个输入和一个输出，Y暂存先到的操作数，Z暂存结果。rs选择读端口，rd选择写端口；写端口通过地址译码器选中目标寄存器。</p>"
+  },
+  {
+    "id": 575,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2022,
+    "index": 44,
+    "score": 8,
+    "question": "<p>（8分）假设某磁盘驱动器中有4个双面盘片，每个盘面有20000个磁道，每个磁道有500个扇区，每个扇区可记录512字节数据，盘片转速为7200 r/min，平均寻道时间为5ms。请回答：</p><ol><li>每个扇区包含数据及地址信息，地址信息分为3个字段。字段名称分别是什么？各字段至少占多少位？</li><li>一个扇区的平均访问时间约为多少？</li><li>采用周期挪用DMA传送，磁盘控制器数据缓冲区大小为64位，一个扇区读写过程中DMA向CPU发送多少次总线请求？若CPU也需要访问主存，DMA能否获得总线使用权？为什么？</li></ol><p><a href=\"https://images.eduego.com/Uploads/files/wenjian/202312/202312260079107.pdf#page=8\" target=\"_blank\" rel=\"noopener\">查看2022年408原卷第8页及原题图</a></p>",
+    "answer": "地址字段为柱面号15位、磁头号3位、扇区号9位。平均访问时间约9.18ms。64位缓冲区为8B，512B扇区需要64次DMA总线请求。周期挪用DMA可以获得总线使用权，以保证磁盘数据及时传送。",
+    "analysisHtml": "<p>柱面数20000→ceil(log₂20000)=15位；盘面数4×2=8→3位；扇区数500→9位。转一圈约8.33ms，平均旋转延迟4.17ms，单扇区传输约0.0167ms。</p>"
+  },
+  {
+    "id": 576,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2022,
+    "index": 45,
+    "score": 7,
+    "question": "<p>（7分）某文件系统磁盘块大小为4KB，目录项由文件名和索引节点号构成，每个索引节点占256字节，其中包含直接地址项10个，一级、二级和三级间接地址项各1个，每个地址项占4字节。子目录stu包含子目录course和文件doc；course子目录包含文件course1和course2。文件名、索引节点号及占用磁盘块号如下表：</p><table><tr><th>文件名</th><th>索引节点号</th><th>磁盘块号</th></tr><tr><td>stu</td><td>1</td><td>10</td></tr><tr><td>course</td><td>2</td><td>20</td></tr><tr><td>course1</td><td>10</td><td>30</td></tr><tr><td>course2</td><td>100</td><td>40</td></tr><tr><td>doc</td><td>10</td><td>x</td></tr></table><ol><li>目录文件stu中每个目录项的内容是什么？</li><li>文件doc占用磁盘块的块号x是多少？</li><li>若目录文件course的内容已在内存，打开文件course1并将其读入内存，需要读几个磁盘块？说明理由。</li><li>若course2大小增长到6MB，存取course2需要使用该索引节点的哪几级间接地址项？说明理由。</li></ol><p><a href=\"https://images.eduego.com/Uploads/files/wenjian/202312/202312260079107.pdf#page=8\" target=\"_blank\" rel=\"noopener\">查看2022年408原卷第8页及原题图</a></p>",
+    "answer": "stu目录项为(course,2)和(doc,10)；doc与course1共享inode 10，故x=30；读取course1需读2个磁盘块：其inode所在块及文件数据块30；6MB=1536个4KB块，需使用一级和二级间接地址项。",
+    "analysisHtml": "<p>每个间接索引块可存4096/4=1024个块号。直接项覆盖10块，一级间接再覆盖1024块，合计1034块，小于1536；二级间接足够覆盖余下数据，无需三级间接。</p>"
+  },
+  {
+    "id": 577,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2022,
+    "index": 46,
+    "score": 8,
+    "question": "<p>（8分）某进程的两个线程T1和T2并发执行A、B、C、D、E和F共6个操作，其中T1执行A、E和F，T2执行B、C和D。执行顺序约束为：C在A和B完成后执行；D和E均在C完成后执行；F在E完成后执行。请使用信号量的wait()、signal()操作描述T1和T2之间的同步关系，并说明所用信号量的作用及其初值。</p><p>原卷题46图的依赖关系：A→C，B→C，C→D，C→E，E→F。</p><p><a href=\"https://images.eduego.com/Uploads/files/wenjian/202312/202312260079107.pdf#page=9\" target=\"_blank\" rel=\"noopener\">查看2022年408原卷第9页及原题图</a></p>",
+    "answer": "设置SAC=0和SCE=0。T1：A；signal(SAC)；wait(SCE)；E；F。T2：B；wait(SAC)；C；signal(SCE)；D。SAC保证A先于C，SCE保证C先于E；线程内顺序同时保证C先于D、E先于F。",
+    "analysisHtml": "<p>A与B之间无先后约束；D与E之间也无先后约束。T2先执行B再等待A完成，C执行后通知T1，T1等待通知后执行E、F。两个初值为0的信号量即可满足所有偏序约束。</p>"
+  },
+  {
+    "id": 578,
+    "subject": "computer-network",
+    "type": 2,
+    "year": 2022,
+    "index": 47,
+    "score": 9,
+    "question": "<p>（9分）某网络拓扑如题47图所示，R为路由器，S为以太网交换机，AP为802.11接入点。路由器E0接口及DHCP服务器的IP地址配置见图；H1与H2属于同一广播域但不属于同一冲突域；H2和H3属于同一冲突域；H4和H5已接入网络并通过DHCP动态获取IP地址。现有路由器、100BaseT以太网交换机和100BaseT集线器（Hub）三类设备各若干台。</p><ol><li>设备1和设备2分别应选择哪类设备？</li><li>若信号传播速度为2×10^8m/s，以太网最小帧长为64B，信号通过设备2时额外延迟1.51μs，H2与H3之间最远可相距多少？</li><li>H4通过DHCP动态获取IP地址时首先发送的报文M是什么？路由器E0接口能否收到封装M的以太网帧？S向DHCP服务器转发该帧的目的MAC地址是什么？</li><li>若H4向H5发送IP分组P，H5收到的封装P的802.11帧地址1、地址2、地址3分别是什么？</li></ol><p>原卷图中：R的E0为192.168.0.1/25、MAC 00-11-11-11-11-A1；DHCP服务器为192.168.0.2/25、MAC 00-11-11-11-11-B1；AP的MAC为00-11-11-11-11-C1；H4为192.168.0.3/25、MAC 00-11-11-11-11-D1；H5为192.168.0.4/25、MAC 00-11-11-11-11-E1。</p><p><a href=\"https://images.eduego.com/Uploads/files/wenjian/202312/202312260079107.pdf#page=9\" target=\"_blank\" rel=\"noopener\">查看2022年408原卷第9页及原题图</a></p>",
+    "answer": "设备1选交换机，设备2选Hub；H2与H3最远距离210m；M为DHCP Discover，路由器E0能收到该广播帧，S转发帧的目的MAC为FF-FF-FF-FF-FF-FF；802.11地址1=H5的00-11-11-11-11-E1，地址2=AP的00-11-11-11-11-C1，地址3=H4的00-11-11-11-11-D1。",
+    "analysisHtml": "<p>交换机隔离冲突域但保留同一广播域；Hub共享冲突域。最小帧发送时间为64×8/100Mb/s=5.12μs，扣除两次设备延迟3.02μs后，线路往返传播时间为2.10μs，单程1.05μs，距离210m。DHCP Discover以广播方式发送。AP向无线终端转发时，地址1是接收端，地址2是AP，地址3保留原始发送端地址。</p>"
+  },
+  {
+    "id": 579,
+    "subject": "data-structure",
+    "year": 2023,
+    "index": 41,
+    "score": 13,
+    "question": "<p>（13分）已知有向图G采用邻接矩阵存储，类型定义如下：</p><pre><code>typedef struct {\n    int numVertices, numEdges;\n    char VerticesList[MAXV];\n    int Edge[MAXV][MAXV];\n} MGraph;</code></pre><p>将图中出度大于入度的顶点称为K顶点。例如题41图中，顶点a和b都是K顶点。题图的有向边为：a→b、a→d、b→d、b→c、c→d。</p><p>请设计算法 int printVertices(MGraph G)，对给定的任意非空有向图G，输出图G中所有K顶点，并返回K顶点的个数。要求：（1）给出算法的基本设计思想；（2）采用C或C++描述算法并注释。</p><p><a href=\"https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf#page=8\" target=\"_blank\" rel=\"noopener\">查看2023年408原卷第8页</a></p>"
+  },
+  {
+    "id": 580,
+    "subject": "data-structure",
+    "year": 2023,
+    "index": 42,
+    "score": 10,
+    "question": "<p>（10分）对含有n（n&gt;0）个记录的文件进行外部排序，采用置换-选择排序生成初始归并段时需要使用一个工作区，工作区中能保存m个记录。请回答：</p><ol><li>若文件中含有19个记录，其关键字依次是51、94、37、92、14、63、15、99、48、56、23、60、31、17、43、8、90、166、100，当m=4时，可生成几个初始归并段？各是什么？</li><li>对任意的m（n远大于m且m&gt;0），生成的第一个初始归并段的长度最大值和最小值分别是多少？</li></ol><p><a href=\"https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf#page=8\" target=\"_blank\" rel=\"noopener\">查看2023年408原卷第8页</a></p>"
+  },
+  {
+    "id": 581,
+    "subject": "computer-organization",
+    "year": 2023,
+    "index": 43,
+    "score": 14,
+    "question": "<p>（14分）已知计算机M字长为32位，按字节编址，采用请求调页策略的虚拟存储管理方式，虚拟地址32位，页面大小4KB；数据Cache采用4路组相联映射，数据区大小8KB，主存块大小32B。程序：</p><pre><code>int a[24][64];\nfor (i=0; i&lt;24; i++)\n    for (j=0; j&lt;64; j++) a[i][j]=10;</code></pre><p>二维数组a按行优先存放，虚拟地址空间起始地址为00422000H，sizeof(int)=4。执行前数组a不在主存，执行过程中不会发生页面置换。回答：（1）数组分布在几个页面，访问发生几次缺页，页故障地址是什么？（2）不考虑i、j，数据访问是否具有时间局部性？（3）虚拟地址哪些位用作块内地址和Cache组号？a[1][0]地址及其Cache组号？（4）数组占用多少主存块？原循环和交换i、j顺序后的Cache命中率各是多少？</p><p><a href=\"https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf#page=9\" target=\"_blank\" rel=\"noopener\">查看2023年408原卷第9页</a></p>"
+  },
+  {
+    "id": 582,
+    "subject": "computer-organization",
+    "year": 2023,
+    "index": 44,
+    "score": 9,
+    "question": "<p>（9分）题43中的C程序段在计算机M上的部分机器级代码如下：</p><table><tr><th>指令序号</th><th>虚拟地址</th><th>机器指令</th><th>汇编指令</th></tr><tr><td>1</td><td>00401072</td><td>C7 45 F8 00 00 00 00</td><td>mov [ebp-8],0</td></tr><tr><td>2</td><td>00401079</td><td>EB 09</td><td>jmp 00401084h</td></tr><tr><td>3</td><td>0040107B</td><td>8B 55 F8</td><td>mov eax,[ebp-8]</td></tr><tr><td>7</td><td>00401088</td><td>7D 32</td><td>jge 004010BCh</td></tr><tr><td>8</td><td>0040108A</td><td>C7 45 FC 00 00 00 00</td><td>mov [ebp-4],0</td></tr><tr><td>19</td><td>004010AE</td><td>C7 84 82 00 20 42 00 0A 00 00 00</td><td>mov [ecx+edx*4+00422000h],0Ah</td></tr></table><p>请回答：（1）第20条指令的虚拟地址是多少？（2）第2条jmp和第7条jge的寻址方式是什么？给出第2条jmp跳转目标地址计算过程。（3）第19条mov的源操作数采用什么寻址方式？edx存放变量j时，ecx存放什么？根据机器码判断大端还是小端？（4）第一次执行第19条指令时，取指过程中是否发生缺页异常？为什么？</p><p><a href=\"https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf#page=10\" target=\"_blank\" rel=\"noopener\">查看2023年408原卷第10页</a></p>"
+  },
+  {
+    "id": 583,
+    "subject": "operating-system",
+    "year": 2023,
+    "index": 45,
+    "score": 7,
+    "question": "<p>（7分）现要求使用swap指令和布尔型变量lock实现临界区互斥。lock为线程间共享变量，lock为TRUE时线程不能进入临界区，为FALSE时线程能进入临界区。某同学编写的伪代码：</p><pre><code>bool lock = FALSE; //共享变量\n...\n//进入区\nbool key = TRUE;\nif (key == TRUE)\n    swap key, lock;\n//临界区\n...\n//退出区\nlock = TRUE;\n...</code></pre><p>另给出函数：</p><pre><code>void newSwap(bool *a, bool *b) {\n    bool temp = *a;\n    *a = *b;\n    *b = temp;\n}</code></pre><p>（1）指出伪代码错误并在不增加语句条数的前提下改正。（2）能否用newSwap(&amp;key,&amp;lock)代替原子swap指令实现互斥？为什么？</p><p><a href=\"https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf#page=11\" target=\"_blank\" rel=\"noopener\">查看2023年408原卷第11页</a></p>"
+  },
+  {
+    "id": 584,
+    "subject": "operating-system",
+    "year": 2023,
+    "index": 46,
+    "score": 8,
+    "question": "<p>（8分）进程P通过执行系统调用从键盘接收一个字符输入，过程中涉及以下操作：①将进程P插入就绪队列；②将进程P插入阻塞队列；③将字符从键盘控制器读入系统缓冲区；④启动键盘中断处理程序；⑤进程P系统调用返回；⑥用户在键盘上输入字符。回答：（1）操作①前一个和后一个操作分别是什么？操作⑥后一个操作是什么？（2）哪个操作之后CPU一定从P切换到其他进程？哪个操作之后调度程序才能选中P？（3）哪个操作由键盘驱动程序完成？（4）键盘中断处理程序执行时P是什么状态，CPU处于内核态还是用户态？</p><p><a href=\"https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf#page=12\" target=\"_blank\" rel=\"noopener\">查看2023年408原卷第12页</a></p>"
+  },
+  {
+    "id": 585,
+    "subject": "computer-network",
+    "year": 2023,
+    "index": 47,
+    "score": 9,
+    "question": "<p>（9分）主机H登录FTP服务器后，向服务器上传大小为18000B的文件F。H为传输F建立数据连接时选择的初始序号为100，MSS=1000B，拥塞控制初始阈值为4MSS，RTT=10ms，忽略TCP段传输时延；发送过程中均以MSS段发送，且无差错、丢包和乱序。回答：（1）FTP控制连接、数据连接分别是持久还是非持久？登录时建立的是哪种连接？（2）文件第1字节序号是多少？断开数据连接时服务器第二次挥手ACK确认序号是多少？（3）收到ACK=2101和ACK=7101时拥塞窗口分别是多少？（4）从请求建立数据连接到确认文件全部接收至少多长时间？应用层数据平均发送速率是多少？</p><p><a href=\"https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf#page=14\" target=\"_blank\" rel=\"noopener\">查看2023年408原卷第14页</a></p>"
+  },
+  {
+    "id": 586,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2024,
+    "index": 41,
+    "score": 13,
+    "question": "<p>（13分）2023年10月26日，神州十七号载人飞船发射取得圆满成功。载人航天工程包含众多子工程，为保证工程有序开展，需要明确各子工程的前导工程。该问题可抽象为有向图的拓扑序列问题。已知有向图G采用邻接矩阵存储，类型定义如下：</p><pre><code>typedef struct {\n    int numVertices, numEdges;\n    char verticesList[MAXV];\n    int Edge[MAXV][MAXV];\n} MGraph;</code></pre><p>请设计算法 int uniquely(MGraph G)，判定G是否存在唯一的拓扑序列；若是返回1，否则返回0。要求：（1）给出算法基本设计思想；（2）采用C或C++描述算法并注释关键之处。</p><p><a href=\"https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf\" target=\"_blank\" rel=\"noopener\">查看2024年408回忆版原卷（第41题）</a></p>"
+  },
+  {
+    "id": 587,
+    "subject": "data-structure",
+    "type": 2,
+    "year": 2024,
+    "index": 42,
+    "score": 10,
+    "question": "<p>（10分）将关键字序列20、3、11、18、9、14、7依次存储到初始为空、长度为11的散列表HT中。散列函数为：</p><p>H(key)=(key×3) mod 11</p><p>发生冲突时，按H1、H2、H3……顺序探查，其中：</p><p>Hk=(H0+k²) mod 11，k=1、2、3……</p><ol><li>画出构造的散列表HT，并计算装填因子。（6分）</li><li>给出在HT中查找关键字14的关键字比较序列。（2分）</li><li>在HT中查找关键字8，确认查找失败时的散列地址是多少？（2分）</li></ol><p><a href=\"https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf\" target=\"_blank\" rel=\"noopener\">查看2024年408回忆版原卷（第42题）</a></p>"
+  },
+  {
+    "id": 588,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2024,
+    "index": 43,
+    "score": 13,
+    "question": "<p>（13分）假定计算机M字长为32位，按字节编址，采用32位定长指令字。指令add、slli和lw的格式、编码和功能如下图。</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2024/2024-43a.png\" alt=\"2024年408第43题指令格式图\" style=\"max-width:100%;height:auto\"></p><p>R[x]表示通用寄存器x的内容，M[x]表示地址为x的存储单元内容，shamt为移位位数，imm为补码偏移量。题目另给出部分数据通路图，其中A、B分别是从rs1和rs2读出的内容，IR[31:20]为指令寄存器高12位；Ext=0、1分别零扩展、符号扩展；ALUctr=000、001、010分别执行加、减、逻辑左移。</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2024/2024-43b.png\" alt=\"2024年408第43题ALU数据通路图\" style=\"max-width:100%;height:auto\"></p><ol><li>M最多有多少个通用寄存器？为什么shamt占5位？（2分）</li><li>执行add时ALUBsrc取值？若rs1、rs2分别为87654321H、98765432H，求ALU输出F、OF、CF；无符号加法溢出看哪个标志？（3分）</li><li>执行slli时Ext可取0或1的原因？（2分）</li><li>执行lw时Ext、ALUctr分别取何值？（2分）</li><li>机器码A040A103H为何一定是lw？（2分）</li><li>若R[01H]=FFFFA2D0H，求该指令读取数据的存储地址。（2分）</li></ol><p><a href=\"https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf\" target=\"_blank\" rel=\"noopener\">查看2024年408回忆版原卷（第43题）</a></p>"
+  },
+  {
+    "id": 589,
+    "subject": "computer-organization",
+    "type": 2,
+    "year": 2024,
+    "index": 44,
+    "score": 10,
+    "question": "<p>（10分）对题43中的计算机M，C语言语句sum+=a[i]对应的指令序列为：</p><pre><code>slli r4, r2, 2  // R[r4] = R[r2] << 2\nadd  r4, r3, r4 // R[r4] = R[r3] + R[r4]\nlw   r5, 0(r4)  // R[r5] = M[R[r4] + 0]\nadd  r1, r1, r5 // R[r1] = R[r1] + R[r5]</code></pre><p>已知i、sum和数组a均为int型，通用寄存器r1～r5编号为01H～05H。</p><ol><li>写出存放数组a首地址、变量i和sum的通用寄存器编号。（3分）</li><li>已知M为小端方式，采用页式存储管理，页大小4KB。执行第一条指令时i=5，r1=00001332H，r3=0013DFF0H。从该地址开始的存储单元内容如下图。求执行sum+=a[i]后a[i]的地址、a[i]和sum的机器数、a[i]所在页号，以及数组a至少占几页。（5分）</li></ol><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2024/2024-44.png\" alt=\"2024年408第44题内存字节表\" style=\"max-width:100%;height:auto\"></p><p>（3）求slli r4,r2,2的机器码；若数组a改为short型，slli指令应如何修改？（2分）</p><p><a href=\"https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf\" target=\"_blank\" rel=\"noopener\">查看2024年408回忆版原卷（第44题）</a></p>"
+  },
+  {
+    "id": 590,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2024,
+    "index": 45,
+    "score": 7,
+    "question": "<p>（7分）某计算机采用虚拟页式存储管理，虚拟地址和物理地址均为32位，页表项大小为4B，页面大小为4MB。虚拟地址结构如下：</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2024/2024-45.png\" alt=\"2024年408第45题虚拟地址结构\" style=\"max-width:100%;height:auto\"></p><p>进程P的页表起始虚拟地址为B8C00000H，被装载到从物理地址65400000H开始的连续主存空间中。回答：</p><ol><li>CPU访问虚拟地址12345678H时发生缺页，经处理和MMU转换后得到物理地址BAB45678H。求此次更新的页表项虚拟地址、物理地址及页框号。（3分）</li><li>求进程P页表所在页的页号、该页对应页表项的虚拟地址及该页表项中的页框号。（4分）</li></ol><p><a href=\"https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf\" target=\"_blank\" rel=\"noopener\">查看2024年408回忆版原卷（第45题）</a></p>"
+  },
+  {
+    "id": 591,
+    "subject": "operating-system",
+    "type": 2,
+    "year": 2024,
+    "index": 46,
+    "score": 8,
+    "question": "<p>（8分）某网络系统中的缓冲区B用于存放一个数据分组。对B的操作有C1、C2和C3：C1将一个数据分组写入B，C2从B中读出一个数据分组，C3对B中的数据分组进行修改。要求B为空时才能执行C1，B非空时才能执行C2和C3。回答：</p><ol><li>假设进程P1和P2均需执行C1，实现C1的代码是否为临界区？为什么？（2分）</li><li>B初始为空，P1执行C1一次，P2执行C2一次。定义尽可能少的信号量，并用wait()、signal()描述同步或互斥关系，说明信号量作用及初值。（3分）</li><li>B初始非空，P1和P2各执行C3一次。定义尽可能少的信号量，并描述同步或互斥关系，说明信号量作用及初值。（3分）</li></ol><p><a href=\"https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf\" target=\"_blank\" rel=\"noopener\">查看2024年408回忆版原卷（第46题）</a></p>"
+  },
+  {
+    "id": 592,
+    "subject": "computer-network",
+    "type": 2,
+    "year": 2024,
+    "index": 47,
+    "score": 9,
+    "question": "<p>（9分）现有4个自治系统互连，AS1运行内部网关协议RIP；AS3规模较小，自治系统内任意两台主机通信经过的路由器数不超过15个；AS4规模较大，自治系统内任意两台主机通信经过的路由器数可能超过20个。网络拓扑如下图：</p><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2024/2024-47.png\" alt=\"2024年408第47题自治系统拓扑图\" style=\"max-width:100%;height:auto\"></p><ol><li>仅有RIP和OSPF可选，AS4应选择哪个协议？（1分）</li><li>AS3中两主机通信，确保IP分组正常接收，初始TTL至少设为多少？（1分）</li><li>AS1路由器同时启动并立即交换初始距离向量，之后每隔30秒交换最新距离向量。从初始交换时刻算起，R11～R16均获得到达210.2.4.0/24的正确路由至少需要多长时间？（2分）</li><li>R44向R13通告136.5.16.0/20时，使用哪类BGP会话和哪个BGP报文？R13向R14、R15通告时使用哪类会话？（3分）</li><li>根据下表所示的AS路径和下一跳信息，在无策略约束时，R14和R15到136.5.16.0/20的下一跳分别是什么？（2分）</li></ol><p><img src=\"https://pgcode-image.oss-cn-beijing.aliyuncs.com/408-exam-paper/pic/2024/2024-47b.png\" alt=\"2024年408第47题BGP路径信息表\" style=\"max-width:100%;height:auto\"></p><p>本题参考答案依据拓扑图中的AS内IGP距离进行热土豆路由选择。</p><p><a href=\"https://static.kaoyan.cn/file/question/2024/06/12/a75873d3454bb7c1c899eee42b2328dc.pdf\" target=\"_blank\" rel=\"noopener\">查看2024年408回忆版原卷（第47题）</a></p>"
   }
 ];

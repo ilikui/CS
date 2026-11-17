@@ -333,16 +333,152 @@ default: art='<path d="M28 16V91H294" stroke="currentColor" fill="none"/><path d
 return '<div class="atom-visual" style="margin:12px 0;padding:10px;border:1px solid var(--line,#ddd);border-radius:10px"><div style="font-size:12px;opacity:.75;margin-bottom:4px">动态概念图 · '+title+'</div><svg viewBox="0 0 320 108" role="img" aria-label="'+title+'动态示意" style="display:block;width:100%;height:auto;max-height:140px">'+art+'</svg></div>';
 }
 
+
+function atomWorkedExample(a){
+ const esc=v=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+ const parent=a[2],steps=String(a[5]||'').split(/[；;。]+/).map(x=>x.trim()).filter(Boolean);
+ const frames={
+ 'CAL-01':['明确自变量范围与函数表达式，先列出定义域限制。','分别处理分母非零、偶次根式非负、对数真数为正等条件。','将限制条件取交集，并检查端点是否属于定义域。','把结果代回原表达式，确认每一步运算均有意义。'],
+ 'CAL-02':['明确趋近对象、方向与目标值；必要时分别讨论左右极限。','选择恒等变形、夹逼、重要极限、等价无穷小或洛必达法则，并核验使用条件。','逐步化简到标准极限或比较主导项，保留可能影响结果的高阶项。','检查左右结果是否一致，并确认变形在去心邻域内合法。'],
+ 'CAL-03':['先确定点值是否存在；点值不存在则该点不连续。','分别求左极限和右极限，分段函数必须选取对应分支。','左右极限相等后，再与函数值比较；参数题据此列方程。','按三条件给出连续性结论，并根据极限与点值关系判断间断类型。'],
+ 'CAL-04':['识别所求对象：导数、微分、高阶导数、切线或隐函数导数。','写出定义或求导法则；复合函数逐层使用链式法则，乘积/商使用对应法则。','完成求导后再代入指定点；切线题补上切点坐标并写点斜式。','用导数定义、特值或符号检查结果，确认没有漏掉内层导数。'],
+ 'CAL-05':['逐条核验定理前提：闭区间连续、开区间可导；罗尔定理另需端点函数值相等。','计算端点函数值或平均变化率，明确中值点必须位于开区间。','令导数等于平均变化率（或零），解出候选点并筛选区间内解。','将候选点代回结论核验；极值题还需检查导数符号变化与区间端点。'],
+ 'CAL-06':['先判断不定积分、定积分、变上限积分或几何面积/体积，写清变量和区间。','选择基本公式、换元或分部积分；换元时同步处理微分及上下限。','求原函数并代入上下限；不定积分必须补常数 C。','对原函数求导检查；几何面积按与坐标轴位置分段并取绝对值。'],
+ 'CAL-07':['确定方程阶数、线性/非线性及齐次/非齐次，整理成标准形式。','分离变量或构造积分因子；二阶常系数方程先写特征方程。','求通解时区分异根、重根、共轭根；非齐次方程还需构造特解。','代回原方程核验，再用初值确定常数，避免遗漏特解或初值条件。'],
+ 'CAL-08':['确认变量个数、定义域及所求对象：偏导、全微分、极值或二重积分。','偏导时固定其他变量；复合函数按多元链式法则；极值题先求驻点。','极值题计算二阶偏导判别式；积分题画区域并确定次序或极坐标变换。','检查边界、雅可比因子与区域范围，不能只检查内部驻点。'],
+ 'LA-01':['确定行列式阶数，识别三角形、零行列或可展开结构。','选择行列式性质或按行列展开，逐次记录交换行、提公因子等符号影响。','化为低阶行列式或三角行列式，再完成计算。','核对符号与阶数，并用行列式是否为零判断可逆性。'],
+ 'LA-02':['先检查矩阵维数和运算定义，特别是乘法内维数及顺序。','按定义逐项计算；求秩时用初等行变换化为阶梯形。','记录主元与自由列；求逆可对增广矩阵 (A|I) 行变换。','用维数、乘积顺序、AA⁻¹=I 或秩不变量复核。'],
+ 'LA-03':['将向量按列组成矩阵，确认每个向量的维数。','线性表示转化为 Ax=b；线性相关转化为 Ax=0 是否存在非零解。','高斯消元求主元列、自由变量或系数，写出线性组合关系。','把系数代回原向量核验；主元列应对应原矩阵列向量。'],
+ 'LA-04':['写出系数矩阵 A 与增广矩阵 (A|b)，区分齐次和非齐次判据。','对增广矩阵行变换为阶梯形，标出主元列与自由变量。','比较 r(A) 与 r(A|b) 判断有无解；有解时再比较秩与未知数个数。','将特解和齐次通解代回方程，核验自由参数个数为 n−r(A)。'],
+ 'LA-05':['写出特征方程 det(λI−A)=0，求全部特征值及代数重数。','对每个特征值解 (A−λI)x=0，求特征子空间与线性无关特征向量。','判断是否有 n 个线性无关特征向量；实对称矩阵可正交对角化。','验证 Av=λv，并检查 AP=PΛ 或 P⁻¹AP=Λ。'],
+ 'LA-06':['将二次型写成 xᵀAx，交叉项系数平均分配到对称矩阵对应位置。','按题目要求选配方法、合同变换、特征值或顺序主子式判别。','逐步完成变量变换并记录变换矩阵；正交变换需单位正交特征向量。','用惯性指数、特征值符号或展开原式核验，区分合同与相似。']
+ };
+ const frame=frames[parent]||['提取题设条件、未知量与目标，明确所用定义。','把题目转化为数学表达式，按本卡方法逐步推理。','保留关键中间式并完成运算，写出结论。','将结果代回原条件，检查范围、符号和边界。'];
+ const actions=steps.length?steps:['依据题目条件建立关系式。','按本卡核心结论完成计算并保留中间步骤。'];
+ const exact={
+ 'CAL-01-A':{label:'函数相同的判断',steps:[
+  ['先比较定义域','f(x)=x² 未附加限制，默认定义域为 R；g(x)=x²（x≥0）的定义域明确为 [0,+∞)。'],
+  ['再比较对应法则','两个函数在各自定义域内都按“自变量平方”对应函数值，解析式相同。'],
+  ['检查函数相等的充要要求','函数相同必须定义域相同且对应法则相同。这里 R≠[0,+∞)，因此即使解析式一致，也不是同一个函数。'],
+  ['用具体输入验证差异','取 x=−1：−1∈D_f，所以 f(−1)=1；但 −1∉D_g，g(−1)无定义。这直接说明两个函数的输入范围不同。']
+ ],result:'f 与 g 不相同；差异在定义域，而不在表达式。',check:'不要只看解析式。判断两个函数是否相同，依次核对定义域、对应法则；值域是由前两者决定的结果，不是独立替代条件。',variant:'若把 g 的定义域也改为 R，则 f(x)=x² 与 g(x)=x² 是同一个函数。'},
+ 'CAL-01-B':{label:'对数函数定义域',steps:[
+  ['识别限制来源','题目为 y=ln(4−x²)。自然对数 ln(u) 有意义的必要且充分条件是 u>0，而不是 u≥0。'],
+  ['建立不等式','令对数真数大于零：4−x²>0。移项得 x²<4。'],
+  ['解绝对值不等式','x²<4 等价于 |x|<2，因此 −2<x<2。也可因式分解为 (2−x)(2+x)>0，得到同一区间。'],
+  ['检查端点与区间内部','x=2 或 x=−2 时真数等于 0，ln 0 无定义，端点必须排除；例如 x=0 时真数为 4>0，区间内部满足条件。']
+ ],result:'定义域为 (−2,2)。',check:'对数真数必须严格大于零；分母不能为零；偶次根式被开方数可以等于零（若不在分母中）。',variant:'若题目改为 y=1/ln(4−x²)，还要增加 ln(4−x²)≠0，即 4−x²≠1，排除 x=±√3。'},
+ 'CAL-01-C':{label:'二次函数在给定区间上的值域',steps:[
+  ['先看定义域与函数形状','y=(x−1)²，x∈[1,3]。这是开口向上的抛物线，顶点为 (1,0)，且顶点恰好是给定区间的左端点。'],
+  ['求单调性','求导得 y′=2(x−1)。在 [1,3] 上 y′≥0，且在 (1,3] 上 y′>0，所以函数在 [1,3] 上严格递增。'],
+  ['计算区间端点函数值','最小值在左端点 x=1 处取得：y(1)=0；最大值在右端点 x=3 处取得：y(3)=4。'],
+  ['写出值域并解释端点','函数连续且在闭区间上递增，所有中间函数值均能取得；两个端点也属于定义域，因此值域包含 0 和 4，为 [0,4]。']
+ ],result:'值域为 [0,4]。',check:'闭区间端点属于定义域，端点函数值通常要纳入比较；若定义域换成开区间，端点处的极限值未必能取到。',variant:'若定义域改为 (1,3)，函数值只能满足 0<y<4，值域变为 (0,4)。'}
+ };
+ exact['CAL-02-A']={label:'数列极限与收敛',steps:[
+ ['写出数列的一般项','题设 a_n=1−1/n。求 n→∞ 时的极限，关键是判断 1/n 随 n 增大如何变化。'],
+ ['先观察数值与变化趋势','前几项为 0、1/2、2/3、3/4、……，数值逐渐增大并接近 1。但观察只能帮助猜测，不能代替极限证明。'],
+ ['用极限运算法则计算','lim(n→∞)a_n=lim(n→∞)(1−1/n)=1−lim(n→∞)(1/n)=1−0=1。这里使用了常数列极限和商的极限法则。'],
+ ['补充收敛性理解','也可注意到 0≤1−1/n<1（n≥1），且 a_(n+1)−a_n=1/[n(n+1)]>0，因此数列单调递增且有上界 1；由单调有界定理可知它收敛。结合极限计算，极限为 1。']
+ ],result:'lim(n→∞)(1−1/n)=1。',check:'数列前几项接近某个数不构成证明。可直接使用已知极限运算法则；若题目要求证明收敛，应补充单调有界或 ε-N 论证。',variant:'若 a_n=1+1/n，则数列单调递减、有下界 1，仍有 lim a_n=1，但每一项都大于 1，极限 1 并未被数列取到。'};
+ exact['CAL-02-B']={label:'左右极限与双侧极限',steps:[
+ ['拆开绝对值','当 x>0 时 |x|=x，所以 x/|x|=x/x=1；当 x<0 时 |x|=−x，所以 x/|x|=x/(−x)=−1。'],
+ ['计算左极限','x→0⁻ 时始终处于 x<0 的一侧，函数值恒为 −1，因此 lim(x→0⁻)x/|x|=−1。'],
+ ['计算右极限','x→0⁺ 时始终处于 x>0 的一侧，函数值恒为 1，因此 lim(x→0⁺)x/|x|=1。'],
+ ['比较左右结果','左极限 −1 与右极限 1 不相等。有限双侧极限存在的充要条件是左右极限都存在且相等，因此 x→0 时双侧极限不存在。注意 x=0 处原式无定义，并不妨碍分别讨论去心邻域内的左右极限。']
+ ],result:'左极限为 −1，右极限为 1；二者不相等，所以 lim(x→0)x/|x| 不存在。',check:'极限研究的是“趋近时”的函数值，不是直接代入 x=0。分段或含绝对值表达式必须先按趋近方向拆分。',variant:'若改为 f(x)=|x|/x，则左极限为 −1、右极限为 1，双侧极限仍不存在；若改为 f(x)=|x|，左右极限都为 0，双侧极限存在且为 0。'};
+ exact['CAL-02-C']={label:'重要极限与等价无穷小',steps:[
+ ['识别标准结构','要求 lim(x→0)(1−cos2x)/x²。利用恒等式 1−cosθ=2sin²(θ/2)，令 θ=2x，得 1−cos2x=2sin²x。'],
+ ['拆成重要极限','原式变为 2·sin²x/x²=2·(sin x/x)²。这样就出现了标准重要极限 lim(x→0)sin x/x=1。'],
+ ['分别取极限','当 x→0 时，sin x/x→1，因此 2·(sin x/x)²→2·1²=2。'],
+ ['核对等价无穷小使用','也可用 1−cos2x~(2x)²/2=2x²，故原比值趋于 2。这里是乘除型比值，等价替换合法；不能把等价无穷小不加判断地用于两个近似量相减的场景。']
+ ],result:'lim(x→0)(1−cos2x)/x²=2。',check:'角度必须使用弧度制；sin(kx)~kx、1−cos(kx)~k²x²/2。等价无穷小通常用于乘除因子，加减结构要先判断主项是否抵消。',variant:'求 lim(x→0)(1−cos3x)/x²：由 1−cos3x~(3x)²/2，极限为 9/2。'};
+ exact['CAL-04-A']={label:'用导数定义求 x² 在任意点的导数',steps:[
+ ['写出导数定义中的差商','f′(a)=lim(h→0)[f(a+h)−f(a)]/h。先分别写出两个函数值，不要直接套求导公式。'],
+ ['代入并展开','f(a+h)=(a+h)²=a²+2ah+h²，f(a)=a²。差商为 [(a²+2ah+h²)−a²]/h。'],
+ ['化简差商','分子为 2ah+h²=h(2a+h)。在 h≠0 的去心邻域内约去 h，得到 2a+h。'],
+ ['求极限','lim(h→0)(2a+h)=2a，所以 f′(a)=2a。a 任意，故导函数为 f′(x)=2x。'],
+ ['联系切线斜率','抛物线 y=x² 在 (a,a²) 处切线斜率为 2a。例如 a=1 时斜率为 2，a=0 时切线水平。']
+ ],result:'f′(a)=2a，故 f′(x)=2x。导数是瞬时变化率，也是曲线在该点的切线斜率。',check:'导数不是函数值：f(a)=a²，而 f′(a)=2a。先化简差商再取极限，不能把 h=0 直接代入。',variant:'用定义求 f(x)=x³：差商化简为 3a²+3ah+h²，令 h→0 得 f′(a)=3a²。'};
+ exact['CAL-04-B']={label:'复合函数链式法则',steps:[
+ ['识别内外层','y=sin(3x²)。设 u=3x²，则 y=sin u。外层为正弦函数，内层为 u(x)=3x²。'],
+ ['求外层导数','把 u 暂作自变量，dy/du=cos u。代回 u=3x²，得到 cos(3x²)。'],
+ ['求内层导数','du/dx=(3x²)′=6x。复合函数求导必须乘上内层导数。'],
+ ['按链式法则相乘','dy/dx=(dy/du)(du/dx)=cos(3x²)·6x=6x cos(3x²)。'],
+ ['理解变化率相乘','x 的微小变化先经 u=3x² 转换，再经 sin u 转换；整体变化率等于两层局部变化率的乘积。']
+ ],result:'y′=6x cos(3x²)。',check:'链式法则是“外层导数乘内层导数”。括号内不是常数，不能只对最外层求导。',variant:'若 y=cos(5x³)，则 y′=−sin(5x³)·15x²=−15x²sin(5x³)。'};
+ exact['CAL-04-C']={label:'隐函数求导与参数方程求导',steps:[
+ ['隐函数两边对 x 求导','由 x²+y²=1 得 2x+2y·y′=0。因为 y 是 x 的函数，对 y² 求导必须乘 y′。'],
+ ['解出 y′','移项得 2y y′=−2x。若 y≠0，得到 y′=−x/y。这是圆在上下半圆可写成 y(x) 的位置处的切线斜率。'],
+ ['检查公式失效位置','当 y=0 时，圆上点为 (1,0)、(−1,0)，切线竖直，斜率不存在。隐函数定理公式要求 F_y=2y≠0，此处条件不满足。'],
+ ['参数方程分别求导','若 x=x(t)、y=y(t)，先分别求 dx/dt、dy/dt。由链式法则 dy/dt=(dy/dx)(dx/dt)。'],
+ ['求参数曲线斜率','当 dx/dt≠0 时，dy/dx=(dy/dt)/(dx/dt)。若 dx/dt=0 且 dy/dt≠0，通常对应竖直切线，不能进行除法。']
+ ],result:'对 x²+y²=1，y′=−x/y（y≠0）；参数方程斜率为 (dy/dt)/(dx/dt)，要求 dx/dt≠0。',check:'隐式求导时 y 视为 y(x)，不可漏乘 y′。用 −F_x/F_y 要检查 F_y≠0；参数式相除要检查 dx/dt≠0。',variant:'圆参数式 x=cos t、y=sin t，则 dy/dx=cos t/(−sin t)=−cot t（sin t≠0），与 −x/y 一致。'};
+ exact['CAL-05-A']={label:'罗尔、拉格朗日与柯西中值定理',steps:[
+ ['先把三个定理放在同一张“条件—结论”地图上','三者都先要求 f、g 在闭区间 [a,b] 上连续、在开区间 (a,b) 内可导。罗尔定理还要求 f(a)=f(b)，结论是存在 ξ∈(a,b)，使 f′(ξ)=0。拉格朗日中值定理不要求端点函数值相等，结论是存在 ξ∈(a,b)，使 f′(ξ)=[f(b)−f(a)]/(b−a)。'],
+ ['用拉格朗日定理解题：逐项检查条件','例：f(x)=x²，[1,3]。多项式在整个实数范围连续且可导，因此闭区间连续、开区间可导两项条件都满足。端点值为 f(1)=1、f(3)=9。'],
+ ['计算区间上的平均变化率','[f(3)−f(1)]/(3−1)=(9−1)/2=4。它是连接曲线端点 (1,1)、(3,9) 的割线斜率。拉格朗日定理保证区间内部至少有一点，切线斜率恰好等于 4。'],
+ ['令瞬时变化率等于平均变化率','f′(x)=2x。令 2ξ=4，解得 ξ=2。因为 2∈(1,3)，所以该点符合中值定理的区间要求。'],
+ ['把几何意义与代数结果对应起来','曲线在 x=2 处的切线斜率为 4，恰与端点割线平行。罗尔定理是拉格朗日定理在 f(a)=f(b) 时的特例：平均变化率为 0。'],
+ ['理解柯西中值定理的比较形式','若 f、g 在 [a,b] 连续、在 (a,b) 可导，且 g′(x) 在区间内不为零，则存在 ξ∈(a,b)，使 [f(b)−f(a)]/[g(b)−g(a)]=f′(ξ)/g′(ξ)（常见表述也可交叉相乘）。它比较的是两个函数增量的比，不是单个函数的平均斜率。'],
+ ['用简单例子核对柯西形式','取 f(x)=x²、g(x)=x，在 [1,3] 上，增量比为 (9−1)/(3−1)=4。导数比 f′(ξ)/g′(ξ)=2ξ/1，令其等于 4，得到 ξ=2，确实位于 (1,3)。']
+ ],result:'拉格朗日中值定理给出 f′(ξ)=[f(b)−f(a)]/(b−a)，本例 ξ=2。罗尔定理是端点函数值相等时的特例；柯西中值定理比较两个函数的增量与导数之比。',check:'必须先写清闭区间连续、开区间可导；中值点只能在开区间内。罗尔还需 f(a)=f(b)。柯西定理的分母条件要按教材采用的表述核验，不能把三个定理的前提混为一谈。',variant:'对 f(x)=x²−4x，在 [0,4] 上有 f(0)=f(4)=0，满足罗尔条件。f′(x)=2x−4，令 f′(ξ)=0 得 ξ=2。'};
+ exact['CAL-05-B']={label:'单调性、局部极值与闭区间最值',steps:[
+ ['先求导数，找出需要分段的临界点','例：f(x)=x²−2x，定义域限制为 [0,2]。求导得 f′(x)=2x−2=2(x−1)。区间内部的驻点由 f′(x)=0 得 x=1。'],
+ ['用导数符号判断单调性','当 0<x<1 时，x−1<0，所以 f′(x)<0，函数递减；当 1<x<2 时，f′(x)>0，函数递增。可将符号写成“−｜0｜+”，表示先降后升。'],
+ ['根据符号变化判断极值','导数在 x=1 左侧为负、右侧为正，函数先减后增，因此 x=1 是严格局部极小值点，f(1)=−1。若导数只是等于零但两侧不变号，则不能仅凭 f′(x)=0 判定极值，例如 f(x)=x³ 在 x=0 处导数为零，却仍单调递增。'],
+ ['区分局部极值和区间最值','局部极值只比较该点附近的函数值；最值要在整个指定集合内比较。闭区间 [0,2] 上求最值，候选位置包括内部驻点 x=1，以及端点 x=0、x=2。'],
+ ['把候选点全部代回原函数','f(0)=0，f(1)=1−2=−1，f(2)=4−4=0。三个候选值中最小的是 −1，最大的是 0。'],
+ ['写出完整结论并说明取到位置','最小值 −1 在 x=1 处取得；最大值 0 在 x=0 和 x=2 两处取得。函数在 [0,1] 上递减，在 [1,2] 上递增。']
+ ],result:'在 [0,2] 上，f(x)=x²−2x 先递减后递增；最小值为 −1（x=1），最大值为 0（x=0 或 x=2）。',check:'单调性看区间内导数符号；极值要看邻域内变化趋势，驻点不一定是极值；闭区间最值必须比较所有内部临界点和两个端点。不可导的内部点也可能是极值候选点。',variant:'f(x)=x³−3x 在 [−2,2] 上，f′(x)=3(x²−1)，临界点为 ±1。分别计算 f(−2)=−2、f(−1)=2、f(1)=−2、f(2)=2，故最大值 2、最小值 −2。'};
+ exact['CAL-05-C']={label:'二阶导数、凹凸性、拐点与渐近线',steps:[
+ ['先用一阶导数定位曲线变化，再求二阶导数','例：f(x)=x³−3x。f′(x)=3x²−3，f′′(x)=6x。二阶导数描述一阶导数的变化趋势，可据其符号判断曲线的凹凸性。'],
+ ['按二阶导数符号划分区间','当 x<0 时，f′′(x)<0；当 x>0 时，f′′(x)>0。因此 x=0 是凹凸性可能发生变化的分界点。按常见考研教材约定，f′′<0 对应曲线向下凹（凸），f′′>0 对应曲线向上凹（凹）；答题时应以题目或教材术语约定为准，核心是二阶导数符号保持与改变。'],
+ ['检查凹凸性是否真正改变','x=0 左侧二阶导数为负、右侧为正，符号发生改变；且 f(0)=0，所以 (0,0) 是拐点。仅有 f′′(a)=0 并不足以证明拐点，例如 f(x)=x⁴ 在 0 处 f′′(0)=0，但两侧 f′′(x)=12x²≥0，不发生凹凸性改变。'],
+ ['从定义计算水平渐近线','再看题目中的 f(x)=1/x。当 x→+∞ 或 x→−∞ 时，1/x→0，因此直线 y=0 是水平渐近线。渐近线判断关注函数在无穷远或定义域边界附近的趋近行为。'],
+ ['区分垂直与斜渐近线的判断方式','若 x→a 时 f(x)→±∞，则 x=a 为垂直渐近线。若 x→±∞ 时 f(x)−(kx+b)→0，可判断 y=kx+b 为斜渐近线；通常先求 k=lim f(x)/x，再求 b=lim[f(x)−kx]，两个极限均须存在且有限。'],
+ ['整理做题顺序','求凹凸与拐点：求 f′′、找 f′′=0 或不存在的点、分区间判符号、确认变号后写拐点坐标。求渐近线：先检查定义域边界的垂直渐近线，再检查正负无穷处的水平或斜渐近线。']
+ ],result:'对 f(x)=x³−3x，(0,0) 是拐点，因为二阶导数在 0 两侧变号；对 f(x)=1/x，y=0 是水平渐近线。',check:'f′′(a)=0 只是拐点候选条件，不是充分条件；必须验证凹凸性改变。渐近线也不能只凭图形猜测，应按极限定义检查，并区分 x→a 与 x→±∞。',variant:'f(x)=x⁴ 在 x=0 处 f′′(0)=0，但二阶导数两侧不变号，所以 (0,0) 不是拐点。f(x)=2+1/x 在无穷远处的水平渐近线为 y=2。'};
+ exact['CAL-06-A']={label:'原函数、不定积分与积分常数',steps:[
+ ['先理解原函数是什么','若 F′(x)=f(x)，就称 F 是 f 的一个原函数。求 ∫f(x)dx，本质上是在反向寻找“求导前的函数”。例如 (x³)′=3x²，所以 x³ 是 3x² 的一个原函数。'],
+ ['利用积分的线性性质拆分','∫(3x²+2x)dx=3∫x²dx+2∫x dx。把和式拆成容易处理的基本幂函数积分。'],
+ ['逐项使用幂函数积分公式','当 n≠−1 时，∫xⁿdx=xⁿ⁺¹/(n+1)+C。于是 3∫x²dx=3·x³/3=x³；2∫x dx=2·x²/2=x²。'],
+ ['合并结果并保留积分常数','得到 ∫(3x²+2x)dx=x³+x²+C。常数 C 不能省略，因为任意常数求导都为零，所以 x³+x²、x³+x²+5 等都是原函数。'],
+ ['用求导反向验算','对 F(x)=x³+x²+C 求导，F′(x)=3x²+2x+0，恰好还原被积函数，计算正确。']
+ ],result:'∫(3x²+2x)dx=x³+x²+C。所有原函数构成相差一个常数的函数族。',check:'不定积分必须写 +C；幂函数公式 n=−1 时不能直接套用，∫1/x dx=ln|x|+C。最后求导验算是最可靠的自检。',variant:'求 ∫(4x³−6x+2)dx=x⁴−3x²+2x+C；求导可还原 4x³−6x+2。'};
+ exact['CAL-06-B']={label:'换元积分与分部积分的选择和完整计算',steps:[
+ ['先判断适合哪种方法','换元法适合出现“复合函数及其内层导数”的结构；分部积分适合两个因子相乘，且一个因子求导后会简化。题目 ∫x eˣdx 是乘积，适合分部积分。'],
+ ['写出分部积分公式并选 u、dv','由 (uv)′=u′v+uv′ 积分得到 ∫u dv=uv−∫v du。取 u=x、dv=eˣdx，则 du=dx、v=eˣ。选择 x 作 u，是因为它求导后变成 1。'],
+ ['代入公式逐步计算','∫x eˣdx=xeˣ−∫eˣdx=xeˣ−eˣ+C=eˣ(x−1)+C。注意第二项前面是减号。'],
+ ['通过求导验算分部结果','对 eˣ(x−1) 求导，得 eˣ(x−1)+eˣ=xeˣ，恰好等于原被积函数。'],
+ ['再看换元法如何识别','例如 ∫2x cos(x²)dx。令 u=x²，则 du=2x dx，原积分变成 ∫cos u du=sin u+C。'],
+ ['换回原变量并核对','将 u=x² 代回，得到 sin(x²)+C。求导为 cos(x²)·2x，正好还原 2x cos(x²)。换元后不能把 u 和 x 混用。'],
+ ['若是定积分，别忘了同步换上下限','例如 ∫₀¹2x cos(x²)dx，令 u=x²，x=0 对应 u=0，x=1 对应 u=1，因此积分变为 ∫₀¹cos u du=sin1。也可以先求原函数再代入原上下限，两种做法结果一致。']
+ ],result:'∫x eˣdx=eˣ(x−1)+C；∫2x cos(x²)dx=sin(x²)+C。换元与分部的选择取决于被积结构。',check:'分部积分记住 uv−∫vdu；换元要同时替换微分，定积分换元还要换上下限。完成后对结果求导，检查是否还原原被积函数。',variant:'求 ∫x cos x dx，取 u=x、dv=cos x dx，得 x sin x−∫sin x dx=x sin x+cos x+C。'};
+ exact['CAL-06-C']={label:'定积分、变上限积分与几何面积',steps:[
+ ['区分定积分的有向累积','定积分 ∫ₐᵇf(x)dx 可理解为带符号的累积：曲线在 x 轴上方贡献正值，在 x 轴下方贡献负值。它不总等于几何面积。'],
+ ['用牛顿—莱布尼茨公式计算定积分','若 F′=f 且 f 在 [a,b] 连续，则 ∫ₐᵇf(x)dx=F(b)−F(a)。例如 ∫₋₁²x dx=[x²/2]₋₁²=2−1/2=3/2。'],
+ ['把有向积分改成几何面积','同一例子中，x 在 [−1,0] 位于 x 轴下方，在 [0,2] 位于上方。几何面积应计算 ∫₋₁²|x|dx=∫₋₁⁰(−x)dx+∫₀²x dx=1/2+2=5/2，而不是 3/2。'],
+ ['理解变上限积分是一个新函数','设 A(x)=∫₀^{x²}cos t dt。积分变量 t 是哑变量，x 是上限参数；每个 x 都对应一个累积值 A(x)。'],
+ ['先对上限求函数值，再用链式法则求导','由微积分基本定理，若 A(x)=∫₀^{φ(x)}f(t)dt，则 A′(x)=f(φ(x))φ′(x)。这里 φ(x)=x²、φ′(x)=2x、f(t)=cos t，所以 A′(x)=cos(x²)·2x。'],
+ ['用具体点检查链式因子','例如 x=1 时 A′(1)=2cos1；x=0 时 A′(0)=0。若漏掉上限导数 2x，就会得到错误的 cos(x²)。']
+ ],result:'A′(x)=2x cos(x²)。定积分是有向累积；几何面积要对函数取绝对值后分段积分。',check:'牛顿—莱布尼茨公式是上限原函数值减下限原函数值；变上限求导必须乘上限函数的导数；面积题先判断曲线与 x 轴的位置，跨轴时分段。',variant:'若 B(x)=∫_{x}^{3x}e^{t²}dt，则 B′(x)=3e^{9x²}−e^{x²}：上限项乘 3，下限项还要减去下限函数值乘 1。'};
+ const detail=exact[a[0]];
+ if(detail)return '<section class="atom-worked"><div class="worked-head"><b>典型例题 · 逐步推导（已展开核算）</b><span>'+esc(a[0])+'</span></div><div class="worked-box"><b>'+esc(detail.label)+'｜题目</b><p>'+esc(a[6])+'</p></div><div class="worked-box"><b>先理解用到的概念</b><p>'+esc(a[3])+'</p><p>'+esc(a[4])+'</p></div><ol class="worked-steps">'+detail.steps.map((s,i)=>'<li><b>'+esc(s[0])+'</b><p>'+esc(s[1])+'</p></li>').join('')+'</ol><div class="worked-box worked-answer"><b>最终结论</b><p>'+esc(detail.result)+'</p></div><div class="worked-box worked-error"><b>易错点与自检</b><p>'+esc(detail.check)+'</p></div><div class="worked-box"><b>举一反三</b><p>'+esc(detail.variant)+'</p></div></section>';
+ return '<section class="atom-worked"><div class="worked-head"><b>典型例题 · 完整推导过程</b><span>'+esc(a[0])+'</span></div><div class="worked-box"><b>题目</b><p>'+esc(a[6])+'</p></div><div class="worked-box"><b>定义与推导依据</b><p>'+esc(a[3])+'</p><p>'+esc(a[4])+'</p></div><ol class="worked-steps">'+frame.map((x,i)=>'<li><b>第 '+(i+1)+' 步</b><p>'+esc(x)+'</p></li>').join('')+'</ol><div class="worked-box"><b>本卡解题方法拆解</b><ol>'+actions.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol></div><div class="worked-box worked-answer"><b>结果</b><p>'+esc(a[7])+'</p></div><div class="worked-box worked-error"><b>易错点与自检</b><p>'+esc(a[8])+'</p><p>检查：回到定义和定理前提，逐项核验定义域、运算合法性、区间/维数条件，并将结果代回原题。</p></div></section>';
+}
 function renderAtoms(parent){
  const items=atomicCards.filter(a=>a[2]===parent);
  if(!items.length)return '';
  return '<section class="atomic-section"><h3>原子知识卡｜逐点掌握（'+items.length+' 张）</h3><div class="atomic-grid">'+items.map(a=>{
   const x=state[a[0]]||{},status=statusOf(a[0]);
   const source=x.sourceQuestion?'<p class="atom-source">错题来源：'+x.sourceQuestion+' · 已加入易错复习</p>':'';
-  return '<details class="atomic-card" id="card-'+a[0]+'"><summary><b>'+a[0]+'</b> · '+a[1]+' <span class="atom-status">'+(labels[status]||'未学习')+'</span></summary><div class="atomic-body">'+source+'<h4>定义</h4><p>'+a[3]+'</p><h4>概念与性质</h4><p>'+a[4]+'</p><h4>核心公式 / 结论</h4><p>'+a[5]+'</p><h4>例题</h4><p>'+a[6]+'</p><h4>解答</h4><p>'+a[7]+'</p><h4>易错点</h4><p>'+a[8]+'</p>'+renderExamLinks(a[0],a[1],a[2])+atomVisual(a,parent)+'<h4>五大经典学习法训练</h4><ul><li><b>费曼学习法：</b>合上资料，用自己的话讲清定义、公式含义和一个例子。</li><li><b>西蒙学习法：</b>拆成定义、条件、结论、步骤、边界五个最小单元，逐个掌握后再组合。</li><li><b>SQ3R 阅读法：</b>先浏览标题与公式，提出问题，精读推导，合上资料复述，隔日复习。</li><li><b>番茄工作法：</b>用 25 分钟独立推导并完成例题，休息后不看答案重做。</li><li><b>康奈尔笔记法：</b>左栏写提示问题，右栏记录定义与推导，底部总结适用条件和易错边界。</li></ul><div class="grade atom-grade"><button type="button" class="bad" data-atom-grade="bad" data-atom-id="'+a[0]+'">不会 · 1天后复习</button><button type="button" class="mid" data-atom-grade="mid" data-atom-id="'+a[0]+'">模糊 · 3天后复习</button><button type="button" class="good" data-atom-grade="good" data-atom-id="'+a[0]+'">掌握 · 7天后复习</button></div><small class="meta">上次复习：'+(x.last||'尚未复习')+'　下次复习：'+(x.due||'待安排')+'</small></div></details>';
+  return '<details class="atomic-card" id="card-'+a[0]+'"><summary><b>'+a[0]+'</b> · '+a[1]+' <span class="atom-status">'+(labels[status]||'未学习')+'</span></summary><div class="atomic-body">'+source+'<h4>定义</h4><p>'+a[3]+'</p><h4>概念与性质</h4><p>'+a[4]+'</p><h4>核心公式 / 结论</h4><p>'+a[5]+'</p><h4>例题</h4><p>'+a[6]+'</p><h4>简要答案</h4><p>'+a[7]+'</p>'+atomWorkedExample(a)+'<h4>易错点</h4><p>'+a[8]+'</p>'+renderExamLinks(a[0],a[1],a[2])+atomVisual(a,parent)+'<h4>五大经典学习法训练</h4><ul><li><b>费曼学习法：</b>合上资料，用自己的话讲清定义、公式含义和一个例子。</li><li><b>西蒙学习法：</b>拆成定义、条件、结论、步骤、边界五个最小单元，逐个掌握后再组合。</li><li><b>SQ3R 阅读法：</b>先浏览标题与公式，提出问题，精读推导，合上资料复述，隔日复习。</li><li><b>番茄工作法：</b>用 25 分钟独立推导并完成例题，休息后不看答案重做。</li><li><b>康奈尔笔记法：</b>左栏写提示问题，右栏记录定义与推导，底部总结适用条件和易错边界。</li></ul><div class="grade atom-grade"><button type="button" class="bad" data-atom-grade="bad" data-atom-id="'+a[0]+'">不会 · 1天后复习</button><button type="button" class="mid" data-atom-grade="mid" data-atom-id="'+a[0]+'">模糊 · 3天后复习</button><button type="button" class="good" data-atom-grade="good" data-atom-id="'+a[0]+'">掌握 · 7天后复习</button></div><small class="meta">上次复习：'+(x.last||'尚未复习')+'　下次复习：'+(x.due||'待安排')+'</small></div></details>';
  }).join('')+'</div></section>';
 }
 
+const chapterWorkedStyle=document.createElement('style');chapterWorkedStyle.textContent=".chapter-worked{margin:12px 0;padding:12px;border:1px solid #d8e5f2;border-radius:10px;background:#f7fbff}.chapter-worked>div{margin:7px 0;padding:8px 10px;background:#fff;border-radius:7px}.chapter-worked p,.chapter-worked li{font-size:12px;line-height:1.75}.chapter-worked ol{padding-left:23px}.chapter-worked li{padding:3px 0}";document.head.appendChild(chapterWorkedStyle);
+const workedStyle=document.createElement('style');workedStyle.textContent=".atom-worked{margin:14px 0;padding:13px;border:1px solid #d8e5f2;border-radius:12px;background:linear-gradient(145deg,#f7fbff,#fff)}.worked-head{display:flex;justify-content:space-between;gap:8px;color:#28547d}.worked-head span{font-size:10px;color:#71859a}.worked-box{padding:9px 11px;margin:7px 0;border-radius:8px;background:rgba(120,150,180,.07)}.atom-worked p,.atom-worked li{font-size:12px;line-height:1.75;margin:4px 0}.worked-steps{padding-left:23px}.worked-steps li{padding:5px}.worked-steps li::marker{color:#3979ad;font-weight:700}.worked-answer{border-left:3px solid #399879}.worked-error{border-left:3px solid #d28b38}@media(max-width:600px){.atom-worked{padding:9px}.worked-box{padding:8px}}";document.head.appendChild(workedStyle);
 const KEY='math2_card_review_v1';
 const read=()=>{try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch{return {}}};
 let state=read();
@@ -367,8 +503,15 @@ function flowVisual(id,title,labels,subject){
  return '<section class="visual-box"><div class="visual-title">动态图解｜'+safe(title)+' · '+subject+'理解路径</div><svg class="visual-svg" viewBox="0 0 720 150" role="img" aria-label="'+safe(labels.join('，'))+'"><defs><marker id="arrow-'+safe(id)+'" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6" fill="#679bd0"/></marker></defs><path class="flow" marker-end="url(#arrow-'+safe(id)+' )" d="M205 72 H265 M445 72 H505"/><rect class="node" x="20" y="35" width="185" height="74" rx="13"/><rect class="node mid" x="265" y="35" width="180" height="74" rx="13"/><rect class="node" x="505" y="35" width="195" height="74" rx="13"/><text x="112" y="67">'+safe(labels[0])+'</text><text class="subtext" x="112" y="88">输入 / 条件</text><text x="355" y="67">'+safe(labels[1])+'</text><text class="subtext" x="355" y="88">关系 / 推理</text><text x="602" y="67">'+safe(labels[2])+'</text><text class="subtext" x="602" y="88">输出 / 验证</text><circle class="pulse" cx="22" cy="72" r="5"/></svg><p class="visual-caption">动态追踪：'+labels.map(safe).join(' → ')+'。逐步追踪输入、变化与结论。</p></section>';
 }
 
+
+function chapterWorkedExample(c,d){
+ const esc=v=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+ const steps=String(d.steps||'').split(/[；;。]+/).map(x=>x.trim()).filter(Boolean);
+ const base=steps.length?steps:['识别已知条件和待求量，写出适用定义。','建立方程或数学关系，逐步完成推导。','求出结果并检查是否满足题设条件。'];
+ return '<section class="chapter-worked"><h4>章节典型例题 · 分步推导与验算</h4><div><b>例题与推导说明</b><p>'+esc(d.example)+'</p></div><ol>'+base.map((x,i)=>'<li><b>步骤 '+(i+1)+'</b>：'+esc(x)+'</li>').join('')+'</ol><div><b>本章核心条件</b><p>'+esc(d.conditions)+'</p></div><div><b>结论验算与易错提醒</b><p>'+esc(d.errors)+'</p><p>完成后将所得结果代回原题；若涉及定理，逐条检查区间、连续/可导、矩阵维数、秩或可逆性等前提，不能只核对最终数值。</p></div></section>';
+}
 function render(){const q=document.getElementById('search').value.trim().toLowerCase(),sub=document.getElementById('subject').value,chapter=document.getElementById('chapter').value,filter=document.getElementById('status').value;const root=document.getElementById('cards');root.innerHTML='';const groups=[['cal','高等数学'],['la','线性代数']];let shown=0;
-groups.forEach(([key,title])=>{const list=cards.filter(c=>c[4]===key&&(!q||c.join(' ').toLowerCase().includes(q))&&(sub==='all'||sub===key)&&(chapter==='all'||c[3]===chapter)&&(filter==='all'||(filter==='due'?statusOf(c[0])==='due'||statusOf(c[0])==='new':statusOf(c[0])===filter)));if(!list.length)return;shown+=list.length;const h=document.createElement('h2');h.className='group-title';h.textContent=title+' · '+list.length+' 张';root.append(h);const grid=document.createElement('div');grid.className='deck';list.forEach(c=>{const s=statusOf(c[0]),x=state[c[0]]||{},d=syllabusDetails[c[0]];const el=document.createElement('details');el.className='card';el.id='card-'+c[0];el.dataset.state=s;el.innerHTML='<summary><span class="code">'+c[0]+'</span><span><span class="ctitle">'+c[1]+'</span><span class="meta">'+c[2]+' · '+c[3]+'</span></span><span class="state">'+(labels[s]||'未学习')+'　⌄</span></summary><div class="inside"><h3>考纲知识详解</h3><h4>一、严格定义</h4><p>'+d.definition+'</p><h4>二、核心概念与知识关系</h4><p>'+d.concept+'</p><h4>三、核心公式</h4><p>'+d.formula+'</p><h4>四、适用条件与结论边界</h4><p>'+d.conditions+'</p><h4>五、标准解题流程</h4><p>'+d.steps+'</p><h4>六、典型例题与推导</h4><p>'+d.example+'</p>'+flowVisual(c[0],c[1],c[4]==='cal'?['识别变量与条件','建立函数关系','求解并检验']:['识别矩阵 / 向量','执行线性变换','验证秩与解空间'],'数学')+renderExamLinks(c[0],c[1],c[0],'chapter')+renderAtoms(c[0])+'<h4>七、易错点与辨析</h4><p>'+d.errors+'</p><h4>八、考纲定位</h4><p>'+d.syllabus+'</p><h3>核心问题</h3><p>'+c[5]+'</p><h3>关键结论</h3><p>'+c[6]+'</p><div class="quiz"><b>主动回忆</b><p>'+c[7]+'</p><button type="button" class="reveal">查看参考答案</button><div class="answer">'+c[8]+'</div></div><h3>补充记忆点</h3><p>'+c[10]+'</p>'+methodPanel(c)+'<div class="grade"><button class="bad">不会 · 1天后复习</button><button class="mid">模糊 · 3天后复习</button><button class="good">掌握 · 7天后复习</button></div><small class="meta">上次复习：'+(x.last||'尚未复习')+'　下次复习：'+(x.due||'待安排')+'</small><textarea class="notes" placeholder="错题回链 / 易错原因 / 复习备注">'+(x.note||'')+'</textarea><p><a class="source" target="_blank" rel="noopener" href="'+(c[4]==='cal'?'https://github.com/ilikui/CS/blob/main/Project/Artificial%20Intelligence/01_%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/%E7%9F%A5%E8%AF%86%E5%8D%A1%E7%89%87/ReadMe.md#':'https://github.com/ilikui/CS/blob/main/Project/Artificial%20Intelligence/01_%E6%95%B0%E5%AD%A6%E4%BA%8C/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A5%E8%AF%86%E5%8D%A1%E7%89%87/ReadMe.md#')+(c[9].toLowerCase()+'-'+c[1])+'">打开完整知识卡片 ↗</a></p></div>';el.querySelector('.reveal').addEventListener('click',e=>reveal(e.currentTarget));el.querySelector('.bad').onclick=()=>setGrade(c[0],'bad');el.querySelector('.mid').onclick=()=>setGrade(c[0],'mid');el.querySelector('.good').onclick=()=>setGrade(c[0],'good');el.querySelector('textarea').addEventListener('input',e=>{state[c[0]]={...(state[c[0]]||{}),note:e.target.value};save()});grid.append(el)});root.append(grid)});
+groups.forEach(([key,title])=>{const list=cards.filter(c=>c[4]===key&&(!q||c.join(' ').toLowerCase().includes(q))&&(sub==='all'||sub===key)&&(chapter==='all'||c[3]===chapter)&&(filter==='all'||(filter==='due'?statusOf(c[0])==='due'||statusOf(c[0])==='new':statusOf(c[0])===filter)));if(!list.length)return;shown+=list.length;const h=document.createElement('h2');h.className='group-title';h.textContent=title+' · '+list.length+' 张';root.append(h);const grid=document.createElement('div');grid.className='deck';list.forEach(c=>{const s=statusOf(c[0]),x=state[c[0]]||{},d=syllabusDetails[c[0]];const el=document.createElement('details');el.className='card';el.id='card-'+c[0];el.dataset.state=s;el.innerHTML='<summary><span class="code">'+c[0]+'</span><span><span class="ctitle">'+c[1]+'</span><span class="meta">'+c[2]+' · '+c[3]+'</span></span><span class="state">'+(labels[s]||'未学习')+'　⌄</span></summary><div class="inside"><h3>考纲知识详解</h3><h4>一、严格定义</h4><p>'+d.definition+'</p><h4>二、核心概念与知识关系</h4><p>'+d.concept+'</p><h4>三、核心公式</h4><p>'+d.formula+'</p><h4>四、适用条件与结论边界</h4><p>'+d.conditions+'</p><h4>五、标准解题流程</h4><p>'+d.steps+'</p><h4>六、典型例题与推导</h4><p>'+d.example+'</p>'+chapterWorkedExample(c,d)+''+flowVisual(c[0],c[1],c[4]==='cal'?['识别变量与条件','建立函数关系','求解并检验']:['识别矩阵 / 向量','执行线性变换','验证秩与解空间'],'数学')+renderExamLinks(c[0],c[1],c[0],'chapter')+renderAtoms(c[0])+'<h4>七、易错点与辨析</h4><p>'+d.errors+'</p><h4>八、考纲定位</h4><p>'+d.syllabus+'</p><h3>核心问题</h3><p>'+c[5]+'</p><h3>关键结论</h3><p>'+c[6]+'</p><div class="quiz"><b>主动回忆</b><p>'+c[7]+'</p><button type="button" class="reveal">查看参考答案</button><div class="answer">'+c[8]+'</div></div><h3>补充记忆点</h3><p>'+c[10]+'</p>'+methodPanel(c)+'<div class="grade"><button class="bad">不会 · 1天后复习</button><button class="mid">模糊 · 3天后复习</button><button class="good">掌握 · 7天后复习</button></div><small class="meta">上次复习：'+(x.last||'尚未复习')+'　下次复习：'+(x.due||'待安排')+'</small><textarea class="notes" placeholder="错题回链 / 易错原因 / 复习备注">'+(x.note||'')+'</textarea><p><a class="source" target="_blank" rel="noopener" href="'+(c[4]==='cal'?'https://github.com/ilikui/CS/blob/main/Project/Artificial%20Intelligence/01_%E6%95%B0%E5%AD%A6%E4%BA%8C/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/%E7%9F%A5%E8%AF%86%E5%8D%A1%E7%89%87/ReadMe.md#':'https://github.com/ilikui/CS/blob/main/Project/Artificial%20Intelligence/01_%E6%95%B0%E5%AD%A6%E4%BA%8C/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/%E7%9F%A5%E8%AF%86%E5%8D%A1%E7%89%87/ReadMe.md#')+(c[9].toLowerCase()+'-'+c[1])+'">打开完整知识卡片 ↗</a></p></div>';el.querySelector('.reveal').addEventListener('click',e=>reveal(e.currentTarget));el.querySelector('.bad').onclick=()=>setGrade(c[0],'bad');el.querySelector('.mid').onclick=()=>setGrade(c[0],'mid');el.querySelector('.good').onclick=()=>setGrade(c[0],'good');el.querySelector('textarea').addEventListener('input',e=>{state[c[0]]={...(state[c[0]]||{}),note:e.target.value};save()});grid.append(el)});root.append(grid)});
 if(!shown)root.innerHTML='<div class="empty">没有找到匹配的卡片，试试其他关键词或筛选条件。</div>';root.querySelectorAll('[data-atom-grade]').forEach(btn=>btn.addEventListener('click',()=>setGrade(btn.dataset.atomId,btn.dataset.atomGrade)));renderStats();renderChapterProgress();if(window.MathJax?.typesetPromise)MathJax.typesetPromise([root])}
 ['search','subject','chapter','status'].forEach(id=>document.getElementById(id).addEventListener(id==='search'?'input':'change',render));
 document.getElementById('openAll').onclick=()=>document.querySelectorAll('.card').forEach(x=>x.open=true);
@@ -377,4 +520,6 @@ document.getElementById('export').onclick=()=>{const blob=new Blob([JSON.stringi
 initChapterFilter();render();
 window.addEventListener('load',()=>{if(window.MathJax?.typesetPromise)MathJax.typesetPromise();});
 </script>
+<script src="./math-card-visuals.js?v=20261116-1"></script>
+<script src="./math-card-specialized.js?v=20261116-2"></script>
 </body></html>

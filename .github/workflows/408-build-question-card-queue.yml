@@ -1,0 +1,32 @@
+name: 408 build exhaustive question-card review queue
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/408-build-question-card-queue.js'
+      - '.github/workflows/408-build-question-card-queue.yml'
+      - 'data/408/questions_data.js'
+      - 'public/opensource-22408/408/cards.html'
+      - 'public/opensource-22408/408/cards-questions.js'
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build question-by-question candidate queue
+        run: node scripts/408-build-question-card-queue.js
+      - name: Commit review queue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/408-question-card-candidate-queue.json
+          git diff --cached --quiet || git commit -m "chore(408): refresh exhaustive question-card review queue"
+          git pull --rebase origin main
+          git push

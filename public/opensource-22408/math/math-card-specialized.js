@@ -1,0 +1,329 @@
+/* 299 Math II atomic cards: exact-title keyed, concept-specific interactive visualizations.
+   Each card receives a renderer selected by its mathematical object, not a shared flow animation. */
+(function(){
+'use strict';
+const PARENTS=[{id:'CAL-01',title:'函数与定义域值域'},{id:'CAL-02',title:'极限与极限计算'},{id:'CAL-03',title:'连续性与间断点'},{id:'CAL-04',title:'导数与微分'},{id:'CAL-05',title:'中值定理与函数性态'},{id:'CAL-06',title:'积分与微积分基本定理'},{id:'CAL-07',title:'常微分方程'},{id:'CAL-08',title:'多元微分与二重积分'},{id:'LA-01',title:'行列式与可逆性'},{id:'LA-02',title:'矩阵运算与秩'},{id:'LA-03',title:'向量组与线性表示'},{id:'LA-04',title:'线性方程组'},{id:'LA-05',title:'特征值与相似对角化'},{id:'LA-06',title:'二次型与正定性'}];
+const REG=[{"id":"CAL-01-A","title":"函数的定义、三要素与表示","parent":"CAL-01"},{"id":"CAL-01-B","title":"定义域求解规则","parent":"CAL-01"},{"id":"CAL-01-C","title":"值域与反函数存在性","parent":"CAL-01"},{"id":"CAL-02-A","title":"数列极限与收敛","parent":"CAL-02"},{"id":"CAL-02-B","title":"函数左右极限与极限存在","parent":"CAL-02"},{"id":"CAL-02-C","title":"两个重要极限与等价无穷小","parent":"CAL-02"},{"id":"CAL-03-A","title":"函数连续的三条件","parent":"CAL-03"},{"id":"CAL-03-B","title":"间断点分类","parent":"CAL-03"},{"id":"CAL-03-C","title":"闭区间连续函数性质","parent":"CAL-03"},{"id":"CAL-04-A","title":"导数定义与几何意义","parent":"CAL-04"},{"id":"CAL-04-B","title":"基本求导法则与链式法则","parent":"CAL-04"},{"id":"CAL-04-C","title":"隐函数、参数方程与微分","parent":"CAL-04"},{"id":"CAL-05-A","title":"罗尔、拉格朗日与柯西中值定理","parent":"CAL-05"},{"id":"CAL-05-B","title":"单调性、极值与最值","parent":"CAL-05"},{"id":"CAL-05-C","title":"凹凸性、拐点与渐近线","parent":"CAL-05"},{"id":"CAL-06-A","title":"原函数与不定积分","parent":"CAL-06"},{"id":"CAL-06-B","title":"换元积分与分部积分","parent":"CAL-06"},{"id":"CAL-06-C","title":"定积分、变上限与面积","parent":"CAL-06"},{"id":"CAL-07-A","title":"可分离变量微分方程","parent":"CAL-07"},{"id":"CAL-07-B","title":"一阶线性微分方程","parent":"CAL-07"},{"id":"CAL-07-C","title":"二阶常系数线性齐次方程","parent":"CAL-07"},{"id":"CAL-08-A","title":"偏导数与全微分","parent":"CAL-08"},{"id":"CAL-08-B","title":"多元复合函数与隐函数求导","parent":"CAL-08"},{"id":"CAL-08-C","title":"二元函数极值与二重积分","parent":"CAL-08"},{"id":"LA-01-A","title":"行列式定义与基本性质","parent":"LA-01"},{"id":"LA-01-B","title":"余子式、代数余子式与展开","parent":"LA-01"},{"id":"LA-01-C","title":"行列式与矩阵可逆判定","parent":"LA-01"},{"id":"LA-02-A","title":"矩阵乘法、转置与逆矩阵","parent":"LA-02"},{"id":"LA-02-B","title":"初等变换与矩阵秩","parent":"LA-02"},{"id":"LA-03-A","title":"线性表示与增广矩阵判定","parent":"LA-03"},{"id":"LA-03-B","title":"线性相关与无关","parent":"LA-03"},{"id":"LA-03-C","title":"极大无关组与向量组的秩","parent":"LA-03"},{"id":"LA-04-A","title":"高斯消元与方程组有解判定","parent":"LA-04"},{"id":"LA-04-B","title":"齐次方程组基础解系","parent":"LA-04"},{"id":"LA-04-C","title":"非齐次方程组通解结构","parent":"LA-04"},{"id":"LA-05-A","title":"特征值与特征向量求法","parent":"LA-05"},{"id":"LA-05-B","title":"相似对角化与可对角化条件","parent":"LA-05"},{"id":"LA-05-C","title":"实对称矩阵正交对角化","parent":"LA-05"},{"id":"LA-06-A","title":"二次型与对称矩阵表示","parent":"LA-06"},{"id":"LA-06-B","title":"合同变换与二次型标准形","parent":"LA-06"},{"id":"LA-06-C","title":"正定二次型判别","parent":"LA-06"},{"id":"LA-02-C","title":"可逆矩阵与初等矩阵","parent":"LA-02"},{"id":"CAL-01-D","title":"数列极限的 ε-N 定义","parent":"CAL-02"},{"id":"CAL-01-E","title":"函数极限的 ε-δ 定义","parent":"CAL-02"},{"id":"CAL-01-F","title":"单侧极限与双侧极限","parent":"CAL-02"},{"id":"CAL-01-G","title":"无穷小、无穷大与阶的比较","parent":"CAL-02"},{"id":"CAL-01-H","title":"两个重要极限及常见推广","parent":"CAL-02"},{"id":"CAL-01-I","title":"夹逼准则与极限估计","parent":"CAL-02"},{"id":"CAL-01-J","title":"单调有界数列收敛定理","parent":"CAL-02"},{"id":"CAL-02-D","title":"洛必达法则及使用边界","parent":"CAL-02"},{"id":"CAL-02-E","title":"等价无穷小替换定理","parent":"CAL-02"},{"id":"CAL-03-N02","title":"连续函数四则运算与复合连续","parent":"CAL-03"},{"id":"CAL-03-N04","title":"闭区间连续函数有界与最值定理","parent":"CAL-03"},{"id":"CAL-03-N03","title":"介值定理与零点定理","parent":"CAL-03"},{"id":"CAL-04-N04","title":"可导与连续的逻辑关系","parent":"CAL-04"},{"id":"CAL-04-N05","title":"微分定义与线性主部","parent":"CAL-04"},{"id":"CAL-04-N06","title":"反函数求导公式","parent":"CAL-04"},{"id":"CAL-04-D","title":"隐函数求导法","parent":"CAL-04"},{"id":"CAL-04-E","title":"参数方程的一阶与二阶导数","parent":"CAL-04"},{"id":"CAL-05-N07","title":"罗尔定理","parent":"CAL-05"},{"id":"CAL-05-N08","title":"拉格朗日中值定理","parent":"CAL-05"},{"id":"CAL-05-N09","title":"柯西中值定理","parent":"CAL-05"},{"id":"CAL-05-D","title":"泰勒公式与麦克劳林展开","parent":"CAL-05"},{"id":"CAL-05-E","title":"导数符号与单调性定理","parent":"CAL-05"},{"id":"CAL-05-F","title":"极值与极值判别法","parent":"CAL-05"},{"id":"CAL-05-G","title":"凹凸性与拐点","parent":"CAL-05"},{"id":"CAL-05-H","title":"渐近线判定","parent":"CAL-05"},{"id":"CAL-06-N10","title":"原函数与不定积分基本性质","parent":"CAL-06"},{"id":"CAL-06-N11","title":"第一类换元法（凑微分）","parent":"CAL-06"},{"id":"CAL-06-N12","title":"第二类换元法","parent":"CAL-06"},{"id":"CAL-06-D","title":"分部积分法","parent":"CAL-06"},{"id":"CAL-06-E","title":"定积分定义与基本性质","parent":"CAL-06"},{"id":"CAL-06-F","title":"变上限积分函数与牛顿—莱布尼茨公式","parent":"CAL-06"},{"id":"CAL-06-G","title":"定积分换元与分部积分","parent":"CAL-06"},{"id":"CAL-06-H","title":"变上限积分中值定理","parent":"CAL-06"},{"id":"CAL-06-I","title":"反常积分的定义与敛散性","parent":"CAL-06"},{"id":"CAL-07-N13","title":"可分离变量微分方程","parent":"CAL-07"},{"id":"CAL-07-N14","title":"一阶线性微分方程与积分因子","parent":"CAL-07"},{"id":"CAL-07-N15","title":"二阶常系数齐次线性微分方程","parent":"CAL-07"},{"id":"CAL-07-D","title":"微分方程解的验证与初值条件","parent":"CAL-07"},{"id":"CAL-08-N16","title":"偏导数定义与几何意义","parent":"CAL-08"},{"id":"CAL-08-N17","title":"全微分与可微充分条件","parent":"CAL-08"},{"id":"CAL-08-N18","title":"多元复合函数链式法则","parent":"CAL-08"},{"id":"CAL-08-D","title":"二元函数极值与二阶判别","parent":"CAL-08"},{"id":"CAL-08-E","title":"二重积分定义与累次积分","parent":"CAL-08"},{"id":"CAL-08-F","title":"极坐标变换与雅可比因子","parent":"CAL-08"},{"id":"LA-01-D","title":"行列式按行列展开定理","parent":"LA-01"},{"id":"LA-01-E","title":"行列式乘积定理与转置","parent":"LA-01"},{"id":"LA-02-D","title":"伴随矩阵与逆矩阵公式","parent":"LA-02"},{"id":"LA-02-E","title":"矩阵秩的基本不等式","parent":"LA-02"},{"id":"LA-02-F","title":"分块矩阵乘法与逆","parent":"LA-02"},{"id":"LA-03-D","title":"向量组等价与秩","parent":"LA-03"},{"id":"LA-03-E","title":"向量组秩与矩阵秩关系","parent":"LA-03"},{"id":"LA-04-D","title":"Rouché–Capelli 方程组判定定理","parent":"LA-04"},{"id":"LA-04-E","title":"齐次方程组基础解系与维数定理","parent":"LA-04"},{"id":"LA-05-D","title":"特征值的迹与行列式性质","parent":"LA-05"},{"id":"LA-05-E","title":"特征向量线性无关定理","parent":"LA-05"},{"id":"LA-05-F","title":"相似矩阵的性质与相似不变量","parent":"LA-05"},{"id":"LA-06-D","title":"二次型的秩与惯性定理","parent":"LA-06"},{"id":"LA-06-E","title":"正定矩阵的等价判别","parent":"LA-06"},{"id":"CAL-01-N19","title":"函数有界性","parent":"CAL-01"},{"id":"CAL-01-N20","title":"奇函数与偶函数","parent":"CAL-01"},{"id":"CAL-01-N21","title":"周期函数与基本周期","parent":"CAL-01"},{"id":"CAL-02-N22","title":"极限唯一性与局部有界性","parent":"CAL-02"},{"id":"CAL-02-N23","title":"无穷小乘有界函数定理","parent":"CAL-02"},{"id":"CAL-03-N24","title":"初等函数连续性","parent":"CAL-03"},{"id":"CAL-04-N25","title":"高阶导数","parent":"CAL-04"},{"id":"CAL-05-N26","title":"费马引理（极值必要条件）","parent":"CAL-05"},{"id":"CAL-05-N27","title":"弧微分与平面曲线弧长","parent":"CAL-05"},{"id":"CAL-06-N28","title":"定积分线性性质与区间可加性","parent":"CAL-06"},{"id":"CAL-06-N29","title":"定积分保序与估值定理","parent":"CAL-06"},{"id":"CAL-06-N30","title":"定积分奇偶性公式","parent":"CAL-06"},{"id":"CAL-07-N31","title":"二阶线性非齐次方程通解结构","parent":"CAL-07"},{"id":"CAL-08-N32","title":"二元函数定义域与等高线","parent":"CAL-08"},{"id":"CAL-08-N33","title":"二元函数极限的路径检验","parent":"CAL-08"},{"id":"CAL-08-N34","title":"二阶混合偏导交换定理","parent":"CAL-08"},{"id":"CAL-08-N35","title":"方向导数与梯度","parent":"CAL-08"},{"id":"CAL-08-N36","title":"二重积分的面积与体积意义","parent":"CAL-08"},{"id":"LA-01-N37","title":"三角行列式计算定理","parent":"LA-01"},{"id":"LA-01-N38","title":"行列式三类初等行变换","parent":"LA-01"},{"id":"LA-02-N39","title":"矩阵乘法结合律与分配律","parent":"LA-02"},{"id":"LA-02-N40","title":"矩阵转置运算规律","parent":"LA-02"},{"id":"LA-03-N41","title":"向量个数与线性相关定理","parent":"LA-03"},{"id":"LA-03-N42","title":"基与维数定义","parent":"LA-03"},{"id":"LA-04-N43","title":"齐次方程组解空间性质","parent":"LA-04"},{"id":"LA-04-N44","title":"非齐次方程组解集结构定理","parent":"LA-04"},{"id":"LA-05-N45","title":"特征子空间与几何重数","parent":"LA-05"},{"id":"LA-05-N46","title":"特征值代数重数与几何重数","parent":"LA-05"},{"id":"LA-05-N47","title":"矩阵可对角化充要条件","parent":"LA-05"},{"id":"LA-06-N48","title":"二次型矩阵对称化","parent":"LA-06"},{"id":"LA-06-N49","title":"正定二次型与唯一极小值","parent":"LA-06"},{"id":"CAL-02-N50","title":"极限的四则运算法则","parent":"CAL-02"},{"id":"CAL-02-N51","title":"夹逼准则","parent":"CAL-02"},{"id":"CAL-02-N52","title":"单调有界数列收敛定理","parent":"CAL-02"},{"id":"CAL-02-N53","title":"数列极限与子列","parent":"CAL-02"},{"id":"CAL-03-N54","title":"连续函数的局部保号性","parent":"CAL-03"},{"id":"CAL-04-N55","title":"导数的线性性质","parent":"CAL-04"},{"id":"CAL-04-N56","title":"反函数求导公式","parent":"CAL-04"},{"id":"CAL-04-N57","title":"隐函数求导法则","parent":"CAL-04"},{"id":"CAL-04-N58","title":"参数方程求导公式","parent":"CAL-04"},{"id":"CAL-05-N59","title":"拉格朗日中值定理","parent":"CAL-05"},{"id":"CAL-05-N60","title":"函数单调性判定定理","parent":"CAL-05"},{"id":"CAL-05-N61","title":"极值的充分判别法","parent":"CAL-05"},{"id":"CAL-05-N62","title":"渐近线判定","parent":"CAL-05"},{"id":"CAL-06-N63","title":"第一类换元积分法","parent":"CAL-06"},{"id":"CAL-06-N64","title":"分部积分法","parent":"CAL-06"},{"id":"CAL-06-N65","title":"定积分变量替换公式","parent":"CAL-06"},{"id":"CAL-06-N66","title":"变上限积分求导公式","parent":"CAL-06"},{"id":"CAL-06-N67","title":"积分中值定理","parent":"CAL-06"},{"id":"CAL-07-N68","title":"可分离变量微分方程","parent":"CAL-07"},{"id":"CAL-07-N69","title":"一阶线性微分方程积分因子","parent":"CAL-07"},{"id":"CAL-07-N70","title":"二阶常系数齐次方程特征根","parent":"CAL-07"},{"id":"CAL-08-N71","title":"全微分定义与可微性","parent":"CAL-08"},{"id":"CAL-08-N72","title":"多元复合函数链式法则","parent":"CAL-08"},{"id":"CAL-08-N73","title":"二元函数极值必要条件","parent":"CAL-08"},{"id":"CAL-08-N74","title":"二元函数极值二阶判别","parent":"CAL-08"},{"id":"CAL-08-N75","title":"二重积分直角坐标累次积分","parent":"CAL-08"},{"id":"CAL-08-N76","title":"极坐标变换与雅可比","parent":"CAL-08"},{"id":"LA-01-N50","title":"行列式按行或列展开定理","parent":"LA-01"},{"id":"LA-01-N51","title":"行列式乘法定理","parent":"LA-01"},{"id":"LA-02-N52","title":"矩阵可逆的等价条件","parent":"LA-02"},{"id":"LA-02-N53","title":"伴随矩阵与逆矩阵公式","parent":"LA-02"},{"id":"LA-03-N54","title":"向量组等价与秩","parent":"LA-03"},{"id":"LA-03-N55","title":"向量组线性相关的等价条件","parent":"LA-03"},{"id":"LA-04-N56","title":"Rouché–Capelli 方程组有解判定","parent":"LA-04"},{"id":"LA-04-N57","title":"基础解系与解空间维数","parent":"LA-04"},{"id":"LA-05-N58","title":"相似矩阵的性质","parent":"LA-05"},{"id":"LA-05-N59","title":"矩阵特征值的迹与行列式关系","parent":"LA-05"},{"id":"LA-06-N60","title":"实对称矩阵正交对角化定理","parent":"LA-06"},{"id":"LA-06-N61","title":"合同变换与二次型标准形","parent":"LA-06"},{"id":"LA-01-N62","title":"行列式余子式与代数余子式","parent":"LA-01"},{"id":"LA-01-N63","title":"范德蒙行列式","parent":"LA-01"},{"id":"LA-02-N64","title":"矩阵乘积可逆性","parent":"LA-02"},{"id":"LA-02-N65","title":"矩阵幂与转置、逆","parent":"LA-02"},{"id":"LA-02-N66","title":"矩阵秩的基本不等式","parent":"LA-02"},{"id":"LA-02-N67","title":"分块矩阵乘法规则","parent":"LA-02"},{"id":"LA-03-N68","title":"向量内积与正交","parent":"LA-03"},{"id":"LA-03-N69","title":"正交向量组与规范正交组","parent":"LA-03"},{"id":"LA-03-N70","title":"施密特正交化方法","parent":"LA-03"},{"id":"LA-03-N71","title":"向量在规范正交基下的坐标","parent":"LA-03"},{"id":"LA-04-N72","title":"线性方程组解的个数判定","parent":"LA-04"},{"id":"LA-04-N73","title":"齐次方程组非零解判定","parent":"LA-04"},{"id":"LA-04-N74","title":"线性方程组参数解与自由变量","parent":"LA-04"},{"id":"LA-05-N75","title":"特征值与特征向量基本性质","parent":"LA-05"},{"id":"LA-05-N76","title":"特征值的矩阵多项式性质","parent":"LA-05"},{"id":"LA-05-N77","title":"实对称矩阵不同特征值正交","parent":"LA-05"},{"id":"LA-06-N78","title":"正定矩阵的等价判定","parent":"LA-06"},{"id":"LA-06-N79","title":"二次型的秩与标准形","parent":"LA-06"},{"id":"LA-06-N80","title":"二次型的正惯性指数与负惯性指数","parent":"LA-06"},{"id":"LA-06-N81","title":"正定二次型的主子式判据","parent":"LA-06"},{"id":"CAL-01-N77","title":"复合函数与反函数","parent":"CAL-01"},{"id":"CAL-03-N78","title":"连续函数的和差积商","parent":"CAL-03"},{"id":"CAL-04-N79","title":"乘积求导法则","parent":"CAL-04"},{"id":"CAL-04-N80","title":"商的求导法则","parent":"CAL-04"},{"id":"CAL-05-N81","title":"罗尔定理","parent":"CAL-05"},{"id":"CAL-06-N82","title":"定积分对称区间换元","parent":"CAL-06"},{"id":"CAL-06-N83","title":"积分上限与下限同时变化","parent":"CAL-06"},{"id":"CAL-07-N84","title":"微分方程初值问题","parent":"CAL-07"},{"id":"CAL-08-N85","title":"二重积分的区域可加性","parent":"CAL-08"},{"id":"CAL-02-N86","title":"函数极限的局部保号性","parent":"CAL-02"},{"id":"CAL-02-N87","title":"无穷小比较与等价阶","parent":"CAL-02"},{"id":"CAL-02-N88","title":"数列收敛的柯西准则","parent":"CAL-02"},{"id":"CAL-03-N89","title":"闭区间连续函数的介值性质","parent":"CAL-03"},{"id":"CAL-04-N90","title":"复合函数求导的链式法则","parent":"CAL-04"},{"id":"CAL-04-N91","title":"高阶导数的莱布尼茨公式","parent":"CAL-04"},{"id":"CAL-05-N92","title":"柯西中值定理","parent":"CAL-05"},{"id":"CAL-05-N93","title":"函数凹凸性与二阶导数","parent":"CAL-05"},{"id":"CAL-05-N94","title":"拐点的判定","parent":"CAL-05"},{"id":"CAL-06-N95","title":"第二类换元积分法","parent":"CAL-06"},{"id":"CAL-06-N96","title":"有理函数积分的部分分式法","parent":"CAL-06"},{"id":"CAL-06-N97","title":"定积分的几何意义与符号","parent":"CAL-06"},{"id":"CAL-07-N98","title":"一阶线性微分方程通解结构","parent":"CAL-07"},{"id":"CAL-08-N99","title":"二元函数偏导数定义","parent":"CAL-08"},{"id":"CAL-08-N100","title":"二元函数可微的充分条件","parent":"CAL-08"},{"id":"CAL-08-N101","title":"二元函数全微分公式","parent":"CAL-08"},{"id":"CAL-08-N102","title":"二元函数方向导数","parent":"CAL-08"},{"id":"LA-01-N103","title":"行列式初等变换的影响","parent":"LA-01"},{"id":"LA-01-N104","title":"克拉默法则","parent":"LA-01"},{"id":"LA-02-N105","title":"初等矩阵与初等变换","parent":"LA-02"},{"id":"LA-02-N106","title":"矩阵可逆的等价条件","parent":"LA-02"},{"id":"LA-03-N107","title":"向量组的线性表示","parent":"LA-03"},{"id":"LA-03-N108","title":"极大线性无关组","parent":"LA-03"},{"id":"LA-04-N109","title":"齐次线性方程组基础解系","parent":"LA-04"},{"id":"LA-05-N110","title":"特征多项式与特征方程","parent":"LA-05"},{"id":"LA-05-N111","title":"矩阵可对角化的判定","parent":"LA-05"},{"id":"LA-06-N112","title":"合同变换与二次型矩阵","parent":"LA-06"},{"id":"LA-06-N113","title":"二次型矩阵的正交变换","parent":"LA-06"},{"id":"CAL-01-N114","title":"函数的奇偶性","parent":"CAL-01"},{"id":"CAL-01-N115","title":"函数的单调性定义","parent":"CAL-01"},{"id":"CAL-02-N116","title":"函数极限的四则运算法则","parent":"CAL-02"},{"id":"CAL-02-N117","title":"重要极限的变形","parent":"CAL-02"},{"id":"CAL-03-N118","title":"间断点的分类","parent":"CAL-03"},{"id":"CAL-03-N119","title":"闭区间连续函数的一致连续性","parent":"CAL-03"},{"id":"CAL-04-N120","title":"反函数的导数公式","parent":"CAL-04"},{"id":"CAL-04-N121","title":"隐函数求导的链式关系","parent":"CAL-04"},{"id":"CAL-05-N122","title":"导数零点与极值的关系","parent":"CAL-05"},{"id":"CAL-05-N123","title":"函数极值的二阶导数判别","parent":"CAL-05"},{"id":"CAL-06-N124","title":"定积分的线性性质","parent":"CAL-06"},{"id":"CAL-06-N125","title":"定积分区间可加性","parent":"CAL-06"},{"id":"CAL-06-N126","title":"分部积分法的定积分形式","parent":"CAL-06"},{"id":"CAL-07-N127","title":"可分离变量方程","parent":"CAL-07"},{"id":"CAL-07-N128","title":"二阶常系数齐次方程的特征方程","parent":"CAL-07"},{"id":"CAL-08-N129","title":"二元函数极值的必要条件","parent":"CAL-08"},{"id":"CAL-08-N130","title":"二元函数极值的 Hessian 判别","parent":"CAL-08"},{"id":"CAL-08-N131","title":"二重积分直角坐标累次积分","parent":"CAL-08"},{"id":"LA-01-N132","title":"行列式转置不变","parent":"LA-01"},{"id":"LA-01-N133","title":"行列式乘积定理","parent":"LA-01"},{"id":"LA-02-N134","title":"矩阵乘法的结合律与分配律","parent":"LA-02"},{"id":"LA-02-N135","title":"矩阵转置的乘积规则","parent":"LA-02"},{"id":"LA-03-N136","title":"向量组线性相关的定义","parent":"LA-03"},{"id":"LA-03-N137","title":"向量组秩与极大无关组","parent":"LA-03"},{"id":"LA-04-N138","title":"非齐次方程组通解结构","parent":"LA-04"},{"id":"LA-05-N139","title":"特征值的和与积","parent":"LA-05"},{"id":"LA-06-N140","title":"正定二次型与特征值","parent":"LA-06"},{"id":"CAL-01-N141","title":"反函数存在的单调性条件","parent":"CAL-01"},{"id":"CAL-02-N142","title":"无穷小的运算法则","parent":"CAL-02"},{"id":"CAL-02-N143","title":"数列极限的保序性","parent":"CAL-02"},{"id":"CAL-03-N144","title":"连续函数复合定理","parent":"CAL-03"},{"id":"CAL-04-N145","title":"基本初等函数导数表","parent":"CAL-04"},{"id":"CAL-05-N146","title":"函数单调区间的求法","parent":"CAL-05"},{"id":"CAL-06-N147","title":"定积分比较性质","parent":"CAL-06"},{"id":"CAL-06-N148","title":"定积分绝对值估计","parent":"CAL-06"},{"id":"CAL-07-N149","title":"二阶常系数方程重根情形","parent":"CAL-07"},{"id":"CAL-08-N150","title":"二元函数连续与可微的关系","parent":"CAL-08"},{"id":"CAL-08-N151","title":"二重积分的变量交换","parent":"CAL-08"},{"id":"LA-01-N152","title":"三角行列式的转置与行列关系","parent":"LA-01"},{"id":"LA-02-N153","title":"伴随矩阵的基本恒等式","parent":"LA-02"},{"id":"LA-03-N154","title":"向量组等价的秩判定","parent":"LA-03"},{"id":"LA-04-N155","title":"线性方程组增广矩阵","parent":"LA-04"},{"id":"LA-05-N156","title":"特征值代数重数与几何重数","parent":"LA-05"},{"id":"LA-06-N157","title":"二次型正定的几何意义","parent":"LA-06"},{"id":"CAL-01-N01","title":"分段函数的定义域与函数值","parent":"CAL-01"},{"id":"CAL-02-N01","title":"数列极限的四则运算法则","parent":"CAL-02"},{"id":"CAL-03-N05","title":"连续函数的复合与反函数连续性","parent":"CAL-03"},{"id":"CAL-04-N01","title":"高阶导数与莱布尼茨公式","parent":"CAL-04"},{"id":"CAL-05-N01","title":"闭区间最值定理与极值候选点","parent":"CAL-05"},{"id":"CAL-06-N01","title":"定积分比较定理与估值","parent":"CAL-06"},{"id":"CAL-06-N02","title":"积分中值定理","parent":"CAL-06"},{"id":"CAL-07-N01","title":"微分方程初值问题与特解","parent":"CAL-07"},{"id":"CAL-08-N01","title":"二重积分的对称性","parent":"CAL-08"},{"id":"LA-02-N01","title":"矩阵的初等行变换与秩","parent":"LA-02"},{"id":"LA-03-N01","title":"向量组的秩与线性表示","parent":"LA-03"},{"id":"LA-04-N01","title":"齐次线性方程组解空间维数","parent":"LA-04"},{"id":"LA-05-N01","title":"特征值与特征向量的定义","parent":"LA-05"},{"id":"LA-06-N01","title":"二次型的矩阵表示","parent":"LA-06"},{"id":"CAL-01-N201","title":"反函数的定义与存在条件","parent":"CAL-01"},{"id":"CAL-01-N202","title":"复合函数的定义域","parent":"CAL-01"},{"id":"CAL-03-N201","title":"间断点的可去性判定","parent":"CAL-03"},{"id":"CAL-03-N202","title":"闭区间连续函数的最值定理","parent":"CAL-03"},{"id":"CAL-04-N201","title":"导数的四则运算法则","parent":"CAL-04"},{"id":"CAL-04-N202","title":"隐函数求导的链式规则","parent":"CAL-04"},{"id":"CAL-04-N203","title":"函数单调性的导数判别","parent":"CAL-04"},{"id":"CAL-07-N201","title":"二阶常系数非齐次方程的通解结构","parent":"CAL-07"},{"id":"CAL-07-N202","title":"二阶常系数齐次方程的重根情形","parent":"CAL-07"},{"id":"LA-04-N201","title":"非齐次线性方程组解的结构","parent":"LA-04"},{"id":"LA-04-N202","title":"线性方程组解的判定条件","parent":"LA-04"},{"id":"LA-05-N201","title":"特征值的行列式与迹关系","parent":"LA-05"},{"id":"LA-06-N201","title":"正定二次型的定义","parent":"LA-06"},{"id":"LA-06-N202","title":"二次型的正交变换化标准形","parent":"LA-06"}];
+const byId=new Map(REG.map(x=>[x.id,x]));
+const reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const COLORS={blue:'#2869a7',orange:'#d77c32',green:'#2f946b',grid:'#e7edf4',ink:'#40546a'};
+function kind(t){
+const priority=[
+[/变上限积分|积分中值|积分上限|积分下限|定积分|原函数|不定积分|换元积分|换元法|凑微分|分部积分|黎曼|反常积分|积分法|积分比较|积分估值|积分变量|积分对称|积分奇偶|积分面积|积分的几何|部分分式/,'integral'],
+[/可分离变量|一阶线性|二阶常系数|微分方程|初值问题|通解结构|积分因子|特解|特征根/,'ode'],
+[/二元函数|多元|偏导|全微分|二重积分|极坐标|雅可比|等高线|Hessian|混合偏导|方向导数|梯度|区域可加/,'multivariable'],
+[/二次型|正定矩阵|合同变换|惯性定理|主子式判据/,'quadratic'],
+[/特征值|特征向量|特征子空间|代数重数|几何重数|可对角化|正交对角化|相似矩阵|特征多项式|特征方程/,'eigen'],
+[/行列式|余子式|代数余子式|范德蒙|克拉默|三角行列式/,'determinant'],
+[/向量组|线性相关|线性无关|向量内积|正交化|规范正交|极大无关组|基与维数|线性表示/,'vectors'],
+[/方程组|解空间|基础解系|自由变量|Rouché|方程组解/,'system'],
+[/矩阵|初等矩阵|矩阵秩|矩阵乘积/,'matrix'],
+[/泰勒|麦克劳林/,'taylor'],
+[/罗尔|拉格朗日|柯西中值|中值定理/,'mvt'],
+[/单调性判定|单调区间|单调性、极值|极值|凹凸|拐点|渐近线|费马引理|最值候选|导数零点/,'shape'],
+[/导数|可导|求导|微分|切线|弧微分|参数方程|隐函数|链式法则|莱布尼茨公式/,'derivative'],
+[/连续|间断|介值|零点定理|保号性|一致连续/,'continuity'],
+[/极限|无穷小|无穷大|柯西准则|夹逼|收敛|子列|洛必达/,'limit']
+]
+for(const [re,k] of priority)if(re.test(t))return k;
+const rules=[
+[/ε|epsilon|\bN\b|柯西准则|数列极限|收敛|子列|夹逼|极限唯一|局部有界|保序性|极限四则|重要极限|洛必达|等价无穷小|无穷小|无穷大/,'limit'],
+[/间断|连续函数|连续性|介值|零点定理|最值定理|一致连续|局部保号|复合连续/,'continuity'],
+[/定义域|分段函数|反函数|复合函数|奇偶|周期函数|有界性|单调性定义|函数三要素|值域/,'function'],
+[/导数定义|切线|导数的几何|导数符号|求导法则|乘积求导|商的求导|链式法则|反函数求导|隐函数求导|参数方程求导|高阶导数|莱布尼茨|微分定义|线性主部|弧微分|方向导数|梯度/,'derivative'],
+[/罗尔|拉格朗日|柯西中值|中值定理/,'mvt'],
+[/泰勒|麦克劳林/,'taylor'],
+[/极值|单调区间|凹凸|拐点|渐近线|费马引理|最值候选|单调性判定/,'shape'],
+[/原函数|不定积分|换元积分|换元法|凑微分|分部积分|定积分|黎曼|积分中值|反常积分|积分上限|积分下限|面积|体积|比较性质|区间可加|奇偶性公式|变量替换|部分分式/,'integral'],
+[/可分离变量|一阶线性|积分因子|二阶常系数|特征根|微分方程|初值问题|通解结构|特解/,'ode'],
+[/偏导|全微分|多元复合|二元函数|二重积分|极坐标|雅可比|等高线|Hessian|混合偏导|可微充分|区域可加|对称性/,'multivariable'],
+[/行列式|余子式|代数余子式|范德蒙|克拉默/,'determinant'],
+[/矩阵乘法|矩阵转置|逆矩阵|伴随矩阵|初等矩阵|分块矩阵|矩阵幂|矩阵可逆|秩的基本不等式|矩阵秩|初等变换/,'matrix'],
+[/线性表示|线性相关|线性无关|向量组|极大无关|基与维数|内积|正交|施密特|规范正交|坐标/,'vectors'],
+[/高斯消元|方程组|基础解系|解空间|自由变量|增广矩阵|Rouché|非齐次/,'system'],
+[/特征值|特征向量|特征子空间|代数重数|几何重数|相似|对角化|迹与行列式|特征多项式/,'eigen'],
+[/二次型|正定|合同变换|惯性定理|标准形|正惯性|负惯性/,'quadratic']
+];
+for(const [re,k] of rules)if(re.test(t))return k;
+return 'function';
+}
+const formula={
+limit:'x → a，f(x) → L',continuity:'limₓ→a f(x) = f(a)',function:'y = f(x)',derivative:'f′(a) = limₕ→0 [f(a+h)−f(a)] / h',mvt:'f′(ξ) = [f(b)−f(a)] / (b−a)',taylor:'f(x) = Σ f⁽ⁿ⁾(a)(x−a)ⁿ/n!',shape:'f′：单调；f′′：凹凸',integral:'∫ₐᵇ f(x) dx = lim Σ f(ξᵢ)Δxᵢ',ode:'y′ + P(x)y = Q(x)',multivariable:'dz = fₓ dx + fᵧ dy',determinant:'det(AB) = det(A)det(B)',matrix:'(AB)ᵀ = BᵀAᵀ',vectors:'Ax = b ⇔ b ∈ Col(A)',system:'dim N(A) = n − r(A)',eigen:'Av = λv',quadratic:'q(x) = xᵀAx'};
+function axes(){return '<path d="M28 135H432 M230 12V250" stroke="#9aaabd" stroke-width="1.4"/><path d="M425 130l7 5-7 5 M225 20l5-8 5 8" fill="none" stroke="#9aaabd"/>';}
+function graphPath(fn,x0=-4,x1=4,ymin=-3,ymax=4){let d='',on=false;for(let i=0;i<=240;i++){let x=x0+(x1-x0)*i/240,y=fn(x);if(!Number.isFinite(y)||y<ymin-1||y>ymax+1){on=false;continue;}let X=230+x*48,Y=135-y*35;d+=(on?'L':'M')+X.toFixed(1)+','+Y.toFixed(1);on=true;}return d;}
+function svgFor(k,t,p){
+let body='',desc='';
+const graph=(fn,extra='')=>'<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="'+esc(t)+'专属函数图像">'+axes()+'<path d="'+graphPath(fn)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/>'+extra+'</svg>';
+if(k==='function'){
+if(/奇|偶/.test(t)){
+const odd=/奇/.test(t)&&!/偶/.test(t),fn=odd?x=>x*x*x/8:x=>x*x/5;
+body=graph(fn,'<path d="M'+(230-2*48)+' 135L230 135L'+(230+2*48)+' 135" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="315" y="28" fill="'+COLORS.orange+'">'+(odd?'奇函数：原点对称':'偶函数：y轴对称')+'</text>');
+desc=odd?'蓝色曲线为奇函数示例 y=x³/8，满足 f(−x)=−f(x)，图像绕原点旋转 180° 后重合。':'蓝色曲线为偶函数示例 y=x²/5，满足 f(−x)=f(x)，图像关于 y 轴对称。';
+}else if(/反函数/.test(t)){body=graph(x=>x,'<path d="M38 230L422 38" stroke="'+COLORS.orange+'" stroke-dasharray="7 5" stroke-width="2"/><text x="340" y="45" fill="'+COLORS.orange+'">y=x</text>');desc='函数与反函数图像关于 y=x 对称；水平线检验一一对应。';}
+else if(/周期/.test(t)){body=graph(x=>Math.sin(p*x*2));desc='滑块改变角频率 ω，周期 T=2π/ω 随之变化；周期函数满足 f(x+T)=f(x)。';}
+else if(/有界/.test(t)){body=graph(x=>Math.sin(x*p),'<path d="M28 100H432 M28 170H432" stroke="'+COLORS.orange+'" stroke-dasharray="6 5"/><text x="380" y="92" fill="'+COLORS.orange+'">M=1</text><text x="380" y="185" fill="'+COLORS.orange+'">m=−1</text>');desc='正弦函数始终夹在 −1 与 1 之间；橙色水平线表示上下界，改变频率不会改变有界范围。';}
+else if(/单调性定义/.test(t)){body=graph(x=>x*x*x/12);desc='示例函数在全实数上严格递增；任取 x₁<x₂，都有 f(x₁)<f(x₂)。单调性比较的是输入顺序与输出顺序。';}
+else if(/定义域|分段|复合|函数三要素|值域/.test(t)){
+if(/定义域/.test(t)){body=graph(x=>x<0?NaN:x*x/4,'<path d="M230 135V20" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="245" y="25" fill="'+COLORS.orange+'">x≥0</text>');desc='只绘制 x≥0 的函数图像，左侧无定义；先确定输入集合，再求对应输出范围。';}
+else if(/分段/.test(t)){body=graph(x=>x<0?x+1:x*x/4,'<path d="M230 135V20" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/>');desc='分界点两侧使用不同解析式；比较左右趋近值与点值，空心/实心点区分是否取到。';}
+else{body=graph(x=>x*x/4);desc='沿蓝色曲线从输入 x 读取唯一输出 y=f(x)；定义域是允许输入，值域是实际输出，复合函数还需满足内外层定义域衔接。';}
+}else{body=graph(x=>Math.sin(x*p)+x/4);desc='蓝色函数图像随参数变化；从图像观察定义域、值域、周期与单调区间。';}
+}else if(k==='limit'){
+if(/ε-N|ε-δ|epsilon|柯西准则/.test(t)){
+const eps=.12+.32*p,delta=eps/3,a=1,X=x=>230+x*48,Y=y=>135-y*35;
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(x=>x*x)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M28 '+Y(1+eps)+'H432 M28 '+Y(1-eps)+'H432" stroke="'+COLORS.orange+'" stroke-dasharray="5 4"/><path d="M'+X(a-delta)+' 18V245 M'+X(a+delta)+' 18V245" stroke="'+COLORS.green+'" stroke-dasharray="5 4"/><circle cx="'+X(a)+'" cy="'+Y(1)+'" r="6" fill="'+COLORS.blue+'"/><text x="35" y="25" fill="'+COLORS.orange+'">ε='+eps.toFixed(2)+'</text><text x="280" y="245" fill="'+COLORS.green+'">δ≈ε/3='+delta.toFixed(2)+'</text></svg>';
+desc='以 f(x)=x²、a=1、L=1 为例。先给定纵向误差 ε，再选 δ≤ε/3；当 |x−1|<δ 时，|x²−1|=|x−1||x+1|<3δ≤ε。橙色是 ε 带，绿色是 δ 邻域。';
+}else if(/单侧极限|左右极限/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="M45 205L230 205" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M230 65L415 65" stroke="'+COLORS.orange+'" stroke-width="3"/><circle cx="230" cy="205" r="6" fill="white" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="65" r="6" fill="white" stroke="'+COLORS.orange+'" stroke-width="3"/><text x="70" y="190" fill="'+COLORS.blue+'">左极限 = −1</text><text x="285" y="52" fill="'+COLORS.orange+'">右极限 = 1</text><text x="245" y="240">左右不等，双侧极限不存在</text></svg>';
+desc='示例 f(x)=x/|x|：从左侧趋近 0 时函数值趋于 −1，从右侧趋近 0 时趋于 1。双侧极限存在的必要充分条件是左右极限都存在且相等。';
+}else if(/洛必达/.test(t)){
+const z=.2+.55*(1.8-p)/1.45;
+body=graph(x=>Math.abs(x)<1e-8?.5:(1-Math.cos(x*z))/(x*x*z*z));
+desc='以 limₓ→0 (1−cos x)/x²=1/2 为例。洛必达把 0/0 型商式求导为 sin x/(2x)，但必须先确认未定式、可导及导数商极限存在等条件；不能对非未定式滥用。';
+}else if(/数列|子列|柯西|单调有界/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 230H432 M28 20V240" stroke="#9aaabd"/><path d="'+Array.from({length:30},(_,i)=>{let n=i+1,x=28+n*12.8,y=230-180/(n*p+1);return(i?'L':'M')+x+' '+y}).join(' ')+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.5"/><path d="M28 50H432" stroke="'+COLORS.orange+'" stroke-dasharray="5 5"/><text x="390" y="42" fill="'+COLORS.orange+'">极限 L</text></svg>';desc='离散数列点列逐项靠近极限；ε 带内最终包含全部后续项。';}
+else if(/夹逼/.test(t)){body=graph(x=>Math.sin(x*3)/(Math.abs(x)+.25),'');desc='被夹函数位于上下界之间；上下界共同趋向 L 时，中间函数也趋向 L。';}
+else if(/等价|阶的比较|无穷小/.test(t)){body=graph(x=>Math.sin(x)/x);desc='比较 sin x、x 与 x² 等函数在原点附近的趋近速度；局部放大观察主导阶。';}
+else{body=graph(x=>Math.sin(x*p)/(x===0?1:x));desc='横轴位置逐渐靠近目标点，纵坐标逼近极限；左右极限需分别核验。';}
+}else if(k==='continuity'){
+if(/介值|零点/.test(t)){
+const c=.35+1.45*p/1.8,root=Math.sqrt(c),X=x=>230+x*48,Y=y=>135-y*35;
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(x=>x*x-c,-4,4,-3,4)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="'+X(root)+'" cy="135" r="6" fill="'+COLORS.green+'"/><circle cx="'+X(-root)+'" cy="135" r="6" fill="'+COLORS.green+'"/><path d="M'+X(-2)+' '+Y(4-c)+'L'+X(2)+' '+Y(4-c)+'" stroke="'+COLORS.orange+'" stroke-dasharray="5 5"/><text x="40" y="25" fill="'+COLORS.blue+'">f(x)=x²−'+c.toFixed(2)+'</text><text x="270" y="45" fill="'+COLORS.green+'">至少存在一个零点</text></svg>';
+desc='连续函数在闭区间 [−2,2] 上取到端点函数值之间的每一个值。此例端点异号，因此至少有一个零点；介值定理不保证零点唯一。';
+}else if(/一致连续/.test(t)){
+const near=.12+.5*(1.8-p)/1.45;
+body=graph(x=>1/(x*x+.08),'').replace('</svg>','<path d="M'+(230+near*48)+' 20V245" stroke="'+COLORS.orange+'" stroke-dasharray="5 5"/><text x="260" y="25" fill="'+COLORS.orange+'">靠近边界 0</text></svg>');
+desc='用 f(x)=1/x 在 (0,1) 说明：越靠近 0，曲线越陡，同样大小的函数值变化需要越来越小的横向间隔，因此它在该区间不一致连续。闭区间连续函数则一致连续。';
+}else if(/间断/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="M35 220L230 50L425 220" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="50" r="6" fill="white" stroke="'+COLORS.orange+'" stroke-width="3"/><circle cx="230" cy="'+(50+70*p)+'" r="6" fill="'+COLORS.orange+'"/><path d="M230 50V'+(50+70*p)+'" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="255" y="38" fill="'+COLORS.blue+'">极限位置</text><text x="255" y="'+(70+70*p)+'" fill="'+COLORS.orange+'">函数值</text></svg>';
+desc='空心圆表示左右极限共同趋近的位置，实心圆表示实际函数值；两者不一致时为可去间断。跳跃和无穷间断还需分别检查左右极限。';
+}else{
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="M35 220L230 50L425 220" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="50" r="6" fill="'+COLORS.orange+'"/><path d="M230 50V'+(50+40*p)+'" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="255" y="38" fill="'+COLORS.blue+'">连续曲线</text><text x="255" y="'+(70+40*p)+'" fill="'+COLORS.orange+'">极限 = 函数值</text></svg>';
+desc='连续要求函数值存在、极限存在且极限等于函数值；四则运算与复合连续都要检查表达式在对应点有定义。';
+}
+}else if(k==='derivative'){
+if(/隐函数|参数方程/.test(t)){
+const theta=.3+(p-.35)/1.45*1.8,x=Math.cos(theta),y=Math.sin(theta),X=q=>230+q*95,Y=q=>135-q*95,dx=-Math.sin(theta),dy=-Math.cos(theta);
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="圆的隐函数与参数方程切线动态演示"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><circle cx="230" cy="135" r="95" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+(X(x)-dx*55)+' '+(Y(y)-dy*55)+'L'+(X(x)+dx*55)+' '+(Y(y)+dy*55)+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M230 135L'+X(x)+' '+Y(y)+'" stroke="'+COLORS.green+'" stroke-dasharray="5 4"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.orange+'"/><text x="40" y="25" fill="'+COLORS.blue+'">x²+y²=1；x=cos t，y=sin t</text><text x="40" y="47" fill="'+COLORS.orange+'">dy/dx=−x/y='+(-x/y).toFixed(2)+'</text></svg>';
+desc='拖动参数 t：点 (cos t,sin t) 沿单位圆移动，橙色切线斜率 dy/dx=−x/y。隐式求导 2x+2yy′=0；当 y=0 时切线竖直，不能直接用有限斜率表示。';
+}else if(/链式|复合函数/.test(t)){
+const x=.25+(p-.35)/1.45*1.45,y=Math.sin(x*x),m=2*x*Math.cos(x*x),X=q=>230+q*85,Y=q=>135-q*85,tx=q=>y+m*(q-x);
+let d='';for(let i=0;i<=160;i++){const q=-2+i/40;d+=(i?'L':'M')+X(q).toFixed(1)+','+Y(Math.sin(q*q)).toFixed(1);}
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="复合函数链式法则切线斜率"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+d+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(x-1)+' '+Y(tx(x-1))+'L'+X(x+1)+' '+Y(tx(x+1))+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.green+'"/><text x="38" y="25" fill="'+COLORS.blue+'">y=sin(x²)</text><text x="38" y="47" fill="'+COLORS.orange+'">y′=2x cos(x²)='+m.toFixed(2)+'</text></svg>';
+desc='外层 sin(u) 求导得到 cos(u)，再乘内层 u=x² 的导数 2x。滑块移动切点，观察切线斜率 y′=2x cos(x²) 如何随 x 改变；链式法则的关键是不能漏乘内层导数。';
+}else if(/高阶导数|莱布尼茨/.test(t)){
+const x=(p-1.075)*2.2,X=q=>230+q*48,Y=q=>135-q*35;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="函数及一阶二阶导数关系"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>Math.sin(q))+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.8"/><path d="'+graphPath(q=>Math.cos(q))+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="6 4"/><path d="'+graphPath(q=>-Math.sin(q))+'" fill="none" stroke="'+COLORS.green+'" stroke-width="2.2" stroke-dasharray="2 4"/><path d="M'+X(x)+' 20V245" stroke="'+COLORS.ink+'" stroke-dasharray="4 4"/><text x="38" y="22" fill="'+COLORS.blue+'">f=sin x</text><text x="145" y="22" fill="'+COLORS.orange+'">f′=cos x</text><text x="270" y="22" fill="'+COLORS.green+'">f′′=−sin x</text></svg>';
+desc='蓝线是原函数，橙线是一阶导数，绿线是二阶导数。滑块移动观察位置：求导把函数变化率变成新函数；高阶导数继续描述变化率的变化。';
+}else{
+let a=(p-.8)*1.1, y=a*a/2,m=a;
+body=graph(x=>x*x/2,'<line x1="'+(230+(a-1.5)*48)+'" y1="'+(135-(y-m*1.5)*35)+'" x2="'+(230+(a+1.5)*48)+'" y2="'+(135-(y+m*1.5)*35)+'" stroke="'+COLORS.orange+'" stroke-width="3"/><circle cx="'+(230+a*48)+'" cy="'+(135-y*35)+'" r="6" fill="'+COLORS.orange+'"/>');
+desc='蓝线为 y=x²/2，橙线为切线；拖动参数移动切点，斜率 m=f′(a) 随 a 改变。';
+}
+}else if(k==='mvt'){
+if(/罗尔/.test(t)){
+const a=.4+.75*p,b=-a,X=x=>230+x*48,Y=y=>135-y*35,xi=0;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="罗尔定理：端点函数值相同，内部存在水平切线"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(x=>x*x,-2.8,2.8,-1,5)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(-a)+' '+Y(a*a)+'L'+X(a)+' '+Y(a*a)+'" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="6 5"/><path d="M'+X(xi-1.2)+' '+Y(0)+'L'+X(xi+1.2)+' '+Y(0)+'" stroke="'+COLORS.green+'" stroke-width="2.5"/><circle cx="'+X(-a)+'" cy="'+Y(a*a)+'" r="5" fill="'+COLORS.orange+'"/><circle cx="'+X(a)+'" cy="'+Y(a*a)+'" r="5" fill="'+COLORS.orange+'"/><circle cx="'+X(xi)+'" cy="'+Y(0)+'" r="6" fill="'+COLORS.green+'"/><text x="45" y="25" fill="'+COLORS.orange+'">f(a)=f(b)</text><text x="270" y="25" fill="'+COLORS.green+'">f′(ξ)=0，ξ=0</text></svg>';
+desc='罗尔定理示例 f(x)=x²−a²，区间 [−a,a]。拖动改变 a；端点函数值始终相等，内部 ξ=0 处切线水平。连续、开区间可导、端点函数值相等，三项条件缺一不可。';
+}else if(/柯西/.test(t)){
+const b=.6+1.2*p,xi=b/2,X=x=>55+x*125,Y=y=>220-y*14;
+const cpath=fn=>{let d='';for(let i=0;i<=100;i++){const x=b*i/100;d+=(i?'L':'M')+X(x).toFixed(1)+','+Y(fn(x)).toFixed(1);}return d;};
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="柯西中值定理：两函数增量比等于某点导数比"><path d="M35 220H430 M55 20V235" stroke="#9aaabd"/><path d="'+cpath(x=>x*x)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+cpath(x=>x*x+x)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M'+X(xi)+' 220V'+Y(xi*xi)+'" stroke="'+COLORS.green+'" stroke-dasharray="5 4"/><circle cx="'+X(xi)+'" cy="'+Y(xi*xi)+'" r="6" fill="'+COLORS.green+'"/><text x="65" y="28" fill="'+COLORS.blue+'">f(x)=x²</text><text x="65" y="49" fill="'+COLORS.orange+'">g(x)=x²+x</text><text x="250" y="245" fill="'+COLORS.green+'">ξ=b/2='+xi.toFixed(2)+'</text></svg>';
+desc='取 f(x)=x²、g(x)=x²+x，区间 [0,b]。此时 [f(b)−f(0)]/[g(b)−g(0)]=b/(b+1)，且 f′(ξ)/g′(ξ)=2ξ/(2ξ+1)；令 ξ=b/2 两者相等。';
+}else{
+const a=-2,b=-.5+1.5*p,c=(a+b)/2,fa=a*a/3,fb=b*b/3,fc=c*c/3,slope=(fb-fa)/(b-a),X=x=>230+x*48,Y=y=>135-y*35;
+const secY=x=>fa+slope*(x-a),tanY=x=>fc+slope*(x-c);
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="拉格朗日中值定理：端点割线与中间点切线平行"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(x=>x*x/3,-4,4,-1,5)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(a)+' '+Y(secY(a))+'L'+X(b)+' '+Y(secY(b))+'" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="7 5"/><path d="M'+X(c-1.35)+' '+Y(tanY(c-1.35))+'L'+X(c+1.35)+' '+Y(tanY(c+1.35))+'" stroke="'+COLORS.green+'" stroke-width="2.5"/><circle cx="'+X(a)+'" cy="'+Y(fa)+'" r="5" fill="'+COLORS.orange+'"/><circle cx="'+X(b)+'" cy="'+Y(fb)+'" r="5" fill="'+COLORS.orange+'"/><circle cx="'+X(c)+'" cy="'+Y(fc)+'" r="6" fill="'+COLORS.green+'"/><path d="M'+X(c)+' '+Y(fc)+'V245" stroke="'+COLORS.green+'" stroke-dasharray="4 4"/><text x="'+(X(c)+9)+'" y="'+(Y(fc)-10)+'" fill="'+COLORS.green+'">ξ='+c.toFixed(2)+'</text><text x="'+(X(a)-5)+'" y="'+(Y(fa)+18)+'" fill="'+COLORS.orange+'">a</text><text x="'+(X(b)-5)+'" y="'+(Y(fb)+18)+'" fill="'+COLORS.orange+'">b</text></svg>';
+desc='固定左端点 a=−2，拖动参数改变右端点 b。橙色割线斜率 [f(b)−f(a)]/(b−a)，绿色切线斜率 f′(ξ) 始终相等；ξ=(a+b)/2。';
+}
+}else if(k==='taylor'){
+const n=Math.max(1,Math.min(6,1+Math.round((p-.35)/1.45*5)));
+const X=x=>230+x*90,Y=y=>205-y*23;
+const path=fn=>{let d='';for(let i=0;i<=160;i++){const x=-2+i/40,y=fn(x);d+=(i?'L':'M')+X(x).toFixed(1)+','+Y(y).toFixed(1);}return d;};
+const poly=x=>{let sum=0,term=1;for(let j=0;j<=n;j++){if(j===0)term=1;else term*=x/j;sum+=term;}return sum;};
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="泰勒多项式阶数变化与原函数逼近"><path d="M35 205H430 M230 18V238" stroke="#9aaabd"/><path d="'+path(x=>Math.exp(x))+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+path(poly)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="6 4"/><text x="48" y="25" fill="'+COLORS.blue+'">原函数 eˣ</text><text x="48" y="47" fill="'+COLORS.orange+'">Tₙ(x)，n='+n+'</text><text x="300" y="250" fill="'+COLORS.ink+'">蓝：原函数；橙：近似</text></svg>';
+desc='拖动改变麦克劳林多项式阶数 n='+n+'。橙色 Tₙ(x)=1+x+x²/2!+…+xⁿ/n! 与蓝色 eˣ 在 x=0 附近逐阶贴合；阶数越高，局部近似通常越精确。';
+}else if(k==='shape'){
+if(/渐近/.test(t)){
+const c=(p-1.075)*.45;
+body=graph(x=>1/(x-c)+.2*x).replace('</svg>','<path d="M'+(230+c*48)+' 12V250" stroke="'+COLORS.orange+'" stroke-dasharray="5 5" stroke-width="2"/><text x="'+Math.min(355,230+c*48+5)+'" y="25" fill="'+COLORS.orange+'">x='+c.toFixed(2)+'</text></svg>');
+desc='滑块移动竖直渐近线 x=c；蓝色曲线在 x→c 时发散。此例另有斜渐近线 y=0.2x；判断渐近线必须回到相应极限定义。';
+}
+else if(/二阶导数判别|极值二阶|充分判别/.test(t)){
+const a=p-1.075,fn=x=>a*x*x,X=x=>230+x*48,Y=y=>135-y*35;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="二阶导数判别极大值与极小值"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(fn,-4,4,-3,4)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="135" r="6" fill="'+COLORS.orange+'"/><text x="40" y="25" fill="'+COLORS.blue+'">f(x)='+a.toFixed(2)+'x²</text><text x="40" y="47" fill="'+COLORS.orange+'">f′′(0)='+(2*a).toFixed(2)+(a>0?'：极小值':a<0?'：极大值':'：判别失效')+'</text></svg>';
+desc=a>0?'f′′(0)>0，曲线开口向上，临界点 x=0 是严格局部极小值。':a<0?'f′′(0)<0，曲线开口向下，临界点 x=0 是严格局部极大值。':'f′′(0)=0，二阶导数判别法不能下结论；例如 x³ 在 0 处没有极值。';
+}
+else if(/费马|导数零点/.test(t)){
+body=graph(x=>x*x*x/3,'<path d="M'+(230-55)+' 135L'+(230+55)+' 135" stroke="'+COLORS.orange+'" stroke-width="2.5"/><circle cx="230" cy="135" r="6" fill="'+COLORS.green+'"/><text x="255" y="118" fill="'+COLORS.green+'">f′(0)=0</text>');
+desc='反例 f(x)=x³：f′(0)=0，但函数在 0 附近仍严格递增，没有极大或极小值。费马引理说明可导内点极值必满足 f′=0，反过来不成立。';
+}
+else if(/凹凸|拐点/.test(t)){
+const x=(p-1.075)*3.2,y=x*x*x/12,dy=x*x/4,ddy=x/2,X=q=>230+q*48,Y=q=>135-q*35;
+const tangent=q=>y+dy*(q-x);
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="二阶导数符号与拐点动态演示"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>q*q*q/12)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(x-1.35)+' '+Y(tangent(x-1.35))+'L'+X(x+1.35)+' '+Y(tangent(x+1.35))+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M'+X(x)+' '+Y(y)+'V245" stroke="'+COLORS.green+'" stroke-dasharray="4 4"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.green+'"/><text x="'+(X(x)+9)+'" y="'+(Y(y)-10)+'">x='+x.toFixed(2)+'</text><text x="38" y="25" fill="'+COLORS.orange+'">f′′(x)='+ddy.toFixed(2)+'</text></svg>';
+desc='拖动观察点穿过 x=0：左侧 f′′<0、右侧 f′′>0，凹凸性改变，因此原点是拐点。切线斜率 f′(x)=x²/4，二阶导数符号决定曲率变化。';
+}else{
+const x=(p-1.075)*3.2,y=x*x*x/12-x,dy=x*x/4-1,X=q=>230+q*48,Y=q=>135-q*35,tangent=q=>y+dy*(q-x);
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="导数符号、单调区间与极值动态演示"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>q*q*q/12-q)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(x-1.25)+' '+Y(tangent(x-1.25))+'L'+X(x+1.25)+' '+Y(tangent(x+1.25))+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M'+X(x)+' '+Y(y)+'V245" stroke="'+COLORS.green+'" stroke-dasharray="4 4"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.green+'"/><text x="'+(X(x)+8)+'" y="'+(Y(y)-10)+'">x='+x.toFixed(2)+'</text><text x="38" y="25" fill="'+COLORS.orange+'">f′(x)='+dy.toFixed(2)+'</text></svg>';
+desc='拖动观察点经过 x=−2、x=2：f′>0 时递增，f′<0 时递减；在 −2 处由正变负为极大值，在 2 处由负变正为极小值。';
+}
+}else if(k==='integral'){
+if(/原函数|不定积分/.test(t)){
+const C=(p-1)*2, X=x=>70+x*350, Y=y=>220-y*115;
+const F=x=>x*x*x+x*x+C, f0=x=>3*x*x+2*x;
+const path=fn=>{let d='';for(let i=0;i<=100;i++){const x=i/100*1.35,y=fn(x);d+=(i?'L':'M')+X(x).toFixed(1)+','+Y(y).toFixed(1);}return d;};
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M55 220H430 M70 238V24" stroke="#9aaabd"/><path d="'+path(F)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+path(f0)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="6 4"/><text x="82" y="28" fill="'+COLORS.blue+'">F(x)=x³+x²+C，C='+C.toFixed(1)+'</text><text x="82" y="47" fill="'+COLORS.orange+'">F′(x)=3x²+2x=f(x)</text><text x="330" y="250" fill="'+COLORS.ink+'">x</text></svg>';
+desc='滑块改变积分常数 C：蓝色原函数曲线上下平移，但橙色导数曲线不变。求导验算：(x³+x²+C)′=3x²+2x。所有原函数只差一个常数。';
+}else if(/换元|凑微分|分部/.test(t)){
+if(p<1.075){
+const q=Math.max(.35,Math.min(1,(p-.35)/.725)),u=q*q;
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M45 220H425 M45 25V230" stroke="#9aaabd"/><path d="M60 220Q190 35 380 115" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M60 220L'+(60+320*q)+' 220L'+(60+320*q)+' '+(220-170*Math.cos(u))+'Z" fill="'+COLORS.green+'" opacity=".22"/><path d="M60 220L'+(60+320*q)+' '+(220-170*Math.cos(u))+'" stroke="'+COLORS.orange+'" stroke-width="2" stroke-dasharray="5 4"/><circle cx="'+(60+320*q)+'" cy="'+(220-170*Math.cos(u))+'" r="5" fill="'+COLORS.orange+'"/><text x="70" y="25" fill="'+COLORS.blue+'">原变量 x → 新变量 u=x²</text><text x="70" y="48" fill="'+COLORS.green+'">du=2x dx；上限 x=1 对应 u=1</text><text x="70" y="250" fill="'+COLORS.ink+'">当前 x='+q.toFixed(2)+'，u='+u.toFixed(2)+'</text></svg>';
+desc='换元示例 ∫₀¹2x cos(x²)dx：令 u=x²，则 du=2x dx；上下限同步变为 0 和 1，原积分化为 ∫₀¹cosu du=sin1。拖动观察 x 与 u=x² 的非线性映射。';
+}else{
+const q=(p-1.075)/.725;
+body='<svg viewBox="0 0 460 270" class="sp-plot"><rect x="28" y="22" width="404" height="226" rx="9" fill="#f8fbfe" stroke="#e0e9f2"/><text x="48" y="55" fill="'+COLORS.blue+'" font-size="17">∫ x eˣ dx</text><text x="48" y="91" fill="'+COLORS.ink+'" font-size="14">选 u=x，dv=eˣ dx</text><path d="M48 105H405" stroke="#d7e2ee"/><text x="48" y="139" fill="'+COLORS.orange+'" font-size="15">du=dx</text><text x="245" y="139" fill="'+COLORS.green+'" font-size="15">v=eˣ</text><text x="48" y="177" fill="'+COLORS.ink+'" font-size="14">∫u dv = uv − ∫v du</text><text x="48" y="212" fill="'+COLORS.blue+'" font-size="16">= xeˣ − ∫eˣdx</text><text x="48" y="237" fill="'+COLORS.blue+'" font-size="16">= eˣ(x−1)+C</text><rect x="390" y="'+(190-35*q)+'" width="10" height="'+(25+35*q)+'" rx="4" fill="'+COLORS.green+'"/></svg>';
+desc='分部积分示例 ∫xeˣdx：由 (uv)′=u′v+uv′ 积分得 ∫u dv=uv−∫v du。取 u=x、dv=eˣdx，得到 xeˣ−∫eˣdx=eˣ(x−1)+C。';
+}
+}else if(/反常/.test(t)){body=graph(x=>1/(x*x+0.12));desc='瑕点或无穷区间用极限定义反常积分；分别检查各端点/瑕点的敛散性。';}
+else if(/中值/.test(t)){body=graph(x=>Math.cos(x/2));desc='积分平均值 f(ξ) 等于区间平均高度；连续函数保证存在这样的 ξ。';}
+else if(/黎曼|定积分|变上限|面积/.test(t)){
+if(p<1.075){
+const n=Math.max(2,Math.min(24,Math.round(2+(p-.35)/.725*22))),dx=1/n;
+let rect='';
+for(let i=0;i<n;i++){const x=i*dx,h=(x+dx/2)**2,xx=70+x*350,w=350*dx;rect+='<rect x="'+xx.toFixed(2)+'" y="'+(220-170*h).toFixed(2)+'" width="'+(w-.7).toFixed(2)+'" height="'+(170*h).toFixed(2)+'" fill="'+COLORS.green+'" opacity=".28" stroke="'+COLORS.green+'" stroke-width=".7"/>';}
+const curve=[];for(let i=0;i<=100;i++){const x=i/100;curve.push((i?'L':'M')+(70+350*x).toFixed(1)+','+(220-170*x*x).toFixed(1));}
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M50 220H430 M70 238V25" stroke="#9aaabd"/>'+rect+'<path d="'+curve.join(' ')+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><text x="80" y="25" fill="'+COLORS.blue+'">y=x²，分割数 n='+n+'</text><text x="80" y="250" fill="'+COLORS.green+'">中点和 ≈ '+(Array.from({length:n},(_,i)=>((i+.5)*dx)**2*dx).reduce((a,b)=>a+b,0)).toFixed(5)+'；精确值 1/3</text></svg>';
+desc='以 ∫₀¹x²dx=1/3 为例：绿色矩形用每个小区间中点高度近似面积。滑块增加分割数 n，矩形变窄，中点黎曼和逐渐逼近 1/3；有限 n 是近似，极限才是定积分。';
+}else{
+const x=Math.max(.1,Math.min(1,(p-1.075)/.725)),area=x*x*x/3;
+const xx=70+350*x, yy=220-170*x*x;
+let curve='';for(let i=0;i<=100;i++){const z=i/100*x;curve+=(i?'L':'M')+(70+350*z).toFixed(1)+','+(220-170*z*z).toFixed(1);}
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M50 220H430 M70 238V25" stroke="#9aaabd"/><path d="'+curve+'L'+xx.toFixed(1)+' 220L70 220Z" fill="'+COLORS.green+'" opacity=".25"/><path d="'+curve+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+xx.toFixed(1)+' '+yy.toFixed(1)+'V220" stroke="'+COLORS.orange+'" stroke-width="2" stroke-dasharray="5 4"/><circle cx="'+xx.toFixed(1)+'" cy="'+yy.toFixed(1)+'" r="5" fill="'+COLORS.orange+'"/><text x="82" y="25" fill="'+COLORS.blue+'">A(x)=∫₀ˣt²dt=x³/3</text><text x="82" y="47" fill="'+COLORS.green+'">当前 x='+x.toFixed(2)+'，A(x)='+area.toFixed(4)+'</text><text x="'+Math.min(350,xx+8).toFixed(1)+'" y="'+Math.max(65,yy-9).toFixed(1)+'" fill="'+COLORS.orange+'">边界高度 f(x)=x²</text></svg>';
+desc='变上限积分 A(x)=∫₀ˣt²dt：滑块推动右边界，绿色阴影是从 0 累积到 x 的面积。边界处高度 f(x)=x²，故 A′(x)=x²；面积增加速率等于新边界处的函数值。';
+}
+}else{body=graph(x=>x*x/5);desc='积分的面积意义与数值逼近；注意定积分是带符号面积。';}
+}else if(k==='ode'){
+if(/二阶|特征根|重根/.test(t)){body=graph(x=>Math.exp(-x/3)*(Math.cos(p*x)+.4*Math.sin(p*x)));desc='二阶常系数方程的根决定解曲线：实异根指数叠加、重根含 x 因子、共轭根产生衰减振荡。';}
+else if(/线性|积分因子/.test(t)){body=graph(x=>Math.exp(-x/3)+.3*Math.exp(-p*x));desc='积分因子 μ=e^{∫Pdx} 将左侧化为 (μy)′，解曲线由积分常数平移。';}
+else{body=graph(x=>Math.exp(p*x/3));desc='分离变量后分别积分；参数控制指数增长/衰减，初值确定积分常数。';}
+}else if(k==='multivariable'){
+if(/极坐标|雅可比/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><circle cx="230" cy="135" r="'+(45+40*p)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.5"/><path d="M230 135L'+(230+(45+40*p)*.866)+' '+(135-(45+40*p)*.5)+' A '+(45+40*p)+' '+(45+40*p)+' 0 0 0 '+(230+(45+40*p))+' 135 Z" fill="'+COLORS.green+'" opacity=".25"/><path d="M230 135H'+(230+45+40*p)+' M230 135L'+(230+(45+40*p)*.866)+' '+(135-(45+40*p)*.5)+'" stroke="'+COLORS.orange+'" stroke-width="2"/></svg>';desc='极坐标面积元 dA=r dr dθ；扇形面积随半径平方变化，雅可比因子 r 不可遗漏。';}
+else if(/偏导|方向导数|梯度/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M30 215Q110 30 190 215T350 215" fill="none" stroke="'+COLORS.blue+'" stroke-width="2"/><path d="M45 180Q125 65 205 180T365 180 M65 145Q145 95 225 145T385 145" fill="none" stroke="#9ab8d5"/><path d="M230 135L'+(230+90*p)+' '+(135-60*p)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><path d="M'+(230+90*p)+' '+(135-60*p)+'l-12 2 6 10" fill="none" stroke="'+COLORS.orange+'"/></svg>';desc='等高线表示函数值相同；梯度垂直等高线并指向增长最快方向。';}
+else{body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 205L230 120L420 205 M40 205L230 245L420 205 M230 120V245" fill="none" stroke="#9aaabd"/><path d="M40 205Q230 '+(80+20*p)+' 420 205" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M230 120Q280 90 330 120" fill="none" stroke="'+COLORS.orange+'" stroke-width="2"/></svg>';desc='曲面 z=f(x,y) 的截面反映固定一个变量后的单变量函数；全微分是切平面线性近似。';}
+ }else if(k==='determinant'){
+if(/余子式|代数余子式|按行|按列|展开/.test(t)){
+const row=Math.max(0,Math.min(2,Math.floor((p-.35)/1.45*3)));
+let cells='';for(let r=0;r<3;r++)for(let c=0;c<3;c++){const active=r===row;cells+='<rect x="'+(95+c*78)+'" y="'+(55+r*55)+'" width="58" height="42" rx="5" fill="'+(active?'#f8dfca':'#eaf2fa')+'" stroke="'+(active?COLORS.orange:COLORS.blue)+'"/><text x="'+(124+c*78)+'" y="'+(82+r*55)+'" text-anchor="middle" fill="'+COLORS.ink+'">'+(r+1)+','+(c+1)+'</text>';}
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M82 45V215 M88 45V215 M370 45V215 M376 45V215" stroke="'+COLORS.ink+'" stroke-width="2"/>'+cells+'<text x="95" y="235" fill="'+COLORS.orange+'">高亮第 '+(row+1)+' 行：按代数余子式展开</text></svg>';
+desc='滑块选择展开行，橙色高亮该行的元素；每一项都要乘对应代数余子式，符号按 (−1)^(i+j) 交替。';
+}else if(/初等行变换|初等变换/.test(t)){
+const mode=Math.min(2,Math.floor((p-.35)/1.45*3)),label=["交换两行：变号","某行乘 k：行列式乘 k","某行加另一行倍数：不变"][mode],effect=["det(B)=−det(A)","det(B)=k det(A)","det(B)=det(A)"][mode];
+body='<svg viewBox="0 0 460 270" class="sp-plot"><rect x="55" y="65" width="125" height="120" rx="8" fill="#eaf2fa" stroke="'+COLORS.blue+'"/><rect x="280" y="65" width="125" height="120" rx="8" fill="#f8dfca" stroke="'+COLORS.orange+'"/><text x="117" y="95" text-anchor="middle">A</text><text x="117" y="125" text-anchor="middle">行列式 D</text><path d="M195 125H260 M252 118L260 125L252 132" stroke="'+COLORS.green+'" stroke-width="3" fill="none"/><text x="342" y="95" text-anchor="middle">B</text><text x="342" y="125" text-anchor="middle">'+effect+'</text><text x="60" y="225" fill="'+COLORS.orange+'">'+label+'</text></svg>';
+desc='三类初等行变换对行列式的影响不同：交换两行变号；一行乘 k，行列式乘 k；一行加另一行的倍数，行列式不变。';
+}else if(/范德蒙/.test(t)){
+const gap=.35+.55*p,pts=[0,1,2].map(i=>90+i*gap*105);
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 210H430" stroke="#9aaabd"/>'+pts.map((x,i)=>'<circle cx="'+x+'" cy="150" r="7" fill="'+[COLORS.blue,COLORS.orange,COLORS.green][i]+'"/><text x="'+(x-5)+'" y="178">'+i+'：'+(i*gap).toFixed(2)+'</text>').join('')+'<path d="M'+pts[0]+' 145L'+pts[1]+' 145L'+pts[2]+' 145" stroke="'+COLORS.ink+'" stroke-width="2"/><text x="60" y="35" fill="'+COLORS.blue+'">det(V)=∏(xⱼ−xᵢ)</text><text x="60" y="60" fill="'+COLORS.orange+'">节点重合时行列式为 0</text></svg>';
+desc='范德蒙行列式等于各节点两两差的乘积。滑块改变节点间距；任意两个节点重合时，行列式为 0，节点互异时不为 0。';
+}else{
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M90 205L90 65L220 65L220 205Z" fill="#d9e9f8" stroke="'+COLORS.blue+'" stroke-width="2"/><path d="M90 205L'+(90+95*p)+' '+(205-40*p)+'L'+(220+95*p)+' '+(65-40*p)+'L220 65Z" fill="#f8dfca" stroke="'+COLORS.orange+'" stroke-width="2"/><text x="150" y="235" fill="'+COLORS.blue+'">原面积 = 1</text><text x="330" y="95" fill="'+COLORS.orange+'">det(A)</text></svg>';desc='行列式绝对值表示单位正方形经线性变换后的面积缩放倍数；负号表示方向翻转。';
+}
+ }else if(k==='matrix'){
+if(/转置/.test(t)){
+const n=3,cell=42,shift=Math.round((p-.35)/1.45*2);
+let left='',right='';for(let r=0;r<n;r++)for(let c=0;c<n;c++){left+='<rect x="'+(55+c*cell)+'" y="'+(48+r*cell)+'" width="38" height="38" fill="#eaf2fa" stroke="'+COLORS.blue+'"/><text x="'+(74+c*cell)+'" y="'+(73+r*cell)+'" text-anchor="middle">'+(r+1)+(c+1)+'</text>';right+='<rect x="'+(280+c*cell)+'" y="'+(48+r*cell)+'" width="38" height="38" fill="#f8dfca" stroke="'+COLORS.orange+'"/><text x="'+(299+c*cell)+'" y="'+(73+r*cell)+'" text-anchor="middle">'+(c+1)+(r+1)+'</text>';}
+body='<svg viewBox="0 0 460 270" class="sp-plot">'+left+'<path d="M205 110H255 M247 102L255 110L247 118" stroke="'+COLORS.green+'" stroke-width="3" fill="none"/>'+right+'<text x="75" y="205" fill="'+COLORS.blue+'">A</text><text x="300" y="205" fill="'+COLORS.orange+'">Aᵀ</text><text x="70" y="235">行列互换，主对角线不变</text></svg>';
+desc='转置把第 i 行、第 j 列的元素移到第 j 行、第 i 列；主对角线保持不变，且 (AB)ᵀ=BᵀAᵀ。';
+}else if(/秩|初等变换/.test(t)){
+const rank=Math.max(1,Math.min(3,Math.round(1+(p-.35)/1.45*2)));
+body='<svg viewBox="0 0 460 270" class="sp-plot"><rect x="55" y="55" width="150" height="140" rx="8" fill="#eaf2fa" stroke="'+COLORS.blue+'"/><rect x="255" y="55" width="150" height="140" rx="8" fill="#f8dfca" stroke="'+COLORS.orange+'"/>'+[0,1,2].map(i=>'<path d="M70 '+(90+i*35)+'H190" stroke="'+(i<rank?COLORS.blue:'#cbd5df')+'" stroke-width="5"/>').join('')+[0,1,2].map(i=>'<path d="M270 '+(90+i*35)+'H390" stroke="'+(i<rank?COLORS.orange:'#cbd5df')+'" stroke-width="5"/>').join('')+'<path d="M210 125H248" stroke="'+COLORS.green+'" stroke-width="3"/><text x="70" y="225" fill="'+COLORS.blue+'">原矩阵</text><text x="270" y="225" fill="'+COLORS.orange+'">阶梯形</text><text x="160" y="250">非零主元行数 = rank(A) = '+rank+'</text></svg>';
+desc='初等行变换不改变矩阵的秩。滑块改变示意矩阵的主元行数；阶梯形矩阵中非零行数就是秩，不能把零行计入。';
+}else if(/分块/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><rect x="65" y="55" width="130" height="130" fill="#eaf2fa" stroke="'+COLORS.blue+'"/><path d="M130 55V185 M65 120H195" stroke="#fff" stroke-width="4"/><rect x="265" y="55" width="130" height="130" fill="#f8dfca" stroke="'+COLORS.orange+'"/><path d="M330 55V185 M265 120H395" stroke="#fff" stroke-width="4"/><path d="M205 120H250" stroke="'+COLORS.green+'" stroke-width="3"/><text x="90" y="215">A=(Aᵢⱼ)</text><text x="275" y="215">B=(Bᵢⱼ)</text><text x="85" y="245">块乘法仍按行乘列，块尺寸须匹配</text></svg>';
+desc='分块矩阵乘法与普通矩阵乘法规则相同：左矩阵块行乘右矩阵块列并相加。先检查对应块的列数与行数匹配。';
+}else if(/伴随|逆矩阵|可逆/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><rect x="50" y="75" width="120" height="105" rx="8" fill="#eaf2fa" stroke="'+COLORS.blue+'"/><rect x="290" y="75" width="120" height="105" rx="8" fill="#e5f4ed" stroke="'+COLORS.green+'"/><path d="M180 125H280 M270 117L280 125L270 133" stroke="'+COLORS.orange+'" stroke-width="3" fill="none"/><text x="110" y="115" text-anchor="middle">A</text><text x="110" y="145" text-anchor="middle">det(A)≠0</text><text x="350" y="115" text-anchor="middle">A⁻¹</text><text x="350" y="145" text-anchor="middle">AA⁻¹=I</text><text x="85" y="225">可逆 ⇔ 行列式非零 ⇔ 存在逆矩阵</text></svg>';
+desc='可逆矩阵存在逆矩阵，满足 AA⁻¹=A⁻¹A=I。伴随矩阵公式 A⁻¹=A*/det(A) 仅在 det(A)≠0 时成立。';
+}else{
+body='<svg viewBox="0 0 460 270" class="sp-plot"><g stroke="#c6d5e5" fill="none">'+Array.from({length:5},(_,i)=>'<path d="M'+(65+i*42)+' 35V225 M65 '+(35+i*42)+'H233"/>').join('')+'</g><path d="M65 225L'+(65+105*p)+' '+(225-42*p)+' M65 225L'+(65+42*p)+' '+(225-105*p)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><path d="M65 225L'+(65+105*p)+' '+(225-42*p)+'L'+(65+147*p)+' '+(225-147*p)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2"/></svg>';desc='矩阵乘法表示线性变换复合；转置/逆矩阵的乘积顺序要反向，秩描述独立信息维数。';
+}
+ }else if(k==='vectors'){
+if(/施密特|正交/.test(t)){
+const theta=.25+(p-.35)/1.45*1.2,ax=100,ay=205,bx=100+150*Math.cos(theta),by=205-150*Math.sin(theta),proj=150*Math.cos(theta);
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 220H430 M75 245V20" stroke="#9aaabd"/><path d="M75 220L225 220" stroke="'+COLORS.blue+'" stroke-width="4"/><path d="M75 220L'+bx+' '+by+'" stroke="'+COLORS.orange+'" stroke-width="4"/><path d="M75 220L'+(75+proj)+' 220" stroke="'+COLORS.green+'" stroke-width="3" stroke-dasharray="5 4"/><path d="M'+(75+proj)+' 220L'+bx+' '+by+'" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="245" y="45" fill="'+COLORS.orange+'">v₂</text><text x="230" y="210" fill="'+COLORS.green+'">projᵥ₁v₂</text><text x="65" y="25">v₂⊥=v₂−projᵥ₁v₂</text></svg>';
+desc='施密特正交化：先把 v₂ 在 v₁ 上的投影 projᵥ₁v₂ 去掉，得到与 v₁ 垂直的剩余向量；再单位化得到规范正交组。';
+}else if(/基与维数|坐标/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M45 220H430 M75 245V20" stroke="#9aaabd"/><path d="M75 220L'+(75+115*p)+' '+(220-35*p)+'" stroke="'+COLORS.blue+'" stroke-width="4"/><path d="M75 220L'+(75+35*p)+' '+(220-105*p)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><path d="M75 220L'+(75+150*p)+' '+(220-140*p)+'" stroke="'+COLORS.green+'" stroke-width="3" stroke-dasharray="5 4"/><text x="300" y="35" fill="'+COLORS.green+'">v=c₁e₁+c₂e₂</text></svg>';
+desc='基是能唯一表示空间中每个向量的一组线性无关向量；坐标系数是该向量在这组基下的唯一坐标。';
+}else if(/线性相关/.test(t)){
+const slope=.3+(p-.35)/1.45*1.2;
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 220H430 M75 245V20" stroke="#9aaabd"/><path d="M75 220L'+(75+150)+' '+(220-100)+'" stroke="'+COLORS.blue+'" stroke-width="4"/><path d="M75 220L'+(75+150*slope)+' '+(220-100*slope)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><text x="255" y="40" fill="'+COLORS.blue+'">v₁</text><text x="255" y="65" fill="'+COLORS.orange+'">v₂</text><text x="60" y="25">同一直线 ⇔ 线性相关（二维两向量示例）</text></svg>';
+desc='二维中两个向量共线时线性相关；若一个向量不能由另一个数乘得到，则线性无关。一般向量组用系数方程判断。';
+}else{
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 220H430 M75 245V20" stroke="#9aaabd"/><path d="M75 220L'+(75+120*p)+' '+(220-75*p)+'" stroke="'+COLORS.blue+'" stroke-width="4"/><path d="M75 220L'+(75+85*p)+' '+(220-140*p)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><path d="M75 220L'+(75+205*p)+' '+(220-215*p)+'" stroke="'+COLORS.green+'" stroke-width="3" stroke-dasharray="5 4"/><text x="350" y="35" fill="'+COLORS.green+'">线性组合</text></svg>';desc='向量组的线性相关/表示转化为列矩阵方程；观察向量是否能由其他向量组合得到。';
+}
+ }else if(k==='system'){
+if(/齐次|基础解系|解空间|非零解/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M35 135H430 M230 15V250" stroke="#9aaabd"/><path d="M65 225L395 45" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M65 45L395 225" stroke="'+COLORS.orange+'" stroke-width="3"/><circle cx="230" cy="135" r="6" fill="'+COLORS.green+'"/><text x="245" y="125" fill="'+COLORS.green+'">原点解</text><text x="55" y="25">齐次系统 Ax=0：解空间必过原点</text></svg>';
+desc='齐次方程组 Ax=0 至少有零解；若有自由变量，则存在非零解。基础解系张成整个解空间，解空间维数为 n−r(A)。';
+}else if(/非齐次|判定|高斯|Rouché|增广矩阵/.test(t)){
+const mode=Math.min(2,Math.floor((p-.35)/1.45*3));
+const line=mode===0?'两直线相交：唯一解':mode===1?'两直线平行：无解':'两直线重合：无穷多解';
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M35 220H430 M45 20V235" stroke="#9aaabd"/><path d="M55 205L400 45" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+(mode===0?'M55 45L400 205':mode===1?'M55 175L400 15':'M55 205L400 45')+'" stroke="'+COLORS.orange+'" stroke-width="3"/><text x="65" y="25" fill="'+COLORS.green+'">'+line+'</text><text x="65" y="245">比较 r(A) 与 r(A|b)</text></svg>';
+desc='线性方程组有解当且仅当 r(A)=r(A|b)。有解时自由变量数决定解的多少；无解时两秩不相等。滑块切换相交、平行和重合的几何情形。';
+}else{
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M45 220L410 40 M45 50L410 210" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="130" r="7" fill="'+COLORS.orange+'"/><path d="M230 130L230 220" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="250" y="120" fill="'+COLORS.orange+'">解</text><text x="330" y="245" fill="'+COLORS.ink+'">自由变量 '+Math.max(0,Math.round(p*2))+'</text></svg>';desc='方程组解对应几何交点/交集；秩决定约束独立性，自由变量数为 n−r(A)。';
+}
+ }else if(k==='eigen'){
+if(/迹|行列式|和与积/.test(t)){
+const l1=.5+p,l2=2.5-p,tr=l1+l2,det=l1*l2;
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M45 220H425 M65 245V20" stroke="#9aaabd"/><path d="M95 220V'+(220-l1*55)+' M205 220V'+(220-l2*55)+'" stroke="'+COLORS.blue+'" stroke-width="14"/><text x="70" y="35" fill="'+COLORS.blue+'">λ₁='+l1.toFixed(2)+'</text><text x="205" y="35" fill="'+COLORS.orange+'">λ₂='+l2.toFixed(2)+'</text><text x="270" y="100" fill="'+COLORS.green+'">tr A=λ₁+λ₂='+tr.toFixed(2)+'</text><text x="270" y="130" fill="'+COLORS.green+'">det A=λ₁λ₂='+det.toFixed(2)+'</text></svg>';
+desc='二阶矩阵特征值满足 λ₁+λ₂=tr(A)，λ₁λ₂=det(A)。滑块改变两个特征值，观察和与积如何同步变化。';
+}else if(/代数重数|几何重数|特征子空间/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M45 220H425 M75 245V20" stroke="#9aaabd"/><path d="M75 220L'+(75+120*p)+' '+(220-35*p)+'" stroke="'+COLORS.blue+'" stroke-width="4"/><path d="M75 220L'+(75+35*p)+' '+(220-120*p)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><text x="250" y="45" fill="'+COLORS.blue+'">λ₁：特征方向 1</text><text x="250" y="70" fill="'+COLORS.orange+'">λ₂：特征方向 2</text><text x="65" y="25">几何重数 ≤ 代数重数</text></svg>';
+desc='代数重数是特征值作为特征多项式根的重数；几何重数是对应特征子空间的维数，满足 1≤几何重数≤代数重数。';
+}else if(/对角化|正交/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 220H430 M75 245V20" stroke="#9aaabd"/><path d="M75 220L'+(75+95*p)+' '+(220-45*p)+'" stroke="'+COLORS.blue+'" stroke-width="4"/><path d="M75 220L'+(75+45*p)+' '+(220-95*p)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><path d="M75 220L'+(75+140*p)+' '+(220-140*p)+'" stroke="'+COLORS.green+'" stroke-width="2" stroke-dasharray="5 4"/><text x="260" y="35" fill="'+COLORS.green+'">A=PDP⁻¹</text></svg>';
+desc='可对角化表示存在一组线性无关特征向量组成 P，使 A=PDP⁻¹；实对称矩阵还能选取正交规范特征向量，使 P⁻¹=Pᵀ。';
+}else{
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 220H430 M75 245V20" stroke="#9aaabd"/><path d="M75 220L'+(75+90*p)+' '+(220-80*p)+'" stroke="'+COLORS.blue+'" stroke-width="4"/><path d="M75 220L'+(75+145*p)+' '+(220-130*p)+'" stroke="'+COLORS.orange+'" stroke-width="4"/><path d="M75 220L'+(75+200*p)+' '+(220-180*p)+'" stroke="'+COLORS.orange+'" stroke-width="1.5" stroke-dasharray="4 4"/><text x="330" y="45" fill="'+COLORS.orange+'">Av = λv</text></svg>';desc='特征向量方向在 A 变换后保持不变，长度按 |λ| 缩放，λ 为负时方向反转。';
+}
+ }else if(k==='quadratic'){
+if(/正定|主子式|定义|极小值/.test(t)){
+const a=.5+(p-.35)/1.45*1.5;
+body='<svg viewBox="0 0 460 270" class="sp-plot"><ellipse cx="230" cy="135" rx="'+(70+35/a)+'" ry="'+(70+25*a)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.5"/><ellipse cx="230" cy="135" rx="'+(42+25/a)+'" ry="'+(42+18*a)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2"/><path d="M25 135H435 M230 15V255" stroke="#9aaabd"/><text x="45" y="28" fill="'+COLORS.blue+'">Q=x²+'+a.toFixed(2)+'y²</text><text x="45" y="50" fill="'+COLORS.green+'">x≠0 或 y≠0 时 Q&gt;0</text></svg>';
+desc='正定二次型的等值线围绕原点形成闭合椭圆；除原点外 Q(x,y)>0。实对称矩阵正定等价于特征值全正，也等价于顺序主子式全正。';
+}else if(/惯性|秩/.test(t)){
+body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M45 220H425 M230 15V245" stroke="#9aaabd"/><path d="M55 80Q230 260 405 80 M55 190Q230 10 405 190" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M55 135H405" stroke="'+COLORS.orange+'" stroke-dasharray="5 5"/><text x="70" y="28" fill="'+COLORS.blue+'">正、负惯性指数</text><text x="70" y="250" fill="'+COLORS.orange+'">秩 = 正惯性指数 + 负惯性指数</text></svg>';
+desc='二次型标准形中正平方项、负平方项和零平方项的个数分别对应正惯性指数、负惯性指数和零惯性指数；秩等于前两者之和。';
+}else{
+body='<svg viewBox="0 0 460 270" class="sp-plot"><ellipse cx="230" cy="135" rx="'+(45+45*p)+'" ry="'+(95-25*p)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.5"/><ellipse cx="230" cy="135" rx="'+(85+35*p)+'" ry="'+(45+20*p)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M25 135H435 M230 15V255" stroke="#9aaabd"/><text x="350" y="40" fill="'+COLORS.blue+'">xᵀAx = c</text></svg>';desc='二次型等值线的形状反映正定/负定/不定；正定时除原点外函数值恒正。';
+}
+}
+return '<div class="sp-art">'+body+'</div><div class="sp-formula">'+esc(formula[k]||'')+'</div><p class="sp-desc">'+desc+'</p>';
+}
+function makeCard(meta){
+const box=document.createElement('section');box.className='sp-visual';box.dataset.visualId=meta.id;
+const k=kind(meta.title);const h='<div class="sp-head"><div><b>专属动态演示｜'+esc(meta.title)+'</b><small>'+esc(meta.id)+' · '+esc(k)+'</small></div><span>概念专属</span></div>';
+box.innerHTML=h+'<div class="sp-stage">'+svgFor(k,meta.title,1)+'</div><div class="sp-controls"><label>参数 / 观察位置 <input type="range" min=".35" max="1.8" step=".05" value="1"></label><output>1.00</output><button type="button">▶ 动态观察</button></div><p class="sp-note">图像用于建立直觉；定理使用前仍须逐条验证条件。拖动参数观察图形如何响应。</p>';
+const range=box.querySelector('input'),out=box.querySelector('output'),stage=box.querySelector('.sp-stage'),btn=box.querySelector('button');let timer=null,dir=1;
+function draw(){out.value=Number(range.value).toFixed(2);stage.innerHTML=svgFor(k,meta.title,Number(range.value));}
+range.addEventListener('input',draw);
+btn.addEventListener('click',()=>{if(timer){clearInterval(timer);timer=null;btn.textContent='▶ 动态观察';return;}btn.textContent='Ⅱ 暂停';timer=setInterval(()=>{let v=Number(range.value)+dir*.05;if(v>=1.8){v=1.8;dir=-1;}if(v<=.35){v=.35;dir=1;}range.value=v;draw();},100);});
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&timer){clearInterval(timer);timer=null;btn.textContent='▶ 动态观察';}});
+return box;
+}
+function decorate(root){
+(root||document).querySelectorAll('.card').forEach(card=>{const id=card.id.replace(/^card-/,'');const meta=PARENTS.find(x=>x.id===id);if(!meta||card.querySelector(':scope .sp-visual'))return;const body=card.querySelector('.inside');if(!body)return;body.querySelectorAll('.math-deep-visual,.visual-box').forEach(n=>n.remove());body.insertBefore(makeCard(meta),body.firstChild);});
+(root||document).querySelectorAll('.atomic-card').forEach(card=>{
+const id=card.id.replace(/^card-/,'');const meta=byId.get(id);if(!meta||card.querySelector(':scope .sp-visual'))return;
+const body=card.querySelector('.atomic-body');if(!body)return;
+body.querySelectorAll('.math-deep-visual,.atom-visual,.atom-visual-box').forEach(n=>n.remove());
+body.insertBefore(makeCard(meta),body.firstChild);
+});
+}
+function start(){decorate(document);const root=document.getElementById('cards')||document.body;new MutationObserver(ms=>ms.forEach(m=>m.addedNodes.forEach(n=>{if(n.nodeType===1)decorate(n);}))).observe(root,{childList:true,subtree:true});}
+const css='.sp-visual{margin:12px 0;padding:13px;border:1px solid #d5e2ef;border-radius:12px;background:linear-gradient(145deg,#f7fbff,#fff);min-width:0}.sp-head{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}.sp-head b{font-size:13px;color:#24466f}.sp-head small{display:block;color:#738397;font-size:10px}.sp-head span{font-size:10px;color:#256b9d;background:#eaf3fb;border-radius:12px;padding:3px 8px;white-space:nowrap}.sp-stage{margin-top:8px;background:#fff;border:1px solid #e6edf5;border-radius:8px;overflow:hidden}.sp-plot{width:100%;height:auto;display:block;max-height:280px}.sp-formula{font:600 13px ui-monospace,monospace;text-align:center;padding:7px;color:#315c83;background:#f2f7fc;border-radius:7px;margin-top:7px}.sp-desc,.sp-note{font-size:12px;line-height:1.7;color:#5c6f83;margin:7px 0}.sp-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:8px}.sp-controls label{font-size:11px;color:#607184;display:flex;gap:8px;align-items:center}.sp-controls input{width:140px;accent-color:#2869a7}.sp-controls output{font-size:11px;color:#2869a7;font-variant-numeric:tabular-nums}.sp-controls button{font-size:11px;border:1px solid #d5e0eb;background:#fff;border-radius:7px;padding:5px 9px;cursor:pointer}@media(max-width:600px){.sp-controls input{width:110px}}';
+const style=document.createElement('style');style.textContent=css;document.head.appendChild(style);
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+})();
