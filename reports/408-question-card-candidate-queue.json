@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T12:15:20.055Z",
+  "generatedAt": "2026-11-17T12:16:29.239Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -2241,19 +2241,21 @@
           ]
         },
         {
-          "card": "补码恢复余数除法器",
-          "score": 4,
+          "card": "数组下标寻址与元素宽度",
+          "score": 5,
           "matchedTerms": [
-            "执行",
-            "区分"
+            "地址",
+            "因此",
+            "的地址"
           ]
         },
         {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 4,
+          "card": "Cache平均访问时间与缺失损失",
+          "score": 5,
           "matchedTerms": [
             "因此",
-            "程序"
+            "程序",
+            "间之外"
           ]
         }
       ]
@@ -4835,20 +4837,19 @@
           ]
         },
         {
+          "card": "Cache平均访问时间与缺失损失",
+          "score": 4,
+          "matchedTerms": [
+            "程序",
+            "注意"
+          ]
+        },
+        {
           "card": "DMA 周期挪用与总线仲裁",
           "score": 4,
           "matchedTerms": [
             "注意",
             "请求"
-          ]
-        },
-        {
-          "card": "主存与辅存层次结构",
-          "score": 3,
-          "matchedTerms": [
-            "操作系",
-            "作系统",
-            "操作系统"
           ]
         }
       ]
@@ -4901,11 +4902,13 @@
           ]
         },
         {
-          "card": "中断与 DMA",
+          "card": "指令系统与寻址方式",
           "score": 4,
           "matchedTerms": [
-            "启动",
-            "执行"
+            "的操作",
+            "结构实",
+            "构实现",
+            "结构实现"
           ]
         }
       ]
@@ -5032,14 +5035,15 @@
       "existingCards": [
         "临界区互斥访问原则"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
         {
           "card": "数组下标寻址与元素宽度",
-          "score": 8,
+          "score": 10,
           "matchedTerms": [
             "int",
-            "ea"
+            "ea",
+            "因此"
           ]
         },
         {
@@ -8081,10 +8085,11 @@
           ]
         },
         {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 6,
+          "card": "数组下标寻址与元素宽度",
+          "score": 7,
           "matchedTerms": [
-            "时间"
+            "通常",
+            "id"
           ]
         }
       ]
@@ -8257,10 +8262,11 @@
           ]
         },
         {
-          "card": "流水线结构冒险与数据冒险",
-          "score": 3,
+          "card": "数组下标寻址与元素宽度",
+          "score": 4,
           "matchedTerms": [
-            "执行"
+            "指令",
+            "因此"
           ]
         }
       ]
@@ -10854,10 +10860,11 @@
           ]
         },
         {
-          "card": "VIPT Cache索引与页内偏移",
-          "score": 5,
+          "card": "RISC-V 指令格式与寄存器编码",
+          "score": 6,
           "matchedTerms": [
-            "va"
+            "r1",
+            "r2"
           ]
         }
       ]
@@ -16092,6 +16099,16 @@
           ]
         },
         {
+          "card": "Cache平均访问时间与缺失损失",
+          "score": 5,
+          "matchedTerms": [
+            "因此",
+            "解析采",
+            "析采用",
+            "解析采用"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 5,
           "matchedTerms": [
@@ -16105,15 +16122,6 @@
           "matchedTerms": [
             "时间",
             "因此"
-          ]
-        },
-        {
-          "card": "Cache平均访问时间与缺失损失",
-          "score": 3,
-          "matchedTerms": [
-            "解析采",
-            "析采用",
-            "解析采用"
           ]
         }
       ]
@@ -16494,11 +16502,12 @@
         },
         {
           "card": "流水线与冒险",
-          "score": 11,
+          "score": 12,
           "matchedTerms": [
             "if",
             "id",
-            "i2"
+            "i2",
+            "选a"
           ]
         },
         {
@@ -16569,9 +16578,10 @@
         },
         {
           "card": "数组下标寻址与元素宽度",
-          "score": 6,
+          "score": 8,
           "matchedTerms": [
             "通常",
+            "因此",
             "不是"
           ]
         },
@@ -19043,20 +19053,20 @@
           ]
         },
         {
+          "card": "单周期与多周期数据通路",
+          "score": 11,
+          "matchedTerms": [
+            "cpu",
+            "add",
+            "寄存器"
+          ]
+        },
+        {
           "card": "有符号除法异常与商溢出",
           "score": 11,
           "matchedTerms": [
             "除零异常",
             "除零",
-            "寄存器"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 10,
-          "matchedTerms": [
-            "cpu",
-            "中断",
             "寄存器"
           ]
         }
@@ -19465,6 +19475,16 @@
           ]
         },
         {
+          "card": "数组下标寻址与元素宽度",
+          "score": 7,
+          "matchedTerms": [
+            "个字节",
+            "因此",
+            "不是",
+            "而不是"
+          ]
+        },
+        {
           "card": "大小端存储",
           "score": 6,
           "matchedTerms": [
@@ -19477,14 +19497,6 @@
           "score": 6,
           "matchedTerms": [
             "字节序"
-          ]
-        },
-        {
-          "card": "Cache 直接映射与组相联",
-          "score": 6,
-          "matchedTerms": [
-            "字节",
-            "中每个"
           ]
         }
       ]
@@ -21842,10 +21854,11 @@
           ]
         },
         {
-          "card": "虚拟地址分页与页内偏移",
-          "score": 4,
+          "card": "RISC-V 指令格式与寄存器编码",
+          "score": 6,
           "matchedTerms": [
-            "本题"
+            "r1",
+            "r2"
           ]
         }
       ]
@@ -21872,6 +21885,15 @@
           ]
         },
         {
+          "card": "数组下标寻址与元素宽度",
+          "score": 7,
+          "matchedTerms": [
+            "ec",
+            "保留",
+            "因此"
+          ]
+        },
+        {
           "card": "小端字节序与补码读取",
           "score": 7,
           "matchedTerms": [
@@ -21895,14 +21917,6 @@
             "因此",
             "被访问",
             "页表项"
-          ]
-        },
-        {
-          "card": "数组下标寻址与元素宽度",
-          "score": 5,
-          "matchedTerms": [
-            "ec",
-            "保留"
           ]
         }
       ]
@@ -22082,20 +22096,21 @@
           ]
         },
         {
+          "card": "数组跨页与缺页次数",
+          "score": 3,
+          "matchedTerms": [
+            "的页面",
+            "次访问",
+            "访问所"
+          ]
+        },
+        {
           "card": "Cache组相联映射与地址字段",
           "score": 3,
           "matchedTerms": [
             "一个集",
             "个集合",
             "一个集合"
-          ]
-        },
-        {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 3,
-          "matchedTerms": [
-            "访问",
-            "次访问"
           ]
         }
       ]
@@ -24582,7 +24597,7 @@
           ]
         },
         {
-          "card": "移位运算与舍入",
+          "card": "数组下标寻址与元素宽度",
           "score": 2,
           "matchedTerms": [
             "因此"
@@ -24718,12 +24733,13 @@
           ]
         },
         {
-          "card": "Cache 直接映射与组相联",
+          "card": "数组跨页与缺页次数",
           "score": 9,
           "matchedTerms": [
-            "字节",
             "kb",
-            "地址"
+            "起始地址",
+            "起始地",
+            "始地址"
           ]
         }
       ]
@@ -38895,6 +38911,17 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "数组下标寻址与元素宽度",
+          "score": 11,
+          "matchedTerms": [
+            "通常",
+            "地址",
+            "因此",
+            "不是",
+            "而不是"
+          ]
+        },
+        {
           "card": "中断响应与异常处理",
           "score": 10,
           "matchedTerms": [
@@ -38916,15 +38943,6 @@
             "操作系",
             "作系统",
             "操作系统"
-          ]
-        },
-        {
-          "card": "数组下标寻址与元素宽度",
-          "score": 8,
-          "matchedTerms": [
-            "通常",
-            "地址",
-            "不是"
           ]
         },
         {
@@ -44970,6 +44988,22 @@
           ]
         },
         {
+          "card": "数组下标寻址与元素宽度",
+          "score": 14,
+          "matchedTerms": [
+            "id",
+            "地址",
+            "指令",
+            "寄存器",
+            "基址寄",
+            "址寄存",
+            "基址寄存",
+            "址寄存器",
+            "基址寄存器",
+            "的地址"
+          ]
+        },
+        {
           "card": "流水线结构冒险与数据冒险",
           "score": 13,
           "matchedTerms": [
@@ -44989,21 +45023,6 @@
             "更新页",
             "新页表",
             "更新页表"
-          ]
-        },
-        {
-          "card": "数组下标寻址与元素宽度",
-          "score": 11,
-          "matchedTerms": [
-            "地址",
-            "指令",
-            "寄存器",
-            "基址寄",
-            "址寄存",
-            "基址寄存",
-            "址寄存器",
-            "基址寄存器",
-            "的地址"
           ]
         }
       ]
@@ -45150,21 +45169,21 @@
           ]
         },
         {
+          "card": "数组下标寻址与元素宽度",
+          "score": 8,
+          "matchedTerms": [
+            "id",
+            "地址",
+            "因此",
+            "的地址"
+          ]
+        },
+        {
           "card": "小端字节序与补码读取",
           "score": 7,
           "matchedTerms": [
             "地址",
             "id"
-          ]
-        },
-        {
-          "card": "有符号除法异常与商溢出",
-          "score": 7,
-          "matchedTerms": [
-            "其他",
-            "返回地",
-            "回地址",
-            "返回地址"
           ]
         }
       ]
@@ -45182,6 +45201,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "数组下标寻址与元素宽度",
+          "score": 8,
+          "matchedTerms": [
+            "ea",
+            "dc",
+            "因此"
+          ]
+        },
+        {
           "card": "CPU异常响应与现场保护",
           "score": 7,
           "matchedTerms": [
@@ -45190,14 +45218,6 @@
             "系统调",
             "统调用",
             "系统调用"
-          ]
-        },
-        {
-          "card": "数组下标寻址与元素宽度",
-          "score": 6,
-          "matchedTerms": [
-            "ea",
-            "dc"
           ]
         },
         {
@@ -47809,9 +47829,10 @@
         },
         {
           "card": "数组下标寻址与元素宽度",
-          "score": 10,
+          "score": 12,
           "matchedTerms": [
             "通常",
+            "因此",
             "寄存器",
             "基址寄",
             "址寄存",
@@ -48188,10 +48209,11 @@
         },
         {
           "card": "数组下标寻址与元素宽度",
-          "score": 6,
+          "score": 7,
           "matchedTerms": [
             "通常",
-            "不是"
+            "不是",
+            "而不是"
           ]
         },
         {
