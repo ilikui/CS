@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T13:04:00.649Z",
+  "generatedAt": "2026-11-17T13:05:37.838Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
@@ -1252,13 +1252,15 @@
         },
         {
           "card": "Cache 组相联映射与地址划分",
-          "score": 21,
+          "score": 24,
           "matchedTerms": [
             "cache",
             "行数",
             "mod",
             "主存块号",
-            "块号"
+            "块号",
+            "行号",
+            "映射到"
           ]
         },
         {
@@ -1386,7 +1388,7 @@
         },
         {
           "card": "Cache 组相联映射与地址划分",
-          "score": 39,
+          "score": 41,
           "matchedTerms": [
             "cache",
             "块内偏移",
@@ -1397,9 +1399,9 @@
             "地址",
             "容量",
             "块大小",
+            "行号",
             "块内偏",
-            "内偏移",
-            "号位数"
+            "内偏移"
           ]
         },
         {
@@ -3025,7 +3027,7 @@
         },
         {
           "card": "Cache 组相联映射与地址划分",
-          "score": 53,
+          "score": 57,
           "matchedTerms": [
             "cache",
             "组相联",
@@ -3038,7 +3040,7 @@
             "4路",
             "地址",
             "块大小",
-            "块内偏"
+            "命中"
           ]
         },
         {
@@ -3495,8 +3497,26 @@
         "Cache 替换与写策略",
         "存储器层次与主存组织"
       ],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
+        {
+          "card": "Cache 组相联映射与地址划分",
+          "score": 72,
+          "matchedTerms": [
+            "cache",
+            "组相联",
+            "块内偏移",
+            "tag",
+            "kb",
+            "组数",
+            "偏移",
+            "组索引",
+            "组数64",
+            "地址",
+            "int",
+            "容量"
+          ]
+        },
         {
           "card": "Cache组相联映射与地址字段",
           "score": 66,
@@ -3529,24 +3549,6 @@
             "int",
             "个主存块",
             "指令",
-            "容量",
-            "块大小"
-          ]
-        },
-        {
-          "card": "Cache 组相联映射与地址划分",
-          "score": 56,
-          "matchedTerms": [
-            "cache",
-            "组相联",
-            "块内偏移",
-            "tag",
-            "kb",
-            "组数",
-            "偏移",
-            "组索引",
-            "组数64",
-            "地址",
             "容量",
             "块大小"
           ]
