@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T11:58:36.668Z",
+  "generatedAt": "2026-11-17T12:02:32.200Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -5031,6 +5031,26 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "ALU 算术逻辑单元",
+          "score": 8,
+          "matchedTerms": [
+            "状态标",
+            "态标志",
+            "状态标志",
+            "表示"
+          ]
+        },
+        {
+          "card": "Cache平均访问时间与缺失损失",
+          "score": 8,
+          "matchedTerms": [
+            "int",
+            "每个",
+            "访问",
+            "访问的"
+          ]
+        },
+        {
           "card": "寄存器组读写端口与译码",
           "score": 7,
           "matchedTerms": [
@@ -5052,23 +5072,6 @@
           "matchedTerms": [
             "执行",
             "因此"
-          ]
-        },
-        {
-          "card": "整数溢出检测与异常处理",
-          "score": 6,
-          "matchedTerms": [
-            "标志",
-            "int"
-          ]
-        },
-        {
-          "card": "ALU 算术逻辑单元",
-          "score": 6,
-          "matchedTerms": [
-            "状态标",
-            "态标志",
-            "状态标志"
           ]
         }
       ]
@@ -5304,17 +5307,17 @@
           ]
         },
         {
+          "card": "Cache平均访问时间与缺失损失",
+          "score": 2,
+          "matchedTerms": [
+            "访问"
+          ]
+        },
+        {
           "card": "RISC 与 CISC",
           "score": 2,
           "matchedTerms": [
             "的性能"
-          ]
-        },
-        {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 2,
-          "matchedTerms": [
-            "访问"
           ]
         }
       ]
@@ -27503,18 +27506,18 @@
           ]
         },
         {
+          "card": "Cache平均访问时间与缺失损失",
+          "score": 4,
+          "matchedTerms": [
+            "访问",
+            "注意"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 4,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 4,
-          "matchedTerms": [
-            "在同一",
-            "访问"
           ]
         }
       ]
@@ -30097,17 +30100,17 @@
           ]
         },
         {
+          "card": "Cache平均访问时间与缺失损失",
+          "score": 2,
+          "matchedTerms": [
+            "每个"
+          ]
+        },
+        {
           "card": "补码加减与溢出判断",
           "score": 1,
           "matchedTerms": [
             "由操作"
-          ]
-        },
-        {
-          "card": "单总线数据通路与暂存器",
-          "score": 1,
-          "matchedTerms": [
-            "有一个"
           ]
         }
       ]
@@ -32945,6 +32948,13 @@
           ]
         },
         {
+          "card": "移位加法乘法与阵列乘法器",
+          "score": 2,
+          "matchedTerms": [
+            "例如"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 2,
           "matchedTerms": [
@@ -32956,13 +32966,6 @@
           "score": 2,
           "matchedTerms": [
             "问题"
-          ]
-        },
-        {
-          "card": "单总线数据通路与暂存器",
-          "score": 1,
-          "matchedTerms": [
-            "有一个"
           ]
         }
       ]
@@ -36204,19 +36207,20 @@
           ]
         },
         {
+          "card": "Cache平均访问时间与缺失损失",
+          "score": 3,
+          "matchedTerms": [
+            "访问",
+            "访问的"
+          ]
+        },
+        {
           "card": "CPU异常响应与现场保护",
           "score": 3,
           "matchedTerms": [
             "系统调",
             "统调用",
             "系统调用"
-          ]
-        },
-        {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 2,
-          "matchedTerms": [
-            "访问"
           ]
         }
       ]
@@ -44555,10 +44559,10 @@
           ]
         },
         {
-          "card": "Cache 命中率与空间局部性",
-          "score": 1,
+          "card": "ALU 算术逻辑单元",
+          "score": 2,
           "matchedTerms": [
-            "一个块"
+            "表示"
           ]
         }
       ]
