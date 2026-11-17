@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T12:48:58.654Z",
+  "generatedAt": "2026-11-17T12:51:00.384Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
@@ -1136,6 +1136,24 @@
           ]
         },
         {
+          "card": "数制转换与定点小数",
+          "score": 17,
+          "matchedTerms": [
+            "的整数",
+            "数范围",
+            "位补码",
+            "范围为",
+            "范围",
+            "−1",
+            "2^",
+            "−2",
+            "定点数",
+            "数补码",
+            "−2^",
+            "n−1"
+          ]
+        },
+        {
           "card": "有符号除法异常与商溢出",
           "score": 13,
           "matchedTerms": [
@@ -1144,20 +1162,6 @@
             "n−1",
             "表示",
             "−1"
-          ]
-        },
-        {
-          "card": "数制转换与定点小数",
-          "score": 11,
-          "matchedTerms": [
-            "的整数",
-            "数范围",
-            "位补码",
-            "−1",
-            "2^",
-            "−2",
-            "定点数",
-            "数补码"
           ]
         },
         {
@@ -1383,6 +1387,15 @@
           ]
         },
         {
+          "card": "存储器芯片与地址译码",
+          "score": 7,
+          "matchedTerms": [
+            "rom",
+            "ram",
+            "存储器"
+          ]
+        },
+        {
           "card": "存储器层次与主存组织",
           "score": 6,
           "matchedTerms": [
@@ -1396,13 +1409,6 @@
           "matchedTerms": [
             "rom",
             "ram"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 4,
-          "matchedTerms": [
-            "存储器"
           ]
         }
       ]
@@ -3514,21 +3520,21 @@
           ]
         },
         {
-          "card": "定点补码加减与溢出",
-          "score": 28,
+          "card": "ALU 算术逻辑单元",
+          "score": 31,
           "matchedTerms": [
             "alu",
-            "减法",
-            "溢出",
-            "加法",
+            "寄存器",
+            "指令可",
+            "执行",
+            "无符号",
             "超出",
-            "超出范围",
+            "加法",
+            "减法",
+            "移位等",
             "有符号",
             "符号溢",
-            "号溢出",
-            "无符号",
-            "有符号溢",
-            "符号溢出"
+            "号溢出"
           ]
         }
       ]
@@ -4183,7 +4189,7 @@
         },
         {
           "card": "ALU 算术逻辑单元",
-          "score": 28,
+          "score": 30,
           "matchedTerms": [
             "alu",
             "r1",
@@ -4192,11 +4198,11 @@
             "寄存器",
             "指令可",
             "执行",
+            "减法",
             "有符号",
             "符号溢",
             "号溢出",
-            "有符号溢",
-            "符号溢出"
+            "有符号溢"
           ]
         }
       ]
@@ -6065,7 +6071,7 @@
         },
         {
           "card": "ALU 算术逻辑单元",
-          "score": 32,
+          "score": 38,
           "matchedTerms": [
             "alu",
             "cf",
@@ -6077,7 +6083,8 @@
             "数据通路",
             "寄存器",
             "执行",
-            "个标志"
+            "无符号",
+            "补码"
           ]
         },
         {
