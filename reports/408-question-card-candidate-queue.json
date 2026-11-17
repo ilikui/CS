@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T12:59:50.310Z",
+  "generatedAt": "2026-11-17T13:01:34.718Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
@@ -2943,6 +2943,21 @@
           ]
         },
         {
+          "card": "小端字节序与补码读取",
+          "score": 26,
+          "matchedTerms": [
+            "小端",
+            "b0",
+            "n−1",
+            "ff",
+            "ec",
+            "地址",
+            "字节",
+            "按字节",
+            "大小端"
+          ]
+        },
+        {
           "card": "小端存储与立即数寻址",
           "score": 25,
           "matchedTerms": [
@@ -2967,21 +2982,6 @@
             "位的",
             "执行"
           ]
-        },
-        {
-          "card": "指令译码与有效地址计算",
-          "score": 23,
-          "matchedTerms": [
-            "ea",
-            "相对",
-            "rd",
-            "x1",
-            "字节编",
-            "节编址",
-            "字节编址",
-            "按字节",
-            "条指令"
-          ]
         }
       ]
     },
@@ -2999,11 +2999,11 @@
         "Cache 映射与命中率",
         "指令系统与寻址方式"
       ],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
         {
           "card": "Cache组相联映射与地址字段",
-          "score": 54,
+          "score": 62,
           "matchedTerms": [
             "cache",
             "映射",
@@ -3015,8 +3015,8 @@
             "地址",
             "组号",
             "kb",
-            "索引",
-            "块内偏"
+            "块内偏移6位",
+            "页大小"
           ]
         },
         {
@@ -3039,7 +3039,7 @@
         },
         {
           "card": "VIPT Cache索引与页内偏移",
-          "score": 43,
+          "score": 44,
           "matchedTerms": [
             "cache",
             "页内偏移",
@@ -3048,10 +3048,10 @@
             "页大小",
             "tag",
             "kb",
+            "组索引",
             "页内偏移12位",
             "页内偏",
             "内偏移",
-            "组索引",
             "块内偏"
           ]
         },
@@ -3494,6 +3494,24 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "Cache组相联映射与地址字段",
+          "score": 66,
+          "matchedTerms": [
+            "cache",
+            "映射",
+            "组相联",
+            "块内偏移",
+            "组索引",
+            "tag",
+            "容量",
+            "块大小",
+            "组数",
+            "地址",
+            "kb",
+            "组索引6位"
+          ]
+        },
+        {
           "card": "Cache 直接映射与组相联",
           "score": 64,
           "matchedTerms": [
@@ -3509,24 +3527,6 @@
             "指令",
             "容量",
             "块大小"
-          ]
-        },
-        {
-          "card": "Cache组相联映射与地址字段",
-          "score": 64,
-          "matchedTerms": [
-            "cache",
-            "映射",
-            "组相联",
-            "块内偏移",
-            "组索引",
-            "tag",
-            "容量",
-            "块大小",
-            "组数",
-            "地址",
-            "kb",
-            "组索引6位"
           ]
         },
         {
@@ -3549,37 +3549,38 @@
         },
         {
           "card": "Cache跨块访问与缺失率",
-          "score": 47,
+          "score": 56,
           "matchedTerms": [
             "cache",
             "tag",
             "cpu",
             "一次",
+            "int",
             "块内偏",
             "内偏移",
             "块内偏移",
             "偏移",
             "块大小",
             "缺失次数",
-            "读取",
-            "访问"
+            "读取"
           ]
         },
         {
-          "card": "TLB 组相联映射与 LRU 替换",
-          "score": 40,
+          "card": "VIPT Cache索引与页内偏移",
+          "score": 42,
           "matchedTerms": [
-            "tag",
-            "lru",
-            "组相联映射",
-            "路组相联",
             "cache",
+            "索引",
+            "块大小",
+            "组数",
+            "容量",
+            "tag",
             "kb",
             "组索引",
-            "访问",
-            "位数",
-            "组数",
-            "内偏移"
+            "组索引6位",
+            "内偏移",
+            "块内偏",
+            "块内偏移"
           ]
         }
       ]
@@ -4207,6 +4208,24 @@
           ]
         },
         {
+          "card": "Cache组相联映射与地址字段",
+          "score": 37,
+          "matchedTerms": [
+            "组相联",
+            "tag",
+            "地址",
+            "组号",
+            "kb",
+            "va",
+            "次访问",
+            "替换策",
+            "换策略",
+            "替换策略",
+            "页大小",
+            "页内偏移"
+          ]
+        },
+        {
           "card": "TLB 与多级页表联合转换",
           "score": 37,
           "matchedTerms": [
@@ -4222,24 +4241,6 @@
             "页内偏移",
             "虚拟地",
             "拟地址"
-          ]
-        },
-        {
-          "card": "Cache组相联映射与地址字段",
-          "score": 34,
-          "matchedTerms": [
-            "组相联",
-            "tag",
-            "地址",
-            "组号",
-            "kb",
-            "va",
-            "次访问",
-            "替换策",
-            "换策略",
-            "替换策略",
-            "内偏移",
-            "页内偏"
           ]
         },
         {
@@ -4913,17 +4914,21 @@
           ]
         },
         {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 23,
+          "card": "Cache跨块访问与缺失率",
+          "score": 27,
           "matchedTerms": [
             "cpu",
+            "ceil",
+            "访问",
+            "每个",
             "周期",
-            "平均",
-            "dma",
-            "时间",
-            "请求",
-            "周期挪用",
-            "总线"
+            "需要访",
+            "要访问",
+            "需要访问",
+            "字节数",
+            "平均访",
+            "均访问",
+            "访问时"
           ]
         }
       ]
@@ -5425,6 +5430,22 @@
           ]
         },
         {
+          "card": "Cache组相联映射与地址字段",
+          "score": 36,
+          "matchedTerms": [
+            "cache",
+            "映射",
+            "组相联",
+            "块大小",
+            "地址",
+            "组号",
+            "kb",
+            "a10",
+            "数据区",
+            "4路"
+          ]
+        },
+        {
           "card": "存储器层次与主存组织",
           "score": 35,
           "matchedTerms": [
@@ -5440,20 +5461,6 @@
             "命中率",
             "虚拟存",
             "拟存储"
-          ]
-        },
-        {
-          "card": "Cache组相联映射与地址字段",
-          "score": 32,
-          "matchedTerms": [
-            "cache",
-            "映射",
-            "组相联",
-            "块大小",
-            "地址",
-            "组号",
-            "kb",
-            "数据区"
           ]
         },
         {
@@ -5548,17 +5555,13 @@
           ]
         },
         {
-          "card": "CPU 指令执行过程",
+          "card": "小端字节序与补码读取",
           "score": 16,
           "matchedTerms": [
-            "取指",
-            "执行",
-            "ea",
-            "条指令",
-            "操作数",
-            "地址计",
-            "址计算",
-            "地址计算"
+            "小端",
+            "b0",
+            "ec",
+            "地址"
           ]
         }
       ]
