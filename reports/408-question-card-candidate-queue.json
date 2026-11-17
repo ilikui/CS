@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T11:22:06.599Z",
+  "generatedAt": "2026-11-17T11:23:01.431Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -2894,13 +2894,16 @@
         "TCP 拥塞控制四阶段",
         "TCP 拥塞控制"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
         {
           "card": "死锁必要条件与处理",
-          "score": 6,
+          "score": 9,
           "matchedTerms": [
-            "避免"
+            "避免",
+            "避免算",
+            "免算法",
+            "避免算法"
           ]
         },
         {
@@ -5265,19 +5268,20 @@
           ]
         },
         {
+          "card": "中断与 DMA",
+          "score": 4,
+          "matchedTerms": [
+            "服务程",
+            "务程序",
+            "服务程序",
+            "先获得"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 4,
           "matchedTerms": [
             "处理"
-          ]
-        },
-        {
-          "card": "中断与 DMA",
-          "score": 3,
-          "matchedTerms": [
-            "服务程",
-            "务程序",
-            "服务程序"
           ]
         },
         {
@@ -5418,14 +5422,6 @@
       "confidence": "low-candidate",
       "candidates": [
         {
-          "card": "死锁必要条件与处理",
-          "score": 6,
-          "matchedTerms": [
-            "r1",
-            "r2"
-          ]
-        },
-        {
           "card": "死锁资源分配图",
           "score": 6,
           "matchedTerms": [
@@ -5453,6 +5449,13 @@
           "score": 4,
           "matchedTerms": [
             "更新"
+          ]
+        },
+        {
+          "card": "进程与线程的并发执行",
+          "score": 3,
+          "matchedTerms": [
+            "t1"
           ]
         }
       ]
@@ -8033,10 +8036,9 @@
           "score": 9,
           "matchedTerms": [
             "cpu",
-            "数据传",
-            "传输时",
-            "输时间",
-            "传输时间"
+            "块数",
+            "缓冲区",
+            "数据传"
           ]
         },
         {
@@ -8299,14 +8301,6 @@
       "confidence": "low-candidate",
       "candidates": [
         {
-          "card": "死锁必要条件与处理",
-          "score": 6,
-          "matchedTerms": [
-            "r1",
-            "r2"
-          ]
-        },
-        {
           "card": "死锁资源分配图",
           "score": 6,
           "matchedTerms": [
@@ -8334,6 +8328,13 @@
           "score": 5,
           "matchedTerms": [
             "c1"
+          ]
+        },
+        {
+          "card": "页表项地址计算与页框号",
+          "score": 3,
+          "matchedTerms": [
+            "地址"
           ]
         }
       ]
@@ -10331,6 +10332,22 @@
           ]
         },
         {
+          "card": "中断与 DMA",
+          "score": 11,
+          "matchedTerms": [
+            "执行",
+            "服务程",
+            "务程序",
+            "服务程序",
+            "中断服",
+            "断服务",
+            "中断服务",
+            "断服务程",
+            "中断服务程",
+            "断服务程序"
+          ]
+        },
+        {
           "card": "CPU异常响应与现场保护",
           "score": 9,
           "matchedTerms": [
@@ -10353,13 +10370,6 @@
           "matchedTerms": [
             "执行",
             "发生在"
-          ]
-        },
-        {
-          "card": "虚拟地址分页与页内偏移",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
           ]
         }
       ]
@@ -11012,10 +11022,10 @@
           ]
         },
         {
-          "card": "进程与线程",
-          "score": 1,
+          "card": "进程同步与信号量",
+          "score": 2,
           "matchedTerms": [
-            "题考查"
+            "顺序"
           ]
         }
       ]
@@ -13498,17 +13508,19 @@
           ]
         },
         {
+          "card": "中断与 DMA",
+          "score": 8,
+          "matchedTerms": [
+            "cpu",
+            "执行",
+            "优先级"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 8,
           "matchedTerms": [
             "执行",
-            "cpu"
-          ]
-        },
-        {
-          "card": "单周期与多周期数据通路",
-          "score": 7,
-          "matchedTerms": [
             "cpu"
           ]
         }
@@ -13707,19 +13719,19 @@
           ]
         },
         {
+          "card": "死锁必要条件与处理",
+          "score": 6,
+          "matchedTerms": [
+            "s1",
+            "s2"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 6,
           "matchedTerms": [
             "c1",
             "一次时"
-          ]
-        },
-        {
-          "card": "inode 直接与多级间接索引",
-          "score": 6,
-          "matchedTerms": [
-            "kb",
-            "mb"
           ]
         }
       ]
@@ -13831,8 +13843,16 @@
       "answer": "B",
       "analysis": "2013-第38题-解析 直通交换 在输入端口检测到一个数据帧时，检查帧首部，获取帧的目的地址，启动内部的动态查找表转换成相应的输出端口，在输入与输出交叉处接通，把数据帧直通到相应的端口，实现交换功能。直通交换方式只检查帧的目的地址，共 6B，所以最短的传输延迟是 6 × 8bit / 100Mbps = 0.48μs。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "死锁必要条件与处理",
+          "score": 9,
+          "matchedTerms": [
+            "检测",
+            "s2"
+          ]
+        },
         {
           "card": "页表项地址计算与页框号",
           "score": 8,
@@ -13846,13 +13866,6 @@
           "score": 6,
           "matchedTerms": [
             "功能"
-          ]
-        },
-        {
-          "card": "死锁必要条件与处理",
-          "score": 6,
-          "matchedTerms": [
-            "检测"
           ]
         },
         {
@@ -16110,9 +16123,10 @@
           ]
         },
         {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 2,
+          "card": "中断与 DMA",
+          "score": 3,
           "matchedTerms": [
+            "执行",
             "缓冲区"
           ]
         }
@@ -16207,6 +16221,17 @@
           ]
         },
         {
+          "card": "中断与 DMA",
+          "score": 5,
+          "matchedTerms": [
+            "通常为",
+            "缓冲区",
+            "数据传",
+            "据传输",
+            "数据传输"
+          ]
+        },
+        {
           "card": "Cache组相联映射与地址字段",
           "score": 5,
           "matchedTerms": [
@@ -16219,15 +16244,6 @@
           "score": 4,
           "matchedTerms": [
             "通常"
-          ]
-        },
-        {
-          "card": "磁盘 CHS 地址与平均访问时间",
-          "score": 3,
-          "matchedTerms": [
-            "数据传",
-            "据传输",
-            "数据传输"
           ]
         }
       ]
@@ -16482,6 +16498,15 @@
           ]
         },
         {
+          "card": "死锁必要条件与处理",
+          "score": 7,
+          "matchedTerms": [
+            "s1",
+            "s2",
+            "个条件"
+          ]
+        },
+        {
           "card": "页表结构与地址转换",
           "score": 7,
           "matchedTerms": [
@@ -16494,16 +16519,6 @@
           "score": 4,
           "matchedTerms": [
             "其次"
-          ]
-        },
-        {
-          "card": "文件逻辑结构与物理结构",
-          "score": 4,
-          "matchedTerms": [
-            "的数据",
-            "多少数",
-            "少数据",
-            "多少数据"
           ]
         }
       ]
@@ -16568,8 +16583,18 @@
       "answer": "A",
       "analysis": "2014-第38题-解析 当 t 时刻发生超时时，根据 拥塞避免 算法，把 ssthresh 设为 8 的一半，即为 4，且拥塞窗口设为 1KB。然后经历 10 个 RTT 后，拥塞窗口的大小依次为 2,4,5,6,7,8,9,10,11,12，而发送窗口取当时的拥塞窗口和接收窗口的最小值，而接收窗口始终为 10KB，所以此时的发送窗口为 10KB，选 A。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "死锁必要条件与处理",
+          "score": 9,
+          "matchedTerms": [
+            "避免",
+            "避免算",
+            "免算法",
+            "避免算法"
+          ]
+        },
         {
           "card": "进程虚拟地址空间与段布局",
           "score": 6,
@@ -16582,13 +16607,6 @@
           "score": 6,
           "matchedTerms": [
             "数据段"
-          ]
-        },
-        {
-          "card": "死锁必要条件与处理",
-          "score": 6,
-          "matchedTerms": [
-            "避免"
           ]
         },
         {
@@ -18806,12 +18824,11 @@
           ]
         },
         {
-          "card": "磁盘结构与平均访问时间",
-          "score": 3,
+          "card": "中断与 DMA",
+          "score": 4,
           "matchedTerms": [
-            "寻道时",
-            "道时间",
-            "寻道时间"
+            "减少",
+            "缓冲区"
           ]
         }
       ]
@@ -19291,6 +19308,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "死锁必要条件与处理",
+          "score": 6,
+          "matchedTerms": [
+            "s1",
+            "s2"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 3,
           "matchedTerms": [
@@ -19316,13 +19341,6 @@
           "score": 1,
           "matchedTerms": [
             "的目的"
-          ]
-        },
-        {
-          "card": "硬链接与 inode 共享",
-          "score": 1,
-          "matchedTerms": [
-            "一个目"
           ]
         }
       ]
@@ -21897,15 +21915,13 @@
       "existingCards": [
         "距离向量与链路状态路由"
       ],
-      "confidence": "medium-candidate",
+      "confidence": "low-candidate",
       "candidates": [
         {
           "card": "死锁必要条件与处理",
-          "score": 12,
+          "score": 6,
           "matchedTerms": [
-            "检测",
-            "r1",
-            "r2"
+            "检测"
           ]
         },
         {
@@ -21962,14 +21978,6 @@
           ]
         },
         {
-          "card": "死锁必要条件与处理",
-          "score": 6,
-          "matchedTerms": [
-            "r1",
-            "r2"
-          ]
-        },
-        {
           "card": "死锁资源分配图",
           "score": 6,
           "matchedTerms": [
@@ -21989,6 +21997,13 @@
           "score": 4,
           "matchedTerms": [
             "对应的",
+            "请求"
+          ]
+        },
+        {
+          "card": "磁盘调度 FCFS 与 SSTF",
+          "score": 2,
+          "matchedTerms": [
             "请求"
           ]
         }
@@ -22015,13 +22030,6 @@
           ]
         },
         {
-          "card": "死锁必要条件与处理",
-          "score": 3,
-          "matchedTerms": [
-            "r2"
-          ]
-        },
-        {
           "card": "页表项地址计算与页框号",
           "score": 3,
           "matchedTerms": [
@@ -22040,6 +22048,13 @@
           "score": 2,
           "matchedTerms": [
             "访问"
+          ]
+        },
+        {
+          "card": "读者写者问题",
+          "score": 1,
+          "matchedTerms": [
+            "不能与"
           ]
         }
       ]
@@ -22146,21 +22161,21 @@
           ]
         },
         {
-          "card": "虚拟内存与页面置换",
-          "score": 9,
-          "matchedTerms": [
-            "分配",
-            "kb",
-            "最后"
-          ]
-        },
-        {
           "card": "FAT链接分配与簇链访问",
           "score": 9,
           "matchedTerms": [
             "字节",
             "大小",
             "接分配"
+          ]
+        },
+        {
+          "card": "伙伴系统与内存回收",
+          "score": 7,
+          "matchedTerms": [
+            "kb",
+            "分配",
+            "请求"
           ]
         }
       ]
@@ -22465,19 +22480,20 @@
           ]
         },
         {
+          "card": "中断与 DMA",
+          "score": 10,
+          "matchedTerms": [
+            "cpu",
+            "减少",
+            "执行"
+          ]
+        },
+        {
           "card": "单周期与多周期数据通路",
           "score": 9,
           "matchedTerms": [
             "cpu",
             "设计一"
-          ]
-        },
-        {
-          "card": "中断与 DMA",
-          "score": 8,
-          "matchedTerms": [
-            "cpu",
-            "减少"
           ]
         },
         {
@@ -24025,22 +24041,23 @@
           ]
         },
         {
+          "card": "中断与 DMA",
+          "score": 10,
+          "matchedTerms": [
+            "cpu",
+            "执行",
+            "服务程",
+            "务程序",
+            "服务程序"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 9,
           "matchedTerms": [
             "执行",
             "cpu",
             "的过程"
-          ]
-        },
-        {
-          "card": "中断与 DMA",
-          "score": 8,
-          "matchedTerms": [
-            "cpu",
-            "服务程",
-            "务程序",
-            "服务程序"
           ]
         },
         {
@@ -24214,13 +24231,12 @@
           ]
         },
         {
-          "card": "DMA 工作过程与总线占用",
-          "score": 5,
+          "card": "中断与 DMA",
+          "score": 6,
           "matchedTerms": [
             "周期",
-            "程的时",
-            "的时间",
-            "程的时间"
+            "开销",
+            "执行"
           ]
         }
       ]
@@ -24255,6 +24271,15 @@
           ]
         },
         {
+          "card": "中断与 DMA",
+          "score": 9,
+          "matchedTerms": [
+            "cpu",
+            "开销",
+            "执行"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 8,
           "matchedTerms": [
@@ -24267,14 +24292,6 @@
           "score": 7,
           "matchedTerms": [
             "cpu"
-          ]
-        },
-        {
-          "card": "计算机性能指标 CPI 与 CPU 时间",
-          "score": 7,
-          "matchedTerms": [
-            "cpu",
-            "执行"
           ]
         }
       ]
@@ -24460,8 +24477,26 @@
       "existingCards": [
         "DMA 工作过程与总线占用"
       ],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
+        {
+          "card": "中断与 DMA",
+          "score": 54,
+          "matchedTerms": [
+            "dma",
+            "cpu",
+            "执行dma结束中断服务程序",
+            "中断请",
+            "断请求",
+            "中断请求",
+            "控制器",
+            "块数",
+            "执行",
+            "服务程",
+            "务程序",
+            "服务程序"
+          ]
+        },
         {
           "card": "中断响应与异常处理",
           "score": 26,
@@ -24478,22 +24513,6 @@
             "中断服务",
             "断服务程",
             "服务程序"
-          ]
-        },
-        {
-          "card": "中断与 DMA",
-          "score": 24,
-          "matchedTerms": [
-            "dma",
-            "cpu",
-            "中断请",
-            "断请求",
-            "中断请求",
-            "控制器",
-            "服务程",
-            "务程序",
-            "服务程序",
-            "传输时"
           ]
         },
         {
@@ -24662,17 +24681,17 @@
           ]
         },
         {
+          "card": "进程同步与信号量",
+          "score": 3,
+          "matchedTerms": [
+            "service"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 3,
           "matchedTerms": [
             "地址"
-          ]
-        },
-        {
-          "card": "原子交换指令与自旋锁",
-          "score": 3,
-          "matchedTerms": [
-            "if"
           ]
         }
       ]
@@ -24913,14 +24932,6 @@
           ]
         },
         {
-          "card": "死锁必要条件与处理",
-          "score": 4,
-          "matchedTerms": [
-            "p2",
-            "是是否"
-          ]
-        },
-        {
           "card": "进程调度算法",
           "score": 3,
           "matchedTerms": [
@@ -24929,6 +24940,13 @@
         },
         {
           "card": "临界区与共享缓冲区",
+          "score": 3,
+          "matchedTerms": [
+            "p2"
+          ]
+        },
+        {
+          "card": "死锁资源分配图",
           "score": 3,
           "matchedTerms": [
             "p2"
@@ -25307,10 +25325,11 @@
       "candidates": [
         {
           "card": "死锁必要条件与处理",
-          "score": 9,
+          "score": 12,
           "matchedTerms": [
             "检测",
-            "r2"
+            "s1",
+            "s2"
           ]
         },
         {
@@ -26767,6 +26786,19 @@
           ]
         },
         {
+          "card": "中断与 DMA",
+          "score": 13,
+          "matchedTerms": [
+            "cpu",
+            "开销",
+            "执行",
+            "优先级",
+            "优先获",
+            "先获得",
+            "优先获得"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 8,
           "matchedTerms": [
@@ -26776,13 +26808,6 @@
         },
         {
           "card": "单周期与多周期数据通路",
-          "score": 7,
-          "matchedTerms": [
-            "cpu"
-          ]
-        },
-        {
-          "card": "硬布线控制器与微程序控制器",
           "score": 7,
           "matchedTerms": [
             "cpu"
@@ -27079,11 +27104,20 @@
           ]
         },
         {
-          "card": "CPU异常响应与现场保护",
-          "score": 10,
+          "card": "中断与 DMA",
+          "score": 16,
           "matchedTerms": [
-            "中断",
-            "cpu"
+            "cpu",
+            "执行",
+            "服务程",
+            "务程序",
+            "服务程序",
+            "中断服",
+            "断服务",
+            "中断服务",
+            "断服务程",
+            "中断服务程",
+            "断服务程序"
           ]
         }
       ]
@@ -27156,6 +27190,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "中断与 DMA",
+          "score": 6,
+          "matchedTerms": [
+            "减少",
+            "块数",
+            "缓冲区"
+          ]
+        },
+        {
           "card": "DMA 周期挪用与总线仲裁",
           "score": 6,
           "matchedTerms": [
@@ -27174,13 +27217,6 @@
           "score": 3,
           "matchedTerms": [
             "标志"
-          ]
-        },
-        {
-          "card": "中断与 DMA",
-          "score": 3,
-          "matchedTerms": [
-            "减少"
           ]
         },
         {
@@ -27272,17 +27308,17 @@
           ]
         },
         {
-          "card": "死锁必要条件与处理",
+          "card": "死锁资源分配图",
           "score": 3,
           "matchedTerms": [
             "p2"
           ]
         },
         {
-          "card": "死锁资源分配图",
+          "card": "TLB 与快表命中",
           "score": 3,
           "matchedTerms": [
-            "p2"
+            "ns"
           ]
         }
       ]
@@ -27437,15 +27473,14 @@
           ]
         },
         {
-          "card": "虚拟内存与页面置换",
-          "score": 5,
+          "card": "工作集与抖动",
+          "score": 4,
           "matchedTerms": [
-            "kb",
-            "最后"
+            "大小"
           ]
         },
         {
-          "card": "工作集与抖动",
+          "card": "FAT链接分配与簇链访问",
           "score": 4,
           "matchedTerms": [
             "大小"
@@ -27465,6 +27500,14 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "死锁必要条件与处理",
+          "score": 6,
+          "matchedTerms": [
+            "s1",
+            "s2"
+          ]
+        },
         {
           "card": "死锁资源分配图",
           "score": 6,
@@ -27494,13 +27537,6 @@
           "matchedTerms": [
             "地址",
             "地址与"
-          ]
-        },
-        {
-          "card": "读者写者问题",
-          "score": 3,
-          "matchedTerms": [
-            "常用"
           ]
         }
       ]
@@ -27542,18 +27578,17 @@
           ]
         },
         {
-          "card": "虚拟内存与页面置换",
-          "score": 3,
-          "matchedTerms": [
-            "位数",
-            "由地址"
-          ]
-        },
-        {
           "card": "页表项地址计算与页框号",
           "score": 3,
           "matchedTerms": [
             "地址"
+          ]
+        },
+        {
+          "card": "同步图与偏序关系",
+          "score": 2,
+          "matchedTerms": [
+            "之后"
           ]
         }
       ]
@@ -29628,6 +29663,20 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "中断与 DMA",
+          "score": 13,
+          "matchedTerms": [
+            "cpu",
+            "执行",
+            "服务程",
+            "务程序",
+            "服务程序",
+            "程序中",
+            "初始化",
+            "服务的"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 11,
           "matchedTerms": [
@@ -29661,15 +29710,6 @@
           "matchedTerms": [
             "cpu",
             "功能"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 9,
-          "matchedTerms": [
-            "执行",
-            "cpu",
-            "的过程"
           ]
         }
       ]
@@ -30274,10 +30314,10 @@
           ]
         },
         {
-          "card": "页表结构与地址转换",
+          "card": "死锁必要条件与处理",
           "score": 3,
           "matchedTerms": [
-            "mb"
+            "s2"
           ]
         }
       ]
@@ -32459,6 +32499,24 @@
           ]
         },
         {
+          "card": "中断与 DMA",
+          "score": 22,
+          "matchedTerms": [
+            "cpu",
+            "与中断",
+            "执行",
+            "服务程",
+            "务程序",
+            "服务程序",
+            "在中断",
+            "中断服",
+            "断服务",
+            "中断服务",
+            "断服务程",
+            "中断服务程"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 13,
           "matchedTerms": [
@@ -32466,17 +32524,6 @@
             "cpu",
             "pc",
             "通用寄存器"
-          ]
-        },
-        {
-          "card": "中断与 DMA",
-          "score": 12,
-          "matchedTerms": [
-            "cpu",
-            "与中断",
-            "服务程",
-            "务程序",
-            "服务程序"
           ]
         },
         {
@@ -33087,12 +33134,11 @@
       "candidates": [
         {
           "card": "死锁必要条件与处理",
-          "score": 9,
+          "score": 12,
           "matchedTerms": [
             "避免",
-            "规定所",
-            "定所有",
-            "规定所有"
+            "s1",
+            "s2"
           ]
         },
         {
@@ -33144,16 +33190,6 @@
       "confidence": "low-candidate",
       "candidates": [
         {
-          "card": "虚拟内存与页面置换",
-          "score": 6,
-          "matchedTerms": [
-            "kb",
-            "最长时",
-            "长时间",
-            "最长时间"
-          ]
-        },
-        {
           "card": "FIFO、LRU 与 OPT 页面置换",
           "score": 6,
           "matchedTerms": [
@@ -33178,6 +33214,13 @@
         },
         {
           "card": "分页与分段的区别",
+          "score": 3,
+          "matchedTerms": [
+            "kb"
+          ]
+        },
+        {
+          "card": "伙伴系统与内存回收",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -35251,11 +35294,14 @@
           ]
         },
         {
-          "card": "CPU 指令执行过程",
-          "score": 8,
+          "card": "中断与 DMA",
+          "score": 10,
           "matchedTerms": [
+            "cpu",
             "执行",
-            "cpu"
+            "执行结",
+            "行结束",
+            "执行结束"
           ]
         }
       ]
@@ -37953,6 +37999,17 @@
           ]
         },
         {
+          "card": "中断与 DMA",
+          "score": 10,
+          "matchedTerms": [
+            "cpu",
+            "执行",
+            "优先级",
+            "行结束",
+            "4b"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 9,
           "matchedTerms": [
@@ -37966,14 +38023,6 @@
           "matchedTerms": [
             "cpu",
             "ms"
-          ]
-        },
-        {
-          "card": "CPU 指令执行过程",
-          "score": 8,
-          "matchedTerms": [
-            "执行",
-            "cpu"
           ]
         }
       ]
@@ -38006,6 +38055,13 @@
         },
         {
           "card": "计算机性能指标 CPI 与 CPU 时间",
+          "score": 2,
+          "matchedTerms": [
+            "执行"
+          ]
+        },
+        {
+          "card": "中断与 DMA",
           "score": 2,
           "matchedTerms": [
             "执行"
@@ -38302,6 +38358,18 @@
           ]
         },
         {
+          "card": "中断与 DMA",
+          "score": 11,
+          "matchedTerms": [
+            "cpu",
+            "执行",
+            "服务程",
+            "务程序",
+            "服务程序",
+            "程序中"
+          ]
+        },
+        {
           "card": "CPU 指令执行过程",
           "score": 11,
           "matchedTerms": [
@@ -38309,14 +38377,6 @@
             "cpu",
             "通用寄存器",
             "的过程"
-          ]
-        },
-        {
-          "card": "DMA 工作过程与总线占用",
-          "score": 11,
-          "matchedTerms": [
-            "cpu",
-            "处理"
           ]
         }
       ]
@@ -38347,6 +38407,22 @@
           ]
         },
         {
+          "card": "中断与 DMA",
+          "score": 12,
+          "matchedTerms": [
+            "控制器",
+            "执行",
+            "设备控",
+            "备控制",
+            "设备控制",
+            "备控制器",
+            "设备控制器",
+            "程序中",
+            "在设备",
+            "初始化"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 9,
           "matchedTerms": [
@@ -38361,18 +38437,6 @@
           "matchedTerms": [
             "控制器",
             "执行"
-          ]
-        },
-        {
-          "card": "中断与 DMA",
-          "score": 7,
-          "matchedTerms": [
-            "控制器",
-            "设备控",
-            "备控制",
-            "设备控制",
-            "备控制器",
-            "设备控制器"
           ]
         },
         {
@@ -38647,18 +38711,21 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "死锁必要条件与处理",
+          "score": 9,
+          "matchedTerms": [
+            "避免",
+            "避免算",
+            "免算法",
+            "避免算法"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 9,
           "matchedTerms": [
             "c1",
             "后执行"
-          ]
-        },
-        {
-          "card": "死锁必要条件与处理",
-          "score": 6,
-          "matchedTerms": [
-            "避免"
           ]
         },
         {
@@ -41038,11 +41105,12 @@
           ]
         },
         {
-          "card": "CPU 指令执行过程",
+          "card": "中断与 DMA",
           "score": 8,
           "matchedTerms": [
+            "cpu",
             "执行",
-            "cpu"
+            "优先级"
           ]
         }
       ]
@@ -41268,6 +41336,14 @@
           ]
         },
         {
+          "card": "死锁必要条件与处理",
+          "score": 6,
+          "matchedTerms": [
+            "s1",
+            "s2"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 5,
           "matchedTerms": [
@@ -41280,13 +41356,6 @@
           "matchedTerms": [
             "大小",
             "=106"
-          ]
-        },
-        {
-          "card": "工作集与抖动",
-          "score": 4,
-          "matchedTerms": [
-            "大小"
           ]
         }
       ]
@@ -41527,17 +41596,6 @@
           ]
         },
         {
-          "card": "虚拟内存与页面置换",
-          "score": 9,
-          "matchedTerms": [
-            "分配",
-            "最后",
-            "地址转",
-            "址转换",
-            "地址转换"
-          ]
-        },
-        {
           "card": "读者写者问题",
           "score": 7,
           "matchedTerms": [
@@ -41560,6 +41618,14 @@
           "score": 6,
           "matchedTerms": [
             "功能"
+          ]
+        },
+        {
+          "card": "死锁资源分配图",
+          "score": 6,
+          "matchedTerms": [
+            "r1",
+            "r2"
           ]
         }
       ]
@@ -43742,6 +43808,13 @@
           ]
         },
         {
+          "card": "中断与 DMA",
+          "score": 2,
+          "matchedTerms": [
+            "块数"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 2,
           "matchedTerms": [
@@ -43753,13 +43826,6 @@
           "score": 1,
           "matchedTerms": [
             "一个块"
-          ]
-        },
-        {
-          "card": "DMA 周期挪用与总线仲裁",
-          "score": 1,
-          "matchedTerms": [
-            "用一个"
           ]
         }
       ]
@@ -43787,6 +43853,14 @@
           ]
         },
         {
+          "card": "中断与 DMA",
+          "score": 5,
+          "matchedTerms": [
+            "减少",
+            "执行"
+          ]
+        },
+        {
           "card": "流水线结构冒险与数据冒险",
           "score": 4,
           "matchedTerms": [
@@ -43805,13 +43879,6 @@
           "score": 4,
           "matchedTerms": [
             "执行"
-          ]
-        },
-        {
-          "card": "中断与 DMA",
-          "score": 3,
-          "matchedTerms": [
-            "减少"
           ]
         }
       ]
@@ -43957,6 +44024,19 @@
           ]
         },
         {
+          "card": "中断与 DMA",
+          "score": 14,
+          "matchedTerms": [
+            "cpu",
+            "周期",
+            "开销",
+            "执行",
+            "执行结",
+            "行结束",
+            "执行结束"
+          ]
+        },
+        {
           "card": "DMA 工作过程与总线占用",
           "score": 14,
           "matchedTerms": [
@@ -43974,14 +44054,6 @@
             "ms",
             "周期"
           ]
-        },
-        {
-          "card": "单周期与多周期数据通路",
-          "score": 9,
-          "matchedTerms": [
-            "cpu",
-            "一个时"
-          ]
         }
       ]
     },
@@ -43995,8 +44067,26 @@
       "answer": "C",
       "analysis": "2024-第31题-解析 当键盘输入数据时，首先会将数据发送到键盘控制器的数据寄存器中。当键盘控制器的数据寄存器接收到数据后，它会触发一个中断请求 (IRQ1)，通知 CPU 有数据等待处理。CPU 响应中断请求后，会执行键盘中断服务例程。在中断服务例程中，CPU 从键盘控制器的数据寄存器读取输入数据，并将其存放到内核缓冲区中。 A 错误。用户缓冲区通常指的是应用程序为接收输入数据而分配的缓冲区。在键盘中断服务例程执行结束时，输入数据并不会直接存放在用户缓冲区中，而是先存放在内核缓冲区中。应用程序可以通过系统调用或其他机制从内核缓冲区读取输入数据，并将其复制到用户缓冲区中。 B 错误。CPU 中的通用寄存器并不是输入数据的最终存放位置。在键盘中断服务例程执行过程中，输入数据可能会暂时存放在 CPU 的通用寄存器中，但最终会被存放到内核缓冲区中。 C 正确。内核缓冲区是操作系统用于暂存输入数据的内存区域。在键盘中断服务例程执行过程中，输入数据被读取并存入内核缓冲区，以便后续的系统调用或应用程序访问。内核缓冲区通常由操作系统管理，确保数据的正确性和一致性。 D 错误。键盘控制器的数据寄存器是输入数据的初始存放位置，但并不是中断服务例程执行结束时的最终存放位置。 本题选 C。",
       "existingCards": [],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
+        {
+          "card": "中断与 DMA",
+          "score": 26,
+          "matchedTerms": [
+            "cpu",
+            "中断请",
+            "断请求",
+            "中断请求",
+            "控制器",
+            "执行",
+            "在中断",
+            "中断服",
+            "断服务",
+            "在中断服",
+            "中断服务",
+            "在中断服务"
+          ]
+        },
         {
           "card": "DMA 工作过程与总线占用",
           "score": 18,
@@ -44039,19 +44129,6 @@
             "缓冲区",
             "中断",
             "在中断"
-          ]
-        },
-        {
-          "card": "寄存器组读写端口与译码",
-          "score": 13,
-          "matchedTerms": [
-            "ir",
-            "通用寄",
-            "用寄存",
-            "寄存器",
-            "通用寄存",
-            "用寄存器",
-            "通用寄存器"
           ]
         }
       ]
@@ -44131,6 +44208,14 @@
           ]
         },
         {
+          "card": "死锁必要条件与处理",
+          "score": 6,
+          "matchedTerms": [
+            "s1",
+            "s2"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 5,
           "matchedTerms": [
@@ -44149,13 +44234,6 @@
           "score": 3,
           "matchedTerms": [
             "c1"
-          ]
-        },
-        {
-          "card": "页表结构与地址转换",
-          "score": 3,
-          "matchedTerms": [
-            "mb"
           ]
         }
       ]
@@ -44291,24 +44369,15 @@
       "answer": "B",
       "analysis": "2024-第36题-解析 在 CSMA/CA 的 802.11 无线局域网中，网路分配向量（NAV）是用来告诉其他节点预计要占用无线媒体多长时间的一种机制。在发送 RTS（请求发送）和 CTS（清除发送）帧时，发送节点会在帧头中包含一个持续时间字段，这个字段表示从发送当前帧到接收到最后一个 ACK 帧所需的时间。其他节点在接收到 RTS 或 CTS 帧后，会根据这个持续时间字段设置自己的 NAV，从而避免在这段时间内发送数据，防止发生冲突。 NAV 的时间就是其他节点推迟访问的时间，约等于 SIFS 时间 + 数据发送时间 + SIFS 时间 + ACK 帧传播时延。 根据题目中的信息，我们可以计算出设置 NAV 的值。首先，我们需要计算发送数据顿所需的时间数据帧的总长度为 1998B，无线链路带宽为 54bps，所以发送数据帧所需的时间为：1998B/54Mbps=296μs，则总时间=28μs+296μs+28μs+2μs=354μs",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
         {
           "card": "死锁必要条件与处理",
-          "score": 8,
+          "score": 11,
           "matchedTerms": [
             "避免",
+            "s2",
             "避免在"
-          ]
-        },
-        {
-          "card": "虚拟内存与页面置换",
-          "score": 8,
-          "matchedTerms": [
-            "分配",
-            "最后",
-            "长时间",
-            "访问的"
           ]
         },
         {
@@ -44335,6 +44404,13 @@
           "score": 5,
           "matchedTerms": [
             "c3"
+          ]
+        },
+        {
+          "card": "页表项地址计算与页框号",
+          "score": 5,
+          "matchedTerms": [
+            "mb"
           ]
         }
       ]
@@ -44490,11 +44566,10 @@
           ]
         },
         {
-          "card": "虚拟内存与页面置换",
+          "card": "页表结构与地址转换",
           "score": 4,
           "matchedTerms": [
-            "位数",
-            "最后"
+            "字节"
           ]
         }
       ]
@@ -46997,14 +47072,6 @@
       "confidence": "low-candidate",
       "candidates": [
         {
-          "card": "死锁必要条件与处理",
-          "score": 6,
-          "matchedTerms": [
-            "r1",
-            "r2"
-          ]
-        },
-        {
           "card": "死锁资源分配图",
           "score": 6,
           "matchedTerms": [
@@ -47032,6 +47099,13 @@
           "score": 4,
           "matchedTerms": [
             "大小"
+          ]
+        },
+        {
+          "card": "死锁必要条件与处理",
+          "score": 3,
+          "matchedTerms": [
+            "s1"
           ]
         }
       ]
@@ -47129,10 +47203,10 @@
           ]
         },
         {
-          "card": "磁盘引导与格式化流程",
-          "score": 2,
+          "card": "死锁必要条件与处理",
+          "score": 3,
           "matchedTerms": [
-            "执行"
+            "s2"
           ]
         }
       ]
@@ -47325,6 +47399,14 @@
           ]
         },
         {
+          "card": "死锁必要条件与处理",
+          "score": 6,
+          "matchedTerms": [
+            "s1",
+            "s2"
+          ]
+        },
+        {
           "card": "临界区与共享缓冲区",
           "score": 3,
           "matchedTerms": [
@@ -47345,13 +47427,6 @@
           "score": 2,
           "matchedTerms": [
             "请求"
-          ]
-        },
-        {
-          "card": "调度评价指标",
-          "score": 2,
-          "matchedTerms": [
-            "服务"
           ]
         }
       ]
