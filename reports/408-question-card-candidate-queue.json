@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T10:26:26.501Z",
+  "generatedAt": "2026-11-17T10:28:53.037Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -2316,6 +2316,13 @@
           ]
         },
         {
+          "card": "虚拟内存与页面置换",
+          "score": 5,
+          "matchedTerms": [
+            "os"
+          ]
+        },
+        {
           "card": "进程间通信 IPC",
           "score": 4,
           "matchedTerms": [
@@ -2323,22 +2330,15 @@
           ]
         },
         {
-          "card": "缺页异常与页表更新",
+          "card": "缺页异常处理流程",
           "score": 4,
           "matchedTerms": [
             "os"
           ]
         },
         {
-          "card": "磁盘引导与格式化流程",
-          "score": 3,
-          "matchedTerms": [
-            "os"
-          ]
-        },
-        {
-          "card": "文件逻辑结构与物理结构",
-          "score": 3,
+          "card": "缺页异常与页表更新",
+          "score": 4,
           "matchedTerms": [
             "os"
           ]
@@ -2360,6 +2360,21 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "TLB 与快表命中",
+          "score": 6,
+          "matchedTerms": [
+            "ns",
+            "kb"
+          ]
+        },
+        {
+          "card": "页表结构与地址转换",
+          "score": 5,
+          "matchedTerms": [
+            "kb"
+          ]
+        },
+        {
           "card": "分页与分段的区别",
           "score": 3,
           "matchedTerms": [
@@ -2379,20 +2394,6 @@
           "matchedTerms": [
             "kb"
           ]
-        },
-        {
-          "card": "内存分配与页面管理",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "索引结点 inode 与文件控制块",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
         }
       ]
     },
@@ -2408,8 +2409,17 @@
       "existingCards": [
         "GBN 后退 N 帧协议"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "TLB 与快表命中",
+          "score": 9,
+          "matchedTerms": [
+            "最后",
+            "后续",
+            "ns"
+          ]
+        },
         {
           "card": "读者写者问题",
           "score": 6,
@@ -2431,14 +2441,6 @@
           "score": 6,
           "matchedTerms": [
             "连续"
-          ]
-        },
-        {
-          "card": "TLB 与快表命中",
-          "score": 6,
-          "matchedTerms": [
-            "最后",
-            "后续"
           ]
         },
         {
@@ -2513,6 +2515,7 @@
           "card": "TLB 与快表命中",
           "score": 6,
           "matchedTerms": [
+            "ns",
             "物理地",
             "理地址",
             "物理地址"
@@ -2544,11 +2547,11 @@
           ]
         },
         {
-          "card": "页表结构与地址转换",
-          "score": 5,
+          "card": "TLB 与快表命中",
+          "score": 4,
           "matchedTerms": [
-            "mb",
-            "得到"
+            "ns",
+            "的转换"
           ]
         },
         {
@@ -2561,18 +2564,17 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 3,
+          "matchedTerms": [
+            "mb"
+          ]
+        },
+        {
           "card": "磁盘调度与 I/O",
           "score": 2,
           "matchedTerms": [
             "在一个"
-          ]
-        },
-        {
-          "card": "进程与线程",
-          "score": 2,
-          "matchedTerms": [
-            "的两个",
-            "题考查"
           ]
         }
       ]
@@ -2600,6 +2602,13 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 4,
+          "matchedTerms": [
+            "字节"
+          ]
+        },
+        {
           "card": "FAT链接分配与簇链访问",
           "score": 4,
           "matchedTerms": [
@@ -2614,17 +2623,10 @@
           ]
         },
         {
-          "card": "系统调用参数传递与返回",
-          "score": 2,
+          "card": "TLB 与快表命中",
+          "score": 3,
           "matchedTerms": [
-            "后返回"
-          ]
-        },
-        {
-          "card": "系统调用与用户态内核态",
-          "score": 2,
-          "matchedTerms": [
-            "后返回"
+            "ns"
           ]
         }
       ]
@@ -2652,11 +2654,25 @@
           ]
         },
         {
+          "card": "TLB 与快表命中",
+          "score": 6,
+          "matchedTerms": [
+            "ns",
+            "kb"
+          ]
+        },
+        {
           "card": "页表结构与地址转换",
           "score": 5,
           "matchedTerms": [
-            "kb",
-            "得到"
+            "kb"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
+          "score": 4,
+          "matchedTerms": [
+            "大小"
           ]
         },
         {
@@ -2664,20 +2680,6 @@
           "score": 4,
           "matchedTerms": [
             "大小"
-          ]
-        },
-        {
-          "card": "分页与分段的区别",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "伙伴系统与内存回收",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
           ]
         }
       ]
@@ -2706,17 +2708,17 @@
           ]
         },
         {
+          "card": "TLB 与快表命中",
+          "score": 3,
+          "matchedTerms": [
+            "ns"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 2,
           "matchedTerms": [
             "服务"
-          ]
-        },
-        {
-          "card": "工作集与抖动",
-          "score": 1,
-          "matchedTerms": [
-            "使用的"
           ]
         },
         {
@@ -5026,13 +5028,6 @@
           ]
         },
         {
-          "card": "工作集与抖动",
-          "score": 1,
-          "matchedTerms": [
-            "使用的"
-          ]
-        },
-        {
           "card": "缓冲区与缓冲池",
           "score": 1,
           "matchedTerms": [
@@ -5143,17 +5138,17 @@
           ]
         },
         {
-          "card": "调度评价指标",
-          "score": 2,
+          "card": "缺页异常处理流程",
+          "score": 4,
           "matchedTerms": [
-            "到达"
+            "更新"
           ]
         },
         {
-          "card": "进程调度算法",
-          "score": 2,
+          "card": "虚拟内存与页面置换",
+          "score": 4,
           "matchedTerms": [
-            "到达"
+            "更新"
           ]
         }
       ]
@@ -5203,6 +5198,16 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "虚拟内存与页面置换",
+          "score": 7,
+          "matchedTerms": [
+            "分配",
+            "地址空",
+            "址空间",
+            "地址空间"
+          ]
+        },
+        {
           "card": "FAT链接分配与簇链访问",
           "score": 7,
           "matchedTerms": [
@@ -5235,13 +5240,6 @@
             "地址空",
             "址空间",
             "地址空间"
-          ]
-        },
-        {
-          "card": "处理机调度层次",
-          "score": 3,
-          "matchedTerms": [
-            "分配"
           ]
         }
       ]
@@ -5283,17 +5281,17 @@
           ]
         },
         {
+          "card": "TLB 与快表命中",
+          "score": 2,
+          "matchedTerms": [
+            "时为"
+          ]
+        },
+        {
           "card": "多阶段流水线的信号量同步",
           "score": 1,
           "matchedTerms": [
             "量建立"
-          ]
-        },
-        {
-          "card": "目录结构与文件路径",
-          "score": 1,
-          "matchedTerms": [
-            "信息的"
           ]
         }
       ]
@@ -5335,19 +5333,19 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 5,
+          "matchedTerms": [
+            "字节",
+            "大小的"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 5,
           "matchedTerms": [
             "字节",
             "字节数"
-          ]
-        },
-        {
-          "card": "哲学家进餐与死锁避免",
-          "score": 4,
-          "matchedTerms": [
-            "min",
-            "较小的"
           ]
         }
       ]
@@ -5367,17 +5365,19 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "TLB 与快表命中",
+          "score": 8,
+          "matchedTerms": [
+            "缓存",
+            "ns",
+            "查询"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 3,
           "matchedTerms": [
             "地址"
-          ]
-        },
-        {
-          "card": "TLB 与快表命中",
-          "score": 3,
-          "matchedTerms": [
-            "缓存"
           ]
         },
         {
@@ -5808,6 +5808,14 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 7,
+          "matchedTerms": [
+            "字节",
+            "mb"
+          ]
+        },
+        {
           "card": "FAT链接分配与簇链访问",
           "score": 7,
           "matchedTerms": [
@@ -5820,15 +5828,6 @@
           "score": 6,
           "matchedTerms": [
             "检测"
-          ]
-        },
-        {
-          "card": "文件共享与保护",
-          "score": 6,
-          "matchedTerms": [
-            "访问控",
-            "问控制",
-            "访问控制"
           ]
         }
       ]
@@ -8058,6 +8057,13 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 4,
+          "matchedTerms": [
+            "字节"
+          ]
+        },
+        {
           "card": "FAT链接分配与簇链访问",
           "score": 4,
           "matchedTerms": [
@@ -8069,13 +8075,6 @@
           "score": 3,
           "matchedTerms": [
             "c1"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 3,
-          "matchedTerms": [
-            "字节"
           ]
         }
       ]
@@ -10529,10 +10528,10 @@
           ]
         },
         {
-          "card": "工作集与抖动",
+          "card": "进程与线程",
           "score": 1,
           "matchedTerms": [
-            "的工作"
+            "题考查"
           ]
         }
       ]
@@ -10555,13 +10554,6 @@
           "matchedTerms": [
             "服务",
             "完成"
-          ]
-        },
-        {
-          "card": "工作集与抖动",
-          "score": 1,
-          "matchedTerms": [
-            "的工作"
           ]
         },
         {
@@ -10592,8 +10584,16 @@
       "existingCards": [
         "GBN 后退 N 帧协议"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "页表结构与地址转换",
+          "score": 9,
+          "matchedTerms": [
+            "kb",
+            "字节"
+          ]
+        },
         {
           "card": "页表项地址计算与页框号",
           "score": 7,
@@ -10627,16 +10627,6 @@
             "少需要",
             "至少需要",
             "与数据"
-          ]
-        },
-        {
-          "card": "文件逻辑结构与物理结构",
-          "score": 4,
-          "matchedTerms": [
-            "的数据",
-            "多少数",
-            "少数据",
-            "多少数据"
           ]
         }
       ]
@@ -10719,6 +10709,13 @@
           ]
         },
         {
+          "card": "TLB 与快表命中",
+          "score": 2,
+          "matchedTerms": [
+            "查询"
+          ]
+        },
+        {
           "card": "文件逻辑结构与物理结构",
           "score": 1,
           "matchedTerms": [
@@ -10770,17 +10767,17 @@
           ]
         },
         {
-          "card": "FAT链接分配与簇链访问",
+          "card": "页表结构与地址转换",
           "score": 4,
           "matchedTerms": [
             "字节"
           ]
         },
         {
-          "card": "临界区与共享缓冲区",
-          "score": 3,
+          "card": "FAT链接分配与簇链访问",
+          "score": 4,
           "matchedTerms": [
-            "c1"
+            "字节"
           ]
         }
       ]
@@ -13055,17 +13052,17 @@
           ]
         },
         {
-          "card": "缺页异常与页表更新",
-          "score": 4,
+          "card": "虚拟内存与页面置换",
+          "score": 5,
           "matchedTerms": [
             "os"
           ]
         },
         {
-          "card": "调度评价指标",
-          "score": 2,
+          "card": "缺页异常处理流程",
+          "score": 4,
           "matchedTerms": [
-            "完成"
+            "os"
           ]
         }
       ]
@@ -13151,19 +13148,19 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 8,
+          "matchedTerms": [
+            "kb",
+            "mb"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 6,
           "matchedTerms": [
             "c1",
             "一次时"
-          ]
-        },
-        {
-          "card": "页表结构与地址转换",
-          "score": 6,
-          "matchedTerms": [
-            "kb",
-            "mb"
           ]
         },
         {
@@ -13188,15 +13185,6 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
-        {
-          "card": "工作集与抖动",
-          "score": 6,
-          "matchedTerms": [
-            "可能发",
-            "能发生",
-            "可能发生"
-          ]
-        },
         {
           "card": "文件共享与保护",
           "score": 6,
@@ -13348,6 +13336,13 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 4,
+          "matchedTerms": [
+            "字节"
+          ]
+        },
+        {
           "card": "FAT链接分配与簇链访问",
           "score": 4,
           "matchedTerms": [
@@ -13360,13 +13355,6 @@
           "matchedTerms": [
             "开始",
             "下一个"
-          ]
-        },
-        {
-          "card": "读者写者问题",
-          "score": 1,
-          "matchedTerms": [
-            "第一个"
           ]
         }
       ]
@@ -15712,22 +15700,22 @@
           ]
         },
         {
-          "card": "缺页异常与页表更新",
+          "card": "虚拟内存与页面置换",
+          "score": 5,
+          "matchedTerms": [
+            "os"
+          ]
+        },
+        {
+          "card": "缺页异常处理流程",
           "score": 4,
           "matchedTerms": [
             "os"
           ]
         },
         {
-          "card": "磁盘引导与格式化流程",
-          "score": 3,
-          "matchedTerms": [
-            "os"
-          ]
-        },
-        {
-          "card": "文件逻辑结构与物理结构",
-          "score": 3,
+          "card": "缺页异常与页表更新",
+          "score": 4,
           "matchedTerms": [
             "os"
           ]
@@ -15864,6 +15852,14 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 7,
+          "matchedTerms": [
+            "字节",
+            "mb"
+          ]
+        },
+        {
           "card": "改进型 CLOCK 页面置换",
           "score": 4,
           "matchedTerms": [
@@ -15878,13 +15874,6 @@
             "多少数",
             "少数据",
             "多少数据"
-          ]
-        },
-        {
-          "card": "FAT链接分配与簇链访问",
-          "score": 4,
-          "matchedTerms": [
-            "字节"
           ]
         }
       ]
@@ -15972,18 +15961,18 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 6,
+          "matchedTerms": [
+            "kb",
+            "大小的"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 5,
           "matchedTerms": [
             "c1"
-          ]
-        },
-        {
-          "card": "内存分配与页面管理",
-          "score": 4,
-          "matchedTerms": [
-            "kb",
-            "大小的"
           ]
         }
       ]
@@ -16069,6 +16058,14 @@
           ]
         },
         {
+          "card": "TLB 与快表命中",
+          "score": 5,
+          "matchedTerms": [
+            "ns",
+            "查询"
+          ]
+        },
+        {
           "card": "互斥锁、自旋锁与信号量",
           "score": 3,
           "matchedTerms": [
@@ -16079,13 +16076,6 @@
         },
         {
           "card": "进程调度算法",
-          "score": 3,
-          "matchedTerms": [
-            "p2"
-          ]
-        },
-        {
-          "card": "死锁必要条件与处理",
           "score": 3,
           "matchedTerms": [
             "p2"
@@ -18365,13 +18355,6 @@
           ]
         },
         {
-          "card": "工作集与抖动",
-          "score": 1,
-          "matchedTerms": [
-            "使用的"
-          ]
-        },
-        {
           "card": "缓冲区与缓冲池",
           "score": 1,
           "matchedTerms": [
@@ -18436,8 +18419,16 @@
       "existingCards": [
         "停止等待协议与利用率"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "页表结构与地址转换",
+          "score": 9,
+          "matchedTerms": [
+            "kb",
+            "字节"
+          ]
+        },
         {
           "card": "多阶段流水线的信号量同步",
           "score": 6,
@@ -18465,13 +18456,6 @@
           "score": 4,
           "matchedTerms": [
             "字节"
-          ]
-        },
-        {
-          "card": "分页与分段的区别",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
           ]
         }
       ]
@@ -18650,6 +18634,14 @@
           ]
         },
         {
+          "card": "虚拟内存与页面置换",
+          "score": 7,
+          "matchedTerms": [
+            "分配",
+            "kb"
+          ]
+        },
+        {
           "card": "进程虚拟地址空间与段布局",
           "score": 6,
           "matchedTerms": [
@@ -18664,18 +18656,11 @@
           ]
         },
         {
-          "card": "伙伴系统与内存回收",
-          "score": 5,
+          "card": "页表结构与地址转换",
+          "score": 6,
           "matchedTerms": [
             "kb",
-            "分配"
-          ]
-        },
-        {
-          "card": "信号量同步与互斥",
-          "score": 5,
-          "matchedTerms": [
-            "c1"
+            "大小的"
           ]
         }
       ]
@@ -18695,6 +18680,20 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "虚拟内存与页面置换",
+          "score": 5,
+          "matchedTerms": [
+            "os"
+          ]
+        },
+        {
+          "card": "缺页异常处理流程",
+          "score": 4,
+          "matchedTerms": [
+            "os"
+          ]
+        },
+        {
           "card": "缺页异常与页表更新",
           "score": 4,
           "matchedTerms": [
@@ -18713,21 +18712,6 @@
           "score": 3,
           "matchedTerms": [
             "bin"
-          ]
-        },
-        {
-          "card": "文件逻辑结构与物理结构",
-          "score": 3,
-          "matchedTerms": [
-            "os"
-          ]
-        },
-        {
-          "card": "FIFO、LRU 与 OPT 页面置换",
-          "score": 3,
-          "matchedTerms": [
-            "访问",
-            "访问过"
           ]
         }
       ]
@@ -20981,18 +20965,18 @@
           ]
         },
         {
+          "card": "虚拟内存与页面置换",
+          "score": 5,
+          "matchedTerms": [
+            "os"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 5,
           "matchedTerms": [
             "本题",
             "和物理"
-          ]
-        },
-        {
-          "card": "缺页异常与页表更新",
-          "score": 4,
-          "matchedTerms": [
-            "os"
           ]
         }
       ]
@@ -21009,6 +20993,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "页表结构与地址转换",
+          "score": 5,
+          "matchedTerms": [
+            "kb"
+          ]
+        },
         {
           "card": "页表项地址计算与页框号",
           "score": 5,
@@ -21034,13 +21025,6 @@
         },
         {
           "card": "伙伴系统与内存回收",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "连续内存分配与动态分区",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -21165,17 +21149,17 @@
           ]
         },
         {
-          "card": "缺页异常与页表更新",
+          "card": "缺页异常处理流程",
           "score": 4,
           "matchedTerms": [
             "更新"
           ]
         },
         {
-          "card": "临界区与共享缓冲区",
-          "score": 3,
+          "card": "缺页异常与页表更新",
+          "score": 4,
           "matchedTerms": [
-            "c1"
+            "更新"
           ]
         }
       ]
@@ -21248,15 +21232,6 @@
       "confidence": "low-candidate",
       "candidates": [
         {
-          "card": "工作集与抖动",
-          "score": 6,
-          "matchedTerms": [
-            "可能发",
-            "能发生",
-            "可能发生"
-          ]
-        },
-        {
           "card": "死锁资源分配图",
           "score": 4,
           "matchedTerms": [
@@ -21279,10 +21254,17 @@
           ]
         },
         {
-          "card": "TLB 与快表命中",
-          "score": 3,
+          "card": "FIFO、LRU 与 OPT 页面置换",
+          "score": 2,
           "matchedTerms": [
-            "ch"
+            "访问"
+          ]
+        },
+        {
+          "card": "读者写者问题",
+          "score": 1,
+          "matchedTerms": [
+            "不能与"
           ]
         }
       ]
@@ -21299,6 +21281,15 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "TLB 与快表命中",
+          "score": 8,
+          "matchedTerms": [
+            "缓存",
+            "ns",
+            "查询"
+          ]
+        },
         {
           "card": "改进型 CLOCK 页面置换",
           "score": 6,
@@ -21329,13 +21320,6 @@
           ]
         },
         {
-          "card": "TLB 与快表命中",
-          "score": 3,
-          "matchedTerms": [
-            "缓存"
-          ]
-        },
-        {
           "card": "磁盘调度 FCFS 与 SSTF",
           "score": 2,
           "matchedTerms": [
@@ -21362,9 +21346,28 @@
           "matchedTerms": [
             "缓存",
             "最后",
-            "ch",
+            "ns",
             "kb",
             "忽略"
+          ]
+        },
+        {
+          "card": "页表结构与地址转换",
+          "score": 12,
+          "matchedTerms": [
+            "kb",
+            "字节",
+            "取出",
+            "大小的"
+          ]
+        },
+        {
+          "card": "虚拟内存与页面置换",
+          "score": 9,
+          "matchedTerms": [
+            "分配",
+            "kb",
+            "最后"
           ]
         },
         {
@@ -21383,23 +21386,6 @@
             "r1",
             "r2",
             "完成后"
-          ]
-        },
-        {
-          "card": "伙伴系统与内存回收",
-          "score": 7,
-          "matchedTerms": [
-            "kb",
-            "分配",
-            "请求"
-          ]
-        },
-        {
-          "card": "进程虚拟地址空间与段布局",
-          "score": 7,
-          "matchedTerms": [
-            "数据段",
-            "图中的"
           ]
         }
       ]
@@ -23731,6 +23717,20 @@
           ]
         },
         {
+          "card": "虚拟内存与页面置换",
+          "score": 5,
+          "matchedTerms": [
+            "os"
+          ]
+        },
+        {
+          "card": "缺页异常处理流程",
+          "score": 4,
+          "matchedTerms": [
+            "os"
+          ]
+        },
+        {
           "card": "缺页异常与页表更新",
           "score": 4,
           "matchedTerms": [
@@ -23893,8 +23893,24 @@
       "existingCards": [
         "分层体系结构与封装"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "虚拟内存与页面置换",
+          "score": 10,
+          "matchedTerms": [
+            "cpu",
+            "os"
+          ]
+        },
+        {
+          "card": "缺页异常处理流程",
+          "score": 9,
+          "matchedTerms": [
+            "cpu",
+            "os"
+          ]
+        },
         {
           "card": "进程调度算法",
           "score": 7,
@@ -23912,20 +23928,6 @@
         },
         {
           "card": "互斥锁、自旋锁与信号量",
-          "score": 5,
-          "matchedTerms": [
-            "cpu"
-          ]
-        },
-        {
-          "card": "缓冲区与缓冲池",
-          "score": 5,
-          "matchedTerms": [
-            "cpu"
-          ]
-        },
-        {
-          "card": "内核态与用户态特权级",
           "score": 5,
           "matchedTerms": [
             "cpu"
@@ -23954,6 +23956,13 @@
           ]
         },
         {
+          "card": "虚拟内存与页面置换",
+          "score": 4,
+          "matchedTerms": [
+            "分配"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 4,
           "matchedTerms": [
@@ -23970,13 +23979,6 @@
         },
         {
           "card": "进程创建与终止",
-          "score": 2,
-          "matchedTerms": [
-            "分配"
-          ]
-        },
-        {
-          "card": "缺页异常处理流程",
           "score": 2,
           "matchedTerms": [
             "分配"
@@ -24012,6 +24014,13 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 5,
+          "matchedTerms": [
+            "kb"
+          ]
+        },
+        {
           "card": "分页与分段的区别",
           "score": 3,
           "matchedTerms": [
@@ -24020,13 +24029,6 @@
         },
         {
           "card": "伙伴系统与内存回收",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "连续内存分配与动态分区",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -26400,6 +26402,20 @@
           ]
         },
         {
+          "card": "虚拟内存与页面置换",
+          "score": 5,
+          "matchedTerms": [
+            "os"
+          ]
+        },
+        {
+          "card": "缺页异常处理流程",
+          "score": 4,
+          "matchedTerms": [
+            "os"
+          ]
+        },
+        {
           "card": "缺页异常与页表更新",
           "score": 4,
           "matchedTerms": [
@@ -26412,20 +26428,6 @@
           "matchedTerms": [
             "os",
             "的数据"
-          ]
-        },
-        {
-          "card": "磁盘引导与格式化流程",
-          "score": 3,
-          "matchedTerms": [
-            "os"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 3,
-          "matchedTerms": [
-            "地址"
           ]
         }
       ]
@@ -26440,8 +26442,16 @@
       "answer": "D",
       "analysis": "2018-第36题-解析 信道利用率 = 传输帧的有效时间／传输帧的周期。假设帧的长度为 x 比特。对于有效时间，应该用帧的大小除以数据传输速率，即 x/3kbps。对于帧的传输周期，应包含 4 个部分：帧在发送端的发送时延、帧从发送端到接收端的单程传播时延、确认帧在接收端的发送时延、确认帧从接收端到发送端的单程传播时延。这 4 个时延中，由于题目中说“忽略确认帧的传输延时”，因此不计算确认帧的发送时延（注意传输时延和传播时延的区别，传输时延也称发送时延，和传播时延只有一字之差）。所以帧的传输周期由三部分组成：首先是帧在发送端的发送时延 x/3kbps，其次是帧从发送端到接收端的单程传播时延 200ms，最后是确认帧从接收端到发送端的单程传播时延 200ms，三者相加可得其周期应为 x/3kbps + 400ms。代入信道利用率的公式，求出 x = 800bit。答案选 D。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "页表结构与地址转换",
+          "score": 9,
+          "matchedTerms": [
+            "kb",
+            "组成"
+          ]
+        },
         {
           "card": "改进型 CLOCK 页面置换",
           "score": 8,
@@ -26460,24 +26470,18 @@
           ]
         },
         {
-          "card": "FAT链接分配与簇链访问",
+          "card": "虚拟内存与页面置换",
+          "score": 5,
+          "matchedTerms": [
+            "kb",
+            "最后"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
           "score": 4,
           "matchedTerms": [
             "大小"
-          ]
-        },
-        {
-          "card": "调度评价指标",
-          "score": 3,
-          "matchedTerms": [
-            "利用率"
-          ]
-        },
-        {
-          "card": "分页与分段的区别",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
           ]
         }
       ]
@@ -26571,17 +26575,18 @@
           ]
         },
         {
+          "card": "虚拟内存与页面置换",
+          "score": 3,
+          "matchedTerms": [
+            "位数",
+            "由地址"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 3,
           "matchedTerms": [
             "地址"
-          ]
-        },
-        {
-          "card": "页表结构与地址转换",
-          "score": 2,
-          "matchedTerms": [
-            "得到"
           ]
         }
       ]
@@ -29091,15 +29096,15 @@
           ]
         },
         {
-          "card": "缺页异常与页表更新",
-          "score": 4,
+          "card": "虚拟内存与页面置换",
+          "score": 5,
           "matchedTerms": [
             "os"
           ]
         },
         {
-          "card": "文件逻辑结构与物理结构",
-          "score": 3,
+          "card": "缺页异常处理流程",
+          "score": 4,
           "matchedTerms": [
             "os"
           ]
@@ -29135,13 +29140,6 @@
           ]
         },
         {
-          "card": "工作集与抖动",
-          "score": 1,
-          "matchedTerms": [
-            "使用的"
-          ]
-        },
-        {
           "card": "缓冲区与缓冲池",
           "score": 1,
           "matchedTerms": [
@@ -29173,6 +29171,13 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 4,
+          "matchedTerms": [
+            "大小"
+          ]
+        },
+        {
           "card": "文件控制块 FCB 与目录查找",
           "score": 3,
           "matchedTerms": [
@@ -29191,13 +29196,6 @@
           "score": 2,
           "matchedTerms": [
             "限制"
-          ]
-        },
-        {
-          "card": "缓冲区与缓冲池",
-          "score": 1,
-          "matchedTerms": [
-            "缓存的"
           ]
         }
       ]
@@ -29275,6 +29273,13 @@
           ]
         },
         {
+          "card": "虚拟内存与页面置换",
+          "score": 4,
+          "matchedTerms": [
+            "分配"
+          ]
+        },
+        {
           "card": "处理机调度层次",
           "score": 3,
           "matchedTerms": [
@@ -29290,13 +29295,6 @@
         },
         {
           "card": "进程创建与终止",
-          "score": 2,
-          "matchedTerms": [
-            "分配"
-          ]
-        },
-        {
-          "card": "缺页异常处理流程",
           "score": 2,
           "matchedTerms": [
             "分配"
@@ -31816,10 +31814,10 @@
           ]
         },
         {
-          "card": "页表项地址计算与页框号",
+          "card": "页表结构与地址转换",
           "score": 4,
           "matchedTerms": [
-            "本题"
+            "组成"
           ]
         }
       ]
@@ -31845,6 +31843,13 @@
           ]
         },
         {
+          "card": "虚拟内存与页面置换",
+          "score": 4,
+          "matchedTerms": [
+            "分配"
+          ]
+        },
+        {
           "card": "处理机调度层次",
           "score": 3,
           "matchedTerms": [
@@ -31863,13 +31868,6 @@
           "score": 2,
           "matchedTerms": [
             "分配"
-          ]
-        },
-        {
-          "card": "进程调度算法",
-          "score": 2,
-          "matchedTerms": [
-            "到达"
           ]
         }
       ]
@@ -31908,6 +31906,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "页表结构与地址转换",
+          "score": 5,
+          "matchedTerms": [
+            "kb"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 3,
           "matchedTerms": [
@@ -31930,13 +31935,6 @@
         },
         {
           "card": "连续内存分配与动态分区",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "内存分配与页面管理",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -31976,6 +31974,14 @@
           ]
         },
         {
+          "card": "缺页异常处理流程",
+          "score": 5,
+          "matchedTerms": [
+            "等待",
+            "访问的"
+          ]
+        },
+        {
           "card": "FIFO、LRU 与 OPT 页面置换",
           "score": 5,
           "matchedTerms": [
@@ -31990,14 +31996,6 @@
           "matchedTerms": [
             "完成",
             "等待时"
-          ]
-        },
-        {
-          "card": "动态优先级与饥饿避免",
-          "score": 3,
-          "matchedTerms": [
-            "等待时",
-            "优先级"
           ]
         }
       ]
@@ -32041,14 +32039,14 @@
           ]
         },
         {
-          "card": "分页与分段的区别",
-          "score": 3,
+          "card": "页表结构与地址转换",
+          "score": 5,
           "matchedTerms": [
             "kb"
           ]
         },
         {
-          "card": "伙伴系统与内存回收",
+          "card": "分页与分段的区别",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -32078,6 +32076,13 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 4,
+          "matchedTerms": [
+            "字节"
+          ]
+        },
+        {
           "card": "FAT链接分配与簇链访问",
           "score": 4,
           "matchedTerms": [
@@ -32097,13 +32102,6 @@
           "matchedTerms": [
             "数据的"
           ]
-        },
-        {
-          "card": "系统调用与用户态内核态",
-          "score": 1,
-          "matchedTerms": [
-            "字节数"
-          ]
         }
       ]
     },
@@ -32119,8 +32117,18 @@
       "existingCards": [
         "网络性能指标与时延"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "TLB 与快表命中",
+          "score": 10,
+          "matchedTerms": [
+            "映射",
+            "ns",
+            "查询",
+            "忽略"
+          ]
+        },
         {
           "card": "文件物理分配方式",
           "score": 8,
@@ -32152,13 +32160,6 @@
           "score": 6,
           "matchedTerms": [
             "直接"
-          ]
-        },
-        {
-          "card": "信号量同步与互斥",
-          "score": 5,
-          "matchedTerms": [
-            "c2"
           ]
         }
       ]
@@ -34388,25 +34389,24 @@
           ]
         },
         {
-          "card": "缺页异常与页表更新",
+          "card": "虚拟内存与页面置换",
+          "score": 5,
+          "matchedTerms": [
+            "os"
+          ]
+        },
+        {
+          "card": "缺页异常处理流程",
           "score": 4,
           "matchedTerms": [
             "os"
           ]
         },
         {
-          "card": "磁盘引导与格式化流程",
-          "score": 3,
+          "card": "缺页异常与页表更新",
+          "score": 4,
           "matchedTerms": [
             "os"
-          ]
-        },
-        {
-          "card": "进程调度算法",
-          "score": 3,
-          "matchedTerms": [
-            "到达",
-            "使用一"
           ]
         }
       ]
@@ -34480,6 +34480,13 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 4,
+          "matchedTerms": [
+            "组成"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 4,
           "matchedTerms": [
@@ -34500,13 +34507,6 @@
             "至少需",
             "少需要",
             "至少需要"
-          ]
-        },
-        {
-          "card": "分页与分段的区别",
-          "score": 1,
-          "matchedTerms": [
-            "划分为"
           ]
         }
       ]
@@ -34544,6 +34544,14 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 6,
+          "matchedTerms": [
+            "字节",
+            "偏移"
+          ]
+        },
+        {
           "card": "TLB 与快表命中",
           "score": 6,
           "matchedTerms": [
@@ -34556,13 +34564,6 @@
           "score": 4,
           "matchedTerms": [
             "最后"
-          ]
-        },
-        {
-          "card": "页表结构与地址转换",
-          "score": 2,
-          "matchedTerms": [
-            "偏移"
           ]
         }
       ]
@@ -34587,7 +34588,21 @@
           ]
         },
         {
+          "card": "缺页异常处理流程",
+          "score": 4,
+          "matchedTerms": [
+            "更新"
+          ]
+        },
+        {
           "card": "缺页异常与页表更新",
+          "score": 4,
+          "matchedTerms": [
+            "更新"
+          ]
+        },
+        {
+          "card": "虚拟内存与页面置换",
           "score": 4,
           "matchedTerms": [
             "更新"
@@ -34600,21 +34615,6 @@
             "需要通",
             "要通过",
             "需要通过"
-          ]
-        },
-        {
-          "card": "调度评价指标",
-          "score": 2,
-          "matchedTerms": [
-            "到达"
-          ]
-        },
-        {
-          "card": "工作集与抖动",
-          "score": 2,
-          "matchedTerms": [
-            "使用的",
-            "需要的"
           ]
         }
       ]
@@ -34645,6 +34645,14 @@
           ]
         },
         {
+          "card": "缺页异常处理流程",
+          "score": 8,
+          "matchedTerms": [
+            "等待",
+            "os"
+          ]
+        },
+        {
           "card": "多阶段流水线的信号量同步",
           "score": 7,
           "matchedTerms": [
@@ -34660,16 +34668,8 @@
           ]
         },
         {
-          "card": "页表项地址计算与页框号",
+          "card": "虚拟内存与页面置换",
           "score": 5,
-          "matchedTerms": [
-            "本题",
-            "题目若"
-          ]
-        },
-        {
-          "card": "缺页异常与页表更新",
-          "score": 4,
           "matchedTerms": [
             "os"
           ]
@@ -34694,6 +34694,13 @@
           "matchedTerms": [
             "大小",
             "8b"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
+          "score": 4,
+          "matchedTerms": [
+            "大小"
           ]
         },
         {
@@ -34741,6 +34748,13 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 4,
+          "matchedTerms": [
+            "字节"
+          ]
+        },
+        {
           "card": "FAT链接分配与簇链访问",
           "score": 4,
           "matchedTerms": [
@@ -34759,13 +34773,6 @@
           "score": 1,
           "matchedTerms": [
             "数据的"
-          ]
-        },
-        {
-          "card": "文件逻辑结构与物理结构",
-          "score": 1,
-          "matchedTerms": [
-            "的数据"
           ]
         }
       ]
@@ -37122,24 +37129,24 @@
           ]
         },
         {
-          "card": "缺页异常与页表更新",
+          "card": "虚拟内存与页面置换",
+          "score": 5,
+          "matchedTerms": [
+            "os"
+          ]
+        },
+        {
+          "card": "缺页异常处理流程",
           "score": 4,
           "matchedTerms": [
             "os"
           ]
         },
         {
-          "card": "文件逻辑结构与物理结构",
-          "score": 3,
+          "card": "缺页异常与页表更新",
+          "score": 4,
           "matchedTerms": [
             "os"
-          ]
-        },
-        {
-          "card": "线程模型与多线程映射",
-          "score": 1,
-          "matchedTerms": [
-            "模型中"
           ]
         }
       ]
@@ -37156,6 +37163,13 @@
       "existingCards": [],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "页表结构与地址转换",
+          "score": 5,
+          "matchedTerms": [
+            "kb"
+          ]
+        },
         {
           "card": "分页与分段的区别",
           "score": 3,
@@ -37179,13 +37193,6 @@
         },
         {
           "card": "内存分配与页面管理",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "索引结点 inode 与文件控制块",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -37235,10 +37242,10 @@
           ]
         },
         {
-          "card": "页表结构与地址转换",
-          "score": 2,
+          "card": "缺页异常与页表更新",
+          "score": 1,
           "matchedTerms": [
-            "得到"
+            "地址可"
           ]
         }
       ]
@@ -37260,6 +37267,13 @@
           "score": 5,
           "matchedTerms": [
             "c2"
+          ]
+        },
+        {
+          "card": "工作集与抖动",
+          "score": 3,
+          "matchedTerms": [
+            "最近"
           ]
         },
         {
@@ -37313,13 +37327,6 @@
           ]
         },
         {
-          "card": "工作集与抖动",
-          "score": 1,
-          "matchedTerms": [
-            "使用的"
-          ]
-        },
-        {
           "card": "缓冲区与缓冲池",
           "score": 1,
           "matchedTerms": [
@@ -37328,6 +37335,13 @@
         },
         {
           "card": "文件物理分配方式",
+          "score": 1,
+          "matchedTerms": [
+            "和数据"
+          ]
+        },
+        {
+          "card": "文件系统与目录",
           "score": 1,
           "matchedTerms": [
             "和数据"
@@ -37363,6 +37377,13 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 5,
+          "matchedTerms": [
+            "kb"
+          ]
+        },
+        {
           "card": "改进型 CLOCK 页面置换",
           "score": 4,
           "matchedTerms": [
@@ -37371,13 +37392,6 @@
         },
         {
           "card": "分页与分段的区别",
-          "score": 3,
-          "matchedTerms": [
-            "kb"
-          ]
-        },
-        {
-          "card": "伙伴系统与内存回收",
           "score": 3,
           "matchedTerms": [
             "kb"
@@ -37421,15 +37435,15 @@
           ]
         },
         {
-          "card": "缺页异常与页表更新",
-          "score": 4,
+          "card": "虚拟内存与页面置换",
+          "score": 5,
           "matchedTerms": [
             "os"
           ]
         },
         {
-          "card": "磁盘引导与格式化流程",
-          "score": 3,
+          "card": "缺页异常处理流程",
+          "score": 4,
           "matchedTerms": [
             "os"
           ]
@@ -39924,17 +39938,17 @@
           ]
         },
         {
-          "card": "文件控制块 FCB 与目录查找",
-          "score": 3,
+          "card": "工作集与抖动",
+          "score": 4,
           "matchedTerms": [
             "大小"
           ]
         },
         {
-          "card": "页表结构与地址转换",
+          "card": "文件控制块 FCB 与目录查找",
           "score": 3,
           "matchedTerms": [
-            "mb"
+            "大小"
           ]
         }
       ]
@@ -40002,6 +40016,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "工作集与抖动",
+          "score": 4,
+          "matchedTerms": [
+            "大小"
+          ]
+        },
+        {
           "card": "FAT链接分配与簇链访问",
           "score": 4,
           "matchedTerms": [
@@ -40023,17 +40044,10 @@
           ]
         },
         {
-          "card": "SCAN 与 C-SCAN 磁盘调度",
+          "card": "虚拟内存与页面置换",
           "score": 2,
           "matchedTerms": [
-            "忽略"
-          ]
-        },
-        {
-          "card": "TLB 与快表命中",
-          "score": 2,
-          "matchedTerms": [
-            "忽略"
+            "位数"
           ]
         }
       ]
@@ -40143,10 +40157,10 @@
           ]
         },
         {
-          "card": "页表结构与地址转换",
-          "score": 2,
+          "card": "改进型 CLOCK 页面置换",
+          "score": 1,
           "matchedTerms": [
-            "得到"
+            "过程中"
           ]
         }
       ]
@@ -40175,6 +40189,17 @@
           ]
         },
         {
+          "card": "虚拟内存与页面置换",
+          "score": 9,
+          "matchedTerms": [
+            "分配",
+            "最后",
+            "地址转",
+            "址转换",
+            "地址转换"
+          ]
+        },
+        {
           "card": "读者写者问题",
           "score": 7,
           "matchedTerms": [
@@ -40197,14 +40222,6 @@
           "score": 6,
           "matchedTerms": [
             "功能"
-          ]
-        },
-        {
-          "card": "死锁必要条件与处理",
-          "score": 6,
-          "matchedTerms": [
-            "r1",
-            "r2"
           ]
         }
       ]
@@ -40237,6 +40254,13 @@
           ]
         },
         {
+          "card": "虚拟内存与页面置换",
+          "score": 4,
+          "matchedTerms": [
+            "分配"
+          ]
+        },
+        {
           "card": "处理机调度层次",
           "score": 3,
           "matchedTerms": [
@@ -40248,13 +40272,6 @@
           "score": 3,
           "matchedTerms": [
             "c1"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 3,
-          "matchedTerms": [
-            "地址"
           ]
         }
       ]
@@ -42742,6 +42759,13 @@
           ]
         },
         {
+          "card": "工作集与抖动",
+          "score": 2,
+          "matchedTerms": [
+            "不是"
+          ]
+        },
+        {
           "card": "目录结构与文件路径",
           "score": 2,
           "matchedTerms": [
@@ -42802,17 +42826,6 @@
           ]
         },
         {
-          "card": "TLB 与快表命中",
-          "score": 11,
-          "matchedTerms": [
-            "缓存",
-            "时直接",
-            "物理地",
-            "理地址",
-            "物理地址"
-          ]
-        },
-        {
           "card": "信号量同步与互斥",
           "score": 10,
           "matchedTerms": [
@@ -42831,6 +42844,17 @@
             "的物理地",
             "物理地址",
             "的物理地址"
+          ]
+        },
+        {
+          "card": "TLB 与快表命中",
+          "score": 8,
+          "matchedTerms": [
+            "缓存",
+            "查询",
+            "物理地",
+            "理地址",
+            "物理地址"
           ]
         }
       ]
@@ -42853,6 +42877,16 @@
           "matchedTerms": [
             "避免",
             "避免在"
+          ]
+        },
+        {
+          "card": "虚拟内存与页面置换",
+          "score": 8,
+          "matchedTerms": [
+            "分配",
+            "最后",
+            "长时间",
+            "访问的"
           ]
         },
         {
@@ -42880,13 +42914,6 @@
           "matchedTerms": [
             "c3"
           ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 5,
-          "matchedTerms": [
-            "mb"
-          ]
         }
       ]
     },
@@ -42904,6 +42931,14 @@
       ],
       "confidence": "low-candidate",
       "candidates": [
+        {
+          "card": "工作集与抖动",
+          "score": 6,
+          "matchedTerms": [
+            "大小",
+            "不是"
+          ]
+        },
         {
           "card": "信号量同步与互斥",
           "score": 4,
@@ -42926,17 +42961,10 @@
           ]
         },
         {
-          "card": "磁盘调度与 I/O",
-          "score": 1,
+          "card": "虚拟内存与页面置换",
+          "score": 2,
           "matchedTerms": [
-            "下一个"
-          ]
-        },
-        {
-          "card": "工作集与抖动",
-          "score": 1,
-          "matchedTerms": [
-            "时刻和"
+            "位数"
           ]
         }
       ]
@@ -42962,32 +42990,33 @@
           ]
         },
         {
-          "card": "进程状态与 PCB",
-          "score": 4,
+          "card": "缺页异常处理流程",
+          "score": 8,
           "matchedTerms": [
-            "状态"
+            "等待",
+            "os"
           ]
         },
         {
-          "card": "缺页异常与页表更新",
-          "score": 4,
+          "card": "虚拟内存与页面置换",
+          "score": 5,
           "matchedTerms": [
             "os"
           ]
         },
         {
-          "card": "死锁资源分配图",
-          "score": 4,
+          "card": "TLB 与快表命中",
+          "score": 5,
           "matchedTerms": [
-            "等待的",
-            "构成"
+            "ns",
+            "忽略"
           ]
         },
         {
-          "card": "文件系统与目录",
+          "card": "进程状态与 PCB",
           "score": 4,
           "matchedTerms": [
-            "链接"
+            "状态"
           ]
         }
       ]
@@ -43038,10 +43067,11 @@
           ]
         },
         {
-          "card": "FAT链接分配与簇链访问",
+          "card": "虚拟内存与页面置换",
           "score": 4,
           "matchedTerms": [
-            "字节"
+            "位数",
+            "最后"
           ]
         }
       ]
@@ -43075,6 +43105,13 @@
           ]
         },
         {
+          "card": "页表结构与地址转换",
+          "score": 4,
+          "matchedTerms": [
+            "页面"
+          ]
+        },
+        {
           "card": "磁盘调度与 I/O",
           "score": 3,
           "matchedTerms": [
@@ -43087,13 +43124,6 @@
           "score": 3,
           "matchedTerms": [
             "c1"
-          ]
-        },
-        {
-          "card": "磁盘调度 FCFS 与 SSTF",
-          "score": 2,
-          "matchedTerms": [
-            "请求"
           ]
         }
       ]
@@ -45519,8 +45549,8 @@
           ]
         },
         {
-          "card": "文件控制块 FCB 与目录查找",
-          "score": 3,
+          "card": "工作集与抖动",
+          "score": 4,
           "matchedTerms": [
             "大小"
           ]
@@ -45589,6 +45619,14 @@
           ]
         },
         {
+          "card": "缺页异常处理流程",
+          "score": 5,
+          "matchedTerms": [
+            "等待",
+            "意味着"
+          ]
+        },
+        {
           "card": "改进型 CLOCK 页面置换",
           "score": 4,
           "matchedTerms": [
@@ -45607,13 +45645,6 @@
           "score": 2,
           "matchedTerms": [
             "固定"
-          ]
-        },
-        {
-          "card": "伙伴系统与内存回收",
-          "score": 2,
-          "matchedTerms": [
-            "位计算"
           ]
         }
       ]
@@ -45748,6 +45779,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "工作集与抖动",
+          "score": 4,
+          "matchedTerms": [
+            "大小"
+          ]
+        },
+        {
           "card": "FAT链接分配与簇链访问",
           "score": 4,
           "matchedTerms": [
@@ -45773,13 +45811,6 @@
           "score": 2,
           "matchedTerms": [
             "开始"
-          ]
-        },
-        {
-          "card": "磁盘引导与格式化流程",
-          "score": 2,
-          "matchedTerms": [
-            "阶段"
           ]
         }
       ]
@@ -45863,6 +45894,13 @@
           ]
         },
         {
+          "card": "TLB 与快表命中",
+          "score": 3,
+          "matchedTerms": [
+            "ns"
+          ]
+        },
+        {
           "card": "磁盘调度与 I/O",
           "score": 2,
           "matchedTerms": [
@@ -45874,13 +45912,6 @@
           "score": 2,
           "matchedTerms": [
             "服务"
-          ]
-        },
-        {
-          "card": "进程状态与 PCB",
-          "score": 1,
-          "matchedTerms": [
-            "通常由"
           ]
         }
       ]
