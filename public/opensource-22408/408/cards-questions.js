@@ -6745,7 +6745,8 @@ window.CARD_QUESTION_MAP = {
     "relatedCards": [
       "存储器层次与主存组织",
       "Cache 映射与命中率",
-      "虚拟内存与页面置换"
+      "虚拟内存与页面置换",
+      "Cache 替换与写策略"
     ],
     "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
     "sourcePage": 3,
@@ -6990,7 +6991,12 @@ window.CARD_QUESTION_MAP = {
       "指令系统与寻址方式",
       "单周期与多周期数据通路",
       "数据表示与补码",
-      "定点补码加减与溢出"
+      "定点补码加减与溢出",
+      "RISC-V 指令格式与寄存器编码",
+      "ALU 算术逻辑单元",
+      "ALU 标志位 CF 与 OF",
+      "立即数扩展与移位指令",
+      "指令译码与有效地址计算"
     ],
     "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
     "sourcePage": 9,
@@ -7008,13 +7014,13 @@ window.CARD_QUESTION_MAP = {
     "score": 10,
     "topic": "计算机组成原理",
     "question": "【原题要点】对sum+=a[i]，给出机器指令：slli r4,r2,2；add r4,r3,r4；lw r5,0(r4)；add r1,r1,r5。i、sum、a均为int，寄存器编号01H~05H。给出i=5、r1=00001332H、r3=0013DFF0H及内存字节表，要求确定变量寄存器、a[5]地址/数值、sum结果、页号及数组跨页数；另求slli机器码及short数组时的汇编。",
-    "answer": "(1) a首地址R3，i在R2，sum在R1。(2) a[5]地址0013E004H；小端读取a[5]=FFFFECDCH；sum更新为000000FEH；a[5]所在页号为0013EH；数组至少跨2页。(3) slli r4,r2,2机器码00212213H；short数组元素宽2B，改为slli r4,r2,1。",
-    "analysis": "数组元素地址=基址+下标×元素宽度。R2提供i，左移2位乘4；R3为数组基址；R1为累加变量sum。i=5时地址=0013DFF0H+20=0013E004H。该地址的4个字节按小端顺序为DC、EC、FF、FF，组成机器数FFFFECDCH（有符号值−4660）。sum=00001332H+FFFFECDCH=000000FEH（32位结果）。4KB页边界在0013E000H，a从0013DFF0H开始，a[5]已位于下一页，因此数组至少涉及页0013DH和0013EH，共2页。slli字段shamt=2、rs1=2、funct3=010、rd=4、opcode=0010011，编码为00212213H；short每元素2B，移位量改为1，编码00112213H。",
+    "answer": "(1) a首地址R3，i在R2，sum在R1。(2) a[5]地址0013E004H；小端读取a[5]=FFFFECDCH；sum更新为0000000EH；a[5]所在页号为0013EH；数组至少跨2页。(3) slli r4,r2,2机器码00212213H；short数组元素宽2B，改为slli r4,r2,1。",
+    "analysis": "数组元素地址=基址+下标×元素宽度。R2提供i，左移2位乘4；R3为数组基址；R1为累加变量sum。i=5时地址=0013DFF0H+20=0013E004H。该地址的4个字节按小端顺序为DC、EC、FF、FF，组成机器数FFFFECDCH（有符号值−4660）。sum=00001332H+FFFFECDCH=0000000EH（32位结果）。4KB页边界在0013E000H，a从0013DFF0H开始，a[5]已位于下一页，因此数组至少涉及页0013DH和0013EH，共2页。slli字段shamt=2、rs1=2、funct3=010、rd=4、opcode=0010011，编码为00212213H；short每元素2B，移位量改为1，编码00112213H。",
     "steps": [
       "从指令序列反推寄存器用途：R2=i，R3=a首地址，R1=sum，R4临时地址，R5加载元素。",
       "a[5]地址=0013DFF0H+5×4=0013E004H。",
       "读取0013E004H至0013E007H：DC EC FF FF；小端机器数为FFFFECDCH。",
-      "sum=00001332H+FFFFECDCH=000000FEH（32位回绕）。",
+      "sum=00001332H+FFFFECDCH=0000000EH（32位回绕）。",
       "4KB页边界为0013E000H，基址在0013D页，a[5]在0013E页，至少2页。",
       "slli编码字段：shamt=2、rs1=2、funct3=010、rd=4、opcode=0010011，得到00212213H；short乘2改为左移1位。"
     ],
@@ -7031,7 +7037,9 @@ window.CARD_QUESTION_MAP = {
       "指令系统与寻址方式",
       "大小端存储",
       "数组下标寻址与元素宽度",
-      "虚拟地址分页与页内偏移"
+      "虚拟地址分页与页内偏移",
+      "小端字节序与补码读取",
+      "RISC-V 指令格式与寄存器编码"
     ],
     "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
     "sourcePage": 10,
