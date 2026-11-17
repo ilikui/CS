@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T10:22:31.052Z",
+  "generatedAt": "2026-11-17T10:26:26.501Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -2411,6 +2411,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "读者写者问题",
+          "score": 6,
+          "matchedTerms": [
+            "最后一",
+            "后一个",
+            "最后一个"
+          ]
+        },
+        {
           "card": "死锁必要条件与处理",
           "score": 6,
           "matchedTerms": [
@@ -2438,13 +2447,6 @@
           "matchedTerms": [
             "最后",
             "过程中"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 4,
-          "matchedTerms": [
-            "本题"
           ]
         }
       ]
@@ -5074,6 +5076,15 @@
           ]
         },
         {
+          "card": "读者写者问题",
+          "score": 6,
+          "matchedTerms": [
+            "最后一",
+            "后一个",
+            "最后一个"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 5,
           "matchedTerms": [
@@ -5089,13 +5100,6 @@
             "时间最",
             "到达",
             "时间和"
-          ]
-        },
-        {
-          "card": "改进型 CLOCK 页面置换",
-          "score": 4,
-          "matchedTerms": [
-            "最后"
           ]
         }
       ]
@@ -5123,6 +5127,14 @@
           ]
         },
         {
+          "card": "死锁资源分配图",
+          "score": 6,
+          "matchedTerms": [
+            "r1",
+            "r2"
+          ]
+        },
+        {
           "card": "缺页异常与页表更新",
           "score": 5,
           "matchedTerms": [
@@ -5142,13 +5154,6 @@
           "score": 2,
           "matchedTerms": [
             "到达"
-          ]
-        },
-        {
-          "card": "进程与线程",
-          "score": 1,
-          "matchedTerms": [
-            "并更新"
           ]
         }
       ]
@@ -7816,6 +7821,13 @@
           ]
         },
         {
+          "card": "死锁资源分配图",
+          "score": 2,
+          "matchedTerms": [
+            "是否有"
+          ]
+        },
+        {
           "card": "阻塞式I/O与驱动程序调用",
           "score": 2,
           "matchedTerms": [
@@ -7901,6 +7913,14 @@
           ]
         },
         {
+          "card": "死锁资源分配图",
+          "score": 6,
+          "matchedTerms": [
+            "r1",
+            "r2"
+          ]
+        },
+        {
           "card": "索引结点 inode 与文件控制块",
           "score": 6,
           "matchedTerms": [
@@ -7920,13 +7940,6 @@
           "score": 5,
           "matchedTerms": [
             "c1"
-          ]
-        },
-        {
-          "card": "页表项地址计算与页框号",
-          "score": 3,
-          "matchedTerms": [
-            "地址"
           ]
         }
       ]
@@ -13086,7 +13099,7 @@
         },
         {
           "card": "读者写者问题",
-          "score": 1,
+          "score": 2,
           "matchedTerms": [
             "后一个"
           ]
@@ -13209,10 +13222,10 @@
           ]
         },
         {
-          "card": "死锁必要条件与处理",
+          "card": "FIFO、LRU 与 OPT 页面置换",
           "score": 2,
           "matchedTerms": [
-            "后再发"
+            "访问"
           ]
         }
       ]
@@ -18390,7 +18403,7 @@
       "candidates": [
         {
           "card": "读者写者问题",
-          "score": 1,
+          "score": 2,
           "matchedTerms": [
             "后一个"
           ]
@@ -18553,17 +18566,17 @@
           ]
         },
         {
+          "card": "死锁资源分配图",
+          "score": 2,
+          "matchedTerms": [
+            "构成"
+          ]
+        },
+        {
           "card": "工作集与抖动",
           "score": 1,
           "matchedTerms": [
             "的一组"
-          ]
-        },
-        {
-          "card": "内核态与用户态特权级",
-          "score": 1,
-          "matchedTerms": [
-            "个独立"
           ]
         }
       ]
@@ -18710,10 +18723,11 @@
           ]
         },
         {
-          "card": "磁盘调度 FCFS 与 SSTF",
-          "score": 2,
+          "card": "FIFO、LRU 与 OPT 页面置换",
+          "score": 3,
           "matchedTerms": [
-            "请求"
+            "访问",
+            "访问过"
           ]
         }
       ]
@@ -21136,6 +21150,14 @@
           ]
         },
         {
+          "card": "死锁资源分配图",
+          "score": 6,
+          "matchedTerms": [
+            "r1",
+            "r2"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 5,
           "matchedTerms": [
@@ -21154,13 +21176,6 @@
           "score": 3,
           "matchedTerms": [
             "c1"
-          ]
-        },
-        {
-          "card": "调度评价指标",
-          "score": 2,
-          "matchedTerms": [
-            "到达"
           ]
         }
       ]
@@ -21196,6 +21211,14 @@
           ]
         },
         {
+          "card": "死锁资源分配图",
+          "score": 6,
+          "matchedTerms": [
+            "r1",
+            "r2"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 5,
           "matchedTerms": [
@@ -21207,13 +21230,6 @@
           "score": 4,
           "matchedTerms": [
             "对应的",
-            "请求"
-          ]
-        },
-        {
-          "card": "磁盘调度 FCFS 与 SSTF",
-          "score": 2,
-          "matchedTerms": [
             "请求"
           ]
         }
@@ -21241,6 +21257,14 @@
           ]
         },
         {
+          "card": "死锁资源分配图",
+          "score": 4,
+          "matchedTerms": [
+            "r2",
+            "不能与"
+          ]
+        },
+        {
           "card": "死锁必要条件与处理",
           "score": 3,
           "matchedTerms": [
@@ -21259,13 +21283,6 @@
           "score": 3,
           "matchedTerms": [
             "ch"
-          ]
-        },
-        {
-          "card": "改进型 CLOCK 页面置换",
-          "score": 1,
-          "matchedTerms": [
-            "中可能"
           ]
         }
       ]
@@ -21360,6 +21377,15 @@
           ]
         },
         {
+          "card": "死锁必要条件与处理",
+          "score": 8,
+          "matchedTerms": [
+            "r1",
+            "r2",
+            "完成后"
+          ]
+        },
+        {
           "card": "伙伴系统与内存回收",
           "score": 7,
           "matchedTerms": [
@@ -21374,15 +21400,6 @@
           "matchedTerms": [
             "数据段",
             "图中的"
-          ]
-        },
-        {
-          "card": "内存分配与页面管理",
-          "score": 6,
-          "matchedTerms": [
-            "kb",
-            "时选择",
-            "大小的"
           ]
         }
       ]
@@ -23819,6 +23836,13 @@
           "matchedTerms": [
             "的地址"
           ]
+        },
+        {
+          "card": "FIFO、LRU 与 OPT 页面置换",
+          "score": 2,
+          "matchedTerms": [
+            "访问"
+          ]
         }
       ]
     },
@@ -24431,20 +24455,20 @@
           ]
         },
         {
+          "card": "读者写者问题",
+          "score": 7,
+          "matchedTerms": [
+            "最后一",
+            "后一个",
+            "最后一个",
+            "第一个"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 5,
           "matchedTerms": [
             "mb"
-          ]
-        },
-        {
-          "card": "读者写者问题",
-          "score": 4,
-          "matchedTerms": [
-            "第一个",
-            "最后一",
-            "后一个",
-            "最后一个"
           ]
         },
         {
@@ -26286,10 +26310,10 @@
           ]
         },
         {
-          "card": "调度评价指标",
-          "score": 2,
+          "card": "死锁资源分配图",
+          "score": 3,
           "matchedTerms": [
-            "服务"
+            "p2"
           ]
         }
       ]
@@ -26471,6 +26495,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "死锁资源分配图",
+          "score": 6,
+          "matchedTerms": [
+            "当且仅",
+            "且仅当",
+            "当且仅当"
+          ]
+        },
+        {
           "card": "信号量同步与互斥",
           "score": 5,
           "matchedTerms": [
@@ -26493,17 +26526,10 @@
           ]
         },
         {
-          "card": "动态优先级与饥饿避免",
-          "score": 1,
+          "card": "读者写者问题",
+          "score": 3,
           "matchedTerms": [
-            "另一个"
-          ]
-        },
-        {
-          "card": "缓冲区与缓冲池",
-          "score": 1,
-          "matchedTerms": [
-            "的目的"
+            "常用"
           ]
         }
       ]
@@ -26596,17 +26622,17 @@
           ]
         },
         {
+          "card": "FIFO、LRU 与 OPT 页面置换",
+          "score": 2,
+          "matchedTerms": [
+            "访问"
+          ]
+        },
+        {
           "card": "动态优先级与饥饿避免",
           "score": 1,
           "matchedTerms": [
             "的进程"
-          ]
-        },
-        {
-          "card": "改进型 CLOCK 页面置换",
-          "score": 1,
-          "matchedTerms": [
-            "字段是"
           ]
         }
       ]
@@ -31950,6 +31976,15 @@
           ]
         },
         {
+          "card": "FIFO、LRU 与 OPT 页面置换",
+          "score": 5,
+          "matchedTerms": [
+            "访问的",
+            "访问",
+            "的时间"
+          ]
+        },
+        {
           "card": "调度评价指标",
           "score": 3,
           "matchedTerms": [
@@ -31963,15 +31998,6 @@
           "matchedTerms": [
             "等待时",
             "优先级"
-          ]
-        },
-        {
-          "card": "进程间通信 IPC",
-          "score": 3,
-          "matchedTerms": [
-            "用于异",
-            "于异步",
-            "用于异步"
           ]
         }
       ]
@@ -32104,6 +32130,16 @@
           ]
         },
         {
+          "card": "FIFO、LRU 与 OPT 页面置换",
+          "score": 8,
+          "matchedTerms": [
+            "最长时",
+            "长时间",
+            "最长时间",
+            "访问"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 7,
           "matchedTerms": [
@@ -32116,15 +32152,6 @@
           "score": 6,
           "matchedTerms": [
             "直接"
-          ]
-        },
-        {
-          "card": "FIFO、LRU 与 OPT 页面置换",
-          "score": 6,
-          "matchedTerms": [
-            "最长时",
-            "长时间",
-            "最长时间"
           ]
         },
         {
@@ -34397,6 +34424,13 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "读者写者问题",
+          "score": 3,
+          "matchedTerms": [
+            "常用"
+          ]
+        },
+        {
           "card": "管道与消息传递",
           "score": 2,
           "matchedTerms": [
@@ -34422,13 +34456,6 @@
           "score": 1,
           "matchedTerms": [
             "法判断"
-          ]
-        },
-        {
-          "card": "信号量同步与互斥",
-          "score": 1,
-          "matchedTerms": [
-            "的信号"
           ]
         }
       ]
@@ -40036,19 +40063,6 @@
           ]
         },
         {
-          "card": "FIFO、LRU 与 OPT 页面置换",
-          "score": 10,
-          "matchedTerms": [
-            "最长时",
-            "长时间",
-            "最长时间",
-            "选择一",
-            "择一个",
-            "选择一个",
-            "用时间"
-          ]
-        },
-        {
           "card": "动态优先级与饥饿避免",
           "score": 6,
           "matchedTerms": [
@@ -40062,6 +40076,15 @@
           "score": 6,
           "matchedTerms": [
             "连续"
+          ]
+        },
+        {
+          "card": "FIFO、LRU 与 OPT 页面置换",
+          "score": 6,
+          "matchedTerms": [
+            "最长时",
+            "长时间",
+            "最长时间"
           ]
         },
         {
@@ -40113,17 +40136,17 @@
           ]
         },
         {
+          "card": "死锁资源分配图",
+          "score": 2,
+          "matchedTerms": [
+            "在循环"
+          ]
+        },
+        {
           "card": "页表结构与地址转换",
           "score": 2,
           "matchedTerms": [
             "得到"
-          ]
-        },
-        {
-          "card": "改进型 CLOCK 页面置换",
-          "score": 1,
-          "matchedTerms": [
-            "过程中"
           ]
         }
       ]
@@ -40152,6 +40175,16 @@
           ]
         },
         {
+          "card": "读者写者问题",
+          "score": 7,
+          "matchedTerms": [
+            "最后一",
+            "后一个",
+            "最后一个",
+            "第一个"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 7,
           "matchedTerms": [
@@ -40172,15 +40205,6 @@
           "matchedTerms": [
             "r1",
             "r2"
-          ]
-        },
-        {
-          "card": "虚拟内存与页面置换",
-          "score": 6,
-          "matchedTerms": [
-            "地址转",
-            "址转换",
-            "地址转换"
           ]
         }
       ]
@@ -42825,9 +42849,29 @@
       "candidates": [
         {
           "card": "死锁必要条件与处理",
+          "score": 8,
+          "matchedTerms": [
+            "避免",
+            "避免在"
+          ]
+        },
+        {
+          "card": "FIFO、LRU 与 OPT 页面置换",
+          "score": 7,
+          "matchedTerms": [
+            "长时间",
+            "访问的",
+            "访问",
+            "的时间"
+          ]
+        },
+        {
+          "card": "读者写者问题",
           "score": 6,
           "matchedTerms": [
-            "避免"
+            "最后一",
+            "后一个",
+            "最后一个"
           ]
         },
         {
@@ -42842,21 +42886,6 @@
           "score": 5,
           "matchedTerms": [
             "mb"
-          ]
-        },
-        {
-          "card": "TLB 与快表命中",
-          "score": 5,
-          "matchedTerms": [
-            "最后",
-            "忽略"
-          ]
-        },
-        {
-          "card": "改进型 CLOCK 页面置换",
-          "score": 4,
-          "matchedTerms": [
-            "最后"
           ]
         }
       ]
@@ -42947,17 +42976,18 @@
           ]
         },
         {
+          "card": "死锁资源分配图",
+          "score": 4,
+          "matchedTerms": [
+            "等待的",
+            "构成"
+          ]
+        },
+        {
           "card": "文件系统与目录",
           "score": 4,
           "matchedTerms": [
             "链接"
-          ]
-        },
-        {
-          "card": "磁盘引导与格式化流程",
-          "score": 3,
-          "matchedTerms": [
-            "os"
           ]
         }
       ]
@@ -42984,6 +43014,15 @@
           ]
         },
         {
+          "card": "读者写者问题",
+          "score": 6,
+          "matchedTerms": [
+            "最后一",
+            "后一个",
+            "最后一个"
+          ]
+        },
+        {
           "card": "改进型 CLOCK 页面置换",
           "score": 5,
           "matchedTerms": [
@@ -43003,15 +43042,6 @@
           "score": 4,
           "matchedTerms": [
             "字节"
-          ]
-        },
-        {
-          "card": "读者写者问题",
-          "score": 3,
-          "matchedTerms": [
-            "最后一",
-            "后一个",
-            "最后一个"
           ]
         }
       ]
@@ -45466,6 +45496,14 @@
           ]
         },
         {
+          "card": "死锁资源分配图",
+          "score": 6,
+          "matchedTerms": [
+            "r1",
+            "r2"
+          ]
+        },
+        {
           "card": "页表项地址计算与页框号",
           "score": 5,
           "matchedTerms": [
@@ -45485,13 +45523,6 @@
           "score": 3,
           "matchedTerms": [
             "大小"
-          ]
-        },
-        {
-          "card": "页表结构与地址转换",
-          "score": 3,
-          "matchedTerms": [
-            "mb"
           ]
         }
       ]
@@ -45565,15 +45596,6 @@
           ]
         },
         {
-          "card": "FIFO、LRU 与 OPT 页面置换",
-          "score": 3,
-          "matchedTerms": [
-            "选择一",
-            "择一个",
-            "选择一个"
-          ]
-        },
-        {
           "card": "磁盘引导与格式化流程",
           "score": 2,
           "matchedTerms": [
@@ -45585,6 +45607,13 @@
           "score": 2,
           "matchedTerms": [
             "固定"
+          ]
+        },
+        {
+          "card": "伙伴系统与内存回收",
+          "score": 2,
+          "matchedTerms": [
+            "位计算"
           ]
         }
       ]
