@@ -1,4 +1,4 @@
-{
+window.EXAM_KNOWLEDGE_MAP = {
   "0": {
     "status": "verified",
     "primary": [
@@ -10074,4 +10074,5 @@
     "methods": "先用向量线性表示证明秩为 2 并构造 H，再用 (GH)^n=G(HG)^(n−1)H 降低矩阵幂的阶数。",
     "pitfalls": "A 是 4×4 而 H、G 分别为 2×4 与 4×2；乘法顺序不能颠倒，幂次公式中 HG 的指数是 n−1。"
   }
-}
+};
+if (typeof module !== 'undefined') module.exports = window.EXAM_KNOWLEDGE_MAP;
