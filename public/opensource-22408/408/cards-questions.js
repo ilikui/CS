@@ -5562,7 +5562,8 @@ window.CARD_QUESTION_MAP = {
     "relatedCards": [
       "x86 CALL/JMP/RET 控制转移与相对寻址",
       "x86 相对寻址与转移目标计算"
-    ]
+    ],
+    "topic": "计算机组成原理"
   },
   "2009-18-流水线时钟周期": {
     "year": 2009,
