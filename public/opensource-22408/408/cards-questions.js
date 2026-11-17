@@ -341,7 +341,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "数据表示与补码",
+      "定点补码加减与溢出"
+    ]
   },
   "IEEE 754 单精度": {
     "year": 2011,
@@ -366,7 +370,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "浮点数表示与规格化",
+      "IEEE 754 单精度字段"
+    ]
   },
   "Cache 地址映射": {
     "year": 2009,
@@ -388,7 +396,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "Cache 直接映射与组相联",
+      "Cache 映射与命中率"
+    ]
   },
   "五段流水线与冒险": {
     "year": 2016,
@@ -411,7 +423,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "流水线与冒险",
+      "流水线结构冒险与数据冒险"
+    ]
   },
   "微程序控制器": {
     "year": 2009,
@@ -436,7 +452,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "硬布线控制器与微程序控制器",
+      "RISC 与 CISC"
+    ]
   },
   "存储器容量扩展": {
     "year": 2009,
@@ -457,7 +477,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "存储芯片容量扩展",
+      "存储器芯片与地址译码"
+    ]
   },
   "中断优先级与屏蔽": {
     "year": 2011,
@@ -478,7 +502,10 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "中断屏蔽与优先级"
+    ]
   },
   "寻址方式与有效地址": {
     "year": 2011,
@@ -502,7 +529,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "指令系统与寻址方式",
+      "立即数与直接间接寻址"
+    ]
   },
   "浮点规格化与舍入": {
     "year": 2015,
@@ -524,7 +555,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "浮点数表示与规格化",
+      "移位运算与舍入"
+    ]
   },
   "Cache 写策略": {
     "year": 2015,
@@ -544,7 +579,10 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "Cache 替换与写策略"
+    ]
   },
   "I/O 控制方式": {
     "year": 2009,
@@ -577,7 +615,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "与2009年真题答案的中断次数、每秒周期数及2.5%、0.1%结果一致。"
-    }
+    },
+    "relatedCards": [
+      "程序查询与中断驱动 I/O",
+      "中断与 DMA"
+    ]
   },
   "存储器层次与局部性": {
     "year": 2010,
@@ -602,7 +644,12 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "存储器层次与主存组织",
+      "TLB 与快表命中",
+      "Cache 映射与命中率"
+    ]
   },
   "进程状态与转换": {
     "year": 2014,
@@ -1260,7 +1307,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "浮点数表示与规格化",
+      "IEEE 754 单精度字段"
+    ]
   },
   "总线带宽计算": {
     "year": 2009,
@@ -1281,7 +1332,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "总线与总线事务",
+      "总线带宽与突发传输"
+    ]
   },
   "DMA 传输过程": {
     "year": 2017,
@@ -1304,7 +1359,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "DMA 工作过程与总线占用",
+      "中断与 DMA"
+    ]
   },
   "银行家算法与安全状态": {
     "year": 2013,
@@ -1556,7 +1615,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
-    }
+    },
+    "relatedCards": [
+      "总线与总线事务",
+      "总线带宽与突发传输"
+    ]
   },
   "直接寻址范围计算": {
     "year": 2020,
@@ -1583,7 +1646,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
-    }
+    },
+    "relatedCards": [
+      "指令格式与操作码扩展",
+      "立即数与直接间接寻址"
+    ]
   },
   "文件系统逻辑格式化": {
     "year": 2017,
@@ -2123,7 +2190,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
-    }
+    },
+    "relatedCards": [
+      "单周期与多周期数据通路",
+      "CPU 指令执行过程"
+    ]
   },
   "系统调用接口": {
     "year": 2010,
@@ -2476,7 +2547,12 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
-    }
+    },
+    "relatedCards": [
+      "ALU 算术逻辑单元",
+      "指令译码与有效地址计算",
+      "立即数与直接间接寻址"
+    ]
   },
   "DRAM刷新机制": {
     "year": 2015,
@@ -2503,7 +2579,10 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
-    }
+    },
+    "relatedCards": [
+      "SRAM 与 DRAM"
+    ]
   },
   "冯诺依曼结构基本思想": {
     "year": 2019,
@@ -2530,7 +2609,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
-    }
+    },
+    "relatedCards": [
+      "冯·诺依曼结构与存储程序",
+      "计算机系统层次结构"
+    ]
   },
   "页面分配与置换策略组合": {
     "year": 2015,
@@ -2796,7 +2879,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、ID和题干与 data/408/questions_data.js 对齐；原始题库未提供可直接读取的answer字段，本答案与解析为教学推导补充，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "程序查询与中断驱动 I/O",
+      "中断与 DMA",
+      "DMA 工作过程与总线占用",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
   },
   "文件分配策略与FCB字段设计": {
     "year": 2011,
@@ -2852,7 +2941,12 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、ID和题干与 data/408/questions_data.js 对齐；原始题库未提供可直接读取的answer字段，本答案与解析为教学推导补充，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "磁盘 CHS 地址与平均访问时间",
+      "磁盘存储结构与旋转延迟",
+      "DMA 周期挪用与总线仲裁"
+    ]
   },
   "中断I_O与DMA的CPU时间占比": {
     "year": 2009,
@@ -2879,7 +2973,12 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、ID和题干与原始题库对齐；原始题库未提供可直接读取的answer字段，答案和解析为教学推导补充。"
-    }
+    },
+    "relatedCards": [
+      "中断与 DMA",
+      "DMA 工作过程与总线占用",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
   },
   "Cache缺失与突发总线事务时延": {
     "year": 2013,
@@ -2908,7 +3007,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、ID和题干与原始题库对齐；原始题库未提供可直接读取的answer字段，答案和解析为教学推导补充。"
-    }
+    },
+    "relatedCards": [
+      "Cache平均访问时间与缺失损失",
+      "Cache 直接映射与组相联",
+      "总线与总线事务",
+      "总线带宽与突发传输",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
   },
   "SR最大窗口与超时重传": {
     "year": 2024,
@@ -2991,7 +3097,12 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、ID和题干与原始题库对齐；原始题库未提供可直接读取的answer字段，本答案和解析为教学推导补充，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "Cache 直接映射与组相联",
+      "Cache 命中率与空间局部性",
+      "二维数组行优先存储与局部性"
+    ]
   },
   "请求分页与组相联Cache循环访问": {
     "year": 2023,
@@ -3020,7 +3131,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、ID和题干与原始题库对齐；原始题库未提供可直接读取的answer字段，本答案和解析为教学推导补充，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "Cache 映射与命中率",
+      "Cache组相联映射与地址字段",
+      "Cache 命中率与空间局部性",
+      "二维数组行优先存储与局部性",
+      "数组跨页与缺页次数",
+      "虚拟地址分页与页内偏移"
+    ]
   },
   "Cache缺失率与主存带宽计算": {
     "year": 2012,
@@ -3049,7 +3168,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、ID和题干与原始题库对齐；原始题库未提供可直接读取的answer字段，本答案和解析为教学推导补充，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "Cache平均访问时间与缺失损失",
+      "存储器层次与主存组织",
+      "总线与总线事务",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
   },
   "双子网划分与R1路由表": {
     "year": 2009,
@@ -3731,7 +3856,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；解析和步骤为补充教学内容。"
-    }
+    },
+    "relatedCards": [
+      "硬布线控制器与微程序控制器",
+      "计算机系统层次结构"
+    ]
   },
   "单周期与多周期数据通路": {
     "year": 2020,
@@ -3754,7 +3883,12 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；解析和步骤为补充教学内容。"
-    }
+    },
+    "relatedCards": [
+      "单周期与多周期数据通路",
+      "单总线数据通路与暂存器",
+      "指令周期与微操作控制"
+    ]
   },
   "中断响应与异常处理": {
     "year": 2015,
@@ -3777,7 +3911,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；解析和步骤为补充教学内容。"
-    }
+    },
+    "relatedCards": [
+      "中断响应与异常处理",
+      "CPU异常响应与现场保护"
+    ]
   },
   "移位运算与舍入": {
     "year": 2015,
@@ -3801,7 +3939,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；解析和步骤为补充教学内容。"
-    }
+    },
+    "relatedCards": [
+      "移位运算与舍入",
+      "浮点数表示与规格化"
+    ]
   },
   "ALOHA 与 CSMA": {
     "year": 2009,
@@ -3847,7 +3989,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；解析和步骤为补充教学内容。"
-    }
+    },
+    "relatedCards": [
+      "单总线数据通路与暂存器",
+      "单周期与多周期数据通路"
+    ]
   },
   "分页目录项数量计算": {
     "year": 2010,
@@ -4110,7 +4256,12 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；数值推导为补充教学解析。"
-    }
+    },
+    "relatedCards": [
+      "定点补码加减与溢出",
+      "整数溢出检测与异常处理",
+      "移位加法乘法与阵列乘法器"
+    ]
   },
   "ROM与RAM芯片数量设计": {
     "year": 2009,
@@ -4134,7 +4285,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；芯片容量计算为补充教学解析。"
-    }
+    },
+    "relatedCards": [
+      "存储芯片容量扩展",
+      "存储器芯片与地址译码"
+    ]
   },
   "FCFS与SSTF磁臂黏着比较": {
     "year": 2018,
@@ -4344,7 +4499,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、原始题库 ID 和题目结构与 data/408/questions_data.js 对齐；原始题库未提供可直接读取的 answer 字段，本答案为逐问教学推导，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "ALU 算术逻辑单元",
+      "ALU 标志位 CF 与 OF",
+      "补码加减与溢出判断",
+      "单总线数据通路与暂存器",
+      "寄存器组读写端口与译码",
+      "指令周期与微操作控制"
+    ]
   },
   "置换选择生成初始归并段": {
     "year": 2023,
@@ -4418,7 +4581,12 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、原始题库 ID 和题干与原始题库对齐；原始题库未提供可直接读取的 answer 字段，答案为教学推导，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "指令格式与操作码扩展",
+      "指令系统与寻址方式",
+      "寄存器组读写端口与译码"
+    ]
   },
   "一级目录不可变文件分配与FCB": {
     "year": 2011,
@@ -4586,7 +4754,12 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、原始题库 ID 和题干与原始题库对齐；原始题库未提供可直接读取的 answer 字段，时间与 CPU 开销为教学推导，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "异步串行通信帧格式与字符速率",
+      "程序查询与中断驱动 I/O",
+      "中断与 DMA"
+    ]
   },
   "Cache组相联映射组号计算": {
     "year": 2009,
@@ -4609,7 +4782,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；Cache 组号计算为补充教学内容。"
-    }
+    },
+    "relatedCards": [
+      "Cache 直接映射与组相联",
+      "Cache组相联映射与地址字段"
+    ]
   },
   "TCP累计确认与可靠传输": {
     "year": 2009,
@@ -4774,7 +4951,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "年份、题号、原始题库 ID 和答案与原始题库对齐；data/408/questions_data.js 的题干缺少指令序列，已用公开 2016 真题原文补全，并与另一份真题解析交叉核对。"
-    }
+    },
+    "relatedCards": [
+      "流水线结构冒险与数据冒险",
+      "流水线与冒险"
+    ]
   },
   "2015NRZ与曼彻斯特波形识别": {
     "year": 2015,
