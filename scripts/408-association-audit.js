@@ -46,13 +46,15 @@ function termsFor(title) {
   return [...new Set(String(title).split(/[与和及、，,：:／/（）()\s]+/).filter(x => x.length >= 2 && !stop.has(x)))].sort((a,b)=>b.length-a.length);
 }
 function pickQuestion(q) {
-  return {year:q.year,index:q.index,id:q.id,sourceSubject:q.subject,inferredSubject:subjectForIndex(Number(q.index)),type:q.type,typeName:q.typeName,score:q.score,question:htmlText(q.question),answer:q.answer||null,analysis:htmlText(q.analysis)};
+  return {year:q.year,index:q.index,id:q.id,sourceSubject:q.subject,inferredSubject:subjectForIndex(Number(q.index)),type:q.type,typeName:q.typeName,score:q.score,question:htmlText(q.question),answer:q.answer||null,analysis:htmlText(q.analysis || q.analysisHtml || q.explanation || '')};
 }
 const source = fs.readFileSync('public/opensource-22408/408/questions_data.js','utf8');
-const dataContext = {};
-vm.runInNewContext(source + String.fromCharCode(10) + ';globalThis.__QUESTIONS_DATA__ = QUESTIONS_DATA;', dataContext, {timeout:120000});
-const data = dataContext.__QUESTIONS_DATA__ || dataContext.QUESTIONS_DATA || (dataContext.window && dataContext.window.QUESTIONS_DATA);
+const dataContext = {window:{}};
+vm.runInNewContext(source, dataContext, {timeout:120000});
+const data = dataContext.window.QUESTIONS_DATA || dataContext.QUESTIONS_DATA;
 if (!Array.isArray(data)) throw new Error('QUESTIONS_DATA is not an array; inspect source export name');
+const verifiedPayload = JSON.parse(fs.readFileSync('public/opensource-22408/408/verified-solutions.json','utf8'));
+const verifiedSolutions = Array.isArray(verifiedPayload.questions) ? verifiedPayload.questions : [];
 const mapContext = {window:{}};
 vm.runInNewContext(fs.readFileSync('public/opensource-22408/408/cards-questions.js','utf8'),mapContext,{timeout:30000});
 const mapping = mapContext.window.CARD_QUESTION_MAP || {};
@@ -65,25 +67,35 @@ for (const q of data) {
   if (!byKey.has(key)) byKey.set(key,[]);
   byKey.get(key).push(q);
 }
+const verifiedByKey = new Map();
+for (const q of verifiedSolutions) {
+  const key = String(q.year)+'-'+String(q.index);
+  if (!verifiedByKey.has(key)) verifiedByKey.set(key,[]);
+  verifiedByKey.get(key).push(q);
+}
 const validation = [];
 for (const [topic, rec] of Object.entries(mapping)) {
   const key = String(rec.year)+'-'+String(rec.index);
   const matches = byKey.get(key) || [];
-  const q = matches.find(x => String(x.id) === String(rec.id)) || matches[0];
+  const verifiedMatches = verifiedByKey.get(key) || [];
+  const q = matches.find(x => String(x.id) === String(rec.id))
+    || verifiedMatches.find(x => String(x.id) === String(rec.id))
+    || matches[0] || verifiedMatches[0];
+  const sourceKind = q ? (matches.includes(q) ? 'question-dataset' : 'verified-solutions') : 'legacy-map-only';
   const errors = [];
-  if (!q) errors.push('source-question-not-found');
+  if (!q) errors.push('source-not-in-current-question-or-verified-dataset');
   else if (String(q.id) !== String(rec.id)) errors.push('source-id-mismatch');
   const targetCard = topicMap[topic] || null;
   if (!targetCard || !cardTitles.has(targetCard)) errors.push('target-card-missing');
-  const sourceText = q ? norm(q.question) : '';
+  const sourceText = q && q.question ? norm(q.question) : '';
   const mappedText = norm(rec.question);
-  const questionTextContains = !!(sourceText && mappedText && (sourceText.includes(mappedText) || mappedText.includes(sourceText)));
+  const questionTextContains = sourceText && mappedText ? (sourceText.includes(mappedText) || mappedText.includes(sourceText)) : null;
   const sourceAnswer = q && q.answer != null ? String(q.answer).trim() : '';
   const mappedAnswer = String(rec.answer || '').trim();
   const answerComparable = /^[A-D]$/i.test(sourceAnswer) && /^[A-D]$/i.test(mappedAnswer);
   const answerMatch = answerComparable ? sourceAnswer.toUpperCase() === mappedAnswer.toUpperCase() : null;
   if (answerMatch === false) errors.push('answer-key-mismatch');
-  validation.push({topic:topic,card:targetCard,year:rec.year,index:rec.index,id:rec.id,auditStatus:(rec.audit && rec.audit.status)||'unreviewed',sourceIdentityConfirmed:!!q && String(q.id)===String(rec.id),questionTextContains:questionTextContains,sourceSubjectMetadata:q?q.subject:null,expectedSubject:rec.topic,sourceAnswer:sourceAnswer||null,mappedAnswer:mappedAnswer||null,answerMatch:answerMatch,errors:errors,sourceQuestion:q?pickQuestion(q):null});
+  validation.push({topic:topic,card:targetCard,year:rec.year,index:rec.index,id:rec.id,auditStatus:(rec.audit && rec.audit.status)||'unreviewed',sourceKind:sourceKind,sourceIdentityConfirmed:!!q && String(q.id)===String(rec.id),questionTextContains:questionTextContains,sourceSubjectMetadata:q?q.subject:null,expectedSubject:rec.topic,sourceAnswer:sourceAnswer||null,mappedAnswer:mappedAnswer||null,answerMatch:answerMatch,errors:errors,sourceQuestion:q?pickQuestion(q):null});
 }
 const cardMappedKeys = new Map();
 for (const [topic, card] of Object.entries(topicMap)) {
@@ -114,7 +126,7 @@ for (const v of validation) {
 const duplicateQuestionLinks = [...questionGroups.entries()].filter(([,v])=>v.length>1).map(([question,topics])=>({question,topics}));
 const counts = {
   cards:cards.length,mappings:Object.keys(mapping).length,sourceQuestions:data.length,
-  sourceIdentityConfirmed:validation.filter(x=>x.sourceIdentityConfirmed).length,
+  sourceIdentityConfirmed:validation.filter(x=>x.sourceIdentityConfirmed).length,\n  sourceFromQuestionDataset:validation.filter(x=>x.sourceKind==='question-dataset').length,\n  sourceFromVerifiedSolutions:validation.filter(x=>x.sourceKind==='verified-solutions').length,\n  legacyMapOnly:validation.filter(x=>x.sourceKind==='legacy-map-only').length,
   identityOrTargetErrors:validation.filter(x=>x.errors.some(e=>e!=='answer-key-mismatch')).length,
   answerKeyMismatches:validation.filter(x=>x.answerMatch===false).length,
   questionTextContained:validation.filter(x=>x.questionTextContains).length,
