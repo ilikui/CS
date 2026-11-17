@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T12:43:43.483Z",
+  "generatedAt": "2026-11-17T12:43:59.851Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -2272,6 +2272,15 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "大小端存储",
+          "score": 9,
+          "matchedTerms": [
+            "字节",
+            "b2",
+            "地址"
+          ]
+        },
+        {
           "card": "数组下标寻址与元素宽度",
           "score": 9,
           "matchedTerms": [
@@ -2304,14 +2313,6 @@
             "ns",
             "地址",
             "字节"
-          ]
-        },
-        {
-          "card": "总线与总线事务",
-          "score": 7,
-          "matchedTerms": [
-            "字节",
-            "ns"
           ]
         }
       ]
@@ -2403,6 +2404,14 @@
           ]
         },
         {
+          "card": "大小端存储",
+          "score": 5,
+          "matchedTerms": [
+            "a1",
+            "得到"
+          ]
+        },
+        {
           "card": "小端字节序与补码读取",
           "score": 5,
           "matchedTerms": [
@@ -2415,14 +2424,6 @@
           "matchedTerms": [
             "ns",
             "得到"
-          ]
-        },
-        {
-          "card": "磁盘结构与平均访问时间",
-          "score": 4,
-          "matchedTerms": [
-            "磁道",
-            "个磁道"
           ]
         }
       ]
@@ -2518,6 +2519,15 @@
           ]
         },
         {
+          "card": "IEEE 754 单精度字段",
+          "score": 7,
+          "matchedTerms": [
+            "-1",
+            "数值为",
+            "数值"
+          ]
+        },
+        {
           "card": "总线仲裁方式",
           "score": 6,
           "matchedTerms": [
@@ -2532,13 +2542,6 @@
           "matchedTerms": [
             "计数",
             "ns"
-          ]
-        },
-        {
-          "card": "小端字节序与补码读取",
-          "score": 5,
-          "matchedTerms": [
-            "b1"
           ]
         }
       ]
@@ -5333,6 +5336,14 @@
           ]
         },
         {
+          "card": "指令系统与寻址方式",
+          "score": 5,
+          "matchedTerms": [
+            "相对",
+            "访问一"
+          ]
+        },
+        {
           "card": "数组下标寻址与元素宽度",
           "score": 4,
           "matchedTerms": [
@@ -5344,13 +5355,6 @@
           "score": 4,
           "matchedTerms": [
             "速度"
-          ]
-        },
-        {
-          "card": "指令系统与寻址方式",
-          "score": 4,
-          "matchedTerms": [
-            "相对"
           ]
         },
         {
@@ -7863,10 +7867,10 @@
           ]
         },
         {
-          "card": "总线与总线事务",
-          "score": 1,
+          "card": "IEEE 754 单精度字段",
+          "score": 2,
           "matchedTerms": [
-            "共享的"
+            "处理"
           ]
         }
       ]
@@ -8173,6 +8177,26 @@
           ]
         },
         {
+          "card": "大小端存储",
+          "score": 13,
+          "matchedTerms": [
+            "cc",
+            "的二进",
+            "二进制",
+            "的二进制",
+            "地址"
+          ]
+        },
+        {
+          "card": "定点补码加减与溢出",
+          "score": 12,
+          "matchedTerms": [
+            "of",
+            "cf",
+            "例如"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 12,
           "matchedTerms": [
@@ -8184,16 +8208,6 @@
           ]
         },
         {
-          "card": "大小端存储",
-          "score": 11,
-          "matchedTerms": [
-            "cc",
-            "的二进",
-            "二进制",
-            "的二进制"
-          ]
-        },
-        {
           "card": "数组下标寻址与元素宽度",
           "score": 11,
           "matchedTerms": [
@@ -8201,14 +8215,6 @@
             "地址",
             "从0开始",
             "的地址"
-          ]
-        },
-        {
-          "card": "补码加减与溢出判断",
-          "score": 10,
-          "matchedTerms": [
-            "of",
-            "cf"
           ]
         }
       ]
@@ -10738,11 +10744,12 @@
         },
         {
           "card": "指令系统与寻址方式",
-          "score": 13,
+          "score": 14,
           "matchedTerms": [
             "寄存器",
             "pc",
             "的地址",
+            "该指令",
             "下一条",
             "一条指",
             "条指令",
@@ -13577,20 +13584,21 @@
           ]
         },
         {
+          "card": "指令系统与寻址方式",
+          "score": 9,
+          "matchedTerms": [
+            "直接",
+            "间接",
+            "题目若"
+          ]
+        },
+        {
           "card": "数组下标寻址与元素宽度",
           "score": 8,
           "matchedTerms": [
             "地址",
             "长度",
             "块大小"
-          ]
-        },
-        {
-          "card": "指令系统与寻址方式",
-          "score": 8,
-          "matchedTerms": [
-            "直接",
-            "间接"
           ]
         },
         {
@@ -13614,8 +13622,17 @@
       "answer": "C",
       "analysis": "2013-第27题-解析 在 单缓冲 中，数据块 1 从外设到用户工作区的总时间为 105，在这段时间中，数据块 2 没有进行操作。在数据块 1 进行分析处理 时，数据块 2 从外设到用户工作区的总时间为 105，这段时间是并行的。再加上处理数据块 2 的时间 90，总时间为 300，答案为 C。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "大小端存储",
+          "score": 11,
+          "matchedTerms": [
+            "cc",
+            "c3",
+            "b2"
+          ]
+        },
         {
           "card": "程序查询与中断驱动 I/O",
           "score": 6,
@@ -13637,13 +13654,6 @@
           "score": 6,
           "matchedTerms": [
             "缓冲区"
-          ]
-        },
-        {
-          "card": "大小端存储",
-          "score": 5,
-          "matchedTerms": [
-            "cc"
           ]
         },
         {
@@ -16206,19 +16216,20 @@
           ]
         },
         {
+          "card": "IEEE 754 单精度字段",
+          "score": 5,
+          "matchedTerms": [
+            "处理",
+            "可能导",
+            "能导致",
+            "可能导致"
+          ]
+        },
+        {
           "card": "单周期与多周期数据通路",
           "score": 4,
           "matchedTerms": [
             "时间"
-          ]
-        },
-        {
-          "card": "中断屏蔽与优先级",
-          "score": 4,
-          "matchedTerms": [
-            "优先级",
-            "先级高",
-            "优先级高"
           ]
         }
       ]
@@ -16321,11 +16332,11 @@
           ]
         },
         {
-          "card": "ALU 算术逻辑单元",
+          "card": "硬布线控制器与微程序控制器",
           "score": 4,
           "matchedTerms": [
             "指令",
-            "选d",
+            "执行的",
             "指令和"
           ]
         }
@@ -16684,6 +16695,14 @@
           ]
         },
         {
+          "card": "大小端存储",
+          "score": 6,
+          "matchedTerms": [
+            "cc",
+            "的数据"
+          ]
+        },
+        {
           "card": "中断与 DMA",
           "score": 6,
           "matchedTerms": [
@@ -16707,13 +16726,6 @@
           "score": 6,
           "matchedTerms": [
             "缓冲区"
-          ]
-        },
-        {
-          "card": "大小端存储",
-          "score": 5,
-          "matchedTerms": [
-            "cc"
           ]
         }
       ]
@@ -16765,10 +16777,11 @@
         },
         {
           "card": "大小端存储",
-          "score": 11,
+          "score": 13,
           "matchedTerms": [
             "dd",
             "字节",
+            "地址",
             "字节数",
             "的字节"
           ]
@@ -19145,7 +19158,7 @@
       "candidates": [
         {
           "card": "硬布线控制器与微程序控制器",
-          "score": 19,
+          "score": 21,
           "matchedTerms": [
             "cpu",
             "指令寄",
@@ -19153,7 +19166,8 @@
             "寄存器",
             "指令寄存",
             "令寄存器",
-            "指令寄存器"
+            "指令寄存器",
+            "指令"
           ]
         },
         {
@@ -19299,18 +19313,21 @@
           ]
         },
         {
+          "card": "IEEE 754 单精度字段",
+          "score": 5,
+          "matchedTerms": [
+            "处理",
+            "可能导",
+            "能导致",
+            "可能导致"
+          ]
+        },
+        {
           "card": "总线与总线事务",
           "score": 4,
           "matchedTerms": [
             "等待",
             "题目若"
-          ]
-        },
-        {
-          "card": "程序查询与中断驱动 I/O",
-          "score": 3,
-          "matchedTerms": [
-            "执行"
           ]
         }
       ]
@@ -19473,6 +19490,18 @@
           ]
         },
         {
+          "card": "大小端存储",
+          "score": 14,
+          "matchedTerms": [
+            "字节",
+            "a1",
+            "个字节",
+            "得到",
+            "地址",
+            "的数据"
+          ]
+        },
+        {
           "card": "VIPT Cache索引与页内偏移",
           "score": 14,
           "matchedTerms": [
@@ -19490,17 +19519,6 @@
             "字节",
             "偏移",
             "块大小"
-          ]
-        },
-        {
-          "card": "指令译码与有效地址计算",
-          "score": 11,
-          "matchedTerms": [
-            "直接",
-            "字节编",
-            "节编址",
-            "字节编址",
-            "按字节"
           ]
         }
       ]
@@ -19662,26 +19680,27 @@
           ]
         },
         {
+          "card": "大小端存储",
+          "score": 6,
+          "matchedTerms": [
+            "c3",
+            "b2"
+          ]
+        },
+        {
+          "card": "IEEE 754 单精度字段",
+          "score": 5,
+          "matchedTerms": [
+            "-1",
+            "处理"
+          ]
+        },
+        {
           "card": "磁盘结构与平均访问时间",
           "score": 4,
           "matchedTerms": [
             "磁道",
             "个磁道"
-          ]
-        },
-        {
-          "card": "数组下标寻址与元素宽度",
-          "score": 4,
-          "matchedTerms": [
-            "开始"
-          ]
-        },
-        {
-          "card": "Cache跨块访问与缺失率",
-          "score": 4,
-          "matchedTerms": [
-            "次访问",
-            "访问"
           ]
         }
       ]
@@ -21952,6 +21971,16 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "大小端存储",
+          "score": 12,
+          "matchedTerms": [
+            "d4",
+            "c3",
+            "b2",
+            "a1"
+          ]
+        },
+        {
           "card": "ALU 算术逻辑单元",
           "score": 10,
           "matchedTerms": [
@@ -21985,16 +22014,6 @@
           "matchedTerms": [
             "再看",
             "执行"
-          ]
-        },
-        {
-          "card": "指令格式与操作码扩展",
-          "score": 5,
-          "matchedTerms": [
-            "至少",
-            "数至少",
-            "至少为",
-            "数至少为"
           ]
         }
       ]
@@ -22098,18 +22117,19 @@
           ]
         },
         {
+          "card": "硬布线控制器与微程序控制器",
+          "score": 9,
+          "matchedTerms": [
+            "cpu",
+            "指令"
+          ]
+        },
+        {
           "card": "计算机性能指标 CPI 与 CPU 时间",
           "score": 8,
           "matchedTerms": [
             "cpu",
             "ic"
-          ]
-        },
-        {
-          "card": "硬布线控制器与微程序控制器",
-          "score": 7,
-          "matchedTerms": [
-            "cpu"
           ]
         }
       ]
@@ -22222,6 +22242,14 @@
           ]
         },
         {
+          "card": "大小端存储",
+          "score": 6,
+          "matchedTerms": [
+            "d4",
+            "b2"
+          ]
+        },
+        {
           "card": "Cache 映射与命中率",
           "score": 5,
           "matchedTerms": [
@@ -22242,15 +22270,6 @@
           "score": 4,
           "matchedTerms": [
             "重复"
-          ]
-        },
-        {
-          "card": "数组跨页与缺页次数",
-          "score": 4,
-          "matchedTerms": [
-            "次访问",
-            "分别为",
-            "访问过"
           ]
         }
       ]
@@ -24860,6 +24879,16 @@
           ]
         },
         {
+          "card": "大小端存储",
+          "score": 12,
+          "matchedTerms": [
+            "字节",
+            "d4",
+            "b2",
+            "地址"
+          ]
+        },
+        {
           "card": "总线与总线事务",
           "score": 10,
           "matchedTerms": [
@@ -24880,18 +24909,6 @@
             "按字节编",
             "字节编址",
             "按字节编址"
-          ]
-        },
-        {
-          "card": "虚拟地址分页与页内偏移",
-          "score": 9,
-          "matchedTerms": [
-            "kb",
-            "大小",
-            "地址和",
-            "起始地",
-            "始地址",
-            "起始地址"
           ]
         }
       ]
@@ -24939,11 +24956,11 @@
           ]
         },
         {
-          "card": "Cache 映射与命中率",
+          "card": "大小端存储",
           "score": 6,
           "matchedTerms": [
-            "kb",
-            "a10"
+            "b2",
+            "a1"
           ]
         }
       ]
@@ -25103,6 +25120,19 @@
           ]
         },
         {
+          "card": "硬布线控制器与微程序控制器",
+          "score": 12,
+          "matchedTerms": [
+            "控制器",
+            "一个或",
+            "个或多",
+            "或多个",
+            "一个或多",
+            "个或多个",
+            "一个或多个"
+          ]
+        },
+        {
           "card": "浮点数表示与规格化",
           "score": 10,
           "matchedTerms": [
@@ -25120,15 +25150,6 @@
             "操作系",
             "作系统",
             "操作系统"
-          ]
-        },
-        {
-          "card": "DMA 工作过程与总线占用",
-          "score": 9,
-          "matchedTerms": [
-            "控制器",
-            "扇区",
-            "初始化"
           ]
         }
       ]
@@ -27570,10 +27591,11 @@
         },
         {
           "card": "硬布线控制器与微程序控制器",
-          "score": 8,
+          "score": 9,
           "matchedTerms": [
             "cpu",
-            "也可以"
+            "也可以",
+            "和并行"
           ]
         },
         {
@@ -27675,6 +27697,16 @@
           ]
         },
         {
+          "card": "大小端存储",
+          "score": 12,
+          "matchedTerms": [
+            "d4",
+            "c3",
+            "b2",
+            "a1"
+          ]
+        },
+        {
           "card": "单周期与多周期数据通路",
           "score": 12,
           "matchedTerms": [
@@ -27703,14 +27735,6 @@
             "指令执",
             "令执行",
             "指令执行"
-          ]
-        },
-        {
-          "card": "单总线数据通路与暂存器",
-          "score": 6,
-          "matchedTerms": [
-            "r1",
-            "r2"
           ]
         }
       ]
@@ -33904,6 +33928,14 @@
           ]
         },
         {
+          "card": "大小端存储",
+          "score": 7,
+          "matchedTerms": [
+            "字节",
+            "b2"
+          ]
+        },
+        {
           "card": "总线与总线事务",
           "score": 6,
           "matchedTerms": [
@@ -33918,15 +33950,6 @@
             "表示",
             "最多",
             "不同"
-          ]
-        },
-        {
-          "card": "BCD 码与字符编码",
-          "score": 6,
-          "matchedTerms": [
-            "字节存",
-            "表示",
-            "字母"
           ]
         }
       ]
@@ -36100,6 +36123,18 @@
           ]
         },
         {
+          "card": "硬布线控制器与微程序控制器",
+          "score": 14,
+          "matchedTerms": [
+            "cpu",
+            "寄存器",
+            "指令",
+            "指令存",
+            "器指令",
+            "执行的"
+          ]
+        },
+        {
           "card": "计算机系统层次结构",
           "score": 12,
           "matchedTerms": [
@@ -36117,16 +36152,6 @@
             "cpu",
             "执行",
             "寄存器"
-          ]
-        },
-        {
-          "card": "硬布线控制器与微程序控制器",
-          "score": 11,
-          "matchedTerms": [
-            "cpu",
-            "寄存器",
-            "指令存",
-            "器指令"
           ]
         },
         {
@@ -36319,10 +36344,11 @@
           ]
         },
         {
-          "card": "单周期与多周期数据通路",
+          "card": "大小端存储",
           "score": 4,
           "matchedTerms": [
-            "时间"
+            "d4",
+            "依次为"
           ]
         }
       ]
@@ -39202,8 +39228,18 @@
       "answer": "B",
       "analysis": "2022-第26题-解析 初始时系统中的可用资源数为 <1,3,2> ，只能满足 P0 的需求 <0,2,1> ，所以 安全分配序列 第一个只能是 P0， 将资源分配给 P0 后，P0 执行完释放所占资源，可用资源数变为 <1,3,2> + <2,0,1> = <3,3,3> ， 此时可用资源数既能满足 P1，也能满足 P2，可以先分配给 P1，P1 执行完释放资源再分配给 P2， 也可以先分配给 P2，P2 执行完释放资源再分配给 P1。 所以安全序列可以是 ①P0、P1、P2 或 ②P0、P2、P1。",
       "existingCards": [],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "大小端存储",
+          "score": 12,
+          "matchedTerms": [
+            "d4",
+            "c3",
+            "b2",
+            "a1"
+          ]
+        },
         {
           "card": "程序查询与中断驱动 I/O",
           "score": 3,
@@ -39231,13 +39267,6 @@
           "matchedTerms": [
             "的个数"
           ]
-        },
-        {
-          "card": "指令格式与操作码扩展",
-          "score": 2,
-          "matchedTerms": [
-            "变为"
-          ]
         }
       ]
     },
@@ -39263,9 +39292,10 @@
         },
         {
           "card": "硬布线控制器与微程序控制器",
-          "score": 8,
+          "score": 10,
           "matchedTerms": [
             "cpu",
+            "指令",
             "指令和"
           ]
         },
@@ -42125,6 +42155,15 @@
           ]
         },
         {
+          "card": "大小端存储",
+          "score": 9,
+          "matchedTerms": [
+            "d4",
+            "b2",
+            "a1"
+          ]
+        },
+        {
           "card": "页式存储与缺页异常",
           "score": 9,
           "matchedTerms": [
@@ -42132,15 +42171,6 @@
             "空闲页",
             "闲页框",
             "空闲页框"
-          ]
-        },
-        {
-          "card": "总线与总线事务",
-          "score": 8,
-          "matchedTerms": [
-            "mb",
-            "byte",
-            "答案"
           ]
         }
       ]
@@ -48592,6 +48622,14 @@
           ]
         },
         {
+          "card": "大小端存储",
+          "score": 4,
+          "matchedTerms": [
+            "b2",
+            "的数据"
+          ]
+        },
+        {
           "card": "指令系统与寻址方式",
           "score": 4,
           "matchedTerms": [
@@ -48610,13 +48648,6 @@
           "score": 3,
           "matchedTerms": [
             "直接"
-          ]
-        },
-        {
-          "card": "存储器芯片与地址译码",
-          "score": 2,
-          "matchedTerms": [
-            "的数据"
           ]
         }
       ]
