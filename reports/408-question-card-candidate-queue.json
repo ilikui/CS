@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T11:36:46.921Z",
+  "generatedAt": "2026-11-17T11:38:04.036Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
@@ -6006,11 +6006,12 @@
           ]
         },
         {
-          "card": "802.11 三地址帧格式",
-          "score": 7,
+          "card": "信道、信号与码元速率",
+          "score": 10,
           "matchedTerms": [
-            "地址",
-            "的映射"
+            "bit",
+            "容量",
+            "是同一"
           ]
         }
       ]
@@ -8755,6 +8756,14 @@
           ]
         },
         {
+          "card": "信道、信号与码元速率",
+          "score": 5,
+          "matchedTerms": [
+            "公式",
+            "实现的"
+          ]
+        },
+        {
           "card": "以太网帧与 MAC 地址",
           "score": 5,
           "matchedTerms": [
@@ -8776,14 +8785,6 @@
           "matchedTerms": [
             "使用",
             "解析"
-          ]
-        },
-        {
-          "card": "路由选择与转发表",
-          "score": 4,
-          "matchedTerms": [
-            "r1",
-            "二进制"
           ]
         }
       ]
@@ -14125,8 +14126,27 @@
       "existingCards": [
         "摩尔投票法与主元素"
       ],
-      "confidence": "low-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
+        {
+          "card": "UDP 与 TCP 对比",
+          "score": 10,
+          "matchedTerms": [
+            "确认",
+            "目的",
+            "答案"
+          ]
+        },
+        {
+          "card": "P2P 与客户服务器模型",
+          "score": 8,
+          "matchedTerms": [
+            "可能成",
+            "能成为",
+            "可能成为",
+            "答案"
+          ]
+        },
         {
           "card": "802.11 三地址帧格式",
           "score": 7,
@@ -14144,28 +14164,12 @@
           ]
         },
         {
-          "card": "热土豆路由与 IGP 出口距离",
-          "score": 6,
+          "card": "信道、信号与码元速率",
+          "score": 7,
           "matchedTerms": [
-            "本题",
-            "不是"
-          ]
-        },
-        {
-          "card": "CRC 检错与生成多项式",
-          "score": 6,
-          "matchedTerms": [
-            "次数",
-            "重新计",
-            "次数为"
-          ]
-        },
-        {
-          "card": "GBN序号空间与窗口约束",
-          "score": 6,
-          "matchedTerms": [
-            "因此",
-            "已知"
+            "log",
+            "实现的",
+            "的基本"
           ]
         }
       ]
@@ -14268,6 +14272,17 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "信道、信号与码元速率",
+          "score": 13,
+          "matchedTerms": [
+            "公式",
+            "hz",
+            "数据传",
+            "据传输",
+            "数据传输"
+          ]
+        },
+        {
           "card": "奈奎斯特与香农信道容量",
           "score": 9,
           "matchedTerms": [
@@ -14302,14 +14317,6 @@
           "matchedTerms": [
             "时需",
             "因此"
-          ]
-        },
-        {
-          "card": "IPv6 地址与首部特点",
-          "score": 8,
-          "matchedTerms": [
-            "地址",
-            "解析"
           ]
         }
       ]
@@ -19705,6 +19712,15 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "UDP 与 TCP 对比",
+          "score": 8,
+          "matchedTerms": [
+            "目的",
+            "一次",
+            "答案"
+          ]
+        },
+        {
           "card": "以太网帧与 MAC 地址",
           "score": 6,
           "matchedTerms": [
@@ -19733,13 +19749,6 @@
           "matchedTerms": [
             "使用",
             "解析"
-          ]
-        },
-        {
-          "card": "海明码与纠错距离",
-          "score": 4,
-          "matchedTerms": [
-            "满足"
           ]
         }
       ]
@@ -30942,11 +30951,11 @@
           ]
         },
         {
-          "card": "交换机自学习与转发",
-          "score": 5,
+          "card": "UDP 与 TCP 对比",
+          "score": 6,
           "matchedTerms": [
-            "t1",
-            "题目"
+            "长度",
+            "一次"
           ]
         }
       ]
@@ -36784,6 +36793,15 @@
           ]
         },
         {
+          "card": "P2P 与客户服务器模型",
+          "score": 5,
+          "matchedTerms": [
+            "和数据",
+            "和存储",
+            "文件分"
+          ]
+        },
+        {
           "card": "数据报与虚电路服务",
           "score": 4,
           "matchedTerms": [
@@ -36791,13 +36809,6 @@
             "建立逻",
             "立逻辑",
             "建立逻辑"
-          ]
-        },
-        {
-          "card": "信道划分与多路复用",
-          "score": 4,
-          "matchedTerms": [
-            "道划分"
           ]
         }
       ]
@@ -39286,6 +39297,14 @@
       "confidence": "low-candidate",
       "candidates": [
         {
+          "card": "信道、信号与码元速率",
+          "score": 6,
+          "matchedTerms": [
+            "bit",
+            "的基本"
+          ]
+        },
+        {
           "card": "交换机自学习与转发",
           "score": 5,
           "matchedTerms": [
@@ -39313,13 +39332,6 @@
           "score": 5,
           "matchedTerms": [
             "bit"
-          ]
-        },
-        {
-          "card": "海明码与纠错距离",
-          "score": 4,
-          "matchedTerms": [
-            "满足"
           ]
         }
       ]
@@ -39472,6 +39484,15 @@
           ]
         },
         {
+          "card": "信道、信号与码元速率",
+          "score": 12,
+          "matchedTerms": [
+            "log",
+            "bit",
+            "数据传"
+          ]
+        },
+        {
           "card": "IPv6 地址与首部特点",
           "score": 11,
           "matchedTerms": [
@@ -39488,14 +39509,6 @@
             "发送",
             "请求",
             "访问"
-          ]
-        },
-        {
-          "card": "奈奎斯特与香农信道容量",
-          "score": 8,
-          "matchedTerms": [
-            "log",
-            "bit"
           ]
         }
       ]
@@ -45151,11 +45164,10 @@
           ]
         },
         {
-          "card": "UDP 与 TCP 对比",
-          "score": 6,
+          "card": "以太网帧与 MAC 地址",
+          "score": 4,
           "matchedTerms": [
-            "有序",
-            "一次"
+            "类型"
           ]
         }
       ]
@@ -45204,21 +45216,20 @@
           ]
         },
         {
+          "card": "UDP 与 TCP 对比",
+          "score": 10,
+          "matchedTerms": [
+            "确认",
+            "长度",
+            "一次"
+          ]
+        },
+        {
           "card": "802.11 三地址帧格式",
           "score": 9,
           "matchedTerms": [
             "地址",
             "h4"
-          ]
-        },
-        {
-          "card": "ARP 与 DHCP",
-          "score": 9,
-          "matchedTerms": [
-            "h1",
-            "h2",
-            "地址",
-            "的地址"
           ]
         }
       ]
@@ -45262,20 +45273,21 @@
           ]
         },
         {
+          "card": "信道、信号与码元速率",
+          "score": 11,
+          "matchedTerms": [
+            "log",
+            "bit",
+            "制信号"
+          ]
+        },
+        {
           "card": "IPv6 地址与首部特点",
           "score": 11,
           "matchedTerms": [
             "地址",
             "使用",
             "解析"
-          ]
-        },
-        {
-          "card": "IP 地址与子网划分",
-          "score": 10,
-          "matchedTerms": [
-            "编址",
-            "地址"
           ]
         }
       ]
@@ -48074,6 +48086,14 @@
           ]
         },
         {
+          "card": "UDP 与 TCP 对比",
+          "score": 5,
+          "matchedTerms": [
+            "长度",
+            "需要保"
+          ]
+        },
+        {
           "card": "以太网帧与 MAC 地址",
           "score": 4,
           "matchedTerms": [
@@ -48086,15 +48106,6 @@
           "matchedTerms": [
             "在时刻",
             "最大"
-          ]
-        },
-        {
-          "card": "距离向量与链路状态路由",
-          "score": 3,
-          "matchedTerms": [
-            "后计算",
-            "计算最",
-            "后计算最"
           ]
         }
       ]
