@@ -4804,24 +4804,24 @@ const EXAM_DATA = [
     "选择题",
     1,
     "当 $x \\to 0^{+}$ 时，下列无穷小量中阶最高的是\n- (A) $\\int_{0}^{x}{\\left( e^{t^{2}} - 1 \\right) \\mathrm{~d} t}$\n- (B) $\\int_{0}^{x}{\\ln \\left( 1 + \\sqrt{t^{3}} \\right) \\mathrm{~d} t}$\n- (C) $\\int_{0}^{\\sin x}{\\sin t^{2} \\mathrm{~d} t}$\n- (D) $\\int_{0}^{1-\\cos x}{\\sqrt{\\sin^{3} t} \\mathrm{~d} t}$",
-    "",
-    ""
+    "D",
+    "令 x→0⁺。利用 e^{t²}−1∼t²、ln(1+√(t³))∼t^{3/2}、sin(t²)∼t²、√(sin³t)∼t^{3/2}，逐项积分：\n(A) ∫₀ˣ(e^{t²}−1)dt∼x³/3；\n(B) ∫₀ˣln(1+t^{3/2})dt∼(2/5)x^{5/2}；\n(C) ∫₀^{sin x}sin(t²)dt∼(sin x)³/3∼x³/3；\n(D) ∫₀^{1−cos x}√(sin³t)dt∼(2/5)(1−cos x)^{5/2}∼x⁵/(5·2^{3/2})。\n无穷小阶数越高，趋于 0 越快。D 为 x⁵ 阶，其余为 x³、x^{5/2} 阶，故 D 阶最高，选 D。"
   ],
   [
     "2020",
     "选择题",
     2,
     "函数 $f\\left( x \\right) = \\dfrac{e^{\\frac{1}{x-1}} \\ln \\left| 1+x \\right|}{\\left( e^{x} - 1 \\right)\\left( x-2 \\right)}$ 的第二类间断点的个数为\n- (A) $1$ 个\n- (B) $2$ 个\n- (C) $3$ 个\n- (D) $4$ 个",
-    "",
-    ""
+    "C",
+    "先找可能的无定义点：x=−1、0、1、2。\nx=−1：ln|1+x|→−∞，其余因子趋于非零有限值，函数发散，是第二类间断点。\nx=0：ln(1+x)∼x，e^x−1∼x，故 ln(1+x)/(e^x−1)→1；e^{1/(x−1)}→e⁻¹，x−2→−2，函数极限有限，为可去间断点，不属于第二类。\nx=1：e^{1/(x−1)} 在左侧趋于 0、右侧趋于 +∞，其余因子趋于非零有限值，属于第二类间断点。\nx=2：分母 x−2→0，分子趋于非零有限值，函数发散，属于第二类间断点。\n因此第二类间断点为 −1、1、2，共 3 个，选 C。"
   ],
   [
     "2020",
     "选择题",
     3,
     "$\\int_{0}^{1}{\\dfrac{\\arcsin \\sqrt{x}}{\\sqrt{x\\left( 1-x \\right)}} \\mathrm{~d} x} =$\n- (A) $\\dfrac{\\pi^{2}}{4}$\n- (B) $\\dfrac{\\pi^{2}}{8}$\n- (C) $\\dfrac{\\pi}{4}$\n- (D) $\\dfrac{\\pi}{8}$",
-    "",
-    ""
+    "A",
+    "令 u=arcsin√x，则 x=sin²u，dx=2sin u cos u du，√[x(1−x)]=sin u cos u。积分上下限由 x=0、1 分别变为 u=0、π/2。因此\nI=∫₀^{π/2} [u/(sin u cos u)]·2sin u cos u du\n=2∫₀^{π/2}u du\n=[u²]₀^{π/2}=π²/4。\n故选 A。"
   ],
   [
     "2020",
@@ -4836,8 +4836,8 @@ const EXAM_DATA = [
     "选择题",
     5,
     "关于函数\n$$\nf(x,y)=\n\\begin{cases}\nxy, & xy\\ne 0,\\\\\nx, & y=0,\\\\\ny, & x=0,\n\\end{cases}\n$$\n给出下列结论：\n\n1. $\\left.\\dfrac{\\partial f}{\\partial x}\\right|_{(0,0)}=1$\n2. $\\left.\\dfrac{\\partial^2 f}{\\partial x\\partial y}\\right|_{(0,0)}=1$\n3. $\\lim\\limits_{(x,y)\\to(0,0)}f(x,y)=0$\n4. $\\lim\\limits_{y\\to0}\\lim\\limits_{x\\to0}f(x,y)=0$\n\n其中正确的个数为\n\n- (A) $4$\n- (B) $3$\n- (C) $2$\n- (D) $1$",
-    "",
-    ""
+    "B",
+    "逐项判断。\n(1) 按偏导定义，f_x(0,0)=lim_{h→0}[f(h,0)−f(0,0)]/h=lim h/h=1，正确。\n(2) 混合偏导不能只把 f_y(0,0) 算出来。对 x≠0，点 (x,0) 处 f_y(x,0) 的差商为 [f(x,k)−f(x,0)]/k=(xk−x)/k=x−x/k，k→0 时不存在有限极限，因此相应混合偏导不存在，错误。\n(3) 当 xy≠0 时 f=xy→0；在两坐标轴上 f=x 或 f=y，也都趋于 0。可用分情况及 |xy|≤(x²+y²)/2 说明二元极限为 0，正确。\n(4) 先固定 y 求 x→0 的极限：若 y≠0，xy→0；若 y=0，f(x,0)=x→0，内层极限恒为 0，再令 y→0 仍为 0，正确。\n共 3 项正确，选 B。"
   ],
   [
     "2020",
@@ -4852,64 +4852,64 @@ const EXAM_DATA = [
     "选择题",
     7,
     "设 4 阶矩阵 $\\boldsymbol{A}=(a_{ij})$ 不可逆，$a_{12}$ 的代数余子式 $A_{12}\\ne 0$。记 $\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2,\\boldsymbol{\\alpha}_3,\\boldsymbol{\\alpha}_4$ 为矩阵 $\\boldsymbol{A}$ 的列向量，$\\boldsymbol{A}^*$ 为 $\\boldsymbol{A}$ 的伴随矩阵，则方程组\n$$\n\\boldsymbol{A}^*\\boldsymbol{x}=0\n$$\n的通解为\n\n- (A) $\\boldsymbol{x}=k_1\\boldsymbol{\\alpha}_1+k_2\\boldsymbol{\\alpha}_2+k_3\\boldsymbol{\\alpha}_3$\n- (B) $\\boldsymbol{x}=k_1\\boldsymbol{\\alpha}_1+k_2\\boldsymbol{\\alpha}_2+k_3\\boldsymbol{\\alpha}_4$\n- (C) $\\boldsymbol{x}=k_1\\boldsymbol{\\alpha}_1+k_2\\boldsymbol{\\alpha}_3+k_3\\boldsymbol{\\alpha}_4$\n- (D) $\\boldsymbol{x}=k_1\\boldsymbol{\\alpha}_2+k_2\\boldsymbol{\\alpha}_3+k_3\\boldsymbol{\\alpha}_4$\n\n其中 $k_1,k_2,k_3$ 为任意常数。",
-    "",
-    ""
+    "C",
+    "A 不可逆，故 det A=0。又 A₁₂≠0，表示删除 A 的第 1 行、第 2 列所得三阶子式非零，因此 r(A)≥3；结合 A 奇异，得 r(A)=3。\n由伴随矩阵性质 A* A=det(A)I=0，可知对任意向量 u，A*u=0（取 u=A x），所以 Col(A)⊆N(A*)。\n当 r(A)=3=n−1 时，r(A*)=1，故 dim N(A*)=4−1=3；同时 dim Col(A)=r(A)=3，二者包含且维数相同，故 N(A*)=Col(A)。\n非零子式删除第 2 列，说明 α₁、α₃、α₄ 线性无关，构成 Col(A) 的一组基。因此通解 x=k₁α₁+k₂α₃+k₃α₄，选 C。"
   ],
   [
     "2020",
     "选择题",
     8,
     "设 $\\boldsymbol{A}$ 为 3 阶矩阵，$\\boldsymbol{\\alpha}_1,\\boldsymbol{\\alpha}_2$ 为 $\\boldsymbol{A}$ 的属于特征值 $1$ 的线性无关特征向量，$\\boldsymbol{\\alpha}_3$ 为 $\\boldsymbol{A}$ 的属于特征值 $-1$ 的特征向量。则满足\n$$\n\\boldsymbol{P}^{-1}\\boldsymbol{A}\\boldsymbol{P}=\n\\begin{pmatrix}\n1&0&0\\\\\n0&-1&0\\\\\n0&0&1\n\\end{pmatrix}\n$$\n的可逆矩阵 $\\boldsymbol{P}$ 可为\n\n- (A) $\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_3,\\ \\boldsymbol{\\alpha}_2,\\ -\\boldsymbol{\\alpha}_3\\right)$\n- (B) $\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2,\\ \\boldsymbol{\\alpha}_2,\\ -\\boldsymbol{\\alpha}_3\\right)$\n- (C) $\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_3,\\ -\\boldsymbol{\\alpha}_3,\\ \\boldsymbol{\\alpha}_2\\right)$\n- (D) $\\left(\\boldsymbol{\\alpha}_1+\\boldsymbol{\\alpha}_2,\\ -\\boldsymbol{\\alpha}_3,\\ \\boldsymbol{\\alpha}_2\\right)$",
-    "",
-    ""
+    "D",
+    "相似变换 P⁻¹AP=diag(1,−1,1) 的列向量必须依次为对应特征值 1、−1、1 的特征向量。\nα₁、α₂ 属于特征值 1，α₃ 属于特征值 −1。因此第一、三列应从 span{α₁,α₂} 中取线性无关向量，第二列应取 α₃ 的非零倍数。\n选项 D 的列为 α₁+α₂、−α₃、α₂，分别满足特征值顺序；前后两列线性无关，且与 α₃ 线性无关，故 P 可逆并满足条件。选 D。"
   ],
   [
     "2020",
     "填空题",
     9,
     "设\n$$\n\\begin{cases}\nx=\\sqrt{t^2+1},\\\\\ny=\\ln\\!\\left(t+\\sqrt{t^2+1}\\right),\n\\end{cases}\n$$\n则 $\\left.\\dfrac{\\mathrm{d}^2y}{\\mathrm{d}x^2}\\right|_{t=1}=$",
-    "",
-    ""
+    "-\\sqrt{2}",
+    "参数方程二阶导公式为 d²y/dx²=[d(dy/dx)/dt]/(dx/dt)。\nx=√(t²+1)，故 dx/dt=t/√(t²+1)；y=ln(t+√(t²+1))，故 dy/dt=1/√(t²+1)。\n于是 dy/dx=(dy/dt)/(dx/dt)=1/t，再求\nd²y/dx²=[d(1/t)/dt]/[dx/dt]=(-1/t²)/(t/√(t²+1))=−√(t²+1)/t³。\n代入 t=1，得 −√2。"
   ],
   [
     "2020",
     "填空题",
     10,
     "$\\int_{0}^{1}{\\mathrm{d} y \\int_{\\sqrt{y}}^{1}{\\sqrt{x^{3}+1} \\mathrm{~d} x}} =$",
-    "",
-    ""
+    "\\\\dfrac{2}{9}(2\\\\sqrt{2}-1)",
+    "原积分区域为 0≤y≤1、√y≤x≤1，等价于 0≤x≤1、0≤y≤x²。交换积分次序：\nI=∫₀¹dx∫₀^{x²}√(x³+1)dy\n=∫₀¹x²√(x³+1)dx。\n令 u=x³+1，du=3x²dx，积分限由 1 变为 2：\nI=(1/3)∫₁²u^{1/2}du\n=(2/9)(2√2−1)。"
   ],
   [
     "2020",
     "填空题",
     11,
     "设 $z = \\arctan \\left[ xy + \\sin \\left( x+y \\right) \\right]$，则 $\\left. \\mathrm{d} z \\right|_{\\left( 0,\\pi \\right)} =$",
-    "",
-    ""
+    "(\\\\pi-1)\\\\,dx-dy",
+    "令 u=xy+sin(x+y)，z=arctan u，则 dz=du/(1+u²)。\n在 (x,y)=(0,π) 处，u=0·π+sinπ=0，故 dz=du。\ndu=(y+cos(x+y))dx+(x+cos(x+y))dy。\n代入 (0,π)：du=(π−1)dx−dy。因此 dz|_(0,π)=(π−1)dx−dy。"
   ],
   [
     "2020",
     "填空题",
     12,
     "斜边长为 $2a$ 的等腰直角三角形平板铅直地沉没在水中，且斜边与水面相齐。记重力加速度为 $g$，水的密度为 $\\rho$，则该平板一侧所受的水压力为",
-    "",
-    ""
+    "\\\\dfrac{\\\\rho g a^3}{3}",
+    "设 y 为距水面的竖直深度。等腰直角三角形斜边长 2a，斜边与水面重合，其高为 a；深度 y 处的水平截线宽度由相似三角形得 w(y)=2(a−y)，0≤y≤a。\n深度 y 处压强 p(y)=ρgy，微元面积 dS=w(y)dy，微元压力 dF=p(y)dS。\n总压力\nF=ρg∫₀ᵃ y·2(a−y)dy\n=2ρg[a·a²/2−a³/3]\n=ρga³/3。"
   ],
   [
     "2020",
     "填空题",
     13,
     "设 $y = y\\left( x \\right)$ 满足 $y^{\\prime\\prime} + 2y^{\\prime} + y = 0$，且 $y\\left( 0 \\right) = 0$，$y^{\\prime}\\left( 0 \\right) = 1$，则 $\\int_{0}^{+\\infty}{y\\left( x \\right) \\mathrm{~d} x} =$",
-    "",
-    ""
+    "1",
+    "特征方程 r²+2r+1=0，即 (r+1)²=0，通解 y=(C₁+C₂x)e⁻ˣ。\n由 y(0)=0 得 C₁=0；求导 y'=C₂(1−x)e⁻ˣ，代入 y'(0)=1 得 C₂=1。因此 y=xe⁻ˣ。\n所求反常积分\n∫₀∞xe⁻ˣdx=[−(x+1)e⁻ˣ]₀∞=1。"
   ],
   [
     "2020",
     "填空题",
     14,
     "行列式\n$$\n\\begin{vmatrix}\na&0&-1&1\\\\\n0&a&1&-1\\\\\n-1&1&a&0\\\\\n1&-1&0&a\n\\end{vmatrix}\n=\n$$",
-    "",
-    ""
+    "a^2(a^2-4)",
+    "将矩阵写成分块形式 M=[[aI₂,B],[B,aI₂]]，其中 B=[[-1,1],[1,−1]]。\nB 的特征值为 0、−2。对每个 B 的特征值 μ，分块矩阵 M 对应的特征值为 a+μ 与 a−μ。因此 M 的四个特征值为 a、a、a−2、a+2。\n行列式等于特征值之积：\ndet M=a²(a−2)(a+2)=a²(a²−4)。"
   ],
   [
     "2020",
@@ -4924,32 +4924,32 @@ const EXAM_DATA = [
     "解答题",
     16,
     "已知函数 $f\\left( x \\right)$ 连续且 $\\lim\\limits_{x\\to 0}{\\dfrac{f\\left( x \\right)}{x}} = 1$，$g\\left( x \\right)=\\int_{0}^{1}{f\\left( xt \\right) \\mathrm{~d} t}$，求 $g^{\\prime}\\left( x \\right)$，并证明 $g^{\\prime}\\left( x \\right)$ 在 $x=0$ 处连续。",
-    "",
-    ""
+    "g'(x)=\\\\dfrac{x f(x)-\\\\int_0^x f(u)\\\\,du}{x^2}\\\\ (x\\\\ne0),\\\\quad g'(0)=\\\\dfrac12",
+    "当 x≠0，令 u=xt，则 g(x)=∫₀¹f(xt)dt=(1/x)∫₀ˣf(u)du。由商法则和微积分基本定理，\ng'(x)=[x f(x)−∫₀ˣf(u)du]/x²。\n又 f(x)/x→1，故 f(0)=0 且 f(x)=x+o(x)。于是\ng'(0)=lim_{x→0}[g(x)−g(0)]/x\n=lim_{x→0}(1/x²)∫₀ˣf(u)du\n=1/2。\n对 x≠0，分子 x f(x)−∫₀ˣf(u)du=x²+o(x²)−[x²/2+o(x²)]=x²/2+o(x²)，故 g'(x)→1/2=g'(0)。所以 g' 在 0 连续。"
   ],
   [
     "2020",
     "解答题",
     17,
     "求函数 $f\\left( x,y \\right)=x^{3}+8y^{3}-xy$ 的极值。",
-    "",
-    ""
+    "在 (0,0) 为鞍点；在 (1/6,1/12) 取得极小值 -1/216",
+    "f_x=3x²−y，f_y=24y²−x。驻点满足 y=3x²、x=24y²，代入得 x=216x⁴，故 x=0 或 x=1/6；对应 y=0 或 y=1/12。\n二阶偏导：f_xx=6x，f_xy=−1，f_yy=48y，判别式 Δ=f_xx f_yy−f_xy²=288xy−1。\n(0,0)：Δ=−1<0，为鞍点。\n(1/6,1/12)：Δ=3>0 且 f_xx=1>0，为严格极小值点。函数值\nf=1/216+8/1728−1/72=−1/216。\n故唯一极小值为 −1/216，无极大值。"
   ],
   [
     "2020",
     "解答题",
     18,
     "设函数 $f\\left( x \\right)$ 的定义域为 $\\left( 0,+\\infty \\right)$ 且满足\n$$\n2f\\left( x \\right)+x^{2}f\\left( \\dfrac{1}{x} \\right)=\\dfrac{x^{2}+2x}{\\sqrt{1+x^{2}}}\n$$\n求 $f\\left( x \\right)$，并求曲线 $y=f\\left( x \\right)$，$y=\\dfrac{1}{2}$，$y=\\dfrac{\\sqrt{3}}{2}$ 及 $y$ 轴所围图形绕 $x$ 轴旋转所成旋转体的体积。",
-    "",
-    ""
+    "f(x)=\\\\dfrac{x}{\\\\sqrt{1+x^2}},\\\\quad V=\\\\dfrac{\\\\pi^2}{6}",
+    "原式为 2f(x)+x²f(1/x)=x(x+2)/√(1+x²)。将 x 换成 1/x，并乘以 x²，得 f(x)+2x²f(1/x)=x(1+2x)/√(1+x²)。\n联立两式消去 f(1/x)，得到 3f(x)=3x/√(1+x²)，故 f(x)=x/√(1+x²)。\n令 y=f(x)，反解 x=y/√(1−y²)。绕 x 轴旋转，按水平薄壳法，半径 y、长度 x(y)，\nV=2π∫_{1/2}^{√3/2}y·[y/√(1−y²)]dy。\n令 y=sinθ，θ∈[π/6,π/3]，则\nV=2π∫_{π/6}^{π/3}sin²θdθ\n=2π[θ/2−sin(2θ)/4]_{π/6}^{π/3}\n=π²/6。"
   ],
   [
     "2020",
     "解答题",
     19,
     "设平面区域 $D$ 由直线 $x=1$，$x=2$，$y=x$ 与 $x$ 轴围成。计算\n$$\n\\iint_{D}{\\dfrac{\\sqrt{x^{2}+y^{2}}}{x} \\mathrm{~d} x \\mathrm{~d} y}\n$$",
-    "",
-    ""
+    "\\\\dfrac34\\\\left(\\\\sqrt2+\\\\ln(1+\\\\sqrt2)\\\\right)",
+    "区域 D：1≤x≤2，0≤y≤x。令 y=xt，则 0≤t≤1，dy=xdt。被积函数 √(x²+y²)/x=√(1+t²)。\n所以\nI=∫₁²dx∫₀¹x√(1+t²)dt\n=(∫₁²x dx)(∫₀¹√(1+t²)dt)\n=(3/2)·[1/2(t√(1+t²)+ln(t+√(1+t²)))]₀¹\n=3/4(√2+ln(1+√2))。"
   ],
   [
     "2020",
@@ -4964,24 +4964,24 @@ const EXAM_DATA = [
     "解答题",
     21,
     "设函数 $f\\left( x \\right)$ 可导，且 $f^{\\prime}\\left( x \\right)>0$，曲线 $y=f\\left( x \\right)\\left( x\\geq 0 \\right)$ 经过坐标原点 $O$。$M$ 为其上任意一点，点 $M$ 处的切线与 $x$ 轴交于点 $T$，又 $MP$ 垂直 $x$ 轴于点 $P$。已知由曲线 $y=f\\left( x \\right)$、直线 $MP$ 以及 $x$ 轴所围图形的面积与 $\\triangle MTP$ 的面积之比恒为 $3:2$，求满足上述条件的曲线方程。",
-    "",
-    ""
+    "y=Cx^3\\\\quad(C>0)",
+    "设 A(x)=∫₀ˣf(t)dt。点 M=(x,f(x)) 处切线与 x 轴交点 T 的横坐标为 x−f(x)/f'(x)，故 PT=f/f'；MP=f。三角形面积为 f²/(2f')。\n题设比值为 A/[f²/(2f')]=3/2，化简得 4Af'=3f²。\n又 A'=f，故 d(ln f)/dx=3A'/(4A)，积分得 f=K A^{3/4}（K>0）。于是 A'=K A^{3/4}，分离变量并用 A(0)=0，得 A^{1/4}=Kx/4，从而 f(x)=C x³，其中 C>0 为任意常数。该族函数满足 f'(x)>0（x>0）及原面积比条件。"
   ],
   [
     "2020",
     "解答题",
     22,
     "设二次型\n$$\nf(x_1,x_2,x_3)=x_1^2+x_2^2+x_3^2+2ax_1x_2+2ax_1x_3+2ax_2x_3\n$$\n经过可逆线性变换\n$$\n\\begin{pmatrix}\nx_1\\\\\nx_2\\\\\nx_3\n\\end{pmatrix}\n=\n\\boldsymbol{P}\n\\begin{pmatrix}\ny_1\\\\\ny_2\\\\\ny_3\n\\end{pmatrix}\n$$\n化为二次型\n$$\ng(y_1,y_2,y_3)=y_1^2+y_2^2+4y_3^2+2y_1y_2.\n$$\n\n1. 求 $a$ 的值；\n2. 求可逆矩阵 $\\boldsymbol{P}$。",
-    "",
-    ""
+    "a=-\\\\dfrac12；例如 P=\\\\begin{pmatrix}\\\\frac1{\\\\sqrt3}&1+\\\\frac1{\\\\sqrt3}&\\\\frac23\\\\\\\\-\\\\frac1{\\\\sqrt3}&1-\\\\frac1{\\\\sqrt3}&\\\\frac23\\\\\\\\0&1&-\\\\frac43\\\\end{pmatrix}",
+    "原二次型矩阵 A(a) 的特征值为 1−a（重数 2）和 1+2a。目标矩阵 B=[[1,1,0],[1,1,0],[0,0,4]] 的特征值为 2、4、0，秩为 2 且正惯性指数为 2。\n合同变换保持秩及正负惯性指数。A(a) 要有秩 2，只能取 1+2a=0，即 a=−1/2（a=1 会使秩为 1，排除）。\n此时 A=(3/2)I−(1/2)J。取\np₁=(1,−1,0)^T/√3，p₂=p₁+(1,1,1)^T，p₃=(2,2,−4)^T/3，\n组成 P=(p₁,p₂,p₃)。三列线性无关；直接计算 p₁ᵀAp₁=p₂ᵀAp₂=p₁ᵀAp₂=1，p₃ᵀAp₃=4，且 p₁ᵀAp₃=p₂ᵀAp₃=0，因此 PᵀAP=B，满足题意。"
   ],
   [
     "2020",
     "解答题",
     23,
     "设 $\\boldsymbol{A}$ 为 2 阶矩阵，$\\boldsymbol{P}=(\\boldsymbol{\\alpha},\\boldsymbol{A}\\boldsymbol{\\alpha})$，其中 $\\boldsymbol{\\alpha}$ 是非零向量且不是 $\\boldsymbol{A}$ 的特征向量。\n\n1. 证明 $\\boldsymbol{P}$ 为可逆矩阵；\n2. 若 $\\boldsymbol{A}^2\\boldsymbol{\\alpha}+\\boldsymbol{A}\\boldsymbol{\\alpha}-6\\boldsymbol{\\alpha}=0$，求 $\\boldsymbol{P}^{-1}\\boldsymbol{A}\\boldsymbol{P}$，并判断 $\\boldsymbol{A}$ 是否相似于对角矩阵。",
-    "",
-    ""
+    "\\\\boldsymbol P^{-1}A\\\\boldsymbol P=\\\\begin{pmatrix}0&6\\\\\\\\1&-1\\\\end{pmatrix}；A 可相似对角化，特征值为 2、-3",
+    "P 的两列为 α 与 Aα。若二者线性相关，则 Aα=λα，α 将是 A 的特征向量，与题设矛盾；故 P 可逆。\n由 A²α+Aα−6α=0，得 A²α=6α−Aα。\n计算 A 在基 {α,Aα} 下的作用：\nAα=0·α+1·Aα，对应第一列 (0,1)ᵀ；\nA(Aα)=6α−1·Aα，对应第二列 (6,−1)ᵀ。\n故 P⁻¹AP=[[0,6],[1,−1]]。\n其特征多项式 λ²+λ−6=(λ−2)(λ+3)，有两个不同特征值，因此可对角化。"
   ],
   [
     "2021",
@@ -5469,7 +5469,7 @@ const EXAM_DATA = [
     17,
     "设曲线 $\\boldsymbol L:y=y(x)$（$x>e$）经过点 $(e^2,0)$，且 $\\boldsymbol L$ 上任一点 $P(x,y)$ 到 $y$ 轴的距离等于该点处切线在 $y$ 轴上的截距。\n\n1. 求 $y(x)$；\n2. 在 $\\boldsymbol L$ 上求一点，使该点处的切线与两坐标轴所围三角形的面积最小，并求此最小面积。",
     "",
-    ""
+    "点 $P(x,y)$ 处切线方程为\n$$\nY-y=y'(X-x).\n$$\n令 $X=0$，得切线在 $y$ 轴上的截距为\n$$\ny-xy'.\n$$\n由题意，\n$$\ny-xy'=x,\n$$\n即\n$$\ny'-\\frac{1}{x}y=-1.\n$$\n解此一阶线性方程得\n$$\ny=(C-\\ln x)x.\n$$\n再由点 $(e^2,0)$ 在曲线上，得\n$$\n0=(C-2)e^2 \\Rightarrow C=2.\n$$\n故\n$$\n\\boxed{\\,y(x)=(2-\\ln x)x\\, }.\n$$\n\n---\n\n设曲线上点为\n$$\nM\\bigl(x,(2-\\ln x)x\\bigr).\n$$\n则\n$$\ny'(x)=1-\\ln x.\n$$\n该点切线方程为\n$$\nY-(2-\\ln x)x=(1-\\ln x)(X-x).\n$$\n令 $Y=0$，得与 $x$ 轴交点横坐标\n$$\nX=\\frac{x}{\\ln x-1}.\n$$\n令 $X=0$，得与 $y$ 轴交点纵坐标\n$$\nY=x.\n$$\n故三角形面积为\n$$\nS(x)=\\frac12\\cdot \\frac{x}{\\ln x-1}\\cdot x\n=\\frac{x^2}{2(\\ln x-1)}.\n$$\n\n求导得\n$$\nS'(x)=\\frac12\\cdot \\frac{x(2\\ln x-3)}{(\\ln x-1)^2}.\n$$\n令 $S'(x)=0$，得\n$$\nx=e^{3/2}.\n$$\n此时取得极小值，故最小面积为\n$$\nS\\!\\left(e^{3/2}\\right)=e^3.\n$$"
   ],
   [
     "2023",
@@ -5501,7 +5501,7 @@ const EXAM_DATA = [
     19,
     "已知平面区域\n$$\nD=\\left\\{(x,y)\\mid 0\\le y\\le \\frac{1}{x\\sqrt{1+x^2}},\\ x\\ge 1\\right\\}.\n$$\n\n1. 求 $D$ 的面积；\n2. 求 $D$ 绕 $x$ 轴旋转所成旋转体的体积。",
     "",
-    ""
+    "面积为\n$$\nA=\\int_1^{+\\infty}\\frac{1}{x\\sqrt{1+x^2}}\\,dx.\n$$\n令 $x=\\tan t$，则\n$$\nA=\\int_{\\pi/4}^{\\pi/2}\\csc t\\,dt\n=\\ln|\\csc t-\\cot t|\\Big|_{\\pi/4}^{\\pi/2}\n=\\ln(1+\\sqrt2).\n$$\n\n---\n\n旋转体体积为\n$$\nV=\\pi\\int_1^{+\\infty}\\frac{1}{x^2(1+x^2)}\\,dx.\n$$\n裂项得\n$$\n\\frac{1}{x^2(1+x^2)}=\\frac{1}{x^2}-\\frac{1}{1+x^2}.\n$$\n故\n$$\nV=\\pi\\int_1^{+\\infty}\\left(\\frac{1}{x^2}-\\frac{1}{1+x^2}\\right)\\,dx\n=\\pi\\left(1-\\frac{\\pi}{4}\\right).\n$$"
   ],
   [
     "2023",
@@ -5557,7 +5557,7 @@ const EXAM_DATA = [
     22,
     "设矩阵 $\\boldsymbol A$ 满足：对任意 $x_1,x_2,x_3$，均有\n$$\n\\boldsymbol A\n\\begin{pmatrix}\nx_1\\\\\nx_2\\\\\nx_3\n\\end{pmatrix}\n=\n\\begin{pmatrix}\nx_1+x_2+x_3\\\\\n2x_1-x_2+x_3\\\\\nx_2-x_3\n\\end{pmatrix}.\n$$\n\n1. 求 $\\boldsymbol A$；\n2. 求可逆矩阵 $\\boldsymbol P$ 与对角矩阵 $\\boldsymbol\\Lambda$，使得\n   $$\n   \\boldsymbol P^{-1}\\boldsymbol A\\boldsymbol P=\\boldsymbol\\Lambda.\n   $$",
     "",
-    ""
+    "由题意直接读出\n$$\n\\boldsymbol A=\n\\begin{pmatrix}\n1&1&1\\\\\n2&-1&1\\\\\n0&1&-1\n\\end{pmatrix}.\n$$\n\n---\n\n先求特征多项式：\n$$\n|\\lambda\\boldsymbol E-\\boldsymbol A|\n=\n\\begin{vmatrix}\n\\lambda-1&-1&-1\\\\\n-2&\\lambda+1&-1\\\\\n0&-1&\\lambda+1\n\\end{vmatrix}\n=(\\lambda+2)(\\lambda+1)(\\lambda-2).\n$$\n故特征值为\n$$\n\\lambda_1=-2,\\qquad \\lambda_2=-1,\\qquad \\lambda_3=2.\n$$\n\n分别求特征向量：\n\n- 对 $\\lambda=-2$，可取\n  $$\n  \\boldsymbol\\alpha_1=\n  \\begin{pmatrix}\n  0\\\\\n  -1\\\\\n  1\n  \\end{pmatrix}.\n  $$\n\n- 对 $\\lambda=-1$，可取\n  $$\n  \\boldsymbol\\alpha_2=\n  \\begin{pmatrix}\n  -1\\\\\n  0\\\\\n  2\n  \\end{pmatrix}.\n  $$\n\n- 对 $\\lambda=2$，可取\n  $$\n  \\boldsymbol\\alpha_3=\n  \\begin{pmatrix}\n  4\\\\\n  3\\\\\n  1\n  \\end{pmatrix}.\n  $$\n\n令\n$$\n\\boldsymbol P=\n\\begin{pmatrix}\n0&-1&4\\\\\n-1&0&3\\\\\n1&2&1\n\\end{pmatrix},\\qquad\n\\boldsymbol\\Lambda=\n\\begin{pmatrix}\n-2&0&0\\\\\n0&-1&0\\\\\n0&0&2\n\\end{pmatrix},\n$$\n则\n$$\n\\boldsymbol P^{-1}\\boldsymbol A\\boldsymbol P=\\boldsymbol\\Lambda.\n$$"
   ],
   [
     "2023",
@@ -5717,7 +5717,7 @@ const EXAM_DATA = [
     18,
     "设 $y=y(x)$ 满足方程\n$$\nx^2y''+xy'-9y=0,\n$$\n且\n$$\ny\\big|_{x=1}=2,\\qquad y'\\big|_{x=1}=6.\n$$\n\n1. 利用变换 $x=e^t$ 化简方程，并求 $y(x)$；\n2. 求\n   $$\n   \\int_1^2 y(x)\\sqrt{4-x^2}\\,dx.\n   $$",
     "",
-    ""
+    "令 $x=e^t$，则 $t=\\ln x$。有\n$$\n\\frac{dy}{dx}=\\frac1x\\frac{dy}{dt},\\qquad\n\\frac{d^2y}{dx^2}=\\frac{1}{x^2}\\left(\\frac{d^2y}{dt^2}-\\frac{dy}{dt}\\right).\n$$\n代入原方程得\n$$\n\\frac{d^2y}{dt^2}-9y=0.\n$$\n故通解为\n$$\ny=C_1e^{3t}+C_2e^{-3t}=C_1x^3+C_2x^{-3}.\n$$\n再由\n$$\ny(1)=2,\\qquad y'(1)=6\n$$\n解得\n$$\nC_1=2,\\qquad C_2=0.\n$$\n因此\n$$\n\\boxed{y=2x^3 }.\n$$\n\n---\n\n于是\n$$\n\\int_1^2 y(x)\\sqrt{4-x^2}\\,dx\n=\n\\int_1^2 2x^3\\sqrt{4-x^2}\\,dx.\n$$\n令\n$$\nu=4-x^2,\\qquad du=-2x\\,dx,\n$$\n则\n$$\n2x^3dx=2x^2(x\\,dx)=(4-u)(-du).\n$$\n故原积分化为\n$$\n\\int_0^3 (4-u)u^{1/2}\\,du\n=\n\\left[\\frac{8}{3}u^{3/2}-\\frac{2}{5}u^{5/2}\\right]_0^3\n=\n\\frac{22}{5}\\sqrt3.\n$$\n即\n$$\n\\boxed{\\int_1^2 y(x)\\sqrt{4-x^2}\\,dx=\\frac{22}{5}\\sqrt3 }.\n$$"
   ],
   [
     "2024",
@@ -5749,7 +5749,7 @@ const EXAM_DATA = [
     20,
     "设 $f(u,v)$ 具有二阶连续偏导，\n$$\ng(x,y)=f(2x+y,\\,3x-y),\n$$\n且满足\n$$\n\\frac{\\partial^2g}{\\partial x^2}\n+\\frac{\\partial^2g}{\\partial x\\partial y}\n-6\\frac{\\partial^2g}{\\partial y^2}=1.\n$$\n\n1. 求 $\\dfrac{\\partial^2f}{\\partial u\\partial v}$；\n2. 若 $\\dfrac{\\partial f(u,0)}{\\partial u}=ue^{-u}$，且 $f(0,v)=\\dfrac{1}{50}v^2-1$，求 $f(u,v)$。",
     "",
-    ""
+    "由链式法则，\n$$\nu=2x+y,\\qquad v=3x-y.\n$$\n于是\n$$\ng_x=2f_u+3f_v,\\qquad g_y=f_u-f_v.\n$$\n继续求导得\n$$\ng_{xx}=4f_{uu}+12f_{uv}+9f_{vv},\n$$\n$$\ng_{xy}=2f_{uu}+f_{uv}-3f_{vv},\n$$\n$$\ng_{yy}=f_{uu}-2f_{uv}+f_{vv}.\n$$\n代入题设可得\n$$\n25f_{uv}=1.\n$$\n故\n$$\n\\boxed{f_{uv}=\\frac{1}{25}}.\n$$\n\n---\n\n由\n$$\nf_{uv}=\\frac{1}{25}\n$$\n知\n$$\nf_u(u,v)=\\frac{1}{25}v+\\phi(u).\n$$\n又因\n$$\nf_u(u,0)=ue^{-u},\n$$\n故\n$$\n\\phi(u)=ue^{-u}.\n$$\n于是\n$$\nf_u(u,v)=\\frac{1}{25}v+ue^{-u}.\n$$\n对 $u$ 积分，\n$$\nf(u,v)=\\frac{1}{25}uv-(u+1)e^{-u}+\\psi(v).\n$$\n再由\n$$\nf(0,v)=\\frac{1}{50}v^2-1\n$$\n得\n$$\n\\psi(v)=\\frac{1}{50}v^2.\n$$\n因此\n$$\n\\boxed{\nf(u,v)=\\frac{1}{25}uv-(u+1)e^{-u}+\\frac{1}{50}v^2\n}.\n$$"
   ],
   [
     "2024",
@@ -5797,7 +5797,7 @@ const EXAM_DATA = [
     22,
     "设矩阵\n$$\n\\boldsymbol A=\n\\begin{pmatrix}\n0&1&a\\\\\n1&0&1\n\\end{pmatrix},\\qquad\n\\boldsymbol B=\n\\begin{pmatrix}\n1&1\\\\\n1&1\\\\\nb&2\n\\end{pmatrix},\n$$\n二次型\n$$\nf(x_1,x_2,x_3)=\\boldsymbol x^T\\boldsymbol B\\boldsymbol A\\boldsymbol x.\n$$\n\n已知方程组 $\\boldsymbol A\\boldsymbol x=0$ 的解是 $\\boldsymbol B^T\\boldsymbol x=0$ 的解，但两个方程组不同解。\n\n1. 求 $a,b$ 的值；\n2. 求正交变换 $\\boldsymbol x=\\boldsymbol Q\\boldsymbol y$，将 $f(x_1,x_2,x_3)$ 化为标准形。",
     "",
-    ""
+    "由题意，\n$$\n\\boldsymbol A\\boldsymbol x=0\n\\quad\\text{与}\\quad\n\\begin{pmatrix}\n\\boldsymbol A\\\\\n\\boldsymbol B^T\n\\end{pmatrix}\\boldsymbol x=0\n$$\n同解，故\n$$\nr\\!\\begin{pmatrix}\n\\boldsymbol A\\\\\n\\boldsymbol B^T\n\\end{pmatrix}\n=r(\\boldsymbol A)=2.\n$$\n而\n$$\n\\begin{pmatrix}\n\\boldsymbol A\\\\\n\\boldsymbol B^T\n\\end{pmatrix}\n=\n\\begin{pmatrix}\n0&1&a\\\\\n1&0&1\\\\\n1&1&b\\\\\n1&1&2\n\\end{pmatrix}\n\\sim\n\\begin{pmatrix}\n1&1&2\\\\\n0&1&1\\\\\n0&0&a-1\\\\\n0&0&b-2\n\\end{pmatrix}.\n$$\n故\n$$\na-1=0,\\qquad b-2=0.\n$$\n因此\n$$\n\\boxed{a=1,\\qquad b=2 }.\n$$\n\n---\n\n代入 $a=1,\\ b=2$，得\n$$\n\\boldsymbol B\\boldsymbol A\n=\n\\begin{pmatrix}\n1&1\\\\\n1&1\\\\\n2&2\n\\end{pmatrix}\n\\begin{pmatrix}\n0&1&1\\\\\n1&0&1\n\\end{pmatrix}\n=\n\\begin{pmatrix}\n1&1&2\\\\\n1&1&2\\\\\n2&2&4\n\\end{pmatrix}.\n$$\n于是\n$$\nf(x_1,x_2,x_3)=x_1^2+x_2^2+4x_3^2+2x_1x_2+4x_1x_3+4x_2x_3\n=(x_1+x_2+2x_3)^2.\n$$\n故该矩阵只有一个非零特征值：\n$$\n\\lambda_1=6,\\qquad \\lambda_2=\\lambda_3=0.\n$$\n取对应的单位正交特征向量为\n$$\n\\boldsymbol q_1=\\frac{1}{\\sqrt6}\n\\begin{pmatrix}\n1\\\\\n1\\\\\n2\n\\end{pmatrix},\\qquad\n\\boldsymbol q_2=\\frac{1}{\\sqrt2}\n\\begin{pmatrix}\n1\\\\\n-1\\\\\n0\n\\end{pmatrix},\\qquad\n\\boldsymbol q_3=\\frac{1}{\\sqrt3}\n\\begin{pmatrix}\n1\\\\\n1\\\\\n-1\n\\end{pmatrix}.\n$$\n令\n$$\n\\boldsymbol Q=(\\boldsymbol q_1,\\boldsymbol q_2,\\boldsymbol q_3)\n=\n\\begin{pmatrix}\n\\frac{1}{\\sqrt6} & \\frac{1}{\\sqrt2} & \\frac{1}{\\sqrt3}\\\\[4pt]\n\\frac{1}{\\sqrt6} & -\\frac{1}{\\sqrt2} & \\frac{1}{\\sqrt3}\\\\[4pt]\n\\frac{2}{\\sqrt6} & 0 & -\\frac{1}{\\sqrt3}\n\\end{pmatrix}.\n$$\n则\n$$\n\\boldsymbol Q^T(\\boldsymbol B\\boldsymbol A)\\boldsymbol Q\n=\n\\operatorname{diag}(6,0,0).\n$$\n因此在正交变换 $\\boldsymbol x=\\boldsymbol Q\\boldsymbol y$ 下，\n$$\n\\boxed{f=6y_1^2 }.\n$$"
   ],
   [
     "2024",
