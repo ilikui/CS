@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T13:05:37.838Z",
+  "generatedAt": "2026-11-17T13:07:11.502Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
@@ -1264,13 +1264,16 @@
           ]
         },
         {
-          "card": "Cache 替换与写策略",
+          "card": "Cache 命中率与空间局部性",
           "score": 17,
           "matchedTerms": [
             "cache",
-            "替换算法",
-            "行数",
-            "主存"
+            "主存块号",
+            "直接映射",
+            "块号",
+            "行号",
+            "主存块",
+            "存块号"
           ]
         }
       ]
@@ -2916,11 +2919,11 @@
         "整数溢出检测与异常处理",
         "大小端存储"
       ],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
         {
           "card": "x86 相对寻址与转移目标计算",
-          "score": 32,
+          "score": 44,
           "matchedTerms": [
             "x86",
             "相对寻址",
@@ -2928,8 +2931,28 @@
             "jmp",
             "ret",
             "eb",
+            "ah",
+            "ffffffd6h",
+            "d6",
+            "ff",
             "解释",
             "条指令"
+          ]
+        },
+        {
+          "card": "小端存储与立即数寻址",
+          "score": 34,
+          "matchedTerms": [
+            "小端",
+            "大端",
+            "ea",
+            "b0",
+            "ecx",
+            "int",
+            "ah",
+            "字节",
+            "地址",
+            "符号位"
           ]
         },
         {
@@ -2961,19 +2984,6 @@
             "字节",
             "按字节",
             "大小端"
-          ]
-        },
-        {
-          "card": "小端存储与立即数寻址",
-          "score": 25,
-          "matchedTerms": [
-            "小端",
-            "大端",
-            "ea",
-            "b0",
-            "字节",
-            "地址",
-            "符号位"
           ]
         },
         {
