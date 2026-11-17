@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-17T12:45:14.888Z",
+  "generatedAt": "2026-11-17T12:46:14.039Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
-    "formalMappingRecords": 323,
+    "formalMappingRecords": 339,
     "uniqueQuestionsAlreadyLinked": 266,
     "questionsWithoutAnyFormalLink": 58,
     "questionsNeedingAdditionalCardReview": 66,
     "candidateQuestions": 66,
     "noCandidateQuestions": 0,
     "cards": 306,
-    "cardsWithFormalLinks": 157,
+    "cardsWithFormalLinks": 171,
     "cardsWithoutFormalLinks": [
       {
         "subject": "操作系统",
@@ -235,30 +235,6 @@
       {
         "subject": "数据结构",
         "title": "散列表装填因子与查找终止"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "RISC-V 指令格式与寄存器编码"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "立即数扩展与移位指令"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "指令译码与有效地址计算"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "数组下标寻址与元素宽度"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "小端字节序与补码读取"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "虚拟地址分页与页内偏移"
       },
       {
         "subject": "操作系统",
@@ -531,38 +507,6 @@
       {
         "subject": "数据结构",
         "title": "堆与优先队列"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "页式存储与缺页异常"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "Cache 组相联映射与地址划分"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "二维数组行优先存储与局部性"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "Cache 命中率与空间局部性"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "x86 相对寻址与转移目标计算"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "机器指令编码与指令长度"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "小端存储与立即数寻址"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "虚拟地址与指令取指缺页"
       },
       {
         "subject": "操作系统",
@@ -5491,28 +5435,14 @@
       "answer": null,
       "analysis": "",
       "existingCards": [
-        "Cache 映射与命中率"
+        "Cache 映射与命中率",
+        "页式存储与缺页异常",
+        "Cache 组相联映射与地址划分",
+        "二维数组行优先存储与局部性",
+        "Cache 命中率与空间局部性"
       ],
-      "confidence": "high-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
-        {
-          "card": "二维数组行优先存储与局部性",
-          "score": 56,
-          "matchedTerms": [
-            "二维数组",
-            "行优先",
-            "局部性",
-            "cache",
-            "地址",
-            "间局部",
-            "间局部性",
-            "具有时",
-            "有时间",
-            "时间局",
-            "具有时间",
-            "有时间局"
-          ]
-        },
         {
           "card": "存储器层次与主存组织",
           "score": 34,
@@ -5550,20 +5480,6 @@
           ]
         },
         {
-          "card": "Cache 组相联映射与地址划分",
-          "score": 32,
-          "matchedTerms": [
-            "cache",
-            "组相联",
-            "组号",
-            "kb",
-            "a10",
-            "块大小",
-            "地址",
-            "4路"
-          ]
-        },
-        {
           "card": "Cache组相联映射与地址字段",
           "score": 32,
           "matchedTerms": [
@@ -5575,6 +5491,38 @@
             "组号",
             "kb",
             "数据区"
+          ]
+        },
+        {
+          "card": "Cache 直接映射与组相联",
+          "score": 30,
+          "matchedTerms": [
+            "cache",
+            "映射",
+            "命中",
+            "组相联",
+            "kb",
+            "主存块",
+            "4路",
+            "虚拟地",
+            "拟地址",
+            "虚拟地址"
+          ]
+        },
+        {
+          "card": "TLB 组相联映射与 LRU 替换",
+          "score": 25,
+          "matchedTerms": [
+            "组相联映射",
+            "路组相联",
+            "cache",
+            "kb",
+            "访问",
+            "命中",
+            "4路",
+            "页面置",
+            "面置换",
+            "页面置换"
           ]
         }
       ]
@@ -5588,7 +5536,12 @@
       "question": "（9分）题43中的C程序段在计算机M上的部分机器级代码如下： 指令序号 虚拟地址 机器指令 汇编指令 1 00401072 C7 45 F8 00 00 00 00 mov [ebp-8],0 2 00401079 EB 09 jmp 00401084h 3 0040107B 8B 55 F8 mov eax,[ebp-8] 7 00401088 7D 32 jge 004010BCh 8 0040108A C7 45 FC 00 00 00 00 mov [ebp-4],0 19 004010AE C7 84 82 00 20 42 00 0A 00 00 00 mov [ecx+edx*4+00422000h],0Ah 请回答：（1）第20条指令的虚拟地址是多少？（2）第2条jmp和第7条jge的寻址方式是什么？给出第2条jmp跳转目标地址计算过程。（3）第19条mov的源操作数采用什么寻址方式？edx存放变量j时，ecx存放什么？根据机器码判断大端还是小端？（4）第一次执行第19条指令时，取指过程中是否发生缺页异常？为什么？ 查看2023年408原卷第10页",
       "answer": null,
       "analysis": "",
-      "existingCards": [],
+      "existingCards": [
+        "x86 相对寻址与转移目标计算",
+        "机器指令编码与指令长度",
+        "小端存储与立即数寻址",
+        "虚拟地址与指令取指缺页"
+      ],
       "confidence": "medium-candidate",
       "candidates": [
         {
@@ -5602,20 +5555,6 @@
             "目标地",
             "标地址",
             "目标地址"
-          ]
-        },
-        {
-          "card": "虚拟地址与指令取指缺页",
-          "score": 23,
-          "matchedTerms": [
-            "虚拟地址",
-            "取指",
-            "缺页",
-            "虚拟地",
-            "拟地址",
-            "时取指",
-            "条指令",
-            "生缺页"
           ]
         },
         {
@@ -5647,14 +5586,28 @@
           ]
         },
         {
-          "card": "小端存储与立即数寻址",
-          "score": 18,
+          "card": "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "score": 16,
           "matchedTerms": [
-            "小端",
-            "大端",
-            "b0",
-            "地址",
-            "操作数"
+            "机器级代码",
+            "jmp",
+            "目标",
+            "地址是",
+            "条指令"
+          ]
+        },
+        {
+          "card": "计算机系统层次结构",
+          "score": 15,
+          "matchedTerms": [
+            "机器指令",
+            "寻址方",
+            "址方式",
+            "寻址方式",
+            "指令",
+            "是什么",
+            "机器指",
+            "器指令"
           ]
         }
       ]
@@ -6075,7 +6028,12 @@
       "question": "（13分）假定计算机M字长为32位，按字节编址，采用32位定长指令字。指令add、slli和lw的格式、编码和功能如下图。 R[x]表示通用寄存器x的内容，M[x]表示地址为x的存储单元内容，shamt为移位位数，imm为补码偏移量。题目另给出部分数据通路图，其中A、B分别是从rs1和rs2读出的内容，IR[31:20]为指令寄存器高12位；Ext=0、1分别零扩展、符号扩展；ALUctr=000、001、010分别执行加、减、逻辑左移。 M最多有多少个通用寄存器？为什么shamt占5位？（2分） 执行add时ALUBsrc取值？若rs1、rs2分别为87654321H、98765432H，求ALU输出F、OF、CF；无符号加法溢出看哪个标志？（3分） 执行slli时Ext可取0或1的原因？（2分） 执行lw时Ext、ALUctr分别取何值？（2分） 机器码A040A103H为何一定是lw？（2分） 若R[01H]=FFFFA2D0H，求该指令读取数据的存储地址。（2分） 查看2024年408回忆版原卷（第43题）",
       "answer": null,
       "analysis": "",
-      "existingCards": [],
+      "existingCards": [
+        "RISC-V 指令格式与寄存器编码",
+        "ALU 标志位 CF 与 OF",
+        "立即数扩展与移位指令",
+        "指令译码与有效地址计算"
+      ],
       "confidence": "high-candidate",
       "candidates": [
         {
@@ -6133,39 +6091,30 @@
           ]
         },
         {
-          "card": "RISC-V 指令格式与寄存器编码",
-          "score": 42,
+          "card": "定点补码加减与溢出",
+          "score": 29,
           "matchedTerms": [
-            "rs1",
-            "rs2",
-            "shamt",
-            "imm",
-            "add",
-            "符号扩",
-            "号扩展",
-            "符号扩展",
-            "指令字",
-            "执行",
-            "格式",
-            "寄存器"
+            "alu",
+            "of",
+            "cf",
+            "加法溢出",
+            "溢出",
+            "加法",
+            "表示",
+            "无符号"
           ]
         },
         {
-          "card": "立即数扩展与移位指令",
-          "score": 39,
+          "card": "寄存器组读写端口与译码",
+          "score": 28,
           "matchedTerms": [
-            "零扩展",
-            "符号扩展",
-            "imm",
-            "slli",
-            "ext",
-            "lw",
-            "符号扩",
-            "号扩展",
-            "无符号",
-            "数据通",
-            "据通路",
-            "通路图"
+            "rs",
+            "ir",
+            "rs1",
+            "rs2",
+            "add",
+            "alu",
+            "寄存器"
           ]
         }
       ]
@@ -6179,8 +6128,13 @@
       "question": "（10分）对题43中的计算机M，C语言语句sum+=a[i]对应的指令序列为： slli r4, r2, 2 // R[r4] = R[r2] 已知i、sum和数组a均为int型，通用寄存器r1～r5编号为01H～05H。 写出存放数组a首地址、变量i和sum的通用寄存器编号。（3分） 已知M为小端方式，采用页式存储管理，页大小4KB。执行第一条指令时i=5，r1=00001332H，r3=0013DFF0H。从该地址开始的存储单元内容如下图。求执行sum+=a[i]后a[i]的地址、a[i]和sum的机器数、a[i]所在页号，以及数组a至少占几页。（5分） （3）求slli r4,r2,2的机器码；若数组a改为short型，slli指令应如何修改？（2分） 查看2024年408回忆版原卷（第44题）",
       "answer": null,
       "analysis": "",
-      "existingCards": [],
-      "confidence": "medium-candidate",
+      "existingCards": [
+        "数组下标寻址与元素宽度",
+        "小端字节序与补码读取",
+        "虚拟地址分页与页内偏移",
+        "RISC-V 指令格式与寄存器编码"
+      ],
+      "confidence": "high-candidate",
       "candidates": [
         {
           "card": "ALU 算术逻辑单元",
@@ -6198,22 +6152,6 @@
             "通用寄存",
             "用寄存器",
             "通用寄存器"
-          ]
-        },
-        {
-          "card": "数组下标寻址与元素宽度",
-          "score": 26,
-          "matchedTerms": [
-            "开始",
-            "地址",
-            "首地址",
-            "数组",
-            "int",
-            "sum",
-            "和数组",
-            "寄存器",
-            "若数组",
-            "的地址"
           ]
         },
         {
@@ -6263,6 +6201,21 @@
             "通用寄存",
             "用寄存器",
             "通用寄存器"
+          ]
+        },
+        {
+          "card": "中断响应与异常处理",
+          "score": 18,
+          "matchedTerms": [
+            "通用寄",
+            "用寄存",
+            "寄存器",
+            "通用寄存",
+            "用寄存器",
+            "通用寄存器",
+            "一条指",
+            "条指令",
+            "一条指令"
           ]
         }
       ]
