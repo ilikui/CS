@@ -102,7 +102,15 @@ body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V25
 desc='连续要求函数值存在、极限存在且极限等于函数值；四则运算与复合连续都要检查表达式在对应点有定义。';
 }
 }else if(k==='derivative'){
-if(/隐函数|参数方程/.test(t)){
+if(/弧微分|曲线弧长/.test(t)){
+const x=.05+(p-.35)/1.45*3.9, slope=Math.sqrt(x), y=(2/3)*Math.pow(x,1.5);
+const X=q=>70+q*82,Y=q=>220-q*48;
+const xx=Math.max(.05,Math.min(4,x));
+const path=graphPath(q=>(2/3)*Math.pow(Math.max(0,q),1.5),0,4,0,6);
+const dx=.62,dy=slope*dx;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="弧微分与曲线弧长专属动态演示"><path d="M45 220H425 M70 238V20" stroke="#9aaabd"/><path d="'+path+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(xx)+' '+Y(y)+'L'+X(xx+dx)+' '+Y(y+dy)+'L'+X(xx+dx)+' '+Y(y)+'Z" fill="'+COLORS.green+'" opacity=".16"/><path d="M'+X(xx)+' '+Y(y)+'L'+X(xx+dx)+' '+Y(y+dy)+'" stroke="'+COLORS.orange+'" stroke-width="3"/><path d="M'+X(xx+dx)+' '+Y(y+dy)+'V'+Y(y)+' M'+X(xx)+' '+Y(y)+'H'+X(xx+dx)+'" stroke="'+COLORS.green+'" stroke-dasharray="4 4"/><circle cx="'+X(xx)+'" cy="'+Y(y)+'" r="5" fill="'+COLORS.orange+'"/><text x="48" y="24" fill="'+COLORS.blue+'">y=⅔x³ᐟ²，y′=√x</text><text x="48" y="47" fill="'+COLORS.orange+'">当前斜率 y′='+slope.toFixed(2)+'</text><text x="48" y="245" fill="'+COLORS.green+'">ds≈√(dx²+dy²)=√(1+y′²)dx</text></svg>';
+desc='弧微分专属演示：蓝线为 y=(2/3)x^(3/2)，橙色小线段表示当前微小弧段，绿色直角边分别是 dx 与 dy。滑块改变切点，观察斜率 y′=√x 如何改变弧段长度；累加 ds 得到 L=∫√(1+y′²)dx。';
+}else if(/隐函数|参数方程/.test(t)){
 const theta=.3+(p-.35)/1.45*1.8,x=Math.cos(theta),y=Math.sin(theta),X=q=>230+q*95,Y=q=>135-q*95,dx=-Math.sin(theta),dy=-Math.cos(theta);
 body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="圆的隐函数与参数方程切线动态演示"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><circle cx="230" cy="135" r="95" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+(X(x)-dx*55)+' '+(Y(y)-dy*55)+'L'+(X(x)+dx*55)+' '+(Y(y)+dy*55)+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M230 135L'+X(x)+' '+Y(y)+'" stroke="'+COLORS.green+'" stroke-dasharray="5 4"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.orange+'"/><text x="40" y="25" fill="'+COLORS.blue+'">x²+y²=1；x=cos t，y=sin t</text><text x="40" y="47" fill="'+COLORS.orange+'">dy/dx=−x/y='+(-x/y).toFixed(2)+'</text></svg>';
 desc='拖动参数 t：点 (cos t,sin t) 沿单位圆移动，橙色切线斜率 dy/dx=−x/y。隐式求导 2x+2yy′=0；当 y=0 时切线竖直，不能直接用有限斜率表示。';
@@ -142,7 +150,7 @@ const X=x=>230+x*90,Y=y=>205-y*23;
 const path=fn=>{let d='';for(let i=0;i<=160;i++){const x=-2+i/40,y=fn(x);d+=(i?'L':'M')+X(x).toFixed(1)+','+Y(y).toFixed(1);}return d;};
 const poly=x=>{let sum=0,term=1;for(let j=0;j<=n;j++){if(j===0)term=1;else term*=x/j;sum+=term;}return sum;};
 body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="泰勒多项式阶数变化与原函数逼近"><path d="M35 205H430 M230 18V238" stroke="#9aaabd"/><path d="'+path(x=>Math.exp(x))+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+path(poly)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="6 4"/><text x="48" y="25" fill="'+COLORS.blue+'">原函数 eˣ</text><text x="48" y="47" fill="'+COLORS.orange+'">Tₙ(x)，n='+n+'</text><text x="300" y="250" fill="'+COLORS.ink+'">蓝：原函数；橙：近似</text></svg>';
-desc='拖动改变麦克劳林多项式阶数 n='+n+'。橙色 Tₙ(x)=1+x+x²/2!+…+xⁿ/n! 与蓝色 eˣ 在 x=0 附近逐阶贴合；阶数越高，局部近似通常越精确。';
+desc='拖动改变麦克劳林多项式阶数 n='+n+'。橙色 Tₙ(x)=Σₖ₌₀ⁿxᵏ/k! 与蓝色 eˣ 在 x=0 处逐阶匹配；拉格朗日余项 Rₙ₊₁=e^ξxⁿ⁺¹/(n+1)!，ξ 位于 0 与 x 之间。有限阶近似的精度取决于余项，不应把局部逼近误认为全区间恒等。';
 }else if(k==='shape'){
 if(/单调性|单调区间/.test(t)){
 const x=(p-1.075)*2.5,y=x*x*x/3-3*x,slope=x*x-3,X=q=>230+q*42,Y=q=>135-q*24;
