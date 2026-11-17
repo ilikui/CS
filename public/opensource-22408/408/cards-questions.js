@@ -7458,7 +7458,8 @@ window.CARD_QUESTION_MAP = {
       "虚拟地址分页与页内偏移",
       "缺页异常与页表更新",
       "Cache组相联映射与地址字段",
-      "Cache跨块访问与缺失率"
+      "Cache跨块访问与缺失率",
+      "数组跨页与缺页次数"
     ],
     "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
     "sourcePage": 8,
