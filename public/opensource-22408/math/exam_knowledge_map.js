@@ -1,4 +1,3 @@
-/* Math II exam-to-knowledge-card mapping. Keep question indices aligned with exam_data.js. */
 {
   "0": {
     "status": "verified",
@@ -3021,9 +3020,9 @@
     "secondary": [
       "CAL-05-F"
     ],
-    "rationale": "按分段函数讨论，$x=0$ 附近函数由减到增，故为极小值点；曲线在 $(0,0)$ 两侧凹凸性改变，故 $(0,0)$ 为拐点。",
-    "methods": "绝对值分段函数的极值与拐点；按 x=1 分段写函数，检查 x=0 的左右单调性及二阶导数符号变化。",
-    "pitfalls": "极值与拐点是不同概念，需分别验证。"
+    "rationale": "按当前题干，在 x=0 的邻域内 f(x)=x−x²，故 f'(0)=1 且左右导数同号，x=0 不是极值点；f''(x)=−2 在两侧不变号，(0,0) 不是拐点，选 D。旧映射的“极值点且拐点”判断与函数分段表达式冲突，已纠正。",
+    "methods": "先在 x=0 邻域消去绝对值，再分别检查一阶导数左右符号与二阶导数凹凸性。",
+    "pitfalls": "不能把 f(0)=0 或 f'(0) 存在直接当成极值；拐点必须发生凹凸性改变。"
   },
   "239": {
     "status": "verified",
@@ -3154,7 +3153,7 @@
     "pitfalls": "侧面积公式包含弧长因子，不能误用为圆柱侧面积。"
   },
   "249": {
-    "status": "verified",
+    "status": "needs-statement-verification",
     "questionKey": "2004-解答题-19",
     "primary": [
       "CAL-05-A"
@@ -3162,9 +3161,9 @@
     "secondary": [
       "CAL-05-E"
     ],
-    "rationale": "题干区间 $e^{2}<a<b<e$ 为空，按原解析应为 $e<a<b<e^{2}$。令\n$$\n\\varphi(x)=\\ln^{2}x-\\frac{4}{e^{2}}x.\n$$\n则\n$$\n\\varphi'(x)=\\frac{2\\ln x}{x}-\\frac{4}{e^{2}},\\qquad\n\\varphi''(x)=\\frac{2(1-\\ln x)}{x^{2}}.\n$$\n在 $e<x<e^{2}$ 上，$\\varphi''(x)<0$，故 $\\varphi'(x)$ 递减；又 $\\varphi'(e^{2})=0$，所以 $\\varphi'(x)>0$。因此 $\\varphi$ 单调递增，若 $e<a<b<e^{2}$，则\n$$\n\\varphi(b)>\\varphi(a),\n$$\n即\n$$\n\\ln^{2}b-\\ln^{2}a>\\frac{4}{e^{2}}(b-a).\n$$",
-    "methods": "构造辅助函数证明函数不等式；令 φ(x)=ln²x−4x/e²，分析 φ′、φ″ 的符号并用单调性比较端点。",
-    "pitfalls": "先核对区间端点顺序；题库原文区间 e²<a<b<e 自相矛盾，应标记源数据勘误。"
+    "rationale": "现有题干区间 e²<a<b<e 为空集；解析对应的是 e<a<b<e²。虽然该更正可使证明成立，但未核对原卷前不得标为已验证。",
+    "methods": "先核对原卷区间端点，再用辅助函数 φ(x)=ln²x−4x/e² 及其导数单调性证明。",
+    "pitfalls": "原始区间次序矛盾；不得将推测的勘误当成原题事实。"
   },
   "250": {
     "status": "verified",
@@ -4077,7 +4076,7 @@
     "pitfalls": "因 u'(0)=0，二阶导中的 f'' 项消失；不能误把 f'(0) 与 f''(0) 混用。"
   },
   "320": {
-    "status": "verified",
+    "status": "needs-statement-verification",
     "questionKey": "2007-解答题-21",
     "primary": [
       "CAL-05-A"
@@ -4085,9 +4084,9 @@
     "secondary": [
       "CAL-05-E"
     ],
-    "rationale": "令 φ=f−g。题设公共端点相等且 f、g 存在相等最大值，故 φ 在端点及某内点取零；两次罗尔定理推出 φ'' 在区间内为零。",
-    "methods": "先由最大值相等找 η∈(a,b) 使 φ(η)=0；分别在 [a,η]、[η,b] 用罗尔定理得两个 φ' 零点，再对 φ' 用罗尔定理。",
-    "pitfalls": "要区分“最大值相等”是存在相同函数值，不是两函数最大点相同；需确认 η 为内点。"
+    "rationale": "当前题干仅称 f、g 存在相等的最大值，未明确最大值点是否为同一内点。分别取最大值点 u、v 只能推出 h(u)≥0、h(v)≤0；若两点落在端点，不能据此保证存在内点零点。反例 f(x)=1−x(1−x)、g(x)=1−2x(1−x) 满足端点相等且最大值同为 1，但 f''=−2、g''=−4，处处不相等。须核对原题条件。",
+    "methods": "若原题补充存在共同内点 c 使 f(c)=g(c)=共同最大值，则令 h=f−g，在 a,c,b 三点取零，连续应用两次 Rolle 定理得到 h''(ξ)=0。",
+    "pitfalls": "不能把两个函数最大值相等误读为最大值在同一点取得；端点退化情形可能使结论失效。"
   },
   "321": {
     "status": "verified",
