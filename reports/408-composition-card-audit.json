@@ -1,0 +1,1084 @@
+{
+  "generated_at": "2026-11-17",
+  "scope": "计算机组成原理75张知识卡；逐张检查内容字段并盘点正式真题关联",
+  "method": "按知识卡的定义、核心原理、适用条件、解题步骤、例题、易错点六个字段检查；逐条盘点CARD_QUESTION_MAP与CARD_EXAM_TOPIC_MAP；对可用题源按年份/题号/ID匹配，历史映射仅存在映射文件而当前题库和verified-solutions均无源记录的单独标识，不冒充已重新核对。",
+  "summary": {
+    "cards": 75,
+    "all_cards_have_six_required_fields": true,
+    "formal_association_records": 121,
+    "unique_linked_cards": 70,
+    "unique_linked_questions": 67,
+    "cards_without_formal_verified_question_link": [
+      "总线仲裁方式",
+      "计算机系统层次结构",
+      "数制转换与定点小数",
+      "BCD 码与字符编码",
+      "流水线吞吐率与加速比"
+    ],
+    "association_records_missing_solution_steps": 0,
+    "source_counts": {
+      "question_dataset": 41,
+      "verified_solutions": 28,
+      "legacy_map_only": 52,
+      "question_text_available": 57,
+      "solution_steps_present": 121
+    }
+  },
+  "cards": [
+    {
+      "title": "数据表示与补码",
+      "association_records": 2,
+      "linked_questions": 2,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "浮点数表示与规格化",
+      "association_records": 3,
+      "linked_questions": 3,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "CPU 指令执行过程",
+      "association_records": 3,
+      "linked_questions": 3,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "Cache 映射与命中率",
+      "association_records": 5,
+      "linked_questions": 5,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "流水线与冒险",
+      "association_records": 2,
+      "linked_questions": 2,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "存储器层次与主存组织",
+      "association_records": 3,
+      "linked_questions": 3,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "总线与总线事务",
+      "association_records": 2,
+      "linked_questions": 2,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "中断与 DMA",
+      "association_records": 2,
+      "linked_questions": 2,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "指令系统与寻址方式",
+      "association_records": 4,
+      "linked_questions": 4,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "大小端存储",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "定点补码加减与溢出",
+      "association_records": 5,
+      "linked_questions": 5,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "IEEE 754 单精度字段",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "硬布线控制器与微程序控制器",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "存储芯片容量扩展",
+      "association_records": 2,
+      "linked_questions": 2,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "总线仲裁方式",
+      "association_records": 0,
+      "linked_questions": 0,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "content_complete_no_verified_mapping"
+    },
+    {
+      "title": "计算机系统层次结构",
+      "association_records": 0,
+      "linked_questions": 0,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "content_complete_no_verified_mapping"
+    },
+    {
+      "title": "冯·诺依曼结构与存储程序",
+      "association_records": 2,
+      "linked_questions": 2,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "计算机性能指标 CPI 与 CPU 时间",
+      "association_records": 4,
+      "linked_questions": 4,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "数制转换与定点小数",
+      "association_records": 0,
+      "linked_questions": 0,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "content_complete_no_verified_mapping"
+    },
+    {
+      "title": "BCD 码与字符编码",
+      "association_records": 0,
+      "linked_questions": 0,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "content_complete_no_verified_mapping"
+    },
+    {
+      "title": "ALU 算术逻辑单元",
+      "association_records": 3,
+      "linked_questions": 3,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "移位运算与舍入",
+      "association_records": 2,
+      "linked_questions": 2,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "存储器芯片与地址译码",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "SRAM 与 DRAM",
+      "association_records": 2,
+      "linked_questions": 2,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "Cache 直接映射与组相联",
+      "association_records": 4,
+      "linked_questions": 4,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "Cache 替换与写策略",
+      "association_records": 3,
+      "linked_questions": 3,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "主存与辅存层次结构",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "磁盘结构与平均访问时间",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "指令格式与操作码扩展",
+      "association_records": 2,
+      "linked_questions": 2,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "立即数与直接间接寻址",
+      "association_records": 2,
+      "linked_questions": 2,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "RISC 与 CISC",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "单周期与多周期数据通路",
+      "association_records": 3,
+      "linked_questions": 3,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "流水线吞吐率与加速比",
+      "association_records": 0,
+      "linked_questions": 0,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "content_complete_no_verified_mapping"
+    },
+    {
+      "title": "流水线结构冒险与数据冒险",
+      "association_records": 3,
+      "linked_questions": 3,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "中断响应与异常处理",
+      "association_records": 4,
+      "linked_questions": 3,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "程序查询与中断驱动 I/O",
+      "association_records": 3,
+      "linked_questions": 3,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "DMA 工作过程与总线占用",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "中断屏蔽与优先级",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "总线带宽与突发传输",
+      "association_records": 2,
+      "linked_questions": 2,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "x86 CALL/JMP/RET 控制转移与相对寻址",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "整数溢出检测与异常处理",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "移位加法乘法与阵列乘法器",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "TLB 组相联映射与 LRU 替换",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "RISC-V 指令格式与寄存器编码",
+      "association_records": 2,
+      "linked_questions": 2,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "ALU 标志位 CF 与 OF",
+      "association_records": 2,
+      "linked_questions": 2,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "立即数扩展与移位指令",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "指令译码与有效地址计算",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "数组下标寻址与元素宽度",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "小端字节序与补码读取",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "虚拟地址分页与页内偏移",
+      "association_records": 2,
+      "linked_questions": 2,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "Cache组相联映射与地址字段",
+      "association_records": 2,
+      "linked_questions": 2,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "VIPT Cache索引与页内偏移",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "Cache跨块访问与缺失率",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "Cache平均访问时间与缺失损失",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "数组跨页与缺页次数",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "补码恢复余数除法器",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "有符号除法异常与商溢出",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "CPU异常响应与现场保护",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "异步串行通信帧格式与字符速率",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "TLB 与多级页表联合转换",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "补码加减与溢出判断",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "单总线数据通路与暂存器",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "寄存器组读写端口与译码",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "指令周期与微操作控制",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "磁盘 CHS 地址与平均访问时间",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "DMA 周期挪用与总线仲裁",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "磁盘存储结构与旋转延迟",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "页式存储与缺页异常",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "Cache 组相联映射与地址划分",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "二维数组行优先存储与局部性",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "Cache 命中率与空间局部性",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "x86 相对寻址与转移目标计算",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "机器指令编码与指令长度",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "小端存储与立即数寻址",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    },
+    {
+      "title": "虚拟地址与指令取指缺页",
+      "association_records": 1,
+      "linked_questions": 1,
+      "content_fields": {
+        "definition": true,
+        "principle": true,
+        "conditions": true,
+        "steps": true,
+        "worked_example": true,
+        "pitfalls": true
+      },
+      "status": "linked"
+    }
+  ],
+  "limitations": [
+    "52条历史关联在当前questions_data.js和verified-solutions.json中均未找到同ID源记录，保留原映射但不标记为本轮重新核验。",
+    "5张卡片目前没有可确认的正式真题关联：总线仲裁方式、计算机系统层次结构、数制转换与定点小数、BCD码与字符编码、流水线吞吐率与加速比。内容已补齐，需后续找到直接考查题后再建立关联。",
+    "2024年题干在部分映射中使用verified-solutions摘要文本；答案、步骤、题号ID已与核验记录对应，但摘要不等同原卷逐字题干。"
+  ]
+}
