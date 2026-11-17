@@ -8999,17 +8999,12 @@
     "pitfalls": "检查积分因子乘法后的导数形式；常数由 ln(e²)=2 决定。"
   },
   "685": {
-    "status": "verified",
-    "questionKey": "2023-解答题-2",
-    "primary": [
-      "CAL-05-B"
-    ],
-    "secondary": [
-      "CAL-04-A"
-    ],
-    "rationale": "切线与坐标轴截距分别为 x/(ln x-1) 和 x，三角形面积为 x²/[2(ln x-1)]；求导得最小点 x=e^(3/2)，最小面积 e³。",
-    "methods": "分别令切线方程中的 X=0、Y=0 求截距，再对面积函数求极值并检验单调性。",
-    "pitfalls": "需确保 x>e 时截距符号与面积取绝对值一致；最小面积不是把 x=e^(3/2) 直接代入分母而漏掉 1/2。"
+    "status": "source-corrupt-needs-verification",
+    "primary": [],
+    "secondary": [],
+    "rationale": "该索引题干字段实际为解题过程而非可核验的原始题面，暂不作为独立真题关联；需找回原始题图或可靠题面后再恢复映射。",
+    "methods": "待补原题后重新判定考点。",
+    "pitfalls": "不得把解题过程冒充题目原文。"
   },
   "686": {
     "status": "verified",
@@ -9091,31 +9086,20 @@
     "pitfalls": "第二问要利用 |a−c|²+|a+c|²=2(a²+c²)≤4a²；不能把两个余项的中间点误认为相同。"
   },
   "692": {
-    "status": "verified",
-    "questionKey": "2023-解答题-1",
-    "primary": [
-      "CAL-05-D"
-    ],
-    "secondary": [
-      "CAL-05-A"
-    ],
-    "rationale": "分别在 0 处向 ±a 作带 Lagrange 余项的二阶展开，相加后由 f'' 连续及介值定理得到指定 ξ。",
-    "methods": "写出 f(a)、f(−a) 的二阶 Taylor 公式，消去一阶项并应用介值定理。",
-    "pitfalls": "两侧余项点 ξ₁、ξ₂ 一般不同；需用连续函数 f'' 的介值性，而非直接令两者相等。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "rationale": "该记录原本误把对应解答过程放在题干字段，已将内容合并回原始完整题目解析；此索引不作为独立真题，也不建立知识卡关联。",
+    "methods": "请查看对应完整真题记录及其解析。",
+    "pitfalls": "不要将答案片段重复计为一题。"
   },
   "693": {
-    "status": "verified",
-    "questionKey": "2023-解答题-2",
-    "primary": [
-      "CAL-05-D"
-    ],
-    "secondary": [
-      "CAL-05-A",
-      "CAL-05-B"
-    ],
-    "rationale": "在极值点 c 处 f'(c)=0，分别向两端作二阶 Taylor 展开，相减并以两个二阶导数绝对值的较大者估计。",
-    "methods": "选取 |f''(η₁)|、|f''(η₂)| 中较大者，利用平方和上界推出结论。",
-    "pitfalls": "平方和为 2(a²+c²)≤4a²；最终系数是 1/(2a²)，不是 1/a²。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "rationale": "该记录原本误把对应解答过程放在题干字段，已将内容合并回原始完整题目解析；此索引不作为独立真题，也不建立知识卡关联。",
+    "methods": "请查看对应完整真题记录及其解析。",
+    "pitfalls": "不要将答案片段重复计为一题。"
   },
   "694": {
     "status": "verified",
@@ -9484,17 +9468,12 @@
     "pitfalls": "二阶导数有界要分别构造上下界；积分 x(1−x)/2 得 1/12。"
   },
   "722": {
-    "status": "verified",
-    "questionKey": "2024-解答题-1",
-    "primary": [
-      "CAL-05-D"
-    ],
-    "secondary": [
-      "CAL-05-A"
-    ],
-    "rationale": "构造 g(x) 后 g(0)=g(1)=0 且 g''=f''+1≥0，凸性推出 g≤0；对另一侧构造函数得反向界。",
-    "methods": "用反证结合两段拉格朗日中值定理，或直接利用凸函数弦线性质。",
-    "pitfalls": "凸函数位于端点连线下方；符号方向要与 g''≥0 对应。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "rationale": "该记录原本误把对应解答过程放在题干字段，已将内容合并回原始完整题目解析；此索引不作为独立真题，也不建立知识卡关联。",
+    "methods": "请查看对应完整真题记录及其解析。",
+    "pitfalls": "不要将答案片段重复计为一题。"
   },
   "723": {
     "status": "verified",
