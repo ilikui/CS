@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T13:01:34.718Z",
+  "generatedAt": "2026-11-17T13:02:54.780Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
@@ -1072,12 +1072,13 @@
         },
         {
           "card": "有符号除法异常与商溢出",
-          "score": 13,
+          "score": 15,
           "matchedTerms": [
             "补码范围",
             "位补码",
             "n−1",
             "表示",
+            "位补码范围",
             "−1"
           ]
         },
@@ -3056,6 +3057,24 @@
           ]
         },
         {
+          "card": "TLB 与多级页表联合转换",
+          "score": 41,
+          "matchedTerms": [
+            "cache",
+            "页大小",
+            "大小",
+            "命中",
+            "tag",
+            "kb",
+            "页内偏移",
+            "索引",
+            "4路组相联",
+            "路组相联",
+            "组索引",
+            "组相联"
+          ]
+        },
+        {
           "card": "TLB 组相联映射与 LRU 替换",
           "score": 38,
           "matchedTerms": [
@@ -3071,24 +3090,6 @@
             "命中",
             "4路",
             "页内偏"
-          ]
-        },
-        {
-          "card": "Cache 替换与写策略",
-          "score": 35,
-          "matchedTerms": [
-            "cache",
-            "命中",
-            "kb",
-            "tag",
-            "页大小",
-            "页内偏移",
-            "组索引",
-            "块内偏移6位",
-            "块内偏移",
-            "路组相联",
-            "组号",
-            "地址"
           ]
         }
       ]
@@ -4208,6 +4209,24 @@
           ]
         },
         {
+          "card": "TLB 与多级页表联合转换",
+          "score": 42,
+          "matchedTerms": [
+            "tlb",
+            "页大小",
+            "大小",
+            "va",
+            "vpn",
+            "tag",
+            "kb",
+            "页内偏移",
+            "路组相联",
+            "组相联",
+            "页内偏",
+            "内偏移"
+          ]
+        },
+        {
           "card": "Cache组相联映射与地址字段",
           "score": 37,
           "matchedTerms": [
@@ -4223,24 +4242,6 @@
             "替换策略",
             "页大小",
             "页内偏移"
-          ]
-        },
-        {
-          "card": "TLB 与多级页表联合转换",
-          "score": 37,
-          "matchedTerms": [
-            "tlb",
-            "页大小",
-            "大小",
-            "va",
-            "vpn",
-            "tag",
-            "kb",
-            "页内偏",
-            "内偏移",
-            "页内偏移",
-            "虚拟地",
-            "拟地址"
           ]
         },
         {
@@ -6045,6 +6046,24 @@
           ]
         },
         {
+          "card": "补码恢复余数除法器",
+          "score": 32,
+          "matchedTerms": [
+            "符号扩展",
+            "alu",
+            "符号",
+            "左移",
+            "无符号",
+            "寄存器",
+            "执行",
+            "符号扩",
+            "号扩展",
+            "数据通",
+            "据通路",
+            "通路图"
+          ]
+        },
+        {
           "card": "定点补码加减与溢出",
           "score": 29,
           "matchedTerms": [
@@ -6056,19 +6075,6 @@
             "加法",
             "表示",
             "无符号"
-          ]
-        },
-        {
-          "card": "寄存器组读写端口与译码",
-          "score": 28,
-          "matchedTerms": [
-            "rs",
-            "ir",
-            "rs1",
-            "rs2",
-            "add",
-            "alu",
-            "寄存器"
           ]
         }
       ]
