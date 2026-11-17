@@ -104,9 +104,9 @@ desc='连续要求函数值存在、极限存在且极限等于函数值；四�
 }else if(k==='derivative'){
 if(/弧微分|曲线弧长/.test(t)){
 const x=.05+(p-.35)/1.45*3.9, slope=Math.sqrt(x), y=(2/3)*Math.pow(x,1.5);
-const X=q=>70+q*82,Y=q=>220-q*48;
+const X=q=>70+q*82,Y=q=>220-q*35;
 const xx=Math.max(.05,Math.min(4,x));
-const path=graphPath(q=>(2/3)*Math.pow(Math.max(0,q),1.5),0,4,0,6);
+const path=(()=>{let d='';for(let i=0;i<=160;i++){const q=4*i/160,v=(2/3)*Math.pow(q,1.5);d+=(i?'L':'M')+(70+q*82).toFixed(1)+','+(220-v*35).toFixed(1);}return d;})();
 const dx=.62,dy=slope*dx;
 body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="弧微分与曲线弧长专属动态演示"><path d="M45 220H425 M70 238V20" stroke="#9aaabd"/><path d="'+path+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(xx)+' '+Y(y)+'L'+X(xx+dx)+' '+Y(y+dy)+'L'+X(xx+dx)+' '+Y(y)+'Z" fill="'+COLORS.green+'" opacity=".16"/><path d="M'+X(xx)+' '+Y(y)+'L'+X(xx+dx)+' '+Y(y+dy)+'" stroke="'+COLORS.orange+'" stroke-width="3"/><path d="M'+X(xx+dx)+' '+Y(y+dy)+'V'+Y(y)+' M'+X(xx)+' '+Y(y)+'H'+X(xx+dx)+'" stroke="'+COLORS.green+'" stroke-dasharray="4 4"/><circle cx="'+X(xx)+'" cy="'+Y(y)+'" r="5" fill="'+COLORS.orange+'"/><text x="48" y="24" fill="'+COLORS.blue+'">y=⅔x³ᐟ²，y′=√x</text><text x="48" y="47" fill="'+COLORS.orange+'">当前斜率 y′='+slope.toFixed(2)+'</text><text x="48" y="245" fill="'+COLORS.green+'">ds≈√(dx²+dy²)=√(1+y′²)dx</text></svg>';
 desc='弧微分专属演示：蓝线为 y=(2/3)x^(3/2)，橙色小线段表示当前微小弧段，绿色直角边分别是 dx 与 dy。滑块改变切点，观察斜率 y′=√x 如何改变弧段长度；累加 ds 得到 L=∫√(1+y′²)dx。';
@@ -174,8 +174,8 @@ body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="凹凸�
 desc='专属凹凸/拐点演示：f=x³/3，f′′=2x。观察点穿过 0 时，二阶导数由负变正，曲线弯曲方向改变，原点为拐点；必须验证变号。';
 }else if(/渐近/.test(t)){
 const c=(p-1.075)*.45;
-body=graph(x=>1/(x-c)+.2*x).replace('</svg>','<path d="M'+(230+c*48)+' 12V250" stroke="'+COLORS.orange+'" stroke-dasharray="5 5" stroke-width="2"/><text x="'+Math.min(355,230+c*48+5)+'" y="25" fill="'+COLORS.orange+'">x='+c.toFixed(2)+'</text></svg>');
-desc='滑块移动竖直渐近线 x=c；蓝色曲线在 x→c 时发散。此例另有斜渐近线 y=0.2x；判断渐近线必须回到相应极限定义。';
+body=graph(x=>2*x+1/(x-c)).replace('</svg>','<path d="M'+(230+c*48)+' 12V250" stroke="'+COLORS.orange+'" stroke-dasharray="5 5" stroke-width="2"/><path d="M38 205L422 65" stroke="'+COLORS.green+'" stroke-dasharray="6 4" stroke-width="2"/><text x="'+Math.min(355,230+c*48+5)+'" y="25" fill="'+COLORS.orange+'">x='+c.toFixed(2)+'</text><text x="330" y="55" fill="'+COLORS.green+'">y=2x</text></svg>');
+desc='滑块移动竖直渐近线 x=c；蓝色曲线为 f(x)=2x+1/(x−c)，橙色虚线标出 x=c，绿色虚线是斜渐近线 y=2x，因为 f(x)−2x→0。';
 }
 else if(/二阶导数判别|极值二阶|充分判别/.test(t)){
 const a=p-1.075,fn=x=>a*x*x,X=x=>230+x*48,Y=y=>135-y*35;
