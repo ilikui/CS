@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T13:02:54.780Z",
+  "generatedAt": "2026-11-17T13:04:00.649Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
@@ -1486,6 +1486,24 @@
           ]
         },
         {
+          "card": "单总线数据通路与暂存器",
+          "score": 35,
+          "matchedTerms": [
+            "mdr",
+            "pc",
+            "ir",
+            "存储器",
+            "储器读",
+            "存储器读",
+            "控制信",
+            "制信号",
+            "控制信号",
+            "执行",
+            "结果",
+            "取指"
+          ]
+        },
+        {
           "card": "硬布线控制器与微程序控制器",
           "score": 24,
           "matchedTerms": [
@@ -1501,21 +1519,6 @@
             "存储器读",
             "储器读出",
             "存储器读出"
-          ]
-        },
-        {
-          "card": "单总线数据通路与暂存器",
-          "score": 21,
-          "matchedTerms": [
-            "mdr",
-            "存储器",
-            "储器读",
-            "存储器读",
-            "控制信",
-            "制信号",
-            "控制信号",
-            "执行",
-            "结果"
           ]
         },
         {
@@ -4126,6 +4129,23 @@
           ]
         },
         {
+          "card": "单总线数据通路与暂存器",
+          "score": 35,
+          "matchedTerms": [
+            "alu",
+            "mdr",
+            "功能",
+            "r1",
+            "r2",
+            "r3",
+            "ir",
+            "寄存器",
+            "执行",
+            "结果",
+            "操作码"
+          ]
+        },
+        {
           "card": "立即数扩展与移位指令",
           "score": 34,
           "matchedTerms": [
@@ -4139,21 +4159,6 @@
             "偏移",
             "偏移量",
             "带符号"
-          ]
-        },
-        {
-          "card": "单总线数据通路与暂存器",
-          "score": 31,
-          "matchedTerms": [
-            "alu",
-            "mdr",
-            "功能",
-            "r1",
-            "r2",
-            "r3",
-            "寄存器",
-            "执行",
-            "结果"
           ]
         }
       ]
@@ -6064,17 +6069,17 @@
           ]
         },
         {
-          "card": "定点补码加减与溢出",
-          "score": 29,
+          "card": "寄存器组读写端口与译码",
+          "score": 30,
           "matchedTerms": [
+            "rs",
+            "ir",
+            "rs1",
+            "rs2",
+            "add",
             "alu",
-            "of",
-            "cf",
-            "加法溢出",
-            "溢出",
-            "加法",
-            "表示",
-            "无符号"
+            "寄存器",
+            "最多"
           ]
         }
       ]
