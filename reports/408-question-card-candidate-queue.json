@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-17T11:41:31.253Z",
+  "generatedAt": "2026-11-17T11:48:52.226Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 799,
-    "formalMappingRecords": 296,
-    "uniqueQuestionsAlreadyLinked": 239,
-    "questionsWithoutAnyFormalLink": 560,
+    "formalMappingRecords": 322,
+    "uniqueQuestionsAlreadyLinked": 265,
+    "questionsWithoutAnyFormalLink": 534,
     "questionsNeedingAdditionalCardReview": 799,
     "candidateQuestions": 799,
     "noCandidateQuestions": 0,
