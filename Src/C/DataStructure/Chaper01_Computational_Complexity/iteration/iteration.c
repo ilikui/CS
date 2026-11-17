@@ -1,3 +1,11 @@
+/**
+ * @brief 循环示例
+ * @date 2026-11-17
+ * @author Likui
+ * @file iteration.c
+ * @note 循环示例
+ */
+
 #include "..\..\utils\common.h"
 
 
