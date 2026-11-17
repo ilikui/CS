@@ -9866,15 +9866,15 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2026-选择题-6",
     "primary": [
-      "CAL-06-F"
+      "CAL-04-N154"
     ],
     "secondary": [
-      "CAL-01-C",
-      "CAL-04-A"
+      "CAL-06-F",
+      "CAL-01-C"
     ],
-    "rationale": "f(1)=0，故反函数 g(0)=1；由变上限积分求 f'(1)=3e/2，反函数导数 g'(0)=1/f'(1)=2/(3e)。",
-    "methods": "先求 f(1)，再求 f'(x)，最后套反函数求导公式。",
-    "pitfalls": "反函数导数的自变量对应 f(1)=0，因此应计算 g'(0)，不是 g'(1)。"
+    "rationale": "先由 f(1)=0 得 g(0)=1，再用变上限积分求 f'(1)=3e/2，最后用反函数导数 g'(0)=1/f'(1)。",
+    "methods": "f(1)=∫₁¹...dt=0，所以 g(0)=1。f'(x)=e^{x³}/(1+x⁶)·3x²，故 f'(1)=3e/2。由 g(f(x))=x 求导，g'(f(x))f'(x)=1，代 x=1 得 g'(0)=2/(3e)。",
+    "pitfalls": "反函数导数的自变量要对应 f(1)=0，因此求的是 g'(0)；不能误写为 g'(1)，也不能忘记取 f'(1) 的倒数。"
   },
   "755": {
     "status": "verified",
@@ -9893,15 +9893,16 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2026-选择题-8",
     "primary": [
-      "LA-02-D"
+      "LA-02-N155"
     ],
     "secondary": [
+      "LA-02-D",
       "LA-01-C",
       "LA-01-E"
     ],
-    "rationale": "置换矩阵正交，逆矩阵等于转置且仍为置换矩阵；伴随矩阵等于 det(A)A⁻¹，det 可为 ±1，故不总是置换矩阵。",
-    "methods": "使用置换矩阵 AᵀA=I 与伴随矩阵恒等式 A*=det(A)A⁻¹。",
-    "pitfalls": "不能把 A*=A⁻¹ 当恒等式，只有 det(A)=1 时才成立。"
+    "rationale": "置换矩阵是正交矩阵，故 P⁻¹=Pᵀ 且仍为置换矩阵；伴随矩阵为 det(P)P⁻¹，而 det(P)=±1，因此伴随矩阵不一定为置换矩阵。",
+    "methods": "每行每列恰有一个 1，行列向量构成标准正交组，PᵀP=I，故 P⁻¹=Pᵀ。又 P^*=det(P)P⁻¹，行交换次数可奇可偶，det(P)可为 −1，故 P^*可能是负置换矩阵。",
+    "pitfalls": "不能把 P^*=P⁻¹ 当恒等式；只有 det(P)=1 时二者相等。"
   },
   "757": {
     "status": "verified",
@@ -9952,11 +9953,12 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-02-C"
     ],
     "secondary": [
-      "CAL-01-G"
+      "CAL-01-G",
+      "CAL-05-D"
     ],
-    "rationale": "通分后分子为 sin x−ln(1+x)。展开得 x²/2+o(x²)，分母 x sin x=x²+o(x²)，故极限为 1/2，与题库答案一致。",
-    "methods": "对 sin x 与 ln(1+x) 作同阶展开，保留到二阶；分母用 sin x∼x。",
-    "pitfalls": "不能分别把两个原项取极限；两项均含 1/x 量级，必须先合并或展开后比较。"
+    "rationale": "通分后分子为 sin x−ln(1+x)，需保留到二阶展开：sin x=x+O(x³)，ln(1+x)=x−x²/2+O(x³)，分子为 x²/2+O(x³)，分母 x sin x=x²+O(x⁴)，极限为 1/2。",
+    "methods": "先通分为 [sin x−ln(1+x)]/[x sin x]。使用麦克劳林展开到二阶：sin x=x−x³/6+O(x⁵)，ln(1+x)=x−x²/2+x³/3+O(x⁴)，故分子=x²/2+O(x³)；分母=x²+O(x⁴)，结果为 1/2。",
+    "pitfalls": "不能分别求原式两项的极限；一次项抵消后必须保留二阶项；sin x 的二阶系数为 0，不能误写为 −x²/2。"
   },
   "761": {
     "status": "verified",
@@ -10001,14 +10003,15 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2026-填空题-16",
     "primary": [
-      "LA-02-E"
+      "LA-02-N156"
     ],
     "secondary": [
-      "LA-06-A"
+      "LA-06-A",
+      "LA-02-E"
     ],
-    "rationale": "AAᵀ 的秩等于 A 的秩。二次型规范形仅有一个平方项，故 rank(A)=1，两行成比例。比较首末分量得 a=1，再比较中间分量得 b=1，因此 a+b=2。",
-    "methods": "利用 rank(AAᵀ)=rank(A)，令 A 两行成比例并逐分量比较系数。",
-    "pitfalls": "规范形只有一个非零平方项表示秩为 1；比例关系应对整行统一使用同一比例系数。"
+    "rationale": "二次型规范形只有一个非零平方项，秩为 1；又 r(AAᵀ)=r(A)，故 A 两行成比例，逐分量比较得 a=b=1。",
+    "methods": "规范形 y₁² 表示秩为 1。对实矩阵 A，r(AAᵀ)=r(A)，所以 A 的两行线性相关。令第二行=k倍第一行：a+2=k、3=kb、−3a=−k。由 k=3a 与 a+2=k 得 a=1、k=3，再得 b=1，故 a+b=2。",
+    "pitfalls": "不能只根据 AAᵀ 对称判断秩；两行成比例必须使用同一个比例系数；规范形中非零平方项个数就是二次型秩。"
   },
   "765": {
     "status": "verified",
