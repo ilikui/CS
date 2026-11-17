@@ -2180,8 +2180,8 @@ const EXAM_DATA = [
     "解答题",
     19,
     "已知函数 $f\\left(x\\right)$ 在 $\\left[0,1\\right]$ 上连续，在 $\\left(0,1\\right)$ 内可导，且 $f\\left(0\\right)=0,\\ f\\left(1\\right)=1$。证明：\n\n（Ⅰ）存在 $\\xi\\in\\left(0,1\\right)$，使得 $f\\left(\\xi\\right)=1-\\xi$；\n\n（Ⅱ）存在两个不同的点 $\\eta,\\zeta\\in\\left(0,1\\right)$，使得 $f^{\\prime}\\left(\\eta\\right)f^{\\prime}\\left(\\zeta\\right)=1$。",
-    "",
-    "（Ⅰ）令 $F\\left(x\\right)=f\\left(x\\right)+x-1$，则 $F\\left(0\\right)=-1<0$，$F\\left(1\\right)=1>0$。由介值定理，存在 $\\xi\\in\\left(0,1\\right)$，使 $F\\left(\\xi\\right)=0$，即 $f\\left(\\xi\\right)=1-\\xi$。\n\n（Ⅱ）在 $\\left[0,\\xi\\right]$ 与 $\\left[\\xi,1\\right]$ 上分别用拉格朗日中值定理，存在 $\\eta\\in\\left(0,\\xi\\right)$，$\\zeta\\in\\left(\\xi,1\\right)$，使\n\n$f^{\\prime}\\left(\\eta\\right)=\\frac{1-\\xi}{\\xi},\\quad f^{\\prime}\\left(\\zeta\\right)=\\frac{\\xi}{1-\\xi}$。\n\n故 $f^{\\prime}\\left(\\eta\\right)f^{\\prime}\\left(\\zeta\\right)=1$。"
+    "（Ⅰ）存在 $\\xi\\in(0,1)$ 使 $f(\\xi)=1-\\xi$；（Ⅱ）存在不同的 $\\eta,\\zeta\\in(0,1)$ 使 $f'(\\eta)f'(\\zeta)=1$。",
+    "（Ⅰ）令 $F(x)=f(x)+x-1$。则 $F(0)=-1<0$，$F(1)=1>0$。由介值定理，存在 $\\xi\\in(0,1)$ 使 $F(\\xi)=0$，即 $f(\\xi)=1-\\xi$。\n\n（Ⅱ）分别在 $[0,\\xi]$ 和 $[\\xi,1]$ 上应用拉格朗日中值定理。存在 $\\eta\\in(0,\\xi)$、$\\zeta\\in(\\xi,1)$，使\n$$\nf'(\\eta)=\\frac{f(\\xi)-f(0)}{\\xi}=\\frac{1-\\xi}{\\xi},\\qquad\nf'(\\zeta)=\\frac{f(1)-f(\\xi)}{1-\\xi}=\\frac{\\xi}{1-\\xi}.\n$$\n两式相乘得 $f'(\\eta)f'(\\zeta)=1$。由于 $\\eta<\\xi<\\zeta$，两点不同。"
   ],
   [
     "2005",
@@ -3844,8 +3844,8 @@ const EXAM_DATA = [
     "解答题",
     19,
     "设函数 $f\\left(x\\right),g\\left(x\\right)$ 在区间 $\\left[a,b\\right]$ 上连续，且 $f\\left(x\\right)$ 单调增加，$0\\leq g\\left(x\\right)\\leq 1$，证明：\n\n（1）$0\\leq \\int_{a}^{x}g\\left(t\\right)\\mathrm{~d}t\\leq x-a,\\quad x\\in \\left[a,b\\right]$；\n\n（2）$\\int_{a}^{a+\\int_{a}^{b}g\\left(t\\right)\\mathrm{~d}t}f\\left(x\\right)\\mathrm{~d}x\\leq \\int_{a}^{b}f\\left(x\\right)g\\left(x\\right)\\mathrm{~d}x$。",
-    "",
-    "（1）由 $0\\leq g\\left(x\\right)\\leq 1$，积分得 $0\\leq \\int_{a}^{x}g\\left(t\\right)\\mathrm{~d}t\\leq \\int_{a}^{x}1\\mathrm{~d}t=x-a$。\n\n（2）令 $F\\left(x\\right)=\\int_{a}^{x}f\\left(u\\right)g\\left(u\\right)\\mathrm{~d}u-\\int_{a}^{a+\\int_{a}^{x}g\\left(t\\right)\\mathrm{~d}t}f\\left(u\\right)\\mathrm{~d}u$，则 $F\\left(a\\right)=0$。\n\n由（1）及 $f\\left(x\\right)$ 单调增加，得 $f\\left(a+\\int_{a}^{x}g\\left(t\\right)\\mathrm{~d}t\\right)\\leq f\\left(x\\right)$。\n\n因此 $F^{\\prime}\\left(x\\right)=g\\left(x\\right)\\left[f\\left(x\\right)-f\\left(a+\\int_{a}^{x}g\\left(t\\right)\\mathrm{~d}t\\right)\\right]\\geq 0$，故 $F\\left(b\\right)\\geq F\\left(a\\right)=0$，结论成立。"
+    "（1）$0\\leq\\int_a^x g(t)\\,dt\\leq x-a$；（2）$\\displaystyle\\int_a^{a+\\int_a^b g(t)\\,dt}f(x)\\,dx\\leq\\int_a^b f(x)g(x)\\,dx$。",
+    "（1）由 $0\\leq g(t)\\leq1$，对 $[a,x]$ 积分得\n$$0\\leq\\int_a^xg(t)\\,dt\\leq\\int_a^x1\\,dt=x-a.$$\n\n（2）令 $G(x)=\\int_a^xg(t)\\,dt$，并构造\n$$F(x)=\\int_a^xf(u)g(u)\\,du-\\int_a^{a+G(x)}f(u)\\,du.$$\n显然 $F(a)=0$。由（1）知 $0\\leq G(x)\\leq x-a$，故 $a+G(x)\\leq x$。因 $f$ 单调增加，$f(a+G(x))\\leq f(x)$。求导得\n$$F'(x)=g(x)\\{f(x)-f(a+G(x))\\}\\geq0.$$\n因此 $F(b)\\geq F(a)=0$，即得所证。"
   ],
   [
     "2014",
@@ -3996,8 +3996,8 @@ const EXAM_DATA = [
     "解答题",
     15,
     "设函数 $f\\left(x\\right)=\\ln\\left(1+x\\right)+ax+bx\\sin x$，$g\\left(x\\right)=kx^{3}$。若 $f\\left(x\\right)$ 与 $g\\left(x\\right)$ 在 $x\\to 0$ 时是等价无穷小，求 $a,b,k$ 的值。",
-    "",
-    "由\n\n$\\ln\\left(1+x\\right)=x-\\frac{x^{2}}{2}+\\frac{x^{3}}{3}+o\\left(x^{3}\\right),\\quad \\sin x=x-\\frac{x^{3}}{3!}+o\\left(x^{3}\\right)$，\n\n代入 $f\\left(x\\right)$，并由 $f\\left(x\\right)\\sim kx^{3}$，比较各阶系数，可得\n\n$a=-1,\\quad b=-\\frac{1}{2},\\quad k=-\\frac{1}{3}$。"
+    "$a=-1,\\quad b=\\dfrac12,\\quad k=\\dfrac13$。",
+    "展开到三阶：\n$$\n\\ln(1+x)=x-\\frac{x^2}{2}+\\frac{x^3}{3}+o(x^3),\\qquad\nx\\sin x=x^2+o(x^3).\n$$\n所以\n$$\nf(x)=(1+a)x+\\left(b-\\frac12\\right)x^2+\\frac13x^3+o(x^3).\n$$\n题设 $f(x)\\sim kx^3$ 要求一次项、二次项系数均为零，且三次项系数等于 $k$。于是\n$$\na=-1,\\qquad b=\\frac12,\\qquad k=\\frac13.\n$$\n注意 $x\\sin x$ 的首项是 $x^2$，不是 $-x^2$；这也是旧解析中 $b,k$ 符号错误的来源。"
   ],
   [
     "2015",
@@ -4028,8 +4028,8 @@ const EXAM_DATA = [
     "解答题",
     19,
     "已知函数 $f\\left(x\\right)=\\int_{x}^{1}\\sqrt{1+t^{2}}\\mathrm{~d}t+\\int_{1}^{x^{2}}\\sqrt{1+t}\\mathrm{~d}t$，求 $f\\left(x\\right)$ 零点的个数。",
-    "",
-    "求导得\n\n$f^{\\prime}\\left(x\\right)=-\\sqrt{1+x^{2}}+2x\\sqrt{1+x^{2}}=\\sqrt{1+x^{2}}\\left(2x-1\\right)$。\n\n故 $x=\\frac{1}{2}$ 为唯一驻点，且 $f\\left(x\\right)$ 在 $\\left(-\\infty,\\frac{1}{2}\\right)$ 上单调递减，在 $\\left(\\frac{1}{2},+\\infty\\right)$ 上单调递增。\n\n又可判断\n\n$f\\left(\\frac{1}{2}\\right)<0,\\quad \\lim_{x\\to-\\infty}f\\left(x\\right)=+\\infty,\\quad \\lim_{x\\to+\\infty}f\\left(x\\right)=+\\infty$。\n\n因此 $f\\left(x\\right)$ 在 $\\left(-\\infty,\\frac{1}{2}\\right)$ 和 $\\left(\\frac{1}{2},+\\infty\\right)$ 上各有一个零点，故零点个数为 $2$。"
+    "零点共有 $2$ 个。",
+    "由变上限积分求导及链式法则，\n$$\nf'(x)=-\\sqrt{1+x^2}+2x\\sqrt{1+x^2}=\\sqrt{1+x^2}(2x-1).\n$$\n因 $\\sqrt{1+x^2}>0$，故 $f'(x)<0$（$x<\\tfrac12$），$f'(x)>0$（$x>\\tfrac12$），函数先减后增，且 $x=\\tfrac12$ 是唯一全局最小点。\n\n再验证最小值为负：\n$$\nf\\left(\\frac12\\right)=\\int_{1/2}^{1}\\sqrt{1+t^2}\\,dt-\\int_{1/4}^{1}\\sqrt{1+t}\\,dt.\n$$\n第一项小于 $\\frac12\\sqrt2$；第二项大于 $\\frac34\\sqrt{5/4}$，而 $\\frac12\\sqrt2<\\frac34\\sqrt{5/4}$，故 $f(\\tfrac12)<0$。又当 $x\\to\\pm\\infty$ 时，两个积分项合成后均使 $f(x)\\to+\\infty$。由连续性及严格单调性，最小点左、右两侧各有且仅有一个零点，因此零点总数为 $2$。"
   ],
   [
     "2015",
@@ -4044,8 +4044,8 @@ const EXAM_DATA = [
     "解答题",
     21,
     "已知函数 $f\\left(x\\right)$ 在区间 $\\left[a,+\\infty\\right)$ 上具有 $2$ 阶导数，$f\\left(a\\right)=0$，$f^{\\prime}\\left(x\\right)>0$，$f^{\\prime\\prime}\\left(x\\right)>0$。设 $b>a$，曲线 $y=f\\left(x\\right)$ 在点 $\\left(b,f\\left(b\\right)\\right)$ 处的切线与 $x$ 轴的交点是 $\\left(x_{0},0\\right)$，证明 $a<x_{0}<b$。",
-    "",
-    "切线方程为\n\n$y-f\\left(b\\right)=f^{\\prime}\\left(b\\right)\\left(x-b\\right)$。\n\n令 $y=0$，得\n\n$x_{0}=b-\\frac{f\\left(b\\right)}{f^{\\prime}\\left(b\\right)}$。\n\n因 $f^{\\prime}\\left(x\\right)>0$ 且 $f\\left(a\\right)=0$，所以 $f\\left(b\\right)>0$，从而 $x_{0}<b$。\n\n由拉格朗日中值定理，存在 $\\xi\\in\\left(a,b\\right)$，使\n\n$f\\left(b\\right)=f^{\\prime}\\left(\\xi\\right)\\left(b-a\\right)$。\n\n于是\n\n$x_{0}-a=\\frac{f\\left(b\\right)}{f^{\\prime}\\left(\\xi\\right)}-\\frac{f\\left(b\\right)}{f^{\\prime}\\left(b\\right)}=\\frac{f\\left(b\\right)\\left[f^{\\prime}\\left(b\\right)-f^{\\prime}\\left(\\xi\\right)\\right]}{f^{\\prime}\\left(\\xi\\right)f^{\\prime}\\left(b\\right)}$。\n\n又 $f^{\\prime\\prime}\\left(x\\right)>0$，故 $f^{\\prime}\\left(b\\right)>f^{\\prime}\\left(\\xi\\right)$，所以 $x_{0}>a$。\n\n综上，$a<x_{0}<b$。"
+    "$a<x_0<b$。",
+    "切线方程为 $y-f(b)=f'(b)(x-b)$，令 $y=0$ 得\n$$x_0=b-\\frac{f(b)}{f'(b)}.$$\n由 $f'(x)>0$ 且 $f(a)=0$，知 $f(b)>0$，故 $x_0<b$。\n\n由拉格朗日中值定理，存在 $\\xi\\in(a,b)$，使 $f(b)=f'(\\xi)(b-a)$。于是\n$$\nx_0-a=\\frac{f(b)}{f'(\\xi)}-\\frac{f(b)}{f'(b)}\n=\\frac{f(b)[f'(b)-f'(\\xi)]}{f'(\\xi)f'(b)}.\n$$\n因 $f''(x)>0$，所以 $f'$ 严格增加，$f'(b)>f'(\\xi)>0$，从而 $x_0-a>0$。综上 $a<x_0<b$。"
   ],
   [
     "2015",
@@ -4180,8 +4180,8 @@ const EXAM_DATA = [
     "解答题",
     15,
     "求极限\n\n$$\n\\lim_{x\\to0}\\left(\\cos2x+2x\\sin x\\right)^{1/x^4}.\n$$",
-    "",
-    "设原式为 $e^L$，则\n\n$$\nL=\\lim_{x\\to0}\\frac{\\cos2x+2x\\sin x-1}{x^4}.\n$$\n\n由泰勒展开\n\n$$\n\\cos2x=1-2x^2+\\frac23x^4+o(x^4),\\qquad\n2x\\sin x=2x^2-\\frac13x^4+o(x^4),\n$$\n\n得 $L=\\dfrac13$。故原极限为\n\n$$\ne^{1/3}.\n$$"
+    "$e^{1/3}$。",
+    "设原极限为 $L$。由于底数趋于 $1$ 且为正，可取对数：\n$$\n\\ln L=\\lim_{x\\to0}\\frac{\\ln(\\cos2x+2x\\sin x)}{x^4}.\n$$\n先展开\n$$\n\\cos2x=1-2x^2+\\frac23x^4+o(x^4),\\quad\n2x\\sin x=2x^2-\\frac13x^4+o(x^4),\n$$\n故底数为 $1+\\frac13x^4+o(x^4)$。利用 $\\ln(1+u)\\sim u$，得 $\\ln L=\\frac13$，所以 $L=e^{1/3}$。"
   ],
   [
     "2016",
@@ -4396,8 +4396,8 @@ const EXAM_DATA = [
     "解答题",
     19,
     "设函数 $f(x)$ 在区间 $[0,1]$ 上具有二阶导数，且\n\n$$\nf(1)>0,\\qquad \\lim_{x\\to0^+}\\frac{f(x)}{x}<0.\n$$\n\n证明：\n\n（1）方程 $f(x)=0$ 在区间 $(0,1)$ 内至少存在一个实根；\n\n（2）方程\n\n$$\nf(x)f''(x)+\\left(f'(x)\\right)^2=0\n$$\n\n在区间 $(0,1)$ 内至少存在两个不同实根。",
-    "",
-    "（1）由\n\n$$\n\\lim_{x\\to0^+}\\frac{f(x)}{x}<0\n$$\n\n可知 $f(0)=0$，且存在充分小的 $x_0>0$，使 $f(x_0)<0$。又 $f(1)>0$，由零点定理，存在\n\n$$\n\\xi\\in(x_0,1)\\subset(0,1)\n$$\n\n使 $f(\\xi)=0$。\n\n（2）由 $f(0)=f(\\xi)=0$，罗尔定理得存在\n\n$$\n\\eta\\in(0,\\xi)\n$$\n\n使 $f'(\\eta)=0$。令\n\n$$\nF(x)=f(x)f'(x),\n$$\n\n则\n\n$$\nF(0)=F(\\eta)=F(\\xi)=0.\n$$\n\n分别在 $(0,\\eta)$ 与 $(\\eta,\\xi)$ 上对 $F$ 用罗尔定理，得两个不同点 $\\eta_1,\\eta_2\\in(0,1)$，使\n\n$$\nF'(\\eta_1)=F'(\\eta_2)=0.\n$$\n\n而\n\n$$\nF'(x)=f(x)f''(x)+\\left(f'(x)\\right)^2,\n$$\n\n故结论成立。"
+    "（1）$f(x)=0$ 在 $(0,1)$ 内至少有一个根；（2）$f(x)f''(x)+(f'(x))^2=0$ 在 $(0,1)$ 内至少有两个不同的根。",
+    "（1）由 $\\lim_{x\\to0^+}f(x)/x<0$，可知 $f(x)<0$ 对充分小的正数 $x$ 成立。取这样的 $x_0\\in(0,1)$，结合 $f(1)>0$，由零点定理，存在 $\\xi\\in(x_0,1)$ 使 $f(\\xi)=0$。\n\n（2）令 $F(x)=f(x)f'(x)$。由 $f(0)=f(\\xi)=0$，在 $[0,\\xi]$ 上应用罗尔定理，存在 $\\eta\\in(0,\\xi)$ 使 $f'(\\eta)=0$，于是 $F(0)=F(\\eta)=F(\\xi)=0$。分别在 $[0,\\eta]$、$[\\eta,\\xi]$ 上应用罗尔定理，得到两个不同点 $\\eta_1\\in(0,\\eta)$、$\\eta_2\\in(\\eta,\\xi)$，满足 $F'(\\eta_1)=F'(\\eta_2)=0$。而\n$$F'(x)=f(x)f''(x)+(f'(x))^2,$$\n故所求方程至少有两个不同实根。"
   ],
   [
     "2017",
@@ -4460,8 +4460,8 @@ const EXAM_DATA = [
     "选择题",
     4,
     "设函数 $f(x)$ 在 $[0,1]$ 上二阶可导，且\n\n$$\n\\int_0^1 f(x)\\,\\mathrm{d}x=0,\n$$\n\n则 $\\left(\\ \\right)$\n\n（A）当 $f'(x)<0$ 时，$f\\left(\\dfrac12\\right)<0$\n\n（B）当 $f''(x)<0$ 时，$f\\left(\\dfrac12\\right)<0$\n\n（C）当 $f'(x)>0$ 时，$f\\left(\\dfrac12\\right)<0$\n\n（D）当 $f''(x)>0$ 时，$f\\left(\\dfrac12\\right)<0$\n\n> **答案：** D",
-    "",
-    "A、C 可分别用 $f(x)=\\dfrac12-x$、$f(x)=x-\\dfrac12$ 排除。若 $f''(x)>0$，则图像在切线之上：\n\n$$\nf(x)>f\\left(\\frac12\\right)+f'\\left(\\frac12\\right)\\left(x-\\frac12\\right).\n$$\n\n在 $[0,1]$ 上积分得\n\n$$\n0=\\int_0^1 f(x)\\,\\mathrm{d}x>f\\left(\\frac12\\right),\n$$\n\n故选 D。"
+    "D。",
+    "若 $f''(x)>0$，则 $f$ 严格凸，图像严格位于任一点切线的上方。特别在 $x=\\tfrac12$ 处，对 $x\\ne\\tfrac12$ 有\n$$\nf(x)>f\\left(\\frac12\\right)+f'\\left(\\frac12\\right)\\left(x-\\frac12\\right).\n$$\n在 $[0,1]$ 上积分，线性项的积分为零，故\n$$\n0=\\int_0^1f(x)\\,dx>f\\left(\\frac12\\right).\n$$\n因此 D 正确。A、C 可分别取 $f(x)=\\frac12-x$、$f(x)=x-\\frac12$ 反例排除；B 可取严格凹函数 $f(x)=\\frac12-x(1-x)$，其积分为 $1/3$，减去常数 $1/3$ 后仍严格凹且积分为零，但中点值为 $-1/12$，所以 B 不构成必然结论。"
   ],
   [
     "2018",
@@ -4500,16 +4500,16 @@ const EXAM_DATA = [
     "填空题",
     9,
     "$$\n\\lim_{x\\to+\\infty}x^2\\left[\\arctan(x+1)-\\arctan x\\right]\n=\n\\underline{\\qquad}\n$$\n\n> **答案：** $1$",
-    "",
-    "由拉格朗日中值定理，存在 $\\xi\\in(x,x+1)$，使\n\n$$\n\\arctan(x+1)-\\arctan x=\\frac{1}{1+\\xi^2}.\n$$\n\n故原式为\n\n$$\n\\lim_{x\\to+\\infty}\\frac{x^2}{1+\\xi^2}=1.\n$$"
+    "1。",
+    "由拉格朗日中值定理，存在 $\\xi_x\\in(x,x+1)$，使\n$$\n\\arctan(x+1)-\\arctan x=\\frac{1}{1+\\xi_x^2}.\n$$\n于是原式为 $\\lim_{x\\to+\\infty}\\frac{x^2}{1+\\xi_x^2}$。因 $x<\\xi_x<x+1$，有\n$$\n\\frac{x^2}{1+(x+1)^2}<\\frac{x^2}{1+\\xi_x^2}<\\frac{x^2}{1+x^2},\n$$\n两端均趋于 $1$，由夹逼定理得极限为 $1$。"
   ],
   [
     "2018",
     "填空题",
     10,
     "曲线\n\n$$\ny=x^2+2\\ln x\n$$\n\n在其拐点处的切线方程是 $\\underline{\\qquad}$\n\n> **答案：** $y=4x-3$",
-    "",
-    "有\n\n$$\ny'=2x+\\frac{2}{x},\\qquad\ny''=2-\\frac{2}{x^2}.\n$$\n\n令 $y''=0$ 得 $x=1$，拐点为 $(1,1)$。又 $y'(1)=4$，故切线为\n\n$$\ny-1=4(x-1),\n$$\n\n即 $y=4x-3$。"
+    "$y=4x-3$。",
+    "求导得\n$$y'=2x+\\frac2x,\\qquad y''=2-\\frac2{x^2}.$$\n在定义域 $x>0$ 内，$y''=0$ 的唯一解为 $x=1$，且 $y''$ 在 $(0,1)$ 为负、在 $(1,+\\infty)$ 为正，故 $(1,1)$ 是拐点。又 $y'(1)=4$，切线方程为 $y-1=4(x-1)$，即 $y=4x-3$。"
   ],
   [
     "2018",
@@ -6168,3 +6168,5 @@ const EXAM_DATA = [
     ""
   ]
 ];
+
+if (typeof module !== 'undefined') module.exports = EXAM_DATA;
