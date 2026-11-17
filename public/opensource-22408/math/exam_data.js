@@ -3652,8 +3652,8 @@ const EXAM_DATA = [
     "解答题",
     18,
     "设奇函数 $f\\left(x\\right)$ 在 $\\left[-1,1\\right]$ 上具有二阶导数，且 $f\\left(1\\right)=1$。证明：\n\n（I）存在 $\\xi\\in\\left(0,1\\right)$，使得 $f^{\\prime}\\left(\\xi\\right)=1$；\n\n（II）存在 $\\eta\\in\\left(0,1\\right)$，使得 $f^{\\prime\\prime}\\left(\\eta\\right)+f^{\\prime}\\left(\\eta\\right)=1$。",
-    "",
-    "（I）令 $F\\left(x\\right)=f\\left(x\\right)-x$，则 $F\\left(0\\right)=F\\left(1\\right)=0$。由罗尔定理，存在 $\\xi\\in\\left(0,1\\right)$，使得 $F^{\\prime}\\left(\\xi\\right)=0$，即 $f^{\\prime}\\left(\\xi\\right)=1$。\n\n（II）令 $G\\left(x\\right)=e^{x}\\left[f^{\\prime}\\left(x\\right)-1\\right]$。由（I）知 $G\\left(\\xi\\right)=0$。又 $f\\left(x\\right)$ 为奇函数，所以 $f^{\\prime}\\left(x\\right)$ 为偶函数，从而 $G\\left(-\\xi\\right)=0$。\n\n由罗尔定理，存在 $\\eta\\in\\left(-\\xi,\\xi\\right)$，使得 $G^{\\prime}\\left(\\eta\\right)=0$，即\n\n$e^{\\eta}\\left[f^{\\prime}\\left(\\eta\\right)-1\\right]+e^{\\eta}f^{\\prime\\prime}\\left(\\eta\\right)=0$，\n\n故 $f^{\\prime\\prime}\\left(\\eta\\right)+f^{\\prime}\\left(\\eta\\right)=1$。"
+    "（I）存在 $\\xi\\in(0,1)$ 使 $f'(\\xi)=1$；（II）存在 $\\eta\\in(0,1)$ 使 $f''(\\eta)+f'(\\eta)=1$。",
+    "**（I）** 令 $F(x)=f(x)-x$。因 $f$ 为奇函数，$f(0)=0$，且 $F(0)=F(1)=0$。由罗尔定理，存在 $\\xi\\in(0,1)$ 使 $F'(\\xi)=0$，即 $f'(\\xi)=1$。\n\n**（II）** 令 $h(x)=f'(x)-1$。由 $f$ 为奇函数知 $f'$ 为偶函数，故 $h$ 为偶函数且 $h'(0)=0$。又由牛顿—莱布尼茨公式，\n$$\\int_0^1h(x)\\,dx=f(1)-f(0)-1=0.$$\n构造 $G(x)=e^xh(x)$，则\n$$G'(x)=e^x[h(x)+h'(x)]=e^x[f'(x)+f''(x)-1].$$\n\n反设 $G'(x)$ 在 $(0,1)$ 内无零点。由于导数具有介值性，$G'$ 在 $(0,1)$ 内恒正或恒负。\n\n- 若 $h(0)>0$，则 $G(0)>0$ 且 $G'(0)=h(0)>0$。由导数定义，存在足够小的 $t>0$ 使 $[G(t)-G(0)]/t>0$；由拉格朗日中值定理，某点处 $G'>0$。因此 $G'>0$ 在整个 $(0,1)$ 恒成立，$G(x)>G(0)>0$，从而 $h(x)>0$，与积分为零矛盾。\n- 若 $h(0)<0$，同理可得 $G'<0$，进而 $h(x)<0$，也与积分为零矛盾。\n- 若 $h(0)=0$，若 $h$ 恒为零则 $G'$ 处处为零，已与反设矛盾；否则由 $\\int_0^1h=0$，$h$ 必同时取正值和负值，故 $G$ 也同时取正值和负值。由拉格朗日中值定理，$G'$ 必分别取正值和负值，再由导数的介值性，$G'$ 必有零点，仍矛盾。\n\n因此存在 $\\eta\\in(0,1)$ 使 $G'(\\eta)=0$，即 $f''(\\eta)+f'(\\eta)=1$。"
   ],
   [
     "2013",
