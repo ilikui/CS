@@ -341,7 +341,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "数据表示与补码",
+      "定点补码加减与溢出"
+    ]
   },
   "IEEE 754 单精度": {
     "year": 2011,
@@ -366,7 +370,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "浮点数表示与规格化",
+      "IEEE 754 单精度字段"
+    ]
   },
   "Cache 地址映射": {
     "year": 2009,
@@ -388,7 +396,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "Cache 直接映射与组相联",
+      "Cache 映射与命中率"
+    ]
   },
   "五段流水线与冒险": {
     "year": 2016,
@@ -411,7 +423,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "流水线与冒险",
+      "流水线结构冒险与数据冒险"
+    ]
   },
   "微程序控制器": {
     "year": 2009,
@@ -436,7 +452,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "硬布线控制器与微程序控制器",
+      "RISC 与 CISC"
+    ]
   },
   "存储器容量扩展": {
     "year": 2009,
@@ -457,7 +477,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "存储芯片容量扩展",
+      "存储器芯片与地址译码"
+    ]
   },
   "中断优先级与屏蔽": {
     "year": 2011,
@@ -478,7 +502,10 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "中断屏蔽与优先级"
+    ]
   },
   "寻址方式与有效地址": {
     "year": 2011,
@@ -502,7 +529,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "指令系统与寻址方式",
+      "立即数与直接间接寻址"
+    ]
   },
   "浮点规格化与舍入": {
     "year": 2015,
@@ -524,7 +555,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "浮点数表示与规格化",
+      "移位运算与舍入"
+    ]
   },
   "Cache 写策略": {
     "year": 2015,
@@ -544,7 +579,10 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "Cache 替换与写策略"
+    ]
   },
   "I/O 控制方式": {
     "year": 2009,
@@ -577,7 +615,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "与2009年真题答案的中断次数、每秒周期数及2.5%、0.1%结果一致。"
-    }
+    },
+    "relatedCards": [
+      "程序查询与中断驱动 I/O",
+      "中断与 DMA"
+    ]
   },
   "存储器层次与局部性": {
     "year": 2010,
@@ -602,7 +644,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "存储器层次与主存组织",
+      "TLB 与快表命中",
+      "Cache 映射与命中率",
+      "主存与辅存层次结构"
+    ]
   },
   "进程状态与转换": {
     "year": 2014,
@@ -866,7 +914,7 @@ window.CARD_QUESTION_MAP = {
     "score": 2,
     "answer": "A",
     "question": "在页式虚拟存储管理系统中，采用某些页面置换算法，会出现 Belady 异常现象，即进程的缺页次数会随着分配给该进程的页框个数的增加而增加。下列算法中，可能出现 Belady 异常现象的是（ ）。 I. LRU 算法 II. FIFO 算法 III. OPT 算法 A. 仅 II B. 仅 I、II C. 仅 I、III D. 仅 II、III",
-    "analysis": "只有 FIFO 算法才会导致 Belady 异常，选 A。",
+    "analysis": "本题考查 Belady 异常。FIFO 按页面进入内存的先后顺序淘汰，增加页框后，队列状态可能改变，因而缺页次数不一定单调下降；LRU 和 OPT 属于栈算法，具有包含性，不会出现 Belady 异常。",
     "steps": [
       "只有 FIFO 算法才会导致 Belady 异常，选 A。"
     ],
@@ -875,8 +923,15 @@ window.CARD_QUESTION_MAP = {
     "matchKind": "直接考点",
     "audit": {
       "status": "source-linked-answer-key",
-      "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+      "note": "已核对2014年第30题原始题干、答案字段及考点；补充教学推导区分FIFO与栈算法的性质。教学步骤为本项目编写，不冒充官方原文解析。"
+    },
+    "teachingSteps": [
+      "先明确题意：Belady 异常指分配给同一进程的物理页框数增加后，缺页次数反而增加；它比较的是同一访问序列、同一置换算法在不同页框数下的结果。",
+      "逐项判断算法性质：FIFO 只看页面装入内存的先后顺序，新增页框会改变队列状态，因此可能出现缺页次数反增。",
+      "LRU 按最近一次访问时间淘汰最久未使用页，OPT 按未来最远才会再次访问的页面淘汰；二者满足栈算法的包含性，页框集合随页框数增加而保持包含关系，不会发生 Belady 异常。",
+      "因此只有命题Ⅱ（FIFO）正确，选择 A（仅Ⅱ）。",
+      "考场检验法：看到 FIFO，立即联想到可能发生 Belady 异常；看到 LRU 或 OPT，判断为不会发生。不要把“通常页框越多缺页越少”误当成所有算法都成立的定理。"
+    ]
   },
   "OSI 与 TCP/IP 分层": {
     "year": 2009,
@@ -1253,7 +1308,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "浮点数表示与规格化",
+      "IEEE 754 单精度字段"
+    ]
   },
   "总线带宽计算": {
     "year": 2009,
@@ -1274,7 +1333,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "总线与总线事务",
+      "总线带宽与突发传输"
+    ]
   },
   "DMA 传输过程": {
     "year": 2017,
@@ -1297,7 +1360,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "已核对年份、题号、ID、原始题干与原始题库 answer 字段；知识点归属已人工复核。此状态不代表官方解析已逐字核验，教学解析与原始解析分开标注。"
-    }
+    },
+    "relatedCards": [
+      "DMA 工作过程与总线占用",
+      "中断与 DMA"
+    ]
   },
   "银行家算法与安全状态": {
     "year": 2013,
@@ -1549,7 +1616,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
-    }
+    },
+    "relatedCards": [
+      "总线与总线事务",
+      "总线带宽与突发传输"
+    ]
   },
   "直接寻址范围计算": {
     "year": 2020,
@@ -1576,7 +1647,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案直接取原始题库 answer 字段。analysis/teachingSteps 为补充教学解析，不冒充原始官方解析。"
-    }
+    },
+    "relatedCards": [
+      "指令格式与操作码扩展",
+      "立即数与直接间接寻址"
+    ]
   },
   "文件系统逻辑格式化": {
     "year": 2017,
@@ -2116,7 +2191,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、ID与 data/408/questions_data.js 对齐；参考答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
-    }
+    },
+    "relatedCards": [
+      "单周期与多周期数据通路",
+      "CPU 指令执行过程"
+    ]
   },
   "系统调用接口": {
     "year": 2010,
@@ -2469,7 +2548,12 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
-    }
+    },
+    "relatedCards": [
+      "ALU 算术逻辑单元",
+      "指令译码与有效地址计算",
+      "立即数与直接间接寻址"
+    ]
   },
   "DRAM刷新机制": {
     "year": 2015,
@@ -2496,7 +2580,10 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
-    }
+    },
+    "relatedCards": [
+      "SRAM 与 DRAM"
+    ]
   },
   "冯诺依曼结构基本思想": {
     "year": 2019,
@@ -2523,7 +2610,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、ID与 data/408/questions_data.js 对齐；答案取原始题库 answer 字段。教学解析为补充讲解，不冒充官方原始解析。"
-    }
+    },
+    "relatedCards": [
+      "冯·诺依曼结构与存储程序",
+      "计算机系统层次结构"
+    ]
   },
   "页面分配与置换策略组合": {
     "year": 2015,
@@ -2789,7 +2880,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、ID和题干与 data/408/questions_data.js 对齐；原始题库未提供可直接读取的answer字段，本答案与解析为教学推导补充，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "程序查询与中断驱动 I/O",
+      "中断与 DMA",
+      "DMA 工作过程与总线占用",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
   },
   "文件分配策略与FCB字段设计": {
     "year": 2011,
@@ -2845,7 +2942,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、ID和题干与 data/408/questions_data.js 对齐；原始题库未提供可直接读取的answer字段，本答案与解析为教学推导补充，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "磁盘 CHS 地址与平均访问时间",
+      "磁盘存储结构与旋转延迟",
+      "DMA 周期挪用与总线仲裁",
+      "总线仲裁方式",
+      "磁盘结构与平均访问时间"
+    ]
   },
   "中断I_O与DMA的CPU时间占比": {
     "year": 2009,
@@ -2872,7 +2976,12 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、ID和题干与原始题库对齐；原始题库未提供可直接读取的answer字段，答案和解析为教学推导补充。"
-    }
+    },
+    "relatedCards": [
+      "中断与 DMA",
+      "DMA 工作过程与总线占用",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
   },
   "Cache缺失与突发总线事务时延": {
     "year": 2013,
@@ -2901,7 +3010,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、ID和题干与原始题库对齐；原始题库未提供可直接读取的answer字段，答案和解析为教学推导补充。"
-    }
+    },
+    "relatedCards": [
+      "Cache平均访问时间与缺失损失",
+      "Cache 直接映射与组相联",
+      "总线与总线事务",
+      "总线带宽与突发传输",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
   },
   "SR最大窗口与超时重传": {
     "year": 2024,
@@ -2984,7 +3100,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、ID和题干与原始题库对齐；原始题库未提供可直接读取的answer字段，本答案和解析为教学推导补充，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "Cache 直接映射与组相联",
+      "Cache 命中率与空间局部性",
+      "二维数组行优先存储与局部性",
+      "Cache 组相联映射与地址划分"
+    ]
   },
   "请求分页与组相联Cache循环访问": {
     "year": 2023,
@@ -3013,7 +3135,17 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、ID和题干与原始题库对齐；原始题库未提供可直接读取的answer字段，本答案和解析为教学推导补充，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "Cache 映射与命中率",
+      "Cache组相联映射与地址字段",
+      "Cache 命中率与空间局部性",
+      "二维数组行优先存储与局部性",
+      "数组跨页与缺页次数",
+      "虚拟地址分页与页内偏移",
+      "页式存储与缺页异常",
+      "Cache 组相联映射与地址划分"
+    ]
   },
   "Cache缺失率与主存带宽计算": {
     "year": 2012,
@@ -3042,7 +3174,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、ID和题干与原始题库对齐；原始题库未提供可直接读取的answer字段，本答案和解析为教学推导补充，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "Cache平均访问时间与缺失损失",
+      "存储器层次与主存组织",
+      "总线与总线事务",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
   },
   "双子网划分与R1路由表": {
     "year": 2009,
@@ -3724,7 +3862,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；解析和步骤为补充教学内容。"
-    }
+    },
+    "relatedCards": [
+      "硬布线控制器与微程序控制器",
+      "计算机系统层次结构"
+    ]
   },
   "单周期与多周期数据通路": {
     "year": 2020,
@@ -3747,7 +3889,12 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；解析和步骤为补充教学内容。"
-    }
+    },
+    "relatedCards": [
+      "单周期与多周期数据通路",
+      "单总线数据通路与暂存器",
+      "指令周期与微操作控制"
+    ]
   },
   "中断响应与异常处理": {
     "year": 2015,
@@ -3770,7 +3917,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；解析和步骤为补充教学内容。"
-    }
+    },
+    "relatedCards": [
+      "中断响应与异常处理",
+      "CPU异常响应与现场保护"
+    ]
   },
   "移位运算与舍入": {
     "year": 2015,
@@ -3794,7 +3945,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；解析和步骤为补充教学内容。"
-    }
+    },
+    "relatedCards": [
+      "移位运算与舍入",
+      "浮点数表示与规格化"
+    ]
   },
   "ALOHA 与 CSMA": {
     "year": 2009,
@@ -3840,7 +3995,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；解析和步骤为补充教学内容。"
-    }
+    },
+    "relatedCards": [
+      "单总线数据通路与暂存器",
+      "单周期与多周期数据通路"
+    ]
   },
   "分页目录项数量计算": {
     "year": 2010,
@@ -4103,7 +4262,12 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；数值推导为补充教学解析。"
-    }
+    },
+    "relatedCards": [
+      "定点补码加减与溢出",
+      "整数溢出检测与异常处理",
+      "移位加法乘法与阵列乘法器"
+    ]
   },
   "ROM与RAM芯片数量设计": {
     "year": 2009,
@@ -4127,7 +4291,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；芯片容量计算为补充教学解析。"
-    }
+    },
+    "relatedCards": [
+      "存储芯片容量扩展",
+      "存储器芯片与地址译码"
+    ]
   },
   "FCFS与SSTF磁臂黏着比较": {
     "year": 2018,
@@ -4337,7 +4505,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、原始题库 ID 和题目结构与 data/408/questions_data.js 对齐；原始题库未提供可直接读取的 answer 字段，本答案为逐问教学推导，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "ALU 算术逻辑单元",
+      "ALU 标志位 CF 与 OF",
+      "补码加减与溢出判断",
+      "单总线数据通路与暂存器",
+      "寄存器组读写端口与译码",
+      "指令周期与微操作控制"
+    ]
   },
   "置换选择生成初始归并段": {
     "year": 2023,
@@ -4411,7 +4587,12 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、原始题库 ID 和题干与原始题库对齐；原始题库未提供可直接读取的 answer 字段，答案为教学推导，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "指令格式与操作码扩展",
+      "指令系统与寻址方式",
+      "寄存器组读写端口与译码"
+    ]
   },
   "一级目录不可变文件分配与FCB": {
     "year": 2011,
@@ -4579,7 +4760,12 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "年份、题号、原始题库 ID 和题干与原始题库对齐；原始题库未提供可直接读取的 answer 字段，时间与 CPU 开销为教学推导，不冒充官方参考答案。"
-    }
+    },
+    "relatedCards": [
+      "异步串行通信帧格式与字符速率",
+      "程序查询与中断驱动 I/O",
+      "中断与 DMA"
+    ]
   },
   "Cache组相联映射组号计算": {
     "year": 2009,
@@ -4602,7 +4788,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-linked-answer-key",
       "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；Cache 组号计算为补充教学内容。"
-    }
+    },
+    "relatedCards": [
+      "Cache 直接映射与组相联",
+      "Cache组相联映射与地址字段"
+    ]
   },
   "TCP累计确认与可靠传输": {
     "year": 2009,
@@ -4767,7 +4957,11 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "年份、题号、原始题库 ID 和答案与原始题库对齐；data/408/questions_data.js 的题干缺少指令序列，已用公开 2016 真题原文补全，并与另一份真题解析交叉核对。"
-    }
+    },
+    "relatedCards": [
+      "流水线结构冒险与数据冒险",
+      "流水线与冒险"
+    ]
   },
   "2015NRZ与曼彻斯特波形识别": {
     "year": 2015,
@@ -5337,7 +5531,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2009 年原始题干、标准答案与解析，并按题目实际考查的概念人工匹配知识卡；不是依据题号机械归类。"
-    }
+    },
+    "steps": [
+      "先确认题目描述的是冯·诺依曼结构：指令和数据都以二进制存放在存储器中。",
+      "CPU在取指阶段按PC取出的内容解释为指令；在执行阶段按指令要求访问的数据才作为操作数。",
+      "因此区分依据是指令周期所处阶段，而不是操作码译码结果、寻址方式或存储单元位置，选C。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2009-12-short整型符号扩展": {
     "year": 2009,
@@ -5351,7 +5551,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2009 年原始题干、标准答案与解析，并按题目实际考查的概念人工匹配知识卡；不是依据题号机械归类。"
-    }
+    },
+    "steps": [
+      "先按16位补码表示short y=−9：9=0009H，取反加1得FFF7H。",
+      "int为32位，y参与x+y前先符号扩展：FFF7H→FFFFFFF7H。",
+      "x=127=0000007FH，计算0000007FH+FFFFFFF7H=00000076H（保留32位）。",
+      "所以x=0000007FH、y=FFF7H、z=00000076H，选D。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2009-16-相对寻址目标地址": {
     "year": 2009,
@@ -5365,7 +5572,18 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2009 年原始题干、标准答案与解析，并按题目实际考查的概念人工匹配知识卡；不是依据题号机械归类。"
-    }
+    },
+    "relatedCards": [
+      "x86 CALL/JMP/RET 控制转移与相对寻址",
+      "x86 相对寻址与转移目标计算"
+    ],
+    "topic": "计算机组成原理",
+    "steps": [
+      "相对寻址的有效地址以取完当前指令后的PC为基准。",
+      "指令起始地址2000H，指令长度2字节，因此NextPC=2000H+2=2002H。",
+      "位移字段06H按正数解释，目标地址=2002H+06H=2008H，选C。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2009-18-流水线时钟周期": {
     "year": 2009,
@@ -5379,7 +5597,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2009 年原始题干、标准答案与解析，并按题目实际考查的概念人工匹配知识卡；不是依据题号机械归类。"
-    }
+    },
+    "steps": [
+      "流水线时钟周期必须不小于任一流水段的组合逻辑延迟。",
+      "比较四段延迟90、80、70、60ns，最慢段为90ns。",
+      "因此最小时钟周期为90ns，选A。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2009-21-Cache命中率": {
     "year": 2009,
@@ -5393,7 +5617,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2009 年原始题干、标准答案与解析，并按题目实际考查的概念人工匹配知识卡；不是依据题号机械归类。"
-    }
+    },
+    "steps": [
+      "总访存次数为1000次，缺失次数为50次。",
+      "命中次数=1000−50=950次。",
+      "命中率=950/1000=95%，选D。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2009-22-外部中断事件": {
     "year": 2009,
@@ -5407,7 +5637,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2009 年原始题干、标准答案与解析，并按题目实际考查的概念人工匹配知识卡；不是依据题号机械归类。"
-    }
+    },
+    "steps": [
+      "外部中断由CPU执行指令之外的外设/外部事件触发。",
+      "键盘输入来自外部设备，属于外部中断。",
+      "除数为0和访存缺页属于执行指令引起的同步异常；浮点下溢按题目给定机器处理，故选A。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2009-25-打印机资源死锁": {
     "year": 2009,
@@ -5519,7 +5755,16 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "已逐题核对原始题干与原始教学解析；答案中的 C5–C10 控制信号及可合并节拍方案均摘自原题库参考解析，分别关联数据通路与指令执行微操作知识卡。"
-    }
+    },
+    "steps": [
+      "指令功能为M[(R1)]←M[(R1)]+R0，先读取R1所指主存单元。",
+      "C5：R1out、MARin，将地址装入MAR；C6：MemR、MDRinE，从主存读入MDR。",
+      "C7：MDRout、Ain，将内存操作数送入ALU暂存器A。",
+      "C8：R0out、Add、ACin，ALU执行A+R0并将结果写入AC。",
+      "C9：ACout、MDRin，将结果送MDR；C10：MDRoutE、MemW，将结果写回M[MAR]。",
+      "若硬件允许C6同时执行R0out、Ain，可把R0预装入A，后续C7直接相加，节拍可减少；是否可合并要检查总线资源冲突。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2009-44-ADD指令微操作与执行周期": {
     "year": 2009,
@@ -5533,7 +5778,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "source-question-linked-teaching-solution",
       "note": "已逐题核对原始题干与原始教学解析；答案中的 C5–C10 控制信号及可合并节拍方案均摘自原题库参考解析，分别关联数据通路与指令执行微操作知识卡。"
-    }
+    },
+    "steps": [
+      "先按指令语义确定数据流：读取M[(R1)]，与R0相加，再把结果写回M[(R1)]。",
+      "C5：R1out、MARin，将R1内容送入MAR；C6：MemR、MDRinE，从主存读出操作数到MDR。",
+      "C7：MDRout、Ain，将内存操作数送ALU暂存器A；C8：R0out、Add、ACin，完成A+R0并锁存到AC。",
+      "C9：ACout、MDRin，将结果送入MDR；C10：MDRoutE、MemW，将结果写回MAR指向的主存单元。",
+      "若C6时可以同时执行R0out、Ain，则可提前准备第二个操作数，后续节拍合并；是否可并行取决于独立数据通路和总线冲突。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-02-输出受限双端队列": {
     "year": 2010,
@@ -5645,7 +5898,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "CPU执行时间=指令条数×平均CPI×时钟周期=指令条数×CPI/主频。",
+      "提高主频可缩短时钟周期；优化数据通路可能减少CPI或提高时钟频率；编译优化可能减少指令条数或降低平均CPI。",
+      "因此题目列出的三种优化都可能缩短CPU执行时间，选D。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-14-整数浮点数类型转换": {
     "year": 2010,
@@ -5659,7 +5918,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "785可由binary32精确表示，int→float→int仍为785，I正确。",
+      "1567.8转int会截去小数部分成为1567，再转float为1567.0，不等于1567.8，II错误。",
+      "float→double→float恢复原float值，III正确。",
+      "1.5e100远大于1567.8，计算d+f时f可能被舍入掉，(d+f)-d不等于f，IV错误。",
+      "因此仅I、III正确，选B。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-15-存储芯片地址扩展": {
     "year": 2010,
@@ -5673,7 +5940,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "先算目标存储器为8K×8，芯片为2K×4。",
+      "字扩展组数=8K/2K=4；位扩展并联数=8/4=2。",
+      "总芯片数=4×2=8片；每组两片并联形成2K×8。",
+      "四组地址区间依次为0000H～07FFH、0800H～0FFFH、1000H～17FFH、1800H～1FFFH；地址0B1FH落在第二组，组起始地址0800H，选D。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-16-RAM与ROM特性": {
     "year": 2010,
@@ -5687,7 +5961,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "RAM包括SRAM和DRAM，断电后数据丢失；ROM断电后仍可保存信息。",
+      "RAM和ROM均可随机访问，随机存取不等于RAM这一存储器类别。",
+      "Cache通常由SRAM实现；ROM不能直接替代Cache。",
+      "DRAM需要周期刷新，ROM不需要，因此按题目选项判断仅A正确。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-18-汇编程序员可见寄存器": {
     "year": 2010,
@@ -5701,7 +5982,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "汇编程序员可见寄存器是指可通过指令显式读取/修改的寄存器。",
+      "PC可通过跳转、调用等控制转移指令改变，属于程序员可见状态。",
+      "MAR、MDR和指令寄存器IR属于CPU内部工作/接口寄存器，程序通常不能直接访问，选B。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-19-流水线转发与阻塞": {
     "year": 2010,
@@ -5715,7 +6002,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "流水线冒险分结构冒险、数据冒险和控制冒险。",
+      "数据旁路/转发把生产者结果直接送给消费者，避免等待写回寄存器后再读取。",
+      "结构冒险需增加或分离硬件资源；控制冒险需分支预测、延迟槽或冲刷流水线处理。",
+      "按题目选项，旁路转发针对数据相关，可减少相应停顿，选A。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-20-总线标准识别": {
     "year": 2010,
@@ -5729,7 +6023,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "识别常见总线标准：ISA、EISA、VESA、PCI、PCI-Express、AGP等。",
+      "排除CRT（显示设备类型）、CPI（性能指标）、RAM（存储器类型）和MIPS（性能指标）。",
+      "剩余符合总线标准的选项D。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-22-显示存储器带宽计算": {
     "year": 2010,
@@ -5743,7 +6043,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "每帧显示数据量=分辨率×每像素位数=1600×1200×24bit。",
+      "每秒刷新85帧，刷新带宽=1600×1200×24×85=3,916,800,000bit/s=3916.8Mbps。",
+      "若刷新占显存总带宽50%，则总带宽至少=3916.8/0.5=7833.6Mbps≈7834Mbps，选D。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-24-进程创建事件": {
     "year": 2010,
@@ -5827,7 +6133,13 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "cross-checked",
       "note": "已逐题核对 2010 年原始题干、原始标准答案与解析；按题目实际考查概念人工匹配知识卡，未按题号或候选分数自动关联。"
-    }
+    },
+    "steps": [
+      "键盘是外部输入设备，输入事件到来时可向CPU发出中断请求。",
+      "CPU响应后转入键盘中断服务程序，读取设备数据/状态并完成必要处理。",
+      "因此键盘输入采用中断驱动I/O，选B。"
+    ],
+    "stepsSource": "expanded-from-question-analysis"
   },
   "2010-35-RIP距离矢量不可达": {
     "year": 2010,
@@ -5905,13 +6217,20 @@ window.CARD_QUESTION_MAP = {
     "id": 93,
     "typeName": "应用题",
     "score": 8,
-    "answer": "页大小 1 KB，逻辑地址 17CAH 的页号为 5，页内偏移为 7CAH。FIFO 淘汰最早装入的 0 号页，将 5 号页装入 7 号页框，物理地址为 1FCAH。CLOCK 从 2 号页框开始扫描，先将 2、4、7、9 号页框访问位置零，再淘汰 2 号页，将 5 号页装入 2 号页框，物理地址为 0BCAH。",
+    "answer": "页大小 1KB=400H，逻辑地址 17CAH 的页号为 5、页内偏移为 3CAH。FIFO 淘汰最早装入的 0 号页，将 5 号页装入 7 号页框，物理地址 1FCAH。CLOCK 按题设从 2 号页框开始扫描，先清零 2、4、7、9 号页框的访问位，再淘汰 2 号页框，将 5 号页装入，物理地址 0BCAH。",
     "question": "设某计算机的逻辑地址空间和物理地址空间均为 64KB，按字节编址。若某进程最多需要 6 页（Page）数据存储空间，页的大小为 1KB，操作系统采用固定分配局部置换策略为此进程分配 4 个页框（Page Frame）。在时刻 260 前该进程访问情况见下表（访问位即使用位）。 页号 页框号 装入时刻 访问位 0 7 130 1 1 4 230 1 2 2 200 1 3 9 260 1 当该进程执行到时刻 260 时，要访问逻辑地址为 17CAH 的数据。请回答下列问题： (1) 该逻辑地址对应的页号是多少？ (2) 若采用先进先出 (FIFO) 置换算法，该逻辑地址对应的物理地址？要求给出计算过程。 (3) 采用时钟 (CLOCK) 置换算法，该逻辑地址对应的物理地址是多少？要求给出计算过程（设搜索下一页的指针按顺时针方向移动，且指向当前 2 号页框，示意图如下图）。 2号页 3号页 0号页 1号页 2号页框 4号页框 7号页框 9号页框",
     "analysis": "1） 由于该计算机的逻辑地址空间和物理地址空间均为 64 K B = 2 16 B，按字节编址，且页的大小为 1 K B = 2 10 B，故逻辑地址和物理地址的地址格式均为 | 页框号（6 位） | 页内偏移（10 位） | 17CAH = 0001 0111 1100 1010B，可知该逻辑地址的页号为 000101B = 5。 2） 根据 FIFO 算法，需要替换装入时间最早的页，故需要置换装入时间最早的 0 号页，即将 5 号页装入 7 号页框中，所以物理地址为 0001 1111 1100 1010B = 1FCAH。 3） 根据 Clock 算法，如果当前指针所指页框的使用位为 0，则替换该页；否则将使用位清零，并将指针指向下一个页框，继续查找。根据题设和示意图，将从 2 号页框开始，前 4 次查找页框号的顺序为 2→4→7→9，并将对应页框的使用位清零。在第 5 次查找中，指针指向 2 号页框，因 2 号页框的使用位为 0，故淘汰 2 号页框对应的 2 号页，把 5 号页装入 2 号页框中，并将对应使用位设置为 1，所以对应的物理地址为 0000 1011 1100 1010B = 0BCAH。",
     "audit": {
-      "status": "source-question-linked-teaching-solution",
-      "note": "已逐题核对原始题干与原始教学解析；结构化答案由题库解析中的步骤、数值与结论整理，原始解析全文保留在 analysis 字段。"
-    }
+      "status": "cross-checked-corrected",
+      "note": "复算发现原解析把 1KB 页的页内偏移写为 7CAH，与 10 位页内偏移不符；正确偏移为 3CAH。按此修正后 FIFO/CLOCK 物理地址分别仍为 1FCAH、0BCAH。"
+    },
+    "teachingSteps": [
+      "页大小 1KB=2^10B=400H，因此页内偏移为逻辑地址低 10 位：17CAH & 03FFH=3CAH；页号为 17CAH>>10=5。",
+      "FIFO 按装入时刻选择最早装入的 0 号页；题目给出该页装在 7 号页框，因此新页 5 装入页框 7。",
+      "物理地址=页框号×页大小+页内偏移=7×400H+3CAH=1FCAH。",
+      "CLOCK 指针从 2 号页框开始，访问位为 1 的页框依次清零并继续前进；第一轮将 2、4、7、9 号页框访问位清零，第二轮淘汰指针回到的 2 号页框。",
+      "新页 5 装入 2 号页框，物理地址=2×400H+3CAH=0BCAH。"
+    ]
   },
   "2010-46-逻辑地址拆分页号与页框号": {
     "year": 2010,
@@ -6228,7 +6547,16 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "134=86H=10000110B；246=F6H=11110110B，因此 R1=86H。",
+      "无符号减法 x-y：86H-F6H 等价于 86H+0AH=90H，低 8 位结果为 R5=90H。",
+      "无符号加法 x+y：86H+F6H=17CH，截取低 8 位得 R6=7CH。",
+      "将 86H 按 8 位补码解释为 -122；m=-122，n=F6H 按补码解释为 -10；k1=-122-(-10)=-112，结果 90H，范围内。",
+      "k2=-122+(-10)=-132，超出 8 位有符号数范围 [-128,127]，发生溢出。",
+      "加法器通过对减数按位取反并令最低位进位输入为 1 实现减法；补码有符号与无符号运算共享模 2^8 加法硬件。溢出判断需结合符号位/最高位与次高位进位，而无符号溢出看最高位进位。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2011-44::TLB 与多级页表联合转换": {
     "year": 2011,
@@ -6247,7 +6575,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "16MB=2^24B，所以虚拟地址 24 位；4KB=2^12B，页内偏移 12 位，虚页号 12 位。1MB=2^20B，物理地址 20 位，页框号 8 位。",
+      "Cache 块 32B=2^5B，块内偏移 5 位；8 行需要 3 位行号；Tag=20-5-3=12 位。",
+      "VA 001C60H 的 VPN=001H、页内偏移=C60H。页表项 001H 有效且 PFN=04H，故 PA=04C60H。",
+      "PA 04C60H 的 Cache 行号为 (04C60H>>5)&7=3；Tag=04C60H>>8=04CH。Cache 第 3 行有效但存储 Tag=105H，与 04CH 不同，因此不命中。",
+      "VA 024BACH 的 VPN=024H。8 项、4 路组相联的 TLB 有 2 组，最低 1 位 VPN 作为组号，剩余 11 位为 Tag。VPN 024H 的组号为 0、Tag=012H；组 0 存在有效 Tag=012H 项，TLB 命中，表示页面驻留主存。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2011-44::Cache 直接映射与组相联": {
     "year": 2011,
@@ -6266,7 +6602,15 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "16MB=2^24B，所以虚拟地址 24 位；4KB=2^12B，页内偏移 12 位，虚页号 12 位。1MB=2^20B，物理地址 20 位，页框号 8 位。",
+      "Cache 块 32B=2^5B，块内偏移 5 位；8 行需要 3 位行号；Tag=20-5-3=12 位。",
+      "VA 001C60H 的 VPN=001H、页内偏移=C60H。页表项 001H 有效且 PFN=04H，故 PA=04C60H。",
+      "PA 04C60H 的 Cache 行号为 (04C60H>>5)&7=3；Tag=04C60H>>8=04CH。Cache 第 3 行有效但存储 Tag=105H，与 04CH 不同，因此不命中。",
+      "VA 024BACH 的 VPN=024H。8 项、4 路组相联的 TLB 有 2 组，最低 1 位 VPN 作为组号，剩余 11 位为 Tag。VPN 024H 的组号为 0、Tag=012H；组 0 存在有效 Tag=012H 项，TLB 命中，表示页面驻留主存。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2012-41::多路归并与双指针": {
     "year": 2012,
@@ -6326,7 +6670,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "x=-513 的 16 位补码为 FDFFH。原解析按保留符号位的右移得到 FEFFH；由于题目指令格式表在 OCR 文本中缺失，SHR 的具体移位语义需以原卷指令定义为准，不能仅凭助记符断言。",
+      "五段流水线无阻塞时，首条指令 5 周期完成，之后每周期完成一条；4 条指令共 5+(4-1)=8 周期。",
+      "无转发且寄存器同周期不能读写，I3 的 ID 必须等待 I1、I2 的结果写回；按序发射使后续 I4 不能越过停滞的 I3，因此 IF 也被阻塞。",
+      "赋值 x=x*2+a 可用 LOAD x、LOAD a、SHL x（或 ADD x,x）、ADD x,a、STORE x 五条指令；原题流水线图及寄存器依赖时序未被完整 OCR，原解析给出最少 17 周期，需对照原卷图表完成最终周期表复核。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2012-44::移位运算与舍入": {
     "year": 2012,
@@ -6344,7 +6695,14 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "x=-513 的 16 位补码为 FDFFH。原解析按保留符号位的右移得到 FEFFH；由于题目指令格式表在 OCR 文本中缺失，SHR 的具体移位语义需以原卷指令定义为准，不能仅凭助记符断言。",
+      "五段流水线无阻塞时，首条指令 5 周期完成，之后每周期完成一条；4 条指令共 5+(4-1)=8 周期。",
+      "无转发且寄存器同周期不能读写，I3 的 ID 必须等待 I1、I2 的结果写回；按序发射使后续 I4 不能越过停滞的 I3，因此 IF 也被阻塞。",
+      "赋值 x=x*2+a 可用 LOAD x、LOAD a、SHL x（或 ADD x,x）、ADD x,a、STORE x 五条指令；原题流水线图及寄存器依赖时序未被完整 OCR，原解析给出最少 17 周期，需对照原卷图表完成最终周期表复核。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2012-46::文件物理分配方式": {
     "year": 2012,
@@ -6475,7 +6833,16 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "目标地址公式为 PC+2+2×OFFSET，PC 每条 16 位指令递增 2 字节，因此存储器按字节编址。",
+      "OFFSET=E3H，按 8 位补码解释为 -29；符号扩展后左移 1 位得到 FFC6H（即 -58）。",
+      "条件检测位 C=0、Z=1、N=1，表示检测 ZF 或 NF，任一被检测标志为 1 即转移。CF=0、ZF=0、NF=1 时转移：200CH+2+FFC6H=1FD4H。",
+      "CF=1、ZF=0、NF=0 时，被检测的 ZF、NF 均为 0，因此不转移，PC=200CH+2=200EH。",
+      "无符号数比较小于等于等价于 CF=1 或 ZF=1，因此 C=1、Z=1；不需要检测符号标志，N=0。",
+      "数据通路部件按公开答案对应为 IR、移位寄存器、加法器。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2013-44::ALU 标志位 CF 与 OF": {
     "year": 2013,
@@ -6495,7 +6862,16 @@ window.CARD_QUESTION_MAP = {
     "audit": {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
-    }
+    },
+    "steps": [
+      "目标地址公式为 PC+2+2×OFFSET，PC 每条 16 位指令递增 2 字节，因此存储器按字节编址。",
+      "OFFSET=E3H，按 8 位补码解释为 -29；符号扩展后左移 1 位得到 FFC6H（即 -58）。",
+      "条件检测位 C=0、Z=1、N=1，表示检测 ZF 或 NF，任一被检测标志为 1 即转移。CF=0、ZF=0、NF=1 时转移：200CH+2+FFC6H=1FD4H。",
+      "CF=1、ZF=0、NF=0 时，被检测的 ZF、NF 均为 0，因此不转移，PC=200CH+2=200EH。",
+      "无符号数比较小于等于等价于 CF=1 或 ZF=1，因此 C=1、Z=1；不需要检测符号标志，N=0。",
+      "数据通路部件按公开答案对应为 IR、移位寄存器、加法器。"
+    ],
+    "stepsSource": "verified-solutions.json"
   },
   "verified-answer-2013-45::进程同步与信号量": {
     "year": 2013,
@@ -6573,6 +6949,2752 @@ window.CARD_QUESTION_MAP = {
       "status": "answer-verified-question-source-pending",
       "note": "已依据正式答案库的解题步骤建立知识卡关联；当前公开题库未提供该题完整原始题干，因此不以推测文本代替原题。"
     }
+  },
+  "2024-CO-12-int转short再符号扩展": {
+    "year": 2024,
+    "index": 12,
+    "id": 202412,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】C代码：int i=32777; short si=i; int j=si; 问执行后 j 的值。选项：A −32777；B −32759；C 32759；D 32777。",
+    "answer": "B（−32759）",
+    "analysis": "32777=0x8009。赋给16位short时保留低16位0x8009，按16位补码解释为负数：0x8009−0x10000=−32759。再赋给32位int时进行符号扩展，数值仍为−32759。",
+    "steps": [
+      "32777的十六进制为0x8009。",
+      "short保留低16位，符号位为1，故其值为−(0x10000−0x8009)=−32759。",
+      "short提升为int时符号扩展，j仍为−32759。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "32777的十六进制为0x8009。",
+      "short保留低16位，符号位为1，故其值为−(0x10000−0x8009)=−32759。",
+      "short提升为int时符号扩展，j仍为−32759。"
+    ],
+    "relatedCards": [
+      "数据表示与补码",
+      "定点补码加减与溢出"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
+    "sourcePage": 2,
+    "answerSource": "https://csgraduates.com/study_methods/408quiz/2024/",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2024-CO-13-伪指令微指令机器指令": {
+    "year": 2024,
+    "index": 13,
+    "id": 202413,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】将汇编程序中实现特定功能的一组指令序列定义为伪指令。判断CPU能理解并直接执行的类别：Ⅰ伪指令；Ⅱ微指令；Ⅲ机器指令；Ⅳ汇编指令。选项A仅Ⅰ、Ⅳ；B仅Ⅱ、Ⅲ；C仅Ⅲ、Ⅳ；D仅Ⅰ、Ⅲ、Ⅳ。",
+    "answer": "B（仅Ⅱ、Ⅲ）",
+    "analysis": "机器指令是ISA层面CPU执行的指令；微指令是微程序控制器内部控制存储器输出的硬件控制命令。汇编指令需汇编成机器指令，伪指令由汇编器处理，不由CPU直接执行。",
+    "steps": [
+      "区分软件翻译层与硬件执行层。",
+      "伪指令由汇编器处理，汇编指令经汇编后才成为机器码。",
+      "机器指令由CPU取指译码执行；微指令驱动数据通路控制信号，故选Ⅱ、Ⅲ。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "区分软件翻译层与硬件执行层。",
+      "伪指令由汇编器处理，汇编指令经汇编后才成为机器码。",
+      "机器指令由CPU取指译码执行；微指令驱动数据通路控制信号，故选Ⅱ、Ⅲ。"
+    ],
+    "relatedCards": [
+      "硬布线控制器与微程序控制器",
+      "指令系统与寻址方式"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
+    "sourcePage": 2,
+    "answerSource": "https://csgraduates.com/study_methods/408quiz/2024/",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2024-CO-14-整数参数数据表示选择": {
+    "year": 2024,
+    "index": 14,
+    "id": 202414,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】整数参数α、β范围分别约为−2^20至2^20、−2^40至2^40；要求兼顾表示精度与运算速度，选择表示方法。选项：A 32位整数/32位整数；B 单精度/单精度；C 32位整数/双精度；D 单精度/双精度。",
+    "answer": "C（32位整数、双精度浮点数）",
+    "analysis": "α的绝对值不超过2^20，32位有符号整数范围足够且整数运算精确、通常更快。β达到2^40，超出32位有符号整数范围；单精度只有24位有效精度，不能保证该范围内整数均精确，双精度有53位有效精度，可精确表示该范围内整数。",
+    "steps": [
+      "比较表示范围与有效精度，不能只看浮点数的指数范围。",
+      "32位补码范围为−2^31至2^31−1，覆盖α。",
+      "单精度有效精度24位，无法覆盖β的全部整数精度；双精度53位有效精度足够，选C。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "比较表示范围与有效精度，不能只看浮点数的指数范围。",
+      "32位补码范围为−2^31至2^31−1，覆盖α。",
+      "单精度有效精度24位，无法覆盖β的全部整数精度；双精度53位有效精度足够，选C。"
+    ],
+    "relatedCards": [
+      "数据表示与补码",
+      "浮点数表示与规格化",
+      "IEEE 754 单精度字段"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
+    "sourcePage": 2,
+    "answerSource": "https://csgraduates.com/study_methods/408quiz/2024/",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2024-CO-15-整数乘法实现方式": {
+    "year": 2024,
+    "index": 15,
+    "id": 202415,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】判断整数乘法实现叙述中错误的一项：A 阵列乘法器可单周期完成；B 用ALU和移位器实现的乘法不能单周期完成；C 变量乘常数可优化为移位与加减；D 两个变量相乘无法用移位和加法循环实现。",
+    "answer": "D",
+    "analysis": "移位加法乘法可以通过循环检查乘数各位，按位累加被乘数并移位，从而实现两个变量相乘。故“无法循环实现”错误。阵列乘法器可并行组合实现，代价是硬件面积；基于ALU的串行乘法通常需要多个周期。",
+    "steps": [
+      "识别阵列乘法器与串行移位加法乘法器的差别。",
+      "常数乘法可做编译优化，例如10x=(x<<3)+(x<<1)。",
+      "变量乘法也可用逐位移位、条件累加循环实现，D错误。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "识别阵列乘法器与串行移位加法乘法器的差别。",
+      "常数乘法可做编译优化，例如10x=(x<<3)+(x<<1)。",
+      "变量乘法也可用逐位移位、条件累加循环实现，D错误。"
+    ],
+    "relatedCards": [
+      "移位加法乘法与阵列乘法器",
+      "ALU 算术逻辑单元"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
+    "sourcePage": 2,
+    "answerSource": "https://csgraduates.com/study_methods/408quiz/2024/",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2024-CO-16-存储层次映射与写策略": {
+    "year": 2024,
+    "index": 16,
+    "id": 202416,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】页式虚拟存储系统中，判断存储层次叙述错误项：A Cache—主存交换单位为块、主存—外存为页；B Cache替换硬件实现、主存—外存替换软件实现；C Cache可用回写法、主存—外存通常回写；D Cache—主存可直接映射、主存—外存通常直接映射。",
+    "answer": "D",
+    "analysis": "主存—外存层次采用页式虚拟存储映射，由页表把虚拟页映射到物理页框，不是Cache式直接映射。A、B、C描述了两个层次在交换单位、替换实现和写策略上的典型区别。",
+    "steps": [
+      "先区分Cache—主存与主存—外存两个层次。",
+      "Cache按块交换，主存与外存按页交换。",
+      "Cache映射可直接映射/组相联/全相联；虚拟页由页表映射到页框，D错误。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "先区分Cache—主存与主存—外存两个层次。",
+      "Cache按块交换，主存与外存按页交换。",
+      "Cache映射可直接映射/组相联/全相联；虚拟页由页表映射到页框，D错误。"
+    ],
+    "relatedCards": [
+      "存储器层次与主存组织",
+      "Cache 映射与命中率",
+      "虚拟内存与页面置换",
+      "Cache 替换与写策略",
+      "主存与辅存层次结构"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
+    "sourcePage": 3,
+    "answerSource": "https://csgraduates.com/study_methods/408quiz/2024/",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2024-CO-17-TLB标记字段位数": {
+    "year": 2024,
+    "index": 17,
+    "id": 202417,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】虚拟地址32位、主存地址30位、页大小1KB；TLB共32项、4路组相联，求TLB标记字段至少位数。选项17、18、19、20位。",
+    "answer": "C（19位）",
+    "analysis": "页内偏移为log2(1KB)=10位，虚拟页号VPN=32−10=22位。TLB有32项、4路，组数=32/4=8，组索引=log2(8)=3位。Tag=22−3=19位。",
+    "steps": [
+      "页内偏移=10位，VPN=22位。",
+      "TLB组数=32/4=8，组索引=3位。",
+      "Tag=VPN−组索引=22−3=19位，选C。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "页内偏移=10位，VPN=22位。",
+      "TLB组数=32/4=8，组索引=3位。",
+      "Tag=VPN−组索引=22−3=19位，选C。"
+    ],
+    "relatedCards": [
+      "TLB 与快表命中",
+      "TLB 组相联映射与 LRU 替换",
+      "虚拟地址分页与页内偏移",
+      "TLB 与多级页表联合转换"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
+    "sourcePage": 3,
+    "answerSource": "https://csgraduates.com/study_methods/408quiz/2024/",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2024-CO-18-MMU地址转换检测事件": {
+    "year": 2024,
+    "index": 18,
+    "id": 202418,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】判断哪一事件不是在MMU地址转换过程中检测：A访问越权；B Cache缺失；C页面缺失；DTLB缺失。",
+    "answer": "B",
+    "analysis": "MMU地址转换阶段负责TLB查找、页表查找、权限检查及缺页检测。Cache查找发生在得到物理地址之后，Cache缺失不属于MMU地址转换事件。",
+    "steps": [
+      "按执行顺序区分地址翻译与Cache访问。",
+      "先完成虚拟地址到物理地址的翻译及权限检查。",
+      "物理地址形成后再访问Cache，故Cache缺失不由MMU地址翻译检测，选B。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "按执行顺序区分地址翻译与Cache访问。",
+      "先完成虚拟地址到物理地址的翻译及权限检查。",
+      "物理地址形成后再访问Cache，故Cache缺失不由MMU地址翻译检测，选B。"
+    ],
+    "relatedCards": [
+      "虚拟内存与页面置换",
+      "TLB 与快表命中",
+      "Cache 映射与命中率"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
+    "sourcePage": 3,
+    "answerSource": "https://csgraduates.com/study_methods/408quiz/2024/",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2024-CO-19-五段流水线数据冒险": {
+    "year": 2024,
+    "index": 19,
+    "id": 202419,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】五段RISC流水线（取指、译码/取数、执行、访存、写回），判断数据冒险处理叙述错误项：A相邻指令操作数相关可能引起冒险；B插入气泡可避免冒险；C所有数据冒险都可由转发解决；D调整指令顺序或插入nop可避免相关冒险。",
+    "answer": "C",
+    "analysis": "转发不能消除所有数据冒险。例如Load-use冒险中，load结果到MEM阶段末才可用，而紧随其后的指令在EX阶段就需要该操作数，即使有旁路也可能需要停顿一个周期。插入气泡或调度指令可解决。",
+    "steps": [
+      "识别RAW相关以及数据生产者结果何时可用。",
+      "算术指令结果可经EX/MEM等旁路；Load数据通常在MEM后才就绪。",
+      "Load-use紧邻依赖仍可能需要停顿，故“所有冒险均可转发解决”错误，选C。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "识别RAW相关以及数据生产者结果何时可用。",
+      "算术指令结果可经EX/MEM等旁路；Load数据通常在MEM后才就绪。",
+      "Load-use紧邻依赖仍可能需要停顿，故“所有冒险均可转发解决”错误，选C。"
+    ],
+    "relatedCards": [
+      "流水线与冒险",
+      "流水线结构冒险与数据冒险",
+      "流水线吞吐率与加速比"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
+    "sourcePage": 3,
+    "answerSource": "https://csgraduates.com/study_methods/408quiz/2024/",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2024-CO-20-存储器总线峰值带宽": {
+    "year": 2024,
+    "index": 20,
+    "id": 202420,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】总线时钟420MHz、宽度64位、每时钟周期传2次数据；支持突发，事务含地址阶段及数据阶段。问最大数据传输率。选项3.84、6.72、30.72、53.76（GB/s或Gb/s按选项标注）。",
+    "answer": "B（6.72 GB/s）",
+    "analysis": "题目问最大数据传输率，按数据总线峰值计算：420×10^6周期/s×2次/周期×64bit/次÷8=6.72×10^9B/s=6.72GB/s。3.84GB/s是按题设事务时序计入地址/命令开销后的持续事务带宽，不是题目所问的峰值。",
+    "steps": [
+      "将总线宽度64bit换算为8B。",
+      "每秒传输次数=420MHz×2=840M次/s。",
+      "峰值带宽=840M×8B=6.72GB/s；区分峰值与事务平均带宽。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "将总线宽度64bit换算为8B。",
+      "每秒传输次数=420MHz×2=840M次/s。",
+      "峰值带宽=840M×8B=6.72GB/s；区分峰值与事务平均带宽。"
+    ],
+    "relatedCards": [
+      "总线与总线事务",
+      "总线带宽与突发传输"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
+    "sourcePage": 3,
+    "answerSource": "https://csgraduates.com/study_methods/408quiz/2024/",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2024-CO-21-中断屏蔽字与响应优先级": {
+    "year": 2024,
+    "index": 21,
+    "id": 202421,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】中断I/O叙述中错误项：A中断屏蔽字确定中断响应优先级；B断点和PSW在中断响应阶段保存；C通用寄存器保存及新屏蔽字设置由软件实现；D单重中断处理期间CPU处于关中断状态。",
+    "answer": "A",
+    "analysis": "中断屏蔽字控制各级中断请求是否允许进入，不等同于中断优先级编码。响应优先级由中断优先级/判优逻辑决定。断点和PSW通常由硬件在响应阶段保存，通用寄存器现场保护及屏蔽字调整通常由服务程序完成。",
+    "steps": [
+      "区分中断优先级与中断屏蔽。",
+      "屏蔽字决定请求能否被屏蔽，优先级决定多个可响应请求的先后。",
+      "因此A错误，选A。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "区分中断优先级与中断屏蔽。",
+      "屏蔽字决定请求能否被屏蔽，优先级决定多个可响应请求的先后。",
+      "因此A错误，选A。"
+    ],
+    "relatedCards": [
+      "中断与 DMA",
+      "中断屏蔽与优先级",
+      "中断响应与异常处理"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
+    "sourcePage": 3,
+    "answerSource": "https://csgraduates.com/study_methods/408quiz/2024/",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2024-CO-22-DMA数据传输通路": {
+    "year": 2024,
+    "index": 22,
+    "id": 202422,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】DMA控制I/O方式下，设备输入/输出由DMA控制器控制，问数据传输通路位于何处：A CPU与主存；B CPU与DMA控制器；C设备接口与主存；D设备接口与DMA控制器。",
+    "answer": "C",
+    "analysis": "DMA的核心是设备与主存之间直接传送数据，CPU负责初始化DMA控制器并在传输完成后处理中断；数据通路不经过CPU寄存器。",
+    "steps": [
+      "DMA开始前CPU设置内存起始地址、传输字节数和方向。",
+      "传输期间DMA控制器取得总线控制权。",
+      "数据在设备接口与主存之间传送，选C。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "DMA开始前CPU设置内存起始地址、传输字节数和方向。",
+      "传输期间DMA控制器取得总线控制权。",
+      "数据在设备接口与主存之间传送，选C。"
+    ],
+    "relatedCards": [
+      "DMA 工作过程与总线占用",
+      "中断与 DMA",
+      "DMA 周期挪用与总线仲裁"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
+    "sourcePage": 3,
+    "answerSource": "https://csgraduates.com/study_methods/408quiz/2024/",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2024-CO-43-add-slli-lw指令格式与ALU数据通路": {
+    "year": 2024,
+    "index": 43,
+    "id": 202443,
+    "typeName": "应用题",
+    "score": 13,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】32位字长、按字节编址、32位定长指令，给出add、slli、lw三种指令格式及部分ALU数据通路。分问：寄存器数和shamt位数；add的ALUBsrc、F/OF/CF及无符号溢出标志；slli的Ext；lw的Ext/ALUctr；解码A040A103H并计算R[01H]=FFFFA2D0H时有效地址。",
+    "answer": "(1) 32个通用寄存器，shamt为5位。(2) ALUBsrc=0；F=1FDB9753H；OF=1；CF=1；无符号溢出看CF。(3) Ext=0或1均可。(4) lw：Ext=1、ALUctr=000。(5) opcode=0000011，确定为lw；有效地址FFFF9CD4H。",
+    "analysis": "rs1、rs2、rd字段各5位，寄存器编号数为2^5=32；32位数据逻辑左移位数为0~31，故shamt需5位。add第二操作数来自寄存器B，ALUBsrc=0。0x87654321+0x98765432=0x11FDB9753，32位结果低32位F=0x1FDB9753；两个有符号负数相加得到正数，OF=1；无符号和产生第33位进位，CF=1。slli的IR[31:20]高位为0，零扩展/符号扩展结果相同。lw偏移量为12位补码，需符号扩展并用加法计算有效地址。A040A103H的opcode低7位为03H，imm= A04H，作为12位补码为−1532=FFFFFA04H；FFFFA2D0H−5FCH=FFFF9CD4H。",
+    "steps": [
+      "rs1/rs2/rd字段5位→32个寄存器；32位字内移位量0~31→shamt 5位。",
+      "ALUBsrc选择寄存器B；32位加法结果保留低32位1FDB9753H，进位CF=1。",
+      "有符号操作数均为负，结果为正，故OF=1；无符号溢出看CF。",
+      "slli的12位立即数字段高7位恒为0，零扩展和符号扩展相同。",
+      "lw使用12位有符号偏移，Ext=1、ALUctr=000。",
+      "A040A103H低7位opcode=0000011，imm=A04H符号扩展为FFFFFA04H，有效地址=FFFFA2D0H+FFFFFA04H=FFFF9CD4H。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "rs1/rs2/rd字段5位→32个寄存器；32位字内移位量0~31→shamt 5位。",
+      "ALUBsrc选择寄存器B；32位加法结果保留低32位1FDB9753H，进位CF=1。",
+      "有符号操作数均为负，结果为正，故OF=1；无符号溢出看CF。",
+      "slli的12位立即数字段高7位恒为0，零扩展和符号扩展相同。",
+      "lw使用12位有符号偏移，Ext=1、ALUctr=000。",
+      "A040A103H低7位opcode=0000011，imm=A04H符号扩展为FFFFFA04H，有效地址=FFFFA2D0H+FFFFFA04H=FFFF9CD4H。"
+    ],
+    "relatedCards": [
+      "指令系统与寻址方式",
+      "单周期与多周期数据通路",
+      "数据表示与补码",
+      "定点补码加减与溢出",
+      "RISC-V 指令格式与寄存器编码",
+      "ALU 算术逻辑单元",
+      "ALU 标志位 CF 与 OF",
+      "立即数扩展与移位指令",
+      "指令译码与有效地址计算"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
+    "sourcePage": 9,
+    "answerSource": "https://csgraduates.com/study_methods/408quiz/2024/",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2024-CO-44-数组寻址小端存储与分页": {
+    "year": 2024,
+    "index": 44,
+    "id": 202444,
+    "typeName": "应用题",
+    "score": 10,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】对sum+=a[i]，给出机器指令：slli r4,r2,2；add r4,r3,r4；lw r5,0(r4)；add r1,r1,r5。i、sum、a均为int，寄存器编号01H~05H。给出i=5、r1=00001332H、r3=0013DFF0H及内存字节表，要求确定变量寄存器、a[5]地址/数值、sum结果、页号及数组跨页数；另求slli机器码及short数组时的汇编。",
+    "answer": "(1) a首地址R3，i在R2，sum在R1。(2) a[5]地址0013E004H；小端读取a[5]=FFFFECDCH；sum更新为0000000EH；a[5]所在页号为0013EH；数组至少跨2页。(3) slli r4,r2,2机器码00212213H；short数组元素宽2B，改为slli r4,r2,1。",
+    "analysis": "数组元素地址=基址+下标×元素宽度。R2提供i，左移2位乘4；R3为数组基址；R1为累加变量sum。i=5时地址=0013DFF0H+20=0013E004H。该地址的4个字节按小端顺序为DC、EC、FF、FF，组成机器数FFFFECDCH（有符号值−4660）。sum=00001332H+FFFFECDCH=0000000EH（32位结果）。4KB页边界在0013E000H，a从0013DFF0H开始，a[5]已位于下一页，因此数组至少涉及页0013DH和0013EH，共2页。slli字段shamt=2、rs1=2、funct3=010、rd=4、opcode=0010011，编码为00212213H；short每元素2B，移位量改为1，编码00112213H。",
+    "steps": [
+      "从指令序列反推寄存器用途：R2=i，R3=a首地址，R1=sum，R4临时地址，R5加载元素。",
+      "a[5]地址=0013DFF0H+5×4=0013E004H。",
+      "读取0013E004H至0013E007H：DC EC FF FF；小端机器数为FFFFECDCH。",
+      "sum=00001332H+FFFFECDCH=0000000EH（32位回绕）。",
+      "4KB页边界为0013E000H，基址在0013D页，a[5]在0013E页，至少2页。",
+      "slli编码字段：shamt=2、rs1=2、funct3=010、rd=4、opcode=0010011，得到00212213H；short乘2改为左移1位。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "从指令序列反推寄存器用途：R2=i，R3=a首地址，R1=sum，R4临时地址，R5加载元素。",
+      "a[5]地址=0013DFF0H+5×4=0013E004H。",
+      "读取0013E004H至0013E007H：DC EC FF FF；小端机器数为FFFFECDCH。",
+      "sum=00001332H+FFFFECDCH=0000000EH（32位回绕）。",
+      "4KB页边界为0013E000H，基址在0013D页，a[5]在0013E页，至少2页。",
+      "slli编码字段：shamt=2、rs1=2、funct3=010、rd=4、opcode=0010011，得到00212213H；short乘2改为左移1位。"
+    ],
+    "relatedCards": [
+      "指令系统与寻址方式",
+      "大小端存储",
+      "数组下标寻址与元素宽度",
+      "虚拟地址分页与页内偏移",
+      "小端字节序与补码读取",
+      "RISC-V 指令格式与寄存器编码"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
+    "sourcePage": 10,
+    "answerSource": "https://csgraduates.com/study_methods/408quiz/2024/",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2025-CO-12-short转unsigned int": {
+    "year": 2025,
+    "index": 12,
+    "id": 202512,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】32位机器执行：short si=−32767; unsigned int ui=si; 求ui的真值。选项含2^32−2^15+1。",
+    "answer": "D（2^32−2^15+1）",
+    "analysis": "−32767先提升为int，随后转换为unsigned int按模2^32转换：ui=2^32−32767=2^32−2^15+1。16位short补码为0x8001，符号扩展到32位为0xFFFF8001。",
+    "steps": [
+      "−32767的16位补码为8001H。",
+      "提升到int后符号扩展为FFFF8001H。",
+      "转unsigned int按模2^32，结果为2^32−32767=2^32−2^15+1，选D。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "−32767的16位补码为8001H。",
+      "提升到int后符号扩展为FFFF8001H。",
+      "转unsigned int按模2^32，结果为2^32−32767=2^32−2^15+1，选D。"
+    ],
+    "relatedCards": [
+      "数据表示与补码",
+      "定点补码加减与溢出"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
+    "sourcePage": 2,
+    "answerSource": "https://zhenti.beokayy.club/paper/2025",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2025-CO-13-IEEE754机器数译码": {
+    "year": 2025,
+    "index": 13,
+    "id": 202513,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】IEEE 754单精度float机器数为47300000H，求其数值。选项：A 0.375×2^14；B 1.375×2^14；C 0.375×2^15；D 1.375×2^15。",
+    "answer": "D（1.375×2^15）",
+    "analysis": "47300000H的符号位为0；阶码字段10001110B=142，真实指数142−127=15；尾数字段为011…，有效数为1.011B=1.375。因此x=1.375×2^15。",
+    "steps": [
+      "将47300000H写为二进制字段：0 | 10001110 | 011000… 。",
+      "符号位0，阶码142，减偏置127得指数15。",
+      "隐藏位1加尾数字段011，得到1.011₂=1.375。",
+      "结果为1.375×2^15，选D。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "将47300000H写为二进制字段：0 | 10001110 | 011000… 。",
+      "符号位0，阶码142，减偏置127得指数15。",
+      "隐藏位1加尾数字段011，得到1.011₂=1.375。",
+      "结果为1.375×2^15，选D。"
+    ],
+    "relatedCards": [
+      "浮点数表示与规格化",
+      "IEEE 754 单精度字段"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
+    "sourcePage": 2,
+    "answerSource": "https://zhenti.beokayy.club/paper/2025",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2025-CO-14-补码减法与溢出标志": {
+    "year": 2025,
+    "index": 14,
+    "id": 202514,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】8位字长，带符号数补码[x]=A3H、[y]=75H，求x−y的8位结果及OF。选项A 24,0；B 24,1；C 46,0；D 46,1。",
+    "answer": "D（46，1）",
+    "analysis": "A3H作为8位补码为−93，75H为+117。x−y=−210，超出8位补码范围[−128,127]，故OF=1。截取低8位：−210 mod 256=46=2EH。",
+    "steps": [
+      "A3H=163−256=−93；75H=117。",
+      "x−y=−93−117=−210，超出8位补码范围。",
+      "结果低8位为0x2E=46，OF=1，选D。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "A3H=163−256=−93；75H=117。",
+      "x−y=−93−117=−210，超出8位补码范围。",
+      "结果低8位为0x2E=46，OF=1，选D。"
+    ],
+    "relatedCards": [
+      "数据表示与补码",
+      "定点补码加减与溢出",
+      "整数溢出检测与异常处理"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
+    "sourcePage": 2,
+    "answerSource": "https://zhenti.beokayy.club/paper/2025",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2025-CO-15-结构体对齐与小端字节序": {
+    "year": 2025,
+    "index": 15,
+    "id": 202515,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】32位按字节编址、小端存储，struct record含int id、char name[10]、int salary，数组employee从0000A0B0H开始，employee[1].id机器数为12345678H，问字节56H存放地址。选项A A0C3H；B A0C4H；C A0C5H；D A0C6H。",
+    "answer": "C（0000A0C5H）",
+    "analysis": "结构体按4字节边界对齐：id占4B，name占10B，之后填充2B，salary占4B，结构体大小20B。employee[1]起始地址=A0B0H+20=A0C4H。小端存储低位字节78H位于A0C4H，56H位于A0C5H。",
+    "steps": [
+      "结构体字段布局：id 0~3，name 4~13，填充14~15，salary 16~19。",
+      "sizeof(record)=20B，employee[1]地址=A0B0H+20=A0C4H。",
+      "12345678H小端字节序为78、56、34、12，56H位于A0C5H，选C。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "结构体字段布局：id 0~3，name 4~13，填充14~15，salary 16~19。",
+      "sizeof(record)=20B，employee[1]地址=A0B0H+20=A0C4H。",
+      "12345678H小端字节序为78、56、34、12，56H位于A0C5H，选C。"
+    ],
+    "relatedCards": [
+      "大小端存储",
+      "小端字节序与补码读取",
+      "数组下标寻址与元素宽度"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
+    "sourcePage": 2,
+    "answerSource": "https://zhenti.beokayy.club/paper/2025",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2025-CO-16-ISA规定的指令属性": {
+    "year": 2025,
+    "index": 16,
+    "id": 202516,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】判断由指令集体系结构ISA规定的项目：A是否采用阵列乘法器；B是否采用定长指令字；C是否采用微程序控制器；D是否采用单总线数据通路。",
+    "answer": "B",
+    "analysis": "ISA规定软件可见的指令集合、指令格式、寻址方式、寄存器和异常模型等。阵列乘法器、微程序控制器和单总线数据通路属于微体系结构实现选择；指令字是否定长属于指令编码格式，属于ISA。",
+    "steps": [
+      "判断是否为软件可见的体系结构属性。",
+      "指令格式/编码长度由ISA规定。",
+      "乘法器结构、控制器实现和内部总线属于微架构，选B。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "判断是否为软件可见的体系结构属性。",
+      "指令格式/编码长度由ISA规定。",
+      "乘法器结构、控制器实现和内部总线属于微架构，选B。"
+    ],
+    "relatedCards": [
+      "指令系统与寻址方式",
+      "硬布线控制器与微程序控制器",
+      "单周期与多周期数据通路"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
+    "sourcePage": 3,
+    "answerSource": "https://zhenti.beokayy.club/paper/2025",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2025-CO-17-RISC特征辨析": {
+    "year": 2025,
+    "index": 17,
+    "id": 202517,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】RISC叙述中错误项：A多采用硬连线控制器；B通常采用Load/Store指令风格；C难以采用流水线数据通路；D多用寄存器传递过程调用参数。",
+    "answer": "C",
+    "analysis": "RISC指令格式规整、寻址方式较少、Load/Store分离，利于译码和流水线实现。故“难以采用流水线”与RISC设计目标相反。",
+    "steps": [
+      "RISC强调简单、规整、易流水化的指令。",
+      "Load/Store型设计使访存指令与ALU指令分离。",
+      "流水线是RISC常见实现方式，C错误。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "RISC强调简单、规整、易流水化的指令。",
+      "Load/Store型设计使访存指令与ALU指令分离。",
+      "流水线是RISC常见实现方式，C错误。"
+    ],
+    "relatedCards": [
+      "指令系统与寻址方式",
+      "流水线与冒险",
+      "硬布线控制器与微程序控制器"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
+    "sourcePage": 3,
+    "answerSource": "https://zhenti.beokayy.club/paper/2025",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2025-CO-18-CPI与Cache缺失率": {
+    "year": 2025,
+    "index": 18,
+    "id": 202518,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】关于CPI和CPU时钟周期，错误项：A不同类型指令CPI可能不同；B程序CPI与Cache缺失率无关；C单周期CPU周期按最慢指令确定；D流水线CPU周期按最长流水段确定。",
+    "answer": "B",
+    "analysis": "Cache缺失会引入额外访存等待周期，增加程序平均CPI。其余三项符合CPI和时钟周期定义。",
+    "steps": [
+      "区分理想基础CPI与包含停顿/缺失开销的实际CPI。",
+      "Cache缺失代价会增加平均访存指令周期数，进而提高程序CPI。",
+      "单周期CPU周期需覆盖最慢指令；流水线周期需覆盖最长阶段，选B。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "区分理想基础CPI与包含停顿/缺失开销的实际CPI。",
+      "Cache缺失代价会增加平均访存指令周期数，进而提高程序CPI。",
+      "单周期CPU周期需覆盖最慢指令；流水线周期需覆盖最长阶段，选B。"
+    ],
+    "relatedCards": [
+      "计算机性能指标 CPI 与 CPU 时间",
+      "Cache平均访问时间与缺失损失",
+      "流水线与冒险"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
+    "sourcePage": 3,
+    "answerSource": "https://zhenti.beokayy.club/paper/2025",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2025-CO-19-CPU数据通路与PC": {
+    "year": 2025,
+    "index": 19,
+    "id": 202519,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】CPU数据通路和控制器叙述中错误项：A通用寄存器组应包含PC；B控制器含操作码译码；C单周期控制器比多周期控制器简单；D流水线需处理数据与控制冒险。",
+    "answer": "A",
+    "analysis": "PC是保存下一条指令地址的专用程序计数器，通常不属于通用寄存器组。控制器需译码指令；单周期控制器控制状态较简单；流水线必须处理数据和控制冒险。",
+    "steps": [
+      "PC保存取指地址，是专用控制寄存器。",
+      "通用寄存器用于程序显式操作数，不把PC算作通用寄存器。",
+      "其余选项符合CPU组织特征，故A错误。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "PC保存取指地址，是专用控制寄存器。",
+      "通用寄存器用于程序显式操作数，不把PC算作通用寄存器。",
+      "其余选项符合CPU组织特征，故A错误。"
+    ],
+    "relatedCards": [
+      "CPU 指令执行过程",
+      "单周期与多周期数据通路",
+      "流水线与冒险"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
+    "sourcePage": 3,
+    "answerSource": "https://zhenti.beokayy.club/paper/2025",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2025-CO-20-quadpumped总线有效传输率": {
+    "year": 2025,
+    "index": 20,
+    "id": 202520,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】同步并行总线采用quadpumped技术，题目给出工作频率1333MHz（括注实际单位MT/s，即每秒1333M次传输），总线宽度64位，求带宽。选项10.66、42.66、85.31、341.25GB/s。",
+    "answer": "A（约10.66 GB/s）",
+    "analysis": "题干括号已明确1333MHz实际单位是MT/s，即1333×10^6次/秒的有效传输率，不能再乘4。每次传输64bit=8B，带宽=1333×10^6×8=10.664×10^9B/s≈10.66GB/s。只有给出物理时钟频率且每周期四次传输时才额外乘4。",
+    "steps": [
+      "抓住题干单位：1333 MT/s已经是每秒传输次数，而非物理时钟周期数。",
+      "每次传输64bit=8B。",
+      "带宽=1333M次/s×8B=10.664GB/s，选A；quad-pumped因素已体现在有效传输率单位中，不能重复乘4。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "抓住题干单位：1333 MT/s已经是每秒传输次数，而非物理时钟周期数。",
+      "每次传输64bit=8B。",
+      "带宽=1333M次/s×8B=10.664GB/s，选A；quad-pumped因素已体现在有效传输率单位中，不能重复乘4。"
+    ],
+    "relatedCards": [
+      "总线与总线事务",
+      "总线带宽与突发传输"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
+    "sourcePage": 3,
+    "answerSource": "https://zhenti.beokayy.club/paper/2025",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2025-CO-21-DMA适用设备": {
+    "year": 2025,
+    "index": 21,
+    "id": 202521,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】判断适合采用DMA输入输出的设备：Ⅰ键盘；Ⅱ网卡；Ⅲ固态硬盘；Ⅳ针式打印机。选项AⅠ、Ⅱ；BⅡ、Ⅲ；CⅡ、Ⅳ；DⅢ、Ⅳ。",
+    "answer": "B（Ⅱ、Ⅲ）",
+    "analysis": "网卡和固态硬盘进行高速、成块数据传输，适合DMA减少CPU逐字节搬运；键盘和针式打印机数据量小或交互性强，通常采用中断驱动/程序控制。",
+    "steps": [
+      "按数据量、传输连续性和吞吐需求区分I/O方式。",
+      "网卡和SSD适合成块DMA传输。",
+      "键盘和打印机通常以中断/程序控制方式处理，选B。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "按数据量、传输连续性和吞吐需求区分I/O方式。",
+      "网卡和SSD适合成块DMA传输。",
+      "键盘和打印机通常以中断/程序控制方式处理，选B。"
+    ],
+    "relatedCards": [
+      "DMA 工作过程与总线占用",
+      "中断与 DMA",
+      "DMA 周期挪用与总线仲裁"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
+    "sourcePage": 3,
+    "answerSource": "https://zhenti.beokayy.club/paper/2025",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2025-CO-22-外部中断请求事件": {
+    "year": 2025,
+    "index": 22,
+    "id": 202522,
+    "typeName": "选择题",
+    "score": 2,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】下列事件中会触发外部中断请求的是：A DMA传送结束；B总线事务结束；C页故障处理结束；D执行断点指令。",
+    "answer": "A",
+    "analysis": "DMA控制器完成一批数据传送后可向CPU发出外部中断请求。页故障和断点属于内部异常/陷阱；一般总线事务结束本身不必然产生外部中断。",
+    "steps": [
+      "区分外部设备中断与CPU内部异常。",
+      "DMA完成属于外设控制器发出的中断请求。",
+      "页故障、断点属于内部异常或陷阱，选A。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "区分外部设备中断与CPU内部异常。",
+      "DMA完成属于外设控制器发出的中断请求。",
+      "页故障、断点属于内部异常或陷阱，选A。"
+    ],
+    "relatedCards": [
+      "中断与 DMA",
+      "中断响应与异常处理",
+      "DMA 工作过程与总线占用"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
+    "sourcePage": 3,
+    "answerSource": "https://zhenti.beokayy.club/paper/2025",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2025-CO-43-Cache组相联索引命中率与缺页": {
+    "year": 2025,
+    "index": 43,
+    "id": 202543,
+    "typeName": "应用题",
+    "score": 12,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】32位按字节编址，数据Cache 32KB、8路组相联、块64B，命中时间2周期、缺失损失200周期；页式虚拟存储页4KB。int数组d[2048]起始虚拟地址01800020H，循环执行d[i]=d[i]/x。求组号/块内偏移字段及可用VA索引位；d[100]地址和组号；d[0]块内偏移、Cache缺失率、平均访问时间；数组页数和缺页次数。",
+    "answer": "(1) 组号6位，块内偏移6位；VA[11:6]可作Cache索引。(2) d[100]=018001B0H，组号6。(3) d[0]块内偏移20H；总访问4096次、涉及129个块、缺失129次，缺失率3.15%，平均访问时间8.30周期。(4) 数组跨3页，缺页3次。",
+    "analysis": "Cache行数=32KB/64B=512行；8路组相联有64组，组索引6位；块内偏移6位。4KB页内偏移12位，VA[11:6]全部位于页内偏移，因此可作VIPT索引。d[100]地址=01800020H+100×4=018001B0H，组号=(地址>>6)&63=6。d[0]块内偏移=20H。d数组大小=2048×4=8192B，起始偏移32B，访问范围跨129个64B块。循环每个元素先读后写，共4096次Cache访问；每个块第一次读产生一次冷缺失，后续读写命中，故129次缺失，缺失率=129/4096=3.1494%≈3.15%。AMAT=2+0.031494×200≈8.30周期。页面大小4KB，数组起始页内偏移0x20，长度0x2000，合计覆盖ceil((0x20+0x2000)/0x1000)=3页，因此首次访问产生3次缺页。",
+    "steps": [
+      "Cache总行数=32768/64=512；组数=512/8=64，组号6位；块内偏移log2(64)=6位。",
+      "4KB页内偏移12位，Cache索引VA[11:6]未超出页内偏移，地址翻译前后保持不变。",
+      "d[100]=01800020H+400=018001B0H；组号=(0x1B0>>6)&0x3F=6。",
+      "d[0]块内偏移为20H。数组大小8192B，首地址块内偏移32B，覆盖ceil((32+8192)/64)=129个Cache块。",
+      "每个元素读一次、写一次，共4096次访问；每块首个读缺失一次，129次缺失，缺失率=129/4096=3.15%。",
+      "AMAT=2+3.15%×200≈8.30周期。",
+      "数组覆盖页内偏移从0x20到0x201F，跨3个4KB页，缺页3次。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "Cache总行数=32768/64=512；组数=512/8=64，组号6位；块内偏移log2(64)=6位。",
+      "4KB页内偏移12位，Cache索引VA[11:6]未超出页内偏移，地址翻译前后保持不变。",
+      "d[100]=01800020H+400=018001B0H；组号=(0x1B0>>6)&0x3F=6。",
+      "d[0]块内偏移为20H。数组大小8192B，首地址块内偏移32B，覆盖ceil((32+8192)/64)=129个Cache块。",
+      "每个元素读一次、写一次，共4096次访问；每块首个读缺失一次，129次缺失，缺失率=129/4096=3.15%。",
+      "AMAT=2+3.15%×200≈8.30周期。",
+      "数组覆盖页内偏移从0x20到0x201F，跨3个4KB页，缺页3次。"
+    ],
+    "relatedCards": [
+      "Cache 映射与命中率",
+      "VIPT Cache索引与页内偏移",
+      "Cache平均访问时间与缺失损失",
+      "虚拟地址分页与页内偏移",
+      "缺页异常与页表更新",
+      "Cache组相联映射与地址字段",
+      "Cache跨块访问与缺失率",
+      "数组跨页与缺页次数"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
+    "sourcePage": 8,
+    "answerSource": "https://zhenti.beokayy.club/paper/2025",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干关键条件已对照公开试卷PDF；答案与公开参考解析交叉核对，并对计算题独立复算。该参考答案并非教育部官方公布答案。"
+    }
+  },
+  "2025-CO-44-补码除法器初值与除法异常": {
+    "year": 2025,
+    "index": 44,
+    "id": 202544,
+    "typeName": "应用题",
+    "score": 9,
+    "topic": "计算机组成原理",
+    "question": "【原题要点】接2025年第43题，R0~R4为通用寄存器，SEXT按符号扩展。机器级代码：mov R1,(R3+R4*4)；scov R1（{R0,R1}←SEXT(R1)）；idiv R1（R1←{R0,R1}/R2）。给定d[i]=87654321H、x=000000FFH，求补码除法器R/Q/Y初值、计数器位置及ALU运算；再列出除法异常条件及CPU异常响应动作。",
+    "answer": "(1) R=FFFFFFFFH，Q=87654321H，Y=000000FFH；计数器位于控制逻辑部件；ALU执行加法、减法（左移由独立控制信号完成）。(2) 除数为0时异常；有符号商超出32位范围时异常，典型机器数d[i]=80000000H、x=FFFFFFFFH（−2^31/−1）。异常响应需保存断点和PSW、关中断并转入异常处理程序。",
+    "analysis": "scov先将32位补码d[i]符号扩展为64位{R0,R1}。87654321H最高位为1，故R0=FFFFFFFFH、R1=87654321H；除法器的余数寄存器R装入高32位，余数/商寄存器Q装入低32位，除数寄存器Y装入x=000000FFH。迭代计数器属于控制逻辑部件；ALUop控制ALU执行加法和减法，左移由独立的移位控制信号完成。除法异常包括除数为0，以及商无法用32位有符号数表示。典型商溢出为−2^31÷−1，即d[i]=80000000H、x=FFFFFFFFH。异常响应需保存断点和程序状态字，关中断，并转入对应异常处理程序；软件随后保护必要现场并处理异常。",
+    "steps": [
+      "d[i]=87654321H的最高位为1，符号扩展后{R0,R1}=FFFFFFFF87654321H。",
+      "因此除法器初值R=FFFFFFFFH、Q=87654321H、Y=000000FFH。",
+      "迭代计数器位于控制逻辑部件Cn；ALUop控制加、减，左移由独立移位信号控制。",
+      "除数为0触发除零异常；商溢出典型情况为80000000H÷FFFFFFFFH。",
+      "异常响应保存断点和PSW、关中断并跳转异常处理程序。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "d[i]=87654321H的最高位为1，符号扩展后{R0,R1}=FFFFFFFF87654321H。",
+      "因此除法器初值R=FFFFFFFFH、Q=87654321H、Y=000000FFH。",
+      "迭代计数器位于控制逻辑部件Cn；ALUop控制加、减，左移由独立移位信号控制。",
+      "除数为0触发除零异常；商溢出典型情况为80000000H÷FFFFFFFFH。",
+      "异常响应保存断点和PSW、关中断并跳转异常处理程序。"
+    ],
+    "relatedCards": [
+      "补码恢复余数除法器",
+      "有符号除法异常与商溢出",
+      "CPU异常响应与现场保护",
+      "整数溢出检测与异常处理",
+      "ALU 算术逻辑单元",
+      "移位运算与舍入"
+    ],
+    "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
+    "sourcePage": 9,
+    "answerSource": "https://zhenti.beokayy.club/paper/2025",
+    "audit": {
+      "status": "original-pdf-verified-answer-crosschecked",
+      "note": "题干与原始试卷PDF对齐；R/Q/Y初值及异常条件与公开答案交叉核验。ALU仅执行加、减，左移由独立控制信号完成；分值按原卷9分修正。"
+    }
+  },
+  "2023-CO-44-机器级代码相对寻址与取指缺页": {
+    "year": 2023,
+    "index": 44,
+    "id": 702,
+    "typeName": "应用题",
+    "score": 9,
+    "topic": "计算机组成原理",
+    "matchKind": "direct-concept",
+    "question": "【原题要点】给出C程序循环对应的部分x86机器级代码：第2条为00401079H处的短jmp EB 09；第7条为jge；第19条mov指令地址004010AEH、机器码含立即数和基址/变址寻址字段。数组a首地址00422000H，edx存放j，ecx存放与i相关的缩放量。要求求第20条指令地址、判断跳转寻址方式并计算目标地址、解释ecx含义和大小端、判断第19条指令取指是否缺页。",
+    "answer": "(1) 第20条指令地址004010B9H。(2) jmp与jge均为相对寻址；第2条目标地址=00401079H+2+09H=00401084H。(3) mov的源操作数为立即数寻址；ecx=i×256；机器码立即数字节按小端解释，M为小端。(4) 第19条指令取指不发生缺页异常，因为代码指令位于页号00401H的同一代码页，该页此前取指时已调入主存。",
+    "analysis": "第19条指令地址004010AEH，机器码共11字节，因此第20条地址=004010AEH+0BH=004010B9H。短jmp位于00401079H，指令长度2B，取指后PC=0040107BH；相对位移09H，因此目标=0040107BH+09H=00401084H。第7条jge同样采用PC相对寻址。第19条mov的有效地址表达式为ecx+edx×4+00422000H，edx=j，数组a每行64个int、每个4B，行跨度256B，所以ecx保存i×256。机器码立即数00 20 42 00按小端组合为00422000H。第19条指令地址004010AEH与程序中已取指的代码地址00401072H同属4KB页00401H；该代码页已在主存，因此取指不产生缺页异常。",
+    "steps": [
+      "第19条指令机器码长度11B，下一条指令地址=004010AEH+0BH=004010B9H。",
+      "第2条jmp长度2B，下一条PC=00401079H+2=0040107BH；disp=09H，目标=00401084H。第7条jge也采用相对寻址。",
+      "地址表达式ecx+edx×4+00422000H中edx=j；每行64个int、每个4B，行跨度64×4=256B，故ecx=i×256。",
+      "立即数字节00 20 42 00按小端组合为00422000H，故M采用小端方式。",
+      "第19条指令与已取指的代码位于同一4KB虚拟页00401H，该代码页已驻留，取指时不发生缺页异常。"
+    ],
+    "stepsSource": "teaching",
+    "teachingSteps": [
+      "第19条指令机器码长度11B，下一条指令地址=004010AEH+0BH=004010B9H。",
+      "第2条jmp长度2B，下一条PC=00401079H+2=0040107BH；disp=09H，目标=00401084H。第7条jge也采用相对寻址。",
+      "地址表达式ecx+edx×4+00422000H中edx=j；每行64个int、每个4B，行跨度64×4=256B，故ecx=i×256。",
+      "立即数字节00 20 42 00按小端组合为00422000H，故M采用小端方式。",
+      "第19条指令与已取指的代码位于同一4KB虚拟页00401H，该代码页已驻留，取指时不发生缺页异常。"
+    ],
+    "source": "https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf",
+    "sourcePage": 11,
+    "audit": {
+      "status": "original-question-cross-checked-answer-cross-checked",
+      "note": "题干关键机器码、地址和程序条件对照2023年408公开原卷；答案与公开解析交叉核对，步骤为独立推导，不冒充官方发布的标准答案。"
+    },
+    "relatedCards": [
+      "x86 相对寻址与转移目标计算",
+      "x86 CALL/JMP/RET 控制转移与相对寻址",
+      "机器指令编码与指令长度",
+      "小端存储与立即数寻址",
+      "虚拟地址与指令取指缺页",
+      "指令系统与寻址方式",
+      "虚拟地址分页与页内偏移"
+    ]
+  },
+  "verified-answer-2023-43::页式存储与缺页异常": {
+    "year": 2023,
+    "index": 43,
+    "id": 581,
+    "typeName": "综合题",
+    "score": 14,
+    "answer": "（1）数组占2页，缺页2次，故障地址00422000H、00423000H。（2）每个元素仅访问一次，无时间局部性。（3）块内地址A4~A0，组号A10~A5；a[1][0]=00422100H，组号8。（4）占192块，两种循环顺序Cache命中率均87.5%。",
+    "question": "（14分）已知计算机M字长为32位，按字节编址，采用请求调页策略的虚拟存储管理方式，虚拟地址32位，页面大小4KB；数据Cache采用4路组相联映射，数据区大小8KB，主存块大小32B。程序： int a[24][64]; for (i=0; i<24; i++) for (j=0; j<64; j++) a[i][j]=10; 二维数组a按行优先存放，虚拟地址空间起始地址为00422000H，sizeof(int)=4。执行前数组a不在主存，执行过程中不会发生页面置换。回答：（1）数组分布在几个页面，访问发生几次缺页，页故障地址是什么？（2）不考虑i、j，数据访问是否具有时间局部性？（3）虚拟地址哪些位用作块内地址和Cache组号？a[1][0]地址及其Cache组号？（4）数组占用多少主存块？原循环和交换i、j顺序后的Cache命中率各是多少？ 查看2023年408原卷第9页",
+    "analysis": "时间局部性要求重复访问同一数据，本题每元素只访问一次；空间局部性来自一个32B块含8个连续int。列优先虽然跨行访问，但每组只占3路，4路Cache能容纳，因此两种顺序命中率相同。数组长度0x1800跨两个4KB页面。",
+    "steps": [
+      "数组大小=24×64×4=6144B=0x1800B。起始地址00422000H按4KB对齐，数组覆盖00422000H和00423000H两个页面；数组初始不在内存，因此首次访问这两个页面各缺页一次。",
+      "每个数组元素只写入一次，不会再次访问同一元素，因此没有时间局部性；连续地址的元素仍体现空间局部性。",
+      "块大小32B=2^5，因此块内偏移为A4～A0。Cache共有8KB/32B=256块，4路组相联共有64组，组号需要6位，对应A10～A5。",
+      "a[1][0]地址=00422000H+1×64×4+0×4=00422100H；组号=(0x00422100>>5)&0x3F=8。",
+      "数组共6144/32=192个主存块，每块包含8个int。行优先访问时每块首次访问缺失，其余7个命中，命中率7/8=87.5%。",
+      "列优先访问时，按每8列为一组考察，24行对应24个块；由于行跨度256B，组索引步进8，24个块分布到24个不同组，不会产生超过4路的冲突替换。每个块仍有7次后续命中，命中率仍为87.5%。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf；原卷页码：9；答案与步骤来自 verified-solutions.json。关联角色：core。"
+    },
+    "relatedCards": [
+      "页式存储与缺页异常",
+      "Cache 组相联映射与地址划分",
+      "二维数组行优先存储与局部性",
+      "Cache 命中率与空间局部性"
+    ]
+  },
+  "verified-answer-2023-43::Cache 组相联映射与地址划分": {
+    "year": 2023,
+    "index": 43,
+    "id": 581,
+    "typeName": "综合题",
+    "score": 14,
+    "answer": "（1）数组占2页，缺页2次，故障地址00422000H、00423000H。（2）每个元素仅访问一次，无时间局部性。（3）块内地址A4~A0，组号A10~A5；a[1][0]=00422100H，组号8。（4）占192块，两种循环顺序Cache命中率均87.5%。",
+    "question": "（14分）已知计算机M字长为32位，按字节编址，采用请求调页策略的虚拟存储管理方式，虚拟地址32位，页面大小4KB；数据Cache采用4路组相联映射，数据区大小8KB，主存块大小32B。程序： int a[24][64]; for (i=0; i<24; i++) for (j=0; j<64; j++) a[i][j]=10; 二维数组a按行优先存放，虚拟地址空间起始地址为00422000H，sizeof(int)=4。执行前数组a不在主存，执行过程中不会发生页面置换。回答：（1）数组分布在几个页面，访问发生几次缺页，页故障地址是什么？（2）不考虑i、j，数据访问是否具有时间局部性？（3）虚拟地址哪些位用作块内地址和Cache组号？a[1][0]地址及其Cache组号？（4）数组占用多少主存块？原循环和交换i、j顺序后的Cache命中率各是多少？ 查看2023年408原卷第9页",
+    "analysis": "时间局部性要求重复访问同一数据，本题每元素只访问一次；空间局部性来自一个32B块含8个连续int。列优先虽然跨行访问，但每组只占3路，4路Cache能容纳，因此两种顺序命中率相同。数组长度0x1800跨两个4KB页面。",
+    "steps": [
+      "数组大小=24×64×4=6144B=0x1800B。起始地址00422000H按4KB对齐，数组覆盖00422000H和00423000H两个页面；数组初始不在内存，因此首次访问这两个页面各缺页一次。",
+      "每个数组元素只写入一次，不会再次访问同一元素，因此没有时间局部性；连续地址的元素仍体现空间局部性。",
+      "块大小32B=2^5，因此块内偏移为A4～A0。Cache共有8KB/32B=256块，4路组相联共有64组，组号需要6位，对应A10～A5。",
+      "a[1][0]地址=00422000H+1×64×4+0×4=00422100H；组号=(0x00422100>>5)&0x3F=8。",
+      "数组共6144/32=192个主存块，每块包含8个int。行优先访问时每块首次访问缺失，其余7个命中，命中率7/8=87.5%。",
+      "列优先访问时，按每8列为一组考察，24行对应24个块；由于行跨度256B，组索引步进8，24个块分布到24个不同组，不会产生超过4路的冲突替换。每个块仍有7次后续命中，命中率仍为87.5%。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf；原卷页码：9；答案与步骤来自 verified-solutions.json。关联角色：core。"
+    },
+    "relatedCards": [
+      "页式存储与缺页异常",
+      "Cache 组相联映射与地址划分",
+      "二维数组行优先存储与局部性",
+      "Cache 命中率与空间局部性"
+    ]
+  },
+  "verified-answer-2023-43::二维数组行优先存储与局部性": {
+    "year": 2023,
+    "index": 43,
+    "id": 581,
+    "typeName": "综合题",
+    "score": 14,
+    "answer": "（1）数组占2页，缺页2次，故障地址00422000H、00423000H。（2）每个元素仅访问一次，无时间局部性。（3）块内地址A4~A0，组号A10~A5；a[1][0]=00422100H，组号8。（4）占192块，两种循环顺序Cache命中率均87.5%。",
+    "question": "（14分）已知计算机M字长为32位，按字节编址，采用请求调页策略的虚拟存储管理方式，虚拟地址32位，页面大小4KB；数据Cache采用4路组相联映射，数据区大小8KB，主存块大小32B。程序： int a[24][64]; for (i=0; i<24; i++) for (j=0; j<64; j++) a[i][j]=10; 二维数组a按行优先存放，虚拟地址空间起始地址为00422000H，sizeof(int)=4。执行前数组a不在主存，执行过程中不会发生页面置换。回答：（1）数组分布在几个页面，访问发生几次缺页，页故障地址是什么？（2）不考虑i、j，数据访问是否具有时间局部性？（3）虚拟地址哪些位用作块内地址和Cache组号？a[1][0]地址及其Cache组号？（4）数组占用多少主存块？原循环和交换i、j顺序后的Cache命中率各是多少？ 查看2023年408原卷第9页",
+    "analysis": "时间局部性要求重复访问同一数据，本题每元素只访问一次；空间局部性来自一个32B块含8个连续int。列优先虽然跨行访问，但每组只占3路，4路Cache能容纳，因此两种顺序命中率相同。数组长度0x1800跨两个4KB页面。",
+    "steps": [
+      "数组大小=24×64×4=6144B=0x1800B。起始地址00422000H按4KB对齐，数组覆盖00422000H和00423000H两个页面；数组初始不在内存，因此首次访问这两个页面各缺页一次。",
+      "每个数组元素只写入一次，不会再次访问同一元素，因此没有时间局部性；连续地址的元素仍体现空间局部性。",
+      "块大小32B=2^5，因此块内偏移为A4～A0。Cache共有8KB/32B=256块，4路组相联共有64组，组号需要6位，对应A10～A5。",
+      "a[1][0]地址=00422000H+1×64×4+0×4=00422100H；组号=(0x00422100>>5)&0x3F=8。",
+      "数组共6144/32=192个主存块，每块包含8个int。行优先访问时每块首次访问缺失，其余7个命中，命中率7/8=87.5%。",
+      "列优先访问时，按每8列为一组考察，24行对应24个块；由于行跨度256B，组索引步进8，24个块分布到24个不同组，不会产生超过4路的冲突替换。每个块仍有7次后续命中，命中率仍为87.5%。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf；原卷页码：9；答案与步骤来自 verified-solutions.json。关联角色：secondary。"
+    },
+    "relatedCards": [
+      "页式存储与缺页异常",
+      "Cache 组相联映射与地址划分",
+      "二维数组行优先存储与局部性",
+      "Cache 命中率与空间局部性"
+    ]
+  },
+  "verified-answer-2023-43::Cache 命中率与空间局部性": {
+    "year": 2023,
+    "index": 43,
+    "id": 581,
+    "typeName": "综合题",
+    "score": 14,
+    "answer": "（1）数组占2页，缺页2次，故障地址00422000H、00423000H。（2）每个元素仅访问一次，无时间局部性。（3）块内地址A4~A0，组号A10~A5；a[1][0]=00422100H，组号8。（4）占192块，两种循环顺序Cache命中率均87.5%。",
+    "question": "（14分）已知计算机M字长为32位，按字节编址，采用请求调页策略的虚拟存储管理方式，虚拟地址32位，页面大小4KB；数据Cache采用4路组相联映射，数据区大小8KB，主存块大小32B。程序： int a[24][64]; for (i=0; i<24; i++) for (j=0; j<64; j++) a[i][j]=10; 二维数组a按行优先存放，虚拟地址空间起始地址为00422000H，sizeof(int)=4。执行前数组a不在主存，执行过程中不会发生页面置换。回答：（1）数组分布在几个页面，访问发生几次缺页，页故障地址是什么？（2）不考虑i、j，数据访问是否具有时间局部性？（3）虚拟地址哪些位用作块内地址和Cache组号？a[1][0]地址及其Cache组号？（4）数组占用多少主存块？原循环和交换i、j顺序后的Cache命中率各是多少？ 查看2023年408原卷第9页",
+    "analysis": "时间局部性要求重复访问同一数据，本题每元素只访问一次；空间局部性来自一个32B块含8个连续int。列优先虽然跨行访问，但每组只占3路，4路Cache能容纳，因此两种顺序命中率相同。数组长度0x1800跨两个4KB页面。",
+    "steps": [
+      "数组大小=24×64×4=6144B=0x1800B。起始地址00422000H按4KB对齐，数组覆盖00422000H和00423000H两个页面；数组初始不在内存，因此首次访问这两个页面各缺页一次。",
+      "每个数组元素只写入一次，不会再次访问同一元素，因此没有时间局部性；连续地址的元素仍体现空间局部性。",
+      "块大小32B=2^5，因此块内偏移为A4～A0。Cache共有8KB/32B=256块，4路组相联共有64组，组号需要6位，对应A10～A5。",
+      "a[1][0]地址=00422000H+1×64×4+0×4=00422100H；组号=(0x00422100>>5)&0x3F=8。",
+      "数组共6144/32=192个主存块，每块包含8个int。行优先访问时每块首次访问缺失，其余7个命中，命中率7/8=87.5%。",
+      "列优先访问时，按每8列为一组考察，24行对应24个块；由于行跨度256B，组索引步进8，24个块分布到24个不同组，不会产生超过4路的冲突替换。每个块仍有7次后续命中，命中率仍为87.5%。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf；原卷页码：9；答案与步骤来自 verified-solutions.json。关联角色：secondary。"
+    },
+    "relatedCards": [
+      "页式存储与缺页异常",
+      "Cache 组相联映射与地址划分",
+      "二维数组行优先存储与局部性",
+      "Cache 命中率与空间局部性"
+    ]
+  },
+  "verified-answer-2023-44::x86 相对寻址与转移目标计算": {
+    "year": 2023,
+    "index": 44,
+    "id": 582,
+    "typeName": "综合题",
+    "score": 9,
+    "answer": "（1）第20条指令地址004010B9H。（2）jmp、jge均相对寻址；jmp目标=00401079H+2+09H=00401084H。（3）源操作数立即数寻址；ecx=i×256；机器采用小端。（4）取第19条指令不会缺页，代码页已驻留。",
+    "question": "（9分）题43中的C程序段在计算机M上的部分机器级代码如下： 指令序号 虚拟地址 机器指令 汇编指令 1 00401072 C7 45 F8 00 00 00 00 mov [ebp-8],0 2 00401079 EB 09 jmp 00401084h 3 0040107B 8B 55 F8 mov eax,[ebp-8] 7 00401088 7D 32 jge 004010BCh 8 0040108A C7 45 FC 00 00 00 00 mov [ebp-4],0 19 004010AE C7 84 82 00 20 42 00 0A 00 00 00 mov [ecx+edx*4+00422000h],0Ah 请回答：（1）第20条指令的虚拟地址是多少？（2）第2条jmp和第7条jge的寻址方式是什么？给出第2条jmp跳转目标地址计算过程。（3）第19条mov的源操作数采用什么寻址方式？edx存放变量j时，ecx存放什么？根据机器码判断大端还是小端？（4）第一次执行第19条指令时，取指过程中是否发生缺页异常？为什么？ 查看2023年408原卷第10页",
+    "analysis": "相对跳转位移加到下一条指令地址，而非当前指令首地址。第19条指令长度11B决定第20条地址。二维数组地址偏移为i×64×4+j×4，故ecx=i×256。机器码立即数0A 00 00 00体现小端。",
+    "steps": [
+      "第19条指令起始地址004010AEH，机器码共11字节（C7 84 82 00 20 42 00 0A 00 00 00），故第20条地址=004010AEH+0BH=004010B9H。",
+      "第2条jmp和第7条jge均采用相对寻址，位移量相对于当前指令的下一条指令地址计算。",
+      "第2条jmp长度2字节，下一条指令地址为0040107BH；位移09H，因此目标地址=0040107BH+09H=00401084H（等价于00401079H+2+09H）。",
+      "第7条jge位于00401088H，长度2字节，下一条地址0040108AH，加位移32H得到004010BCH。",
+      "mov的目的操作数为内存操作数，源操作数0Ah采用立即数寻址；有效地址为ECX+EDX×4+00422000H。EDX存放j，ECX存放i×64×4=i×256。",
+      "机器码中立即数10编码为0A 00 00 00，低有效字节存放在低地址，因此采用小端方式。",
+      "第19条指令位于代码页00401000H～00401FFFH。程序执行到第19条时该代码页已驻留，因此取指不会因该指令本身发生缺页异常；此前访问数组产生的数据页缺页与代码取指页不同。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf；原卷页码：10；答案与步骤来自 verified-solutions.json。关联角色：core。"
+    },
+    "relatedCards": [
+      "x86 相对寻址与转移目标计算",
+      "机器指令编码与指令长度",
+      "小端存储与立即数寻址",
+      "虚拟地址与指令取指缺页"
+    ]
+  },
+  "verified-answer-2023-44::机器指令编码与指令长度": {
+    "year": 2023,
+    "index": 44,
+    "id": 582,
+    "typeName": "综合题",
+    "score": 9,
+    "answer": "（1）第20条指令地址004010B9H。（2）jmp、jge均相对寻址；jmp目标=00401079H+2+09H=00401084H。（3）源操作数立即数寻址；ecx=i×256；机器采用小端。（4）取第19条指令不会缺页，代码页已驻留。",
+    "question": "（9分）题43中的C程序段在计算机M上的部分机器级代码如下： 指令序号 虚拟地址 机器指令 汇编指令 1 00401072 C7 45 F8 00 00 00 00 mov [ebp-8],0 2 00401079 EB 09 jmp 00401084h 3 0040107B 8B 55 F8 mov eax,[ebp-8] 7 00401088 7D 32 jge 004010BCh 8 0040108A C7 45 FC 00 00 00 00 mov [ebp-4],0 19 004010AE C7 84 82 00 20 42 00 0A 00 00 00 mov [ecx+edx*4+00422000h],0Ah 请回答：（1）第20条指令的虚拟地址是多少？（2）第2条jmp和第7条jge的寻址方式是什么？给出第2条jmp跳转目标地址计算过程。（3）第19条mov的源操作数采用什么寻址方式？edx存放变量j时，ecx存放什么？根据机器码判断大端还是小端？（4）第一次执行第19条指令时，取指过程中是否发生缺页异常？为什么？ 查看2023年408原卷第10页",
+    "analysis": "相对跳转位移加到下一条指令地址，而非当前指令首地址。第19条指令长度11B决定第20条地址。二维数组地址偏移为i×64×4+j×4，故ecx=i×256。机器码立即数0A 00 00 00体现小端。",
+    "steps": [
+      "第19条指令起始地址004010AEH，机器码共11字节（C7 84 82 00 20 42 00 0A 00 00 00），故第20条地址=004010AEH+0BH=004010B9H。",
+      "第2条jmp和第7条jge均采用相对寻址，位移量相对于当前指令的下一条指令地址计算。",
+      "第2条jmp长度2字节，下一条指令地址为0040107BH；位移09H，因此目标地址=0040107BH+09H=00401084H（等价于00401079H+2+09H）。",
+      "第7条jge位于00401088H，长度2字节，下一条地址0040108AH，加位移32H得到004010BCH。",
+      "mov的目的操作数为内存操作数，源操作数0Ah采用立即数寻址；有效地址为ECX+EDX×4+00422000H。EDX存放j，ECX存放i×64×4=i×256。",
+      "机器码中立即数10编码为0A 00 00 00，低有效字节存放在低地址，因此采用小端方式。",
+      "第19条指令位于代码页00401000H～00401FFFH。程序执行到第19条时该代码页已驻留，因此取指不会因该指令本身发生缺页异常；此前访问数组产生的数据页缺页与代码取指页不同。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf；原卷页码：10；答案与步骤来自 verified-solutions.json。关联角色：core。"
+    },
+    "relatedCards": [
+      "x86 相对寻址与转移目标计算",
+      "机器指令编码与指令长度",
+      "小端存储与立即数寻址",
+      "虚拟地址与指令取指缺页"
+    ]
+  },
+  "verified-answer-2023-44::小端存储与立即数寻址": {
+    "year": 2023,
+    "index": 44,
+    "id": 582,
+    "typeName": "综合题",
+    "score": 9,
+    "answer": "（1）第20条指令地址004010B9H。（2）jmp、jge均相对寻址；jmp目标=00401079H+2+09H=00401084H。（3）源操作数立即数寻址；ecx=i×256；机器采用小端。（4）取第19条指令不会缺页，代码页已驻留。",
+    "question": "（9分）题43中的C程序段在计算机M上的部分机器级代码如下： 指令序号 虚拟地址 机器指令 汇编指令 1 00401072 C7 45 F8 00 00 00 00 mov [ebp-8],0 2 00401079 EB 09 jmp 00401084h 3 0040107B 8B 55 F8 mov eax,[ebp-8] 7 00401088 7D 32 jge 004010BCh 8 0040108A C7 45 FC 00 00 00 00 mov [ebp-4],0 19 004010AE C7 84 82 00 20 42 00 0A 00 00 00 mov [ecx+edx*4+00422000h],0Ah 请回答：（1）第20条指令的虚拟地址是多少？（2）第2条jmp和第7条jge的寻址方式是什么？给出第2条jmp跳转目标地址计算过程。（3）第19条mov的源操作数采用什么寻址方式？edx存放变量j时，ecx存放什么？根据机器码判断大端还是小端？（4）第一次执行第19条指令时，取指过程中是否发生缺页异常？为什么？ 查看2023年408原卷第10页",
+    "analysis": "相对跳转位移加到下一条指令地址，而非当前指令首地址。第19条指令长度11B决定第20条地址。二维数组地址偏移为i×64×4+j×4，故ecx=i×256。机器码立即数0A 00 00 00体现小端。",
+    "steps": [
+      "第19条指令起始地址004010AEH，机器码共11字节（C7 84 82 00 20 42 00 0A 00 00 00），故第20条地址=004010AEH+0BH=004010B9H。",
+      "第2条jmp和第7条jge均采用相对寻址，位移量相对于当前指令的下一条指令地址计算。",
+      "第2条jmp长度2字节，下一条指令地址为0040107BH；位移09H，因此目标地址=0040107BH+09H=00401084H（等价于00401079H+2+09H）。",
+      "第7条jge位于00401088H，长度2字节，下一条地址0040108AH，加位移32H得到004010BCH。",
+      "mov的目的操作数为内存操作数，源操作数0Ah采用立即数寻址；有效地址为ECX+EDX×4+00422000H。EDX存放j，ECX存放i×64×4=i×256。",
+      "机器码中立即数10编码为0A 00 00 00，低有效字节存放在低地址，因此采用小端方式。",
+      "第19条指令位于代码页00401000H～00401FFFH。程序执行到第19条时该代码页已驻留，因此取指不会因该指令本身发生缺页异常；此前访问数组产生的数据页缺页与代码取指页不同。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf；原卷页码：10；答案与步骤来自 verified-solutions.json。关联角色：secondary。"
+    },
+    "relatedCards": [
+      "x86 相对寻址与转移目标计算",
+      "机器指令编码与指令长度",
+      "小端存储与立即数寻址",
+      "虚拟地址与指令取指缺页"
+    ]
+  },
+  "verified-answer-2023-44::虚拟地址与指令取指缺页": {
+    "year": 2023,
+    "index": 44,
+    "id": 582,
+    "typeName": "综合题",
+    "score": 9,
+    "answer": "（1）第20条指令地址004010B9H。（2）jmp、jge均相对寻址；jmp目标=00401079H+2+09H=00401084H。（3）源操作数立即数寻址；ecx=i×256；机器采用小端。（4）取第19条指令不会缺页，代码页已驻留。",
+    "question": "（9分）题43中的C程序段在计算机M上的部分机器级代码如下： 指令序号 虚拟地址 机器指令 汇编指令 1 00401072 C7 45 F8 00 00 00 00 mov [ebp-8],0 2 00401079 EB 09 jmp 00401084h 3 0040107B 8B 55 F8 mov eax,[ebp-8] 7 00401088 7D 32 jge 004010BCh 8 0040108A C7 45 FC 00 00 00 00 mov [ebp-4],0 19 004010AE C7 84 82 00 20 42 00 0A 00 00 00 mov [ecx+edx*4+00422000h],0Ah 请回答：（1）第20条指令的虚拟地址是多少？（2）第2条jmp和第7条jge的寻址方式是什么？给出第2条jmp跳转目标地址计算过程。（3）第19条mov的源操作数采用什么寻址方式？edx存放变量j时，ecx存放什么？根据机器码判断大端还是小端？（4）第一次执行第19条指令时，取指过程中是否发生缺页异常？为什么？ 查看2023年408原卷第10页",
+    "analysis": "相对跳转位移加到下一条指令地址，而非当前指令首地址。第19条指令长度11B决定第20条地址。二维数组地址偏移为i×64×4+j×4，故ecx=i×256。机器码立即数0A 00 00 00体现小端。",
+    "steps": [
+      "第19条指令起始地址004010AEH，机器码共11字节（C7 84 82 00 20 42 00 0A 00 00 00），故第20条地址=004010AEH+0BH=004010B9H。",
+      "第2条jmp和第7条jge均采用相对寻址，位移量相对于当前指令的下一条指令地址计算。",
+      "第2条jmp长度2字节，下一条指令地址为0040107BH；位移09H，因此目标地址=0040107BH+09H=00401084H（等价于00401079H+2+09H）。",
+      "第7条jge位于00401088H，长度2字节，下一条地址0040108AH，加位移32H得到004010BCH。",
+      "mov的目的操作数为内存操作数，源操作数0Ah采用立即数寻址；有效地址为ECX+EDX×4+00422000H。EDX存放j，ECX存放i×64×4=i×256。",
+      "机器码中立即数10编码为0A 00 00 00，低有效字节存放在低地址，因此采用小端方式。",
+      "第19条指令位于代码页00401000H～00401FFFH。程序执行到第19条时该代码页已驻留，因此取指不会因该指令本身发生缺页异常；此前访问数组产生的数据页缺页与代码取指页不同。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://datastructure.ouxinyu.cn/PastPapers/Paper2023.pdf；原卷页码：10；答案与步骤来自 verified-solutions.json。关联角色：secondary。"
+    },
+    "relatedCards": [
+      "x86 相对寻址与转移目标计算",
+      "机器指令编码与指令长度",
+      "小端存储与立即数寻址",
+      "虚拟地址与指令取指缺页"
+    ]
+  },
+  "verified-answer-2024-43::RISC-V 指令格式与寄存器编码": {
+    "year": 2024,
+    "index": 43,
+    "id": 588,
+    "typeName": "综合题",
+    "score": 13,
+    "answer": "最多32个通用寄存器，shamt为5位可表示0～31。add时ALUBsrc=0；F=1FDB9753H，OF=1，CF=1；无符号溢出看CF。slli的Ext可为0或1，因为其移位立即数高位为0。lw的Ext=1、ALUctr=000。A040A103H为lw r2,-1532(r1)；R[01H]=FFFFA2D0H时有效地址FFFF9CD4H。",
+    "question": "2024年408综合题43：32位字长、按字节编址、32位定长指令字。题图给出add、slli、lw格式及部分ALU数据通路。寄存器字段宽5位；Ext=0零扩展、Ext=1符号扩展；ALUctr=000加、001减、010逻辑左移。问寄存器数与shamt位数；add的ALUBsrc、F/OF/CF及无符号溢出标志；slli的Ext；lw的Ext/ALUctr；机器码A040A103H的译码和有效地址。",
+    "analysis": "该题的关键是按题目给出的指令编码表逐字段译码，不能把标准RISC-V的全部规则或其他自定义格式混入。CF与OF针对不同数值解释：CF描述无符号进位，OF描述有符号补码溢出。lw的立即数是有符号偏移，因此地址生成必须符号扩展。",
+    "steps": [
+      "寄存器编号字段5位，编码空间2^5=32；shamt字段5位，移位范围0～31。",
+      "add第二操作数来自rs2寄存器，因此MUX选择寄存器输入，ALUBsrc=0。",
+      "按32位计算87654321H+98765432H=1FDB9753H，丢弃第33位得到F=1FDB9753H；最高位产生进位CF=1。",
+      "两个操作数最高位均为1（负数），结果最高位为0（正数），发生有符号溢出，OF=1。无符号加法溢出检查CF。",
+      "slli的shamt是5位非负移位数，其扩展前高位为0，零扩展与符号扩展均得到相同值，Ext可任选0或1。",
+      "lw的12位imm为补码偏移，需符号扩展Ext=1；ALU执行基址+偏移，ALUctr=000。",
+      "A040A103H最低7位opcode=0000011且funct3=010，对应题图定义的lw；字段译码得rd=2、rs1=1、imm=A04H。",
+      "A04H符号扩展为FFFFFA04H；有效地址=FFFFA2D0H+FFFFFA04H=FFFF9CD4H（保留低32位）。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://pgcode.cn/exams/408/years/2024/preview；原卷页码：9；答案与步骤来自 verified-solutions.json。关联角色：core。"
+    },
+    "relatedCards": [
+      "RISC-V 指令格式与寄存器编码",
+      "ALU 标志位 CF 与 OF",
+      "立即数扩展与移位指令",
+      "指令译码与有效地址计算"
+    ]
+  },
+  "verified-answer-2024-43::ALU 标志位 CF 与 OF": {
+    "year": 2024,
+    "index": 43,
+    "id": 588,
+    "typeName": "综合题",
+    "score": 13,
+    "answer": "最多32个通用寄存器，shamt为5位可表示0～31。add时ALUBsrc=0；F=1FDB9753H，OF=1，CF=1；无符号溢出看CF。slli的Ext可为0或1，因为其移位立即数高位为0。lw的Ext=1、ALUctr=000。A040A103H为lw r2,-1532(r1)；R[01H]=FFFFA2D0H时有效地址FFFF9CD4H。",
+    "question": "2024年408综合题43：32位字长、按字节编址、32位定长指令字。题图给出add、slli、lw格式及部分ALU数据通路。寄存器字段宽5位；Ext=0零扩展、Ext=1符号扩展；ALUctr=000加、001减、010逻辑左移。问寄存器数与shamt位数；add的ALUBsrc、F/OF/CF及无符号溢出标志；slli的Ext；lw的Ext/ALUctr；机器码A040A103H的译码和有效地址。",
+    "analysis": "该题的关键是按题目给出的指令编码表逐字段译码，不能把标准RISC-V的全部规则或其他自定义格式混入。CF与OF针对不同数值解释：CF描述无符号进位，OF描述有符号补码溢出。lw的立即数是有符号偏移，因此地址生成必须符号扩展。",
+    "steps": [
+      "寄存器编号字段5位，编码空间2^5=32；shamt字段5位，移位范围0～31。",
+      "add第二操作数来自rs2寄存器，因此MUX选择寄存器输入，ALUBsrc=0。",
+      "按32位计算87654321H+98765432H=1FDB9753H，丢弃第33位得到F=1FDB9753H；最高位产生进位CF=1。",
+      "两个操作数最高位均为1（负数），结果最高位为0（正数），发生有符号溢出，OF=1。无符号加法溢出检查CF。",
+      "slli的shamt是5位非负移位数，其扩展前高位为0，零扩展与符号扩展均得到相同值，Ext可任选0或1。",
+      "lw的12位imm为补码偏移，需符号扩展Ext=1；ALU执行基址+偏移，ALUctr=000。",
+      "A040A103H最低7位opcode=0000011且funct3=010，对应题图定义的lw；字段译码得rd=2、rs1=1、imm=A04H。",
+      "A04H符号扩展为FFFFFA04H；有效地址=FFFFA2D0H+FFFFFA04H=FFFF9CD4H（保留低32位）。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://pgcode.cn/exams/408/years/2024/preview；原卷页码：9；答案与步骤来自 verified-solutions.json。关联角色：core。"
+    },
+    "relatedCards": [
+      "RISC-V 指令格式与寄存器编码",
+      "ALU 标志位 CF 与 OF",
+      "立即数扩展与移位指令",
+      "指令译码与有效地址计算"
+    ]
+  },
+  "verified-answer-2024-43::立即数扩展与移位指令": {
+    "year": 2024,
+    "index": 43,
+    "id": 588,
+    "typeName": "综合题",
+    "score": 13,
+    "answer": "最多32个通用寄存器，shamt为5位可表示0～31。add时ALUBsrc=0；F=1FDB9753H，OF=1，CF=1；无符号溢出看CF。slli的Ext可为0或1，因为其移位立即数高位为0。lw的Ext=1、ALUctr=000。A040A103H为lw r2,-1532(r1)；R[01H]=FFFFA2D0H时有效地址FFFF9CD4H。",
+    "question": "2024年408综合题43：32位字长、按字节编址、32位定长指令字。题图给出add、slli、lw格式及部分ALU数据通路。寄存器字段宽5位；Ext=0零扩展、Ext=1符号扩展；ALUctr=000加、001减、010逻辑左移。问寄存器数与shamt位数；add的ALUBsrc、F/OF/CF及无符号溢出标志；slli的Ext；lw的Ext/ALUctr；机器码A040A103H的译码和有效地址。",
+    "analysis": "该题的关键是按题目给出的指令编码表逐字段译码，不能把标准RISC-V的全部规则或其他自定义格式混入。CF与OF针对不同数值解释：CF描述无符号进位，OF描述有符号补码溢出。lw的立即数是有符号偏移，因此地址生成必须符号扩展。",
+    "steps": [
+      "寄存器编号字段5位，编码空间2^5=32；shamt字段5位，移位范围0～31。",
+      "add第二操作数来自rs2寄存器，因此MUX选择寄存器输入，ALUBsrc=0。",
+      "按32位计算87654321H+98765432H=1FDB9753H，丢弃第33位得到F=1FDB9753H；最高位产生进位CF=1。",
+      "两个操作数最高位均为1（负数），结果最高位为0（正数），发生有符号溢出，OF=1。无符号加法溢出检查CF。",
+      "slli的shamt是5位非负移位数，其扩展前高位为0，零扩展与符号扩展均得到相同值，Ext可任选0或1。",
+      "lw的12位imm为补码偏移，需符号扩展Ext=1；ALU执行基址+偏移，ALUctr=000。",
+      "A040A103H最低7位opcode=0000011且funct3=010，对应题图定义的lw；字段译码得rd=2、rs1=1、imm=A04H。",
+      "A04H符号扩展为FFFFFA04H；有效地址=FFFFA2D0H+FFFFFA04H=FFFF9CD4H（保留低32位）。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://pgcode.cn/exams/408/years/2024/preview；原卷页码：9；答案与步骤来自 verified-solutions.json。关联角色：secondary。"
+    },
+    "relatedCards": [
+      "RISC-V 指令格式与寄存器编码",
+      "ALU 标志位 CF 与 OF",
+      "立即数扩展与移位指令",
+      "指令译码与有效地址计算"
+    ]
+  },
+  "verified-answer-2024-43::指令译码与有效地址计算": {
+    "year": 2024,
+    "index": 43,
+    "id": 588,
+    "typeName": "综合题",
+    "score": 13,
+    "answer": "最多32个通用寄存器，shamt为5位可表示0～31。add时ALUBsrc=0；F=1FDB9753H，OF=1，CF=1；无符号溢出看CF。slli的Ext可为0或1，因为其移位立即数高位为0。lw的Ext=1、ALUctr=000。A040A103H为lw r2,-1532(r1)；R[01H]=FFFFA2D0H时有效地址FFFF9CD4H。",
+    "question": "2024年408综合题43：32位字长、按字节编址、32位定长指令字。题图给出add、slli、lw格式及部分ALU数据通路。寄存器字段宽5位；Ext=0零扩展、Ext=1符号扩展；ALUctr=000加、001减、010逻辑左移。问寄存器数与shamt位数；add的ALUBsrc、F/OF/CF及无符号溢出标志；slli的Ext；lw的Ext/ALUctr；机器码A040A103H的译码和有效地址。",
+    "analysis": "该题的关键是按题目给出的指令编码表逐字段译码，不能把标准RISC-V的全部规则或其他自定义格式混入。CF与OF针对不同数值解释：CF描述无符号进位，OF描述有符号补码溢出。lw的立即数是有符号偏移，因此地址生成必须符号扩展。",
+    "steps": [
+      "寄存器编号字段5位，编码空间2^5=32；shamt字段5位，移位范围0～31。",
+      "add第二操作数来自rs2寄存器，因此MUX选择寄存器输入，ALUBsrc=0。",
+      "按32位计算87654321H+98765432H=1FDB9753H，丢弃第33位得到F=1FDB9753H；最高位产生进位CF=1。",
+      "两个操作数最高位均为1（负数），结果最高位为0（正数），发生有符号溢出，OF=1。无符号加法溢出检查CF。",
+      "slli的shamt是5位非负移位数，其扩展前高位为0，零扩展与符号扩展均得到相同值，Ext可任选0或1。",
+      "lw的12位imm为补码偏移，需符号扩展Ext=1；ALU执行基址+偏移，ALUctr=000。",
+      "A040A103H最低7位opcode=0000011且funct3=010，对应题图定义的lw；字段译码得rd=2、rs1=1、imm=A04H。",
+      "A04H符号扩展为FFFFFA04H；有效地址=FFFFA2D0H+FFFFFA04H=FFFF9CD4H（保留低32位）。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://pgcode.cn/exams/408/years/2024/preview；原卷页码：9；答案与步骤来自 verified-solutions.json。关联角色：secondary。"
+    },
+    "relatedCards": [
+      "RISC-V 指令格式与寄存器编码",
+      "ALU 标志位 CF 与 OF",
+      "立即数扩展与移位指令",
+      "指令译码与有效地址计算"
+    ]
+  },
+  "verified-answer-2024-44::数组下标寻址与元素宽度": {
+    "year": 2024,
+    "index": 44,
+    "id": 589,
+    "typeName": "综合题",
+    "score": 10,
+    "answer": "a首地址在r3（03H），i在r2（02H），sum在r1（01H）。a[5]地址=0013E004H；小端四字节DC EC FF FF组成FFFFECDCH；sum更新为0000000EH。a[5]所在页号为0013EH；数组至少跨2页。slli r4,r2,2机器码为00212213H；short时改为slli r4,r2,1。",
+    "question": "2024年408综合题44：对题43计算机M，sum+=a[i]对应slli r4,r2,2；add r4,r3,r4；lw r5,0(r4)；add r1,r1,r5。int型i、sum和数组a，r1～r5编号01H～05H。i=5，r1=00001332H，r3=0013DFF0H；题图给出0013DFF0H起始的字节内容。求a首地址/i/sum寄存器编号，a[i]地址和值、更新后sum、页号及数组页数，slli机器码以及short时的指令。",
+    "analysis": "数组地址计算由元素宽度决定。小端方式只影响字节到整数的组合，不改变地址。FFFFECDCH按32位补码解释为负数，累加时发生模2^32回绕。页面边界在0013E000H，数组基址0013DFF0H距边界仅16字节，访问a[5]已经跨页。",
+    "steps": [
+      "slli r4,r2,2把i乘4，说明r2存放int数组下标；add r4,r3,r4将偏移加到基址，说明r3存数组首地址；最后add r1,r1,r5更新sum，故r1存sum。",
+      "i=5且int为4B，a[5]地址=0013DFF0H+5×4=0013E004H。",
+      "按题图在0013E004H起读取4字节：DC、EC、FF、FF。小端低地址字节是最低有效字节，组合为FFFFECDCH。",
+      "sum=00001332H+FFFFECDCH=10000000EH，保留32位得到0000000EH。",
+      "4KB页偏移12位，页号=0013E004H>>12=0013EH。数组从0013DFF0H开始，a[5]已位于下一页0013E，因此至少跨2页。",
+      "slli字段为0000000|00010|00010|010|00100|0010011，拼接得00212213H。",
+      "short占2B，i×2对应左移1位，汇编改为slli r4,r2,1。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://pgcode.cn/exams/408/years/2024/preview；原卷页码：9；答案与步骤来自 verified-solutions.json。关联角色：core。"
+    },
+    "relatedCards": [
+      "数组下标寻址与元素宽度",
+      "小端字节序与补码读取",
+      "虚拟地址分页与页内偏移",
+      "RISC-V 指令格式与寄存器编码"
+    ]
+  },
+  "verified-answer-2024-44::小端字节序与补码读取": {
+    "year": 2024,
+    "index": 44,
+    "id": 589,
+    "typeName": "综合题",
+    "score": 10,
+    "answer": "a首地址在r3（03H），i在r2（02H），sum在r1（01H）。a[5]地址=0013E004H；小端四字节DC EC FF FF组成FFFFECDCH；sum更新为0000000EH。a[5]所在页号为0013EH；数组至少跨2页。slli r4,r2,2机器码为00212213H；short时改为slli r4,r2,1。",
+    "question": "2024年408综合题44：对题43计算机M，sum+=a[i]对应slli r4,r2,2；add r4,r3,r4；lw r5,0(r4)；add r1,r1,r5。int型i、sum和数组a，r1～r5编号01H～05H。i=5，r1=00001332H，r3=0013DFF0H；题图给出0013DFF0H起始的字节内容。求a首地址/i/sum寄存器编号，a[i]地址和值、更新后sum、页号及数组页数，slli机器码以及short时的指令。",
+    "analysis": "数组地址计算由元素宽度决定。小端方式只影响字节到整数的组合，不改变地址。FFFFECDCH按32位补码解释为负数，累加时发生模2^32回绕。页面边界在0013E000H，数组基址0013DFF0H距边界仅16字节，访问a[5]已经跨页。",
+    "steps": [
+      "slli r4,r2,2把i乘4，说明r2存放int数组下标；add r4,r3,r4将偏移加到基址，说明r3存数组首地址；最后add r1,r1,r5更新sum，故r1存sum。",
+      "i=5且int为4B，a[5]地址=0013DFF0H+5×4=0013E004H。",
+      "按题图在0013E004H起读取4字节：DC、EC、FF、FF。小端低地址字节是最低有效字节，组合为FFFFECDCH。",
+      "sum=00001332H+FFFFECDCH=10000000EH，保留32位得到0000000EH。",
+      "4KB页偏移12位，页号=0013E004H>>12=0013EH。数组从0013DFF0H开始，a[5]已位于下一页0013E，因此至少跨2页。",
+      "slli字段为0000000|00010|00010|010|00100|0010011，拼接得00212213H。",
+      "short占2B，i×2对应左移1位，汇编改为slli r4,r2,1。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://pgcode.cn/exams/408/years/2024/preview；原卷页码：9；答案与步骤来自 verified-solutions.json。关联角色：core。"
+    },
+    "relatedCards": [
+      "数组下标寻址与元素宽度",
+      "小端字节序与补码读取",
+      "虚拟地址分页与页内偏移",
+      "RISC-V 指令格式与寄存器编码"
+    ]
+  },
+  "verified-answer-2024-44::虚拟地址分页与页内偏移": {
+    "year": 2024,
+    "index": 44,
+    "id": 589,
+    "typeName": "综合题",
+    "score": 10,
+    "answer": "a首地址在r3（03H），i在r2（02H），sum在r1（01H）。a[5]地址=0013E004H；小端四字节DC EC FF FF组成FFFFECDCH；sum更新为0000000EH。a[5]所在页号为0013EH；数组至少跨2页。slli r4,r2,2机器码为00212213H；short时改为slli r4,r2,1。",
+    "question": "2024年408综合题44：对题43计算机M，sum+=a[i]对应slli r4,r2,2；add r4,r3,r4；lw r5,0(r4)；add r1,r1,r5。int型i、sum和数组a，r1～r5编号01H～05H。i=5，r1=00001332H，r3=0013DFF0H；题图给出0013DFF0H起始的字节内容。求a首地址/i/sum寄存器编号，a[i]地址和值、更新后sum、页号及数组页数，slli机器码以及short时的指令。",
+    "analysis": "数组地址计算由元素宽度决定。小端方式只影响字节到整数的组合，不改变地址。FFFFECDCH按32位补码解释为负数，累加时发生模2^32回绕。页面边界在0013E000H，数组基址0013DFF0H距边界仅16字节，访问a[5]已经跨页。",
+    "steps": [
+      "slli r4,r2,2把i乘4，说明r2存放int数组下标；add r4,r3,r4将偏移加到基址，说明r3存数组首地址；最后add r1,r1,r5更新sum，故r1存sum。",
+      "i=5且int为4B，a[5]地址=0013DFF0H+5×4=0013E004H。",
+      "按题图在0013E004H起读取4字节：DC、EC、FF、FF。小端低地址字节是最低有效字节，组合为FFFFECDCH。",
+      "sum=00001332H+FFFFECDCH=10000000EH，保留32位得到0000000EH。",
+      "4KB页偏移12位，页号=0013E004H>>12=0013EH。数组从0013DFF0H开始，a[5]已位于下一页0013E，因此至少跨2页。",
+      "slli字段为0000000|00010|00010|010|00100|0010011，拼接得00212213H。",
+      "short占2B，i×2对应左移1位，汇编改为slli r4,r2,1。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://pgcode.cn/exams/408/years/2024/preview；原卷页码：9；答案与步骤来自 verified-solutions.json。关联角色：secondary。"
+    },
+    "relatedCards": [
+      "数组下标寻址与元素宽度",
+      "小端字节序与补码读取",
+      "虚拟地址分页与页内偏移",
+      "RISC-V 指令格式与寄存器编码"
+    ]
+  },
+  "verified-answer-2024-44::RISC-V 指令格式与寄存器编码": {
+    "year": 2024,
+    "index": 44,
+    "id": 589,
+    "typeName": "综合题",
+    "score": 10,
+    "answer": "a首地址在r3（03H），i在r2（02H），sum在r1（01H）。a[5]地址=0013E004H；小端四字节DC EC FF FF组成FFFFECDCH；sum更新为0000000EH。a[5]所在页号为0013EH；数组至少跨2页。slli r4,r2,2机器码为00212213H；short时改为slli r4,r2,1。",
+    "question": "2024年408综合题44：对题43计算机M，sum+=a[i]对应slli r4,r2,2；add r4,r3,r4；lw r5,0(r4)；add r1,r1,r5。int型i、sum和数组a，r1～r5编号01H～05H。i=5，r1=00001332H，r3=0013DFF0H；题图给出0013DFF0H起始的字节内容。求a首地址/i/sum寄存器编号，a[i]地址和值、更新后sum、页号及数组页数，slli机器码以及short时的指令。",
+    "analysis": "数组地址计算由元素宽度决定。小端方式只影响字节到整数的组合，不改变地址。FFFFECDCH按32位补码解释为负数，累加时发生模2^32回绕。页面边界在0013E000H，数组基址0013DFF0H距边界仅16字节，访问a[5]已经跨页。",
+    "steps": [
+      "slli r4,r2,2把i乘4，说明r2存放int数组下标；add r4,r3,r4将偏移加到基址，说明r3存数组首地址；最后add r1,r1,r5更新sum，故r1存sum。",
+      "i=5且int为4B，a[5]地址=0013DFF0H+5×4=0013E004H。",
+      "按题图在0013E004H起读取4字节：DC、EC、FF、FF。小端低地址字节是最低有效字节，组合为FFFFECDCH。",
+      "sum=00001332H+FFFFECDCH=10000000EH，保留32位得到0000000EH。",
+      "4KB页偏移12位，页号=0013E004H>>12=0013EH。数组从0013DFF0H开始，a[5]已位于下一页0013E，因此至少跨2页。",
+      "slli字段为0000000|00010|00010|010|00100|0010011，拼接得00212213H。",
+      "short占2B，i×2对应左移1位，汇编改为slli r4,r2,1。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来源：https://pgcode.cn/exams/408/years/2024/preview；原卷页码：9；答案与步骤来自 verified-solutions.json。关联角色：secondary。"
+    },
+    "relatedCards": [
+      "数组下标寻址与元素宽度",
+      "小端字节序与补码读取",
+      "虚拟地址分页与页内偏移",
+      "RISC-V 指令格式与寄存器编码"
+    ]
+  },
+  "verified-answer-2016-44::程序查询与中断驱动 I/O": {
+    "year": 2016,
+    "index": 44,
+    "id": 373,
+    "typeName": "综合题",
+    "score": 9,
+    "answer": "（1）每字符传输10位（1起始位+7数据位+1奇校验位+1停止位），最多2000字符/s。（2）总任务时间约25,070,000个时钟周期；CPU占用约90,000个时钟周期；中断响应阶段关中断、保护断点和程序状态、识别中断源。",
+    "question": "假定CPU主频为50MHz，CPI为4。设备D采用异步串行通信方式向主机传送7位ASCII字符，通信规程中有1位奇校验位和1位停止位，从D接收启动命令到字符送入I/O端口需要0.5ms。请回答：（1）每传送一个字符，在异步串行通信线上共需传输多少位？设备D持续工作时每秒最多可向I/O端口送入多少个字符？（2）设备D采用中断方式I/O，I/O端口每收到一个字符申请一次中断，中断响应需10个时钟周期，中断服务程序共20条指令，其中第15条指令启动D。CPU读取1000个字符，求完成任务所需总时钟周期、CPU用于任务的时钟周期，以及中断响应阶段CPU执行的操作。",
+    "analysis": "本题要区分外设传送占用的总历时与CPU实际执行中断处理的时间。0.5ms设备工作时间折算为25,000个CPU时钟周期；CPU占用仅计中断响应与服务程序执行。",
+    "steps": [
+      "异步串行帧由1位起始位、7位ASCII数据位、1位奇校验位和1位停止位组成，总计1+7+1+1=10位。",
+      "设备从启动到字符进入I/O端口需0.5ms，故持续工作时最大送入速率为1/0.5ms=2000字符/s。",
+      "CPU主频50MHz，时钟周期=1/50MHz=20ns；设备传送一个字符所需0.5ms相当于0.5ms/20ns=25,000个时钟周期。",
+      "每字符传送间隔还包括10周期中断响应，以及中断服务程序前15条指令启动下一次设备传送的时间15×CPI=60周期。每字符总时间约25,000+10+60=25,070周期。",
+      "1000字符总时间约1000×25,070=25,070,000个时钟周期。",
+      "CPU每字符需执行10周期中断响应和20条服务指令（20×4=80周期），故CPU占用=1000×(10+80)=90,000周期。",
+      "中断响应阶段主要操作：关中断；保护断点和程序状态（现场）；识别中断源/取得中断向量。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干采用 verified-solutions.json 中已核验题干摘要；答案与步骤来自 verified-solutions.json。来源核验说明：对照2016原卷和参考答案，复算0.5ms/20ns、每字符25070周期、总历时25070000周期和CPU占用90000周期。；关联角色：core。"
+    },
+    "relatedCards": [
+      "程序查询与中断驱动 I/O",
+      "异步串行通信帧格式与字符速率",
+      "中断响应与异常处理",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
+  },
+  "verified-answer-2016-44::异步串行通信帧格式与字符速率": {
+    "year": 2016,
+    "index": 44,
+    "id": 373,
+    "typeName": "综合题",
+    "score": 9,
+    "answer": "（1）每字符传输10位（1起始位+7数据位+1奇校验位+1停止位），最多2000字符/s。（2）总任务时间约25,070,000个时钟周期；CPU占用约90,000个时钟周期；中断响应阶段关中断、保护断点和程序状态、识别中断源。",
+    "question": "假定CPU主频为50MHz，CPI为4。设备D采用异步串行通信方式向主机传送7位ASCII字符，通信规程中有1位奇校验位和1位停止位，从D接收启动命令到字符送入I/O端口需要0.5ms。请回答：（1）每传送一个字符，在异步串行通信线上共需传输多少位？设备D持续工作时每秒最多可向I/O端口送入多少个字符？（2）设备D采用中断方式I/O，I/O端口每收到一个字符申请一次中断，中断响应需10个时钟周期，中断服务程序共20条指令，其中第15条指令启动D。CPU读取1000个字符，求完成任务所需总时钟周期、CPU用于任务的时钟周期，以及中断响应阶段CPU执行的操作。",
+    "analysis": "本题要区分外设传送占用的总历时与CPU实际执行中断处理的时间。0.5ms设备工作时间折算为25,000个CPU时钟周期；CPU占用仅计中断响应与服务程序执行。",
+    "steps": [
+      "异步串行帧由1位起始位、7位ASCII数据位、1位奇校验位和1位停止位组成，总计1+7+1+1=10位。",
+      "设备从启动到字符进入I/O端口需0.5ms，故持续工作时最大送入速率为1/0.5ms=2000字符/s。",
+      "CPU主频50MHz，时钟周期=1/50MHz=20ns；设备传送一个字符所需0.5ms相当于0.5ms/20ns=25,000个时钟周期。",
+      "每字符传送间隔还包括10周期中断响应，以及中断服务程序前15条指令启动下一次设备传送的时间15×CPI=60周期。每字符总时间约25,000+10+60=25,070周期。",
+      "1000字符总时间约1000×25,070=25,070,000个时钟周期。",
+      "CPU每字符需执行10周期中断响应和20条服务指令（20×4=80周期），故CPU占用=1000×(10+80)=90,000周期。",
+      "中断响应阶段主要操作：关中断；保护断点和程序状态（现场）；识别中断源/取得中断向量。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干采用 verified-solutions.json 中已核验题干摘要；答案与步骤来自 verified-solutions.json。来源核验说明：对照2016原卷和参考答案，复算0.5ms/20ns、每字符25070周期、总历时25070000周期和CPU占用90000周期。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "程序查询与中断驱动 I/O",
+      "异步串行通信帧格式与字符速率",
+      "中断响应与异常处理",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
+  },
+  "verified-answer-2016-44::中断响应与异常处理": {
+    "year": 2016,
+    "index": 44,
+    "id": 373,
+    "typeName": "综合题",
+    "score": 9,
+    "answer": "（1）每字符传输10位（1起始位+7数据位+1奇校验位+1停止位），最多2000字符/s。（2）总任务时间约25,070,000个时钟周期；CPU占用约90,000个时钟周期；中断响应阶段关中断、保护断点和程序状态、识别中断源。",
+    "question": "假定CPU主频为50MHz，CPI为4。设备D采用异步串行通信方式向主机传送7位ASCII字符，通信规程中有1位奇校验位和1位停止位，从D接收启动命令到字符送入I/O端口需要0.5ms。请回答：（1）每传送一个字符，在异步串行通信线上共需传输多少位？设备D持续工作时每秒最多可向I/O端口送入多少个字符？（2）设备D采用中断方式I/O，I/O端口每收到一个字符申请一次中断，中断响应需10个时钟周期，中断服务程序共20条指令，其中第15条指令启动D。CPU读取1000个字符，求完成任务所需总时钟周期、CPU用于任务的时钟周期，以及中断响应阶段CPU执行的操作。",
+    "analysis": "本题要区分外设传送占用的总历时与CPU实际执行中断处理的时间。0.5ms设备工作时间折算为25,000个CPU时钟周期；CPU占用仅计中断响应与服务程序执行。",
+    "steps": [
+      "异步串行帧由1位起始位、7位ASCII数据位、1位奇校验位和1位停止位组成，总计1+7+1+1=10位。",
+      "设备从启动到字符进入I/O端口需0.5ms，故持续工作时最大送入速率为1/0.5ms=2000字符/s。",
+      "CPU主频50MHz，时钟周期=1/50MHz=20ns；设备传送一个字符所需0.5ms相当于0.5ms/20ns=25,000个时钟周期。",
+      "每字符传送间隔还包括10周期中断响应，以及中断服务程序前15条指令启动下一次设备传送的时间15×CPI=60周期。每字符总时间约25,000+10+60=25,070周期。",
+      "1000字符总时间约1000×25,070=25,070,000个时钟周期。",
+      "CPU每字符需执行10周期中断响应和20条服务指令（20×4=80周期），故CPU占用=1000×(10+80)=90,000周期。",
+      "中断响应阶段主要操作：关中断；保护断点和程序状态（现场）；识别中断源/取得中断向量。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干采用 verified-solutions.json 中已核验题干摘要；答案与步骤来自 verified-solutions.json。来源核验说明：对照2016原卷和参考答案，复算0.5ms/20ns、每字符25070周期、总历时25070000周期和CPU占用90000周期。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "程序查询与中断驱动 I/O",
+      "异步串行通信帧格式与字符速率",
+      "中断响应与异常处理",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
+  },
+  "verified-answer-2016-44::计算机性能指标 CPI 与 CPU 时间": {
+    "year": 2016,
+    "index": 44,
+    "id": 373,
+    "typeName": "综合题",
+    "score": 9,
+    "answer": "（1）每字符传输10位（1起始位+7数据位+1奇校验位+1停止位），最多2000字符/s。（2）总任务时间约25,070,000个时钟周期；CPU占用约90,000个时钟周期；中断响应阶段关中断、保护断点和程序状态、识别中断源。",
+    "question": "假定CPU主频为50MHz，CPI为4。设备D采用异步串行通信方式向主机传送7位ASCII字符，通信规程中有1位奇校验位和1位停止位，从D接收启动命令到字符送入I/O端口需要0.5ms。请回答：（1）每传送一个字符，在异步串行通信线上共需传输多少位？设备D持续工作时每秒最多可向I/O端口送入多少个字符？（2）设备D采用中断方式I/O，I/O端口每收到一个字符申请一次中断，中断响应需10个时钟周期，中断服务程序共20条指令，其中第15条指令启动D。CPU读取1000个字符，求完成任务所需总时钟周期、CPU用于任务的时钟周期，以及中断响应阶段CPU执行的操作。",
+    "analysis": "本题要区分外设传送占用的总历时与CPU实际执行中断处理的时间。0.5ms设备工作时间折算为25,000个CPU时钟周期；CPU占用仅计中断响应与服务程序执行。",
+    "steps": [
+      "异步串行帧由1位起始位、7位ASCII数据位、1位奇校验位和1位停止位组成，总计1+7+1+1=10位。",
+      "设备从启动到字符进入I/O端口需0.5ms，故持续工作时最大送入速率为1/0.5ms=2000字符/s。",
+      "CPU主频50MHz，时钟周期=1/50MHz=20ns；设备传送一个字符所需0.5ms相当于0.5ms/20ns=25,000个时钟周期。",
+      "每字符传送间隔还包括10周期中断响应，以及中断服务程序前15条指令启动下一次设备传送的时间15×CPI=60周期。每字符总时间约25,000+10+60=25,070周期。",
+      "1000字符总时间约1000×25,070=25,070,000个时钟周期。",
+      "CPU每字符需执行10周期中断响应和20条服务指令（20×4=80周期），故CPU占用=1000×(10+80)=90,000周期。",
+      "中断响应阶段主要操作：关中断；保护断点和程序状态（现场）；识别中断源/取得中断向量。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干采用 verified-solutions.json 中已核验题干摘要；答案与步骤来自 verified-solutions.json。来源核验说明：对照2016原卷和参考答案，复算0.5ms/20ns、每字符25070周期、总历时25070000周期和CPU占用90000周期。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "程序查询与中断驱动 I/O",
+      "异步串行通信帧格式与字符速率",
+      "中断响应与异常处理",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
+  },
+  "verified-answer-2016-45::Cache组相联映射与地址字段": {
+    "year": 2016,
+    "index": 45,
+    "id": 374,
+    "typeName": "综合题",
+    "score": 14,
+    "answer": "（1）A=19位、B=19位、C=11位、D=13位、E=9位、F=9位、G=6位；B存放虚页号。（2）块号4099映射到Cache第3组（从0开始），H字段为9位二进制000001000（十进制8）。（3）缺页处理开销远大于Cache缺失。（4）Cache—主存速度差较小，直写开销可接受；主存—磁盘速度差巨大，页面采用回写可避免每次修改都同步写磁盘。",
+    "question": "某计算机采用页式虚拟存储管理方式，按字节编址，虚拟地址32位、物理地址24位，页大小8KB；TLB采用全相联映射；Cache数据区大小64KB，按2路组相联组织，主存块大小64B。根据存储访问过程图回答：（1）图中字段A～G的位数各是多少？TLB标记字段B存放什么信息？（2）将块号4099的主存块装入Cache时映射的Cache组号是多少？对应H字段内容是什么？（3）Cache缺失处理与缺页处理哪一种开销更大，为什么？（4）为什么Cache可采用直写（Write Through），而修改页面内容时总是采用回写（Write Back）策略？",
+    "analysis": "先按页大小确定虚拟页号与页内偏移，再按主存块大小、Cache总容量和相联度拆分物理地址。组相联映射的组号为块号对组数取模，标记为商。最后区分Cache—主存与主存—磁盘两个层次的速度差。",
+    "steps": [
+      "页大小8KB=2^13B，页内偏移D为13位；虚拟地址32位，因此虚页号A=32−13=19位。TLB全相联，标记字段B保存虚页号，故B=19位。",
+      "物理地址24位，物理页框号C=24−13=11位。",
+      "主存块大小64B=2^6B，块内偏移G=6位。",
+      "Cache数据区64KB，2路组相联，每组容量=2×64B=128B；组数=64KB/128B=512=2^9，因此组索引F=9位。",
+      "Cache标记E=物理地址位数−组索引−块内偏移=24−9−6=9位。",
+      "主存块号4099映射组号=4099 mod 512=3；Cache标记H=floor(4099/512)=8，写成9位二进制为000001000。",
+      "Cache缺失通常从主存调入数据块；缺页需要操作系统介入并从磁盘调入页面，磁盘访问延迟远大于主存访问，因此缺页处理开销更大。",
+      "Cache直写只需同步更新Cache和主存，速度差距相对可控；若页面修改也直写磁盘，每次写入都可能触发慢速磁盘I/O，因此主存—外存层次采用回写，页面换出时再写回。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干采用 verified-solutions.json 中已核验题干摘要；答案与步骤来自 verified-solutions.json。来源核验说明：核对原题存储访问示意图与原卷参考答案：A/B=19、C=11、D=13、E/F=9、G=6；4099 mod 512=3，商为8。；关联角色：core。"
+    },
+    "relatedCards": [
+      "Cache组相联映射与地址字段",
+      "虚拟地址分页与页内偏移",
+      "TLB 与快表命中",
+      "Cache 替换与写策略"
+    ]
+  },
+  "verified-answer-2016-45::虚拟地址分页与页内偏移": {
+    "year": 2016,
+    "index": 45,
+    "id": 374,
+    "typeName": "综合题",
+    "score": 14,
+    "answer": "（1）A=19位、B=19位、C=11位、D=13位、E=9位、F=9位、G=6位；B存放虚页号。（2）块号4099映射到Cache第3组（从0开始），H字段为9位二进制000001000（十进制8）。（3）缺页处理开销远大于Cache缺失。（4）Cache—主存速度差较小，直写开销可接受；主存—磁盘速度差巨大，页面采用回写可避免每次修改都同步写磁盘。",
+    "question": "某计算机采用页式虚拟存储管理方式，按字节编址，虚拟地址32位、物理地址24位，页大小8KB；TLB采用全相联映射；Cache数据区大小64KB，按2路组相联组织，主存块大小64B。根据存储访问过程图回答：（1）图中字段A～G的位数各是多少？TLB标记字段B存放什么信息？（2）将块号4099的主存块装入Cache时映射的Cache组号是多少？对应H字段内容是什么？（3）Cache缺失处理与缺页处理哪一种开销更大，为什么？（4）为什么Cache可采用直写（Write Through），而修改页面内容时总是采用回写（Write Back）策略？",
+    "analysis": "先按页大小确定虚拟页号与页内偏移，再按主存块大小、Cache总容量和相联度拆分物理地址。组相联映射的组号为块号对组数取模，标记为商。最后区分Cache—主存与主存—磁盘两个层次的速度差。",
+    "steps": [
+      "页大小8KB=2^13B，页内偏移D为13位；虚拟地址32位，因此虚页号A=32−13=19位。TLB全相联，标记字段B保存虚页号，故B=19位。",
+      "物理地址24位，物理页框号C=24−13=11位。",
+      "主存块大小64B=2^6B，块内偏移G=6位。",
+      "Cache数据区64KB，2路组相联，每组容量=2×64B=128B；组数=64KB/128B=512=2^9，因此组索引F=9位。",
+      "Cache标记E=物理地址位数−组索引−块内偏移=24−9−6=9位。",
+      "主存块号4099映射组号=4099 mod 512=3；Cache标记H=floor(4099/512)=8，写成9位二进制为000001000。",
+      "Cache缺失通常从主存调入数据块；缺页需要操作系统介入并从磁盘调入页面，磁盘访问延迟远大于主存访问，因此缺页处理开销更大。",
+      "Cache直写只需同步更新Cache和主存，速度差距相对可控；若页面修改也直写磁盘，每次写入都可能触发慢速磁盘I/O，因此主存—外存层次采用回写，页面换出时再写回。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干采用 verified-solutions.json 中已核验题干摘要；答案与步骤来自 verified-solutions.json。来源核验说明：核对原题存储访问示意图与原卷参考答案：A/B=19、C=11、D=13、E/F=9、G=6；4099 mod 512=3，商为8。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "Cache组相联映射与地址字段",
+      "虚拟地址分页与页内偏移",
+      "TLB 与快表命中",
+      "Cache 替换与写策略"
+    ]
+  },
+  "verified-answer-2016-45::Cache 替换与写策略": {
+    "year": 2016,
+    "index": 45,
+    "id": 374,
+    "typeName": "综合题",
+    "score": 14,
+    "answer": "（1）A=19位、B=19位、C=11位、D=13位、E=9位、F=9位、G=6位；B存放虚页号。（2）块号4099映射到Cache第3组（从0开始），H字段为9位二进制000001000（十进制8）。（3）缺页处理开销远大于Cache缺失。（4）Cache—主存速度差较小，直写开销可接受；主存—磁盘速度差巨大，页面采用回写可避免每次修改都同步写磁盘。",
+    "question": "某计算机采用页式虚拟存储管理方式，按字节编址，虚拟地址32位、物理地址24位，页大小8KB；TLB采用全相联映射；Cache数据区大小64KB，按2路组相联组织，主存块大小64B。根据存储访问过程图回答：（1）图中字段A～G的位数各是多少？TLB标记字段B存放什么信息？（2）将块号4099的主存块装入Cache时映射的Cache组号是多少？对应H字段内容是什么？（3）Cache缺失处理与缺页处理哪一种开销更大，为什么？（4）为什么Cache可采用直写（Write Through），而修改页面内容时总是采用回写（Write Back）策略？",
+    "analysis": "先按页大小确定虚拟页号与页内偏移，再按主存块大小、Cache总容量和相联度拆分物理地址。组相联映射的组号为块号对组数取模，标记为商。最后区分Cache—主存与主存—磁盘两个层次的速度差。",
+    "steps": [
+      "页大小8KB=2^13B，页内偏移D为13位；虚拟地址32位，因此虚页号A=32−13=19位。TLB全相联，标记字段B保存虚页号，故B=19位。",
+      "物理地址24位，物理页框号C=24−13=11位。",
+      "主存块大小64B=2^6B，块内偏移G=6位。",
+      "Cache数据区64KB，2路组相联，每组容量=2×64B=128B；组数=64KB/128B=512=2^9，因此组索引F=9位。",
+      "Cache标记E=物理地址位数−组索引−块内偏移=24−9−6=9位。",
+      "主存块号4099映射组号=4099 mod 512=3；Cache标记H=floor(4099/512)=8，写成9位二进制为000001000。",
+      "Cache缺失通常从主存调入数据块；缺页需要操作系统介入并从磁盘调入页面，磁盘访问延迟远大于主存访问，因此缺页处理开销更大。",
+      "Cache直写只需同步更新Cache和主存，速度差距相对可控；若页面修改也直写磁盘，每次写入都可能触发慢速磁盘I/O，因此主存—外存层次采用回写，页面换出时再写回。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干采用 verified-solutions.json 中已核验题干摘要；答案与步骤来自 verified-solutions.json。来源核验说明：核对原题存储访问示意图与原卷参考答案：A/B=19、C=11、D=13、E/F=9、G=6；4099 mod 512=3，商为8。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "Cache组相联映射与地址字段",
+      "虚拟地址分页与页内偏移",
+      "TLB 与快表命中",
+      "Cache 替换与写策略"
+    ]
+  },
+  "verified-answer-2019-45::x86 CALL/JMP/RET 控制转移与相对寻址": {
+    "year": 2019,
+    "index": 45,
+    "id": 515,
+    "typeName": "综合题",
+    "score": 16,
+    "answer": "（1）f(10)递归调用f1共10次；第16行call递归调用。（2）第12行jle是条件转移；call、jmp、ret必然改变控制流。（3）第17行地址0040102AH；相对偏移=00401000H−0040102AH=FFFFFFD6H，机器码字节D6 FF FF FF，采用小端方式。（4）13!超过32位int上限，改用long long返回类型和运算。（5）若乘积高32位不是低32位符号位的扩展则OF=1；可在imul后使用into触发溢出异常。",
+    "question": "（16分）已知 f(n)=n!=n×(n−1)×…×2×1，计算 f(n) 的 C 语言函数 f1 及其在32位计算机 M 上的部分机器级代码如下： int f1(int n) { ... 11 00401018 83 7D 08 01 cmp dword ptr [ebp+8],1 12 0040101C 7E 17 jle f1+35h (00401035) 13 0040101E 8B 45 08 mov eax,dword ptr [ebp+8] 14 00401021 83 E8 01 sub eax,1 15 00401024 50 push eax 16 00401025 E8 D6 FF FF FF call f1 (00401000) ... 19 00401030 0F AF C1 imul eax,ecx 20 00401033 EB 05 jmp f1+3Ah (0040103a) ... 21 00401035 B8 01 00 00 00 mov eax,1 ... 30 0040104A C3 ret } 机器级代码行包括行号、虚拟地址、机器指令和汇编指令；M按字节编址，int占32位。 计算f(10)需要调用f1多少次？哪条指令执行递归调用？ 哪条是条件转移指令？哪些指令一定改变控制流？ 求第17行虚拟地址、CALL相对偏移量，并判断大端或小端方式。 解释f(13)=6227020800而f1(13)=1932053504的原因，并说明如何修改源程序。 说明IMUL乘积高、低32位满足什么条件时OF=1，以及应在IMUL后增加什么指令以便溢出时转异常处理。",
+    "analysis": "本题综合递归调用、控制转移、相对寻址、小端存储、整数表示范围与乘法溢出。相对位移必须从下一条指令地址计算；signed int溢出不能当作正确数学结果。",
+    "steps": [
+      "f(10)从初次调用开始依次计算10、9、…、1，共10次函数调用；第16行call f1是递归调用点。",
+      "第12行jle根据比较标志决定是否跳转，是条件转移；call调用子程序、jmp无条件跳转、ret返回，均改变控制流。",
+      "第16行call位于00401025H，机器指令长度5B，下一条指令地址为0040102AH。",
+      "相对位移以call下一条指令地址为基准：目标00401000H−0040102AH=−2AH=FFFFFFD6H；低位字节先存储，故偏移字节D6 FF FF FF表明小端。",
+      "13!=6,227,020,800，大于32位有符号int最大值2,147,483,647；原函数返回值1932053504是32位截断/回绕后的结果，不能代表数学阶乘。",
+      "将函数返回类型改为long long，并保证递归乘法表达式在long long类型中计算，可正确表示13!。",
+      "32位有符号乘法若完整64位乘积的高32位不等于低32位最高位的符号扩展（全0或全1），则截断结果溢出，OF=1；INTO在OF=1时触发溢出中断。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2019年原题机器码清单与公开参考答案逐项复算地址、相对位移、大小端、13!溢出和OF判定条件。；关联角色：core。"
+    },
+    "relatedCards": [
+      "递归算法与递归树",
+      "x86 CALL/JMP/RET 控制转移与相对寻址",
+      "定点补码加减与溢出",
+      "整数溢出检测与异常处理",
+      "大小端存储"
+    ]
+  },
+  "verified-answer-2019-45::定点补码加减与溢出": {
+    "year": 2019,
+    "index": 45,
+    "id": 515,
+    "typeName": "综合题",
+    "score": 16,
+    "answer": "（1）f(10)递归调用f1共10次；第16行call递归调用。（2）第12行jle是条件转移；call、jmp、ret必然改变控制流。（3）第17行地址0040102AH；相对偏移=00401000H−0040102AH=FFFFFFD6H，机器码字节D6 FF FF FF，采用小端方式。（4）13!超过32位int上限，改用long long返回类型和运算。（5）若乘积高32位不是低32位符号位的扩展则OF=1；可在imul后使用into触发溢出异常。",
+    "question": "（16分）已知 f(n)=n!=n×(n−1)×…×2×1，计算 f(n) 的 C 语言函数 f1 及其在32位计算机 M 上的部分机器级代码如下： int f1(int n) { ... 11 00401018 83 7D 08 01 cmp dword ptr [ebp+8],1 12 0040101C 7E 17 jle f1+35h (00401035) 13 0040101E 8B 45 08 mov eax,dword ptr [ebp+8] 14 00401021 83 E8 01 sub eax,1 15 00401024 50 push eax 16 00401025 E8 D6 FF FF FF call f1 (00401000) ... 19 00401030 0F AF C1 imul eax,ecx 20 00401033 EB 05 jmp f1+3Ah (0040103a) ... 21 00401035 B8 01 00 00 00 mov eax,1 ... 30 0040104A C3 ret } 机器级代码行包括行号、虚拟地址、机器指令和汇编指令；M按字节编址，int占32位。 计算f(10)需要调用f1多少次？哪条指令执行递归调用？ 哪条是条件转移指令？哪些指令一定改变控制流？ 求第17行虚拟地址、CALL相对偏移量，并判断大端或小端方式。 解释f(13)=6227020800而f1(13)=1932053504的原因，并说明如何修改源程序。 说明IMUL乘积高、低32位满足什么条件时OF=1，以及应在IMUL后增加什么指令以便溢出时转异常处理。",
+    "analysis": "本题综合递归调用、控制转移、相对寻址、小端存储、整数表示范围与乘法溢出。相对位移必须从下一条指令地址计算；signed int溢出不能当作正确数学结果。",
+    "steps": [
+      "f(10)从初次调用开始依次计算10、9、…、1，共10次函数调用；第16行call f1是递归调用点。",
+      "第12行jle根据比较标志决定是否跳转，是条件转移；call调用子程序、jmp无条件跳转、ret返回，均改变控制流。",
+      "第16行call位于00401025H，机器指令长度5B，下一条指令地址为0040102AH。",
+      "相对位移以call下一条指令地址为基准：目标00401000H−0040102AH=−2AH=FFFFFFD6H；低位字节先存储，故偏移字节D6 FF FF FF表明小端。",
+      "13!=6,227,020,800，大于32位有符号int最大值2,147,483,647；原函数返回值1932053504是32位截断/回绕后的结果，不能代表数学阶乘。",
+      "将函数返回类型改为long long，并保证递归乘法表达式在long long类型中计算，可正确表示13!。",
+      "32位有符号乘法若完整64位乘积的高32位不等于低32位最高位的符号扩展（全0或全1），则截断结果溢出，OF=1；INTO在OF=1时触发溢出中断。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2019年原题机器码清单与公开参考答案逐项复算地址、相对位移、大小端、13!溢出和OF判定条件。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "递归算法与递归树",
+      "x86 CALL/JMP/RET 控制转移与相对寻址",
+      "定点补码加减与溢出",
+      "整数溢出检测与异常处理",
+      "大小端存储"
+    ]
+  },
+  "verified-answer-2019-45::整数溢出检测与异常处理": {
+    "year": 2019,
+    "index": 45,
+    "id": 515,
+    "typeName": "综合题",
+    "score": 16,
+    "answer": "（1）f(10)递归调用f1共10次；第16行call递归调用。（2）第12行jle是条件转移；call、jmp、ret必然改变控制流。（3）第17行地址0040102AH；相对偏移=00401000H−0040102AH=FFFFFFD6H，机器码字节D6 FF FF FF，采用小端方式。（4）13!超过32位int上限，改用long long返回类型和运算。（5）若乘积高32位不是低32位符号位的扩展则OF=1；可在imul后使用into触发溢出异常。",
+    "question": "（16分）已知 f(n)=n!=n×(n−1)×…×2×1，计算 f(n) 的 C 语言函数 f1 及其在32位计算机 M 上的部分机器级代码如下： int f1(int n) { ... 11 00401018 83 7D 08 01 cmp dword ptr [ebp+8],1 12 0040101C 7E 17 jle f1+35h (00401035) 13 0040101E 8B 45 08 mov eax,dword ptr [ebp+8] 14 00401021 83 E8 01 sub eax,1 15 00401024 50 push eax 16 00401025 E8 D6 FF FF FF call f1 (00401000) ... 19 00401030 0F AF C1 imul eax,ecx 20 00401033 EB 05 jmp f1+3Ah (0040103a) ... 21 00401035 B8 01 00 00 00 mov eax,1 ... 30 0040104A C3 ret } 机器级代码行包括行号、虚拟地址、机器指令和汇编指令；M按字节编址，int占32位。 计算f(10)需要调用f1多少次？哪条指令执行递归调用？ 哪条是条件转移指令？哪些指令一定改变控制流？ 求第17行虚拟地址、CALL相对偏移量，并判断大端或小端方式。 解释f(13)=6227020800而f1(13)=1932053504的原因，并说明如何修改源程序。 说明IMUL乘积高、低32位满足什么条件时OF=1，以及应在IMUL后增加什么指令以便溢出时转异常处理。",
+    "analysis": "本题综合递归调用、控制转移、相对寻址、小端存储、整数表示范围与乘法溢出。相对位移必须从下一条指令地址计算；signed int溢出不能当作正确数学结果。",
+    "steps": [
+      "f(10)从初次调用开始依次计算10、9、…、1，共10次函数调用；第16行call f1是递归调用点。",
+      "第12行jle根据比较标志决定是否跳转，是条件转移；call调用子程序、jmp无条件跳转、ret返回，均改变控制流。",
+      "第16行call位于00401025H，机器指令长度5B，下一条指令地址为0040102AH。",
+      "相对位移以call下一条指令地址为基准：目标00401000H−0040102AH=−2AH=FFFFFFD6H；低位字节先存储，故偏移字节D6 FF FF FF表明小端。",
+      "13!=6,227,020,800，大于32位有符号int最大值2,147,483,647；原函数返回值1932053504是32位截断/回绕后的结果，不能代表数学阶乘。",
+      "将函数返回类型改为long long，并保证递归乘法表达式在long long类型中计算，可正确表示13!。",
+      "32位有符号乘法若完整64位乘积的高32位不等于低32位最高位的符号扩展（全0或全1），则截断结果溢出，OF=1；INTO在OF=1时触发溢出中断。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2019年原题机器码清单与公开参考答案逐项复算地址、相对位移、大小端、13!溢出和OF判定条件。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "递归算法与递归树",
+      "x86 CALL/JMP/RET 控制转移与相对寻址",
+      "定点补码加减与溢出",
+      "整数溢出检测与异常处理",
+      "大小端存储"
+    ]
+  },
+  "verified-answer-2019-45::大小端存储": {
+    "year": 2019,
+    "index": 45,
+    "id": 515,
+    "typeName": "综合题",
+    "score": 16,
+    "answer": "（1）f(10)递归调用f1共10次；第16行call递归调用。（2）第12行jle是条件转移；call、jmp、ret必然改变控制流。（3）第17行地址0040102AH；相对偏移=00401000H−0040102AH=FFFFFFD6H，机器码字节D6 FF FF FF，采用小端方式。（4）13!超过32位int上限，改用long long返回类型和运算。（5）若乘积高32位不是低32位符号位的扩展则OF=1；可在imul后使用into触发溢出异常。",
+    "question": "（16分）已知 f(n)=n!=n×(n−1)×…×2×1，计算 f(n) 的 C 语言函数 f1 及其在32位计算机 M 上的部分机器级代码如下： int f1(int n) { ... 11 00401018 83 7D 08 01 cmp dword ptr [ebp+8],1 12 0040101C 7E 17 jle f1+35h (00401035) 13 0040101E 8B 45 08 mov eax,dword ptr [ebp+8] 14 00401021 83 E8 01 sub eax,1 15 00401024 50 push eax 16 00401025 E8 D6 FF FF FF call f1 (00401000) ... 19 00401030 0F AF C1 imul eax,ecx 20 00401033 EB 05 jmp f1+3Ah (0040103a) ... 21 00401035 B8 01 00 00 00 mov eax,1 ... 30 0040104A C3 ret } 机器级代码行包括行号、虚拟地址、机器指令和汇编指令；M按字节编址，int占32位。 计算f(10)需要调用f1多少次？哪条指令执行递归调用？ 哪条是条件转移指令？哪些指令一定改变控制流？ 求第17行虚拟地址、CALL相对偏移量，并判断大端或小端方式。 解释f(13)=6227020800而f1(13)=1932053504的原因，并说明如何修改源程序。 说明IMUL乘积高、低32位满足什么条件时OF=1，以及应在IMUL后增加什么指令以便溢出时转异常处理。",
+    "analysis": "本题综合递归调用、控制转移、相对寻址、小端存储、整数表示范围与乘法溢出。相对位移必须从下一条指令地址计算；signed int溢出不能当作正确数学结果。",
+    "steps": [
+      "f(10)从初次调用开始依次计算10、9、…、1，共10次函数调用；第16行call f1是递归调用点。",
+      "第12行jle根据比较标志决定是否跳转，是条件转移；call调用子程序、jmp无条件跳转、ret返回，均改变控制流。",
+      "第16行call位于00401025H，机器指令长度5B，下一条指令地址为0040102AH。",
+      "相对位移以call下一条指令地址为基准：目标00401000H−0040102AH=−2AH=FFFFFFD6H；低位字节先存储，故偏移字节D6 FF FF FF表明小端。",
+      "13!=6,227,020,800，大于32位有符号int最大值2,147,483,647；原函数返回值1932053504是32位截断/回绕后的结果，不能代表数学阶乘。",
+      "将函数返回类型改为long long，并保证递归乘法表达式在long long类型中计算，可正确表示13!。",
+      "32位有符号乘法若完整64位乘积的高32位不等于低32位最高位的符号扩展（全0或全1），则截断结果溢出，OF=1；INTO在OF=1时触发溢出中断。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2019年原题机器码清单与公开参考答案逐项复算地址、相对位移、大小端、13!溢出和OF判定条件。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "递归算法与递归树",
+      "x86 CALL/JMP/RET 控制转移与相对寻址",
+      "定点补码加减与溢出",
+      "整数溢出检测与异常处理",
+      "大小端存储"
+    ]
+  },
+  "verified-answer-2019-46::Cache 直接映射与组相联": {
+    "year": 2019,
+    "index": 46,
+    "id": 516,
+    "typeName": "综合题",
+    "score": 7,
+    "answer": "push地址00401000H与ret地址0040104AH的高20位均为00401H，均位于4KB页00401000H—00401FFFH。Cache共64行、4路组相联，组数16；块内偏移为地址[5:0]，组号为[9:6]，Tag为[31:10]。call地址00401025H的组号为0。",
+    "question": "（7分）对于第45题，若计算机M的主存地址为32位，采用分页存储管理方式，页大小为4KB： 第1行push指令和第30行ret指令是否在同一页中？说明理由。 若指令Cache有64行，采用4路组相联映射，主存块大小为64B，则32位主存地址中哪几位表示块内地址、Cache组号和标记（Tag）？ 读取第16行call指令时，只可能在指令Cache的哪一组中命中？说明理由。",
+    "analysis": "页大小决定页内偏移位数；Cache块大小决定块内偏移位数；Cache组数决定组索引位数。不要把页内偏移与Cache块内偏移混为一谈。",
+    "steps": [
+      "页大小4KB=2^12B，页内偏移12位；页号为地址高20位。",
+      "push地址00401000H与ret地址0040104AH的高20位均为00401H，故位于同一虚拟页。",
+      "Cache行数64、4路组相联，组数=64/4=16，需要4位组索引。",
+      "主存块大小64B=2^6B，块内偏移占低6位；32位地址剩余22位为Tag。",
+      "地址字段从低到高为：块内偏移[5:0]、组索引[9:6]、Tag[31:10]。",
+      "call地址00401025H的页内低12位为025H，二进制低10位为0000100101；[9:6]为0000，因此只能映射到Cache第0组。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2019年原题地址表与公开参考答案复核页号、Cache组数、字段位段和call指令组号。；关联角色：core。"
+    },
+    "relatedCards": [
+      "页表结构与地址转换",
+      "Cache 直接映射与组相联",
+      "Cache 映射与命中率",
+      "指令系统与寻址方式"
+    ]
+  },
+  "verified-answer-2019-46::Cache 映射与命中率": {
+    "year": 2019,
+    "index": 46,
+    "id": 516,
+    "typeName": "综合题",
+    "score": 7,
+    "answer": "push地址00401000H与ret地址0040104AH的高20位均为00401H，均位于4KB页00401000H—00401FFFH。Cache共64行、4路组相联，组数16；块内偏移为地址[5:0]，组号为[9:6]，Tag为[31:10]。call地址00401025H的组号为0。",
+    "question": "（7分）对于第45题，若计算机M的主存地址为32位，采用分页存储管理方式，页大小为4KB： 第1行push指令和第30行ret指令是否在同一页中？说明理由。 若指令Cache有64行，采用4路组相联映射，主存块大小为64B，则32位主存地址中哪几位表示块内地址、Cache组号和标记（Tag）？ 读取第16行call指令时，只可能在指令Cache的哪一组中命中？说明理由。",
+    "analysis": "页大小决定页内偏移位数；Cache块大小决定块内偏移位数；Cache组数决定组索引位数。不要把页内偏移与Cache块内偏移混为一谈。",
+    "steps": [
+      "页大小4KB=2^12B，页内偏移12位；页号为地址高20位。",
+      "push地址00401000H与ret地址0040104AH的高20位均为00401H，故位于同一虚拟页。",
+      "Cache行数64、4路组相联，组数=64/4=16，需要4位组索引。",
+      "主存块大小64B=2^6B，块内偏移占低6位；32位地址剩余22位为Tag。",
+      "地址字段从低到高为：块内偏移[5:0]、组索引[9:6]、Tag[31:10]。",
+      "call地址00401025H的页内低12位为025H，二进制低10位为0000100101；[9:6]为0000，因此只能映射到Cache第0组。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2019年原题地址表与公开参考答案复核页号、Cache组数、字段位段和call指令组号。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "页表结构与地址转换",
+      "Cache 直接映射与组相联",
+      "Cache 映射与命中率",
+      "指令系统与寻址方式"
+    ]
+  },
+  "verified-answer-2019-46::指令系统与寻址方式": {
+    "year": 2019,
+    "index": 46,
+    "id": 516,
+    "typeName": "综合题",
+    "score": 7,
+    "answer": "push地址00401000H与ret地址0040104AH的高20位均为00401H，均位于4KB页00401000H—00401FFFH。Cache共64行、4路组相联，组数16；块内偏移为地址[5:0]，组号为[9:6]，Tag为[31:10]。call地址00401025H的组号为0。",
+    "question": "（7分）对于第45题，若计算机M的主存地址为32位，采用分页存储管理方式，页大小为4KB： 第1行push指令和第30行ret指令是否在同一页中？说明理由。 若指令Cache有64行，采用4路组相联映射，主存块大小为64B，则32位主存地址中哪几位表示块内地址、Cache组号和标记（Tag）？ 读取第16行call指令时，只可能在指令Cache的哪一组中命中？说明理由。",
+    "analysis": "页大小决定页内偏移位数；Cache块大小决定块内偏移位数；Cache组数决定组索引位数。不要把页内偏移与Cache块内偏移混为一谈。",
+    "steps": [
+      "页大小4KB=2^12B，页内偏移12位；页号为地址高20位。",
+      "push地址00401000H与ret地址0040104AH的高20位均为00401H，故位于同一虚拟页。",
+      "Cache行数64、4路组相联，组数=64/4=16，需要4位组索引。",
+      "主存块大小64B=2^6B，块内偏移占低6位；32位地址剩余22位为Tag。",
+      "地址字段从低到高为：块内偏移[5:0]、组索引[9:6]、Tag[31:10]。",
+      "call地址00401025H的页内低12位为025H，二进制低10位为0000100101；[9:6]为0000，因此只能映射到Cache第0组。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2019年原题地址表与公开参考答案复核页号、Cache组数、字段位段和call指令组号。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "页表结构与地址转换",
+      "Cache 直接映射与组相联",
+      "Cache 映射与命中率",
+      "指令系统与寻址方式"
+    ]
+  },
+  "verified-answer-2020-43::移位加法乘法与阵列乘法器": {
+    "year": 2020,
+    "index": 43,
+    "id": 560,
+    "typeName": "综合题",
+    "score": 13,
+    "answer": "（1）乘法可由移位与加法实现，软件可按乘数各位循环判断并累加移位后的被乘数。（2）控制逻辑负责控制循环次数、部分积累加、移位及寄存器更新。（3）软件循环乘法最长，阵列乘法器实现的硬件乘法最短。（4）x=2^31−1、y=2时，带符号和无符号64位乘积均为00000000FFFFFFFEH；imul的32位有符号结果溢出，umul的32位无符号结果不溢出；无符号乘积高32位非0即溢出。",
+    "question": "（13分）有实现x×y的两个C语言函数： unsigned umul (unsigned x, unsigned y) { return x*y; } int imul (int x, int y) { return x * y; } 假定某计算机M中ALU只能进行加减运算和逻辑运算。回答： 若M的指令系统中没有乘法指令，但有加法、减法和移位等指令，则在M上也能实现上述两个函数中的乘法运算，为什么？ 若M的指令系统中有乘法指令，基于ALU、移位器、寄存器以及相应控制逻辑实现乘法指令时，控制逻辑的作用是什么？ 对于①没有乘法指令；②使用ALU和移位器实现的乘法指令；③使用阵列乘法器实现的乘法指令，umul()在哪种情况下执行时间最长、哪种情况下最短？说明理由。 n位整数乘法指令可保存2n位乘积，当仅取低n位作为乘积时可能溢出。当n=32、x=2^31−1、y=2时，带符号和无符号整数乘法指令得到的2n位乘积分别是什么（十六进制）？umul()和imul()是否溢出？无符号乘法仅取低n位时如何用2n位乘积判断溢出？",
+    "analysis": "需区分乘法器完整2n位乘积、指令只保留低n位的结果，以及C类型的有符号/无符号解释。对同一位模式，signed和unsigned数值解释不同，溢出判定规则也不同。",
+    "steps": [
+      "移位加法原理：将乘数按二进制展开，若第i位为1，就把被乘数左移i位后累加；乘法可由加法、移位和判断指令组合实现。",
+      "硬件乘法指令的控制逻辑负责逐位检查乘数、控制部分积累加、控制移位方向/次数、更新寄存器并决定何时结束。",
+      "软件实现需执行多条循环指令，取指译码和循环控制开销最大；ALU+移位器迭代实现通常需要多个周期；阵列乘法器可并行生成部分积，通常最快。",
+      "x=7FFFFFFFH，y=00000002H，完整64位乘积为00000000FFFFFFFEH；两种解释的位模式相同。",
+      "无符号结果低32位FFFFFFFEH=4294967294，仍不超过2^32−1，故umul不溢出；无符号乘积高32位全0是无溢出的充要条件。",
+      "有符号结果低32位FFFFFFFEH解释为−2，但数学乘积4294967294超过INT_MAX=2147483647，故imul溢出。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2020年原题与参考解析复核移位加法、控制逻辑、执行时间比较、64位乘积及signed/unsigned溢出判断。；关联角色：core。"
+    },
+    "relatedCards": [
+      "移位加法乘法与阵列乘法器",
+      "定点补码加减与溢出",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
+  },
+  "verified-answer-2020-43::定点补码加减与溢出": {
+    "year": 2020,
+    "index": 43,
+    "id": 560,
+    "typeName": "综合题",
+    "score": 13,
+    "answer": "（1）乘法可由移位与加法实现，软件可按乘数各位循环判断并累加移位后的被乘数。（2）控制逻辑负责控制循环次数、部分积累加、移位及寄存器更新。（3）软件循环乘法最长，阵列乘法器实现的硬件乘法最短。（4）x=2^31−1、y=2时，带符号和无符号64位乘积均为00000000FFFFFFFEH；imul的32位有符号结果溢出，umul的32位无符号结果不溢出；无符号乘积高32位非0即溢出。",
+    "question": "（13分）有实现x×y的两个C语言函数： unsigned umul (unsigned x, unsigned y) { return x*y; } int imul (int x, int y) { return x * y; } 假定某计算机M中ALU只能进行加减运算和逻辑运算。回答： 若M的指令系统中没有乘法指令，但有加法、减法和移位等指令，则在M上也能实现上述两个函数中的乘法运算，为什么？ 若M的指令系统中有乘法指令，基于ALU、移位器、寄存器以及相应控制逻辑实现乘法指令时，控制逻辑的作用是什么？ 对于①没有乘法指令；②使用ALU和移位器实现的乘法指令；③使用阵列乘法器实现的乘法指令，umul()在哪种情况下执行时间最长、哪种情况下最短？说明理由。 n位整数乘法指令可保存2n位乘积，当仅取低n位作为乘积时可能溢出。当n=32、x=2^31−1、y=2时，带符号和无符号整数乘法指令得到的2n位乘积分别是什么（十六进制）？umul()和imul()是否溢出？无符号乘法仅取低n位时如何用2n位乘积判断溢出？",
+    "analysis": "需区分乘法器完整2n位乘积、指令只保留低n位的结果，以及C类型的有符号/无符号解释。对同一位模式，signed和unsigned数值解释不同，溢出判定规则也不同。",
+    "steps": [
+      "移位加法原理：将乘数按二进制展开，若第i位为1，就把被乘数左移i位后累加；乘法可由加法、移位和判断指令组合实现。",
+      "硬件乘法指令的控制逻辑负责逐位检查乘数、控制部分积累加、控制移位方向/次数、更新寄存器并决定何时结束。",
+      "软件实现需执行多条循环指令，取指译码和循环控制开销最大；ALU+移位器迭代实现通常需要多个周期；阵列乘法器可并行生成部分积，通常最快。",
+      "x=7FFFFFFFH，y=00000002H，完整64位乘积为00000000FFFFFFFEH；两种解释的位模式相同。",
+      "无符号结果低32位FFFFFFFEH=4294967294，仍不超过2^32−1，故umul不溢出；无符号乘积高32位全0是无溢出的充要条件。",
+      "有符号结果低32位FFFFFFFEH解释为−2，但数学乘积4294967294超过INT_MAX=2147483647，故imul溢出。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2020年原题与参考解析复核移位加法、控制逻辑、执行时间比较、64位乘积及signed/unsigned溢出判断。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "移位加法乘法与阵列乘法器",
+      "定点补码加减与溢出",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
+  },
+  "verified-answer-2020-43::计算机性能指标 CPI 与 CPU 时间": {
+    "year": 2020,
+    "index": 43,
+    "id": 560,
+    "typeName": "综合题",
+    "score": 13,
+    "answer": "（1）乘法可由移位与加法实现，软件可按乘数各位循环判断并累加移位后的被乘数。（2）控制逻辑负责控制循环次数、部分积累加、移位及寄存器更新。（3）软件循环乘法最长，阵列乘法器实现的硬件乘法最短。（4）x=2^31−1、y=2时，带符号和无符号64位乘积均为00000000FFFFFFFEH；imul的32位有符号结果溢出，umul的32位无符号结果不溢出；无符号乘积高32位非0即溢出。",
+    "question": "（13分）有实现x×y的两个C语言函数： unsigned umul (unsigned x, unsigned y) { return x*y; } int imul (int x, int y) { return x * y; } 假定某计算机M中ALU只能进行加减运算和逻辑运算。回答： 若M的指令系统中没有乘法指令，但有加法、减法和移位等指令，则在M上也能实现上述两个函数中的乘法运算，为什么？ 若M的指令系统中有乘法指令，基于ALU、移位器、寄存器以及相应控制逻辑实现乘法指令时，控制逻辑的作用是什么？ 对于①没有乘法指令；②使用ALU和移位器实现的乘法指令；③使用阵列乘法器实现的乘法指令，umul()在哪种情况下执行时间最长、哪种情况下最短？说明理由。 n位整数乘法指令可保存2n位乘积，当仅取低n位作为乘积时可能溢出。当n=32、x=2^31−1、y=2时，带符号和无符号整数乘法指令得到的2n位乘积分别是什么（十六进制）？umul()和imul()是否溢出？无符号乘法仅取低n位时如何用2n位乘积判断溢出？",
+    "analysis": "需区分乘法器完整2n位乘积、指令只保留低n位的结果，以及C类型的有符号/无符号解释。对同一位模式，signed和unsigned数值解释不同，溢出判定规则也不同。",
+    "steps": [
+      "移位加法原理：将乘数按二进制展开，若第i位为1，就把被乘数左移i位后累加；乘法可由加法、移位和判断指令组合实现。",
+      "硬件乘法指令的控制逻辑负责逐位检查乘数、控制部分积累加、控制移位方向/次数、更新寄存器并决定何时结束。",
+      "软件实现需执行多条循环指令，取指译码和循环控制开销最大；ALU+移位器迭代实现通常需要多个周期；阵列乘法器可并行生成部分积，通常最快。",
+      "x=7FFFFFFFH，y=00000002H，完整64位乘积为00000000FFFFFFFEH；两种解释的位模式相同。",
+      "无符号结果低32位FFFFFFFEH=4294967294，仍不超过2^32−1，故umul不溢出；无符号乘积高32位全0是无溢出的充要条件。",
+      "有符号结果低32位FFFFFFFEH解释为−2，但数学乘积4294967294超过INT_MAX=2147483647，故imul溢出。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2020年原题与参考解析复核移位加法、控制逻辑、执行时间比较、64位乘积及signed/unsigned溢出判断。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "移位加法乘法与阵列乘法器",
+      "定点补码加减与溢出",
+      "计算机性能指标 CPI 与 CPU 时间"
+    ]
+  },
+  "verified-answer-2020-44::Cache 映射与命中率": {
+    "year": 2020,
+    "index": 44,
+    "id": 561,
+    "typeName": "综合题",
+    "score": 10,
+    "answer": "主存块64B，块内偏移6位；数据区32KB、8路组相联，组数=32KB/(64B×8)=64，组索引6位，Tag=20位；8路LRU状态按参考答案计3位，无修改位（直写）。数组s共4096B，分64个主存块，每块首次访问缺失一次，共64次。指令地址00010003H映射到指令Cache第0组，初始为空故缺失；调入该块、写入Tag=00010H并置有效位后按偏移3读取。",
+    "question": "（10分）假定主存地址为32位，按字节编址，指令Cache和数据Cache与主存之间均采用8路组相联映射方式、直写（Write Through）写策略和LRU替换算法，主存块大小为64B，数据区容量各为32KB。开始时Cache均为空。回答： Cache每一行中标记（Tag）、LRU位各占几位？是否有修改位？ 程序段 for (k = 0; k < 1024; k++) s[k] = 2 * s[k]; 若数组s及变量k均为int型，int占4B，k分配在寄存器中，数组s在主存中的起始地址为008000C0H，求执行过程中访问数组s的数据Cache缺失次数。 若CPU最先开始的访问操作是读取主存单元00010003H中的指令，简述从Cache中访问该指令的过程，包括Cache缺失处理过程。",
+    "analysis": "写直达意味着每次写命中都同步写下一级存储器，不需脏位；LRU用于8路组内替换。数组连续按行访问时每个64B块装入一次，之后块内访问利用空间局部性。",
+    "steps": [
+      "块大小64B=2^6，因此地址低6位是块内偏移。",
+      "每个Cache数据区32KB，8路组相联，每组8行，每行64B；组数=32768/(8×64)=64=2^6，故组索引6位。",
+      "Tag位数=32−6−6=20位。参考答案按8路选择状态计3位LRU；直写策略不需要脏位。",
+      "数组长度=1024×4B=4096B，起始地址008000C0H低6位为0，恰好块对齐；每块64B可容纳16个int，数组共64块。",
+      "每个主存块第一次读访问时发生一次缺失并装入Cache；之后该块内其余15个元素的读及写均命中，因此总缺失64次。",
+      "指令地址00010003H的块内偏移为3，组索引[11:6]=0，Tag[31:12]=00010H。Cache初始为空，第0组缺失，主存块装入该组任一空行，写入Tag并置有效位、更新LRU，再按偏移3取指。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2020年原题与参考解析复算Cache字段、LRU/脏位、数组块数及首次指令访问缺失处理。；关联角色：core。"
+    },
+    "relatedCards": [
+      "Cache 映射与命中率",
+      "Cache 替换与写策略",
+      "存储器层次与主存组织"
+    ]
+  },
+  "verified-answer-2020-44::Cache 替换与写策略": {
+    "year": 2020,
+    "index": 44,
+    "id": 561,
+    "typeName": "综合题",
+    "score": 10,
+    "answer": "主存块64B，块内偏移6位；数据区32KB、8路组相联，组数=32KB/(64B×8)=64，组索引6位，Tag=20位；8路LRU状态按参考答案计3位，无修改位（直写）。数组s共4096B，分64个主存块，每块首次访问缺失一次，共64次。指令地址00010003H映射到指令Cache第0组，初始为空故缺失；调入该块、写入Tag=00010H并置有效位后按偏移3读取。",
+    "question": "（10分）假定主存地址为32位，按字节编址，指令Cache和数据Cache与主存之间均采用8路组相联映射方式、直写（Write Through）写策略和LRU替换算法，主存块大小为64B，数据区容量各为32KB。开始时Cache均为空。回答： Cache每一行中标记（Tag）、LRU位各占几位？是否有修改位？ 程序段 for (k = 0; k < 1024; k++) s[k] = 2 * s[k]; 若数组s及变量k均为int型，int占4B，k分配在寄存器中，数组s在主存中的起始地址为008000C0H，求执行过程中访问数组s的数据Cache缺失次数。 若CPU最先开始的访问操作是读取主存单元00010003H中的指令，简述从Cache中访问该指令的过程，包括Cache缺失处理过程。",
+    "analysis": "写直达意味着每次写命中都同步写下一级存储器，不需脏位；LRU用于8路组内替换。数组连续按行访问时每个64B块装入一次，之后块内访问利用空间局部性。",
+    "steps": [
+      "块大小64B=2^6，因此地址低6位是块内偏移。",
+      "每个Cache数据区32KB，8路组相联，每组8行，每行64B；组数=32768/(8×64)=64=2^6，故组索引6位。",
+      "Tag位数=32−6−6=20位。参考答案按8路选择状态计3位LRU；直写策略不需要脏位。",
+      "数组长度=1024×4B=4096B，起始地址008000C0H低6位为0，恰好块对齐；每块64B可容纳16个int，数组共64块。",
+      "每个主存块第一次读访问时发生一次缺失并装入Cache；之后该块内其余15个元素的读及写均命中，因此总缺失64次。",
+      "指令地址00010003H的块内偏移为3，组索引[11:6]=0，Tag[31:12]=00010H。Cache初始为空，第0组缺失，主存块装入该组任一空行，写入Tag并置有效位、更新LRU，再按偏移3取指。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2020年原题与参考解析复算Cache字段、LRU/脏位、数组块数及首次指令访问缺失处理。；关联角色：core。"
+    },
+    "relatedCards": [
+      "Cache 映射与命中率",
+      "Cache 替换与写策略",
+      "存储器层次与主存组织"
+    ]
+  },
+  "verified-answer-2020-44::存储器层次与主存组织": {
+    "year": 2020,
+    "index": 44,
+    "id": 561,
+    "typeName": "综合题",
+    "score": 10,
+    "answer": "主存块64B，块内偏移6位；数据区32KB、8路组相联，组数=32KB/(64B×8)=64，组索引6位，Tag=20位；8路LRU状态按参考答案计3位，无修改位（直写）。数组s共4096B，分64个主存块，每块首次访问缺失一次，共64次。指令地址00010003H映射到指令Cache第0组，初始为空故缺失；调入该块、写入Tag=00010H并置有效位后按偏移3读取。",
+    "question": "（10分）假定主存地址为32位，按字节编址，指令Cache和数据Cache与主存之间均采用8路组相联映射方式、直写（Write Through）写策略和LRU替换算法，主存块大小为64B，数据区容量各为32KB。开始时Cache均为空。回答： Cache每一行中标记（Tag）、LRU位各占几位？是否有修改位？ 程序段 for (k = 0; k < 1024; k++) s[k] = 2 * s[k]; 若数组s及变量k均为int型，int占4B，k分配在寄存器中，数组s在主存中的起始地址为008000C0H，求执行过程中访问数组s的数据Cache缺失次数。 若CPU最先开始的访问操作是读取主存单元00010003H中的指令，简述从Cache中访问该指令的过程，包括Cache缺失处理过程。",
+    "analysis": "写直达意味着每次写命中都同步写下一级存储器，不需脏位；LRU用于8路组内替换。数组连续按行访问时每个64B块装入一次，之后块内访问利用空间局部性。",
+    "steps": [
+      "块大小64B=2^6，因此地址低6位是块内偏移。",
+      "每个Cache数据区32KB，8路组相联，每组8行，每行64B；组数=32768/(8×64)=64=2^6，故组索引6位。",
+      "Tag位数=32−6−6=20位。参考答案按8路选择状态计3位LRU；直写策略不需要脏位。",
+      "数组长度=1024×4B=4096B，起始地址008000C0H低6位为0，恰好块对齐；每块64B可容纳16个int，数组共64块。",
+      "每个主存块第一次读访问时发生一次缺失并装入Cache；之后该块内其余15个元素的读及写均命中，因此总缺失64次。",
+      "指令地址00010003H的块内偏移为3，组索引[11:6]=0，Tag[31:12]=00010H。Cache初始为空，第0组缺失，主存块装入该组任一空行，写入Tag并置有效位、更新LRU，再按偏移3取指。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2020年原题与参考解析复算Cache字段、LRU/脏位、数组块数及首次指令访问缺失处理。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "Cache 映射与命中率",
+      "Cache 替换与写策略",
+      "存储器层次与主存组织"
+    ]
+  },
+  "verified-answer-2021-43::指令格式与操作码扩展": {
+    "year": 2021,
+    "index": 43,
+    "id": 567,
+    "typeName": "综合题",
+    "score": 15,
+    "answer": "（1）ALU宽16位；可寻址空间2^20B=1MB；IR 16位、MAR 20位、MDR 8位。（2）R型操作码4位，最多16种；I/J共享6位操作码空间，排除R型占用的全0前缀后最多63种；寄存器编号2位，最多4个。（3）01B2H为R[3]←R[1]−R[2]，结果B04AH，不溢出；01B3H为R[3]←R[1]×R[2]，低16位结果8290H，带符号乘法溢出。（4）imm符号扩展。（5）无条件转移用J型。",
+    "question": "（15分）假定计算机M字长为16位，按字节编址，连接CPU和主存的系统总线中地址线为20位、数据线为8位，采用16位定长指令字，指令格式及说明如下图。 其中op1～op3为操作码，rs、rt和rd为通用寄存器编号，R[r]表示寄存器r的内容，imm为立即数，target为转移目标形式地址。回答： ALU宽度、可寻址主存空间大小，以及IR、MAR、MDR的位数分别是多少？ R型格式最多定义多少种操作？I型和J型格式合计最多定义多少种操作？通用寄存器最多有多少个？ 若op1=0010和0011分别表示带符号整数减法和带符号整数乘法，指令01B2H的功能是什么？寄存器1、2、3内容分别为B052H、0008H、0020H时，执行01B2H和01B3H后，R3内容各是什么？是否溢出？ I型访存指令的imm为带符号偏移量，地址计算时应零扩展还是符号扩展？ 无条件转移指令可采用哪种格式？",
+    "analysis": "本题把字长、地址线、数据线、指令长度、操作码字段和寄存器编号字段分别对应到硬件寄存器宽度及编码容量。注意乘法结果寄存器只保留低16位，但溢出判断必须基于完整数学乘积是否能用16位补码表示。",
+    "steps": [
+      "字长16位，ALU运算对象宽度为16位。地址线20根且按字节编址，可寻址空间为2^20B=1MB。指令定长16位，IR为16位；MAR与地址线等宽为20位；MDR与数据线等宽为8位。",
+      "R型操作码字段4位，可编码2^4=16种操作。I型和J型操作码字段共享6位，且前缀0000被R型占用，因此I/J合计最多2^6−1=63种。寄存器编号字段2位，最多4个通用寄存器。",
+      "01B2H转为二进制后R型操作码为0010，寄存器字段对应rs=1、rt=2、rd=3，故执行R[3]←R[1]−R[2]。",
+      "B052H按16位补码解释为−20398，0008H为8；−20398−8=−20406，16位结果B04AH，仍在−32768至32767范围内，不溢出。",
+      "01B3H操作码0011表示带符号乘法：−20398×8=−163184，超出16位有符号数范围；低16位结果为8290H，发生溢出。",
+      "I型访存偏移量imm为带符号数，地址计算必须符号扩展，才能正确表示负偏移。J型格式包含转移目标target，可用于无条件跳转。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2021年原卷题面和两份参考解析复核字段位宽、操作码容量、01B2H/01B3H解码、补码运算与溢出判断。；关联角色：core。"
+    },
+    "relatedCards": [
+      "指令格式与操作码扩展",
+      "定点补码加减与溢出",
+      "ALU 算术逻辑单元",
+      "立即数与直接间接寻址"
+    ]
+  },
+  "verified-answer-2021-43::定点补码加减与溢出": {
+    "year": 2021,
+    "index": 43,
+    "id": 567,
+    "typeName": "综合题",
+    "score": 15,
+    "answer": "（1）ALU宽16位；可寻址空间2^20B=1MB；IR 16位、MAR 20位、MDR 8位。（2）R型操作码4位，最多16种；I/J共享6位操作码空间，排除R型占用的全0前缀后最多63种；寄存器编号2位，最多4个。（3）01B2H为R[3]←R[1]−R[2]，结果B04AH，不溢出；01B3H为R[3]←R[1]×R[2]，低16位结果8290H，带符号乘法溢出。（4）imm符号扩展。（5）无条件转移用J型。",
+    "question": "（15分）假定计算机M字长为16位，按字节编址，连接CPU和主存的系统总线中地址线为20位、数据线为8位，采用16位定长指令字，指令格式及说明如下图。 其中op1～op3为操作码，rs、rt和rd为通用寄存器编号，R[r]表示寄存器r的内容，imm为立即数，target为转移目标形式地址。回答： ALU宽度、可寻址主存空间大小，以及IR、MAR、MDR的位数分别是多少？ R型格式最多定义多少种操作？I型和J型格式合计最多定义多少种操作？通用寄存器最多有多少个？ 若op1=0010和0011分别表示带符号整数减法和带符号整数乘法，指令01B2H的功能是什么？寄存器1、2、3内容分别为B052H、0008H、0020H时，执行01B2H和01B3H后，R3内容各是什么？是否溢出？ I型访存指令的imm为带符号偏移量，地址计算时应零扩展还是符号扩展？ 无条件转移指令可采用哪种格式？",
+    "analysis": "本题把字长、地址线、数据线、指令长度、操作码字段和寄存器编号字段分别对应到硬件寄存器宽度及编码容量。注意乘法结果寄存器只保留低16位，但溢出判断必须基于完整数学乘积是否能用16位补码表示。",
+    "steps": [
+      "字长16位，ALU运算对象宽度为16位。地址线20根且按字节编址，可寻址空间为2^20B=1MB。指令定长16位，IR为16位；MAR与地址线等宽为20位；MDR与数据线等宽为8位。",
+      "R型操作码字段4位，可编码2^4=16种操作。I型和J型操作码字段共享6位，且前缀0000被R型占用，因此I/J合计最多2^6−1=63种。寄存器编号字段2位，最多4个通用寄存器。",
+      "01B2H转为二进制后R型操作码为0010，寄存器字段对应rs=1、rt=2、rd=3，故执行R[3]←R[1]−R[2]。",
+      "B052H按16位补码解释为−20398，0008H为8；−20398−8=−20406，16位结果B04AH，仍在−32768至32767范围内，不溢出。",
+      "01B3H操作码0011表示带符号乘法：−20398×8=−163184，超出16位有符号数范围；低16位结果为8290H，发生溢出。",
+      "I型访存偏移量imm为带符号数，地址计算必须符号扩展，才能正确表示负偏移。J型格式包含转移目标target，可用于无条件跳转。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2021年原卷题面和两份参考解析复核字段位宽、操作码容量、01B2H/01B3H解码、补码运算与溢出判断。；关联角色：core。"
+    },
+    "relatedCards": [
+      "指令格式与操作码扩展",
+      "定点补码加减与溢出",
+      "ALU 算术逻辑单元",
+      "立即数与直接间接寻址"
+    ]
+  },
+  "verified-answer-2021-43::ALU 算术逻辑单元": {
+    "year": 2021,
+    "index": 43,
+    "id": 567,
+    "typeName": "综合题",
+    "score": 15,
+    "answer": "（1）ALU宽16位；可寻址空间2^20B=1MB；IR 16位、MAR 20位、MDR 8位。（2）R型操作码4位，最多16种；I/J共享6位操作码空间，排除R型占用的全0前缀后最多63种；寄存器编号2位，最多4个。（3）01B2H为R[3]←R[1]−R[2]，结果B04AH，不溢出；01B3H为R[3]←R[1]×R[2]，低16位结果8290H，带符号乘法溢出。（4）imm符号扩展。（5）无条件转移用J型。",
+    "question": "（15分）假定计算机M字长为16位，按字节编址，连接CPU和主存的系统总线中地址线为20位、数据线为8位，采用16位定长指令字，指令格式及说明如下图。 其中op1～op3为操作码，rs、rt和rd为通用寄存器编号，R[r]表示寄存器r的内容，imm为立即数，target为转移目标形式地址。回答： ALU宽度、可寻址主存空间大小，以及IR、MAR、MDR的位数分别是多少？ R型格式最多定义多少种操作？I型和J型格式合计最多定义多少种操作？通用寄存器最多有多少个？ 若op1=0010和0011分别表示带符号整数减法和带符号整数乘法，指令01B2H的功能是什么？寄存器1、2、3内容分别为B052H、0008H、0020H时，执行01B2H和01B3H后，R3内容各是什么？是否溢出？ I型访存指令的imm为带符号偏移量，地址计算时应零扩展还是符号扩展？ 无条件转移指令可采用哪种格式？",
+    "analysis": "本题把字长、地址线、数据线、指令长度、操作码字段和寄存器编号字段分别对应到硬件寄存器宽度及编码容量。注意乘法结果寄存器只保留低16位，但溢出判断必须基于完整数学乘积是否能用16位补码表示。",
+    "steps": [
+      "字长16位，ALU运算对象宽度为16位。地址线20根且按字节编址，可寻址空间为2^20B=1MB。指令定长16位，IR为16位；MAR与地址线等宽为20位；MDR与数据线等宽为8位。",
+      "R型操作码字段4位，可编码2^4=16种操作。I型和J型操作码字段共享6位，且前缀0000被R型占用，因此I/J合计最多2^6−1=63种。寄存器编号字段2位，最多4个通用寄存器。",
+      "01B2H转为二进制后R型操作码为0010，寄存器字段对应rs=1、rt=2、rd=3，故执行R[3]←R[1]−R[2]。",
+      "B052H按16位补码解释为−20398，0008H为8；−20398−8=−20406，16位结果B04AH，仍在−32768至32767范围内，不溢出。",
+      "01B3H操作码0011表示带符号乘法：−20398×8=−163184，超出16位有符号数范围；低16位结果为8290H，发生溢出。",
+      "I型访存偏移量imm为带符号数，地址计算必须符号扩展，才能正确表示负偏移。J型格式包含转移目标target，可用于无条件跳转。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2021年原卷题面和两份参考解析复核字段位宽、操作码容量、01B2H/01B3H解码、补码运算与溢出判断。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "指令格式与操作码扩展",
+      "定点补码加减与溢出",
+      "ALU 算术逻辑单元",
+      "立即数与直接间接寻址"
+    ]
+  },
+  "verified-answer-2021-43::立即数与直接间接寻址": {
+    "year": 2021,
+    "index": 43,
+    "id": 567,
+    "typeName": "综合题",
+    "score": 15,
+    "answer": "（1）ALU宽16位；可寻址空间2^20B=1MB；IR 16位、MAR 20位、MDR 8位。（2）R型操作码4位，最多16种；I/J共享6位操作码空间，排除R型占用的全0前缀后最多63种；寄存器编号2位，最多4个。（3）01B2H为R[3]←R[1]−R[2]，结果B04AH，不溢出；01B3H为R[3]←R[1]×R[2]，低16位结果8290H，带符号乘法溢出。（4）imm符号扩展。（5）无条件转移用J型。",
+    "question": "（15分）假定计算机M字长为16位，按字节编址，连接CPU和主存的系统总线中地址线为20位、数据线为8位，采用16位定长指令字，指令格式及说明如下图。 其中op1～op3为操作码，rs、rt和rd为通用寄存器编号，R[r]表示寄存器r的内容，imm为立即数，target为转移目标形式地址。回答： ALU宽度、可寻址主存空间大小，以及IR、MAR、MDR的位数分别是多少？ R型格式最多定义多少种操作？I型和J型格式合计最多定义多少种操作？通用寄存器最多有多少个？ 若op1=0010和0011分别表示带符号整数减法和带符号整数乘法，指令01B2H的功能是什么？寄存器1、2、3内容分别为B052H、0008H、0020H时，执行01B2H和01B3H后，R3内容各是什么？是否溢出？ I型访存指令的imm为带符号偏移量，地址计算时应零扩展还是符号扩展？ 无条件转移指令可采用哪种格式？",
+    "analysis": "本题把字长、地址线、数据线、指令长度、操作码字段和寄存器编号字段分别对应到硬件寄存器宽度及编码容量。注意乘法结果寄存器只保留低16位，但溢出判断必须基于完整数学乘积是否能用16位补码表示。",
+    "steps": [
+      "字长16位，ALU运算对象宽度为16位。地址线20根且按字节编址，可寻址空间为2^20B=1MB。指令定长16位，IR为16位；MAR与地址线等宽为20位；MDR与数据线等宽为8位。",
+      "R型操作码字段4位，可编码2^4=16种操作。I型和J型操作码字段共享6位，且前缀0000被R型占用，因此I/J合计最多2^6−1=63种。寄存器编号字段2位，最多4个通用寄存器。",
+      "01B2H转为二进制后R型操作码为0010，寄存器字段对应rs=1、rt=2、rd=3，故执行R[3]←R[1]−R[2]。",
+      "B052H按16位补码解释为−20398，0008H为8；−20398−8=−20406，16位结果B04AH，仍在−32768至32767范围内，不溢出。",
+      "01B3H操作码0011表示带符号乘法：−20398×8=−163184，超出16位有符号数范围；低16位结果为8290H，发生溢出。",
+      "I型访存偏移量imm为带符号数，地址计算必须符号扩展，才能正确表示负偏移。J型格式包含转移目标target，可用于无条件跳转。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2021年原卷题面和两份参考解析复核字段位宽、操作码容量、01B2H/01B3H解码、补码运算与溢出判断。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "指令格式与操作码扩展",
+      "定点补码加减与溢出",
+      "ALU 算术逻辑单元",
+      "立即数与直接间接寻址"
+    ]
+  },
+  "verified-answer-2021-44::TLB 组相联映射与 LRU 替换": {
+    "year": 2021,
+    "index": 44,
+    "id": 568,
+    "typeName": "综合题",
+    "score": 8,
+    "answer": "（1）虚拟地址高18位（VA[29:12]）为虚页号，低12位（VA[11:0]）为页内地址。（2）TLB共8组，组号3位，VA[14:12]为组号，VA[29:15]为标记。（3）虚页号4的TLB表项被替换；组号序列为2、4、0、7、2、4、4、4，访问20时组4中LRU页4被替换。（4）虚拟地址由30位增至32位，TLB标记增加2位，每个表项增加2位。",
+    "question": "（8分）假设计算机M的主存地址为24位，按字节编址；采用分页存储管理方式，虚拟地址为30位，页大小为4KB；TLB采用2路组相联方式和LRU替换策略，共8组。回答： 虚拟地址中哪几位表示虚页号？哪几位表示页内地址？ TLB访问时虚页号高位作标记、低位作组号，虚拟地址中哪几位是TLB标记、哪几位是TLB组号？ TLB初始为空，依次访问虚页号10、12、16、7、26、4、12、20，哪个虚页号对应的表项被替换？说明理由。 若虚拟地址位数增加到32位，TLB表项位数增加几位？",
+    "analysis": "TLB组相联映射与Cache组相联的地址拆分方法相同。先按VPN低3位定位组，再在组内比较Tag；LRU只在同一组内生效，不能把不同组的访问混在一起计算替换顺序。",
+    "steps": [
+      "页大小4KB=2^12B，页内偏移为低12位VA[11:0]；虚拟地址30位，因此虚页号为高18位VA[29:12]。",
+      "TLB共8组=2^3，虚页号低3位用于组索引，即VA[14:12]；其余高15位VA[29:15]作为TLB Tag。",
+      "虚页号对8取模得到组号：10→2，12→4，16→0，7→7，26→2，4→4，12→4，20→4。",
+      "只有组4被访问4次，且该组只有2路。访问序列为12、4、12、20：前两次填入12和4；第三次命中12，使12成为最近使用；访问20时发生替换，淘汰最近最少使用的4。",
+      "虚拟地址从30位增加到32位，页内偏移仍12位，虚页号增加2位；TLB组数不变，新增位进入Tag，因此每个TLB表项增加2位。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照2021年原题、PGCode与计算机考研杂货铺解析复核地址位段、组号序列、LRU替换对象及Tag增长位数。；关联角色：core。"
+    },
+    "relatedCards": [
+      "TLB 与快表命中",
+      "TLB 组相联映射与 LRU 替换",
+      "页表结构与地址转换"
+    ]
+  },
+  "verified-answer-2022-43::补码加减与溢出判断": {
+    "year": 2022,
+    "index": 43,
+    "id": 574,
+    "typeName": "综合题",
+    "score": 15,
+    "answer": "（1）SF=F15；加法OF=¬A15¬B15F15+A15B15¬F15；减法OF=¬A15B15F15+A15¬B15¬F15。（2）Y暂存ALU一个输入，Z暂存ALU输出，解决单总线同一时刻只能传一个数据的问题。（3）rs、rd均4位，最多16个GPR；两者来自IR；rd连接地址译码器。（4）PCout、MARin；Read；MDRout、IRin，共7周期。（5）控制信号由CU产生，IR和FR输出接入CU。",
+    "question": "（15分）某CPU中部分数据通路如题43图所示，其中GPRs为通用寄存器组，FR为标志寄存器，用于存放ALU产生的标志信息；带箭头虚线表示控制信号，如Read、Write分别表示主存读、主存写，MDRin表示内部总线上数据写入MDR，MDRout表示MDR内容送内部总线。 题图数据通路包含系统总线、MAR、MDR、PC、IR、内部总线、GPRs、ALU、暂存器Y/Z及标志寄存器FR。 设ALU输入端A、B及输出端F的最高位分别为A15、B15、F15，FR中的符号标志和溢出标志分别为SF和OF，求SF、A加B及A减B时OF的逻辑表达式（输入变量为A15、B15、F15）。 为什么要设置暂存器Y和Z？ 若GPRs的输入端rs、rd分别为所读、写通用寄存器的编号，GPRs最多有多少个通用寄存器？rs和rd来自哪个寄存器？rd应连接地址译码器还是多路选择器？ 取指令阶段（不考虑PC增量）的控制信号序列是什么？若发出主存读命令到数据传送到MDR共需5个时钟周期，取指阶段至少需要几个周期？ 控制信号由什么部件产生？哪些寄存器输出连接到该部件输入端？ 查看2022年408原卷第7页及原题图",
+    "analysis": "本题覆盖补码溢出判断、单总线数据通路、寄存器组端口译码、取指微操作时序和控制器输入。加法溢出看“同号相加得异号”；减法看“异号相减且结果符号偏离被减数A”。rs是读源寄存器选择，rd是写目的寄存器选择。题目图中rs/rd字段宽度均为4位。",
+    "steps": [
+      "SF是结果符号位，因此SF=F15。",
+      "有符号加法溢出发生在两个操作数同号而结果异号：OFadd=(¬A15∧¬B15∧F15)∨(A15∧B15∧¬F15)。",
+      "有符号减法溢出发生在A、B异号且结果符号与A不同：OFsub=(¬A15∧B15∧F15)∨(A15∧¬B15∧¬F15)。",
+      "单总线任一时刻只能有一个部件向总线送有效数据；ALU需要两个输入且产生一个输出，因此Y先保存一个操作数，另一个经总线送入ALU；结果暂存在Z，待总线空闲后送回寄存器。",
+      "rs、rd各4位，可编码2^4=16个寄存器；编号字段来自IR。rs用于读出选择，接多路选择器；rd用于写入目标选择，接地址译码器。",
+      "取指：PCout与MARin同周期；Read发出读命令并等待主存5周期，数据进入MDR；MDRout与IRin同周期。因此至少1+5+1=7周期。",
+      "控制部件CU依据指令操作码/当前指令状态及条件标志产生控制信号；IR、FR的输出连接CU输入。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照原卷PDF第7—8页题干和数据通路图；参考答案对照2024版408考试大纲附录2022真题答案第62页。溢出表达式、rs/rd字段、Y/Z作用及取指7周期逐项核对。；关联角色：core。"
+    },
+    "relatedCards": [
+      "补码加减与溢出判断",
+      "单总线数据通路与暂存器",
+      "寄存器组读写端口与译码",
+      "指令周期与微操作控制"
+    ]
+  },
+  "verified-answer-2022-43::单总线数据通路与暂存器": {
+    "year": 2022,
+    "index": 43,
+    "id": 574,
+    "typeName": "综合题",
+    "score": 15,
+    "answer": "（1）SF=F15；加法OF=¬A15¬B15F15+A15B15¬F15；减法OF=¬A15B15F15+A15¬B15¬F15。（2）Y暂存ALU一个输入，Z暂存ALU输出，解决单总线同一时刻只能传一个数据的问题。（3）rs、rd均4位，最多16个GPR；两者来自IR；rd连接地址译码器。（4）PCout、MARin；Read；MDRout、IRin，共7周期。（5）控制信号由CU产生，IR和FR输出接入CU。",
+    "question": "（15分）某CPU中部分数据通路如题43图所示，其中GPRs为通用寄存器组，FR为标志寄存器，用于存放ALU产生的标志信息；带箭头虚线表示控制信号，如Read、Write分别表示主存读、主存写，MDRin表示内部总线上数据写入MDR，MDRout表示MDR内容送内部总线。 题图数据通路包含系统总线、MAR、MDR、PC、IR、内部总线、GPRs、ALU、暂存器Y/Z及标志寄存器FR。 设ALU输入端A、B及输出端F的最高位分别为A15、B15、F15，FR中的符号标志和溢出标志分别为SF和OF，求SF、A加B及A减B时OF的逻辑表达式（输入变量为A15、B15、F15）。 为什么要设置暂存器Y和Z？ 若GPRs的输入端rs、rd分别为所读、写通用寄存器的编号，GPRs最多有多少个通用寄存器？rs和rd来自哪个寄存器？rd应连接地址译码器还是多路选择器？ 取指令阶段（不考虑PC增量）的控制信号序列是什么？若发出主存读命令到数据传送到MDR共需5个时钟周期，取指阶段至少需要几个周期？ 控制信号由什么部件产生？哪些寄存器输出连接到该部件输入端？ 查看2022年408原卷第7页及原题图",
+    "analysis": "本题覆盖补码溢出判断、单总线数据通路、寄存器组端口译码、取指微操作时序和控制器输入。加法溢出看“同号相加得异号”；减法看“异号相减且结果符号偏离被减数A”。rs是读源寄存器选择，rd是写目的寄存器选择。题目图中rs/rd字段宽度均为4位。",
+    "steps": [
+      "SF是结果符号位，因此SF=F15。",
+      "有符号加法溢出发生在两个操作数同号而结果异号：OFadd=(¬A15∧¬B15∧F15)∨(A15∧B15∧¬F15)。",
+      "有符号减法溢出发生在A、B异号且结果符号与A不同：OFsub=(¬A15∧B15∧F15)∨(A15∧¬B15∧¬F15)。",
+      "单总线任一时刻只能有一个部件向总线送有效数据；ALU需要两个输入且产生一个输出，因此Y先保存一个操作数，另一个经总线送入ALU；结果暂存在Z，待总线空闲后送回寄存器。",
+      "rs、rd各4位，可编码2^4=16个寄存器；编号字段来自IR。rs用于读出选择，接多路选择器；rd用于写入目标选择，接地址译码器。",
+      "取指：PCout与MARin同周期；Read发出读命令并等待主存5周期，数据进入MDR；MDRout与IRin同周期。因此至少1+5+1=7周期。",
+      "控制部件CU依据指令操作码/当前指令状态及条件标志产生控制信号；IR、FR的输出连接CU输入。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照原卷PDF第7—8页题干和数据通路图；参考答案对照2024版408考试大纲附录2022真题答案第62页。溢出表达式、rs/rd字段、Y/Z作用及取指7周期逐项核对。；关联角色：core。"
+    },
+    "relatedCards": [
+      "补码加减与溢出判断",
+      "单总线数据通路与暂存器",
+      "寄存器组读写端口与译码",
+      "指令周期与微操作控制"
+    ]
+  },
+  "verified-answer-2022-43::寄存器组读写端口与译码": {
+    "year": 2022,
+    "index": 43,
+    "id": 574,
+    "typeName": "综合题",
+    "score": 15,
+    "answer": "（1）SF=F15；加法OF=¬A15¬B15F15+A15B15¬F15；减法OF=¬A15B15F15+A15¬B15¬F15。（2）Y暂存ALU一个输入，Z暂存ALU输出，解决单总线同一时刻只能传一个数据的问题。（3）rs、rd均4位，最多16个GPR；两者来自IR；rd连接地址译码器。（4）PCout、MARin；Read；MDRout、IRin，共7周期。（5）控制信号由CU产生，IR和FR输出接入CU。",
+    "question": "（15分）某CPU中部分数据通路如题43图所示，其中GPRs为通用寄存器组，FR为标志寄存器，用于存放ALU产生的标志信息；带箭头虚线表示控制信号，如Read、Write分别表示主存读、主存写，MDRin表示内部总线上数据写入MDR，MDRout表示MDR内容送内部总线。 题图数据通路包含系统总线、MAR、MDR、PC、IR、内部总线、GPRs、ALU、暂存器Y/Z及标志寄存器FR。 设ALU输入端A、B及输出端F的最高位分别为A15、B15、F15，FR中的符号标志和溢出标志分别为SF和OF，求SF、A加B及A减B时OF的逻辑表达式（输入变量为A15、B15、F15）。 为什么要设置暂存器Y和Z？ 若GPRs的输入端rs、rd分别为所读、写通用寄存器的编号，GPRs最多有多少个通用寄存器？rs和rd来自哪个寄存器？rd应连接地址译码器还是多路选择器？ 取指令阶段（不考虑PC增量）的控制信号序列是什么？若发出主存读命令到数据传送到MDR共需5个时钟周期，取指阶段至少需要几个周期？ 控制信号由什么部件产生？哪些寄存器输出连接到该部件输入端？ 查看2022年408原卷第7页及原题图",
+    "analysis": "本题覆盖补码溢出判断、单总线数据通路、寄存器组端口译码、取指微操作时序和控制器输入。加法溢出看“同号相加得异号”；减法看“异号相减且结果符号偏离被减数A”。rs是读源寄存器选择，rd是写目的寄存器选择。题目图中rs/rd字段宽度均为4位。",
+    "steps": [
+      "SF是结果符号位，因此SF=F15。",
+      "有符号加法溢出发生在两个操作数同号而结果异号：OFadd=(¬A15∧¬B15∧F15)∨(A15∧B15∧¬F15)。",
+      "有符号减法溢出发生在A、B异号且结果符号与A不同：OFsub=(¬A15∧B15∧F15)∨(A15∧¬B15∧¬F15)。",
+      "单总线任一时刻只能有一个部件向总线送有效数据；ALU需要两个输入且产生一个输出，因此Y先保存一个操作数，另一个经总线送入ALU；结果暂存在Z，待总线空闲后送回寄存器。",
+      "rs、rd各4位，可编码2^4=16个寄存器；编号字段来自IR。rs用于读出选择，接多路选择器；rd用于写入目标选择，接地址译码器。",
+      "取指：PCout与MARin同周期；Read发出读命令并等待主存5周期，数据进入MDR；MDRout与IRin同周期。因此至少1+5+1=7周期。",
+      "控制部件CU依据指令操作码/当前指令状态及条件标志产生控制信号；IR、FR的输出连接CU输入。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照原卷PDF第7—8页题干和数据通路图；参考答案对照2024版408考试大纲附录2022真题答案第62页。溢出表达式、rs/rd字段、Y/Z作用及取指7周期逐项核对。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "补码加减与溢出判断",
+      "单总线数据通路与暂存器",
+      "寄存器组读写端口与译码",
+      "指令周期与微操作控制"
+    ]
+  },
+  "verified-answer-2022-43::指令周期与微操作控制": {
+    "year": 2022,
+    "index": 43,
+    "id": 574,
+    "typeName": "综合题",
+    "score": 15,
+    "answer": "（1）SF=F15；加法OF=¬A15¬B15F15+A15B15¬F15；减法OF=¬A15B15F15+A15¬B15¬F15。（2）Y暂存ALU一个输入，Z暂存ALU输出，解决单总线同一时刻只能传一个数据的问题。（3）rs、rd均4位，最多16个GPR；两者来自IR；rd连接地址译码器。（4）PCout、MARin；Read；MDRout、IRin，共7周期。（5）控制信号由CU产生，IR和FR输出接入CU。",
+    "question": "（15分）某CPU中部分数据通路如题43图所示，其中GPRs为通用寄存器组，FR为标志寄存器，用于存放ALU产生的标志信息；带箭头虚线表示控制信号，如Read、Write分别表示主存读、主存写，MDRin表示内部总线上数据写入MDR，MDRout表示MDR内容送内部总线。 题图数据通路包含系统总线、MAR、MDR、PC、IR、内部总线、GPRs、ALU、暂存器Y/Z及标志寄存器FR。 设ALU输入端A、B及输出端F的最高位分别为A15、B15、F15，FR中的符号标志和溢出标志分别为SF和OF，求SF、A加B及A减B时OF的逻辑表达式（输入变量为A15、B15、F15）。 为什么要设置暂存器Y和Z？ 若GPRs的输入端rs、rd分别为所读、写通用寄存器的编号，GPRs最多有多少个通用寄存器？rs和rd来自哪个寄存器？rd应连接地址译码器还是多路选择器？ 取指令阶段（不考虑PC增量）的控制信号序列是什么？若发出主存读命令到数据传送到MDR共需5个时钟周期，取指阶段至少需要几个周期？ 控制信号由什么部件产生？哪些寄存器输出连接到该部件输入端？ 查看2022年408原卷第7页及原题图",
+    "analysis": "本题覆盖补码溢出判断、单总线数据通路、寄存器组端口译码、取指微操作时序和控制器输入。加法溢出看“同号相加得异号”；减法看“异号相减且结果符号偏离被减数A”。rs是读源寄存器选择，rd是写目的寄存器选择。题目图中rs/rd字段宽度均为4位。",
+    "steps": [
+      "SF是结果符号位，因此SF=F15。",
+      "有符号加法溢出发生在两个操作数同号而结果异号：OFadd=(¬A15∧¬B15∧F15)∨(A15∧B15∧¬F15)。",
+      "有符号减法溢出发生在A、B异号且结果符号与A不同：OFsub=(¬A15∧B15∧F15)∨(A15∧¬B15∧¬F15)。",
+      "单总线任一时刻只能有一个部件向总线送有效数据；ALU需要两个输入且产生一个输出，因此Y先保存一个操作数，另一个经总线送入ALU；结果暂存在Z，待总线空闲后送回寄存器。",
+      "rs、rd各4位，可编码2^4=16个寄存器；编号字段来自IR。rs用于读出选择，接多路选择器；rd用于写入目标选择，接地址译码器。",
+      "取指：PCout与MARin同周期；Read发出读命令并等待主存5周期，数据进入MDR；MDRout与IRin同周期。因此至少1+5+1=7周期。",
+      "控制部件CU依据指令操作码/当前指令状态及条件标志产生控制信号；IR、FR的输出连接CU输入。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照原卷PDF第7—8页题干和数据通路图；参考答案对照2024版408考试大纲附录2022真题答案第62页。溢出表达式、rs/rd字段、Y/Z作用及取指7周期逐项核对。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "补码加减与溢出判断",
+      "单总线数据通路与暂存器",
+      "寄存器组读写端口与译码",
+      "指令周期与微操作控制"
+    ]
+  },
+  "verified-answer-2022-44::磁盘 CHS 地址与平均访问时间": {
+    "year": 2022,
+    "index": 44,
+    "id": 575,
+    "typeName": "综合题",
+    "score": 8,
+    "answer": "（1）柱面号15位、磁头号3位、扇区号9位。（2）平均访问时间约9.18ms。（3）每扇区512B、缓冲区64bit=8B，需64次总线请求；周期挪用DMA在与CPU争用时可获得总线使用权。",
+    "question": "（8分）假设某磁盘驱动器中有4个双面盘片，每个盘面有20000个磁道，每个磁道有500个扇区，每个扇区可记录512字节数据，盘片转速为7200 r/min，平均寻道时间为5ms。请回答： 每个扇区包含数据及地址信息，地址信息分为3个字段。字段名称分别是什么？各字段至少占多少位？ 一个扇区的平均访问时间约为多少？ 采用周期挪用DMA传送，磁盘控制器数据缓冲区大小为64位，一个扇区读写过程中DMA向CPU发送多少次总线请求？若CPU也需要访问主存，DMA能否获得总线使用权？为什么？ 查看2022年408原卷第8页及原题图",
+    "analysis": "磁盘平均访问时间=平均寻道时间+平均旋转延迟+数据传输时间。旋转延迟取半圈；传输一个扇区用一圈时间除以每道扇区数。DMA请求次数按数据量/每次缓冲区传输量计算，注意64bit=8B。 字段位数必须按可表示的不同编号数量取向上取整的二进制位数；平均访问时间中的寻道、旋转等待和扇区传输是三个不同阶段，不能互相替代。",
+    "steps": [
+      "4个双面盘片共有8个盘面；每盘面20000条磁道，柱面数20000，柱面号至少ceil(log2 20000)=15位。",
+      "磁头/盘面数为8，磁头号至少ceil(log2 8)=3位；每磁道500个扇区，扇区号至少ceil(log2 500)=9位。",
+      "转速7200转/分，转一圈时间T=60000/7200≈8.333ms。平均旋转等待为半圈，约4.167ms。",
+      "一个扇区占一圈的1/500，传输时间约8.333/500=0.0167ms。平均访问时间=5+4.167+0.0167≈9.18ms。",
+      "64位缓冲区可容纳8字节；一个扇区512字节，需512/8=64次DMA数据传送，因此发送64次总线请求。",
+      "周期挪用方式允许DMA在需要时请求并占用一个总线周期；与CPU同时请求时按题目采用的DMA优先规则获得总线，以保证外设数据及时搬运，避免缓冲区溢出/数据丢失。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照原卷PDF第8页题干；参考答案对照2024版408考试大纲附录2022真题答案第62页。CHS字段位数、平均访问时间及64次DMA请求复算。；关联角色：core。"
+    },
+    "relatedCards": [
+      "磁盘 CHS 地址与平均访问时间",
+      "DMA 周期挪用与总线仲裁",
+      "磁盘存储结构与旋转延迟"
+    ]
+  },
+  "verified-answer-2022-44::DMA 周期挪用与总线仲裁": {
+    "year": 2022,
+    "index": 44,
+    "id": 575,
+    "typeName": "综合题",
+    "score": 8,
+    "answer": "（1）柱面号15位、磁头号3位、扇区号9位。（2）平均访问时间约9.18ms。（3）每扇区512B、缓冲区64bit=8B，需64次总线请求；周期挪用DMA在与CPU争用时可获得总线使用权。",
+    "question": "（8分）假设某磁盘驱动器中有4个双面盘片，每个盘面有20000个磁道，每个磁道有500个扇区，每个扇区可记录512字节数据，盘片转速为7200 r/min，平均寻道时间为5ms。请回答： 每个扇区包含数据及地址信息，地址信息分为3个字段。字段名称分别是什么？各字段至少占多少位？ 一个扇区的平均访问时间约为多少？ 采用周期挪用DMA传送，磁盘控制器数据缓冲区大小为64位，一个扇区读写过程中DMA向CPU发送多少次总线请求？若CPU也需要访问主存，DMA能否获得总线使用权？为什么？ 查看2022年408原卷第8页及原题图",
+    "analysis": "磁盘平均访问时间=平均寻道时间+平均旋转延迟+数据传输时间。旋转延迟取半圈；传输一个扇区用一圈时间除以每道扇区数。DMA请求次数按数据量/每次缓冲区传输量计算，注意64bit=8B。 字段位数必须按可表示的不同编号数量取向上取整的二进制位数；平均访问时间中的寻道、旋转等待和扇区传输是三个不同阶段，不能互相替代。",
+    "steps": [
+      "4个双面盘片共有8个盘面；每盘面20000条磁道，柱面数20000，柱面号至少ceil(log2 20000)=15位。",
+      "磁头/盘面数为8，磁头号至少ceil(log2 8)=3位；每磁道500个扇区，扇区号至少ceil(log2 500)=9位。",
+      "转速7200转/分，转一圈时间T=60000/7200≈8.333ms。平均旋转等待为半圈，约4.167ms。",
+      "一个扇区占一圈的1/500，传输时间约8.333/500=0.0167ms。平均访问时间=5+4.167+0.0167≈9.18ms。",
+      "64位缓冲区可容纳8字节；一个扇区512字节，需512/8=64次DMA数据传送，因此发送64次总线请求。",
+      "周期挪用方式允许DMA在需要时请求并占用一个总线周期；与CPU同时请求时按题目采用的DMA优先规则获得总线，以保证外设数据及时搬运，避免缓冲区溢出/数据丢失。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照原卷PDF第8页题干；参考答案对照2024版408考试大纲附录2022真题答案第62页。CHS字段位数、平均访问时间及64次DMA请求复算。；关联角色：core。"
+    },
+    "relatedCards": [
+      "磁盘 CHS 地址与平均访问时间",
+      "DMA 周期挪用与总线仲裁",
+      "磁盘存储结构与旋转延迟"
+    ]
+  },
+  "verified-answer-2022-44::磁盘存储结构与旋转延迟": {
+    "year": 2022,
+    "index": 44,
+    "id": 575,
+    "typeName": "综合题",
+    "score": 8,
+    "answer": "（1）柱面号15位、磁头号3位、扇区号9位。（2）平均访问时间约9.18ms。（3）每扇区512B、缓冲区64bit=8B，需64次总线请求；周期挪用DMA在与CPU争用时可获得总线使用权。",
+    "question": "（8分）假设某磁盘驱动器中有4个双面盘片，每个盘面有20000个磁道，每个磁道有500个扇区，每个扇区可记录512字节数据，盘片转速为7200 r/min，平均寻道时间为5ms。请回答： 每个扇区包含数据及地址信息，地址信息分为3个字段。字段名称分别是什么？各字段至少占多少位？ 一个扇区的平均访问时间约为多少？ 采用周期挪用DMA传送，磁盘控制器数据缓冲区大小为64位，一个扇区读写过程中DMA向CPU发送多少次总线请求？若CPU也需要访问主存，DMA能否获得总线使用权？为什么？ 查看2022年408原卷第8页及原题图",
+    "analysis": "磁盘平均访问时间=平均寻道时间+平均旋转延迟+数据传输时间。旋转延迟取半圈；传输一个扇区用一圈时间除以每道扇区数。DMA请求次数按数据量/每次缓冲区传输量计算，注意64bit=8B。 字段位数必须按可表示的不同编号数量取向上取整的二进制位数；平均访问时间中的寻道、旋转等待和扇区传输是三个不同阶段，不能互相替代。",
+    "steps": [
+      "4个双面盘片共有8个盘面；每盘面20000条磁道，柱面数20000，柱面号至少ceil(log2 20000)=15位。",
+      "磁头/盘面数为8，磁头号至少ceil(log2 8)=3位；每磁道500个扇区，扇区号至少ceil(log2 500)=9位。",
+      "转速7200转/分，转一圈时间T=60000/7200≈8.333ms。平均旋转等待为半圈，约4.167ms。",
+      "一个扇区占一圈的1/500，传输时间约8.333/500=0.0167ms。平均访问时间=5+4.167+0.0167≈9.18ms。",
+      "64位缓冲区可容纳8字节；一个扇区512字节，需512/8=64次DMA数据传送，因此发送64次总线请求。",
+      "周期挪用方式允许DMA在需要时请求并占用一个总线周期；与CPU同时请求时按题目采用的DMA优先规则获得总线，以保证外设数据及时搬运，避免缓冲区溢出/数据丢失。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干来自当前题库 questions_data.js；答案与步骤来自 verified-solutions.json。来源核验说明：已对照原卷PDF第8页题干；参考答案对照2024版408考试大纲附录2022真题答案第62页。CHS字段位数、平均访问时间及64次DMA请求复算。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "磁盘 CHS 地址与平均访问时间",
+      "DMA 周期挪用与总线仲裁",
+      "磁盘存储结构与旋转延迟"
+    ]
+  },
+  "verified-answer-2025-43::Cache组相联映射与地址字段": {
+    "year": 2025,
+    "index": 43,
+    "id": 595,
+    "typeName": "综合题",
+    "score": 12,
+    "answer": "Cache组号6，d[0]块内偏移32B；数组跨129个Cache块、共4096次读写访问，缺失率3.15%；数组跨3页，缺页3次。平均访问时间：若将200周期按公开解析的缺失访问总时间计算，为8.24周期；若按常见“额外缺失损失”口径计算，则为2+200×129/4096≈8.30周期。",
+    "question": "2025年408综合题43（12分）：计算机M字长32位、按字节编址；数据Cache数据区32KB、8路组相联、主存块64B；命中时间2周期、缺失损失200周期；页式虚拟存储、页大小4KB。数组d起始虚拟地址01800020H。程序：int x,d[2048],i; for(i=0;i<2048;i++) d[i]=d[i]/x。求Cache组号/块内地址位数及VA索引位；d[100]地址和组号；d[0]块内偏移、访问d的缺失率和平均访问时间；数组页数与缺页次数。",
+    "analysis": "本题最容易漏算的是数组起始地址并非Cache块/页面边界。偏移32B使8192B数组覆盖129个64B块和3个4KB页面。Cache访问总数必须统计读和写：2048次读+2048次写。公开全卷解析采用缺失访问200周期、命中访问2周期加权，得[129×200+(4096-129)×2]/4096≈8.24周期；若把“缺失损失200周期”严格解释为在2周期命中时间之外额外增加的缺失代价，则AMAT=2+(129/4096)×200≈8.30周期。题面措辞与公开解析的口径有歧义，保留两种计算并标注来源，不把差异隐去。",
+    "steps": [
+      "Cache行数=32KB/64B=512；8路组相联的组数=512/8=64，组索引6位；块内偏移log2(64)=6位。",
+      "4KB页内偏移为12位，块偏移VA[5:0]和组索引VA[11:6]均落在页内偏移中，因此可用VA[11:6]作为Cache索引。",
+      "d[100]地址=01800020H+100×4=018001B0H；组号=(018001B0H/64) mod64=6。",
+      "d[0]地址低6位为20H，因此块内偏移32B。",
+      "d数组长度2048×4=8192B，起始块内偏移32B，覆盖字节区间相当于32+8192=8224B，需ceil(8224/64)=129个Cache块。",
+      "每个d[i]=d[i]/x包含一次读和一次写，合计4096次数组访问。按题设访问序列，每个块首次读缺失一次，其余访问命中，缺失率=129/4096=3.1494%≈3.15%。",
+      "平均访问时间=[129×(2+200)+(4096-129)×2]/4096≈8.30? 进一步按缺失损失定义：2+129/4096×200≈8.30周期。",
+      "数组长度8192B且起始页内偏移32B，覆盖8224B，ceil(8224/4096)=3页；数组不在主存时访问这3页各触发一次缺页。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干采用 verified-solutions.json 中已核验题干摘要；答案与步骤来自 verified-solutions.json。来源核验说明：题干参数、数组地址和程序与2025全卷第43题核对；地址、组号、跨块数、访问次数和跨页数独立复算。公开全卷解析给出8.24周期，按额外缺失代价的AMAT定义可得8.30周期；两种口径均记录，避免将公开解析差异误标为确定的官方答案。；关联角色：core。"
+    },
+    "relatedCards": [
+      "Cache组相联映射与地址字段",
+      "VIPT Cache索引与页内偏移",
+      "Cache跨块访问与缺失率",
+      "Cache平均访问时间与缺失损失",
+      "数组跨页与缺页次数"
+    ]
+  },
+  "verified-answer-2025-43::VIPT Cache索引与页内偏移": {
+    "year": 2025,
+    "index": 43,
+    "id": 595,
+    "typeName": "综合题",
+    "score": 12,
+    "answer": "Cache组号6，d[0]块内偏移32B；数组跨129个Cache块、共4096次读写访问，缺失率3.15%；数组跨3页，缺页3次。平均访问时间：若将200周期按公开解析的缺失访问总时间计算，为8.24周期；若按常见“额外缺失损失”口径计算，则为2+200×129/4096≈8.30周期。",
+    "question": "2025年408综合题43（12分）：计算机M字长32位、按字节编址；数据Cache数据区32KB、8路组相联、主存块64B；命中时间2周期、缺失损失200周期；页式虚拟存储、页大小4KB。数组d起始虚拟地址01800020H。程序：int x,d[2048],i; for(i=0;i<2048;i++) d[i]=d[i]/x。求Cache组号/块内地址位数及VA索引位；d[100]地址和组号；d[0]块内偏移、访问d的缺失率和平均访问时间；数组页数与缺页次数。",
+    "analysis": "本题最容易漏算的是数组起始地址并非Cache块/页面边界。偏移32B使8192B数组覆盖129个64B块和3个4KB页面。Cache访问总数必须统计读和写：2048次读+2048次写。公开全卷解析采用缺失访问200周期、命中访问2周期加权，得[129×200+(4096-129)×2]/4096≈8.24周期；若把“缺失损失200周期”严格解释为在2周期命中时间之外额外增加的缺失代价，则AMAT=2+(129/4096)×200≈8.30周期。题面措辞与公开解析的口径有歧义，保留两种计算并标注来源，不把差异隐去。",
+    "steps": [
+      "Cache行数=32KB/64B=512；8路组相联的组数=512/8=64，组索引6位；块内偏移log2(64)=6位。",
+      "4KB页内偏移为12位，块偏移VA[5:0]和组索引VA[11:6]均落在页内偏移中，因此可用VA[11:6]作为Cache索引。",
+      "d[100]地址=01800020H+100×4=018001B0H；组号=(018001B0H/64) mod64=6。",
+      "d[0]地址低6位为20H，因此块内偏移32B。",
+      "d数组长度2048×4=8192B，起始块内偏移32B，覆盖字节区间相当于32+8192=8224B，需ceil(8224/64)=129个Cache块。",
+      "每个d[i]=d[i]/x包含一次读和一次写，合计4096次数组访问。按题设访问序列，每个块首次读缺失一次，其余访问命中，缺失率=129/4096=3.1494%≈3.15%。",
+      "平均访问时间=[129×(2+200)+(4096-129)×2]/4096≈8.30? 进一步按缺失损失定义：2+129/4096×200≈8.30周期。",
+      "数组长度8192B且起始页内偏移32B，覆盖8224B，ceil(8224/4096)=3页；数组不在主存时访问这3页各触发一次缺页。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干采用 verified-solutions.json 中已核验题干摘要；答案与步骤来自 verified-solutions.json。来源核验说明：题干参数、数组地址和程序与2025全卷第43题核对；地址、组号、跨块数、访问次数和跨页数独立复算。公开全卷解析给出8.24周期，按额外缺失代价的AMAT定义可得8.30周期；两种口径均记录，避免将公开解析差异误标为确定的官方答案。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "Cache组相联映射与地址字段",
+      "VIPT Cache索引与页内偏移",
+      "Cache跨块访问与缺失率",
+      "Cache平均访问时间与缺失损失",
+      "数组跨页与缺页次数"
+    ]
+  },
+  "verified-answer-2025-43::Cache跨块访问与缺失率": {
+    "year": 2025,
+    "index": 43,
+    "id": 595,
+    "typeName": "综合题",
+    "score": 12,
+    "answer": "Cache组号6，d[0]块内偏移32B；数组跨129个Cache块、共4096次读写访问，缺失率3.15%；数组跨3页，缺页3次。平均访问时间：若将200周期按公开解析的缺失访问总时间计算，为8.24周期；若按常见“额外缺失损失”口径计算，则为2+200×129/4096≈8.30周期。",
+    "question": "2025年408综合题43（12分）：计算机M字长32位、按字节编址；数据Cache数据区32KB、8路组相联、主存块64B；命中时间2周期、缺失损失200周期；页式虚拟存储、页大小4KB。数组d起始虚拟地址01800020H。程序：int x,d[2048],i; for(i=0;i<2048;i++) d[i]=d[i]/x。求Cache组号/块内地址位数及VA索引位；d[100]地址和组号；d[0]块内偏移、访问d的缺失率和平均访问时间；数组页数与缺页次数。",
+    "analysis": "本题最容易漏算的是数组起始地址并非Cache块/页面边界。偏移32B使8192B数组覆盖129个64B块和3个4KB页面。Cache访问总数必须统计读和写：2048次读+2048次写。公开全卷解析采用缺失访问200周期、命中访问2周期加权，得[129×200+(4096-129)×2]/4096≈8.24周期；若把“缺失损失200周期”严格解释为在2周期命中时间之外额外增加的缺失代价，则AMAT=2+(129/4096)×200≈8.30周期。题面措辞与公开解析的口径有歧义，保留两种计算并标注来源，不把差异隐去。",
+    "steps": [
+      "Cache行数=32KB/64B=512；8路组相联的组数=512/8=64，组索引6位；块内偏移log2(64)=6位。",
+      "4KB页内偏移为12位，块偏移VA[5:0]和组索引VA[11:6]均落在页内偏移中，因此可用VA[11:6]作为Cache索引。",
+      "d[100]地址=01800020H+100×4=018001B0H；组号=(018001B0H/64) mod64=6。",
+      "d[0]地址低6位为20H，因此块内偏移32B。",
+      "d数组长度2048×4=8192B，起始块内偏移32B，覆盖字节区间相当于32+8192=8224B，需ceil(8224/64)=129个Cache块。",
+      "每个d[i]=d[i]/x包含一次读和一次写，合计4096次数组访问。按题设访问序列，每个块首次读缺失一次，其余访问命中，缺失率=129/4096=3.1494%≈3.15%。",
+      "平均访问时间=[129×(2+200)+(4096-129)×2]/4096≈8.30? 进一步按缺失损失定义：2+129/4096×200≈8.30周期。",
+      "数组长度8192B且起始页内偏移32B，覆盖8224B，ceil(8224/4096)=3页；数组不在主存时访问这3页各触发一次缺页。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干采用 verified-solutions.json 中已核验题干摘要；答案与步骤来自 verified-solutions.json。来源核验说明：题干参数、数组地址和程序与2025全卷第43题核对；地址、组号、跨块数、访问次数和跨页数独立复算。公开全卷解析给出8.24周期，按额外缺失代价的AMAT定义可得8.30周期；两种口径均记录，避免将公开解析差异误标为确定的官方答案。；关联角色：core。"
+    },
+    "relatedCards": [
+      "Cache组相联映射与地址字段",
+      "VIPT Cache索引与页内偏移",
+      "Cache跨块访问与缺失率",
+      "Cache平均访问时间与缺失损失",
+      "数组跨页与缺页次数"
+    ]
+  },
+  "verified-answer-2025-43::Cache平均访问时间与缺失损失": {
+    "year": 2025,
+    "index": 43,
+    "id": 595,
+    "typeName": "综合题",
+    "score": 12,
+    "answer": "Cache组号6，d[0]块内偏移32B；数组跨129个Cache块、共4096次读写访问，缺失率3.15%；数组跨3页，缺页3次。平均访问时间：若将200周期按公开解析的缺失访问总时间计算，为8.24周期；若按常见“额外缺失损失”口径计算，则为2+200×129/4096≈8.30周期。",
+    "question": "2025年408综合题43（12分）：计算机M字长32位、按字节编址；数据Cache数据区32KB、8路组相联、主存块64B；命中时间2周期、缺失损失200周期；页式虚拟存储、页大小4KB。数组d起始虚拟地址01800020H。程序：int x,d[2048],i; for(i=0;i<2048;i++) d[i]=d[i]/x。求Cache组号/块内地址位数及VA索引位；d[100]地址和组号；d[0]块内偏移、访问d的缺失率和平均访问时间；数组页数与缺页次数。",
+    "analysis": "本题最容易漏算的是数组起始地址并非Cache块/页面边界。偏移32B使8192B数组覆盖129个64B块和3个4KB页面。Cache访问总数必须统计读和写：2048次读+2048次写。公开全卷解析采用缺失访问200周期、命中访问2周期加权，得[129×200+(4096-129)×2]/4096≈8.24周期；若把“缺失损失200周期”严格解释为在2周期命中时间之外额外增加的缺失代价，则AMAT=2+(129/4096)×200≈8.30周期。题面措辞与公开解析的口径有歧义，保留两种计算并标注来源，不把差异隐去。",
+    "steps": [
+      "Cache行数=32KB/64B=512；8路组相联的组数=512/8=64，组索引6位；块内偏移log2(64)=6位。",
+      "4KB页内偏移为12位，块偏移VA[5:0]和组索引VA[11:6]均落在页内偏移中，因此可用VA[11:6]作为Cache索引。",
+      "d[100]地址=01800020H+100×4=018001B0H；组号=(018001B0H/64) mod64=6。",
+      "d[0]地址低6位为20H，因此块内偏移32B。",
+      "d数组长度2048×4=8192B，起始块内偏移32B，覆盖字节区间相当于32+8192=8224B，需ceil(8224/64)=129个Cache块。",
+      "每个d[i]=d[i]/x包含一次读和一次写，合计4096次数组访问。按题设访问序列，每个块首次读缺失一次，其余访问命中，缺失率=129/4096=3.1494%≈3.15%。",
+      "平均访问时间=[129×(2+200)+(4096-129)×2]/4096≈8.30? 进一步按缺失损失定义：2+129/4096×200≈8.30周期。",
+      "数组长度8192B且起始页内偏移32B，覆盖8224B，ceil(8224/4096)=3页；数组不在主存时访问这3页各触发一次缺页。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干采用 verified-solutions.json 中已核验题干摘要；答案与步骤来自 verified-solutions.json。来源核验说明：题干参数、数组地址和程序与2025全卷第43题核对；地址、组号、跨块数、访问次数和跨页数独立复算。公开全卷解析给出8.24周期，按额外缺失代价的AMAT定义可得8.30周期；两种口径均记录，避免将公开解析差异误标为确定的官方答案。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "Cache组相联映射与地址字段",
+      "VIPT Cache索引与页内偏移",
+      "Cache跨块访问与缺失率",
+      "Cache平均访问时间与缺失损失",
+      "数组跨页与缺页次数"
+    ]
+  },
+  "verified-answer-2025-43::数组跨页与缺页次数": {
+    "year": 2025,
+    "index": 43,
+    "id": 595,
+    "typeName": "综合题",
+    "score": 12,
+    "answer": "Cache组号6，d[0]块内偏移32B；数组跨129个Cache块、共4096次读写访问，缺失率3.15%；数组跨3页，缺页3次。平均访问时间：若将200周期按公开解析的缺失访问总时间计算，为8.24周期；若按常见“额外缺失损失”口径计算，则为2+200×129/4096≈8.30周期。",
+    "question": "2025年408综合题43（12分）：计算机M字长32位、按字节编址；数据Cache数据区32KB、8路组相联、主存块64B；命中时间2周期、缺失损失200周期；页式虚拟存储、页大小4KB。数组d起始虚拟地址01800020H。程序：int x,d[2048],i; for(i=0;i<2048;i++) d[i]=d[i]/x。求Cache组号/块内地址位数及VA索引位；d[100]地址和组号；d[0]块内偏移、访问d的缺失率和平均访问时间；数组页数与缺页次数。",
+    "analysis": "本题最容易漏算的是数组起始地址并非Cache块/页面边界。偏移32B使8192B数组覆盖129个64B块和3个4KB页面。Cache访问总数必须统计读和写：2048次读+2048次写。公开全卷解析采用缺失访问200周期、命中访问2周期加权，得[129×200+(4096-129)×2]/4096≈8.24周期；若把“缺失损失200周期”严格解释为在2周期命中时间之外额外增加的缺失代价，则AMAT=2+(129/4096)×200≈8.30周期。题面措辞与公开解析的口径有歧义，保留两种计算并标注来源，不把差异隐去。",
+    "steps": [
+      "Cache行数=32KB/64B=512；8路组相联的组数=512/8=64，组索引6位；块内偏移log2(64)=6位。",
+      "4KB页内偏移为12位，块偏移VA[5:0]和组索引VA[11:6]均落在页内偏移中，因此可用VA[11:6]作为Cache索引。",
+      "d[100]地址=01800020H+100×4=018001B0H；组号=(018001B0H/64) mod64=6。",
+      "d[0]地址低6位为20H，因此块内偏移32B。",
+      "d数组长度2048×4=8192B，起始块内偏移32B，覆盖字节区间相当于32+8192=8224B，需ceil(8224/64)=129个Cache块。",
+      "每个d[i]=d[i]/x包含一次读和一次写，合计4096次数组访问。按题设访问序列，每个块首次读缺失一次，其余访问命中，缺失率=129/4096=3.1494%≈3.15%。",
+      "平均访问时间=[129×(2+200)+(4096-129)×2]/4096≈8.30? 进一步按缺失损失定义：2+129/4096×200≈8.30周期。",
+      "数组长度8192B且起始页内偏移32B，覆盖8224B，ceil(8224/4096)=3页；数组不在主存时访问这3页各触发一次缺页。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干采用 verified-solutions.json 中已核验题干摘要；答案与步骤来自 verified-solutions.json。来源核验说明：题干参数、数组地址和程序与2025全卷第43题核对；地址、组号、跨块数、访问次数和跨页数独立复算。公开全卷解析给出8.24周期，按额外缺失代价的AMAT定义可得8.30周期；两种口径均记录，避免将公开解析差异误标为确定的官方答案。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "Cache组相联映射与地址字段",
+      "VIPT Cache索引与页内偏移",
+      "Cache跨块访问与缺失率",
+      "Cache平均访问时间与缺失损失",
+      "数组跨页与缺页次数"
+    ]
+  },
+  "verified-answer-2025-44::补码恢复余数除法器": {
+    "year": 2025,
+    "index": 44,
+    "id": 596,
+    "typeName": "综合题",
+    "score": 11,
+    "answer": "d[i]=87654321H是32位负数，符号扩展后R=FFFFFFFFH、Q=87654321H；Y=000000FFH。计数器位于控制逻辑Cn中；ALU执行加法、减法。异常包括除数为0（任意被除数均可，例如d[i]=87654321H、x=00000000H）和最小负数80000000H除以-1（FFFFFFFFH）导致商溢出。CPU保存断点和处理器状态，切换内核态并转入异常处理程序。",
+    "question": "2025年408综合题44（11分）：接第43题，R0～R4为通用寄存器，SEXT表示符号扩展。机器代码：x在R2、i在R4、数组d首地址在R3；mov R1,(R3+R4*4)将d[i]读入R1；scov R1使{R0,R1}←SEXT(R1)；idiv R1执行{R0,R1}/R2。给出d[i]=87654321H、x=FFH时除法器R/Q/Y初值，指出计数器所在部分和ALU运算；列出除法异常条件及CPU响应。",
+    "analysis": "scov将R1的32位补码数符号扩展为64位，R为高32位、Q为低32位。除数寄存器Y保存32位除数。图中控制逻辑框内标注计数器Cn，ALUop控制加/减运算，左移由独立控制信号实现。32位有符号除法仅在除数为0或-2^31/-1时出现题目要求的异常。",
+    "steps": [
+      "d[i]=87654321H的最高位为1，按32位补码是负数。",
+      "scov执行符号扩展：高32位填充F，得到64位被除数FFFFFFFF87654321H。",
+      "除法器R/Q为64位组合寄存器：高32位R=FFFFFFFFH，低32位Q=87654321H。",
+      "除数x=FFH，零扩展到32位为000000FFH，装入Y。",
+      "图中计数器Cn属于控制逻辑；ALUop控制ALU执行加法或减法，数据通路另有左移控制。",
+      "除数为0时发生除零异常；例如d[i]=87654321H、x=00000000H。",
+      "32位有符号最小值80000000H除以FFFFFFFFH(-1)，数学商为+2147483648，超出32位有符号范围，发生商溢出。",
+      "异常响应保存必要断点和处理器状态，切换到内核态，转入对应异常处理程序；软件处理程序进一步保护现场和处理异常。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干采用 verified-solutions.json 中已核验题干摘要；答案与步骤来自 verified-solutions.json。来源核验说明：机器代码、寄存器角色和补码除法器原图逐项核对；R/Q/Y初值由符号扩展复算；异常组合按32位有符号范围验证。；关联角色：core。"
+    },
+    "relatedCards": [
+      "补码恢复余数除法器",
+      "有符号除法异常与商溢出",
+      "CPU异常响应与现场保护"
+    ]
+  },
+  "verified-answer-2025-44::有符号除法异常与商溢出": {
+    "year": 2025,
+    "index": 44,
+    "id": 596,
+    "typeName": "综合题",
+    "score": 11,
+    "answer": "d[i]=87654321H是32位负数，符号扩展后R=FFFFFFFFH、Q=87654321H；Y=000000FFH。计数器位于控制逻辑Cn中；ALU执行加法、减法。异常包括除数为0（任意被除数均可，例如d[i]=87654321H、x=00000000H）和最小负数80000000H除以-1（FFFFFFFFH）导致商溢出。CPU保存断点和处理器状态，切换内核态并转入异常处理程序。",
+    "question": "2025年408综合题44（11分）：接第43题，R0～R4为通用寄存器，SEXT表示符号扩展。机器代码：x在R2、i在R4、数组d首地址在R3；mov R1,(R3+R4*4)将d[i]读入R1；scov R1使{R0,R1}←SEXT(R1)；idiv R1执行{R0,R1}/R2。给出d[i]=87654321H、x=FFH时除法器R/Q/Y初值，指出计数器所在部分和ALU运算；列出除法异常条件及CPU响应。",
+    "analysis": "scov将R1的32位补码数符号扩展为64位，R为高32位、Q为低32位。除数寄存器Y保存32位除数。图中控制逻辑框内标注计数器Cn，ALUop控制加/减运算，左移由独立控制信号实现。32位有符号除法仅在除数为0或-2^31/-1时出现题目要求的异常。",
+    "steps": [
+      "d[i]=87654321H的最高位为1，按32位补码是负数。",
+      "scov执行符号扩展：高32位填充F，得到64位被除数FFFFFFFF87654321H。",
+      "除法器R/Q为64位组合寄存器：高32位R=FFFFFFFFH，低32位Q=87654321H。",
+      "除数x=FFH，零扩展到32位为000000FFH，装入Y。",
+      "图中计数器Cn属于控制逻辑；ALUop控制ALU执行加法或减法，数据通路另有左移控制。",
+      "除数为0时发生除零异常；例如d[i]=87654321H、x=00000000H。",
+      "32位有符号最小值80000000H除以FFFFFFFFH(-1)，数学商为+2147483648，超出32位有符号范围，发生商溢出。",
+      "异常响应保存必要断点和处理器状态，切换到内核态，转入对应异常处理程序；软件处理程序进一步保护现场和处理异常。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "核心考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干采用 verified-solutions.json 中已核验题干摘要；答案与步骤来自 verified-solutions.json。来源核验说明：机器代码、寄存器角色和补码除法器原图逐项核对；R/Q/Y初值由符号扩展复算；异常组合按32位有符号范围验证。；关联角色：core。"
+    },
+    "relatedCards": [
+      "补码恢复余数除法器",
+      "有符号除法异常与商溢出",
+      "CPU异常响应与现场保护"
+    ]
+  },
+  "verified-answer-2025-44::CPU异常响应与现场保护": {
+    "year": 2025,
+    "index": 44,
+    "id": 596,
+    "typeName": "综合题",
+    "score": 11,
+    "answer": "d[i]=87654321H是32位负数，符号扩展后R=FFFFFFFFH、Q=87654321H；Y=000000FFH。计数器位于控制逻辑Cn中；ALU执行加法、减法。异常包括除数为0（任意被除数均可，例如d[i]=87654321H、x=00000000H）和最小负数80000000H除以-1（FFFFFFFFH）导致商溢出。CPU保存断点和处理器状态，切换内核态并转入异常处理程序。",
+    "question": "2025年408综合题44（11分）：接第43题，R0～R4为通用寄存器，SEXT表示符号扩展。机器代码：x在R2、i在R4、数组d首地址在R3；mov R1,(R3+R4*4)将d[i]读入R1；scov R1使{R0,R1}←SEXT(R1)；idiv R1执行{R0,R1}/R2。给出d[i]=87654321H、x=FFH时除法器R/Q/Y初值，指出计数器所在部分和ALU运算；列出除法异常条件及CPU响应。",
+    "analysis": "scov将R1的32位补码数符号扩展为64位，R为高32位、Q为低32位。除数寄存器Y保存32位除数。图中控制逻辑框内标注计数器Cn，ALUop控制加/减运算，左移由独立控制信号实现。32位有符号除法仅在除数为0或-2^31/-1时出现题目要求的异常。",
+    "steps": [
+      "d[i]=87654321H的最高位为1，按32位补码是负数。",
+      "scov执行符号扩展：高32位填充F，得到64位被除数FFFFFFFF87654321H。",
+      "除法器R/Q为64位组合寄存器：高32位R=FFFFFFFFH，低32位Q=87654321H。",
+      "除数x=FFH，零扩展到32位为000000FFH，装入Y。",
+      "图中计数器Cn属于控制逻辑；ALUop控制ALU执行加法或减法，数据通路另有左移控制。",
+      "除数为0时发生除零异常；例如d[i]=87654321H、x=00000000H。",
+      "32位有符号最小值80000000H除以FFFFFFFFH(-1)，数学商为+2147483648，超出32位有符号范围，发生商溢出。",
+      "异常响应保存必要断点和处理器状态，切换到内核态，转入对应异常处理程序；软件处理程序进一步保护现场和处理异常。"
+    ],
+    "stepsSource": "verified-solutions.json",
+    "topic": "计算机组成原理",
+    "matchKind": "次级考点",
+    "audit": {
+      "status": "source-and-solution-verified",
+      "note": "题干采用 verified-solutions.json 中已核验题干摘要；答案与步骤来自 verified-solutions.json。来源核验说明：机器代码、寄存器角色和补码除法器原图逐项核对；R/Q/Y初值由符号扩展复算；异常组合按32位有符号范围验证。；关联角色：secondary。"
+    },
+    "relatedCards": [
+      "补码恢复余数除法器",
+      "有符号除法异常与商溢出",
+      "CPU异常响应与现场保护"
+    ]
   }
 };
 
@@ -6859,7 +9981,63 @@ window.CARD_EXAM_TOPIC_MAP = {
   "verified-answer-2013-45::进程同步与信号量": "进程同步与信号量",
   "verified-answer-2013-46::页表结构与地址转换": "页表结构与地址转换",
   "verified-answer-2013-47::路由选择与转发表": "路由选择与转发表",
-  "verified-answer-2013-47::BGP UPDATE 报文与路由通告": "BGP UPDATE 报文与路由通告"
+  "verified-answer-2013-47::BGP UPDATE 报文与路由通告": "BGP UPDATE 报文与路由通告",
+  "verified-answer-2023-43::页式存储与缺页异常": "页式存储与缺页异常",
+  "verified-answer-2023-43::Cache 组相联映射与地址划分": "Cache 组相联映射与地址划分",
+  "verified-answer-2023-43::二维数组行优先存储与局部性": "二维数组行优先存储与局部性",
+  "verified-answer-2023-43::Cache 命中率与空间局部性": "Cache 命中率与空间局部性",
+  "verified-answer-2023-44::x86 相对寻址与转移目标计算": "x86 相对寻址与转移目标计算",
+  "verified-answer-2023-44::机器指令编码与指令长度": "机器指令编码与指令长度",
+  "verified-answer-2023-44::小端存储与立即数寻址": "小端存储与立即数寻址",
+  "verified-answer-2023-44::虚拟地址与指令取指缺页": "虚拟地址与指令取指缺页",
+  "verified-answer-2024-43::RISC-V 指令格式与寄存器编码": "RISC-V 指令格式与寄存器编码",
+  "verified-answer-2024-43::ALU 标志位 CF 与 OF": "ALU 标志位 CF 与 OF",
+  "verified-answer-2024-43::立即数扩展与移位指令": "立即数扩展与移位指令",
+  "verified-answer-2024-43::指令译码与有效地址计算": "指令译码与有效地址计算",
+  "verified-answer-2024-44::数组下标寻址与元素宽度": "数组下标寻址与元素宽度",
+  "verified-answer-2024-44::小端字节序与补码读取": "小端字节序与补码读取",
+  "verified-answer-2024-44::虚拟地址分页与页内偏移": "虚拟地址分页与页内偏移",
+  "verified-answer-2024-44::RISC-V 指令格式与寄存器编码": "RISC-V 指令格式与寄存器编码",
+  "verified-answer-2016-44::程序查询与中断驱动 I/O": "程序查询与中断驱动 I/O",
+  "verified-answer-2016-44::异步串行通信帧格式与字符速率": "异步串行通信帧格式与字符速率",
+  "verified-answer-2016-44::中断响应与异常处理": "中断响应与异常处理",
+  "verified-answer-2016-44::计算机性能指标 CPI 与 CPU 时间": "计算机性能指标 CPI 与 CPU 时间",
+  "verified-answer-2016-45::Cache组相联映射与地址字段": "Cache组相联映射与地址字段",
+  "verified-answer-2016-45::虚拟地址分页与页内偏移": "虚拟地址分页与页内偏移",
+  "verified-answer-2016-45::Cache 替换与写策略": "Cache 替换与写策略",
+  "verified-answer-2019-45::x86 CALL/JMP/RET 控制转移与相对寻址": "x86 CALL/JMP/RET 控制转移与相对寻址",
+  "verified-answer-2019-45::定点补码加减与溢出": "定点补码加减与溢出",
+  "verified-answer-2019-45::整数溢出检测与异常处理": "整数溢出检测与异常处理",
+  "verified-answer-2019-45::大小端存储": "大小端存储",
+  "verified-answer-2019-46::Cache 直接映射与组相联": "Cache 直接映射与组相联",
+  "verified-answer-2019-46::Cache 映射与命中率": "Cache 映射与命中率",
+  "verified-answer-2019-46::指令系统与寻址方式": "指令系统与寻址方式",
+  "verified-answer-2020-43::移位加法乘法与阵列乘法器": "移位加法乘法与阵列乘法器",
+  "verified-answer-2020-43::定点补码加减与溢出": "定点补码加减与溢出",
+  "verified-answer-2020-43::计算机性能指标 CPI 与 CPU 时间": "计算机性能指标 CPI 与 CPU 时间",
+  "verified-answer-2020-44::Cache 映射与命中率": "Cache 映射与命中率",
+  "verified-answer-2020-44::Cache 替换与写策略": "Cache 替换与写策略",
+  "verified-answer-2020-44::存储器层次与主存组织": "存储器层次与主存组织",
+  "verified-answer-2021-43::指令格式与操作码扩展": "指令格式与操作码扩展",
+  "verified-answer-2021-43::定点补码加减与溢出": "定点补码加减与溢出",
+  "verified-answer-2021-43::ALU 算术逻辑单元": "ALU 算术逻辑单元",
+  "verified-answer-2021-43::立即数与直接间接寻址": "立即数与直接间接寻址",
+  "verified-answer-2021-44::TLB 组相联映射与 LRU 替换": "TLB 组相联映射与 LRU 替换",
+  "verified-answer-2022-43::补码加减与溢出判断": "补码加减与溢出判断",
+  "verified-answer-2022-43::单总线数据通路与暂存器": "单总线数据通路与暂存器",
+  "verified-answer-2022-43::寄存器组读写端口与译码": "寄存器组读写端口与译码",
+  "verified-answer-2022-43::指令周期与微操作控制": "指令周期与微操作控制",
+  "verified-answer-2022-44::磁盘 CHS 地址与平均访问时间": "磁盘 CHS 地址与平均访问时间",
+  "verified-answer-2022-44::DMA 周期挪用与总线仲裁": "DMA 周期挪用与总线仲裁",
+  "verified-answer-2022-44::磁盘存储结构与旋转延迟": "磁盘存储结构与旋转延迟",
+  "verified-answer-2025-43::Cache组相联映射与地址字段": "Cache组相联映射与地址字段",
+  "verified-answer-2025-43::VIPT Cache索引与页内偏移": "VIPT Cache索引与页内偏移",
+  "verified-answer-2025-43::Cache跨块访问与缺失率": "Cache跨块访问与缺失率",
+  "verified-answer-2025-43::Cache平均访问时间与缺失损失": "Cache平均访问时间与缺失损失",
+  "verified-answer-2025-43::数组跨页与缺页次数": "数组跨页与缺页次数",
+  "verified-answer-2025-44::补码恢复余数除法器": "补码恢复余数除法器",
+  "verified-answer-2025-44::有符号除法异常与商溢出": "有符号除法异常与商溢出",
+  "verified-answer-2025-44::CPU异常响应与现场保护": "CPU异常响应与现场保护"
 };
 
 window.CARD_EXAM_ROLE_MAP = {
@@ -7145,5 +10323,61 @@ window.CARD_EXAM_ROLE_MAP = {
   "verified-answer-2013-45::进程同步与信号量": "core",
   "verified-answer-2013-46::页表结构与地址转换": "core",
   "verified-answer-2013-47::路由选择与转发表": "core",
-  "verified-answer-2013-47::BGP UPDATE 报文与路由通告": "secondary"
+  "verified-answer-2013-47::BGP UPDATE 报文与路由通告": "secondary",
+  "verified-answer-2023-43::页式存储与缺页异常": "core",
+  "verified-answer-2023-43::Cache 组相联映射与地址划分": "core",
+  "verified-answer-2023-43::二维数组行优先存储与局部性": "secondary",
+  "verified-answer-2023-43::Cache 命中率与空间局部性": "secondary",
+  "verified-answer-2023-44::x86 相对寻址与转移目标计算": "core",
+  "verified-answer-2023-44::机器指令编码与指令长度": "core",
+  "verified-answer-2023-44::小端存储与立即数寻址": "secondary",
+  "verified-answer-2023-44::虚拟地址与指令取指缺页": "secondary",
+  "verified-answer-2024-43::RISC-V 指令格式与寄存器编码": "core",
+  "verified-answer-2024-43::ALU 标志位 CF 与 OF": "core",
+  "verified-answer-2024-43::立即数扩展与移位指令": "secondary",
+  "verified-answer-2024-43::指令译码与有效地址计算": "secondary",
+  "verified-answer-2024-44::数组下标寻址与元素宽度": "core",
+  "verified-answer-2024-44::小端字节序与补码读取": "core",
+  "verified-answer-2024-44::虚拟地址分页与页内偏移": "secondary",
+  "verified-answer-2024-44::RISC-V 指令格式与寄存器编码": "secondary",
+  "verified-answer-2016-44::程序查询与中断驱动 I/O": "core",
+  "verified-answer-2016-44::异步串行通信帧格式与字符速率": "secondary",
+  "verified-answer-2016-44::中断响应与异常处理": "secondary",
+  "verified-answer-2016-44::计算机性能指标 CPI 与 CPU 时间": "secondary",
+  "verified-answer-2016-45::Cache组相联映射与地址字段": "core",
+  "verified-answer-2016-45::虚拟地址分页与页内偏移": "secondary",
+  "verified-answer-2016-45::Cache 替换与写策略": "secondary",
+  "verified-answer-2019-45::x86 CALL/JMP/RET 控制转移与相对寻址": "core",
+  "verified-answer-2019-45::定点补码加减与溢出": "secondary",
+  "verified-answer-2019-45::整数溢出检测与异常处理": "secondary",
+  "verified-answer-2019-45::大小端存储": "secondary",
+  "verified-answer-2019-46::Cache 直接映射与组相联": "core",
+  "verified-answer-2019-46::Cache 映射与命中率": "secondary",
+  "verified-answer-2019-46::指令系统与寻址方式": "secondary",
+  "verified-answer-2020-43::移位加法乘法与阵列乘法器": "core",
+  "verified-answer-2020-43::定点补码加减与溢出": "secondary",
+  "verified-answer-2020-43::计算机性能指标 CPI 与 CPU 时间": "secondary",
+  "verified-answer-2020-44::Cache 映射与命中率": "core",
+  "verified-answer-2020-44::Cache 替换与写策略": "core",
+  "verified-answer-2020-44::存储器层次与主存组织": "secondary",
+  "verified-answer-2021-43::指令格式与操作码扩展": "core",
+  "verified-answer-2021-43::定点补码加减与溢出": "core",
+  "verified-answer-2021-43::ALU 算术逻辑单元": "secondary",
+  "verified-answer-2021-43::立即数与直接间接寻址": "secondary",
+  "verified-answer-2021-44::TLB 组相联映射与 LRU 替换": "core",
+  "verified-answer-2022-43::补码加减与溢出判断": "core",
+  "verified-answer-2022-43::单总线数据通路与暂存器": "core",
+  "verified-answer-2022-43::寄存器组读写端口与译码": "secondary",
+  "verified-answer-2022-43::指令周期与微操作控制": "secondary",
+  "verified-answer-2022-44::磁盘 CHS 地址与平均访问时间": "core",
+  "verified-answer-2022-44::DMA 周期挪用与总线仲裁": "core",
+  "verified-answer-2022-44::磁盘存储结构与旋转延迟": "secondary",
+  "verified-answer-2025-43::Cache组相联映射与地址字段": "core",
+  "verified-answer-2025-43::VIPT Cache索引与页内偏移": "secondary",
+  "verified-answer-2025-43::Cache跨块访问与缺失率": "core",
+  "verified-answer-2025-43::Cache平均访问时间与缺失损失": "secondary",
+  "verified-answer-2025-43::数组跨页与缺页次数": "secondary",
+  "verified-answer-2025-44::补码恢复余数除法器": "core",
+  "verified-answer-2025-44::有符号除法异常与商溢出": "core",
+  "verified-answer-2025-44::CPU异常响应与现场保护": "secondary"
 };

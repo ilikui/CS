@@ -102,7 +102,15 @@ body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V25
 desc='连续要求函数值存在、极限存在且极限等于函数值；四则运算与复合连续都要检查表达式在对应点有定义。';
 }
 }else if(k==='derivative'){
-if(/隐函数|参数方程/.test(t)){
+if(/弧微分|曲线弧长/.test(t)){
+const x=.05+(p-.35)/1.45*3.9, slope=Math.sqrt(x), y=(2/3)*Math.pow(x,1.5);
+const X=q=>70+q*82,Y=q=>220-q*35;
+const xx=Math.max(.05,Math.min(4,x));
+const path=(()=>{let d='';for(let i=0;i<=160;i++){const q=4*i/160,v=(2/3)*Math.pow(q,1.5);d+=(i?'L':'M')+(70+q*82).toFixed(1)+','+(220-v*35).toFixed(1);}return d;})();
+const dx=.62,dy=slope*dx;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="弧微分与曲线弧长专属动态演示"><path d="M45 220H425 M70 238V20" stroke="#9aaabd"/><path d="'+path+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(xx)+' '+Y(y)+'L'+X(xx+dx)+' '+Y(y+dy)+'L'+X(xx+dx)+' '+Y(y)+'Z" fill="'+COLORS.green+'" opacity=".16"/><path d="M'+X(xx)+' '+Y(y)+'L'+X(xx+dx)+' '+Y(y+dy)+'" stroke="'+COLORS.orange+'" stroke-width="3"/><path d="M'+X(xx+dx)+' '+Y(y+dy)+'V'+Y(y)+' M'+X(xx)+' '+Y(y)+'H'+X(xx+dx)+'" stroke="'+COLORS.green+'" stroke-dasharray="4 4"/><circle cx="'+X(xx)+'" cy="'+Y(y)+'" r="5" fill="'+COLORS.orange+'"/><text x="48" y="24" fill="'+COLORS.blue+'">y=⅔x³ᐟ²，y′=√x</text><text x="48" y="47" fill="'+COLORS.orange+'">当前斜率 y′='+slope.toFixed(2)+'</text><text x="48" y="245" fill="'+COLORS.green+'">ds≈√(dx²+dy²)=√(1+y′²)dx</text></svg>';
+desc='弧微分专属演示：蓝线为 y=(2/3)x^(3/2)，橙色小线段表示当前微小弧段，绿色直角边分别是 dx 与 dy。滑块改变切点，观察斜率 y′=√x 如何改变弧段长度；累加 ds 得到 L=∫√(1+y′²)dx。';
+}else if(/隐函数|参数方程/.test(t)){
 const theta=.3+(p-.35)/1.45*1.8,x=Math.cos(theta),y=Math.sin(theta),X=q=>230+q*95,Y=q=>135-q*95,dx=-Math.sin(theta),dy=-Math.cos(theta);
 body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="圆的隐函数与参数方程切线动态演示"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><circle cx="230" cy="135" r="95" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+(X(x)-dx*55)+' '+(Y(y)-dy*55)+'L'+(X(x)+dx*55)+' '+(Y(y)+dy*55)+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M230 135L'+X(x)+' '+Y(y)+'" stroke="'+COLORS.green+'" stroke-dasharray="5 4"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.orange+'"/><text x="40" y="25" fill="'+COLORS.blue+'">x²+y²=1；x=cos t，y=sin t</text><text x="40" y="47" fill="'+COLORS.orange+'">dy/dx=−x/y='+(-x/y).toFixed(2)+'</text></svg>';
 desc='拖动参数 t：点 (cos t,sin t) 沿单位圆移动，橙色切线斜率 dy/dx=−x/y。隐式求导 2x+2yy′=0；当 y=0 时切线竖直，不能直接用有限斜率表示。';
@@ -142,12 +150,44 @@ const X=x=>230+x*90,Y=y=>205-y*23;
 const path=fn=>{let d='';for(let i=0;i<=160;i++){const x=-2+i/40,y=fn(x);d+=(i?'L':'M')+X(x).toFixed(1)+','+Y(y).toFixed(1);}return d;};
 const poly=x=>{let sum=0,term=1;for(let j=0;j<=n;j++){if(j===0)term=1;else term*=x/j;sum+=term;}return sum;};
 body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="泰勒多项式阶数变化与原函数逼近"><path d="M35 205H430 M230 18V238" stroke="#9aaabd"/><path d="'+path(x=>Math.exp(x))+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+path(poly)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="6 4"/><text x="48" y="25" fill="'+COLORS.blue+'">原函数 eˣ</text><text x="48" y="47" fill="'+COLORS.orange+'">Tₙ(x)，n='+n+'</text><text x="300" y="250" fill="'+COLORS.ink+'">蓝：原函数；橙：近似</text></svg>';
-desc='拖动改变麦克劳林多项式阶数 n='+n+'。橙色 Tₙ(x)=1+x+x²/2!+…+xⁿ/n! 与蓝色 eˣ 在 x=0 附近逐阶贴合；阶数越高，局部近似通常越精确。';
+desc='拖动改变麦克劳林多项式阶数 n='+n+'。橙色 Tₙ(x)=Σₖ₌₀ⁿxᵏ/k! 与蓝色 eˣ 在 x=0 处逐阶匹配；拉格朗日余项 Rₙ₊₁=e^ξxⁿ⁺¹/(n+1)!，ξ 位于 0 与 x 之间。有限阶近似的精度取决于余项，不应把局部逼近误认为全区间恒等。';
 }else if(k==='shape'){
-if(/渐近/.test(t)){
+if(/凹凸性、拐点与渐近线/.test(t)){
+const left=graphPath(x=>x*x/(x+1),-4,-1.08,-5,5),right=graphPath(x=>x*x/(x+1),-.92,4,-5,5);
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="凹凸性与渐近线综合图">'+axes()+'<path d="'+left+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+right+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M182 12V250" stroke="'+COLORS.orange+'" stroke-width="2" stroke-dasharray="6 5"/><path d="'+graphPath(x=>x-1,-4,4,-5,5)+'" fill="none" stroke="'+COLORS.green+'" stroke-width="2" stroke-dasharray="6 5"/><text x="190" y="25" fill="'+COLORS.orange+'">x=−1：竖直渐近线</text><text x="300" y="70" fill="'+COLORS.green+'">y=x−1</text><text x="35" y="24" fill="'+COLORS.blue+'">f′′=2/(x+1)³</text><text x="35" y="245" fill="'+COLORS.orange+'">定义域断点不是拐点</text></svg>';
+desc='综合辨析 f(x)=x²/(x+1)=x−1+1/(x+1)：x=−1 两侧 f′′ 符号改变，但函数在此无定义且存在竖直渐近线，因此 x=−1 不是拐点；斜渐近线为 y=x−1。判拐点必须同时满足曲线点连续存在和凹凸性改变。';
+}else if(/导数符号与单调性定理/.test(t)){
+const x=-1.5+(p-.35)/1.45*3,m=x,y=x*x/2,X=q=>230+q*48,Y=q=>135-q*35;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="导数符号与单调区间专属动态图"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>q*q/2,-2.6,2.6,-1,4)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(x-.75)+' '+Y(y-m*.75)+'L'+X(x+.75)+' '+Y(y+m*.75)+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.green+'"/><text x="38" y="24" fill="'+COLORS.blue+'">f(x)=x²/2，f′(x)=x</text><text x="38" y="46" fill="'+COLORS.orange+'">当前 x='+x.toFixed(2)+'，f′='+m.toFixed(2)+'</text><text x="38" y="245" fill="'+COLORS.green+'">x&lt;0：递减；x&gt;0：递增</text></svg>';
+desc='专属导数符号演示：f(x)=x²，f′(x)=2x。滑块移动切点，观察导数由负变正；函数先在 (−∞,0) 递减，再在 (0,+∞) 递增，x=0 为严格极小值点。';
+}else if(/凹凸性与拐点/.test(t)){
+const x=-1.8+(p-.35)/1.45*3.6,y=(x*x*x*x-2*x*x)/4,m=x*x*x-x,second=3*x*x-1,X=q=>230+q*48,Y=q=>135-q*35;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="两个拐点与二阶导数变号专属动态图"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>(q*q*q*q-2*q*q)/4,-2.4,2.4,-.6,2.5)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(x-.55)+' '+Y(y-m*.55)+'L'+X(x+.55)+' '+Y(y+m*.55)+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M'+X(-1/Math.sqrt(3))+' 20V245 M'+X(1/Math.sqrt(3))+' 20V245" stroke="'+COLORS.green+'" stroke-dasharray="5 4"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.orange+'"/><text x="35" y="24" fill="'+COLORS.blue+'">f′′(x)=3x²−1</text><text x="35" y="46" fill="'+COLORS.orange+'">当前 f′′='+second.toFixed(2)+'</text><text x="35" y="245" fill="'+COLORS.green+'">+ / − / +：两个拐点</text></svg>';
+desc='专属拐点个数演示：f(x)=(x⁴−2x²)/4，f′′(x)=3x²−1。候选点 x=±1/√3，两点两侧二阶导数均变号，故有两个拐点；滑块显示不同位置的 f′′ 符号。';
+}else if(/单调性|单调区间/.test(t)){
+const x=(p-1.075)*2.5,y=x*x*x/3-3*x,slope=x*x-3,X=q=>230+q*42,Y=q=>135-q*24;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="单调区间专属动态图"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>q*q*q/3-3*q,-4,4,-4,4)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(x-1)+' '+Y(y-slope)+'L'+X(x+1)+' '+Y(y+slope)+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.green+'"/><text x="38" y="24" fill="'+COLORS.blue+'">f′(x)=x²−3</text><text x="38" y="46" fill="'+COLORS.orange+'">切线斜率 '+slope.toFixed(2)+'</text><text x="38" y="245" fill="'+COLORS.green+'">+ / − / + 对应 增 / 减 / 增</text></svg>';
+desc='专属单调性演示：f=x³/3−3x，f′=x²−3。滑块移动切点，临界点 ±√3 将曲线分为增、减、增三个区间。';
+}else if(/二阶导数判别|极值与极值判别法/.test(t)){
+const a=(p-1.075)*1.1,second=2*a;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="二阶导数判别法专属动态图"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>a*q*q,-4,4,-3,4)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="135" r="6" fill="'+COLORS.green+'"/><text x="38" y="24" fill="'+COLORS.blue+'">f(x)='+a.toFixed(2)+'x²</text><text x="38" y="46" fill="'+COLORS.orange+'">f′′(0)='+second.toFixed(2)+'</text><text x="38" y="245" fill="'+COLORS.green+'">'+(second>0?'严格局部极小':second<0?'严格局部极大':'判别法失效')+'</text></svg>';
+desc='专属二阶导数判别：拖动参数改变抛物线开口。驻点 x=0 处 f′′>0 为严格极小，f′′<0 为严格极大；f′′=0 时本判别法不能下结论。';
+}else if(/闭区间最值/.test(t)){
+const x=(p-.35)/1.45*4-2,fn=q=>q*q-2*q,X=q=>230+q*55,Y=q=>135-fn(q)*24;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="闭区间最值专属动态图：端点与驻点比较"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(fn,-2,2,-2,8)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(-2)+' 245V'+Y(-2)+' M'+X(2)+' 245V'+Y(2)+'" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><circle cx="'+X(-2)+'" cy="'+Y(-2)+'" r="5" fill="'+COLORS.orange+'"/><circle cx="'+X(1)+'" cy="'+Y(1)+'" r="6" fill="'+COLORS.green+'"/><circle cx="'+X(2)+'" cy="'+Y(2)+'" r="5" fill="'+COLORS.orange+'"/><circle cx="'+X(x)+'" cy="'+Y(x)+'" r="4" fill="'+COLORS.ink+'"/><text x="38" y="24" fill="'+COLORS.blue+'">f=x²−2x，区间 [−2,2]</text><text x="38" y="46" fill="'+COLORS.orange+'">端点值：8、0</text><text x="38" y="245" fill="'+COLORS.green+'">驻点 x=1，最小值 −1；最大值 8</text></svg>';
+desc='闭区间最值演示：曲线上标出左端点、驻点和右端点。必须比较 f(−2)=8、f(1)=−1、f(2)=0，不能只看导数为零的位置。';
+}else if(/极值|费马|驻点|最值候选/.test(t)){
+const x=(p-1.075)*1.8,y=x*x*x/3-3*x,slope=x*x-3,X=q=>230+q*42,Y=q=>135-q*24;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="极值专属动态图"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>q*q*q/3-3*q,-4,4,-4,4)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(x-1.1)+' '+Y(y-1.1*slope)+'L'+X(x+1.1)+' '+Y(y+1.1*slope)+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.green+'"/><path d="M'+X(x)+' '+Y(y)+'V245" stroke="'+COLORS.green+'" stroke-dasharray="4 4"/><text x="38" y="24" fill="'+COLORS.blue+'">f′(x)=x²−3</text><text x="38" y="46" fill="'+COLORS.orange+'">当前 f′='+slope.toFixed(2)+'</text><text x="38" y="245" fill="'+COLORS.green+'">+→− 极大；−→+ 极小</text></svg>';
+desc='专属极值演示：f=x³/3−3x。在 −√3 处导数由正变负形成极大，在 √3 处由负变正形成极小。驻点不自动等于极值点。';
+}else if(/凹凸|拐点|二阶导数/.test(t)){
+const x=(p-1.075)*2.6,y=x*x*x/3,slope=x*x,second=2*x,X=q=>230+q*40,Y=q=>135-q*26;
+body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="凹凸性与拐点专属动态图"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(q=>q*q*q/3,-4,4,-4,4)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M'+X(x-1.2)+' '+Y(y-1.2*slope)+'L'+X(x+1.2)+' '+Y(y+1.2*slope)+'" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M'+X(x)+' 20V245" stroke="'+COLORS.green+'" stroke-dasharray="4 4"/><circle cx="'+X(x)+'" cy="'+Y(y)+'" r="6" fill="'+COLORS.green+'"/><text x="38" y="24" fill="'+COLORS.blue+'">f′′(x)=2x</text><text x="38" y="46" fill="'+COLORS.orange+'">当前 f′′='+second.toFixed(2)+'</text><text x="38" y="245" fill="'+COLORS.green+'">穿过 0：f′′ 由负变正</text></svg>';
+desc='专属凹凸/拐点演示：f=x³/3，f′′=2x。观察点穿过 0 时，二阶导数由负变正，曲线弯曲方向改变，原点为拐点；必须验证变号。';
+}else if(/渐近/.test(t)){
 const c=(p-1.075)*.45;
-body=graph(x=>1/(x-c)+.2*x).replace('</svg>','<path d="M'+(230+c*48)+' 12V250" stroke="'+COLORS.orange+'" stroke-dasharray="5 5" stroke-width="2"/><text x="'+Math.min(355,230+c*48+5)+'" y="25" fill="'+COLORS.orange+'">x='+c.toFixed(2)+'</text></svg>');
-desc='滑块移动竖直渐近线 x=c；蓝色曲线在 x→c 时发散。此例另有斜渐近线 y=0.2x；判断渐近线必须回到相应极限定义。';
+body=graph(x=>2*x+1/(x-c)).replace('</svg>','<path d="M'+(230+c*48)+' 12V250" stroke="'+COLORS.orange+'" stroke-dasharray="5 5" stroke-width="2"/><path d="M38 205L422 65" stroke="'+COLORS.green+'" stroke-dasharray="6 4" stroke-width="2"/><text x="'+Math.min(355,230+c*48+5)+'" y="25" fill="'+COLORS.orange+'">x='+c.toFixed(2)+'</text><text x="330" y="55" fill="'+COLORS.green+'">y=2x</text></svg>');
+desc='滑块移动竖直渐近线 x=c；蓝色曲线为 f(x)=2x+1/(x−c)，橙色虚线标出 x=c，绿色虚线是斜渐近线 y=2x，因为 f(x)−2x→0。';
 }
 else if(/二阶导数判别|极值二阶|充分判别/.test(t)){
 const a=p-1.075,fn=x=>a*x*x,X=x=>230+x*48,Y=y=>135-y*35;

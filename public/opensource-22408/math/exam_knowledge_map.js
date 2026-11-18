@@ -482,14 +482,14 @@ window.EXAM_KNOWLEDGE_MAP = {
   "40": {
     "status": "verified",
     "primary": [
-      "CAL-05-C"
+      "CAL-05-H"
     ],
     "secondary": [
       "CAL-02-C"
     ],
-    "rationale": "考查 x→∞ 的水平渐近线及 x→0+ 时是否存在铅直渐近线。",
-    "methods": "分别计算无穷远极限和定义域边界极限。",
-    "pitfalls": "只检查 x→∞ 而漏掉 x→0+。"
+    "rationale": "题目直接考查渐近线：x→+∞ 时判断水平渐近线，x→0⁺ 时判断是否存在铅直渐近线；凹凸性不是本题考点。",
+    "methods": "分别计算 x→+∞ 的函数极限与 x→0⁺ 的单侧极限，按渐近线定义判断。",
+    "pitfalls": "只检查无穷远极限会漏掉定义域边界；有界振荡不等于铅直渐近线。"
   },
   "41": {
     "status": "verified",
@@ -830,14 +830,14 @@ window.EXAM_KNOWLEDGE_MAP = {
   "69": {
     "status": "verified",
     "primary": [
-      "CAL-05-C"
+      "CAL-05-H"
     ],
     "secondary": [
       "CAL-02-B"
     ],
-    "rationale": "分别考察 x→±∞ 与 x→0，确定水平渐近线和铅直渐近线。",
-    "methods": "函数极限与渐近线判定。",
-    "pitfalls": "只检查无穷远渐近线，漏掉分母为零的点。"
+    "rationale": "题目直接考查水平与铅直渐近线的条数，应归入渐近线判定，而不是凹凸性。",
+    "methods": "分别计算 x→±∞ 的函数极限，再检查 x→0 附近的单侧极限是否发散。",
+    "pitfalls": "水平渐近线需分别检查正、负无穷；定义域边界处必须看函数极限是否无穷。"
   },
   "70": {
     "status": "verified",
@@ -1758,9 +1758,7 @@ window.EXAM_KNOWLEDGE_MAP = {
     "primary": [
       "CAL-06-C"
     ],
-    "secondary": [
-      "CAL-05-B"
-    ],
+    "secondary": [],
     "rationale": "曲线与 y=2 的交点满足 x+1/x=2，即 x=1（另一根重合），在 [1,2] 上曲线位于直线上方。",
     "methods": "解交点确定积分限，计算 ∫₁²(x+1/x−2)dx。",
     "pitfalls": "漏掉交点；面积上下函数顺序或积分限错误。"
@@ -2624,7 +2622,7 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "利用 F(1)=0 和严格单调性确定两侧符号。"
   },
   "208": {
-    "status": "verified",
+    "status": "needs-original-figure",
     "questionKey": "2001-选择题-5",
     "primary": [
       "CAL-05-E"
@@ -2632,9 +2630,9 @@ window.EXAM_KNOWLEDGE_MAP = {
     "secondary": [
       "CAL-05-B"
     ],
-    "rationale": "由原图可知，$y$ 轴左侧及 $y$ 轴右侧靠近 $y$ 轴处，曲线 $y=f\\left(x\\right)$ 均单调增加，故对应区间内 $f^{\\prime}\\left(x\\right)>0$。结合选项可排除 A、B、C，故选 D。",
-    "methods": "由函数图像识别导函数符号；根据原函数图像各区间的增减性判断导数正负，再匹配导函数图像。",
-    "pitfalls": "图像题需逐区间识别单调性及驻点。"
+    "rationale": "由原图可知，$y$ 轴左侧及 $y$ 轴右侧靠近 $y$ 轴处，曲线 $y=f\\left(x\\right)$ 均单调增加，故对应区间内 $f^{\\prime}\\left(x\\right)>0$。结合选项可排除 A、B、C，故选 D。 当前数据只有“图示略”，缺少原始函数图/导函数图，无法独立复核选项与关键符号变化；保留暂定知识卡关联，待补原图后核验。",
+    "methods": "需读取原图的单调区间、驻点及导数符号变化后再判断。",
+    "pitfalls": "不能仅凭当前文字摘要确认选项；不得臆造图形。"
   },
   "209": {
     "status": "verified",
@@ -2884,7 +2882,7 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "注意 x/y 与 y/x 的倒数关系。"
   },
   "228": {
-    "status": "verified",
+    "status": "needs-original-figure",
     "questionKey": "2003-选择题-4",
     "primary": [
       "CAL-05-B"
@@ -2892,9 +2890,9 @@ window.EXAM_KNOWLEDGE_MAP = {
     "secondary": [
       "CAL-05-E"
     ],
-    "rationale": "由导函数图形可知，三个驻点中第一个为极大值点，第二个和第三个为极小值点；导数不存在点 $x=0$ 左侧导数为正、右侧导数为负，故也是极大值点。因此共有两个极小值点和两个极大值点，选 C。",
-    "methods": "由导函数图像判断极值点；根据导函数过零点及不可导点两侧符号变化，统计极大值和极小值。",
-    "pitfalls": "不可导点也可能是极值点，需检查左右单调性。"
+    "rationale": "由导函数图形可知，三个驻点中第一个为极大值点，第二个和第三个为极小值点；导数不存在点 $x=0$ 左侧导数为正、右侧导数为负，故也是极大值点。因此共有两个极小值点和两个极大值点，选 C。 当前数据只有“图示略”，缺少原始函数图/导函数图，无法独立复核选项与关键符号变化；保留暂定知识卡关联，待补原图后核验。",
+    "methods": "需读取原图的单调区间、驻点及导数符号变化后再判断。",
+    "pitfalls": "不能仅凭当前文字摘要确认选项；不得臆造图形。"
   },
   "229": {
     "status": "verified",
@@ -3022,9 +3020,9 @@ window.EXAM_KNOWLEDGE_MAP = {
     "secondary": [
       "CAL-05-F"
     ],
-    "rationale": "按分段函数讨论，$x=0$ 附近函数由减到增，故为极小值点；曲线在 $(0,0)$ 两侧凹凸性改变，故 $(0,0)$ 为拐点。",
-    "methods": "绝对值分段函数的极值与拐点；按 x=1 分段写函数，检查 x=0 的左右单调性及二阶导数符号变化。",
-    "pitfalls": "极值与拐点是不同概念，需分别验证。"
+    "rationale": "按当前题干，在 x=0 的邻域内 f(x)=x−x²，故 f'(0)=1 且左右导数同号，x=0 不是极值点；f''(x)=−2 在两侧不变号，(0,0) 不是拐点，选 D。旧映射的“极值点且拐点”判断与函数分段表达式冲突，已纠正。",
+    "methods": "先在 x=0 邻域消去绝对值，再分别检查一阶导数左右符号与二阶导数凹凸性。",
+    "pitfalls": "不能把 f(0)=0 或 f'(0) 存在直接当成极值；拐点必须发生凹凸性改变。"
   },
   "239": {
     "status": "verified",
@@ -3121,14 +3119,12 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2004-解答题-16",
     "primary": [
-      "CAL-05-B"
+      "CAL-04-A"
     ],
-    "secondary": [
-      "CAL-05-E"
-    ],
-    "rationale": "（Ⅰ）当 $-2\\le x\\le0$ 时，\n$$\nf(x)=kf(x+2)=k(x+2)\\big[(x+2)^2-4\\big]=kx(x+2)(x+4).\n$$\n\n（Ⅱ）右导数\n$$\nf'_+(0)=\\big[x(x^{2}-4)\\big]'_{x=0}=-4,\n$$\n左导数\n$$\nf'_-(0)=\\big[kx(x+2)(x+4)\\big]'_{x=0}=8k.\n$$\n可导需 $8k=-4$，故 $k=-\\dfrac12$。",
-    "methods": "函数平移关系与左右导数；由 f(x)=k f(x+2) 求出左侧表达式，分别计算 x=0 左右导数并令其相等。",
-    "pitfalls": "分段点可导要求函数连续且左右导数相等；本题先用关系式确定左段。"
+    "secondary": [],
+    "rationale": "本题考查分段函数在拼接点的可导性，核心是左右导数相等，不属于单调性或极值题。",
+    "methods": "先用函数关系写出拼接点左侧表达式，再分别计算左导数和右导数，令两者相等求参数。",
+    "pitfalls": "可导要求函数在该点连续且左右导数相等；不要只比较两侧导数而忽略函数值连续性。"
   },
   "247": {
     "status": "verified",
@@ -3157,7 +3153,7 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "侧面积公式包含弧长因子，不能误用为圆柱侧面积。"
   },
   "249": {
-    "status": "verified",
+    "status": "needs-statement-verification",
     "questionKey": "2004-解答题-19",
     "primary": [
       "CAL-05-A"
@@ -3165,9 +3161,9 @@ window.EXAM_KNOWLEDGE_MAP = {
     "secondary": [
       "CAL-05-E"
     ],
-    "rationale": "题干区间 $e^{2}<a<b<e$ 为空，按原解析应为 $e<a<b<e^{2}$。令\n$$\n\\varphi(x)=\\ln^{2}x-\\frac{4}{e^{2}}x.\n$$\n则\n$$\n\\varphi'(x)=\\frac{2\\ln x}{x}-\\frac{4}{e^{2}},\\qquad\n\\varphi''(x)=\\frac{2(1-\\ln x)}{x^{2}}.\n$$\n在 $e<x<e^{2}$ 上，$\\varphi''(x)<0$，故 $\\varphi'(x)$ 递减；又 $\\varphi'(e^{2})=0$，所以 $\\varphi'(x)>0$。因此 $\\varphi$ 单调递增，若 $e<a<b<e^{2}$，则\n$$\n\\varphi(b)>\\varphi(a),\n$$\n即\n$$\n\\ln^{2}b-\\ln^{2}a>\\frac{4}{e^{2}}(b-a).\n$$",
-    "methods": "构造辅助函数证明函数不等式；令 φ(x)=ln²x−4x/e²，分析 φ′、φ″ 的符号并用单调性比较端点。",
-    "pitfalls": "先核对区间端点顺序；题库原文区间 e²<a<b<e 自相矛盾，应标记源数据勘误。"
+    "rationale": "现有题干区间 e²<a<b<e 为空集；解析对应的是 e<a<b<e²。虽然该更正可使证明成立，但未核对原卷前不得标为已验证。",
+    "methods": "先核对原卷区间端点，再用辅助函数 φ(x)=ln²x−4x/e² 及其导数单调性证明。",
+    "pitfalls": "原始区间次序矛盾；不得将推测的勘误当成原题事实。"
   },
   "250": {
     "status": "verified",
@@ -4080,7 +4076,7 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "因 u'(0)=0，二阶导中的 f'' 项消失；不能误把 f'(0) 与 f''(0) 混用。"
   },
   "320": {
-    "status": "verified",
+    "status": "needs-statement-verification",
     "questionKey": "2007-解答题-21",
     "primary": [
       "CAL-05-A"
@@ -4088,9 +4084,9 @@ window.EXAM_KNOWLEDGE_MAP = {
     "secondary": [
       "CAL-05-E"
     ],
-    "rationale": "令 φ=f−g。题设公共端点相等且 f、g 存在相等最大值，故 φ 在端点及某内点取零；两次罗尔定理推出 φ'' 在区间内为零。",
-    "methods": "先由最大值相等找 η∈(a,b) 使 φ(η)=0；分别在 [a,η]、[η,b] 用罗尔定理得两个 φ' 零点，再对 φ' 用罗尔定理。",
-    "pitfalls": "要区分“最大值相等”是存在相同函数值，不是两函数最大点相同；需确认 η 为内点。"
+    "rationale": "当前题干仅称 f、g 存在相等的最大值，未明确最大值点是否为同一内点。分别取最大值点 u、v 只能推出 h(u)≥0、h(v)≤0；若两点落在端点，不能据此保证存在内点零点。反例 f(x)=1−x(1−x)、g(x)=1−2x(1−x) 满足端点相等且最大值同为 1，但 f''=−2、g''=−4，处处不相等。须核对原题条件。",
+    "methods": "若原题补充存在共同内点 c 使 f(c)=g(c)=共同最大值，则令 h=f−g，在 a,c,b 三点取零，连续应用两次 Rolle 定理得到 h''(ξ)=0。",
+    "pitfalls": "不能把两个函数最大值相等误读为最大值在同一点取得；端点退化情形可能使结论失效。"
   },
   "321": {
     "status": "verified",
@@ -5542,14 +5538,12 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2012-解答题-17",
     "primary": [
-      "CAL-05-A"
-    ],
-    "secondary": [
       "CAL-06-C"
     ],
-    "rationale": "切点由切线经过指定点确定，区域面积用曲线反函数积分，旋转体体积用圆盘/垫片积分。",
-    "methods": "设切点 x₀，令切线过 (0,1) 求 x₀=e²；分别建立面积与绕 x 轴旋转体积积分。",
-    "pitfalls": "注意切点坐标为 (e²,2)，曲线与 x 轴交点为 (1,0)；体积积分需区分内外边界。"
+    "secondary": [],
+    "rationale": "本题核心是切线确定积分区域后求面积和旋转体体积，属于定积分几何应用；题目没有要求应用中值定理。",
+    "methods": "先由切线过指定点确定切点，再建立面积积分与圆盘/垫片体积积分。",
+    "pitfalls": "区分曲线与坐标轴交点、切点；旋转体体积需按内外半径建立被积函数。"
   },
   "433": {
     "status": "verified",
@@ -5893,9 +5887,9 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-05-B",
       "CAL-03-C"
     ],
-    "rationale": "第一问构造 F=f-x，利用奇函数 f(0)=0 和 f(1)=1 得端点相等，应用罗尔定理；第二问构造指数因子辅助函数再次应用罗尔定理。",
-    "methods": "先在 [0,1] 对 F 使用罗尔定理；再利用 f' 为偶函数构造 G=e^x(f'-1)，在 [-ξ,ξ] 使用罗尔定理，并利用对称性把点定位到正半轴。",
-    "pitfalls": "第二问罗尔定理先得到 η∈(-ξ,ξ)，还需借助 G' 的对称/符号论证保证题设结论在 (0,1)；注意原解析在此处存在逻辑跳步，建议标记解析待复核。"
+    "rationale": "（I）令 F=f−x，用罗尔定理得到 ξ∈(0,1) 使 f′(ξ)=1。（II）令 h=f′−1，利用 f′ 偶、h′(0)=0 及 ∫₀¹h=0；构造 G=eˣh，若 G′无零点则由导数介值性其符号恒定，结合 G(0) 与积分为零导出矛盾，故存在正区间内 η 使 G′(η)=0，即 f″(η)+f′(η)=1。",
+    "methods": "奇函数导数为偶函数；构造 G(x)=eˣ(f′(x)−1)，将目标式转化为 G′(η)=0；反证时分 h(0)>0、h(0)<0、h(0)=0 三种情形，并用导数的 Darboux 介值性。",
+    "pitfalls": "仅对 G 在 [−ξ,ξ] 用罗尔定理只能得到 η∈(−ξ,ξ)，不足以保证 η>0；需使用 ∫₀¹(f′−1)=0 与 h 偶性强化论证。"
   },
   "457": {
     "status": "verified",
@@ -5913,7 +5907,7 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "距离与距离平方极值点相同；驻点不能替代边界检查，约束曲线端点也要纳入。"
   },
   "458": {
-    "status": "verified",
+    "status": "source-inconsistency-needs-verification",
     "questionKey": "2013-解答题-20",
     "primary": [
       "CAL-05-B",
@@ -5923,9 +5917,9 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-05-E",
       "CAL-05-F"
     ],
-    "rationale": "先由导数符号确定函数在 (0,1) 递减、(1,+∞) 递增且最小值为 1；再用题设不等式推出数列单调有界，取极限夹逼。",
-    "methods": "求 f'=(x-1)/x²；利用 f(x)≥1 与题设条件确定数列所在区间和单调有界性；设极限 a 并代入连续函数不等式。",
-    "pitfalls": "单调有界定理必须同时证明单调性和有界性；极限代入后得到等号时还要确认等号点唯一。"
+    "rationale": "按现有题干要求 ln(x_n)+1/x_n<1，但函数 ln x+1/x 在 x>0 上的最小值为 1，故严格不等式无解。题干条件或符号存在错误，暂不作为已核验真题。",
+    "methods": "先核对原题是否为 ≤、其他不等式或另有序列条件，再重做极限证明。",
+    "pitfalls": "不能在无解条件下声称存在满足条件的数列。"
   },
   "459": {
     "status": "verified",
@@ -6785,8 +6779,7 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2016-填空题-9",
     "primary": [
-      "CAL-05-H",
-      "CAL-05-C"
+      "CAL-05-H"
     ],
     "secondary": [
       "CAL-02-C",
@@ -7866,9 +7859,9 @@ window.EXAM_KNOWLEDGE_MAP = {
     "secondary": [
       "CAL-05-G"
     ],
-    "rationale": "积分中值定理给出内部点 a 使 f(a)=1，再用 f(a)=f(1) 的罗尔定理结论；第二问用内部最大值点和二阶泰勒公式。",
-    "methods": "先由平均值确定取值1的点，再用罗尔定理；以最大值点为中心分别向两端作二阶泰勒展开。",
-    "pitfalls": "第二问需要利用最大值严格大于1及两个泰勒余项点的较小二阶导数；不可将最大值点误当端点。"
+    "rationale": "（1）由积分平均值为1且 f(0)=0，连续性保证存在内点 a 使 f(a)=f(1)=1，再用罗尔定理得到 f′(ξ)=0。（2）反设 f″≥−2，构造 q=f−2x+x²，使 q″≥0 且 q(0)=q(1)=0；凸性推出 f≤2x−x²，积分上界 2/3 与题设积分 1 矛盾。",
+    "methods": "第一问用连续性找内部同值点并用罗尔定理；第二问用反证法构造凸函数 q(x)=f(x)−2x+x²，再积分比较。",
+    "pitfalls": "第二问不应把两个不同 Taylor 余项的二阶导数直接合并；反证时关键是 q(0)=q(1)=0 且 q″≥0，推出 q 位于端点弦线下方。"
   },
   "598": {
     "status": "verified",
@@ -7920,9 +7913,9 @@ window.EXAM_KNOWLEDGE_MAP = {
     "secondary": [
       "CAL-02-B"
     ],
-    "rationale": "检查x=−1、0、1、2四处：对数因子发散、e^x−1为零、指数因子在1非有限、x−2为零，均为第二类间断点，共4处。",
-    "methods": "找出表达式无定义点，逐一考察左右极限是否有限。",
-    "pitfalls": "区分可去间断点与第二类间断点；x=1需独立判断指数因子。"
+    "rationale": "第二类间断点为 x=−1、1、2；x=0 处 ln(1+x)/(e^x−1)→1，函数极限有限，是可去间断点。因此共有 3 个第二类间断点。",
+    "methods": "逐个检查 x=−1、0、1、2 的左右极限；特别用 ln(1+x)∼x、e^x−1∼x 判断 x=0 可去。",
+    "pitfalls": "不能仅因分母为零就判第二类间断；x=0 的 0/0 型极限有限。正确选项为 C。"
   },
   "602": {
     "status": "verified",
@@ -8163,14 +8156,15 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2020-解答题-21",
     "primary": [
-      "CAL-05-A"
+      "CAL-07-A"
     ],
     "secondary": [
-      "CAL-07-B"
+      "CAL-06-C",
+      "CAL-04-A"
     ],
-    "rationale": "将曲线与x轴围成的面积写为积分，切线与x轴交点由切线方程确定；面积比给出积分方程，求导后化为一阶微分方程。",
-    "methods": "把几何条件代数化，建立积分方程后求导降阶。",
-    "pitfalls": "切线截距与面积比方向要准确。"
+    "rationale": "由曲线下面积 A(x)=∫₀ˣf(t)dt 与切线三角形面积建立 4Af′=3f²，再用 A′=f 化为可分离微分方程，得到 f=Cx³（C>0）。",
+    "methods": "几何面积比建模 → 设 A(x)=∫₀ˣf → 写切线截距和三角形面积 → 建立 4Af′=3f² → 分离变量求 f=Cx³。",
+    "pitfalls": "切线截距和面积比方向要准确；求导后还需利用初始条件确定常数。"
   },
   "621": {
     "status": "verified",
@@ -8569,11 +8563,9 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2022-选择题-7",
     "primary": [
-      "CAL-05-B"
-    ],
-    "secondary": [
       "CAL-06-E"
     ],
+    "secondary": [],
     "rationale": "对0<x<1有ln(1+x)>x/2，故I2>I1；又ln(1+x)<x且1+cosx>1、1+sinx<2，得I2的被积函数<x< I3的被积函数，故I1<I2<I3。",
     "methods": "先建立逐点不等式，再在相同积分区间积分比较。",
     "pitfalls": "比较被积函数时需确认分母正且不等式方向不变。"
@@ -8989,37 +8981,30 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-07-B"
     ],
     "secondary": [
-      "CAL-04-C"
+      "CAL-04-C",
+      "CAL-05-B"
     ],
     "rationale": "切线在 y 轴截距为 y-xy'，结合题设距离条件及经过点 (e²,0)，得到一阶线性微分方程 y'-(1/x)y=-1。",
-    "methods": "先写切线方程并令横坐标为零求截距，再解一阶线性方程并代入初值。",
+    "methods": "第（1）问：写切线在 y 轴截距 y−xy′，结合距离条件建立一阶线性方程并用积分因子求 y=x(2−ln x)；第（2）问：写切线与坐标轴截距，建立三角形面积函数，求导确定最小值点。",
     "pitfalls": "题设是截距的距离；需结合连续性和给定点确定正号分支，不能无条件省略绝对值。"
   },
   "684": {
-    "status": "verified",
-    "questionKey": "2023-解答题-1",
-    "primary": [
-      "CAL-07-B"
-    ],
-    "secondary": [
-      "CAL-04-C"
-    ],
-    "rationale": "将切线 y 轴截距写为 y-xy'，由题设取正分支得到 y'-(1/x)y=-1，积分因子法给出 y=x(C-ln x)，初值确定 C=2。",
-    "methods": "使用积分因子 μ=1/x，解线性方程并代入 (e²,0)。",
-    "pitfalls": "检查积分因子乘法后的导数形式；常数由 ln(e²)=2 决定。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 683,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "685": {
-    "status": "verified",
-    "questionKey": "2023-解答题-2",
-    "primary": [
-      "CAL-05-B"
-    ],
-    "secondary": [
-      "CAL-04-A"
-    ],
-    "rationale": "切线与坐标轴截距分别为 x/(ln x-1) 和 x，三角形面积为 x²/[2(ln x-1)]；求导得最小点 x=e^(3/2)，最小面积 e³。",
-    "methods": "分别令切线方程中的 X=0、Y=0 求截距，再对面积函数求极值并检验单调性。",
-    "pitfalls": "需确保 x>e 时截距符号与面积取绝对值一致；最小面积不是把 x=e^(3/2) 直接代入分母而漏掉 1/2。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 683,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "686": {
     "status": "verified",
@@ -9048,31 +9033,22 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "上限为无穷，必须按反常积分定义处理；体积公式中半径要平方。"
   },
   "688": {
-    "status": "verified",
-    "questionKey": "2023-解答题-1",
-    "primary": [
-      "CAL-06-I"
-    ],
-    "secondary": [
-      "CAL-06-B"
-    ],
-    "rationale": "面积积分 ∫₁∞[x√(1+x²)]⁻¹dx 经 x=tan t 化为 csc t 的积分，结果 ln(1+√2)。",
-    "methods": "作三角代换 x=tan t，化简被积函数并计算端点极限。",
-    "pitfalls": "无穷上限对应 t→π/2 的极限；原函数对数表达式要正确处理绝对值。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 687,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "689": {
-    "status": "verified",
-    "questionKey": "2023-解答题-2",
-    "primary": [
-      "CAL-06-I"
-    ],
-    "secondary": [
-      "CAL-06-C",
-      "CAL-06-B"
-    ],
-    "rationale": "旋转体体积为 π∫₁∞1/[x²(1+x²)]dx，部分分式拆成 1/x²−1/(1+x²)，得到 π(1−π/4)。",
-    "methods": "先用圆盘法建立体积积分，再部分分式积分并取无穷上限极限。",
-    "pitfalls": "不要遗漏 π；反常积分上限需取极限，且第二项积分为 π/4。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 687,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "690": {
     "status": "verified",
@@ -9101,31 +9077,22 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "第二问要利用 |a−c|²+|a+c|²=2(a²+c²)≤4a²；不能把两个余项的中间点误认为相同。"
   },
   "692": {
-    "status": "verified",
-    "questionKey": "2023-解答题-1",
-    "primary": [
-      "CAL-05-D"
-    ],
-    "secondary": [
-      "CAL-05-A"
-    ],
-    "rationale": "分别在 0 处向 ±a 作带 Lagrange 余项的二阶展开，相加后由 f'' 连续及介值定理得到指定 ξ。",
-    "methods": "写出 f(a)、f(−a) 的二阶 Taylor 公式，消去一阶项并应用介值定理。",
-    "pitfalls": "两侧余项点 ξ₁、ξ₂ 一般不同；需用连续函数 f'' 的介值性，而非直接令两者相等。"
+    "status": "orphan-answer-fragment-needs-source",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": null,
+    "rationale": "该记录只有解答片段，未找到可可靠归并的完整原题；不计作独立真题，待找回原始题面。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "693": {
-    "status": "verified",
-    "questionKey": "2023-解答题-2",
-    "primary": [
-      "CAL-05-D"
-    ],
-    "secondary": [
-      "CAL-05-A",
-      "CAL-05-B"
-    ],
-    "rationale": "在极值点 c 处 f'(c)=0，分别向两端作二阶 Taylor 展开，相减并以两个二阶导数绝对值的较大者估计。",
-    "methods": "选取 |f''(η₁)|、|f''(η₂)| 中较大者，利用平方和上界推出结论。",
-    "pitfalls": "平方和为 2(a²+c²)≤4a²；最终系数是 1/(2a²)，不是 1/a²。"
+    "status": "orphan-answer-fragment-needs-source",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": null,
+    "rationale": "该记录只有解答片段，未找到可可靠归并的完整原题；不计作独立真题，待找回原始题面。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "694": {
     "status": "verified",
@@ -9134,38 +9101,30 @@ window.EXAM_KNOWLEDGE_MAP = {
       "LA-05-B"
     ],
     "secondary": [
-      "LA-05-A"
+      "LA-05-A",
+      "LA-02-A"
     ],
     "rationale": "由线性变换对任意向量的表达式读出矩阵 A，再求特征值和特征向量构造 P、Λ 实现相似对角化。",
     "methods": "按各分量对 x₁、x₂、x₃ 的系数写矩阵列/行，再解特征方程。",
     "pitfalls": "矩阵按输出分量的系数排列；P 的列向量应按 Λ 对角元顺序放置。"
   },
   "695": {
-    "status": "verified",
-    "questionKey": "2023-解答题-1",
-    "primary": [
-      "LA-02-A"
-    ],
-    "secondary": [
-      "LA-05-A"
-    ],
-    "rationale": "线性映射的三个输出分量分别给出矩阵的三行，故 A 的行向量由各分量系数直接确定。",
-    "methods": "逐个读取 x₁、x₂、x₃ 在每个输出分量中的系数。",
-    "pitfalls": "不要把按变量系数排列的行误写成列；本题矩阵为 [[1,1,1],[2,-1,1],[0,1,-1]]。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 694,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "696": {
-    "status": "verified",
-    "questionKey": "2023-解答题-2",
-    "primary": [
-      "LA-05-A"
-    ],
-    "secondary": [
-      "LA-05-B",
-      "LA-05-E"
-    ],
-    "rationale": "特征多项式分解为 (λ+2)(λ+1)(λ−2)，三个互异特征值对应线性无关特征向量，组成 P 后可对角化。",
-    "methods": "分别解 (A−λI)α=0，按特征值顺序将特征向量作为 P 的列。",
-    "pitfalls": "核对每个特征向量满足 Aα=λα；P 的列顺序必须与 Λ 对角线顺序一致。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 694,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "697": {
     "status": "verified",
@@ -9395,37 +9354,30 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-07-C"
     ],
     "secondary": [
-      "CAL-07-D"
+      "CAL-07-D",
+      "CAL-06-B"
     ],
     "rationale": "这是 Cauchy–Euler 方程，令 x=eᵗ 后化为 y_tt−9y=0；初值确定 y=2x³。",
     "methods": "使用 x=eᵗ，将 x²y''+xy' 转化为 y_tt，再解常系数方程。",
     "pitfalls": "二阶导数变换含 −y_t 项，和 xy' 项合并后才得到 y_tt；不能漏掉链式法则项。"
   },
   "715": {
-    "status": "verified",
-    "questionKey": "2024-解答题-1",
-    "primary": [
-      "CAL-07-C"
-    ],
-    "secondary": [
-      "CAL-07-D"
-    ],
-    "rationale": "换元后常系数方程通解为 C₁x³+C₂x⁻³，结合 y(1)=2、y'(1)=6 得 C₁=2、C₂=0。",
-    "methods": "先写 Euler 方程通解，再将两个初值代入联立求常数。",
-    "pitfalls": "y'(1)=3C₁−3C₂；与 y(1)=C₁+C₂ 联立，避免把导数条件误写成 6C₁。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 714,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "716": {
-    "status": "verified",
-    "questionKey": "2024-解答题-2",
-    "primary": [
-      "CAL-06-B"
-    ],
-    "secondary": [
-      "CAL-06-C"
-    ],
-    "rationale": "代入 y=2x³ 后令 u=4−x²，将积分转为 ∫₀³(4−u)u^(1/2)du，结果 22√3/5。",
-    "methods": "先代入已求函数，再作根式常用代换并计算幂函数积分。",
-    "pitfalls": "换元后上下限由 x=1、2 对应 u=3、0，反向积分需同步改变符号。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 714,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "717": {
     "status": "verified",
@@ -9447,37 +9399,30 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-08-B"
     ],
     "secondary": [
-      "CAL-08-A"
+      "CAL-08-A",
+      "CAL-06-A"
     ],
     "rationale": "对 u=2x+y、v=3x−y 使用二元复合函数二阶链式法则，题设线性组合中 fuu、fvv 系数抵消，得到 25fuv=1。",
     "methods": "先求 gx、gy，再求 gxx、gxy、gyy 并按题设系数组合。",
     "pitfalls": "混合二阶项的系数需计入两个交叉项；本题组合为 25fuv，不能误写成 13 或 24。"
   },
   "719": {
-    "status": "verified",
-    "questionKey": "2024-解答题-1",
-    "primary": [
-      "CAL-08-B"
-    ],
-    "secondary": [
-      "CAL-08-A"
-    ],
-    "rationale": "对 g(x,y)=f(2x+y,3x−y) 连续使用链式法则，得到 gxx、gxy、gyy 的二阶表达式，并由线性组合解出 fuv=1/25。",
-    "methods": "先列 u、v 对 x、y 的一阶偏导，再逐次求二阶偏导并代入约束。",
-    "pitfalls": "混合偏导系数来自两组链式项；需核对 gxy 中 fuv 系数以及 −6gyy 的贡献。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 718,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "720": {
-    "status": "verified",
-    "questionKey": "2024-解答题-2",
-    "primary": [
-      "CAL-08-B"
-    ],
-    "secondary": [
-      "CAL-08-A"
-    ],
-    "rationale": "由已求得 f_uv=1/25，先对 u 积分并用 f_u(u,0)=ue^{-u}确定函数项，再由 f(0,v)确定仅依赖 v 的积分函数。",
-    "methods": "先恢复 f_u，再对 u 积分，最后代入 v=0 的边界条件。",
-    "pitfalls": "积分常数可依赖另一变量；不能把 ψ(v) 当作数值常数。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 718,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "721": {
     "status": "verified",
@@ -9494,30 +9439,22 @@ window.EXAM_KNOWLEDGE_MAP = {
     "pitfalls": "二阶导数有界要分别构造上下界；积分 x(1−x)/2 得 1/12。"
   },
   "722": {
-    "status": "verified",
-    "questionKey": "2024-解答题-1",
-    "primary": [
-      "CAL-05-D"
-    ],
-    "secondary": [
-      "CAL-05-A"
-    ],
-    "rationale": "构造 g(x) 后 g(0)=g(1)=0 且 g''=f''+1≥0，凸性推出 g≤0；对另一侧构造函数得反向界。",
-    "methods": "用反证结合两段拉格朗日中值定理，或直接利用凸函数弦线性质。",
-    "pitfalls": "凸函数位于端点连线下方；符号方向要与 g''≥0 对应。"
+    "status": "orphan-answer-fragment-needs-source",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": null,
+    "rationale": "该记录只有解答片段，未找到可可靠归并的完整原题；不计作独立真题，待找回原始题面。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "723": {
-    "status": "verified",
-    "questionKey": "2024-解答题-2",
-    "primary": [
-      "CAL-06-C"
-    ],
-    "secondary": [
-      "CAL-05-D"
-    ],
-    "rationale": "对第 1 问的点态误差不等式在 [0,1] 积分，端点线性插值的积分等于端点函数值平均，误差上界积分为 1/12。",
-    "methods": "对不等式逐项积分并计算 ∫₀¹x(1−x)/2 dx。",
-    "pitfalls": "端点线性插值积分为 (f(0)+f(1))/2，不能遗漏系数 1/2。"
+    "status": "orphan-answer-fragment-needs-source",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": null,
+    "rationale": "该记录只有解答片段，未找到可可靠归并的完整原题；不计作独立真题，待找回原始题面。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "724": {
     "status": "verified",
@@ -9527,39 +9464,31 @@ window.EXAM_KNOWLEDGE_MAP = {
     ],
     "secondary": [
       "LA-03-A",
-      "LA-02-B"
+      "LA-02-B",
+      "LA-06-A",
+      "LA-05-C"
     ],
     "rationale": "两个齐次方程组的解空间包含关系且不相同，结合 A 的秩为 2 可确定堆叠矩阵秩仍为 2，进而求 a、b。",
     "methods": "把 A 与 Bᵀ 纵向拼接，利用核空间包含关系转化为行空间/秩条件并行化简。",
     "pitfalls": "注意题干是“Ax=0 的解是 Bᵀx=0 的解”，方向不可颠倒；不同解意味着核空间包含为真包含。"
   },
   "725": {
-    "status": "verified",
-    "questionKey": "2024-解答题-1",
-    "primary": [
-      "LA-02-B"
-    ],
-    "secondary": [
-      "LA-03-D",
-      "LA-04-D"
-    ],
-    "rationale": "将 A 与 Bᵀ 纵向拼接后，其行空间不增加，秩仍为 2；行化简给出 a=1、b=2。",
-    "methods": "利用同解条件 r([A;Bᵀ])=r(A)，再对拼接矩阵消元。",
-    "pitfalls": "同解条件不仅是两矩阵秩相等，还需利用原方程组解空间包含关系确定拼接秩。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 724,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "726": {
-    "status": "verified",
-    "questionKey": "2024-解答题-2",
-    "primary": [
-      "LA-06-A"
-    ],
-    "secondary": [
-      "LA-05-C",
-      "LA-06-B"
-    ],
-    "rationale": "代入 a=1、b=2 得 BA 为对称秩一矩阵 (1,1,2)ᵀ(1,1,2)，其唯一非零特征值为 6，正交对角化后标准形为 6y₁²。",
-    "methods": "先计算 BA 并识别秩一外积，再构造单位特征向量及其正交补。",
-    "pitfalls": "二次型由 xᵀBAx 决定，需确认 BA 对称；正交矩阵列向量必须单位且两两正交。"
+    "status": "duplicate-answer-fragment",
+    "primary": [],
+    "secondary": [],
+    "parentQuestionIndex": 724,
+    "rationale": "该记录是对应完整真题的分步解答片段，已归并到父题的完整解析；不单独计题、不重复建立真题关联。",
+    "methods": "请查看 parentQuestionIndex 指向的完整真题及合并后的分步解析。",
+    "pitfalls": "不得把解答片段当作独立题目统计或重复映射。"
   },
   "727": {
     "status": "verified",
@@ -9568,10 +9497,11 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-08-B"
     ],
     "secondary": [
-      "CAL-04-D"
+      "CAL-04-D",
+      "CAL-06-F"
     ],
     "rationale": "对隐式方程分别关于 x、y 求偏导，积分上限与下限贡献相反符号，相加得到 z_x+z_y=z/(z+1)(e^{-x²}−e^{-y²})。",
-    "methods": "使用隐函数求导和变上限积分求导公式，分别求 z_x、z_y 后相加。",
+    "methods": "设 F(x,y,z)=z+ln z−∫ᵧˣe^(−t²)dt=0；分别对 x、y 求偏导，使用变上限积分求导得到 F_x、F_y，再用 z_x=−F_x/F_z、z_y=−F_y/F_z，最后合并化简。",
     "pitfalls": "对下限 y 求导会带负号；外层方程中 ln z 的导数为 z_y/z。"
   },
   "728": {
@@ -9625,8 +9555,8 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-08-C"
     ],
     "rationale": "原卷积分上限为4。区域为−2≤x≤2且4−x²≤y≤4。固定y∈[0,4]时，x位于抛物线外侧两段[−2,−√(4−y)]与[√(4−y),2]，因此换序后正是选项A。旧题库把积分上限4误录为2，导致区域与选项矛盾。",
-    "methods": "先根据原卷确定积分上下限，再画出抛物线y=4−x²与水平线y=4围成的区域，按固定y分成左右两段。",
-    "pitfalls": "积分上限4不能误读为2；换序时区域在每条水平线上是左右两个不连通区间。",
+    "methods": "将原积分区域写成 −2≤x≤2、4−x²≤y≤4。由 4−x²≤y 得 x²≥4−y，即 x≤−√(4−y) 或 x≥√(4−y)。y 的范围为 0≤y≤4，因此换序后为 ∫₀⁴[∫_{−2}^{−√(4−y)}f dx+∫_{√(4−y)}²f dx]dy，对应 A。",
+    "pitfalls": "积分上限应为4；固定 y 后的水平截面分成左右两段，不能把中间区域也纳入；换序必须保持原区域不变。",
     "sourceUrl": "https://edu.xaiu.edu.cn/__local/3/0D/19/B4D5520F03FC57305C10AE7A14F_A8C628A7_45CE3.pdf#page=2",
     "sourceLabel": "查看2025年原卷第5题图（PDF第2页）"
   },
@@ -9634,28 +9564,28 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2025-选择题-6",
     "primary": [
-      "CAL-06-C"
+      "CAL-06-N157"
     ],
     "secondary": [
-      "CAL-04-A"
+      "CAL-06-C"
     ],
-    "rationale": "万有引力大小 G/(x²+1)，沿运动方向的分力乘以方向余弦 x/√(x²+1)，故功积分为 ∫₀¹Gx/(x²+1)^{3/2}dx。",
-    "methods": "先写引力矢量大小，再投影到 x 轴方向并对位移积分。",
-    "pitfalls": "功由力在位移方向的分量决定，不能直接积分引力大小；方向余弦为 x/r。"
+    "rationale": "单位质点间万有引力大小为 G/(x²+1)，沿运动方向的分力还需乘方向余弦 x/√(x²+1)，故克服引力做功的积分为 ∫₀¹Gx/(x²+1)^{3/2}dx。",
+    "methods": "P=(x,0)、Q=(0,1)，距离 r=√(x²+1)。引力大小 G/r²=G/(x²+1)，沿 x 轴的阻力分量为 G/r²·x/r=Gx/(x²+1)^{3/2}。克服引力做功 W=∫₀¹F_x dx，因此选 B。",
+    "pitfalls": "不能直接积分引力大小；方向余弦必须为 x/r；克服引力做功取与运动方向相反的分力正值。"
   },
   "733": {
     "status": "verified",
     "questionKey": "2025-选择题-7",
     "primary": [
-      "CAL-04-A"
+      "CAL-04-N158"
     ],
     "secondary": [
       "CAL-03-A",
       "CAL-03-B"
     ],
-    "rationale": "四个极限条件均可借连续性分情形推出 f(0) 正负或为零，再将绝对值在邻域内去掉，或由左右极限一致推出导数存在。",
-    "methods": "分别讨论 f(0)>0、=0、<0，利用连续性固定 |f| 符号；条件③用左右极限比较。",
-    "pitfalls": "条件③中左右商分别为 L 与 −L，极限存在迫使 L=0；不能只用单侧极限。"
+    "rationale": "四个条件均能由连续性与绝对值局部保号性推出 f 在 0 处可导，答案 D。",
+    "methods": "①若 lim(|f(x)|−f(0))/x 存在，连续性先推出 |f(0)|=f(0)，故 f(0)≥0；f(0)>0 时局部 f>0，差商即 f 的差商；f(0)=0 时化为 |f(x)|/x，双侧极限存在迫使其为 0，从而 f(x)/x→0。②若 lim(f(x)−|f(0)|)/x 存在，连续性给 f(0)=|f(0)|，再分 f(0)>0 与 f(0)=0。③若 lim|f(x)|/x 存在，左右两侧符号相反且极限相同，只能为 0，故 f'(0)=0。④若 lim(|f(x)|−|f(0)|)/x 存在，f(0)≠0 时局部去绝对值，f(0)=0 时归结为③。四项均成立，选 D。",
+    "pitfalls": "条件①、②先用连续性确定 f(0) 的符号；③、④在 f(0)=0 时必须使用双侧极限，不能只看右侧。"
   },
   "734": {
     "status": "verified",
@@ -9745,10 +9675,11 @@ window.EXAM_KNOWLEDGE_MAP = {
     ],
     "secondary": [
       "CAL-04-C",
-      "CAL-08-B"
+      "CAL-08-B",
+      "CAL-06-F"
     ],
     "rationale": "由 x=ln(1+2t) 得 x=0 对应 t=0；隐式方程对 t 求导得 y_t=2e，且 x_t=2，故 dy/dx=e。",
-    "methods": "先求参数对应点，再对隐式积分方程求 t 导数，最后用参数求导公式。",
+    "methods": "先由参数方程求 dx/dt；对含积分上限 y+t² 的隐式方程关于 t 求导，使用莱布尼茨公式得到 dy/dt；最后用 dy/dx=(dy/dt)/(dx/dt)，代入指定参数值。",
     "pitfalls": "上限 y+t² 的导数为 y_t+2t；代入 t=0 后再除以 dx/dt。"
   },
   "741": {
@@ -9813,10 +9744,11 @@ window.EXAM_KNOWLEDGE_MAP = {
     ],
     "secondary": [
       "CAL-08-A",
-      "CAL-08-B"
+      "CAL-08-B",
+      "CAL-06-A"
     ],
     "rationale": "由全微分读出 fx、fy，积分恢复 f(x,y)=e^{-y}(−x²+y+2)，驻点 (0,−1) 的 Hessian 正定判别式且 fxx<0，故为极大点。",
-    "methods": "先对 x 积分并保留 C(y)，再用 fy 确定 C(y)，最后求驻点和二阶判别。",
+    "methods": "由 df 读出 f_x、f_y；先对 f_x 关于 x 积分并保留只依赖 y 的函数 C(y)，再对 y 求偏导与 f_y 比较确定 C′(y)，最后求驻点并用 Hessian 判别极值。",
     "pitfalls": "积分“常数”是 y 的函数；极值判别要同时检查 AC−B² 与 fxx 符号。"
   },
   "746": {
@@ -9836,15 +9768,16 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2025-解答题-21",
     "primary": [
-      "CAL-05-A"
+      "CAL-05-N147"
     ],
     "secondary": [
+      "CAL-05-A",
       "CAL-05-B",
-      "CAL-05-G"
+      "CAL-05-C"
     ],
-    "rationale": "必要性由拉格朗日中值定理直接得到。充分性：任取 c1<c2 及 c1<x<c2，题设给出左段割线斜率小于右段割线斜率；令 x→c1+、x→c2−，分别得到 f'(c1)≤[f(c2)−f(c1)]/(c2−c1)≤f'(c2)，故 f' 非减。若 f'(c1)=f'(c2)，则 f' 在 [c1,c2] 上恒定，拉格朗日中值定理推出 f 在该区间为线性函数，与任取三点时割线斜率严格不等矛盾。因此 f' 严格递增。",
-    "methods": "必要性用两段拉格朗日中值定理；充分性对 c1<x<c2 使用三点割线斜率不等式，分别令 x 趋近 c1、c2 得导数与整段割线斜率的夹逼，再用反证排除导数在不同点取相同值。",
-    "pitfalls": "仅由夹逼先得到的是 f' 非减，严格性还需排除 f' 在某区间恒定；不能把开区间端点 a、b 当作已知可取到的函数值。"
+    "rationale": "题目所给相邻割线斜率严格递增条件，恰是导函数严格递增的充要刻画；必要性用两段拉格朗日中值定理，充分性用两组相邻三点取极限夹逼，再反证排除等号。",
+    "methods": "先证必要性：两段中值点 ξ₁<ξ₂，利用 f′ 严格递增比较割线斜率。再证充分性：对 (u,u+h,v) 与 (u,v−h,v) 应用条件并令 h→0⁺，得 f′(u)≤割线斜率≤f′(v)；若等号则 f′ 在区间恒定，和严格割线不等式矛盾。",
+    "pitfalls": "充分性不能停在 f′ 非减，必须用严格割线不等式排除 f′ 在非退化区间恒定；不能把 f′ 严格递增误写成 f′′>0 处处成立。"
   },
   "748": {
     "status": "verified",
@@ -9878,14 +9811,15 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2026-选择题-2",
     "primary": [
-      "CAL-07-D"
+      "CAL-07-N150"
     ],
     "secondary": [
-      "CAL-07-C"
+      "CAL-07-C",
+      "CAL-07-D"
     ],
-    "rationale": "两个特解的线性组合要成为原非齐次方程解，系数和须为 1；成为对应齐次方程解，系数和须为 0，解得 λ=2/5、μ=1/5。",
-    "methods": "利用非齐次方程特解差为齐次解、齐次解线性组合封闭的结构列两条系数方程。",
-    "pitfalls": "不要把特解的任意线性组合视为特解；系数和为 1 才保持非齐次项。"
+    "rationale": "线性微分算子作用于特解线性组合时，右端非齐次项乘以系数和；成为原方程解要求 2λ+μ=1，成为齐次解要求 λ−2μ=0。",
+    "methods": "设 L[y]=g(x)，L[y₁]=L[y₂]=g。则 L[2λy₁+μy₂]=(2λ+μ)g，故 2λ+μ=1；L[λy₁−2μy₂]=(λ−2μ)g=0，因 g 不恒为零，故 λ−2μ=0。解得 λ=2/5、μ=1/5。",
+    "pitfalls": "两个特解的任意线性组合一般不是特解；非齐次解组合的系数和为 1，齐次组合的系数和为 0。"
   },
   "751": {
     "status": "verified",
@@ -9904,41 +9838,43 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2026-选择题-4",
     "primary": [
-      "CAL-06-C"
+      "CAL-06-N151"
     ],
     "secondary": [
-      "CAL-04-A"
+      "CAL-06-C",
+      "CAL-04-C"
     ],
-    "rationale": "对称微元的水平引力分量抵消，竖直分量为 Gm dx/(1+x²)^{3/2}，两侧积分得到选项 D。",
-    "methods": "取右半棒微元，先算万有引力，再投影到竖直方向并乘 2。",
-    "pitfalls": "微元引力大小为 Gm dx/(1+x²)，竖直方向余弦为 1/√(1+x²)，不可遗漏投影因子。"
+    "rationale": "线密度为 1，取棒右半段微元 dm=dx；万有引力大小 Gm dx/(1+x²)，竖直投影再乘 1/√(1+x²)，左右对称相加得选项 D。",
+    "methods": "对 x∈[0,1]，距离 r=√(1+x²)，dF=Gm dx/r²。竖直分量 dF_y=dF/r=Gm dx/(1+x²)^{3/2}。左右水平分量抵消、竖直分量相加，F=2Gm∫₀¹dx/(1+x²)^{3/2}。",
+    "pitfalls": "引力大小和竖直分量不同；必须乘投影因子 1/r；对称后乘 2，但只积分半根棒。"
   },
   "753": {
     "status": "verified",
     "questionKey": "2026-选择题-5",
     "primary": [
-      "CAL-05-B"
+      "CAL-05-N152"
     ],
     "secondary": [
+      "CAL-05-B",
       "CAL-05-G"
     ],
-    "rationale": "A、B 的单调性与极小值互推均可用在单点修改函数值的反例否定；凹函数的割线斜率性质推出 C，D 的逆命题有反例。",
-    "methods": "逐项使用定义与反例；C 可由凹函数弦斜率随区间位置的单调性证明。",
-    "pitfalls": "单调性只在开区间成立不能控制端点函数值；割线斜率单调的逆推也不足以保证二阶凹性。"
+    "rationale": "C 项考查固定右端点的弦斜率单调性。若题目中的“凹”按凹向上/凸函数理解，则 (f(x)−f(1))/(x−1) 是从 x 到 1 的弦斜率，随 x 增大而不减。",
+    "methods": "对凸函数取 x₁<x₂<1，由凸性 f(x₂)≤[(1−x₂)/(1−x₁)]f(x₁)+[(x₂−x₁)/(1−x₁)]f(1)，移项得 [f(1)−f(x₁)]/(1−x₁)≤[f(1)−f(x₂)]/(1−x₂)。这两个商分别等于题目中的 [f(x)−f(1)]/(x−1)，故 C 成立。",
+    "pitfalls": "“凹”的教材约定可能与现代凸分析术语不同；本题应按题库标准答案的凹向上约定理解。若按 f''≤0 的凹函数定义，不等号方向会反转。"
   },
   "754": {
     "status": "verified",
     "questionKey": "2026-选择题-6",
     "primary": [
-      "CAL-06-F"
+      "CAL-04-N154"
     ],
     "secondary": [
-      "CAL-01-C",
-      "CAL-04-A"
+      "CAL-06-F",
+      "CAL-01-C"
     ],
-    "rationale": "f(1)=0，故反函数 g(0)=1；由变上限积分求 f'(1)=3e/2，反函数导数 g'(0)=1/f'(1)=2/(3e)。",
-    "methods": "先求 f(1)，再求 f'(x)，最后套反函数求导公式。",
-    "pitfalls": "反函数导数的自变量对应 f(1)=0，因此应计算 g'(0)，不是 g'(1)。"
+    "rationale": "先由 f(1)=0 得 g(0)=1，再用变上限积分求 f'(1)=3e/2，最后用反函数导数 g'(0)=1/f'(1)。",
+    "methods": "f(1)=∫₁¹...dt=0，所以 g(0)=1。f'(x)=e^{x³}/(1+x⁶)·3x²，故 f'(1)=3e/2。由 g(f(x))=x 求导，g'(f(x))f'(x)=1，代 x=1 得 g'(0)=2/(3e)。",
+    "pitfalls": "反函数导数的自变量要对应 f(1)=0，因此求的是 g'(0)；不能误写为 g'(1)，也不能忘记取 f'(1) 的倒数。"
   },
   "755": {
     "status": "verified",
@@ -9957,15 +9893,16 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2026-选择题-8",
     "primary": [
-      "LA-02-D"
+      "LA-02-N155"
     ],
     "secondary": [
+      "LA-02-D",
       "LA-01-C",
       "LA-01-E"
     ],
-    "rationale": "置换矩阵正交，逆矩阵等于转置且仍为置换矩阵；伴随矩阵等于 det(A)A⁻¹，det 可为 ±1，故不总是置换矩阵。",
-    "methods": "使用置换矩阵 AᵀA=I 与伴随矩阵恒等式 A*=det(A)A⁻¹。",
-    "pitfalls": "不能把 A*=A⁻¹ 当恒等式，只有 det(A)=1 时才成立。"
+    "rationale": "置换矩阵是正交矩阵，故 P⁻¹=Pᵀ 且仍为置换矩阵；伴随矩阵为 det(P)P⁻¹，而 det(P)=±1，因此伴随矩阵不一定为置换矩阵。",
+    "methods": "每行每列恰有一个 1，行列向量构成标准正交组，PᵀP=I，故 P⁻¹=Pᵀ。又 P^*=det(P)P⁻¹，行交换次数可奇可偶，det(P)可为 −1，故 P^*可能是负置换矩阵。",
+    "pitfalls": "不能把 P^*=P⁻¹ 当恒等式；只有 det(P)=1 时二者相等。"
   },
   "757": {
     "status": "verified",
@@ -10016,11 +9953,12 @@ window.EXAM_KNOWLEDGE_MAP = {
       "CAL-02-C"
     ],
     "secondary": [
-      "CAL-01-G"
+      "CAL-01-G",
+      "CAL-05-D"
     ],
-    "rationale": "通分后分子为 sin x−ln(1+x)。展开得 x²/2+o(x²)，分母 x sin x=x²+o(x²)，故极限为 1/2，与题库答案一致。",
-    "methods": "对 sin x 与 ln(1+x) 作同阶展开，保留到二阶；分母用 sin x∼x。",
-    "pitfalls": "不能分别把两个原项取极限；两项均含 1/x 量级，必须先合并或展开后比较。"
+    "rationale": "通分后分子为 sin x−ln(1+x)，需保留到二阶展开：sin x=x+O(x³)，ln(1+x)=x−x²/2+O(x³)，分子为 x²/2+O(x³)，分母 x sin x=x²+O(x⁴)，极限为 1/2。",
+    "methods": "先通分为 [sin x−ln(1+x)]/[x sin x]。使用麦克劳林展开到二阶：sin x=x−x³/6+O(x⁵)，ln(1+x)=x−x²/2+x³/3+O(x⁴)，故分子=x²/2+O(x³)；分母=x²+O(x⁴)，结果为 1/2。",
+    "pitfalls": "不能分别求原式两项的极限；一次项抵消后必须保留二阶项；sin x 的二阶系数为 0，不能误写为 −x²/2。"
   },
   "761": {
     "status": "verified",
@@ -10065,14 +10003,15 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2026-填空题-16",
     "primary": [
-      "LA-02-E"
+      "LA-02-N156"
     ],
     "secondary": [
-      "LA-06-A"
+      "LA-06-A",
+      "LA-02-E"
     ],
-    "rationale": "AAᵀ 的秩等于 A 的秩。二次型规范形仅有一个平方项，故 rank(A)=1，两行成比例。比较首末分量得 a=1，再比较中间分量得 b=1，因此 a+b=2。",
-    "methods": "利用 rank(AAᵀ)=rank(A)，令 A 两行成比例并逐分量比较系数。",
-    "pitfalls": "规范形只有一个非零平方项表示秩为 1；比例关系应对整行统一使用同一比例系数。"
+    "rationale": "二次型规范形只有一个非零平方项，秩为 1；又 r(AAᵀ)=r(A)，故 A 两行成比例，逐分量比较得 a=b=1。",
+    "methods": "规范形 y₁² 表示秩为 1。对实矩阵 A，r(AAᵀ)=r(A)，所以 A 的两行线性相关。令第二行=k倍第一行：a+2=k、3=kb、−3a=−k。由 k=3a 与 a+2=k 得 a=1、k=3，再得 b=1，故 a+b=2。",
+    "pitfalls": "不能只根据 AAᵀ 对称判断秩；两行成比例必须使用同一个比例系数；规范形中非零平方项个数就是二次型秩。"
   },
   "765": {
     "status": "verified",
@@ -10091,14 +10030,15 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2026-解答题-18",
     "primary": [
-      "CAL-06-F"
+      "CAL-06-N153"
     ],
     "secondary": [
+      "CAL-06-F",
       "CAL-04-B"
     ],
-    "rationale": "x≠0 时换元 u=xt 得 f(x)=x⁻¹∫₀^{x³}g(u)du，求导得到题库表达式。连续性保证积分均值项为 xg(ξx)，故 f'(0)=0 且 f'(x)→0。",
-    "methods": "先作变量代换把变上限写成 x³，再用乘积法则与牛顿—莱布尼茨公式；在零点用导数定义和积分中值定理。",
-    "pitfalls": "公式含 x⁻² 不能直接代 x=0；零点导数必须由定义单独求，再验证两侧极限。"
+    "rationale": "被积函数含参数 xt，先令 u=xt 将积分改写为 x⁻¹∫₀^{x³}g(u)du；x≠0 时求导，x=0 用导数定义和积分中值定理单独证明。",
+    "methods": "x≠0 时 f(x)=x⁻¹G(x³)，G'=g，故 f'=-x⁻²G(x³)+3xg(x³)。在 x=0 处，f'(0)=lim x⁻²∫₀^{x³}g(u)du=lim xg(ξ_x)=0。对 x≠0 的导数式同样用中值定理得第一项趋于 0，第二项 3xg(x³) 趋于 0，所以 f' 在 0 连续。",
+    "pitfalls": "不能把 x≠0 的导数式直接代入 x=0；在负 x 情况下定向积分仍成立；需要证明导数存在及导数极限等于 f'(0)。"
   },
   "767": {
     "status": "verified",
@@ -10117,41 +10057,43 @@ window.EXAM_KNOWLEDGE_MAP = {
     "status": "verified",
     "questionKey": "2026-解答题-20",
     "primary": [
-      "CAL-06-C"
+      "CAL-06-I"
     ],
     "secondary": [
       "CAL-05-G",
-      "CAL-06-I"
+      "CAL-06-C"
     ],
-    "rationale": "拐点由 y''=0 得 x₀=1/√3、y₀=3/4，直线 OM 斜率为 3√3/4。旋转体按 [0,x₀] 的直线边界和 [x₀,∞) 的曲线边界分段用圆盘法，积分收敛并得 V=π²/6−√3π/16。",
-    "methods": "先求拐点和 OM 方程，再按边界切换点分段建立 π∫(半径)²dx，第二段计算反常积分。",
-    "pitfalls": "无界区域不等于体积发散；分段时旋转半径取区域上边界，且两段不能重复或遗漏。"
+    "rationale": "拐点由 y''=0 得 M(1/√3,3/4)，OM 的斜率为 3√3/4。体积分成直线段圆盘积分 √3π/16 与曲线段反常积分 π∫_{1/√3}^{∞}(1+x²)^{-2}dx；后者等于 π²/6−√3π/8，总体积为 π²/6−√3π/16。",
+    "methods": "先求 y'' 并确认拐点；写出 OM：y=(3√3/4)x。圆盘法分段：V=π∫₀^{1/√3}(3√3x/4)²dx+π∫_{1/√3}^{∞}(1+x²)^{-2}dx。第二段用原函数 F=x/[2(1+x²)]+(1/2)arctan x，按 lim_{R→∞}[F(R)−F(1/√3)] 计算，得 π²/6−√3π/8；相加得 V=π²/6−√3π/16。",
+    "pitfalls": "无界区域不等于体积发散；必须把曲线段积分写成反常积分极限；圆盘半径要平方；第一段结果为 √3π/16，第二段为 π²/6−√3π/8，合并时根式项相减后为 −√3π/16。"
   },
   "769": {
     "status": "verified",
     "questionKey": "2026-解答题-21",
     "primary": [
-      "CAL-07-B"
+      "CAL-07-N148"
     ],
     "secondary": [
+      "CAL-07-B",
       "CAL-07-D"
     ],
-    "rationale": "令 p=y' 将二阶方程降为一阶，再令 z=1/p 化为线性方程 z'+2z/x=−1/x²。由 p(3)=−9 得 z=−1/x+2/x²，积分并用 y(3)=1/2 定常数，所得解与题库表达式一致。",
-    "methods": "识别方程不显含 y，先降阶；对 p 的 Bernoulli 型方程作倒数代换，解线性方程后积分恢复 y。",
-    "pitfalls": "倒数代换时 z'=−p'/p²，符号容易出错；积分 ln(x−2) 在 x>2 上无需绝对值。"
+    "rationale": "方程不显含 y，令 p=y′ 降阶；再令 z=1/p 将 Bernoulli 型方程化为 z′+2z/x=−1/x²。由 p(3)=−9 得 z=−1/x+2/x²，恢复 y′=x²/(2−x)，积分并用 y(3)=1/2 得 C=11。",
+    "methods": "先检查 p=0 分支；因 y′(3)=−9≠0，可在含 x=3 的解区间令 z=1/p。由 z′+2z/x=−1/x²，积分因子 μ=x²，得 (x²z)′=−1、z=−1/x+C/x²；代入 z(3)=−1/9 得 C=2。再恢复 y′=x²/(2−x)=−x−2−4/(x−2)，积分得 y=−x²/2−2x−4ln(x−2)+C₁，代入 y(3)=1/2 得 C₁=11。",
+    "pitfalls": "倒数代换会排除 p=0 分支，需先检查；z′=−p′/p²；积分因子是 x²；最后积分中的 ln(x−2) 由 x>2 保证有定义。"
   },
   "770": {
     "status": "verified",
     "questionKey": "2026-解答题-22",
     "primary": [
-      "LA-03-C"
+      "LA-03-N149"
     ],
     "secondary": [
-      "LA-02-A",
-      "LA-02-B"
+      "LA-03-C",
+      "LA-02-A"
     ],
-    "rationale": "直接验证 α₃=−α₁+α₂、α₄=α₁−α₂，且 α₁、α₂ 线性无关，故构成极大无关组。于是 A=GH，HG=[[1,−1],[0,1]]，其 9 次幂为 [[1,−9],[0,1]]，由 (GH)^10=G(HG)^9H 得题库所列 A^10。",
-    "methods": "先用向量线性表示证明秩为 2 并构造 H，再用 (GH)^n=G(HG)^(n−1)H 降低矩阵幂的阶数。",
-    "pitfalls": "A 是 4×4 而 H、G 分别为 2×4 与 4×2；乘法顺序不能颠倒，幂次公式中 HG 的指数是 n−1。"
+    "rationale": "由 α₃=−α₁+α₂、α₄=α₁−α₂ 且 α₁、α₂ 线性无关，构造 A=GH。再算 HG=I+N、N²=0，故 (HG)⁹=I+9N=[[1,−9],[0,1]]，利用 A¹⁰=G(HG)⁹H 得题库矩阵。",
+    "methods": "先证明 α₁、α₂ 无关并写出 α₃、α₄ 的线性表示，构造 G=(α₁,α₂)、H=[[1,0,−1,1],[0,1,1,−1]]。计算 D=HG=[[1,−1],[0,1]]=I+N，其中 N²=0，故 D⁹=[[1,−9],[0,1]]。最后用 (GH)¹⁰=G(HG)⁹H 相乘，得到 [[1,−8,−9,9],[0,−1,−1,1],[−1,9,10,−10],[−1,7,8,−8]]。",
+    "pitfalls": "A=GH 时 G 为 4×2、H 为 2×4；降阶后计算的是 HG（2×2），不是 GH；幂次应为 9；使用 D^9=I+9N 前必须验证 N²=0。"
   }
 };
+if (typeof module !== 'undefined') module.exports = window.EXAM_KNOWLEDGE_MAP;

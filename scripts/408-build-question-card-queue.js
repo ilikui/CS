@@ -71,10 +71,10 @@ function termsForCard(card) {
 }
 function loadQuestions() {
   const context = {window:{}};
-  const source = fs.readFileSync('data/408/questions_data.js','utf8');
+  const source = fs.readFileSync('public/opensource-22408/408/questions_data.js','utf8');
   vm.runInNewContext(source + String.fromCharCode(10) + ';globalThis.__QUESTIONS_DATA__ = (typeof QUESTIONS_DATA !== \'undefined\') ? QUESTIONS_DATA : window.QUESTIONS_DATA;',context,{timeout:120000});
   const data = context.__QUESTIONS_DATA__ || context.window.QUESTIONS_DATA || context.QUESTIONS_DATA;
-  if (!Array.isArray(data)) throw new Error('QUESTIONS_DATA export not found in data/408/questions_data.js (expected window.QUESTIONS_DATA or global QUESTIONS_DATA)');
+  if (!Array.isArray(data)) throw new Error('QUESTIONS_DATA export not found in public/opensource-22408/408/questions_data.js (expected window.QUESTIONS_DATA or global QUESTIONS_DATA)');
   return data;
 }
 const questions = loadQuestions();
