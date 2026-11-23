@@ -10619,7 +10619,6 @@ window.CARD_QUESTION_MAP = {
     "relatedCards": [
       "数制转换与定点小数",
       "数据表示与补码",
-      "定点补码加减与溢出"
     ],
     "source": "https://pgcode.cn/exams/408/years/2015/preview",
     "answerSource": "https://www.csgraduates.com/study_methods/408quiz/2015/",
@@ -10647,7 +10646,6 @@ window.CARD_QUESTION_MAP = {
     "relatedCards": [
       "数制转换与定点小数",
       "数据表示与补码",
-      "定点补码加减与溢出"
     ],
     "source": "https://pgcode.cn/exams/408/years/2022/preview",
     "answerSource": "https://csgraduates.com/study_methods/408quiz/2022/",
@@ -10676,7 +10674,6 @@ window.CARD_QUESTION_MAP = {
     "relatedCards": [
       "数制转换与定点小数",
       "数据表示与补码",
-      "定点补码加减与溢出"
     ],
     "source": "https://pgcode.cn/exams/408/years/2023/preview",
     "answerSource": "https://zhenti.beokayy.club/paper/2023",
