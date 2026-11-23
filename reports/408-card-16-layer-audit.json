@@ -1,0 +1,143 @@
+{
+  "generatedAt": "2026-11-23",
+  "card": {
+    "index": 16,
+    "title": "计算机系统层次结构",
+    "path": "public/opensource-22408/408/cards.html"
+  },
+  "scope": "逐题验证用户指定的8道关联选择题能否仅凭该卡片的知识内容、判断规则和逐题解题依据独立作答。",
+  "method": [
+    "逐题检查题干考查对象、关键判据、选项排除依据和答案是否能从卡片推出。",
+    "区分卡片内嵌题目映射（cards-questions.js）与正式题库反向关联（question-card-map.js），不将前者冒充后者。",
+    "外部来源交叉核对题干和答案；来源冲突或本地题库同年份同题号异题时单独标注。"
+  ],
+  "summary": {
+    "targetQuestions": 8,
+    "cardContentSufficient": 8,
+    "contentGapsFixed": 2,
+    "formalQuestionCardMapPresent": 4,
+    "formalQuestionCardMapMissing": 4,
+    "localQuestionDatasetCollision": [
+      "2026-12",
+      "2026-16"
+    ]
+  },
+  "questions": [
+    {
+      "year": 2015,
+      "index": 12,
+      "answer": "A（仅Ⅰ）",
+      "topic": "机器语言、汇编语言、硬件描述语言的执行层次",
+      "independentSolve": "PASS",
+      "reason": "卡片明确机器指令按ISA编码后由CPU取指译码执行；汇编文本需先汇编；HDL需综合实现为电路。",
+      "source": "https://officialxuefucom.oss-cn-beijing.aliyuncs.com/u/cms/beijing/202007/03162522etof.pdf",
+      "sourceStatus": "试题PDF与公开题面交叉核对",
+      "formalMap": "MISSING"
+    },
+    {
+      "year": 2016,
+      "index": 12,
+      "answer": "C（编译程序）",
+      "topic": "高级语言源程序到机器级目标代码",
+      "independentSolve": "PASS",
+      "reason": "卡片区分编译、解释、汇编和链接的输入输出职责，能排除其余三项。",
+      "source": "https://www.csgraduates.com/study_methods/408quiz/2016/",
+      "sourceStatus": "公开真题页面交叉核对",
+      "formalMap": "MISSING"
+    },
+    {
+      "year": 2022,
+      "index": 18,
+      "answer": "B（仅Ⅰ、Ⅲ）",
+      "topic": "ISA规定的内容",
+      "independentSolve": "PASS",
+      "reason": "卡片给出软件可见/影响二进制兼容性的判据；指令格式与可见寄存器属于ISA，时钟周期与加法器进位电路属于实现细节。",
+      "source": "https://pgcode.cn/exams/408/years/2022/preview",
+      "sourceStatus": "题干与参考答案交叉核对",
+      "formalMap": "PRESENT"
+    },
+    {
+      "year": 2022,
+      "index": 20,
+      "answer": "A",
+      "topic": "预处理、编译、汇编、链接顺序",
+      "independentSolve": "PASS",
+      "reason": "卡片给出完整顺序、每阶段职责及典型产物，能够逐项排除顺序错误的选项。",
+      "source": "https://pgcode.cn/exams/408/years/2022/preview",
+      "sourceStatus": "题干与参考答案交叉核对",
+      "formalMap": "PRESENT"
+    },
+    {
+      "year": 2024,
+      "index": 13,
+      "answer": "B（仅Ⅱ、Ⅲ）",
+      "topic": "伪指令、微指令、机器指令、汇编指令",
+      "independentSolve": "PASS",
+      "reason": "卡片区分汇编器处理的伪指令、需汇编的汇编指令、ISA机器指令及微程序控制器内部微指令。卡片题面为原题要点摘要而非逐字原卷全文。",
+      "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
+      "sourceStatus": "公开试卷PDF题干要点与参考答案交叉核对",
+      "formalMap": "PRESENT"
+    },
+    {
+      "year": 2025,
+      "index": 16,
+      "answer": "B（定长指令字格式）",
+      "topic": "ISA指令属性与微架构实现",
+      "independentSolve": "PASS",
+      "reason": "卡片明确指令编码格式属于ISA；阵列乘法器、微程序控制器和单总线数据通路属于微架构。",
+      "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
+      "sourceStatus": "公开试卷PDF题干要点与参考答案交叉核对",
+      "formalMap": "PRESENT"
+    },
+    {
+      "year": 2026,
+      "index": 12,
+      "answer": "C",
+      "topic": "ISA与微架构的层次关系",
+      "independentSolve": "PASS",
+      "reason": "卡片已补充关键边界：微架构确实实现ISA，但微架构不等同于数字逻辑、电路和物理器件层；选项把微架构直接称为ISA的物理实现层，按该题采用的层次模型判错。",
+      "source": "https://pgcode.cn/exams/408/years/2026/preview",
+      "additionalSource": "https://www.csgraduates.com/study_methods/408quiz/2026/",
+      "sourceStatus": "两份详细公开题解题干与答案一致；需注意本地questions_data.js同年同题号记录为另一道练习题，不能据本地记录自动关联。",
+      "formalMap": "MISSING_BLOCKED_BY_LOCAL_COLLISION"
+    },
+    {
+      "year": 2026,
+      "index": 16,
+      "answer": "D",
+      "topic": "ISA规定的接口与超级流水线实现",
+      "independentSolve": "PASS",
+      "reason": "卡片明确I/O指令、中断机制和体系结构可见的存储管理模型与流水线实现策略的区别；超级流水线属于微架构。",
+      "source": "https://pgcode.cn/exams/408/years/2026/preview",
+      "additionalSource": "https://www.csgraduates.com/study_methods/408quiz/2026/",
+      "sourceStatus": "两份详细公开题解题干与答案一致；本地questions_data.js同年同题号记录为操作系统练习题，不能据本地记录自动关联。",
+      "formalMap": "MISSING_BLOCKED_BY_LOCAL_COLLISION"
+    }
+  ],
+  "fixesApplied": [
+    "在卡片中补充ISA虚拟存储机制与操作系统管理策略的边界：体系结构规定可见语义和必要控制状态；操作系统负责页表配置、地址空间组织和页面置换策略。",
+    "修正2026年第12题的层级表述：明确微架构是ISA的具体实现，但数字逻辑/电路/物理器件是实现微架构的更底层层次。"
+  ],
+  "mappingAudit": {
+    "file": "public/opensource-22408/408/question-card-map.js",
+    "currentCardReverseLinks": [
+      "2010-18",
+      "2022-18",
+      "2022-20",
+      "2024-13",
+      "2025-16"
+    ],
+    "requestedLinksMissing": [
+      "2015-12",
+      "2016-12",
+      "2026-12",
+      "2026-16"
+    ],
+    "note": "2026-12和2026-16在public/opensource-22408/408/questions_data.js中分别被占用为不同题目（2026-12为PC/IR/MAR/MDR取指执行题，2026-16为操作系统缺页中断题）。直接按年份+题号写入反向映射会把卡片关联到错误题目；应先为外部真题建立独立且带来源标识的题目ID/命名空间，再写正式映射。2015-12与2016-12可在下一步补入正式映射。"
+  },
+  "remainingWork": [
+    "将2015-12、2016-12加入question-card-map.js，并同步反向映射。",
+    "为2026真题使用不与现有练习题冲突的唯一题目ID，改造关联键后再登记2026-12和2026-16。",
+    "核验页面展示的8道题与正式题库链接，确认不会出现同年同题号错链。"
+  ]
+}
