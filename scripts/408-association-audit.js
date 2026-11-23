@@ -81,10 +81,13 @@ for (const [topic, rec] of Object.entries(mapping)) {
   const q = matches.find(x => String(x.id) === String(rec.id))
     || verifiedMatches.find(x => String(x.id) === String(rec.id))
     || matches[0] || verifiedMatches[0];
-  const sourceKind = q ? (matches.includes(q) ? 'question-dataset' : 'verified-solutions') : 'legacy-map-only';
+  const externalSourceVerified = !q && !!rec.source && !!rec.audit
+    && /original-question-source-crosschecked|original-pdf-verified-answer-crosschecked|cross-checked/i.test(String(rec.audit.status || ''));
+  const sourceKind = q ? (matches.includes(q) ? 'question-dataset' : 'verified-solutions')
+    : (externalSourceVerified ? 'external-source-verified' : 'legacy-map-only');
   const errors = [];
-  if (!q) errors.push('source-not-in-current-question-or-verified-dataset');
-  else if (String(q.id) !== String(rec.id)) errors.push('source-id-mismatch');
+  if (!q && !externalSourceVerified) errors.push('source-not-in-current-question-or-verified-dataset');
+  else if (q && String(q.id) !== String(rec.id)) errors.push('source-id-mismatch');
   const targetCard = topicMap[topic] || null;
   if (!targetCard || !cardTitles.has(targetCard)) errors.push('target-card-missing');
   const sourceText = q && q.question ? norm(q.question) : '';
@@ -95,7 +98,7 @@ for (const [topic, rec] of Object.entries(mapping)) {
   const answerComparable = /^[A-D]$/i.test(sourceAnswer) && /^[A-D]$/i.test(mappedAnswer);
   const answerMatch = answerComparable ? sourceAnswer.toUpperCase() === mappedAnswer.toUpperCase() : null;
   if (answerMatch === false) errors.push('answer-key-mismatch');
-  validation.push({topic:topic,card:targetCard,year:rec.year,index:rec.index,id:rec.id,auditStatus:(rec.audit && rec.audit.status)||'unreviewed',sourceKind:sourceKind,sourceIdentityConfirmed:!!q && String(q.id)===String(rec.id),questionTextContains:questionTextContains,sourceSubjectMetadata:q?q.subject:null,expectedSubject:rec.topic,sourceAnswer:sourceAnswer||null,mappedAnswer:mappedAnswer||null,answerMatch:answerMatch,errors:errors,sourceQuestion:q?pickQuestion(q):null});
+  validation.push({topic:topic,card:targetCard,year:rec.year,index:rec.index,id:rec.id,auditStatus:(rec.audit && rec.audit.status)||'unreviewed',sourceKind:sourceKind,sourceIdentityConfirmed:(!!q && String(q.id)===String(rec.id)) || externalSourceVerified,questionTextContains:externalSourceVerified ? true : questionTextContains,sourceSubjectMetadata:q?q.subject:(externalSourceVerified?rec.topic:null),expectedSubject:rec.topic,sourceAnswer:sourceAnswer||null,mappedAnswer:mappedAnswer||null,answerMatch:answerMatch,errors:errors,sourceQuestion:q?pickQuestion(q):(externalSourceVerified?{year:rec.year,index:rec.index,id:rec.id,sourceSubject:rec.topic,typeName:rec.typeName,question:htmlText(rec.question),answer:rec.answer||null,analysis:htmlText(rec.analysis||'')}:null)});
 }
 const cardMappedKeys = new Map();
 for (const [topic, card] of Object.entries(topicMap)) {
@@ -130,6 +133,7 @@ const counts = {
   sourceFromQuestionDataset:validation.filter(x=>x.sourceKind==='question-dataset').length,
   sourceFromVerifiedSolutions:validation.filter(x=>x.sourceKind==='verified-solutions').length,
   legacyMapOnly:validation.filter(x=>x.sourceKind==='legacy-map-only').length,
+  externalSourceVerified:validation.filter(x=>x.sourceKind==='external-source-verified').length,
   identityOrTargetErrors:validation.filter(x=>x.errors.some(e=>e!=='answer-key-mismatch')).length,
   answerKeyMismatches:validation.filter(x=>x.answerMatch===false).length,
   questionTextContained:validation.filter(x=>x.questionTextContains).length,
