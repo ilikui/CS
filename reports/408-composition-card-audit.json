@@ -5,7 +5,7 @@
   "summary": {
     "cards": 75,
     "all_cards_have_six_required_fields": true,
-    "formal_association_records": 131,
+    "formal_association_records": 134,
     "unique_linked_cards": 73,
     "unique_linked_questions": 76,
     "cards_without_formal_verified_question_link": [
@@ -277,8 +277,8 @@
     },
     {
       "title": "数制转换与定点小数",
-      "association_records": 4,
-      "linked_questions": 4,
+      "association_records": 7,
+      "linked_questions": 7,
       "content_fields": {
         "definition": true,
         "principle": true,
@@ -1076,6 +1076,7 @@
   ],
   "limitations": [
     "52条历史关联在当前questions_data.js和verified-solutions.json中均未找到同ID源记录，保留原映射但不标记为本轮重新核验。",
-    "2024年题干在部分映射中使用verified-solutions摘要文本；答案、步骤、题号ID已与核验记录对应，但摘要不等同原卷逐字题干。"
+    "2024年题干在部分映射中使用verified-solutions摘要文本；答案、步骤、题号ID已与核验记录对应，但摘要不等同原卷逐字题干。",
+    "数制转换与定点小数的反向清单现含7道题（2009-12、2010-13、2015-13、2022-13、2023-13、2024-12、2025-12）；旧审计统计4道，已按当前CARD_QUESTION_LIST及CARD_EXAM_QUESTION_MAP修正。"
   ]
 }
