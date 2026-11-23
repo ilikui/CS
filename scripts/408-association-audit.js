@@ -78,13 +78,17 @@ for (const [topic, rec] of Object.entries(mapping)) {
   const key = String(rec.year)+'-'+String(rec.index);
   const matches = byKey.get(key) || [];
   const verifiedMatches = verifiedByKey.get(key) || [];
+  // Match source records by stable ID only. Year/index alone is not unique across subjects:
+  // the same year/index may exist in DS/OS practice data while this map points to an externally
+  // cross-checked CO exam question. Never compare answers against an unrelated index collision.
   const q = matches.find(x => String(x.id) === String(rec.id))
-    || verifiedMatches.find(x => String(x.id) === String(rec.id))
-    || matches[0] || verifiedMatches[0];
+    || verifiedMatches.find(x => String(x.id) === String(rec.id));
   const externalSourceVerified = !q && !!rec.source && !!rec.audit
     && /original-question-source-crosschecked|original-pdf-verified-answer-crosschecked|cross-checked/i.test(String(rec.audit.status || ''));
   const sourceKind = q ? (matches.includes(q) ? 'question-dataset' : 'verified-solutions')
     : (externalSourceVerified ? 'external-source-verified' : 'legacy-map-only');
+  const indexCollisionRecords = !q ? [...matches, ...verifiedMatches] : [];
+  const indexCollision = indexCollisionRecords.length > 0;
   const errors = [];
   if (!q && !externalSourceVerified) errors.push('source-not-in-current-question-or-verified-dataset');
   else if (q && String(q.id) !== String(rec.id)) errors.push('source-id-mismatch');
@@ -98,7 +102,7 @@ for (const [topic, rec] of Object.entries(mapping)) {
   const answerComparable = /^[A-D]$/i.test(sourceAnswer) && /^[A-D]$/i.test(mappedAnswer);
   const answerMatch = answerComparable ? sourceAnswer.toUpperCase() === mappedAnswer.toUpperCase() : null;
   if (answerMatch === false) errors.push('answer-key-mismatch');
-  validation.push({topic:topic,card:targetCard,year:rec.year,index:rec.index,id:rec.id,auditStatus:(rec.audit && rec.audit.status)||'unreviewed',sourceKind:sourceKind,sourceIdentityConfirmed:(!!q && String(q.id)===String(rec.id)) || externalSourceVerified,questionTextContains:externalSourceVerified ? true : questionTextContains,sourceSubjectMetadata:q?q.subject:(externalSourceVerified?rec.topic:null),expectedSubject:rec.topic,sourceAnswer:sourceAnswer||null,mappedAnswer:mappedAnswer||null,answerMatch:answerMatch,errors:errors,sourceQuestion:q?pickQuestion(q):(externalSourceVerified?{year:rec.year,index:rec.index,id:rec.id,sourceSubject:rec.topic,typeName:rec.typeName,question:htmlText(rec.question),answer:rec.answer||null,analysis:htmlText(rec.analysis||'')}:null)});
+  validation.push({topic:topic,card:targetCard,year:rec.year,index:rec.index,id:rec.id,auditStatus:(rec.audit && rec.audit.status)||'unreviewed',sourceKind:sourceKind,sourceIdentityConfirmed:(!!q && String(q.id)===String(rec.id)) || externalSourceVerified,questionTextContains:externalSourceVerified ? true : questionTextContains,sourceSubjectMetadata:q?q.subject:(externalSourceVerified?rec.topic:null),expectedSubject:rec.topic,indexCollision:indexCollision,indexCollisionIds:indexCollisionRecords.map(x=>x.id),sourceAnswer:sourceAnswer||null,mappedAnswer:mappedAnswer||null,answerMatch:answerMatch,errors:errors,sourceQuestion:q?pickQuestion(q):(externalSourceVerified?{year:rec.year,index:rec.index,id:rec.id,sourceSubject:rec.topic,typeName:rec.typeName,question:htmlText(rec.question),answer:rec.answer||null,analysis:htmlText(rec.analysis||'')}:null)});
 }
 const cardMappedKeys = new Map();
 for (const [topic, card] of Object.entries(topicMap)) {
