@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-23T10:50:41.205Z",
+  "generatedAt": "2026-11-23T09:00:00.000Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
-    "formalMappingRecords": 381,
-    "uniqueQuestionsAlreadyLinked": 275,
-    "questionsWithoutAnyFormalLink": 52,
+    "formalMappingRecords": 384,
+    "uniqueQuestionsAlreadyLinked": 278,
+    "questionsWithoutAnyFormalLink": 47,
     "questionsNeedingAdditionalCardReview": 66,
     "candidateQuestions": 66,
     "noCandidateQuestions": 0,
     "cards": 306,
-    "cardsWithFormalLinks": 192,
+    "cardsWithFormalLinks": 194,
     "cardsWithoutFormalLinks": [
       {
         "subject": "操作系统",
@@ -27,10 +27,6 @@
       {
         "subject": "数据结构",
         "title": "稀疏矩阵三元组表示"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "总线仲裁方式"
       },
       {
         "subject": "数据结构",
@@ -67,10 +63,6 @@
       {
         "subject": "数据结构",
         "title": "红黑树性质与高度"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "计算机系统层次结构"
       },
       {
         "subject": "计算机组成原理",
