@@ -1,0 +1,4529 @@
+{
+  "schemaVersion": 1,
+  "title": "408 四科知识卡正反向关联全量结构审计",
+  "generatedAt": "2026-11-23",
+  "scope": "仅审计仓库当前 public/opensource-22408/408/cards-questions.js 与 question-card-map.js 的结构一致性；不代表对所有原始真题逐题完成内容/答案核验。",
+  "sourceFiles": {
+    "forward": {
+      "path": "public/opensource-22408/408/cards-questions.js",
+      "blobSha": "235e65b60503ac3a724c6dab944537746b6b45a3"
+    },
+    "reverse": {
+      "path": "public/opensource-22408/408/question-card-map.js",
+      "blobSha": "02da9f9ab219a4c8a7b889da1ced34d5aa9e1781"
+    }
+  },
+  "summary": {
+    "forwardCardRecords": 388,
+    "forwardUniqueQuestionKeys": 282,
+    "reverseQuestionRecords": 166,
+    "forwardQuestionKeysMissingReverse": 179,
+    "reverseQuestionKeysMissingForward": 63,
+    "forwardQuestionKeysWithMultipleCardRecords": 61,
+    "forwardRecordsWithoutQuestionText": 34,
+    "forwardRecordsWithoutAnswer": 0,
+    "explicitCoreSecondarySetsCompared": 19,
+    "explicitCoreSecondarySetMismatches": 0,
+    "cardQuestionListCards": 239,
+    "cardQuestionListLinks": 373,
+    "brokenCardQuestionListLinks": 0
+  },
+  "interpretation": [
+    "多条正向记录指向同一 year-index 并不自动等于重复错误：其中部分是多个知识卡共同覆盖同一道题。",
+    "显式声明 relatedCards/coreCards/secondaryCards 的19道题，其反向卡片集合逐项一致，未发现角色集合错配。",
+    "反向独有题目主要包括2015年和2016年题目，提示两套映射当前覆盖范围并不相同；不能仅凭结构审计删除。",
+    "34条无question文本记录需确认是否为verified-answer占位/教学答案记录，不应作为完整真题题目展示。",
+    "CARD_QUESTION_LIST 的373条链接全部能在反向映射中找到对应卡片项；索引自身没有断链。"
+  ],
+  "forwardOnly": [
+    {
+      "year": 2013,
+      "index": 42,
+      "id": 230,
+      "subject": "数据结构",
+      "records": [
+        "顺序查找与平均查找长度"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 13,
+      "id": 13,
+      "subject": "计算机组成原理",
+      "records": [
+        "浮点数加法与对阶"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "浮点数表示与规格化",
+        "IEEE 754 单精度字段"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 20,
+      "id": 20,
+      "subject": "计算机组成原理",
+      "records": [
+        "总线带宽计算"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "总线与总线事务",
+        "总线带宽与突发传输"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2017,
+      "index": 32,
+      "id": 408,
+      "subject": "计算机组成原理",
+      "records": [
+        "DMA 传输过程"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "DMA 工作过程与总线占用",
+        "中断与 DMA"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2013,
+      "index": 32,
+      "id": 220,
+      "subject": "操作系统",
+      "records": [
+        "银行家算法与安全状态"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 30,
+      "id": 30,
+      "subject": "操作系统",
+      "records": [
+        "文件控制块与访问控制"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2019,
+      "index": 27,
+      "id": 497,
+      "subject": "操作系统",
+      "records": [
+        "多级反馈队列调度题"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2023,
+      "index": 26,
+      "id": 684,
+      "subject": "操作系统",
+      "records": [
+        "内核态与用户态转换"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2012,
+      "index": 8,
+      "id": 149,
+      "subject": "数据结构",
+      "records": [
+        "最小生成树性质判断"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2020,
+      "index": 7,
+      "id": 524,
+      "subject": "数据结构",
+      "records": [
+        "Kruskal算法构造最小生成树"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2012,
+      "index": 10,
+      "id": 151,
+      "subject": "数据结构",
+      "records": [
+        "每趟排序确定最终位置",
+        "每趟排序确定最终位置的算法"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2019,
+      "index": 7,
+      "id": 477,
+      "subject": "数据结构",
+      "records": [
+        "排序算法选择因素"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2014,
+      "index": 20,
+      "id": 255,
+      "subject": "计算机组成原理",
+      "records": [
+        "突发总线事务"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "总线与总线事务",
+        "总线带宽与突发传输"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2020,
+      "index": 16,
+      "id": 533,
+      "subject": "计算机组成原理",
+      "records": [
+        "直接寻址范围计算"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "指令格式与操作码扩展",
+        "立即数与直接间接寻址"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2017,
+      "index": 29,
+      "id": 405,
+      "subject": "操作系统",
+      "records": [
+        "文件系统逻辑格式化"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 37,
+      "id": 84,
+      "subject": "计算机网络",
+      "records": [
+        "定长子网划分计算"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2018,
+      "index": 35,
+      "id": 458,
+      "subject": "计算机网络",
+      "records": [
+        "CSMA_CA信道预约"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 36,
+      "id": 36,
+      "subject": "计算机网络",
+      "records": [
+        "交换机转发地址"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 36,
+      "id": 83,
+      "subject": "计算机网络",
+      "records": [
+        "ICMP拥塞差错报告"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2019,
+      "index": 38,
+      "id": 508,
+      "subject": "计算机网络",
+      "records": [
+        "TCP快速重传触发条件"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2019,
+      "index": 35,
+      "id": 505,
+      "subject": "计算机网络",
+      "records": [
+        "选择重传窗口边界"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2025,
+      "index": 37,
+      "id": 789,
+      "subject": "计算机网络",
+      "records": [
+        "NAT下UDP首部字段变化"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2014,
+      "index": 39,
+      "id": 274,
+      "subject": "计算机网络",
+      "records": [
+        "UDP服务特性"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2018,
+      "index": 39,
+      "id": 462,
+      "subject": "计算机网络",
+      "records": [
+        "UDP分用端口字段"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 40,
+      "id": 40,
+      "subject": "计算机网络",
+      "records": [
+        "FTP控制连接"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2017,
+      "index": 40,
+      "id": 416,
+      "subject": "计算机网络",
+      "records": [
+        "FTP连接管理"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2019,
+      "index": 40,
+      "id": 510,
+      "subject": "计算机网络",
+      "records": [
+        "P2P与客户服务器模型"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2012,
+      "index": 36,
+      "id": 177,
+      "subject": "计算机网络",
+      "records": [
+        "GBN发送窗口序号位数"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2011,
+      "index": 36,
+      "id": 130,
+      "subject": "计算机网络",
+      "records": [
+        "CSMA_CA确认机制"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 38,
+      "id": 85,
+      "subject": "计算机网络",
+      "records": [
+        "广播风暴与网络设备"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2015,
+      "index": 37,
+      "id": 319,
+      "subject": "计算机网络",
+      "records": [
+        "交换机与网桥关系",
+        "2015以太网交换机多端口网桥"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2016,
+      "index": 20,
+      "id": 349,
+      "subject": "计算机组成原理",
+      "records": [
+        "单周期处理器数据通路",
+        "单周期CPU单总线结构判断"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "单周期与多周期数据通路",
+        "CPU 指令执行过程",
+        "单总线数据通路与暂存器"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 23,
+      "id": 70,
+      "subject": "操作系统",
+      "records": [
+        "系统调用接口"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2011,
+      "index": 26,
+      "id": 120,
+      "subject": "操作系统",
+      "records": [
+        "磁盘I_O系统调用流程",
+        "磁盘I_O请求处理流程"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2014,
+      "index": 36,
+      "id": 271,
+      "subject": "计算机网络",
+      "records": [
+        "GBN协议吞吐率计算"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2011,
+      "index": 35,
+      "id": 129,
+      "subject": "计算机网络",
+      "records": [
+        "SR选择重传超时处理"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 38,
+      "id": 38,
+      "subject": "计算机网络",
+      "records": [
+        "TCP累计确认序号计算",
+        "TCP连续段累计确认号",
+        "TCP累计确认与可靠传输"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 39,
+      "id": 86,
+      "subject": "计算机网络",
+      "records": [
+        "TCP发送窗口受限计算"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2015,
+      "index": 39,
+      "id": 321,
+      "subject": "计算机网络",
+      "records": [
+        "慢开始与接收窗口共同限制",
+        "2015TCP拥塞与接收窗口限制"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2025,
+      "index": 38,
+      "id": 790,
+      "subject": "计算机网络",
+      "records": [
+        "TCP拥塞窗口与接收窗口计算"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2025,
+      "index": 36,
+      "id": 788,
+      "subject": "计算机网络",
+      "records": [
+        "DHCP请求报文广播地址",
+        "DHCP请求报文广播寻址"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2023,
+      "index": 38,
+      "id": 696,
+      "subject": "计算机网络",
+      "records": [
+        "NAT源地址转换"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2021,
+      "index": 1,
+      "id": 565,
+      "subject": "数据结构",
+      "records": [
+        "单循环链表删除首元结点"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2025,
+      "index": 10,
+      "id": 762,
+      "subject": "数据结构",
+      "records": [
+        "简单选择排序移动次数"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2019,
+      "index": 17,
+      "id": 487,
+      "subject": "计算机组成原理",
+      "records": [
+        "ALU执行寄存器间接加法"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "ALU 算术逻辑单元",
+        "指令译码与有效地址计算",
+        "立即数与直接间接寻址"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2015,
+      "index": 17,
+      "id": 299,
+      "subject": "计算机组成原理",
+      "records": [
+        "DRAM刷新机制"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "SRAM 与 DRAM"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2019,
+      "index": 12,
+      "id": 482,
+      "subject": "计算机组成原理",
+      "records": [
+        "冯诺依曼结构基本思想"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "冯·诺依曼结构与存储程序",
+        "计算机系统层次结构"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2015,
+      "index": 30,
+      "id": 312,
+      "subject": "操作系统",
+      "records": [
+        "页面分配与置换策略组合"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2012,
+      "index": 33,
+      "id": 174,
+      "subject": "计算机网络",
+      "records": [
+        "网络层数据报服务"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 34,
+      "id": 81,
+      "subject": "计算机网络",
+      "records": [
+        "分组交换存储转发时延"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2013,
+      "index": 35,
+      "id": 223,
+      "subject": "计算机网络",
+      "records": [
+        "报文交换与分组交换时延比较"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2025,
+      "index": 33,
+      "id": 785,
+      "subject": "计算机网络",
+      "records": [
+        "三种交换方式总时延比较"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2022,
+      "index": 33,
+      "id": 644,
+      "subject": "计算机网络",
+      "records": [
+        "数据链路层相邻结点流量控制",
+        "OSI相邻结点流量控制层次"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2017,
+      "index": 37,
+      "id": 413,
+      "subject": "计算机网络",
+      "records": [
+        "RIP_OSPF_BGP封装协议"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2014,
+      "index": 40,
+      "id": 275,
+      "subject": "计算机网络",
+      "records": [
+        "Web访问不使用SMTP"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2011,
+      "index": 46,
+      "id": 140,
+      "subject": "操作系统",
+      "records": [
+        "文件分配策略与FCB字段设计",
+        "一级目录不可变文件分配与FCB"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2013,
+      "index": 43,
+      "id": 231,
+      "subject": "计算机组成原理",
+      "records": [
+        "Cache缺失与突发总线事务时延"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "Cache平均访问时间与缺失损失",
+        "Cache 直接映射与组相联",
+        "总线与总线事务",
+        "总线带宽与突发传输",
+        "计算机性能指标 CPI 与 CPU 时间"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2024,
+      "index": 37,
+      "id": 742,
+      "subject": "计算机网络",
+      "records": [
+        "SR最大窗口与超时重传"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2021,
+      "index": 33,
+      "id": 597,
+      "subject": "计算机网络",
+      "records": [
+        "传输层下层的路由功能",
+        "TCPIP传输层下层路由功能"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 44,
+      "id": 91,
+      "subject": "计算机组成原理",
+      "records": [
+        "直接映射Cache行号与循环访问命中率"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "Cache 直接映射与组相联",
+        "Cache 命中率与空间局部性",
+        "二维数组行优先存储与局部性",
+        "Cache 组相联映射与地址划分"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2012,
+      "index": 43,
+      "id": 184,
+      "subject": "计算机组成原理",
+      "records": [
+        "Cache缺失率与主存带宽计算"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "Cache平均访问时间与缺失损失",
+        "存储器层次与主存组织",
+        "总线与总线事务",
+        "计算机性能指标 CPI 与 CPU 时间"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 47,
+      "id": 47,
+      "subject": "计算机网络",
+      "records": [
+        "双子网划分与R1路由表",
+        "路由聚合与默认路由配置",
+        "2009双局域网子网划分与路由表",
+        "2009双局域网子网划分"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2012,
+      "index": 45,
+      "id": 186,
+      "subject": "操作系统",
+      "records": [
+        "局部页面回收与页框复用"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2011,
+      "index": 25,
+      "id": 119,
+      "subject": "操作系统",
+      "records": [
+        "线程私有栈与共享资源判断"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2022,
+      "index": 25,
+      "id": 636,
+      "subject": "操作系统",
+      "records": [
+        "抢占式优先级调度次数"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 25,
+      "id": 72,
+      "subject": "操作系统",
+      "records": [
+        "信号量当前值与资源等待数"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2011,
+      "index": 37,
+      "id": 131,
+      "subject": "计算机网络",
+      "records": [
+        "R1到两个子网的汇总路由下一跳"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 45,
+      "id": 45,
+      "subject": "操作系统",
+      "records": [
+        "生产者奇偶消费者信号量同步",
+        "有界缓冲区生产者消费者"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 46,
+      "id": 46,
+      "subject": "操作系统",
+      "records": [
+        "请求分页TLB与LRU地址转换"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 21,
+      "id": 68,
+      "subject": "操作系统",
+      "records": [
+        "单级中断服务程序执行顺序"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2013,
+      "index": 31,
+      "id": 219,
+      "subject": "操作系统",
+      "records": [
+        "I_O密集型进程优先级"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2013,
+      "index": 5,
+      "id": 193,
+      "subject": "数据结构",
+      "records": [
+        "后序线索二叉树叶结点后继"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2012,
+      "index": 38,
+      "id": 179,
+      "subject": "计算机网络",
+      "records": [
+        "ARP协议功能"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2020,
+      "index": 40,
+      "id": 557,
+      "subject": "计算机网络",
+      "records": [
+        "DNS递归解析时延计算"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2023,
+      "index": 33,
+      "id": 691,
+      "subject": "计算机网络",
+      "records": [
+        "两段链路分组交换时延"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2016,
+      "index": 38,
+      "id": 367,
+      "subject": "计算机网络",
+      "records": [
+        "NAT后IP首部地址"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 42,
+      "id": 42,
+      "subject": "数据结构",
+      "records": [
+        "单链表倒数第k个结点双指针"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 43,
+      "id": 90,
+      "subject": "计算机组成原理",
+      "records": [
+        "指令格式与自增寻址机器码"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "指令格式与操作码扩展",
+        "指令系统与寻址方式",
+        "寄存器组读写端口与译码"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2024,
+      "index": 24,
+      "id": 729,
+      "subject": "操作系统",
+      "records": [
+        "进程终止时的资源回收"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 3,
+      "id": 3,
+      "subject": "数据结构",
+      "records": [
+        "2009右根左二叉树遍历"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 4,
+      "id": 4,
+      "subject": "数据结构",
+      "records": [
+        "2009平衡二叉排序树判定"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2015,
+      "index": 34,
+      "id": 316,
+      "subject": "计算机网络",
+      "records": [
+        "2015NRZ与曼彻斯特波形识别"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2015,
+      "index": 35,
+      "id": 317,
+      "subject": "计算机网络",
+      "records": [
+        "2015滑动窗口卫星链路利用率"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2015,
+      "index": 36,
+      "id": 318,
+      "subject": "计算机网络",
+      "records": [
+        "2015CSMACD无线适用性判断"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2015,
+      "index": 40,
+      "id": 322,
+      "subject": "计算机网络",
+      "records": [
+        "2015HTTP关闭连接请求头"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2015,
+      "index": 5,
+      "id": 287,
+      "subject": "数据结构",
+      "records": [
+        "有向图DFS遍历序列计数"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2012,
+      "index": 3,
+      "id": 144,
+      "subject": "数据结构",
+      "records": [
+        "前序后序确定根结点孩子"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2015,
+      "index": 11,
+      "id": 293,
+      "subject": "数据结构",
+      "records": [
+        "希尔排序组内直接插入"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2017,
+      "index": 10,
+      "id": 386,
+      "subject": "数据结构",
+      "records": [
+        "归并排序与插入排序复杂度比较"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2017,
+      "index": 11,
+      "id": 387,
+      "subject": "数据结构",
+      "records": [
+        "希尔排序对随机访问的依赖",
+        "堆排序对顺序存储的依赖"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2011,
+      "index": 1,
+      "id": 95,
+      "subject": "数据结构",
+      "records": [
+        "2011翻倍循环时间复杂度"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2012,
+      "index": 1,
+      "id": 142,
+      "subject": "数据结构",
+      "records": [
+        "2012阶乘递归时间复杂度"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2014,
+      "index": 1,
+      "id": 236,
+      "subject": "数据结构",
+      "records": [
+        "2014嵌套翻倍循环时间复杂度"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2017,
+      "index": 1,
+      "id": 377,
+      "subject": "数据结构",
+      "records": [
+        "2017三角数累加循环时间复杂度"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2019,
+      "index": 1,
+      "id": 471,
+      "subject": "数据结构",
+      "records": [
+        "2019平方根循环时间复杂度"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2022,
+      "index": 1,
+      "id": 612,
+      "subject": "数据结构",
+      "records": [
+        "2022几何级数嵌套循环时间复杂度"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2025,
+      "index": 1,
+      "id": 753,
+      "subject": "数据结构",
+      "records": [
+        "2025平方根边界双重循环时间复杂度"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 1,
+      "id": 1,
+      "subject": null,
+      "records": [
+        "2009-01-队列缓冲区"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 2,
+      "id": 2,
+      "subject": null,
+      "records": [
+        "2009-02-栈容量与出栈序列"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 6,
+      "id": 6,
+      "subject": null,
+      "records": [
+        "2009-06-森林转换为二叉树"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 7,
+      "id": 7,
+      "subject": null,
+      "records": [
+        "2009-07-无向连通图度数性质"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 8,
+      "id": 8,
+      "subject": null,
+      "records": [
+        "2009-08-B树定义"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 10,
+      "id": 10,
+      "subject": null,
+      "records": [
+        "2009-10-第二趟排序结果判别"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 11,
+      "id": 11,
+      "subject": "计算机组成原理",
+      "records": [
+        "2009-11-冯诺依曼指令数据识别"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "冯·诺依曼结构与存储程序",
+        "CPU 指令执行过程"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 16,
+      "id": 16,
+      "subject": "计算机组成原理",
+      "records": [
+        "2009-16-相对寻址目标地址"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "x86 CALL/JMP/RET 控制转移与相对寻址",
+        "x86 相对寻址与转移目标计算"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 18,
+      "id": 18,
+      "subject": null,
+      "records": [
+        "2009-18-流水线时钟周期"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 21,
+      "id": 21,
+      "subject": null,
+      "records": [
+        "2009-21-Cache命中率"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 22,
+      "id": 22,
+      "subject": null,
+      "records": [
+        "2009-22-外部中断事件"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 25,
+      "id": 25,
+      "subject": null,
+      "records": [
+        "2009-25-打印机资源死锁"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 26,
+      "id": 26,
+      "subject": null,
+      "records": [
+        "2009-26-分区内存界地址保护"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 27,
+      "id": 27,
+      "subject": null,
+      "records": [
+        "2009-27-分段最大段长"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 31,
+      "id": 31,
+      "subject": null,
+      "records": [
+        "2009-31-软硬链接引用计数"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 32,
+      "id": 32,
+      "subject": null,
+      "records": [
+        "2009-32-逻辑设备名"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 35,
+      "id": 35,
+      "subject": null,
+      "records": [
+        "2009-35-GBN超时重传"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 41,
+      "id": 41,
+      "subject": null,
+      "records": [
+        "2009-41-贪心策略求最短路径反例"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2009,
+      "index": 44,
+      "id": 44,
+      "subject": null,
+      "records": [
+        "2009-44-ADD指令数据通路控制信号",
+        "2009-44-ADD指令微操作与执行周期"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 2,
+      "id": 49,
+      "subject": null,
+      "records": [
+        "2010-02-输出受限双端队列"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 3,
+      "id": 50,
+      "subject": null,
+      "records": [
+        "2010-03-后序线索二叉树"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 5,
+      "id": 52,
+      "subject": null,
+      "records": [
+        "2010-05-四度树叶结点计数"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 6,
+      "id": 53,
+      "subject": null,
+      "records": [
+        "2010-06-哈夫曼树性质"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 7,
+      "id": 54,
+      "subject": null,
+      "records": [
+        "2010-07-无向图保证连通的边数"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 10,
+      "id": 57,
+      "subject": null,
+      "records": [
+        "2010-10-快速排序递归次数"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 11,
+      "id": 58,
+      "subject": null,
+      "records": [
+        "2010-11-冒泡排序趟次识别"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 12,
+      "id": 59,
+      "subject": null,
+      "records": [
+        "2010-12-程序执行时间优化"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 14,
+      "id": 61,
+      "subject": null,
+      "records": [
+        "2010-14-整数浮点数类型转换"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 15,
+      "id": 62,
+      "subject": null,
+      "records": [
+        "2010-15-存储芯片地址扩展"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 16,
+      "id": 63,
+      "subject": null,
+      "records": [
+        "2010-16-RAM与ROM特性"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 19,
+      "id": 66,
+      "subject": null,
+      "records": [
+        "2010-19-流水线转发与阻塞"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 20,
+      "id": 67,
+      "subject": null,
+      "records": [
+        "2010-20-总线标准识别"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 22,
+      "id": 69,
+      "subject": null,
+      "records": [
+        "2010-22-显示存储器带宽计算"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 24,
+      "id": 71,
+      "subject": null,
+      "records": [
+        "2010-24-进程创建事件"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 26,
+      "id": 73,
+      "subject": null,
+      "records": [
+        "2010-26-进程优先级调整时机"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 27,
+      "id": 74,
+      "subject": null,
+      "records": [
+        "2010-27-Peterson互斥算法"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 30,
+      "id": 77,
+      "subject": null,
+      "records": [
+        "2010-30-文件索引分配容量"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 31,
+      "id": 78,
+      "subject": null,
+      "records": [
+        "2010-31-当前工作目录作用"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 32,
+      "id": 79,
+      "subject": null,
+      "records": [
+        "2010-32-键盘中断处理程序"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 35,
+      "id": 82,
+      "subject": null,
+      "records": [
+        "2010-35-RIP距离矢量不可达"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 41,
+      "id": 88,
+      "subject": null,
+      "records": [
+        "2010-41-线性探测散列表与平均查找长度"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 42,
+      "id": 89,
+      "subject": null,
+      "records": [
+        "2010-42-数组循环左移三次逆置"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 45,
+      "id": 92,
+      "subject": null,
+      "records": [
+        "2010-45-磁盘空闲块位图管理",
+        "2010-45-CSCAN磁盘调度与总时间"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2010,
+      "index": 46,
+      "id": 93,
+      "subject": null,
+      "records": [
+        "2010-46-FIFO与CLOCK页面置换",
+        "2010-46-逻辑地址拆分页号与页框号"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2011,
+      "index": 41,
+      "id": 135,
+      "subject": null,
+      "records": [
+        "verified-answer-2011-41",
+        "verified-answer-2011-41::关键路径与 AOE 网"
+      ],
+      "hasQuestionText": false,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2011,
+      "index": 42,
+      "id": 136,
+      "subject": null,
+      "records": [
+        "verified-answer-2011-42",
+        "verified-answer-2011-42::有序数组中位数的二分缩减"
+      ],
+      "hasQuestionText": false,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2011,
+      "index": 43,
+      "id": 137,
+      "subject": null,
+      "records": [
+        "verified-answer-2011-43",
+        "verified-answer-2011-43::定点补码加减与溢出"
+      ],
+      "hasQuestionText": false,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2011,
+      "index": 44,
+      "id": 138,
+      "subject": null,
+      "records": [
+        "verified-answer-2011-44",
+        "verified-answer-2011-44::TLB 与多级页表联合转换",
+        "verified-answer-2011-44::Cache 直接映射与组相联"
+      ],
+      "hasQuestionText": false,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2012,
+      "index": 41,
+      "id": 182,
+      "subject": null,
+      "records": [
+        "verified-answer-2012-41",
+        "verified-answer-2012-41::多路归并与双指针",
+        "verified-answer-2012-41::外部排序与多路归并"
+      ],
+      "hasQuestionText": false,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2012,
+      "index": 44,
+      "id": 185,
+      "subject": null,
+      "records": [
+        "verified-answer-2012-44",
+        "verified-answer-2012-44::流水线结构冒险与数据冒险",
+        "verified-answer-2012-44::移位运算与舍入"
+      ],
+      "hasQuestionText": false,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2012,
+      "index": 46,
+      "id": 187,
+      "subject": null,
+      "records": [
+        "verified-answer-2012-46",
+        "verified-answer-2012-46::文件物理分配方式",
+        "verified-answer-2012-46::文件控制块 FCB 与目录查找"
+      ],
+      "hasQuestionText": false,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2012,
+      "index": 47,
+      "id": 188,
+      "subject": null,
+      "records": [
+        "verified-answer-2012-47",
+        "verified-answer-2012-47::TCP 三次握手与四次挥手",
+        "verified-answer-2012-47::以太网帧与 MAC 地址",
+        "verified-answer-2012-47::IP TTL 与逐跳转发"
+      ],
+      "hasQuestionText": false,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2013,
+      "index": 41,
+      "id": 229,
+      "subject": null,
+      "records": [
+        "verified-answer-2013-41",
+        "verified-answer-2013-41::摩尔投票法与主元素"
+      ],
+      "hasQuestionText": false,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2013,
+      "index": 44,
+      "id": 232,
+      "subject": null,
+      "records": [
+        "verified-answer-2013-44",
+        "verified-answer-2013-44::指令系统与寻址方式",
+        "verified-answer-2013-44::ALU 标志位 CF 与 OF"
+      ],
+      "hasQuestionText": false,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2013,
+      "index": 45,
+      "id": 233,
+      "subject": null,
+      "records": [
+        "verified-answer-2013-45",
+        "verified-answer-2013-45::进程同步与信号量"
+      ],
+      "hasQuestionText": false,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2013,
+      "index": 46,
+      "id": 234,
+      "subject": null,
+      "records": [
+        "verified-answer-2013-46",
+        "verified-answer-2013-46::页表结构与地址转换"
+      ],
+      "hasQuestionText": false,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2013,
+      "index": 47,
+      "id": 235,
+      "subject": null,
+      "records": [
+        "verified-answer-2013-47",
+        "verified-answer-2013-47::路由选择与转发表",
+        "verified-answer-2013-47::BGP UPDATE 报文与路由通告"
+      ],
+      "hasQuestionText": false,
+      "hasAnswer": true,
+      "relatedCards": [],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2024,
+      "index": 14,
+      "id": 202414,
+      "subject": "计算机组成原理",
+      "records": [
+        "2024-CO-14-整数参数数据表示选择"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "数据表示与补码",
+        "浮点数表示与规格化",
+        "IEEE 754 单精度字段"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2024,
+      "index": 15,
+      "id": 202415,
+      "subject": "计算机组成原理",
+      "records": [
+        "2024-CO-15-整数乘法实现方式"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "移位加法乘法与阵列乘法器",
+        "ALU 算术逻辑单元"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2024,
+      "index": 16,
+      "id": 202416,
+      "subject": "计算机组成原理",
+      "records": [
+        "2024-CO-16-存储层次映射与写策略"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "存储器层次与主存组织",
+        "Cache 映射与命中率",
+        "虚拟内存与页面置换",
+        "Cache 替换与写策略",
+        "主存与辅存层次结构"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2024,
+      "index": 17,
+      "id": 202417,
+      "subject": "计算机组成原理",
+      "records": [
+        "2024-CO-17-TLB标记字段位数"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "TLB 与快表命中",
+        "TLB 组相联映射与 LRU 替换",
+        "虚拟地址分页与页内偏移",
+        "TLB 与多级页表联合转换"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2024,
+      "index": 18,
+      "id": 202418,
+      "subject": "计算机组成原理",
+      "records": [
+        "2024-CO-18-MMU地址转换检测事件"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "虚拟内存与页面置换",
+        "TLB 与快表命中",
+        "Cache 映射与命中率"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2024,
+      "index": 19,
+      "id": 202419,
+      "subject": "计算机组成原理",
+      "records": [
+        "2024-CO-19-五段流水线数据冒险"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "流水线与冒险",
+        "流水线结构冒险与数据冒险",
+        "流水线吞吐率与加速比"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2024,
+      "index": 20,
+      "id": 202420,
+      "subject": "计算机组成原理",
+      "records": [
+        "2024-CO-20-存储器总线峰值带宽"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "总线与总线事务",
+        "总线带宽与突发传输"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2024,
+      "index": 21,
+      "id": 202421,
+      "subject": "计算机组成原理",
+      "records": [
+        "2024-CO-21-中断屏蔽字与响应优先级"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "中断与 DMA",
+        "中断屏蔽与优先级",
+        "中断响应与异常处理"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2024,
+      "index": 22,
+      "id": 202422,
+      "subject": "计算机组成原理",
+      "records": [
+        "2024-CO-22-DMA数据传输通路"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "DMA 工作过程与总线占用",
+        "中断与 DMA",
+        "DMA 周期挪用与总线仲裁"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2025,
+      "index": 13,
+      "id": 202513,
+      "subject": "计算机组成原理",
+      "records": [
+        "2025-CO-13-IEEE754机器数译码"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "浮点数表示与规格化",
+        "IEEE 754 单精度字段"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2025,
+      "index": 14,
+      "id": 202514,
+      "subject": "计算机组成原理",
+      "records": [
+        "2025-CO-14-补码减法与溢出标志"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "数据表示与补码",
+        "定点补码加减与溢出",
+        "整数溢出检测与异常处理"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2025,
+      "index": 15,
+      "id": 202515,
+      "subject": "计算机组成原理",
+      "records": [
+        "2025-CO-15-结构体对齐与小端字节序"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "大小端存储",
+        "小端字节序与补码读取",
+        "数组下标寻址与元素宽度"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2025,
+      "index": 17,
+      "id": 202517,
+      "subject": "计算机组成原理",
+      "records": [
+        "2025-CO-17-RISC特征辨析"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "指令系统与寻址方式",
+        "流水线与冒险",
+        "硬布线控制器与微程序控制器"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2025,
+      "index": 18,
+      "id": 202518,
+      "subject": "计算机组成原理",
+      "records": [
+        "2025-CO-18-CPI与Cache缺失率"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "计算机性能指标 CPI 与 CPU 时间",
+        "Cache平均访问时间与缺失损失",
+        "流水线与冒险"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2025,
+      "index": 19,
+      "id": 202519,
+      "subject": "计算机组成原理",
+      "records": [
+        "2025-CO-19-CPU数据通路与PC"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "CPU 指令执行过程",
+        "单周期与多周期数据通路",
+        "流水线与冒险"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2025,
+      "index": 20,
+      "id": 202520,
+      "subject": "计算机组成原理",
+      "records": [
+        "2025-CO-20-quadpumped总线有效传输率"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "总线与总线事务",
+        "总线带宽与突发传输"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2025,
+      "index": 21,
+      "id": 202521,
+      "subject": "计算机组成原理",
+      "records": [
+        "2025-CO-21-DMA适用设备"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "DMA 工作过程与总线占用",
+        "中断与 DMA",
+        "DMA 周期挪用与总线仲裁"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2025,
+      "index": 22,
+      "id": 202522,
+      "subject": "计算机组成原理",
+      "records": [
+        "2025-CO-22-外部中断请求事件"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "中断与 DMA",
+        "中断响应与异常处理",
+        "DMA 工作过程与总线占用"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2015,
+      "index": 12,
+      "id": 201512,
+      "subject": "计算机组成原理",
+      "records": [
+        "2015-12-硬件直接执行的程序"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "计算机系统层次结构",
+        "指令系统与寻址方式"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2016,
+      "index": 12,
+      "id": 201612,
+      "subject": "计算机组成原理",
+      "records": [
+        "2016-12-高级语言源程序翻译"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "计算机系统层次结构"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2026,
+      "index": 12,
+      "id": 202612,
+      "subject": "计算机组成原理",
+      "records": [
+        "2026-12-计算机系统层次叙述"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "计算机系统层次结构"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2026,
+      "index": 16,
+      "id": 202616,
+      "subject": "计算机组成原理",
+      "records": [
+        "2026-16-ISA与超级流水线"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "计算机系统层次结构",
+        "流水线与冒险"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2015,
+      "index": 13,
+      "id": 201513,
+      "subject": "计算机组成原理",
+      "records": [
+        "2015-13-8位补码最小值"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "数制转换与定点小数",
+        "数据表示与补码",
+        "定点补码加减与溢出"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2022,
+      "index": 13,
+      "id": 202213,
+      "subject": "计算机组成原理",
+      "records": [
+        "2022-13-32位补码表示范围"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "数制转换与定点小数",
+        "数据表示与补码",
+        "定点补码加减与溢出"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    },
+    {
+      "year": 2023,
+      "index": 13,
+      "id": 202313,
+      "subject": "计算机组成原理",
+      "records": [
+        "2023-13-short负8190补码"
+      ],
+      "hasQuestionText": true,
+      "hasAnswer": true,
+      "relatedCards": [
+        "数制转换与定点小数",
+        "数据表示与补码",
+        "定点补码加减与溢出"
+      ],
+      "coreCards": [],
+      "secondaryCards": []
+    }
+  ],
+  "reverseOnly": [
+    {
+      "key": "2015-41",
+      "year": 2015,
+      "index": 41,
+      "id": 323,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "单链表与双链表",
+          "role": null,
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2015-42",
+      "year": 2015,
+      "index": 42,
+      "id": 324,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "邻接矩阵与邻接表",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "图的存储与遍历",
+          "role": null,
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2015-43",
+      "year": 2015,
+      "index": 43,
+      "id": 325,
+      "subject": "计算机组成原理",
+      "cards": [
+        {
+          "title": "单周期与多周期数据通路",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "CPU 指令执行过程",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "总线与总线事务",
+          "role": null,
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2015-44",
+      "year": 2015,
+      "index": 44,
+      "id": 326,
+      "subject": "计算机组成原理",
+      "cards": [
+        {
+          "title": "指令格式与操作码扩展",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "单周期与多周期数据通路",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "CPU 指令执行过程",
+          "role": null,
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2015-45",
+      "year": 2015,
+      "index": 45,
+      "id": 327,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "进程同步与信号量",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "进程间通信 IPC",
+          "role": null,
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2015-46",
+      "year": 2015,
+      "index": 46,
+      "id": 328,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "页表结构与地址转换",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "虚拟内存与页面置换",
+          "role": null,
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2015-47",
+      "year": 2015,
+      "index": 47,
+      "id": 329,
+      "subject": "计算机网络",
+      "cards": [
+        {
+          "title": "ARP 与 DHCP",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "DHCP 地址租约过程",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "以太网帧与 MAC 地址",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "IP 地址与子网划分",
+          "role": null,
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2016-41",
+      "year": 2016,
+      "index": 41,
+      "id": 370,
+      "subject": "计算机网络",
+      "cards": [
+        {
+          "title": "TCP 接收窗口与滑动窗口",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "TCP 拥塞控制四阶段",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "TCP 三次握手与四次挥手",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "TCP 序号确认与累计确认",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2016-42",
+      "year": 2016,
+      "index": 42,
+      "id": 371,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "正则k叉树叶结点数与高度界",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "树的基本术语与性质",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2016-43",
+      "year": 2016,
+      "index": 43,
+      "id": 372,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "快速选择与顺序统计量",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "快速排序分区过程",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "算法复杂度",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2016-47",
+      "year": 2016,
+      "index": 47,
+      "id": 376,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "FAT链接分配与簇链访问",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "目录结构与文件路径",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "文件物理分配方式",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "文件逻辑结构与物理结构",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2014-41",
+      "year": 2014,
+      "index": 41,
+      "id": 276,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "哈夫曼树与带权路径长度",
+          "role": null,
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2014-42",
+      "year": 2014,
+      "index": 42,
+      "id": 277,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "图的存储与遍历",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "距离向量与链路状态路由",
+          "role": null,
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2014-43",
+      "year": 2014,
+      "index": 43,
+      "id": 278,
+      "subject": "计算机网络",
+      "cards": [
+        {
+          "title": "IPv4 子网划分与 CIDR",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "路由选择与转发表",
+          "role": null,
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2014-44",
+      "year": 2014,
+      "index": 44,
+      "id": 279,
+      "subject": "计算机组成原理",
+      "cards": [
+        {
+          "title": "流水线结构冒险与数据冒险",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "指令系统与寻址方式",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "CPU 指令执行过程",
+          "role": null,
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2014-45",
+      "year": 2014,
+      "index": 45,
+      "id": 280,
+      "subject": "计算机组成原理",
+      "cards": [
+        {
+          "title": "Cache 直接映射与组相联",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "Cache 替换与写策略",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "虚拟内存与页面置换",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "TLB 与快表命中",
+          "role": null,
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2014-46",
+      "year": 2014,
+      "index": 46,
+      "id": 281,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "文件物理分配方式",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "文件逻辑结构与物理结构",
+          "role": null,
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2014-47",
+      "year": 2014,
+      "index": 47,
+      "id": 282,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "进程同步与信号量",
+          "role": null,
+          "status": "verified"
+        },
+        {
+          "title": "互斥锁、自旋锁与信号量",
+          "role": null,
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2017-41",
+      "year": 2017,
+      "index": 41,
+      "id": 417,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "二叉树遍历与性质",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "树的基本术语与性质",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "递归算法与递归树",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2017-42",
+      "year": 2017,
+      "index": 42,
+      "id": 418,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "最小生成树与最短路径",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "图的存储与遍历",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "算法复杂度",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2017-43",
+      "year": 2017,
+      "index": 43,
+      "id": 419,
+      "subject": "计算机组成原理",
+      "cards": [
+        {
+          "title": "数据表示与补码",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "IEEE 754 单精度字段",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "定点补码加减与溢出",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "浮点数表示与规格化",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2017-44",
+      "year": 2017,
+      "index": 44,
+      "id": 420,
+      "subject": "计算机组成原理",
+      "cards": [
+        {
+          "title": "RISC 与 CISC",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "指令系统与寻址方式",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "定点补码加减与溢出",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "IEEE 754 单精度字段",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "计算机性能指标 CPI 与 CPU 时间",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2017-45",
+      "year": 2017,
+      "index": 45,
+      "id": 421,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "页表结构与地址转换",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "系统调用与用户态内核态",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "TLB 与快表命中",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "中断响应与异常处理",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "虚拟内存与页面置换",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2017-46",
+      "year": 2017,
+      "index": 46,
+      "id": 422,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "进程同步与信号量",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "互斥锁、自旋锁与信号量",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "线程模型与多线程映射",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "临界区互斥访问原则",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2017-47",
+      "year": 2017,
+      "index": 47,
+      "id": 423,
+      "subject": "计算机网络",
+      "cards": [
+        {
+          "title": "GBN 后退 N 帧协议",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "SR 选择重传协议",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "停止等待协议与利用率",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "网络性能指标与时延",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "数据链路层与差错检测",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2018-41",
+      "year": 2018,
+      "index": 41,
+      "id": 464,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "最小正整数缺失值查找",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "算法复杂度",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "空间换时间与辅助数组",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2018-42",
+      "year": 2018,
+      "index": 42,
+      "id": 465,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "最小生成树与最短路径",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "图的存储与遍历",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "IP TTL 与路由转发",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2018-44",
+      "year": 2018,
+      "index": 44,
+      "id": 467,
+      "subject": "计算机组成原理",
+      "cards": [
+        {
+          "title": "Cache 映射与命中率",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "TLB 与快表命中",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "页表结构与地址转换",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "Cache 替换与写策略",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2018-45",
+      "year": 2018,
+      "index": 45,
+      "id": 468,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "页表结构与地址转换",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "改进型 CLOCK 页面置换",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "进程与线程",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "虚拟内存与页面置换",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2018-46",
+      "year": 2018,
+      "index": 46,
+      "id": 469,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "索引结点 inode 与文件控制块",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "文件物理分配方式",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "文件逻辑结构与物理结构",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2018-47",
+      "year": 2018,
+      "index": 47,
+      "id": 470,
+      "subject": "计算机网络",
+      "cards": [
+        {
+          "title": "IPv4 子网划分与 CIDR",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "IPv4 首部与分片",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "IP TTL 与路由转发",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2019-41",
+      "year": 2019,
+      "index": 41,
+      "id": 511,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "单链表重排与原地逆置",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "单链表与双链表",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "算法复杂度",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2019-42",
+      "year": 2019,
+      "index": 42,
+      "id": 512,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "循环链式队列与空闲结点复用",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "链式栈与链式队列",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "循环队列判空与判满",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2019-43",
+      "year": 2019,
+      "index": 43,
+      "id": 513,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "哲学家进餐与死锁避免",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "进程同步与信号量",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "死锁必要条件与处理",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2019-44",
+      "year": 2019,
+      "index": 44,
+      "id": 514,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "磁盘结构与平均访问时间",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "磁盘调度 FCFS 与 SSTF",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "文件物理分配方式",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2019-47",
+      "year": 2019,
+      "index": 47,
+      "id": 517,
+      "subject": "计算机网络",
+      "cards": [
+        {
+          "title": "IPv4 子网划分与 CIDR",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "NAT 与端口映射",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "网桥与交换机的冲突域广播域",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "路由选择与转发表",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2020-41",
+      "year": 2020,
+      "index": 41,
+      "id": 558,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "最小距离三元组的三指针扫描",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "多路归并与双指针",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "算法复杂度",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2020-45",
+      "year": 2020,
+      "index": 45,
+      "id": 562,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "进程同步与信号量",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "同步图与偏序关系",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2020-46",
+      "year": 2020,
+      "index": 46,
+      "id": 563,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "页表结构与地址转换",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "虚拟内存与页面置换",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "数组行优先与列优先存储",
+          "role": "core",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2020-47",
+      "year": 2020,
+      "index": 47,
+      "id": 564,
+      "subject": "计算机网络",
+      "cards": [
+        {
+          "title": "NAT 与端口映射",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "路由选择与转发表",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "IPv4 子网划分与 CIDR",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2021-41",
+      "year": 2021,
+      "index": 41,
+      "id": 565,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "欧拉路径与欧拉回路",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "邻接矩阵与邻接表",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "图的存储与遍历",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2021-42",
+      "year": 2021,
+      "index": 42,
+      "id": 566,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "比较计数排序与秩排序",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "内部排序与稳定性",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "算法复杂度",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2021-45",
+      "year": 2021,
+      "index": 45,
+      "id": 569,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "进程同步与信号量",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "互斥锁、自旋锁与信号量",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "内核态与用户态特权级",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2021-46",
+      "year": 2021,
+      "index": 46,
+      "id": 570,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "磁盘引导与格式化流程",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "文件逻辑结构与物理结构",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "文件系统与目录",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2021-47",
+      "year": 2021,
+      "index": 47,
+      "id": 571,
+      "subject": "计算机网络",
+      "cards": [
+        {
+          "title": "DNS 递归与迭代查询",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "ARP 与 DHCP",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "交换机自学习与转发",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "以太网帧与 MAC 地址",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2022-41",
+      "year": 2022,
+      "index": 41,
+      "id": 572,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "二叉搜索树与中序遍历",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "二叉树顺序存储与下标关系",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "递归遍历与剪枝",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2022-42",
+      "year": 2022,
+      "index": 42,
+      "id": 573,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "Top-K 问题与大根堆",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "堆的定义与调整",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "算法复杂度与参数化分析",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2022-45",
+      "year": 2022,
+      "index": 45,
+      "id": 576,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "目录项与索引节点 inode",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "硬链接与 inode 共享",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "inode 直接与多级间接索引",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "文件访问路径与磁盘 I/O",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2022-46",
+      "year": 2022,
+      "index": 46,
+      "id": 577,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "信号量同步与前驱关系",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "进程与线程的并发执行",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "同步图与偏序关系",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2022-47",
+      "year": 2022,
+      "index": 47,
+      "id": 578,
+      "subject": "计算机网络",
+      "cards": [
+        {
+          "title": "交换机与集线器的冲突域",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "CSMA/CD 与最小帧长",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "DHCP 与广播报文",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "802.11 三地址帧格式",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "以太网广播域与 MAC 转发",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2023-41",
+      "year": 2023,
+      "index": 41,
+      "id": 579,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "有向图的入度与出度",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "邻接矩阵与图的存储",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "图的度数统计与遍历复杂度",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2023-45",
+      "year": 2023,
+      "index": 45,
+      "id": 583,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "原子交换指令与自旋锁",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "临界区互斥与忙等待",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "原子操作与竞态条件",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2023-46",
+      "year": 2023,
+      "index": 46,
+      "id": 584,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "阻塞式 I/O 与进程状态转换",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "中断处理与键盘驱动",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "系统调用与特权级转换",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "就绪队列与调度时机",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2023-47",
+      "year": 2023,
+      "index": 47,
+      "id": 585,
+      "subject": "计算机网络",
+      "cards": [
+        {
+          "title": "TCP 序号确认号与连接释放",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "TCP 拥塞控制与拥塞窗口",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "FTP 控制连接与数据连接",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "RTT 与吞吐率计算",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2024-41",
+      "year": 2024,
+      "index": 41,
+      "id": 586,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "拓扑排序唯一性判定",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "Kahn拓扑排序与入度维护",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2024-42",
+      "year": 2024,
+      "index": 42,
+      "id": 587,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "二次探测法与开放定址散列",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "散列表装填因子与查找终止",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2024-45",
+      "year": 2024,
+      "index": 45,
+      "id": 590,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "虚拟地址分页与页内偏移",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "页表项地址计算与页框号",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "缺页异常与页表更新",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2024-46",
+      "year": 2024,
+      "index": 46,
+      "id": 591,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "临界区与共享缓冲区",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "信号量同步与互斥",
+          "role": "core",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2024-47",
+      "year": 2024,
+      "index": 47,
+      "id": 592,
+      "subject": "计算机网络",
+      "cards": [
+        {
+          "title": "RIP 距离向量与收敛",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "RIP 与 OSPF 适用范围",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "IP TTL 与逐跳递减",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "BGP eBGP 与 iBGP 会话",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "BGP UPDATE 报文与路由通告",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "BGP AS_PATH 与路径选择",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "热土豆路由与 IGP 出口距离",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2025-41",
+      "year": 2025,
+      "index": 41,
+      "id": 593,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "后缀极值与区间乘积最大值",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "后缀最大值与最小值维护",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2025-42",
+      "year": 2025,
+      "index": 42,
+      "id": 594,
+      "subject": "数据结构",
+      "cards": [
+        {
+          "title": "AOE网事件最早与最迟发生时间",
+          "role": "secondary",
+          "status": "verified"
+        },
+        {
+          "title": "关键路径与关键活动",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "活动时间余量与并行区间",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2025-45",
+      "year": 2025,
+      "index": 45,
+      "id": 597,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "生产者消费者与有界缓冲区",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "多阶段流水线的信号量同步",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "共享铁锹互斥与资源锁",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    },
+    {
+      "key": "2025-46",
+      "year": 2025,
+      "index": 46,
+      "id": 598,
+      "subject": "操作系统",
+      "cards": [
+        {
+          "title": "进程虚拟地址空间与段布局",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "全局指针与动态内存分配",
+          "role": "core",
+          "status": "verified"
+        },
+        {
+          "title": "阻塞式I/O与驱动程序调用",
+          "role": "secondary",
+          "status": "verified"
+        }
+      ]
+    }
+  ],
+  "noQuestionText": [
+    {
+      "card": "verified-answer-2011-41",
+      "key": "2011-41",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2011-42",
+      "key": "2011-42",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2011-43",
+      "key": "2011-43",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2011-44",
+      "key": "2011-44",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2012-41",
+      "key": "2012-41",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2012-44",
+      "key": "2012-44",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2012-46",
+      "key": "2012-46",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2012-47",
+      "key": "2012-47",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2013-41",
+      "key": "2013-41",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2013-44",
+      "key": "2013-44",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2013-45",
+      "key": "2013-45",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2013-46",
+      "key": "2013-46",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2013-47",
+      "key": "2013-47",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2011-41::关键路径与 AOE 网",
+      "key": "2011-41",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2011-42::有序数组中位数的二分缩减",
+      "key": "2011-42",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2011-43::定点补码加减与溢出",
+      "key": "2011-43",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2011-44::TLB 与多级页表联合转换",
+      "key": "2011-44",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2011-44::Cache 直接映射与组相联",
+      "key": "2011-44",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2012-41::多路归并与双指针",
+      "key": "2012-41",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2012-41::外部排序与多路归并",
+      "key": "2012-41",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2012-44::流水线结构冒险与数据冒险",
+      "key": "2012-44",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2012-44::移位运算与舍入",
+      "key": "2012-44",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2012-46::文件物理分配方式",
+      "key": "2012-46",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2012-46::文件控制块 FCB 与目录查找",
+      "key": "2012-46",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2012-47::TCP 三次握手与四次挥手",
+      "key": "2012-47",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2012-47::以太网帧与 MAC 地址",
+      "key": "2012-47",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2012-47::IP TTL 与逐跳转发",
+      "key": "2012-47",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2013-41::摩尔投票法与主元素",
+      "key": "2013-41",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2013-44::指令系统与寻址方式",
+      "key": "2013-44",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2013-44::ALU 标志位 CF 与 OF",
+      "key": "2013-44",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2013-45::进程同步与信号量",
+      "key": "2013-45",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2013-46::页表结构与地址转换",
+      "key": "2013-46",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2013-47::路由选择与转发表",
+      "key": "2013-47",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    },
+    {
+      "card": "verified-answer-2013-47::BGP UPDATE 报文与路由通告",
+      "key": "2013-47",
+      "typeName": "综合应用题",
+      "topic": null,
+      "hasAnswer": true
+    }
+  ],
+  "explicitRoleMismatches": [],
+  "brokenCardQuestionListLinks": []
+}
