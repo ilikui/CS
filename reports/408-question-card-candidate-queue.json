@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T12:58:37.965Z",
+  "generatedAt": "2026-11-23T12:59:36.794Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
@@ -1150,7 +1150,7 @@
         },
         {
           "card": "冯·诺依曼结构与存储程序",
-          "score": 25,
+          "score": 26,
           "matchedTerms": [
             "pc",
             "cpu",
@@ -5545,6 +5545,23 @@
           ]
         },
         {
+          "card": "冯·诺依曼结构与存储程序",
+          "score": 26,
+          "matchedTerms": [
+            "操作数",
+            "指令",
+            "取指",
+            "执行",
+            "指令的",
+            "寻址方",
+            "址方式",
+            "寻址方式",
+            "的寻址",
+            "的寻址方",
+            "的寻址方式"
+          ]
+        },
+        {
           "card": "数组下标寻址与元素宽度",
           "score": 26,
           "matchedTerms": [
@@ -5556,20 +5573,6 @@
             "目标地",
             "标地址",
             "目标地址"
-          ]
-        },
-        {
-          "card": "冯·诺依曼结构与存储程序",
-          "score": 23,
-          "matchedTerms": [
-            "操作数",
-            "指令",
-            "取指",
-            "执行",
-            "指令的",
-            "寻址方",
-            "址方式",
-            "寻址方式"
           ]
         },
         {
