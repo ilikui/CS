@@ -10,7 +10,7 @@
     "candidateQuestions": 66,
     "noCandidateQuestions": 0,
     "cards": 306,
-    "cardsWithFormalLinks": 192,
+    "cardsWithFormalLinks": 193,
     "cardsWithoutFormalLinks": [
       {
         "subject": "操作系统",
@@ -27,10 +27,6 @@
       {
         "subject": "数据结构",
         "title": "稀疏矩阵三元组表示"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "总线仲裁方式"
       },
       {
         "subject": "数据结构",
