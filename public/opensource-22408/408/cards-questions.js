@@ -5989,6 +5989,7 @@ window.CARD_QUESTION_MAP = {
       "MAR、MDR和指令寄存器IR属于CPU内部工作/接口寄存器，程序通常不能直接访问，选B。"
     ],
     "stepsSource": "expanded-from-question-analysis"
+    "relatedCards": ["计算机系统层次结构"],
   },
   "2010-19-流水线转发与阻塞": {
     "year": 2010,
@@ -7007,7 +7008,8 @@ window.CARD_QUESTION_MAP = {
     "relatedCards": [
       "硬布线控制器与微程序控制器",
       "指令系统与寻址方式"
-    ],
+    ,
+      "计算机系统层次结构"],
     "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
     "sourcePage": 2,
     "answerSource": "https://csgraduates.com/study_methods/408quiz/2024/",
@@ -7573,7 +7575,8 @@ window.CARD_QUESTION_MAP = {
       "指令系统与寻址方式",
       "硬布线控制器与微程序控制器",
       "单周期与多周期数据通路"
-    ],
+    ,
+      "计算机系统层次结构"],
     "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
     "sourcePage": 3,
     "answerSource": "https://zhenti.beokayy.club/paper/2025",
@@ -9696,6 +9699,33 @@ window.CARD_QUESTION_MAP = {
       "CPU异常响应与现场保护"
     ]
   }
+,
+  "2022-18-ISA规定的内容": {
+    "year": 2022, "index": 18, "id": 629, "typeName": "选择题", "score": 2,
+    "topic": "计算机组成原理",
+    "question": "下列选项中，属于指令集体系结构（ISA）规定的内容是（ ）。Ⅰ. 指令字格式和指令类型 Ⅱ. CPU 的时钟周期 Ⅲ. 通用寄存器个数和位数 Ⅳ. 加法器的进位方式。A. 仅Ⅰ、Ⅱ B. 仅Ⅰ、Ⅲ C. 仅Ⅱ、Ⅳ D. 仅Ⅰ、Ⅲ、Ⅳ",
+    "answer": "B",
+    "analysis": "ISA定义程序员可见的指令格式/类型及通用寄存器资源；CPU时钟周期和加法器进位方式属于微架构/电路实现。",
+    "steps": ["Ⅰ指令格式与类型决定机器指令编码和语义，属于ISA。","Ⅱ时钟周期由具体处理器实现决定，不属于ISA。","Ⅲ通用寄存器数量和位宽是程序员可见状态，属于ISA。","Ⅳ加法器采用何种进位电路是内部实现细节，不属于ISA。","因此仅Ⅰ、Ⅲ正确，选B。"],
+    "stepsSource": "expanded-from-question-analysis",
+    "topic": "计算机组成原理",
+    "matchKind": "direct-concept",
+    "relatedCards": ["计算机系统层次结构"],
+    "audit": {"status":"cross-checked","source":"https://pgcode.cn/exams/408/years/2022/preview","note":"已对照2022年真题第18题题干与参考答案；按ISA可见属性与微架构实现细节逐项核验。"}
+  },
+  "2022-20-高级语言编译汇编链接流程": {
+    "year": 2022, "index": 20, "id": 631, "typeName": "选择题", "score": 2,
+    "topic": "计算机组成原理",
+    "question": "将高级语言源程序转换为可执行目标文件的主要过程是（ ）。A. 预处理→编译→汇编→链接 B. 预处理→汇编→编译→链接 C. 预处理→编译→链接→汇编 D. 预处理→汇编→链接→编译",
+    "answer": "A",
+    "analysis": "预处理展开宏和头文件；编译将高级语言翻译为汇编/目标表示；汇编器生成目标文件；链接器解析外部符号并合并目标文件和库。",
+    "steps": ["预处理：处理宏定义、头文件和条件编译。","编译：完成词法/语法/语义分析和优化，生成汇编或目标表示。","汇编：把汇编代码转换为机器指令目标文件。","链接：完成符号解析、重定位并合并目标文件/库，生成可执行文件。","顺序为预处理→编译→汇编→链接，选A。"],
+    "stepsSource": "expanded-from-question-analysis",
+    "topic": "计算机组成原理",
+    "matchKind": "direct-concept",
+    "relatedCards": ["计算机系统层次结构"],
+    "audit": {"status":"cross-checked","source":"https://pgcode.cn/exams/408/years/2022/preview","note":"已对照2022年真题第20题题干与参考答案；逐阶段核验编译、汇编和链接的职责。"}
+  },
 };
 
 window.CARD_EXAM_TOPIC_MAP = {
