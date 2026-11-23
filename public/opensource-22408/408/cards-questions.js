@@ -4357,8 +4357,8 @@ window.CARD_QUESTION_MAP = {
     "topic": "计算机组成原理",
     "matchKind": "直接考点",
     "audit": {
-      "status": "source-linked-answer-key",
-      "note": "年份、题号、原始题库 ID、题干和选择题答案与 data/408/questions_data.js 对齐；数值推导为补充教学解析。"
+      "status": "cross-checked",
+      "note": "已对照2010年408原始试卷PDF第13题题面及参考答案B（https://www.noobdream.com/media/upload/2019/11/15/2010408.pdf）；FEH、F2H、90H、F8H分别解释为−2、−14、−112、−8，四个选项乘积依次为28、1568、16、112，只有B超出8位补码范围。题库题干、答案与原卷一致，教学步骤已独立复算。"
     },
     "relatedCards": [
       "定点补码加减与溢出",
