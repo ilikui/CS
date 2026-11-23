@@ -9711,9 +9711,67 @@ window.CARD_QUESTION_MAP = {
 ,
   "2022-18-ISA规定的内容": {"year":2022,"index":18,"id":629,"typeName":"选择题","score":2,"topic":"计算机组成原理","question":"下列选项中，属于指令集体系结构（ISA）规定的内容是（ ）。Ⅰ. 指令字格式和指令类型 Ⅱ. CPU 的时钟周期 Ⅲ. 通用寄存器个数和位数 Ⅳ. 加法器的进位方式。A. 仅Ⅰ、Ⅱ B. 仅Ⅰ、Ⅲ C. 仅Ⅱ、Ⅳ D. 仅Ⅰ、Ⅲ、Ⅳ","answer":"B","analysis":"ISA定义程序员可见的指令格式/类型及通用寄存器资源；CPU时钟周期和加法器进位方式属于微架构/电路实现。","steps":["Ⅰ指令格式与类型决定机器指令编码和语义，属于ISA。","Ⅱ时钟周期由具体处理器实现决定，不属于ISA。","Ⅲ通用寄存器数量和位宽是程序员可见状态，属于ISA。","Ⅳ加法器采用何种进位电路是内部实现细节，不属于ISA。","因此仅Ⅰ、Ⅲ正确，选B。"],"stepsSource":"expanded-from-question-analysis","matchKind":"direct-concept","relatedCards":["计算机系统层次结构"],"audit":{"status":"cross-checked","source":"https://pgcode.cn/exams/408/years/2022/preview","note":"已对照2022年真题第18题题干与参考答案；按ISA可见属性与微架构实现细节逐项核验。"}},
   "2022-20-高级语言编译汇编链接流程": {"year":2022,"index":20,"id":631,"typeName":"选择题","score":2,"topic":"计算机组成原理","question":"将高级语言源程序转换为可执行目标文件的主要过程是（ ）。A. 预处理→编译→汇编→链接 B. 预处理→汇编→编译→链接 C. 预处理→编译→链接→汇编 D. 预处理→汇编→链接→编译","answer":"A","analysis":"预处理展开宏和头文件；编译将高级语言翻译为汇编/目标表示；汇编器生成目标文件；链接器解析外部符号并合并目标文件和库。","steps":["预处理：处理宏定义、头文件和条件编译。","编译：完成词法/语法/语义分析和优化，生成汇编或目标表示。","汇编：把汇编代码转换为机器指令目标文件。","链接：完成符号解析、重定位并合并目标文件/库，生成可执行文件。","顺序为预处理→编译→汇编→链接，选A。"],"stepsSource":"expanded-from-question-analysis","matchKind":"direct-concept","relatedCards":["计算机系统层次结构"],"audit":{"status":"cross-checked","source":"https://pgcode.cn/exams/408/years/2022/preview","note":"已对照2022年真题第20题题干与参考答案；逐阶段核验编译、汇编和链接的职责。"}}
+  ,
+  "2015-12-硬件直接执行的程序": {
+    "year": 2015, "index": 12, "id": 201512, "typeName": "选择题", "score": 2, "topic": "计算机组成原理",
+    "question": "计算机硬件能够直接执行的是：Ⅰ.机器语言程序；Ⅱ.汇编语言程序；Ⅲ.硬件描述语言程序。A.仅Ⅰ B.仅Ⅰ、Ⅱ C.仅Ⅰ、Ⅲ D.Ⅰ、Ⅱ、Ⅲ",
+    "answer": "A（仅Ⅰ）",
+    "analysis": "CPU在程序指令层面直接取指、译码和执行按ISA编码的机器指令。汇编语言是机器指令的符号表示，需由汇编器翻译为机器码；HDL需经过综合和实现形成硬件电路，不是CPU直接执行的程序。",
+    "steps": ["识别机器语言：它是处理器按ISA定义执行的二进制指令。","汇编语言是助记符形式，需先汇编。","HDL描述硬件结构/行为，需综合实现。","因此仅Ⅰ正确，选A。"],
+    "stepsSource": "original-question-source-crosschecked",
+    "relatedCards": ["计算机系统层次结构", "指令系统与寻址方式"],
+    "source": "https://officialxuefucom.oss-cn-beijing.aliyuncs.com/u/cms/beijing/202007/03162522etof.pdf",
+    "answerSource": "https://zhenti.beokayy.club/paper/2015?focus=2015-12",
+    "audit": {"status": "original-question-source-crosschecked", "note": "题干与2015年试题PDF第12题及公开真题文本交叉核对；答案为公开参考答案，非官方公布答案。"}
+  },
+  "2016-12-高级语言源程序翻译": {
+    "year": 2016, "index": 12, "id": 201612, "typeName": "选择题", "score": 2, "topic": "计算机组成原理",
+    "question": "将高级语言源程序转换为机器级目标代码文件的程序是（）。A.汇编程序 B.链接程序 C.编译程序 D.解释程序",
+    "answer": "C（编译程序）",
+    "analysis": "编译程序把高级语言源程序翻译为目标代码；解释程序按语句翻译并立即执行，传统模型下通常不生成独立目标文件；汇编程序的输入是汇编语言；链接程序处理目标文件的符号解析、重定位和合并。",
+    "steps": ["先看输入：高级语言源程序。","汇编器处理的是汇编语言，不符合。","链接器处理目标文件，不负责高级语言翻译。","解释器按语句翻译并执行；题目要求机器级目标代码文件，故为编译程序，选C。"],
+    "stepsSource": "original-question-source-crosschecked",
+    "relatedCards": ["计算机系统层次结构"],
+    "source": "https://www.csgraduates.com/study_methods/408quiz/2016/",
+    "answerSource": "https://www.csgraduates.com/study_methods/408quiz/2016/",
+    "audit": {"status": "original-question-source-crosschecked", "note": "题干、选项和答案与2016年408公开真题页面交叉核对；解释器与编译器按408传统模型区分。"}
+  },
+  "2026-12-计算机系统层次叙述": {
+    "year": 2026, "index": 12, "id": 202612, "typeName": "选择题", "score": 2, "topic": "计算机组成原理",
+    "question": "下列关于计算机的系统层次的叙述，错误的是（）。A.最上层是应用软件层 B.指令集体系结构是软件和硬件的接口 C.计算机组成（即微架构）属于指令集体系结构的物理实现层 D.操作系统可通过指令集体系结构进行相应抽象，向上层软件提供服务",
+    "answer": "C",
+    "analysis": "本题按题目给出的系统层次模型判断。应用软件位于上层，ISA是软硬件接口，操作系统利用机器接口和机制向上层提供抽象。微架构位于ISA之下，是实现ISA的具体处理器组织；它不是ISA本身规定的内容，也不应与ISA接口层混为一层。",
+    "steps": ["先定位层次：应用软件在上层，ISA位于软件与硬件交界处。","操作系统可利用ISA提供的机器接口向上层提供服务。","微架构负责实现ISA，但属于其下方的具体实现组织，不是ISA本身。","因此C的层次归属表述错误，选C。"],
+    "stepsSource": "original-question-source-crosschecked",
+    "relatedCards": ["计算机系统层次结构"],
+    "source": "https://pgcode.cn/exams/408/years/2026/preview",
+    "answerSource": "https://pgcode.cn/exams/408/years/2026/preview",
+    "audit": {"status": "original-question-source-crosschecked", "note": "题干和参考答案与2026年408公开真题页面交叉核对；对“实现ISA”与“属于ISA层”的层次表述作了区分。"}
+  },
+  "2026-16-ISA与超级流水线": {
+    "year": 2026, "index": 16, "id": 202616, "typeName": "选择题", "score": 2, "topic": "计算机组成原理",
+    "question": "对于下列选项给出的相关内容，不是由指令集体系结构规定的是（）。A.指令集中是否包含输入输出指令 B.采用向量中断还是非向量中断 C.采用段式还是页式虚拟存储管理方式 D.指令流水线是否使用超级流水线技术",
+    "answer": "D",
+    "analysis": "ISA规定程序可见的指令接口、中断机制和体系结构可见的存储管理模型；超级流水线是处理器内部的流水线实现策略，不影响同ISA程序的指令语义，属于微架构。",
+    "steps": ["A输入输出指令是软件可见的指令接口，属于ISA。","B向量/非向量中断属于体系结构可见的中断机制。","C段式/页式虚拟存储管理涉及体系结构可见的地址空间与存储管理模型。","D超级流水线是内部实现策略，属于微架构，不由ISA规定，选D。"],
+    "stepsSource": "original-question-source-crosschecked",
+    "relatedCards": ["计算机系统层次结构", "流水线与冒险"],
+    "source": "https://pgcode.cn/exams/408/years/2026/preview",
+    "answerSource": "https://pgcode.cn/exams/408/years/2026/preview",
+    "audit": {"status": "original-question-source-crosschecked", "note": "题干、选项和参考答案与2026年408公开真题页面交叉核对；超级流水线归入微架构实现。"}
+  }
 };
 
 window.CARD_EXAM_TOPIC_MAP = {
+  "2015-12-硬件直接执行的程序": "计算机系统层次结构",
+  "2016-12-高级语言源程序翻译": "计算机系统层次结构",
+  "2022-18-ISA规定的内容": "计算机系统层次结构",
+  "2022-20-高级语言编译汇编链接流程": "计算机系统层次结构",
+  "2024-CO-13-伪指令微指令机器指令": "计算机系统层次结构",
+  "2025-CO-16-ISA规定的指令属性": "计算机系统层次结构",
+  "2026-12-计算机系统层次叙述": "计算机系统层次结构",
+  "2026-16-ISA与超级流水线": "计算机系统层次结构",
+
   "单链表指针操作": "单链表与双链表",
   "栈的入栈与出栈": "栈与队列",
   "循环队列判空判满": "循环队列判空与判满",
