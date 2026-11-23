@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T13:00:50.494Z",
+  "generatedAt": "2026-11-23T13:01:22.275Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
@@ -1474,23 +1474,8 @@
           ]
         },
         {
-          "card": "指令周期与微操作控制",
-          "score": 40,
-          "matchedTerms": [
-            "pc",
-            "mar",
-            "mdr",
-            "ir",
-            "取指",
-            "运算",
-            "存储器",
-            "储器读",
-            "存储器读"
-          ]
-        },
-        {
           "card": "冯·诺依曼结构与存储程序",
-          "score": 37,
+          "score": 40,
           "matchedTerms": [
             "指令",
             "pc",
@@ -1504,6 +1489,21 @@
             "取指译码",
             "指令地",
             "令地址"
+          ]
+        },
+        {
+          "card": "指令周期与微操作控制",
+          "score": 40,
+          "matchedTerms": [
+            "pc",
+            "mar",
+            "mdr",
+            "ir",
+            "取指",
+            "运算",
+            "存储器",
+            "储器读",
+            "存储器读"
           ]
         },
         {
@@ -4822,7 +4822,7 @@
         },
         {
           "card": "冯·诺依曼结构与存储程序",
-          "score": 39,
+          "score": 42,
           "matchedTerms": [
             "指令",
             "pc",
