@@ -6714,12 +6714,6 @@ window.QUESTION_CARD_MAP = {
         "role": "core"
       },
       {
-        "title": "定点补码加减与溢出",
-        "topic": "定点补码加减与溢出",
-        "status": "verified",
-        "role": "secondary"
-      },
-      {
         "title": "数制转换与定点小数",
         "topic": "数制转换与定点小数",
         "status": "verified",
@@ -6730,7 +6724,6 @@ window.QUESTION_CARD_MAP = {
       "数据表示与补码"
     ],
     "secondaryCards": [
-      "定点补码加减与溢出",
       "数制转换与定点小数"
     ]
   },
@@ -6753,12 +6746,6 @@ window.QUESTION_CARD_MAP = {
         "role": "core"
       },
       {
-        "title": "定点补码加减与溢出",
-        "topic": "定点补码加减与溢出",
-        "status": "verified",
-        "role": "secondary"
-      },
-      {
         "title": "数制转换与定点小数",
         "topic": "数制转换与定点小数",
         "status": "verified",
@@ -6769,7 +6756,6 @@ window.QUESTION_CARD_MAP = {
       "数据表示与补码"
     ],
     "secondaryCards": [
-      "定点补码加减与溢出",
       "数制转换与定点小数"
     ]
   },
