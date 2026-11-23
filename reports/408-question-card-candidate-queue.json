@@ -3,14 +3,14 @@
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
-    "formalMappingRecords": 384,
-    "uniqueQuestionsAlreadyLinked": 278,
-    "questionsWithoutAnyFormalLink": 47,
+    "formalMappingRecords": 388,
+    "uniqueQuestionsAlreadyLinked": 282,
+    "questionsWithoutAnyFormalLink": 43,
     "questionsNeedingAdditionalCardReview": 66,
     "candidateQuestions": 66,
     "noCandidateQuestions": 0,
     "cards": 306,
-    "cardsWithFormalLinks": 194,
+    "cardsWithFormalLinks": 195,
     "cardsWithoutFormalLinks": [
       {
         "subject": "操作系统",
@@ -63,10 +63,6 @@
       {
         "subject": "数据结构",
         "title": "红黑树性质与高度"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "数制转换与定点小数"
       },
       {
         "subject": "计算机组成原理",
