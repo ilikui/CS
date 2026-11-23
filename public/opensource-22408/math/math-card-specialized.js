@@ -118,7 +118,52 @@ if(k==='vectors'){
 if(k==='system')return /齐次|基础解系|解空间/.test(t)?"Ax=0：dim N(A)=n−rank(A)":"Ax=b 有解 ⇔ rank(A)=rank([A|b])";
 if(k==='eigen')return /迹|行列式|和与积/.test(t)?"λ₁+λ₂=tr(A)，λ₁λ₂=det(A)（二阶矩阵）":/对角化|正交/.test(t)?"A=PDP⁻¹；实对称 A=QΛQᵀ":"Av=λv，det(A−λI)=0";
 if(k==='quadratic')return /正定|主子式/.test(t)?"Q(x)=xᵀAx>0 (x≠0) ⇔ A 正定；Sylvester：顺序主子式全正":/惯性|秩/.test(t)?"rank(Q)=正惯性指数+负惯性指数":"Q(x)=xᵀAx，A 可取对称矩阵";
-if(k==='shape')return /凸函数|弦斜率|割线斜率|严格单调导数/.test(t)?"f′ 严格递增 ⇔ f 严格凸（区间内可导）；凸函数的弦斜率随区间右移不减":"f′ 判单调与极值；f′′ 判凹凸，拐点需凹凸改变";
+if(k==='function'){
+ if(/奇偶|奇函数与偶函数/.test(t))return "定义域关于原点对称；偶：f(−x)=f(x)，奇：f(−x)=−f(x)";
+ if(/周期/.test(t))return "存在 T>0，使 f(x+T)=f(x)；最小正周期为基本周期";
+ if(/有界/.test(t))return "存在 m、M，使 m≤f(x)≤M（对定义域内所有 x）";
+ if(/反函数/.test(t))return "f 一一对应时存在 f⁻¹；图像关于 y=x 对称，D_{f⁻¹}=R_f";
+ if(/复合/.test(t))return "f∘g(x)=f(g(x))；要求 x∈D_g 且 g(x)∈D_f";
+ if(/定义域/.test(t))return "D_f={x：表达式有意义}；复合函数须逐层检查内外层定义域";
+ return "函数由定义域、对应法则和值域共同确定：y=f(x)";
+}
+if(k==='limit'){
+ if(/ε-N|数列极限/.test(t))return "∀ε>0，∃N∈ℕ，使 n>N ⇒ |aₙ−A|<ε";
+ if(/ε-δ|epsilon/.test(t))return "∀ε>0，∃δ>0，使 0<|x−a|<δ ⇒ |f(x)−L|<ε";
+ if(/单侧|左右极限/.test(t))return "limₓ→a f(x) 存在 ⇔ 左极限、右极限均存在且相等";
+ if(/重要极限/.test(t))return "limₓ→0 sinx/x=1；limₓ→∞(1+1/x)^x=e";
+ if(/无穷小乘有界/.test(t))return "α(x)→0 且 g(x) 有界 ⇒ α(x)g(x)→0";
+ if(/唯一性|局部有界|保号/.test(t))return "limₓ→a f(x)=L 存在 ⇒ 极限唯一且去心邻域内有界；L≠0 时局部保号";
+ if(/夹逼/.test(t))return "g(x)≤f(x)≤h(x)，且 g、h→L ⇒ f→L";
+ if(/等价|阶的比较|无穷小/.test(t))return "α∼β ⇔ lim(α/β)=1；等价替换优先用于乘除因子";
+ return "limₓ→a f(x)=L：左右趋近需分别验证，先识别未定式再选方法";
+}
+if(k==='continuity'){
+ if(/介值|零点/.test(t))return "f∈C[a,b] 且 N 介于 f(a)、f(b) 之间 ⇒ ∃ξ∈[a,b]，f(ξ)=N";
+ if(/保号/.test(t))return "f 连续且 f(a)>0（或 <0）⇒ a 的某邻域内 f(x) 同号";
+ if(/最值|有界/.test(t))return "f∈C[a,b] ⇒ f 在 [a,b] 有界并取得最大值、最小值";
+ if(/间断/.test(t))return "连续 ⇔ f(a)存在、limₓ→a f(x)存在且等于 f(a)";
+ return "连续三条件：点值存在、极限存在、极限等于点值";
+}
+if(k==='derivative'){
+ if(/反函数/.test(t))return "(f⁻¹)′(y₀)=1/f′(x₀)，y₀=f(x₀)，且 f′(x₀)≠0";
+ if(/绝对值/.test(t))return "f(a)≠0 时 |f|′(a)=sgn(f(a))f′(a)；f(a)=0 时可导 ⇔ f′(a)=0";
+ if(/微分定义|线性主部/.test(t))return "Δy=f′(a)Δx+o(Δx)，dy=f′(a)dx；dy 是增量的线性主部";
+ if(/隐函数/.test(t))return "F(x,y)=0：y′=−Fₓ/Fᵧ（Fᵧ≠0）";
+ if(/参数方程/.test(t))return "dy/dx=(dy/dt)/(dx/dt)，二阶导数=(d/dt(dy/dx))/(dx/dt)";
+ if(/高阶|莱布尼茨/.test(t))return "(uv)⁽ⁿ⁾=Σₖ₌₀ⁿ C(n,k)u⁽ᵏ⁾v⁽ⁿ⁻ᵏ⁾";
+ if(/乘积/.test(t))return "(uv)′=u′v+uv′";
+ if(/商/.test(t))return "(u/v)′=(u′v−uv′)/v²（v≠0）";
+ if(/链式|复合/.test(t))return "[f(g(x))]′=f′(g(x))g′(x)";
+ return "f′(a)=limₕ→0 [f(a+h)−f(a)]/h；可导必连续";
+}
+if(k==='mvt'){
+ if(/罗尔/.test(t))return "f(a)=f(b)，f∈C[a,b] 且 (a,b) 可导 ⇒ ∃ξ∈(a,b)，f′(ξ)=0";
+ if(/柯西/.test(t))return "f,g∈C[a,b] 且可导 ⇒ [f(b)−f(a)]/[g(b)−g(a)]=f′(ξ)/g′(ξ)";
+ return "f∈C[a,b] 且 (a,b) 可导 ⇒ ∃ξ∈(a,b)，f′(ξ)=[f(b)−f(a)]/(b−a)";
+}
+if(k==='shape')return /凸函数|弦斜率|割线斜率|严格单调导数/.test(t)?"f′ 单调不减 ⇔ f 凸（可导）；x₁<x₂<x₃ 时相邻割线斜率有序":"f′ 判单调与极值；f′′ 判凹凸，拐点需凹凸改变";
+if(k==='taylor')return "f(x)=Σₖ₌₀ⁿ[f⁽ᵏ⁾(a)/k!](x−a)ᵏ+Rₙ₊₁";
 if(k==='derivative'&&/反函数/.test(t))return "(f⁻¹)′(y₀)=1/f′(x₀)，其中 y₀=f(x₀)，f′(x₀)≠0";
 if(k==='derivative'&&/绝对值/.test(t))return "若 f(a)≠0，则 |f|′(a)=sgn(f(a))f′(a)；若 f(a)=0 且 f′(a)=0，则 |f|′(a)=0";
 return formula[k]||"";
@@ -130,9 +175,10 @@ function svgFor(k,t,p){
 let body='',desc='';
 const graph=(fn,extra='')=>'<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="'+esc(t)+'专属函数图像">'+axes()+'<path d="'+graphPath(fn)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/>'+extra+'</svg>';
 if(k==='function'){
-if(/奇|偶/.test(t)){
+if(/奇偶|奇函数与偶函数/.test(t)){body=graph(x=>x*x/5,'<path d="'+graphPath(x=>x*x*x/8)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="3" stroke-dasharray="6 4"/><text x="285" y="25" fill="'+COLORS.blue+'">蓝：偶函数 y=x²/5</text><text x="285" y="47" fill="'+COLORS.orange+'">橙：奇函数 y=x³/8</text>');desc='同时比较偶函数 y=x²/5（关于 y 轴对称）与奇函数 y=x³/8（关于原点中心对称）。判定前必须先检查定义域关于原点对称。';}
+else if(/奇|偶/.test(t)){
 const odd=/奇/.test(t)&&!/偶/.test(t),fn=odd?x=>x*x*x/8:x=>x*x/5;
-body=graph(fn,'<path d="M'+(230-2*48)+' 135L230 135L'+(230+2*48)+' 135" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="315" y="28" fill="'+COLORS.orange+'">'+(odd?'奇函数：原点对称':'偶函数：y轴对称')+'</text>');
+body=graph(fn,'<text x="285" y="28" fill="'+COLORS.orange+'">'+(odd?'奇函数：原点对称':'偶函数：y轴对称')+'</text>');
 desc=odd?'蓝色曲线为奇函数示例 y=x³/8，满足 f(−x)=−f(x)，图像绕原点旋转 180° 后重合。':'蓝色曲线为偶函数示例 y=x²/5，满足 f(−x)=f(x)，图像关于 y 轴对称。';
 }else if(/反函数/.test(t)){body=graph(x=>x,'<path d="M38 230L422 38" stroke="'+COLORS.orange+'" stroke-dasharray="7 5" stroke-width="2"/><text x="340" y="45" fill="'+COLORS.orange+'">y=x</text>');desc='函数与反函数图像关于 y=x 对称；水平线检验一一对应。';}
 else if(/周期/.test(t)){body=graph(x=>Math.sin(p*x*2));desc='滑块改变角频率 ω，周期 T=2π/ω 随之变化；周期函数满足 f(x+T)=f(x)。';}
@@ -168,7 +214,9 @@ desc='连续函数在闭区间 [−2,2] 上取到端点函数值之间的每一�
 const near=.12+.5*(1.8-p)/1.45;
 body=graph(x=>1/(x*x+.08),'').replace('</svg>','<path d="M'+(230+near*48)+' 20V245" stroke="'+COLORS.orange+'" stroke-dasharray="5 5"/><text x="260" y="25" fill="'+COLORS.orange+'">靠近边界 0</text></svg>');
 desc='用 f(x)=1/x 在 (0,1) 说明：越靠近 0，曲线越陡，同样大小的函数值变化需要越来越小的横向间隔，因此它在该区间不一致连续。闭区间连续函数则一致连续。';
-}else if(/间断/.test(t)){
+}else if(/保号/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="'+graphPath(x=>1+x/4)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M28 135H432" stroke="'+COLORS.orange+'" stroke-dasharray="5 5"/><circle cx="230" cy="100" r="5" fill="'+COLORS.green+'"/><text x="40" y="25" fill="'+COLORS.blue+'">f(a)=1&gt;0</text><text x="40" y="245" fill="'+COLORS.green+'">充分靠近 a 时仍保持正号</text></svg>';desc='局部保号性：若 f 在 a 连续且 f(a)>0，则存在 δ>0，使 |x−a|<δ 时 f(x)>0；负值情形同理。';}
+else if(/最值|有界/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 220H432 M28 20V240" stroke="#9aaabd"/><path d="'+graphPath(x=>x*x/2-1,-2,2,-2,3)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M134 220V'+(135-(-1)*35)+' M326 220V'+(135-1*35)+'" stroke="'+COLORS.orange+'" stroke-dasharray="5 4"/><circle cx="230" cy="170" r="6" fill="'+COLORS.green+'"/><text x="40" y="25" fill="'+COLORS.blue+'">闭区间连续 ⇒ 有界并取到最值</text><text x="40" y="245" fill="'+COLORS.green+'">比较端点与区间内候选点</text></svg>';desc='闭区间连续函数必有界且取得最大值、最小值。图示抛物线在闭区间上比较两个端点与内部驻点；不能把开区间结论直接套用。';}
+else if(/间断/.test(t)){
 body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="M35 220L230 50L425 220" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="50" r="6" fill="white" stroke="'+COLORS.orange+'" stroke-width="3"/><circle cx="230" cy="'+(50+70*p)+'" r="6" fill="'+COLORS.orange+'"/><path d="M230 50V'+(50+70*p)+'" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="255" y="38" fill="'+COLORS.blue+'">极限位置</text><text x="255" y="'+(70+70*p)+'" fill="'+COLORS.orange+'">函数值</text></svg>';
 desc='空心圆表示左右极限共同趋近的位置，实心圆表示实际函数值；两者不一致时为可去间断。跳跃和无穷间断还需分别检查左右极限。';
 }else{
