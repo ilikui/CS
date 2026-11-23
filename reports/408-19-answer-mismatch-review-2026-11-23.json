@@ -1,0 +1,523 @@
+{
+  "audit_date": "2026-11-23",
+  "repository": "ilikui/CS",
+  "title": "408四科19道答案字段差异逐题核验与修复记录",
+  "scope": "对上一轮审计发现的19道正向/反向答案字段不一致题目，逐题对照公开原题/题图存档、参考解析与仓库验证记录，复算答案并修复正反向关联。",
+  "evidence_policy": "使用可访问的公开真题存档和题图/解析页面核对题干；这些页面不是教育部官方发布渠道。对公开解析存在差异的题目保留两种口径，不把二手解析称为官方标准答案。",
+  "summary": {
+    "reviewed_questions": 19,
+    "forward_answer_corrections": 3,
+    "source_interpretation_conflicts": 1,
+    "answer_differences_that_were_only_detail_or_format": 15,
+    "legacy_topic_target_corrections": 10,
+    "bidirectional_card_link_expansions": [
+      "2009-43",
+      "2018-43",
+      "2016-44",
+      "2024-13"
+    ],
+    "forward_mapping_rows_synchronized": 65
+  },
+  "questions": [
+    {
+      "key": "2009-43",
+      "status": "confirmed",
+      "answer": "中断I/O占比2.5%；DMA占比0.1%。",
+      "note": "逐项复算中断服务100周期/次、125000次/s；DMA每秒1000块、500周期/块。数值正确，统一答案详略并补齐DMA工作过程、CPI卡片关联。",
+      "cards": [
+        [
+          "程序查询与中断驱动 I/O",
+          "core"
+        ],
+        [
+          "DMA 工作过程与总线占用",
+          "core"
+        ],
+        [
+          "计算机性能指标 CPI 与 CPU 时间",
+          "secondary"
+        ]
+      ],
+      "source": "https://csgraduates.com/study_methods/408quiz/2009/"
+    },
+    {
+      "key": "2010-47",
+      "status": "corrected",
+      "answer": "最短冲突检测0.01ms、最长0.02ms；发送周期1.2856ms；有效载荷1500B，有效速率约9.33Mbps。",
+      "note": "原题明确1518B为完整帧长、1500B为有效数据。正向旧映射把1518B作为有效数据分子得到9.444Mbps，已改为1500B计算的9.33Mbps；同步修正两条正向记录及卡片目标。",
+      "cards": [
+        [
+          "以太网 CSMA/CD",
+          "core"
+        ]
+      ],
+      "source": "https://pgcode.cn/exams/408/years/2010/preview"
+    },
+    {
+      "key": "2025-47",
+      "status": "corrected",
+      "answer": "单向传播240ms；上传4000B文件至少400ms；GBN窗口8、序号4位；子网分别为10.10.10.64/26和10.10.10.128/25。",
+      "note": "原题传播速度300000km/s，传播距离为地面—卫星—地面72000km。正向旧映射将200000km/s与0.24s混用，已统一参数。",
+      "cards": [
+        [
+          "卫星链路传播时延与文件发送时延",
+          "core"
+        ],
+        [
+          "GBN信道利用率与发送窗口",
+          "core"
+        ],
+        [
+          "GBN序号空间与窗口约束",
+          "secondary"
+        ],
+        [
+          "IPv4 CIDR与VLSM子网划分",
+          "secondary"
+        ]
+      ],
+      "source": "https://pgcode.cn/exams/408/years/2025/preview"
+    },
+    {
+      "key": "2018-43",
+      "status": "confirmed",
+      "answer": "A设备查询间隔不超过2μs、CPU占比至少4%；B设备不能采用中断I/O；DMA方式CPU占比4%。",
+      "note": "原题缓冲区4B，设备A/B分别2MB/s、40MB/s；B缓冲区填满0.1μs而中断处理需0.8μs。正反答案数值一致，补齐“中断与DMA”关联。",
+      "cards": [
+        [
+          "程序查询与中断驱动 I/O",
+          "core"
+        ],
+        [
+          "DMA 工作过程与总线占用",
+          "core"
+        ],
+        [
+          "计算机性能指标 CPI 与 CPU 时间",
+          "secondary"
+        ],
+        [
+          "中断与 DMA",
+          "secondary"
+        ]
+      ],
+      "source": "https://www.csgraduates.com/study_methods/408quiz/2018/"
+    },
+    {
+      "key": "2022-44",
+      "status": "confirmed",
+      "answer": "CHS字段15/3/9位；平均访问时间约9.18ms；DMA总线请求64次。",
+      "note": "64位缓冲区等于8B，512B扇区需64次请求；明确周期挪用DMA的总线仲裁解释。",
+      "cards": [
+        [
+          "磁盘 CHS 地址与平均访问时间",
+          "core"
+        ],
+        [
+          "DMA 周期挪用与总线仲裁",
+          "core"
+        ],
+        [
+          "磁盘存储结构与旋转延迟",
+          "secondary"
+        ],
+        [
+          "总线仲裁方式",
+          "secondary"
+        ]
+      ],
+      "source": "https://pgcode.cn/exams/408/years/2022/preview"
+    },
+    {
+      "key": "2023-43",
+      "status": "confirmed",
+      "answer": "数组跨2页、缺页2次；块内地址A4~A0、组号A10~A5；a[1][0]地址00422100H、组号8；两种循环命中率均87.5%。",
+      "note": "原题数组6144B、块32B、64组4路；正反答案一致，保留精确的页式存储、Cache组相联和局部性关联。",
+      "cards": [
+        [
+          "页式存储与缺页异常",
+          "core"
+        ],
+        [
+          "Cache 组相联映射与地址划分",
+          "core"
+        ],
+        [
+          "二维数组行优先存储与局部性",
+          "secondary"
+        ],
+        [
+          "Cache 命中率与空间局部性",
+          "secondary"
+        ]
+      ],
+      "source": "https://pgcode.cn/exams/408/years/2023/preview"
+    },
+    {
+      "key": "2022-43",
+      "status": "confirmed",
+      "answer": "SF=F15；加法OF=¬A15¬B15F15+A15B15¬F15；减法OF=¬A15B15F15+A15¬B15¬F15；Y/Z暂存ALU输入输出；取指共7周期。",
+      "note": "原卷数据通路图核对溢出式、寄存器字段及取指微操作；正反答案仅详略和公式排版不同。",
+      "cards": [
+        [
+          "补码加减与溢出判断",
+          "core"
+        ],
+        [
+          "单总线数据通路与暂存器",
+          "core"
+        ],
+        [
+          "寄存器组读写端口与译码",
+          "secondary"
+        ],
+        [
+          "指令周期与微操作控制",
+          "secondary"
+        ]
+      ],
+      "source": "https://pgcode.cn/exams/408/years/2022/preview"
+    },
+    {
+      "key": "2023-42",
+      "status": "topic-corrected",
+      "answer": "3个初始归并段：37,51,63,92,94,99；14,15,23,31,48,56,60,90,166；8,17,43,100。第一段长度最小m、最大n。",
+      "note": "答案内容正确；错误在专题目标指向泛化的外部排序，现改为直接考点“置换-选择排序与初始归并段”。",
+      "cards": [
+        [
+          "置换-选择排序与初始归并段",
+          "core"
+        ],
+        [
+          "外部排序与多路归并",
+          "secondary"
+        ],
+        [
+          "堆与优先队列",
+          "secondary"
+        ]
+      ],
+      "source": "https://pgcode.cn/exams/408/years/2023/preview"
+    },
+    {
+      "key": "2020-42",
+      "status": "topic-corrected",
+      "answer": "使用二叉树/前缀树表示编码；0走左、1走右，抵达叶结点输出字符并回根；插入时检查前缀冲突。",
+      "note": "答案内容正确；原主关联误指向哈夫曼树，现改为“前缀编码与二叉判定树”。哈夫曼树仅保留次级关联。",
+      "cards": [
+        [
+          "前缀编码与二叉判定树",
+          "core"
+        ],
+        [
+          "哈夫曼树与带权路径长度",
+          "secondary"
+        ],
+        [
+          "树与森林的存储结构",
+          "secondary"
+        ]
+      ],
+      "source": "https://pgcode.cn/exams/408/years/2020/preview"
+    },
+    {
+      "key": "2016-46",
+      "status": "topic-corrected",
+      "answer": "priority=nice+k1×cpuTime−k2×waitTime，k1、k2均大于0。",
+      "note": "公式方向正确：数值越小优先级越高，运行时间增加使数值优先数增大，等待时间增加使其减小。原主关联过于泛化，现改为“动态优先级与饥饿避免”。",
+      "cards": [
+        [
+          "动态优先级与饥饿避免",
+          "core"
+        ],
+        [
+          "进程调度算法",
+          "secondary"
+        ],
+        [
+          "调度评价指标",
+          "secondary"
+        ]
+      ],
+      "source": "https://csgraduates.com/study_methods/408quiz/2016/"
+    },
+    {
+      "key": "2016-44",
+      "status": "corrected",
+      "answer": "每字符10位、最多2000字符/s；总任务时间约25,070,000周期；CPU占用约90,000周期。",
+      "note": "原题每字符设备间隔0.5ms=25000个CPU周期，启动下一字符的前15条指令再用60周期，故每字符总历时25070周期。正向旧答案只写25000000周期，遗漏每字符启动下一次设备的70000周期；CPU占用90000周期不变。",
+      "cards": [
+        [
+          "程序查询与中断驱动 I/O",
+          "core"
+        ],
+        [
+          "异步串行通信帧格式与字符速率",
+          "secondary"
+        ],
+        [
+          "中断响应与异常处理",
+          "secondary"
+        ],
+        [
+          "计算机性能指标 CPI 与 CPU 时间",
+          "secondary"
+        ],
+        [
+          "中断与 DMA",
+          "secondary"
+        ]
+      ],
+      "source": "https://csgraduates.com/study_methods/408quiz/2016/"
+    },
+    {
+      "key": "2024-13",
+      "status": "bidirectional-cards-corrected",
+      "answer": "B（仅Ⅱ、Ⅲ）。",
+      "note": "原题及公开参考答案确认微指令和机器指令可由CPU/控制器直接执行；伪指令由汇编器处理，汇编指令需先翻译。反向映射补齐微程序控制器与ISA两张核心卡，系统层次结构保留次级。",
+      "cards": [
+        [
+          "硬布线控制器与微程序控制器",
+          "core"
+        ],
+        [
+          "指令系统与寻址方式",
+          "core"
+        ],
+        [
+          "计算机系统层次结构",
+          "secondary"
+        ]
+      ],
+      "source": "https://pgcode.cn/exams/408/years/2024/preview"
+    },
+    {
+      "key": "2024-43",
+      "status": "confirmed",
+      "answer": "最多32个通用寄存器、shamt为5位；add的F=1FDB9753H、OF=1、CF=1；slli的Ext可为0或1；lw使用符号扩展与加法，有效地址FFFF9CD4H。",
+      "note": "原题指令格式表和数据通路图核对，答案内容一致。",
+      "cards": [
+        [
+          "RISC-V 指令格式与寄存器编码",
+          "core"
+        ],
+        [
+          "ALU 标志位 CF 与 OF",
+          "core"
+        ],
+        [
+          "立即数扩展与移位指令",
+          "secondary"
+        ],
+        [
+          "指令译码与有效地址计算",
+          "secondary"
+        ]
+      ],
+      "source": "https://pgcode.cn/exams/408/years/2024/preview"
+    },
+    {
+      "key": "2024-44",
+      "status": "confirmed",
+      "answer": "a首地址r3、i在r2、sum在r1；a[5]地址0013E004H，小端读数FFFFECDCH，sum=0000000EH；机器码00212213H。",
+      "note": "原题内存图、寄存器角色、分页和机器码逐项复算。",
+      "cards": [
+        [
+          "数组下标寻址与元素宽度",
+          "core"
+        ],
+        [
+          "小端字节序与补码读取",
+          "core"
+        ],
+        [
+          "虚拟地址分页与页内偏移",
+          "secondary"
+        ],
+        [
+          "RISC-V 指令格式与寄存器编码",
+          "secondary"
+        ]
+      ],
+      "source": "https://pgcode.cn/exams/408/years/2024/preview"
+    },
+    {
+      "key": "2025-43",
+      "status": "source-interpretation-conflict",
+      "answer": "缺失率3.15%、数组跨129块、3页；平均访问时间公开解析为8.24周期，若200周期为额外缺失损失则为8.30周期。",
+      "note": "题干“缺失损失200周期”存在口径解释差异。PGCode全卷解析用缺失访问总时间200周期得8.24；BOK档案和常见AMAT额外损失定义得8.30。保留两种并注明来源，不擅自抹去分歧。",
+      "cards": [
+        [
+          "Cache组相联映射与地址字段",
+          "core"
+        ],
+        [
+          "Cache跨块访问与缺失率",
+          "core"
+        ],
+        [
+          "VIPT Cache索引与页内偏移",
+          "secondary"
+        ],
+        [
+          "Cache平均访问时间与缺失损失",
+          "secondary"
+        ],
+        [
+          "数组跨页与缺页次数",
+          "secondary"
+        ]
+      ],
+      "sources": [
+        "https://pgcode.cn/exams/408/years/2025/preview",
+        "https://zhenti.beokayy.club/paper/2025?focus=2025-47"
+      ]
+    },
+    {
+      "key": "2025-44",
+      "status": "confirmed",
+      "answer": "R=FFFFFFFFH、Q=87654321H、Y=000000FFH；计数器在控制逻辑Cn；ALU执行加/减；除数为0或最小负数除以-1发生异常。",
+      "note": "原题机器代码与除法器图核对，R/Q/Y及异常条件一致。",
+      "cards": [
+        [
+          "补码恢复余数除法器",
+          "core"
+        ],
+        [
+          "有符号除法异常与商溢出",
+          "core"
+        ],
+        [
+          "CPU异常响应与现场保护",
+          "secondary"
+        ]
+      ],
+      "source": "https://pgcode.cn/exams/408/years/2025/preview"
+    },
+    {
+      "key": "2023-44",
+      "status": "confirmed",
+      "answer": "第20条地址004010B9H；jmp/jge相对寻址，jmp目标00401084H；mov源立即数寻址，ecx=i×256，小端；取指不缺页。",
+      "note": "原题机器码清单及代码页驻留条件逐项复算。",
+      "cards": [
+        [
+          "x86 相对寻址与转移目标计算",
+          "core"
+        ],
+        [
+          "机器指令编码与指令长度",
+          "core"
+        ],
+        [
+          "小端存储与立即数寻址",
+          "secondary"
+        ],
+        [
+          "虚拟地址与指令取指缺页",
+          "secondary"
+        ]
+      ],
+      "source": "https://pgcode.cn/exams/408/years/2023/preview"
+    },
+    {
+      "key": "2019-45",
+      "status": "confirmed",
+      "answer": "f(10)递归调用10次；第16条CALL递归；下一条地址0040102AH、相对位移FFFFFFD6H，字节D6 FF FF FF为小端；13!超出32位signed int。",
+      "note": "原题机器码和公开解析逐项核对；OF与INTO内容保留。",
+      "cards": [
+        [
+          "递归算法与递归树",
+          "core"
+        ],
+        [
+          "x86 CALL/JMP/RET 控制转移与相对寻址",
+          "core"
+        ],
+        [
+          "定点补码加减与溢出",
+          "secondary"
+        ],
+        [
+          "整数溢出检测与异常处理",
+          "secondary"
+        ],
+        [
+          "大小端存储",
+          "secondary"
+        ]
+      ],
+      "source": "https://pgcode.cn/exams/408/years/2019/preview"
+    },
+    {
+      "key": "2019-46",
+      "status": "confirmed",
+      "answer": "push和ret均位于页00401H；Cache 16组，块内偏移[5:0]、组索引[9:6]、Tag[31:10]；CALL映射第0组。",
+      "note": "原题地址表和Cache参数逐项复算。",
+      "cards": [
+        [
+          "页表结构与地址转换",
+          "core"
+        ],
+        [
+          "Cache 直接映射与组相联",
+          "core"
+        ],
+        [
+          "Cache 映射与命中率",
+          "secondary"
+        ],
+        [
+          "指令系统与寻址方式",
+          "secondary"
+        ]
+      ],
+      "source": "https://pgcode.cn/exams/408/years/2019/preview"
+    }
+  ],
+  "topic_target_corrections": [
+    [
+      "CSMA_CD冲突检测与有效速率",
+      "以太网 CSMA/CD"
+    ],
+    [
+      "磁盘地址字段与DMA总线请求",
+      "磁盘 CHS 地址与平均访问时间"
+    ],
+    [
+      "请求分页与组相联Cache循环访问",
+      "Cache 组相联映射与地址划分"
+    ],
+    [
+      "ALU与单总线数据通路综合题",
+      "补码加减与溢出判断"
+    ],
+    [
+      "置换选择生成初始归并段",
+      "置换-选择排序与初始归并段"
+    ],
+    [
+      "前缀编码的二叉树表示与判定",
+      "前缀编码与二叉判定树"
+    ],
+    [
+      "动态优先级与饥饿避免",
+      "动态优先级与饥饿避免"
+    ],
+    [
+      "设备I_O方式与CPU开销计算",
+      "程序查询与中断驱动 I/O"
+    ],
+    [
+      "异步串行I_O中断开销计算",
+      "程序查询与中断驱动 I/O"
+    ],
+    [
+      "2024-CO-13-伪指令微指令机器指令",
+      "硬布线控制器与微程序控制器"
+    ]
+  ],
+  "unresolved": {
+    "2025-43": "公开解析存在8.24与8.30两种口径；原题措辞为“缺失损失200周期”。按额外缺失损失的常见定义为8.30；PGCode公开解析按缺失访问总时间计算为8.24。需以正式评分参考口径最终定案。",
+    "source_limit": "2009—2025公开题目存档用于核对题干和参考解析，但不是教育部官方发布渠道；没有可验证官方评分细则的题目不标注为官方标准答案。"
+  }
+}
