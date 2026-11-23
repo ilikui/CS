@@ -83,7 +83,8 @@ for (const [topic, rec] of Object.entries(mapping)) {
   // cross-checked CO exam question. Never compare answers against an unrelated index collision.
   const q = matches.find(x => String(x.id) === String(rec.id))
     || verifiedMatches.find(x => String(x.id) === String(rec.id));
-  const externalSourceVerified = !q && !!rec.source && !!rec.audit
+  const recordedSourceUrl = rec.source || (rec.audit && rec.audit.source) || null;
+  const externalSourceVerified = !q && !!recordedSourceUrl && !!rec.audit
     && /original-question-source-crosschecked|original-pdf-verified-answer-crosschecked|cross-checked/i.test(String(rec.audit.status || ''));
   const sourceKind = q ? (matches.includes(q) ? 'question-dataset' : 'verified-solutions')
     : (externalSourceVerified ? 'external-source-verified' : 'legacy-map-only');
