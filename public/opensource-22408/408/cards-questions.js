@@ -4267,6 +4267,8 @@ window.CARD_QUESTION_MAP = {
       "定点补码加减与溢出",
       "整数溢出检测与异常处理",
       "移位加法乘法与阵列乘法器"
+    ,
+      "数制转换与定点小数"
     ]
   },
   "ROM与RAM芯片数量设计": {
@@ -5559,6 +5561,8 @@ window.CARD_QUESTION_MAP = {
       "所以x=0000007FH、y=FFF7H、z=00000076H，选D。"
     ],
     "stepsSource": "expanded-from-question-analysis"
+  ,
+    "relatedCards": ["数制转换与定点小数"]
   },
   "2009-16-相对寻址目标地址": {
     "year": 2009,
@@ -6976,6 +6980,8 @@ window.CARD_QUESTION_MAP = {
     "relatedCards": [
       "数据表示与补码",
       "定点补码加减与溢出"
+    ,
+      "数制转换与定点小数"
     ],
     "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/6b611f5c-55d9-4612-8ff9-30b028731314.pdf",
     "sourcePage": 2,
@@ -7439,6 +7445,8 @@ window.CARD_QUESTION_MAP = {
     "relatedCards": [
       "数据表示与补码",
       "定点补码加减与溢出"
+    ,
+      "数制转换与定点小数"
     ],
     "source": "https://www.xit.edu.cn/_upload/article/files/c1/ce/26986f79493495bbaacba9738587/d9fce855-72bd-4e00-9a48-5d4ec5ef6f72.pdf",
     "sourcePage": 2,
