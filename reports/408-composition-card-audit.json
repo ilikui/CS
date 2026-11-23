@@ -5,11 +5,10 @@
   "summary": {
     "cards": 75,
     "all_cards_have_six_required_fields": true,
-    "formal_association_records": 127,
-    "unique_linked_cards": 72,
-    "unique_linked_questions": 72,
+    "formal_association_records": 131,
+    "unique_linked_cards": 73,
+    "unique_linked_questions": 76,
     "cards_without_formal_verified_question_link": [
-      "数制转换与定点小数",
       "BCD 码与字符编码",
       "流水线吞吐率与加速比"
     ],
@@ -18,9 +17,9 @@
       "question_dataset": 41,
       "verified_solutions": 28,
       "legacy_map_only": 52,
-      "question_text_available": 62,
-      "solution_steps_present": 126,
-      "supplemental_question_map": 5
+      "question_text_available": 66,
+      "solution_steps_present": 130,
+      "supplemental_question_map": 9
     }
   },
   "cards": [
@@ -278,8 +277,8 @@
     },
     {
       "title": "数制转换与定点小数",
-      "association_records": 0,
-      "linked_questions": 0,
+      "association_records": 4,
+      "linked_questions": 4,
       "content_fields": {
         "definition": true,
         "principle": true,
@@ -288,7 +287,7 @@
         "worked_example": true,
         "pitfalls": true
       },
-      "status": "content_complete_no_verified_mapping"
+      "status": "linked"
     },
     {
       "title": "BCD 码与字符编码",
@@ -1077,7 +1076,6 @@
   ],
   "limitations": [
     "52条历史关联在当前questions_data.js和verified-solutions.json中均未找到同ID源记录，保留原映射但不标记为本轮重新核验。",
-    "5张卡片目前没有可确认的正式真题关联：总线仲裁方式、计算机系统层次结构、数制转换与定点小数、BCD码与字符编码、流水线吞吐率与加速比。内容已补齐，需后续找到直接考查题后再建立关联。",
     "2024年题干在部分映射中使用verified-solutions摘要文本；答案、步骤、题号ID已与核验记录对应，但摘要不等同原卷逐字题干。"
   ]
 }
