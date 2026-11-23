@@ -8089,21 +8089,19 @@ window.QUESTION_CARD_MAP = {
         "title": "数制转换与定点小数",
         "topic": "数制转换与定点小数",
         "status": "verified",
+        "role": "secondary",
         "recordTopic": "2015-13-8位补码最小值"
       },
       {
         "title": "数据表示与补码",
         "topic": "数据表示与补码",
         "status": "verified",
-        "recordTopic": "2015-13-8位补码最小值"
-      },
-      {
-        "title": "定点补码加减与溢出",
-        "topic": "定点补码加减与溢出",
-        "status": "verified",
+        "role": "core",
         "recordTopic": "2015-13-8位补码最小值"
       }
-    ]
+    ],
+    "coreCards": ["数据表示与补码"],
+    "secondaryCards": ["数制转换与定点小数"]
   },
   "2022-13": {
     "year": 2022,
@@ -8126,21 +8124,19 @@ window.QUESTION_CARD_MAP = {
         "title": "数制转换与定点小数",
         "topic": "数制转换与定点小数",
         "status": "verified",
+        "role": "secondary",
         "recordTopic": "2022-13-32位补码表示范围"
       },
       {
         "title": "数据表示与补码",
         "topic": "数据表示与补码",
         "status": "verified",
-        "recordTopic": "2022-13-32位补码表示范围"
-      },
-      {
-        "title": "定点补码加减与溢出",
-        "topic": "定点补码加减与溢出",
-        "status": "verified",
+        "role": "core",
         "recordTopic": "2022-13-32位补码表示范围"
       }
-    ]
+    ],
+    "coreCards": ["数据表示与补码"],
+    "secondaryCards": ["数制转换与定点小数"]
   },
   "2023-13": {
     "year": 2023,
@@ -8164,21 +8160,19 @@ window.QUESTION_CARD_MAP = {
         "title": "数制转换与定点小数",
         "topic": "数制转换与定点小数",
         "status": "verified",
+        "role": "secondary",
         "recordTopic": "2023-13-short负8190补码"
       },
       {
         "title": "数据表示与补码",
         "topic": "数据表示与补码",
         "status": "verified",
-        "recordTopic": "2023-13-short负8190补码"
-      },
-      {
-        "title": "定点补码加减与溢出",
-        "topic": "定点补码加减与溢出",
-        "status": "verified",
+        "role": "core",
         "recordTopic": "2023-13-short负8190补码"
       }
-    ]
+    ],
+    "coreCards": ["数据表示与补码"],
+    "secondaryCards": ["数制转换与定点小数"]
   }
 };
 window.CARD_QUESTION_LIST = {
