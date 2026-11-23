@@ -10,7 +10,7 @@
     },
     "reverse": {
       "path": "public/opensource-22408/408/question-card-map.js",
-      "blobSha": "02da9f9ab219a4c8a7b889da1ced34d5aa9e1781"
+      "blobSha": "49204ab4b458ac627a890d279a481f32924ee53b"
     }
   },
   "summary": {
@@ -22,7 +22,7 @@
     "forwardQuestionKeysWithMultipleCardRecords": 61,
     "forwardRecordsWithoutQuestionText": 34,
     "forwardRecordsWithoutAnswer": 0,
-    "explicitCoreSecondarySetsCompared": 19,
+    "explicitCoreSecondarySetsCompared": 59,
     "explicitCoreSecondarySetMismatches": 0,
     "cardQuestionListCards": 246,
     "cardQuestionListLinks": 480,
