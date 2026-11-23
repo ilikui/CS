@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T12:48:00.072Z",
+  "generatedAt": "2026-11-23T12:53:52.887Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
@@ -4830,9 +4830,9 @@
             "时钟周期",
             "单总线",
             "取指",
+            "的控制",
             "表达式",
-            "的符号",
-            "的控制"
+            "的符号"
           ]
         },
         {
