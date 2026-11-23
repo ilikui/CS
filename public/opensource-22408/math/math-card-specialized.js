@@ -10,7 +10,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 const COLORS={blue:'#2869a7',orange:'#d77c32',green:'#2f946b',grid:'#e7edf4',ink:'#40546a'};
 function kind(t){
 const priority=[
-[/变上限积分|积分中值|积分上限|积分下限|定积分|原函数|不定积分|换元积分|换元法|凑微分|分部积分|黎曼|反常积分|积分法|积分比较|积分估值|积分变量|积分对称|积分奇偶|积分面积|积分的几何|部分分式/,'integral'],
+[/变上限积分|积分中值|积分上限|积分下限|定积分|原函数|不定积分|换元积分|换元法|凑微分|分部积分|黎曼|反常积分|积分法|积分比较|积分估值|积分变量|积分对称|积分奇偶|积分面积|积分的几何|部分分式|线密度|引力微元|分量积分|变力做功/,'integral'],
 [/可分离变量|一阶线性|二阶常系数|微分方程|初值问题|通解结构|积分因子|特解|特征根/,'ode'],
 [/二元函数|多元|偏导|全微分|二重积分|极坐标|雅可比|等高线|Hessian|混合偏导|方向导数|梯度|区域可加/,'multivariable'],
 [/二次型|正定矩阵|合同变换|惯性定理|主子式判据/,'quadratic'],
@@ -50,6 +50,68 @@ return 'function';
 }
 const formula={
 limit:'x → a，f(x) → L',continuity:'limₓ→a f(x) = f(a)',function:'y = f(x)',derivative:'f′(a) = limₕ→0 [f(a+h)−f(a)] / h',mvt:'f′(ξ) = [f(b)−f(a)] / (b−a)',taylor:'f(x) = Σ f⁽ⁿ⁾(a)(x−a)ⁿ/n!',shape:'f′：单调；f′′：凹凸',integral:'∫ₐᵇ f(x) dx = lim Σ f(ξᵢ)Δxᵢ',ode:'y′ + P(x)y = Q(x)',multivariable:'dz = fₓ dx + fᵧ dy',determinant:'det(AB) = det(A)det(B)',matrix:'(AB)ᵀ = BᵀAᵀ',vectors:'Ax = b ⇔ b ∈ Col(A)',system:'dim N(A) = n − r(A)',eigen:'Av = λv',quadratic:'q(x) = xᵀAx'};
+function formulaFor(k,t){
+if(k==='ode'){
+ if(/不显含 y|降阶|倒数代换/.test(t))return "令 p=y′，则 y′′=p′；若出现 p′/p²，令 z=1/p 化为一阶线性方程";
+ if(/非齐次|仿射组合|特解/.test(t))return "L[y]=g：通解 y=y_h+y_p；同一非齐次方程的解之差满足齐次方程";
+ if(/二阶|特征根|重根/.test(t))return "ay′′+by′+cy=0，特征方程 ar²+br+c=0";
+ if(/一阶线性|积分因子/.test(t))return "y′+P(x)y=Q(x)，μ(x)=e^{∫P(x)dx}，(μy)′=μQ";
+ return "可分离型：dy/h(y)=g(x)dx；两侧积分后用初值定常数";
+}
+if(k==='multivariable'){
+ if(/极坐标|雅可比/.test(t))return "x=r cosθ，y=r sinθ；dxdy=r drdθ";
+ if(/二重积分|累次积分|区域/.test(t))return "∬_D f(x,y)dA = ∫ₐᵇ[∫_{g₁(x)}^{g₂(x)}f(x,y)dy]dx";
+ if(/极值|Hessian|二阶判别/.test(t))return "D=fₓₓfᵧᵧ−(fₓᵧ)²；D>0 且 fₓₓ>0 为极小，fₓₓ<0 为极大";
+ if(/复合|链式/.test(t))return "z=f(u,v)，zₓ=fᵤuₓ+fᵥvₓ，zᵧ=fᵤuᵧ+fᵥvᵧ";
+ if(/全微分|可微/.test(t))return "dz=fₓdx+fᵧdy；可微 ⇒ 连续且偏导存在";
+ if(/偏导/.test(t))return "fₓ(a,b)=lim_{h→0}[f(a+h,b)−f(a,b)]/h";
+ return "z=f(x,y)，固定其余变量求偏导；梯度 ∇f=(fₓ,fᵧ)";
+}
+if(k==='integral'){
+ if(/引力微元|线密度|分量积分|变力做功/.test(t))return "dm=λ(x)dx；dF=Gm·dm/r²；W=∫_C F·dr=∫ F·T ds";
+ if(/含参数|变上限.*零点|零点连续性/.test(t))return "d/dx∫_{a(x)}^{b(x)}f(x,t)dt=f(x,b)b′−f(x,a)a′+∫ₐᵇfₓ(x,t)dt";
+ if(/反常/.test(t))return "∫ₐ^∞f(x)dx=lim_{R→∞}∫ₐᴿf(x)dx；瑕点用单侧极限";
+ if(/分部/.test(t))return "∫u dv=uv−∫v du；定积分为 [uv]ₐᵇ−∫ₐᵇv du";
+ if(/换元|凑微分/.test(t))return "u=φ(x)，du=φ′(x)dx；定积分同时替换上下限";
+ if(/变上限|积分上限|积分下限/.test(t))return "Φ(x)=∫_{a(x)}^{b(x)}f(t)dt，Φ′=f(b)b′−f(a)a′";
+ if(/积分中值|中值/.test(t))return "∫ₐᵇf(x)dx=f(ξ)(b−a)，ξ∈[a,b]（f 连续）";
+ if(/黎曼/.test(t))return "∫ₐᵇf(x)dx=lim_{||P||→0}Σf(ξᵢ)Δxᵢ";
+ if(/面积|几何/.test(t))return "S=∫ₐᵇ|f(x)−g(x)|dx；先找交点并分段";
+ if(/原函数|不定积分/.test(t))return "F′(x)=f(x)，∫f(x)dx=F(x)+C";
+ return "∫ₐᵇf(x)dx=F(b)−F(a)，F′=f";
+}
+if(k==='determinant'){
+ if(/范德蒙/.test(t))return "det(V)=∏_{1≤i<j≤n}(xⱼ−xᵢ)";
+ if(/余子式|代数余子式|展开/.test(t))return "Cᵢⱼ=(−1)^{i+j}Mᵢⱼ；det(A)=ΣⱼaᵢⱼCᵢⱼ";
+ if(/克拉默/.test(t))return "xᵢ=Dᵢ/D，前提 det(A)=D≠0";
+ if(/乘积|转置/.test(t))return "det(AB)=det(A)det(B)，det(Aᵀ)=det(A)";
+ return "det(A)≠0 ⇔ A 可逆 ⇔ rank(A)=n";
+}
+if(k==='matrix'){
+ if(/Gram/.test(t))return "G=AAᵀ，xᵀGx=||Aᵀx||²≥0，rank(AAᵀ)=rank(A)";
+ if(/置换矩阵/.test(t))return "PᵀP=PPᵀ=I，P⁻¹=Pᵀ；det(P)=±1";
+ if(/低秩分解|高次幂降阶/.test(t))return "A=GH ⇒ Aᵏ=G(HG)^{k−1}H（k≥1）";
+ if(/伴随|逆矩阵|可逆/.test(t))return "A⁻¹=A*/det(A)，仅当 det(A)≠0";
+ if(/秩/.test(t))return "rank(A)=主元个数=非零行阶梯形的行数";
+ if(/分块/.test(t))return "分块乘法按块行乘块列；对应块维数必须匹配";
+ if(/乘积/.test(t))return "(AB)⁻¹=B⁻¹A⁻¹；乘积逆序";
+ return "(AB)ᵀ=BᵀAᵀ；矩阵乘法通常不可交换";
+}
+if(k==='vectors'){
+ if(/正交|施密特/.test(t))return "projᵤv=(uᵀv/uᵀu)u，w=v−projᵤv，uᵀw=0";
+ if(/基与维数|坐标/.test(t))return "基向量线性无关且张成空间；dim(V)=基中向量个数";
+ if(/相关|无关/.test(t))return "Σcᵢvᵢ=0 仅零解 ⇔ 向量组线性无关";
+ return "rank(向量组)=极大线性无关组所含向量个数";
+}
+if(k==='system')return /齐次|基础解系|解空间/.test(t)?"Ax=0：dim N(A)=n−rank(A)":"Ax=b 有解 ⇔ rank(A)=rank([A|b])";
+if(k==='eigen')return /迹|行列式|和与积/.test(t)?"λ₁+λ₂=tr(A)，λ₁λ₂=det(A)（二阶矩阵）":/对角化|正交/.test(t)?"A=PDP⁻¹；实对称 A=QΛQᵀ":"Av=λv，det(A−λI)=0";
+if(k==='quadratic')return /正定|主子式/.test(t)?"Q(x)=xᵀAx>0 (x≠0) ⇔ A 正定；Sylvester：顺序主子式全正":/惯性|秩/.test(t)?"rank(Q)=正惯性指数+负惯性指数":"Q(x)=xᵀAx，A 可取对称矩阵";
+if(k==='shape')return /凸函数|弦斜率|割线斜率|严格单调导数/.test(t)?"f′ 严格递增 ⇔ f 严格凸（区间内可导）；凸函数的弦斜率随区间右移不减":"f′ 判单调与极值；f′′ 判凹凸，拐点需凹凸改变";
+if(k==='derivative'&&/反函数/.test(t))return "(f⁻¹)′(y₀)=1/f′(x₀)，其中 y₀=f(x₀)，f′(x₀)≠0";
+if(k==='derivative'&&/绝对值/.test(t))return "若 f(a)≠0，则 |f|′(a)=sgn(f(a))f′(a)；若 f(a)=0 且 f′(a)=0，则 |f|′(a)=0";
+return formula[k]||"";
+}
+
 function axes(){return '<path d="M28 135H432 M230 12V250" stroke="#9aaabd" stroke-width="1.4"/><path d="M425 130l7 5-7 5 M225 20l5-8 5 8" fill="none" stroke="#9aaabd"/>';}
 function graphPath(fn,x0=-4,x1=4,ymin=-3,ymax=4){let d='',on=false;for(let i=0;i<=240;i++){let x=x0+(x1-x0)*i/240,y=fn(x);if(!Number.isFinite(y)||y<ymin-1||y>ymax+1){on=false;continue;}let X=230+x*48,Y=135-y*35;d+=(on?'L':'M')+X.toFixed(1)+','+Y.toFixed(1);on=true;}return d;}
 function svgFor(k,t,p){
@@ -102,7 +164,9 @@ body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V25
 desc='连续要求函数值存在、极限存在且极限等于函数值；四则运算与复合连续都要检查表达式在对应点有定义。';
 }
 }else if(k==='derivative'){
-if(/弧微分|曲线弧长/.test(t)){
+if(/反函数/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="M65 220L365 55" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M65 55L365 220" stroke="'+COLORS.orange+'" stroke-width="3"/><path d="M40 230L420 20" stroke="#9aaabd" stroke-dasharray="5 5"/><circle cx="230" cy="135" r="5" fill="'+COLORS.green+'"/><text x="45" y="24" fill="'+COLORS.blue+'">y=f(x)</text><text x="320" y="245" fill="'+COLORS.orange+'">y=f⁻¹(x)</text><text x="45" y="255">斜率互为倒数（对应点）</text></svg>';desc='函数与反函数关于 y=x 对称。若 y₀=f(x₀)、f′(x₀)≠0，则 (f⁻¹)′(y₀)=1/f′(x₀)。注意反函数导数的自变量是 y₀，不可把 x₀、y₀混淆。';}
+else if(/绝对值/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 135H432 M230 12V250" stroke="#9aaabd"/><path d="M65 220L230 55L395 220" fill="none" stroke="'+COLORS.blue+'" stroke-width="3.5"/><path d="M230 55V220" stroke="'+COLORS.orange+'" stroke-dasharray="5 5"/><circle cx="230" cy="135" r="5" fill="'+COLORS.green+'"/><text x="42" y="25" fill="'+COLORS.blue+'">|x|：折角，0 点不可导</text><text x="42" y="250" fill="'+COLORS.green+'">若 f(a)=0 且 f′(a)=0，则 |f|′(a)=0</text></svg>';desc='绝对值复合的可导性不能只看“有折角”。若 f(a)≠0，|f| 在 a 附近等于 ±f，因而可导；若 f(a)=0，且 f 可导，则 |f| 在 a 可导当且仅当 f′(a)=0。';}
+else if(/弧微分|曲线弧长/.test(t)){
 const x=.05+(p-.35)/1.45*3.9, slope=Math.sqrt(x), y=(2/3)*Math.pow(x,1.5);
 const X=q=>70+q*82,Y=q=>220-q*35;
 const xx=Math.max(.05,Math.min(4,x));
@@ -152,7 +216,8 @@ const poly=x=>{let sum=0,term=1;for(let j=0;j<=n;j++){if(j===0)term=1;else term*
 body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="泰勒多项式阶数变化与原函数逼近"><path d="M35 205H430 M230 18V238" stroke="#9aaabd"/><path d="'+path(x=>Math.exp(x))+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+path(poly)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="6 4"/><text x="48" y="25" fill="'+COLORS.blue+'">原函数 eˣ</text><text x="48" y="47" fill="'+COLORS.orange+'">Tₙ(x)，n='+n+'</text><text x="300" y="250" fill="'+COLORS.ink+'">蓝：原函数；橙：近似</text></svg>';
 desc='拖动改变麦克劳林多项式阶数 n='+n+'。橙色 Tₙ(x)=Σₖ₌₀ⁿxᵏ/k! 与蓝色 eˣ 在 x=0 处逐阶匹配；拉格朗日余项 Rₙ₊₁=e^ξxⁿ⁺¹/(n+1)!，ξ 位于 0 与 x 之间。有限阶近似的精度取决于余项，不应把局部逼近误认为全区间恒等。';
 }else if(k==='shape'){
-if(/凹凸性、拐点与渐近线/.test(t)){
+if(/严格单调导数|割线斜率|弦斜率|端点割线商|凸函数/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 220H432 M28 20V240" stroke="#9aaabd"/><path d="'+graphPath(x=>x*x/3,-4,4,-1,5)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M95 183L365 183 M95 183L365 35" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="5 4"/><circle cx="95" cy="183" r="5" fill="'+COLORS.green+'"/><circle cx="365" cy="35" r="5" fill="'+COLORS.green+'"/><text x="45" y="25" fill="'+COLORS.blue+'">凸函数：f′ 单调不减</text><text x="45" y="250" fill="'+COLORS.orange+'">弦斜率与端点位置相关</text></svg>';desc='对可导凸函数，导数单调不减；任意 x₁<x₂<x₃，有 (f(x₂)−f(x₁))/(x₂−x₁) ≤ (f(x₃)−f(x₁))/(x₃−x₁) ≤ (f(x₃)−f(x₂))/(x₃−x₂)。严格凸时相应不等式为严格形式。';}
+else if(/凹凸性、拐点与渐近线/.test(t)){
 const left=graphPath(x=>x*x/(x+1),-4,-1.08,-5,5),right=graphPath(x=>x*x/(x+1),-.92,4,-5,5);
 body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="凹凸性与渐近线综合图">'+axes()+'<path d="'+left+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="'+right+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M182 12V250" stroke="'+COLORS.orange+'" stroke-width="2" stroke-dasharray="6 5"/><path d="'+graphPath(x=>x-1,-4,4,-5,5)+'" fill="none" stroke="'+COLORS.green+'" stroke-width="2" stroke-dasharray="6 5"/><text x="190" y="25" fill="'+COLORS.orange+'">x=−1：竖直渐近线</text><text x="300" y="70" fill="'+COLORS.green+'">y=x−1</text><text x="35" y="24" fill="'+COLORS.blue+'">f′′=2/(x+1)³</text><text x="35" y="245" fill="'+COLORS.orange+'">定义域断点不是拐点</text></svg>';
 desc='综合辨析 f(x)=x²/(x+1)=x−1+1/(x+1)：x=−1 两侧 f′′ 符号改变，但函数在此无定义且存在竖直渐近线，因此 x=−1 不是拐点；斜渐近线为 y=x−1。判拐点必须同时满足曲线点连续存在和凹凸性改变。';
@@ -209,7 +274,9 @@ body='<svg viewBox="0 0 460 270" class="sp-plot" role="img" aria-label="导数�
 desc='拖动观察点经过 x=−2、x=2：f′>0 时递增，f′<0 时递减；在 −2 处由正变负为极大值，在 2 处由负变正为极小值。';
 }
 }else if(k==='integral'){
-if(/原函数|不定积分/.test(t)){
+if(/引力微元|线密度|分量积分|变力做功/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M55 150H405" stroke="'+COLORS.blue+'" stroke-width="7" stroke-linecap="round"/><path d="M85 130V170 M125 130V170 M165 130V170 M205 130V170 M245 130V170 M285 130V170 M325 130V170 M365 130V170" stroke="'+COLORS.green+'" stroke-width="2"/><path d="M225 150L225 55 M225 55l-7 12 M225 55l7 12" stroke="'+COLORS.orange+'" stroke-width="3" fill="none"/><text x="55" y="30" fill="'+COLORS.blue+'">dm=λ(x)dx：连续线密度微元</text><text x="55" y="205" fill="'+COLORS.green+'">对称位置的横向分量可抵消</text><text x="55" y="235" fill="'+COLORS.orange+'">沿目标方向投影后再积分</text></svg>';desc='连续线密度/引力/做功先取微元 dm=λ(x)dx，再写微元力或功 dW=F·dr；按对称性抵消横向分量，只对目标方向分量积分。';}
+else if(/含参数|变上限.*零点|零点连续性/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><rect x="28" y="24" width="404" height="220" rx="9" fill="#f8fbfe" stroke="#dce7f1"/><text x="48" y="62" fill="'+COLORS.blue+'" font-size="16">Φ(x)=∫ₐ⁽ˣ⁾ f(x,t)dt</text><path d="M48 82H410" stroke="#d5e1ed"/><text x="48" y="122" fill="'+COLORS.orange+'">上限项：f(x,b(x))b′(x)</text><text x="48" y="158" fill="'+COLORS.orange+'">下限项：−f(x,a(x))a′(x)</text><text x="48" y="196" fill="'+COLORS.green+'">+ ∫ₐᵇ ∂f/∂x dt</text></svg>';desc='含参数的变上限积分使用莱布尼茨公式，三项缺一不可：上限贡献、下限贡献（带负号）以及被积函数对参数的偏导积分。求零点还需证明连续性并用介值定理，不能只靠图像猜测。';}
+else if(/原函数|不定积分/.test(t)){
 const C=(p-1)*2, X=x=>70+x*350, Y=y=>220-y*115;
 const F=x=>x*x*x+x*x+C, f0=x=>3*x*x+2*x;
 const path=fn=>{let d='';for(let i=0;i<=100;i++){const x=i/100*1.35,y=fn(x);d+=(i?'L':'M')+X(x).toFixed(1)+','+Y(y).toFixed(1);}return d;};
@@ -244,7 +311,9 @@ desc='变上限积分 A(x)=∫₀ˣt²dt：滑块推动右边界，绿色阴影�
 }
 }else{body=graph(x=>x*x/5);desc='积分的面积意义与数值逼近；注意定积分是带符号面积。';}
 }else if(k==='ode'){
-if(/二阶|特征根|重根/.test(t)){body=graph(x=>Math.exp(-x/3)*(Math.cos(p*x)+.4*Math.sin(p*x)));desc='二阶常系数方程的根决定解曲线：实异根指数叠加、重根含 x 因子、共轭根产生衰减振荡。';}
+if(/不显含 y|降阶|倒数代换/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><rect x="28" y="24" width="404" height="220" rx="9" fill="#f8fbfe" stroke="#dce7f1"/><text x="48" y="62" fill="'+COLORS.blue+'" font-size="17">令 p=y′，则 y′′=p′</text><path d="M48 82H410" stroke="#d5e1ed"/><text x="48" y="119" fill="'+COLORS.orange+'">若有 p′/p²，令 z=1/p</text><text x="48" y="158" fill="'+COLORS.green+'">z′=−p′/p²</text><text x="48" y="198">把二阶方程化为一阶方程，再积分恢复 y</text></svg>';desc='降阶法专属步骤：因方程不显含 y，令 p=y′，把 y′′ 写成 p′；若得到倒数结构，再令 z=1/p。必须检查 p=0 分支，求出 p 后积分恢复 y，并用初值确定常数。';}
+else if(/非齐次|仿射组合|特解/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M28 220H432 M28 20V240" stroke="#9aaabd"/><path d="'+graphPath(x=>Math.exp(-x/3))+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.8"/><path d="'+graphPath(x=>.7*Math.sin(x))+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5" stroke-dasharray="5 4"/><path d="'+graphPath(x=>Math.exp(-x/3)+.7*Math.sin(x))+'" fill="none" stroke="'+COLORS.green+'" stroke-width="3"/><text x="45" y="24" fill="'+COLORS.blue+'">yₕ</text><text x="105" y="24" fill="'+COLORS.orange+'">yₚ</text><text x="165" y="24" fill="'+COLORS.green+'">y=yₕ+yₚ</text></svg>';desc='线性非齐次方程的通解由一个特解 yₚ 与对应齐次方程通解 yₕ 相加得到。对同一右端 g，两个特解之差是齐次解；不同右端不能直接套用同一仿射组合。';}
+else if(/二阶|特征根|重根/.test(t)){body=graph(x=>Math.exp(-x/3)*(Math.cos(p*x)+.4*Math.sin(p*x)));desc='二阶常系数方程的根决定解曲线：实异根指数叠加、重根含 x 因子、共轭根产生衰减振荡。';}
 else if(/线性|积分因子/.test(t)){body=graph(x=>Math.exp(-x/3)+.3*Math.exp(-p*x));desc='积分因子 μ=e^{∫Pdx} 将左侧化为 (μy)′，解曲线由积分常数平移。';}
 else{body=graph(x=>Math.exp(p*x/3));desc='分离变量后分别积分；参数控制指数增长/衰减，初值确定积分常数。';}
 }else if(k==='multivariable'){
@@ -340,7 +409,7 @@ desc='二次型标准形中正平方项、负平方项和零平方项的个数�
 body='<svg viewBox="0 0 460 270" class="sp-plot"><ellipse cx="230" cy="135" rx="'+(45+45*p)+'" ry="'+(95-25*p)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.5"/><ellipse cx="230" cy="135" rx="'+(85+35*p)+'" ry="'+(45+20*p)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M25 135H435 M230 15V255" stroke="#9aaabd"/><text x="350" y="40" fill="'+COLORS.blue+'">xᵀAx = c</text></svg>';desc='二次型等值线的形状反映正定/负定/不定；正定时除原点外函数值恒正。';
 }
 }
-return '<div class="sp-art">'+body+'</div><div class="sp-formula">'+esc(formula[k]||'')+'</div><p class="sp-desc">'+desc+'</p>';
+return '<div class="sp-art">'+body+'</div><div class="sp-formula">'+esc(formulaFor(k,t))+'</div><p class="sp-desc">'+desc+'</p>';
 }
 function makeCard(meta){
 const box=document.createElement('section');box.className='sp-visual';box.dataset.visualId=meta.id;
