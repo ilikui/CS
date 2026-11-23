@@ -6333,13 +6333,302 @@ window.QUESTION_CARD_MAP = {
     "secondaryCards": [
       "阻塞式I/O与驱动程序调用"
     ]
+  },
+  "2010-18": {
+    "year": 2010,
+    "index": 18,
+    "id": 65,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "选择题",
+    "score": 2,
+    "question": "下列寄存器中，汇编语言程序员可见的是（ ）。 A. MAR B. PC C. MDR D. IR",
+    "answer": "B",
+    "cards": [
+      {
+        "title": "计算机系统层次结构",
+        "topic": "计算机系统层次结构",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [],
+    "secondaryCards": [
+      "计算机系统层次结构"
+    ]
+  },
+  "2022-18": {
+    "year": 2022,
+    "index": 18,
+    "id": 629,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "选择题",
+    "score": 2,
+    "question": "下列选项中，属于指令集体系结构（ISA）规定的内容是（ ）。Ⅰ.指令字格式和指令类型 Ⅱ.CPU的时钟周期 Ⅲ.通用寄存器个数和位数 Ⅳ.加法器的进位方式。A.仅Ⅰ、Ⅱ B.仅Ⅰ、Ⅲ C.仅Ⅱ、Ⅳ D.仅Ⅰ、Ⅲ、Ⅳ",
+    "answer": "B",
+    "analysis": "ISA定义程序员可见的指令格式/类型及通用寄存器资源；CPU时钟周期和加法器进位方式属于微架构/电路实现。",
+    "steps": [
+      "Ⅰ指令格式与类型决定机器指令编码和语义，属于ISA。",
+      "Ⅱ时钟周期由具体处理器实现决定，不属于ISA。",
+      "Ⅲ通用寄存器数量和位宽是程序员可见状态，属于ISA。",
+      "Ⅳ加法器采用何种进位电路是内部实现细节，不属于ISA。",
+      "因此仅Ⅰ、Ⅲ正确，选B。"
+    ],
+    "cards": [
+      {
+        "title": "计算机系统层次结构",
+        "topic": "计算机系统层次结构",
+        "status": "verified",
+        "role": "core"
+      }
+    ],
+    "coreCards": [
+      "计算机系统层次结构"
+    ],
+    "secondaryCards": []
+  },
+  "2022-20": {
+    "year": 2022,
+    "index": 20,
+    "id": 631,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "选择题",
+    "score": 2,
+    "question": "将高级语言源程序转换为可执行目标文件的主要过程是（ ）。A.预处理→编译→汇编→链接 B.预处理→汇编→编译→链接 C.预处理→编译→链接→汇编 D.预处理→汇编→链接→编译",
+    "answer": "A",
+    "analysis": "预处理展开宏和头文件；编译将高级语言翻译为汇编/目标表示；汇编器生成目标文件；链接器解析外部符号并合并目标文件和库。",
+    "steps": [
+      "预处理：处理宏定义、头文件和条件编译。",
+      "编译：完成词法/语法/语义分析和优化，生成汇编或目标表示。",
+      "汇编：把汇编代码转换为机器指令目标文件。",
+      "链接：完成符号解析、重定位并合并目标文件/库，生成可执行文件。",
+      "顺序为预处理→编译→汇编→链接，选A。"
+    ],
+    "cards": [
+      {
+        "title": "计算机系统层次结构",
+        "topic": "计算机系统层次结构",
+        "status": "verified",
+        "role": "core"
+      }
+    ],
+    "coreCards": [
+      "计算机系统层次结构"
+    ],
+    "secondaryCards": []
+  },
+  "2024-13": {
+    "year": 2024,
+    "index": 13,
+    "id": 202413,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "选择题",
+    "score": 2,
+    "question": "将汇编程序中实现特定功能的一组指令序列定义为伪指令。判断CPU能理解并直接执行的类别：Ⅰ伪指令；Ⅱ微指令；Ⅲ机器指令；Ⅳ汇编指令。",
+    "answer": "B",
+    "analysis": "机器指令属于ISA层，由CPU按指令语义执行；微指令属于控制器内部微程序控制层。汇编指令是机器指令的符号表示，伪指令由汇编器处理。",
+    "steps": [
+      "微指令用于控制器内部产生微操作控制信号。",
+      "机器指令是ISA规定的二进制指令，由CPU取指、译码和执行。",
+      "汇编指令是机器指令的助记符表示，需汇编成机器码。",
+      "伪指令是汇编程序的控制命令，不直接成为CPU执行指令。",
+      "故选Ⅱ、Ⅲ，即B。"
+    ],
+    "cards": [
+      {
+        "title": "计算机系统层次结构",
+        "topic": "计算机系统层次结构",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [],
+    "secondaryCards": [
+      "计算机系统层次结构"
+    ]
+  },
+  "2025-16": {
+    "year": 2025,
+    "index": 16,
+    "id": 202516,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "选择题",
+    "score": 2,
+    "question": "判断由指令集体系结构ISA规定的项目：A是否采用阵列乘法器；B是否采用定长指令字；C是否采用微程序控制器；D是否采用单总线数据通路。",
+    "answer": "B",
+    "analysis": "指令编码格式属于ISA；阵列乘法器、微程序控制器和单总线数据通路属于微架构实现。",
+    "steps": [
+      "先判断属性是否对机器语言程序员可见。",
+      "指令字长度/编码格式由ISA规定。",
+      "乘法器结构、控制器实现和内部数据通路属于微架构。",
+      "因此选B。"
+    ],
+    "cards": [
+      {
+        "title": "计算机系统层次结构",
+        "topic": "计算机系统层次结构",
+        "status": "verified",
+        "role": "core"
+      }
+    ],
+    "coreCards": [
+      "计算机系统层次结构"
+    ],
+    "secondaryCards": []
+  },
+  "2009-12": {
+    "year": 2009,
+    "index": 12,
+    "id": 12,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "选择题",
+    "score": 2,
+    "question": "一个 C 语言程序在一台 32 位机器上运行。程序中定义了三个变量 x、y 和 z，其中 x 和 z 是 int 型，y 为 short 型。当 x=127，y=−9 时，执行赋值语句 z=x+y 后，x、y 和 z 的值分别是（ ）。A. x=0000007FH，y=FFF9H，z=00000076H B. x=0000007FH，y=FFF9H，z=FFFF0076H C. x=0000007FH，y=FFF7H，z=FFFF0076H D. x=0000007FH，y=FFF7H，z=00000076H",
+    "answer": "D",
+    "analysis": "short为16位，−9的补码为FFF7H；参与int运算前符号扩展为FFFFFFF7H；0000007FH+FFFFFFF7H=00000076H。",
+    "cards": [
+      {
+        "title": "数据表示与补码",
+        "topic": "数据表示与补码",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "数制转换与定点小数",
+        "topic": "数制转换与定点小数",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "数据表示与补码"
+    ],
+    "secondaryCards": [
+      "数制转换与定点小数"
+    ]
+  },
+  "2010-13": {
+    "year": 2010,
+    "index": 13,
+    "id": 60,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "选择题",
+    "score": 2,
+    "question": "假定有4个整数用8位补码分别表示r1=FEH，r2=F2H，r3=90H，r4=F8H，若将运算结果存放在一个8位寄存器中，则下列运算中会发生溢出的是（ ）。A. r1×r2 B. r2×r3 C. r1×r4 D. r2×r4",
+    "answer": "B",
+    "analysis": "FEH=−2，F2H=−14，90H=−112，F8H=−8。四个乘积为28、1568、16、112；只有1568超出8位补码范围[−128,127]。",
+    "cards": [
+      {
+        "title": "定点补码加减与溢出",
+        "topic": "定点补码加减与溢出",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "整数溢出检测与异常处理",
+        "topic": "整数溢出检测与异常处理",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "数制转换与定点小数",
+        "topic": "数制转换与定点小数",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "定点补码加减与溢出"
+    ],
+    "secondaryCards": [
+      "整数溢出检测与异常处理",
+      "数制转换与定点小数"
+    ]
+  },
+  "2024-12": {
+    "year": 2024,
+    "index": 12,
+    "id": 202412,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "选择题",
+    "score": 2,
+    "question": "C语言代码：int i=32777; short si=i; int j=si; 执行后j的值为（ ）。A. −32777 B. −32759 C. 32759 D. 32777",
+    "answer": "B（−32759）",
+    "analysis": "32777=0x8009；转16位short保留低16位0x8009，按补码解释为−32759；再符号扩展为32位int，数值不变。",
+    "cards": [
+      {
+        "title": "数据表示与补码",
+        "topic": "数据表示与补码",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "定点补码加减与溢出",
+        "topic": "定点补码加减与溢出",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "数制转换与定点小数",
+        "topic": "数制转换与定点小数",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "数据表示与补码"
+    ],
+    "secondaryCards": [
+      "定点补码加减与溢出",
+      "数制转换与定点小数"
+    ]
+  },
+  "2025-12": {
+    "year": 2025,
+    "index": 12,
+    "id": 202512,
+    "subject": "计算机组成原理",
+    "subjectCode": "computer-organization",
+    "typeName": "选择题",
+    "score": 2,
+    "question": "在32位计算机上执行：short si=−32767; unsigned int ui=si; 则ui的真值为（ ）。",
+    "answer": "D（2^32−2^15+1）",
+    "analysis": "−32767的16位补码为8001H，符号扩展到32位为FFFF8001H；转unsigned int按模2^32解释，真值为4294934529。",
+    "cards": [
+      {
+        "title": "数据表示与补码",
+        "topic": "数据表示与补码",
+        "status": "verified",
+        "role": "core"
+      },
+      {
+        "title": "定点补码加减与溢出",
+        "topic": "定点补码加减与溢出",
+        "status": "verified",
+        "role": "secondary"
+      },
+      {
+        "title": "数制转换与定点小数",
+        "topic": "数制转换与定点小数",
+        "status": "verified",
+        "role": "secondary"
+      }
+    ],
+    "coreCards": [
+      "数据表示与补码"
+    ],
+    "secondaryCards": [
+      "定点补码加减与溢出",
+      "数制转换与定点小数"
+    ]
   }
-,
-  "2010-18": {"year":2010,"index":18,"id":65,"subject":"计算机组成原理","subjectCode":"computer-organization","typeName":"选择题","score":2,"question":"下列寄存器中，汇编语言程序员可见的是（ ）。 A. MAR B. PC C. MDR D. IR","answer":"B","cards":[{"title":"计算机系统层次结构","topic":"计算机系统层次结构","status":"verified","role":"secondary"}],"coreCards":[],"secondaryCards":["计算机系统层次结构"]},
-  "2022-18": {"year":2022,"index":18,"id":629,"subject":"计算机组成原理","subjectCode":"computer-organization","typeName":"选择题","score":2,"question":"下列选项中，属于指令集体系结构（ISA）规定的内容是（ ）。Ⅰ.指令字格式和指令类型 Ⅱ.CPU的时钟周期 Ⅲ.通用寄存器个数和位数 Ⅳ.加法器的进位方式。A.仅Ⅰ、Ⅱ B.仅Ⅰ、Ⅲ C.仅Ⅱ、Ⅳ D.仅Ⅰ、Ⅲ、Ⅳ","answer":"B","analysis":"ISA定义程序员可见的指令格式/类型及通用寄存器资源；CPU时钟周期和加法器进位方式属于微架构/电路实现。","steps":["Ⅰ指令格式与类型决定机器指令编码和语义，属于ISA。","Ⅱ时钟周期由具体处理器实现决定，不属于ISA。","Ⅲ通用寄存器数量和位宽是程序员可见状态，属于ISA。","Ⅳ加法器采用何种进位电路是内部实现细节，不属于ISA。","因此仅Ⅰ、Ⅲ正确，选B。"],"cards":[{"title":"计算机系统层次结构","topic":"计算机系统层次结构","status":"verified","role":"core"}],"coreCards":["计算机系统层次结构"],"secondaryCards":[]},
-  "2022-20": {"year":2022,"index":20,"id":631,"subject":"计算机组成原理","subjectCode":"computer-organization","typeName":"选择题","score":2,"question":"将高级语言源程序转换为可执行目标文件的主要过程是（ ）。A.预处理→编译→汇编→链接 B.预处理→汇编→编译→链接 C.预处理→编译→链接→汇编 D.预处理→汇编→链接→编译","answer":"A","analysis":"预处理展开宏和头文件；编译将高级语言翻译为汇编/目标表示；汇编器生成目标文件；链接器解析外部符号并合并目标文件和库。","steps":["预处理：处理宏定义、头文件和条件编译。","编译：完成词法/语法/语义分析和优化，生成汇编或目标表示。","汇编：把汇编代码转换为机器指令目标文件。","链接：完成符号解析、重定位并合并目标文件/库，生成可执行文件。","顺序为预处理→编译→汇编→链接，选A。"],"cards":[{"title":"计算机系统层次结构","topic":"计算机系统层次结构","status":"verified","role":"core"}],"coreCards":["计算机系统层次结构"],"secondaryCards":[]},
-  "2024-13": {"year":2024,"index":13,"id":202413,"subject":"计算机组成原理","subjectCode":"computer-organization","typeName":"选择题","score":2,"question":"将汇编程序中实现特定功能的一组指令序列定义为伪指令。判断CPU能理解并直接执行的类别：Ⅰ伪指令；Ⅱ微指令；Ⅲ机器指令；Ⅳ汇编指令。","answer":"B","analysis":"机器指令属于ISA层，由CPU按指令语义执行；微指令属于控制器内部微程序控制层。汇编指令是机器指令的符号表示，伪指令由汇编器处理。","steps":["微指令用于控制器内部产生微操作控制信号。","机器指令是ISA规定的二进制指令，由CPU取指、译码和执行。","汇编指令是机器指令的助记符表示，需汇编成机器码。","伪指令是汇编程序的控制命令，不直接成为CPU执行指令。","故选Ⅱ、Ⅲ，即B。"],"cards":[{"title":"计算机系统层次结构","topic":"计算机系统层次结构","status":"verified","role":"secondary"}],"coreCards":[],"secondaryCards":["计算机系统层次结构"]},
-  "2025-16": {"year":2025,"index":16,"id":202516,"subject":"计算机组成原理","subjectCode":"computer-organization","typeName":"选择题","score":2,"question":"判断由指令集体系结构ISA规定的项目：A是否采用阵列乘法器；B是否采用定长指令字；C是否采用微程序控制器；D是否采用单总线数据通路。","answer":"B","analysis":"指令编码格式属于ISA；阵列乘法器、微程序控制器和单总线数据通路属于微架构实现。","steps":["先判断属性是否对机器语言程序员可见。","指令字长度/编码格式由ISA规定。","乘法器结构、控制器实现和内部数据通路属于微架构。","因此选B。"],"cards":[{"title":"计算机系统层次结构","topic":"计算机系统层次结构","status":"verified","role":"core"}],"coreCards":["计算机系统层次结构"],"secondaryCards":[]}
 };
 window.CARD_QUESTION_LIST = {
   "二叉搜索树与中序遍历": [
@@ -6471,7 +6760,10 @@ window.CARD_QUESTION_LIST = {
   ],
   "数据表示与补码": [
     "2017-43",
-    "2018-13"
+    "2018-13",
+    "2009-12",
+    "2024-12",
+    "2025-12"
   ],
   "IEEE 754 单精度字段": [
     "2011-13",
@@ -6811,7 +7103,10 @@ window.CARD_QUESTION_LIST = {
     "2017-44",
     "2019-45",
     "2020-43",
-    "2021-43"
+    "2021-43",
+    "2010-13",
+    "2024-12",
+    "2025-12"
   ],
   "RISC 与 CISC": [
     "2017-44"
@@ -7165,7 +7460,18 @@ window.CARD_QUESTION_LIST = {
   ],
   "总线仲裁方式": [
     "2022-44"
+  ],
+  "计算机系统层次结构": [
+    "2010-18",
+    "2022-18",
+    "2022-20",
+    "2024-13",
+    "2025-16"
+  ],
+  "数制转换与定点小数": [
+    "2009-12",
+    "2010-13",
+    "2024-12",
+    "2025-12"
   ]
-,
-  "计算机系统层次结构": ["2010-18","2022-18","2022-20","2024-13","2025-16"]
 };
