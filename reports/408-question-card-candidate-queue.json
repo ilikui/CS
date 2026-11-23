@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T13:10:18.103Z",
+  "generatedAt": "2026-11-23T13:13:01.999Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
@@ -10,7 +10,7 @@
     "candidateQuestions": 66,
     "noCandidateQuestions": 0,
     "cards": 306,
-    "cardsWithFormalLinks": 194,
+    "cardsWithFormalLinks": 196,
     "cardsWithoutFormalLinks": [
       {
         "subject": "操作系统",
@@ -71,6 +71,10 @@
       {
         "subject": "计算机组成原理",
         "title": "BCD 码与字符编码"
+      },
+      {
+        "subject": "计算机组成原理",
+        "title": "磁盘结构与平均访问时间"
       },
       {
         "subject": "计算机组成原理",
@@ -175,10 +179,6 @@
       {
         "subject": "数据结构",
         "title": "最小距离三元组的三指针扫描"
-      },
-      {
-        "subject": "数据结构",
-        "title": "前缀编码与二叉判定树"
       },
       {
         "subject": "数据结构",
@@ -318,10 +318,6 @@
       },
       {
         "subject": "操作系统",
-        "title": "动态优先级与饥饿避免"
-      },
-      {
-        "subject": "操作系统",
         "title": "FAT链接分配与簇链访问"
       },
       {
@@ -407,10 +403,6 @@
       {
         "subject": "数据结构",
         "title": "图的度数统计与遍历复杂度"
-      },
-      {
-        "subject": "数据结构",
-        "title": "置换-选择排序与初始归并段"
       },
       {
         "subject": "数据结构",
@@ -3320,28 +3312,10 @@
       "answer": "使用二叉树/前缀树保存编码，0走左、1走右，字符存于叶结点；译码到叶输出字符后回根；插入时同时检查中途遇叶及编码终点已有字符/子树两类冲突。",
       "analysis": "前缀码可唯一译码。构建二叉树时每条编码对应根到叶的一条路径。",
       "existingCards": [
-        "哈夫曼树与带权路径长度"
+        "前缀编码与二叉判定树"
       ],
       "confidence": "high-candidate",
       "candidates": [
-        {
-          "card": "前缀编码与二叉判定树",
-          "score": 73,
-          "matchedTerms": [
-            "数据结构",
-            "前缀码",
-            "叶输出",
-            "输出字",
-            "出字符",
-            "叶输出字",
-            "输出字符",
-            "叶输出字符",
-            "插入时",
-            "编码是",
-            "点已有",
-            "已有字"
-          ]
-        },
         {
           "card": "树与森林的存储结构",
           "score": 22,
@@ -3385,6 +3359,15 @@
             "数据结构",
             "叶结点",
             "插入"
+          ]
+        },
+        {
+          "card": "哈夫曼树与带权路径长度",
+          "score": 10,
+          "matchedTerms": [
+            "数据结构",
+            "二叉树",
+            "叶结点"
           ]
         }
       ]
@@ -4754,7 +4737,6 @@
       "answer": "SF=F15；OF加法=¬A15¬B15F15+A15B15¬F15；OF减法=¬A15B15F15+A15¬B15¬F15。Y暂存ALU一个输入，Z暂存ALU输出。rs、rd均4位，最多16个GPR，来自IR，rd连接地址译码器。取指序列PCout、MARin→Read→MDRout、IRin，至少7周期。CU产生控制信号，IR和FR输出接入CU。",
       "analysis": "单总线每一时刻只能有一个有效数据源。ALU有两个输入和一个输出，Y暂存先到的操作数，Z暂存结果。rs选择读端口，rd选择写端口；写端口通过地址译码器选中目标寄存器。",
       "existingCards": [
-        "ALU 算术逻辑单元",
         "补码加减与溢出判断",
         "单总线数据通路与暂存器",
         "寄存器组读写端口与译码",
@@ -4835,21 +4817,21 @@
           ]
         },
         {
-          "card": "计算机系统层次结构",
-          "score": 38,
+          "card": "ALU 算术逻辑单元",
+          "score": 40,
           "matchedTerms": [
             "alu",
+            "sf",
+            "of",
+            "暂存器",
+            "数据通",
+            "据通路",
             "数据通路",
-            "内部总线",
-            "cpu",
             "寄存器",
-            "指令",
-            "时钟周期",
-            "单总线",
-            "取指",
-            "的控制",
-            "表达式",
-            "的符号"
+            "加法",
+            "减法",
+            "溢出标",
+            "出标志"
           ]
         }
       ]
@@ -4864,13 +4846,30 @@
       "answer": "地址字段为柱面号15位、磁头号3位、扇区号9位。平均访问时间约9.18ms。64位缓冲区为8B，512B扇区需要64次DMA总线请求。周期挪用DMA可以获得总线使用权，以保证磁盘数据及时传送。",
       "analysis": "柱面数20000→ceil(log₂20000)=15位；盘面数4×2=8→3位；扇区数500→9位。转一圈约8.33ms，平均旋转延迟4.17ms，单扇区传输约0.0167ms。",
       "existingCards": [
-        "磁盘结构与平均访问时间",
         "磁盘 CHS 地址与平均访问时间",
         "DMA 周期挪用与总线仲裁",
         "磁盘存储结构与旋转延迟"
       ],
-      "confidence": "medium-candidate",
+      "confidence": "high-candidate",
       "candidates": [
+        {
+          "card": "磁盘结构与平均访问时间",
+          "score": 82,
+          "matchedTerms": [
+            "访问时",
+            "问时间",
+            "访问时间",
+            "ms",
+            "盘面",
+            "磁道",
+            "转速",
+            "平均旋转延迟",
+            "扇区",
+            "单扇区传输约",
+            "dma",
+            "ceil"
+          ]
+        },
         {
           "card": "Cache 直接映射与组相联",
           "score": 44,
@@ -4934,24 +4933,6 @@
             "ms",
             "控制器",
             "时间约"
-          ]
-        },
-        {
-          "card": "Cache跨块访问与缺失率",
-          "score": 27,
-          "matchedTerms": [
-            "cpu",
-            "ceil",
-            "访问",
-            "每个",
-            "周期",
-            "需要访",
-            "要访问",
-            "需要访问",
-            "字节数",
-            "平均访",
-            "均访问",
-            "访问时"
           ]
         }
       ]
@@ -5343,18 +5324,26 @@
       "answer": null,
       "analysis": "",
       "existingCards": [
-        "外部排序与多路归并"
+        "置换-选择排序与初始归并段"
       ],
       "confidence": "high-candidate",
       "candidates": [
         {
-          "card": "置换-选择排序与初始归并段",
+          "card": "外部排序与多路归并",
           "score": 24,
           "matchedTerms": [
-            "置换-选择",
-            "置换",
+            "外部排序",
             "工作区",
-            "初始归并段"
+            "外部排",
+            "部排序",
+            "的文件",
+            "生成初",
+            "成初始",
+            "初始归",
+            "始归并",
+            "归并段",
+            "生成初始",
+            "成初始归"
           ]
         },
         {
@@ -5408,9 +5397,8 @@
       "answer": null,
       "analysis": "",
       "existingCards": [
-        "Cache 映射与命中率",
-        "页式存储与缺页异常",
         "Cache 组相联映射与地址划分",
+        "页式存储与缺页异常",
         "二维数组行优先存储与局部性",
         "Cache 命中率与空间局部性"
       ],
@@ -5487,20 +5475,21 @@
           ]
         },
         {
-          "card": "Cache 替换与写策略",
-          "score": 31,
+          "card": "Cache 映射与命中率",
+          "score": 35,
           "matchedTerms": [
             "cache",
-            "命中",
-            "kb",
-            "int",
-            "数据区",
-            "路组相联",
-            "数组",
-            "起始地址",
-            "组号",
+            "组相联",
+            "块大小",
             "地址",
-            "主存"
+            "组号",
+            "路组相联",
+            "块大小32b",
+            "命中率",
+            "主存块",
+            "路组相",
+            "数据区",
+            "=4"
           ]
         }
       ]
