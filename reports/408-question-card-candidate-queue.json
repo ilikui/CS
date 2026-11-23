@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-23T12:47:26.073Z",
+  "generatedAt": "2026-11-23T12:48:00.072Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
-    "formalMappingRecords": 381,
-    "uniqueQuestionsAlreadyLinked": 275,
-    "questionsWithoutAnyFormalLink": 52,
+    "formalMappingRecords": 385,
+    "uniqueQuestionsAlreadyLinked": 279,
+    "questionsWithoutAnyFormalLink": 50,
     "questionsNeedingAdditionalCardReview": 66,
     "candidateQuestions": 66,
     "noCandidateQuestions": 0,
     "cards": 306,
-    "cardsWithFormalLinks": 192,
+    "cardsWithFormalLinks": 193,
     "cardsWithoutFormalLinks": [
       {
         "subject": "操作系统",
@@ -67,10 +67,6 @@
       {
         "subject": "数据结构",
         "title": "红黑树性质与高度"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "计算机系统层次结构"
       },
       {
         "subject": "计算机组成原理",
@@ -1454,7 +1450,9 @@
       "question": "说明一条指令从取指到执行的大致过程，并指出 PC、IR、MAR、MDR 的作用。",
       "answer": "取指、译码、执行、必要时访存并写回；PC/IR/MAR/MDR 分别保存后继地址/当前指令/访存地址/访存数据。",
       "analysis": "PC 将指令地址送 MAR。 存储器读出的指令经 MDR 送入 IR。 PC 更新为后继指令地址。 控制器译码 IR 并发出控制信号。 执行运算，必要时经 MAR/MDR 访问主存并写回结果。",
-      "existingCards": [],
+      "existingCards": [
+        "计算机系统层次结构"
+      ],
       "confidence": "high-candidate",
       "candidates": [
         {
@@ -1801,7 +1799,9 @@
       "question": "在请求分页系统中，访问的页面不在内存时产生（）。 一般保护异常 缺页中断 时钟中断 系统调用",
       "answer": "B",
       "analysis": "页面不在内存时触发缺页异常/缺页中断，操作系统负责调入页面并更新页表。",
-      "existingCards": [],
+      "existingCards": [
+        "计算机系统层次结构"
+      ],
       "confidence": "high-candidate",
       "candidates": [
         {
