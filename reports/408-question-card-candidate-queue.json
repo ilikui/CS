@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-23T09:00:00.000Z",
+  "generatedAt": "2026-11-23T10:50:41.205Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
-    "formalMappingRecords": 384,
-    "uniqueQuestionsAlreadyLinked": 278,
-    "questionsWithoutAnyFormalLink": 47,
+    "formalMappingRecords": 381,
+    "uniqueQuestionsAlreadyLinked": 275,
+    "questionsWithoutAnyFormalLink": 52,
     "questionsNeedingAdditionalCardReview": 66,
     "candidateQuestions": 66,
     "noCandidateQuestions": 0,
     "cards": 306,
-    "cardsWithFormalLinks": 194,
+    "cardsWithFormalLinks": 192,
     "cardsWithoutFormalLinks": [
       {
         "subject": "操作系统",
@@ -27,6 +27,10 @@
       {
         "subject": "数据结构",
         "title": "稀疏矩阵三元组表示"
+      },
+      {
+        "subject": "计算机组成原理",
+        "title": "总线仲裁方式"
       },
       {
         "subject": "数据结构",
@@ -63,6 +67,10 @@
       {
         "subject": "数据结构",
         "title": "红黑树性质与高度"
+      },
+      {
+        "subject": "计算机组成原理",
+        "title": "计算机系统层次结构"
       },
       {
         "subject": "计算机组成原理",
@@ -2948,6 +2956,24 @@
           ]
         },
         {
+          "card": "计算机系统层次结构",
+          "score": 32,
+          "matchedTerms": [
+            "机器指令",
+            "些指令",
+            "指令",
+            "异常",
+            "汇编",
+            "机器指令和汇编指令",
+            "机器指",
+            "器指令",
+            "源程序",
+            "指令和",
+            "令和汇",
+            "和汇编"
+          ]
+        },
+        {
           "card": "指令系统与寻址方式",
           "score": 28,
           "matchedTerms": [
@@ -2976,19 +3002,6 @@
             "字节",
             "按字节",
             "大小端"
-          ]
-        },
-        {
-          "card": "RISC-V 指令格式与寄存器编码",
-          "score": 24,
-          "matchedTerms": [
-            "rd",
-            "x1",
-            "x2",
-            "ea",
-            "符号位",
-            "位的",
-            "执行"
           ]
         }
       ]
@@ -3412,6 +3425,24 @@
           ]
         },
         {
+          "card": "计算机系统层次结构",
+          "score": 41,
+          "matchedTerms": [
+            "机器指令",
+            "寄存器",
+            "alu",
+            "的指令",
+            "指令",
+            "注意",
+            "阵列乘法器",
+            "乘法器",
+            "属于",
+            "是什么",
+            "器实现",
+            "控制逻"
+          ]
+        },
+        {
           "card": "ALU 标志位 CF 与 OF",
           "score": 40,
           "matchedTerms": [
@@ -3463,24 +3494,6 @@
             "有符号",
             "符号溢",
             "号溢出"
-          ]
-        },
-        {
-          "card": "计算机系统层次结构",
-          "score": 28,
-          "matchedTerms": [
-            "机器指令",
-            "寄存器",
-            "alu",
-            "的指令",
-            "指令",
-            "是什么",
-            "器实现",
-            "控制逻",
-            "制逻辑",
-            "逻辑实",
-            "辑实现",
-            "控制逻辑"
           ]
         }
       ]
@@ -4805,6 +4818,24 @@
           ]
         },
         {
+          "card": "计算机系统层次结构",
+          "score": 35,
+          "matchedTerms": [
+            "数据通路",
+            "寄存器",
+            "alu",
+            "cpu",
+            "通用寄存器",
+            "指令",
+            "时钟周期",
+            "是什么",
+            "的符号",
+            "存器的",
+            "寄存器的",
+            "内部总"
+          ]
+        },
+        {
           "card": "指令格式与操作码扩展",
           "score": 34,
           "matchedTerms": [
@@ -4820,23 +4851,6 @@
             "主存",
             "至少",
             "指令"
-          ]
-        },
-        {
-          "card": "整数溢出检测与异常处理",
-          "score": 33,
-          "matchedTerms": [
-            "of",
-            "溢出标",
-            "出标志",
-            "溢出标志",
-            "加法",
-            "减法",
-            "最高位",
-            "符号",
-            "溢出",
-            "操作数",
-            "的标志"
           ]
         }
       ]
@@ -5507,7 +5521,7 @@
         "小端存储与立即数寻址",
         "虚拟地址与指令取指缺页"
       ],
-      "confidence": "high-candidate",
+      "confidence": "medium-candidate",
       "candidates": [
         {
           "card": "数组下标寻址与元素宽度",
@@ -5521,6 +5535,24 @@
             "目标地",
             "标地址",
             "目标地址"
+          ]
+        },
+        {
+          "card": "计算机系统层次结构",
+          "score": 23,
+          "matchedTerms": [
+            "机器指令",
+            "寻址方",
+            "址方式",
+            "寻址方式",
+            "指令",
+            "异常",
+            "汇编",
+            "是什么",
+            "机器指",
+            "器指令",
+            "指令的",
+            "汇编指"
           ]
         },
         {
@@ -5562,16 +5594,6 @@
             "址计算",
             "地址计算",
             "条指令"
-          ]
-        },
-        {
-          "card": "小端字节序与补码读取",
-          "score": 16,
-          "matchedTerms": [
-            "小端",
-            "b0",
-            "ec",
-            "地址"
           ]
         }
       ]
@@ -6106,6 +6128,24 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
+          "card": "计算机系统层次结构",
+          "score": 21,
+          "matchedTerms": [
+            "寄存器",
+            "的指令",
+            "通用寄存器",
+            "指令",
+            "的存储",
+            "存储管",
+            "储管理",
+            "存储管理",
+            "通用寄",
+            "用寄存",
+            "通用寄存",
+            "用寄存器"
+          ]
+        },
+        {
           "card": "流水线结构冒险与数据冒险",
           "score": 21,
           "matchedTerms": [
@@ -6164,23 +6204,6 @@
             "寄存器编号",
             "至少",
             "指令"
-          ]
-        },
-        {
-          "card": "指令译码与有效地址计算",
-          "score": 18,
-          "matchedTerms": [
-            "ff0h",
-            "r2",
-            "r1",
-            "寄存器",
-            "存储单",
-            "储单元",
-            "存储单元",
-            "机器码",
-            "一条指",
-            "条指令",
-            "一条指令"
           ]
         }
       ]
