@@ -4975,6 +4975,12 @@ window.QUESTION_CARD_MAP = {
         "topic": "磁盘存储结构与旋转延迟",
         "status": "verified",
         "role": "secondary"
+      },
+      {
+        "title": "总线仲裁方式",
+        "topic": "总线仲裁方式",
+        "status": "verified",
+        "role": "secondary"
       }
     ],
     "coreCards": [
@@ -4982,7 +4988,8 @@ window.QUESTION_CARD_MAP = {
       "DMA 周期挪用与总线仲裁"
     ],
     "secondaryCards": [
-      "磁盘存储结构与旋转延迟"
+      "磁盘存储结构与旋转延迟",
+      "总线仲裁方式"
     ],
     "code": "Trot = 60s / 7200 = 8.333ms\\nTavg = 5 + Trot/2 + Trot/500 ≈ 9.18ms\\nDMA requests = 512B / (64bit/8bit_per_byte) = 64\\nCHS bits = ceil(log2(20000)), ceil(log2(8)), ceil(log2(500)) = 15,3,9",
     "complexity": "CHS字段位数分别为15、3、9位；平均访问时间9.18ms；DMA请求次数64。",
@@ -7149,5 +7156,8 @@ window.CARD_QUESTION_LIST = {
   ],
   "FAT链接分配与簇链访问": [
     "2016-47"
+  ],
+  "总线仲裁方式": [
+    "2022-44"
   ]
 };
