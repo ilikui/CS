@@ -616,7 +616,7 @@ function atomWorkedExample(a){
  });
  const detail=exact[a[0]];
  if(detail)return '<section class="atom-worked"><div class="worked-head"><b>典型例题 · 逐步推导（已展开核算）</b><span>'+esc(a[0])+'</span></div><div class="worked-box"><b>'+esc(detail.label)+'｜题目</b><p>'+esc(a[6])+'</p></div><div class="worked-box"><b>先理解用到的概念</b><p>'+esc(a[3])+'</p><p>'+esc(a[4])+'</p></div><ol class="worked-steps">'+detail.steps.map((s,i)=>'<li><b>'+esc(s[0])+'</b><p>'+esc(s[1])+'</p></li>').join('')+'</ol><div class="worked-box worked-answer"><b>最终结论</b><p>'+esc(detail.result)+'</p></div><div class="worked-box worked-error"><b>易错点与自检</b><p>'+esc(detail.check)+'</p></div><div class="worked-box"><b>举一反三</b><p>'+esc(detail.variant)+'</p></div></section>';
- return '<section class="atom-worked"><div class="worked-head"><b>典型例题 · 完整推导过程</b><span>'+esc(a[0])+'</span></div><div class="worked-box"><b>题目</b><p>'+esc(a[6])+'</p></div><div class="worked-box"><b>定义与推导依据</b><p>'+esc(a[3])+'</p><p>'+esc(a[4])+'</p></div><ol class="worked-steps">'+frame.map((x,i)=>'<li><b>第 '+(i+1)+' 步</b><p>'+esc(x)+'</p></li>').join('')+'</ol><div class="worked-box"><b>本卡解题方法拆解</b><ol>'+actions.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol></div><div class="worked-box worked-answer"><b>结果</b><p>'+esc(a[7])+'</p></div><div class="worked-box worked-error"><b>易错点与自检</b><p>'+esc(a[8])+'</p><p>检查：回到定义和定理前提，逐项核验定义域、运算合法性、区间/维数条件，并将结果代回原题。</p></div></section>';
+ return '<section class="atom-worked"><div class="worked-head"><b>本卡解题框架 · 通用检查步骤</b><span>'+esc(a[0])+'</span></div><div class="worked-box"><b>题目</b><p>'+esc(a[6])+'</p></div><div class="worked-box"><b>说明</b><p>以下为本章节通用检查流程，并非对上方例题的逐项代数展开；请结合本卡方法和简要答案完成具体计算。该卡的专属逐步推导仍待补齐。</p></div><div class="worked-box"><b>定义与推导依据</b><p>'+esc(a[3])+'</p><p>'+esc(a[4])+'</p></div><ol class="worked-steps">'+frame.map((x,i)=>'<li><b>第 '+(i+1)+' 步</b><p>'+esc(x)+'</p></li>').join('')+'</ol><div class="worked-box"><b>本卡解题方法拆解</b><ol>'+actions.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ol></div><div class="worked-box worked-answer"><b>结果</b><p>'+esc(a[7])+'</p></div><div class="worked-box worked-error"><b>易错点与自检</b><p>'+esc(a[8])+'</p><p>检查：回到定义和定理前提，逐项核验定义域、运算合法性、区间/维数条件，并将结果代回原题。</p></div></section>';
 }
 function renderAtoms(parent){
  const items=atomicCards.filter(a=>a[2]===parent);
@@ -726,7 +726,7 @@ initChapterFilter();render();
 window.addEventListener('load',()=>{if(window.MathJax?.typesetPromise)MathJax.typesetPromise();});
 </script>
 <!-- 通用关键词动态图已停用：由专属渲染器统一负责，避免重复叠加与错误匹配。 -->
-<script src="./math-card-specialized.js?v=20261123-15"></script>
+<script src="./math-card-specialized.js?v=20261123-16"></script>
 <script src="./math-card-exam-readiness.js?v=20261117-4"></script>
 <script src="./math-card-cal06-readiness.js?v=20261123-1"></script>
 </body></html>
