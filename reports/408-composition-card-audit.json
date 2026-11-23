@@ -1,15 +1,14 @@
 {
-  "generated_at": "2026-11-17",
+  "generated_at": "2026-11-23",
   "scope": "计算机组成原理75张知识卡；逐张检查内容字段并盘点正式真题关联",
   "method": "按知识卡的定义、核心原理、适用条件、解题步骤、例题、易错点六个字段检查；逐条盘点CARD_QUESTION_MAP与CARD_EXAM_TOPIC_MAP；对可用题源按年份/题号/ID匹配，历史映射仅存在映射文件而当前题库和verified-solutions均无源记录的单独标识，不冒充已重新核对。",
   "summary": {
     "cards": 75,
     "all_cards_have_six_required_fields": true,
-    "formal_association_records": 122,
-    "unique_linked_cards": 71,
-    "unique_linked_questions": 67,
+    "formal_association_records": 127,
+    "unique_linked_cards": 72,
+    "unique_linked_questions": 72,
     "cards_without_formal_verified_question_link": [
-      "计算机系统层次结构",
       "数制转换与定点小数",
       "BCD 码与字符编码",
       "流水线吞吐率与加速比"
@@ -19,8 +18,9 @@
       "question_dataset": 41,
       "verified_solutions": 28,
       "legacy_map_only": 52,
-      "question_text_available": 57,
-      "solution_steps_present": 121
+      "question_text_available": 62,
+      "solution_steps_present": 126,
+      "supplemental_question_map": 5
     }
   },
   "cards": [
@@ -236,8 +236,8 @@
     },
     {
       "title": "计算机系统层次结构",
-      "association_records": 0,
-      "linked_questions": 0,
+      "association_records": 5,
+      "linked_questions": 5,
       "content_fields": {
         "definition": true,
         "principle": true,
@@ -246,7 +246,7 @@
         "worked_example": true,
         "pitfalls": true
       },
-      "status": "content_complete_no_verified_mapping"
+      "status": "linked"
     },
     {
       "title": "冯·诺依曼结构与存储程序",
