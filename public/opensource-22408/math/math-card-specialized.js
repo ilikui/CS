@@ -73,6 +73,7 @@ if(k==='ode'){
 if(k==='multivariable'){
  if(/极坐标|雅可比/.test(t))return "x=r cosθ，y=r sinθ；dxdy=r drdθ";
  if(/二重积分|累次积分|区域/.test(t))return "∬_D f(x,y)dA = ∫ₐᵇ[∫_{g₁(x)}^{g₂(x)}f(x,y)dy]dx";
+ if(/极值必要条件/.test(t))return "可微内点局部极值的必要条件：fₓ=0 且 fᵧ=0";
  if(/极值|Hessian|二阶判别/.test(t))return "D=fₓₓfᵧᵧ−(fₓᵧ)²；D>0 且 fₓₓ>0 为极小，fₓₓ<0 为极大";
  if(/复合|链式/.test(t))return "z=f(u,v)，zₓ=fᵤuₓ+fᵥvₓ，zᵧ=fᵤuᵧ+fᵥvᵧ";
  if(/全微分|可微/.test(t))return "dz=fₓdx+fᵧdy；可微 ⇒ 连续且偏导存在";
@@ -80,10 +81,14 @@ if(k==='multivariable'){
  return "z=f(x,y)，固定其余变量求偏导；梯度 ∇f=(fₓ,fᵧ)";
 }
 if(k==='integral'){
- if(/引力微元|线密度|分量积分|变力做功/.test(t))return "dm=λ(x)dx；dF=Gm·dm/r²；W=∫_C F·dr=∫ F·T ds";
+ if(/引力微元|线密度|分量积分|变力做功/.test(t))return "dm=λ(x)dx；d𝐅=Gm·dm/r²·r̂；W=∫_C 𝐅·d𝐫";
  if(/含参数|变上限.*零点|零点连续性/.test(t))return "d/dx∫_{a(x)}^{b(x)}f(x,t)dt=f(x,b)b′−f(x,a)a′+∫ₐᵇfₓ(x,t)dt";
  if(/反常/.test(t))return "∫ₐ^∞f(x)dx=lim_{R→∞}∫ₐᴿf(x)dx；瑕点用单侧极限";
  if(/分部/.test(t))return "∫u dv=uv−∫v du；定积分为 [uv]ₐᵇ−∫ₐᵇv du";
+ if(/对称区间|奇偶性公式/.test(t))return "偶：∫₋ₐᵃf=2∫₀ᵃf；奇：∫₋ₐᵃf=0（先验证奇偶性）";
+ if(/线性性质|区间可加/.test(t))return "∫ₐᶜf+∫ᶜᵇf=∫ₐᵇf；∫ₐᵇ(αf+βg)=α∫f+β∫g";
+ if(/比较|估值|保序/.test(t))return "m≤f≤M ⇒ m(b−a)≤∫ₐᵇf≤M(b−a)（a≤b）";
+ if(/部分分式/.test(t))return "先化真分式并拆部分分式，再逐项积分";
  if(/换元|变量替换|凑微分/.test(t))return "u=φ(x)，du=φ′(x)dx；定积分同时替换上下限";
  if(/变上限|积分上限|积分下限/.test(t))return "Φ(x)=∫_{a(x)}^{b(x)}f(t)dt，Φ′=f(b)b′−f(a)a′";
  if(/积分中值|中值/.test(t))return "∫ₐᵇf(x)dx=f(ξ)(b−a)，ξ∈[a,b]（f 连续）";
@@ -116,7 +121,7 @@ if(k==='vectors'){
  return "rank(向量组)=极大线性无关组所含向量个数";
 }
 if(k==='system')return /齐次|基础解系|解空间/.test(t)?"Ax=0：dim N(A)=n−rank(A)":"Ax=b 有解 ⇔ rank(A)=rank([A|b])";
-if(k==='eigen')return /迹|行列式|和与积/.test(t)?"λ₁+λ₂=tr(A)，λ₁λ₂=det(A)（二阶矩阵）":/对角化|正交/.test(t)?"A=PDP⁻¹；实对称 A=QΛQᵀ":"Av=λv，det(A−λI)=0";
+if(k==='eigen')return /迹|行列式|和与积/.test(t)?"λ₁+λ₂=tr(A)，λ₁λ₂=det(A)（二阶矩阵）":/相似/.test(t)?"B=P⁻¹AP；相似矩阵保持特征值、迹、行列式与秩":/矩阵多项式/.test(t)?"Av=λv ⇒ p(A)v=p(λ)v":/对角化|正交/.test(t)?"A=PDP⁻¹；实对称 A=QΛQᵀ":"Av=λv，det(A−λI)=0";
 if(k==='quadratic')return /正定|主子式/.test(t)?"Q(x)=xᵀAx>0 (x≠0) ⇔ A 正定；Sylvester：顺序主子式全正":/惯性|秩/.test(t)?"rank(Q)=正惯性指数+负惯性指数":"Q(x)=xᵀAx，A 可取对称矩阵";
 if(k==='function'){
  if(/奇偶|奇函数与偶函数/.test(t))return "定义域关于原点对称；偶：f(−x)=f(x)，奇：f(−x)=−f(x)";
@@ -383,7 +388,9 @@ else if(/二阶|特征根|重根/.test(t)){body=graph(x=>Math.exp(-x/3)*(Math.co
 else if(/线性|积分因子/.test(t)){body=graph(x=>Math.exp(-x/3)+.3*Math.exp(-p*x));desc='积分因子 μ=e^{∫Pdx} 将左侧化为 (μy)′，解曲线由积分常数平移。';}
 else{body=graph(x=>Math.exp(p*x/3));desc='分离变量后分别积分；参数控制指数增长/衰减，初值确定积分常数。';}
 }else if(k==='multivariable'){
-if(/二重积分|累次积分|区域可加|面积与体积/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><rect x="75" y="55" width="300" height="150" fill="#eaf3fb" stroke="'+COLORS.blue+'" stroke-width="2"/><path d="M75 105H375 M75 155H375 M175 55V205 M275 55V205" stroke="#fff" stroke-width="3"/><path d="M75 205L375 205L375 55Z" fill="'+COLORS.green+'" opacity=".14"/><path d="M75 205H375 M75 205V55" stroke="'+COLORS.orange+'" stroke-width="2"/><text x="85" y="35" fill="'+COLORS.blue+'">区域 D：按小矩形累积 f(x,y)</text><text x="85" y="235" fill="'+COLORS.green+'">先定区域，再选积分次序与边界</text></svg>';desc='二重积分先确定积分区域 D，再按直角坐标写成累次积分；交换积分次序必须重新描述区域边界。区域可加性要求把 D 分成不重叠子区域后积分相加。';}
+if(/对称性/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M35 135H425 M230 20V250" stroke="#9aaabd"/><path d="M230 135L95 65L95 205Z" fill="'+COLORS.blue+'" opacity=".25" stroke="'+COLORS.blue+'"/><path d="M230 135L365 65L365 205Z" fill="'+COLORS.orange+'" opacity=".25" stroke="'+COLORS.orange+'"/><path d="M230 135L95 65 M230 135L365 65" stroke="'+COLORS.green+'" stroke-dasharray="5 4"/><text x="42" y="25" fill="'+COLORS.blue+'">对称区域 D</text><text x="42" y="245" fill="'+COLORS.orange+'">奇函数对称抵消；偶函数可加倍</text></svg>';desc='二重积分利用对称性前，先确认区域关于相应坐标轴/原点对称，再判断被积函数的奇偶性；奇对称分量抵消，偶对称分量可化为对称子区域积分的倍数。';}
+else if(/极值必要条件/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 205L230 125L420 205 M40 205L230 245L420 205 M230 125V245" stroke="#9aaabd"/><path d="M95 175Q230 '+(80+10*p)+' 365 175" fill="none" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="'+(115+5*p)+'" r="6" fill="'+COLORS.orange+'"/><path d="M230 115L230 55 M230 55l-7 12 M230 55l7 12" stroke="'+COLORS.green+'" stroke-width="2.5" fill="none"/><text x="42" y="25" fill="'+COLORS.blue+'">内点可微极值候选：∇f=0</text><text x="42" y="250" fill="'+COLORS.orange+'">fₓ=0，fᵧ=0 是必要条件，不是充分条件</text></svg>';desc='可微二元函数在定义域内部取得局部极值时，必要条件是 f_x=f_y=0；还需用二阶判别或其他方法确认，驻点不一定是极值。';}
+else if(/二重积分|累次积分|区域可加|面积与体积/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><rect x="75" y="55" width="300" height="150" fill="#eaf3fb" stroke="'+COLORS.blue+'" stroke-width="2"/><path d="M75 105H375 M75 155H375 M175 55V205 M275 55V205" stroke="#fff" stroke-width="3"/><path d="M75 205L375 205L375 55Z" fill="'+COLORS.green+'" opacity=".14"/><path d="M75 205H375 M75 205V55" stroke="'+COLORS.orange+'" stroke-width="2"/><text x="85" y="35" fill="'+COLORS.blue+'">区域 D：按小矩形累积 f(x,y)</text><text x="85" y="235" fill="'+COLORS.green+'">先定区域，再选积分次序与边界</text></svg>';desc='二重积分先确定积分区域 D，再按直角坐标写成累次积分；交换积分次序必须重新描述区域边界。区域可加性要求把 D 分成不重叠子区域后积分相加。';}
 else if(/混合偏导/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M40 210L230 125L420 210 M40 210L230 245L420 210 M230 125V245" stroke="#9aaabd"/><path d="M70 175Q230 55 390 175 M70 195Q230 95 390 195" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.5"/><path d="M230 125L300 80" stroke="'+COLORS.orange+'" stroke-width="3"/><text x="40" y="25" fill="'+COLORS.blue+'">fₓᵧ=fᵧₓ（连续条件下）</text><text x="40" y="250" fill="'+COLORS.green+'">先对 x 后对 y，与反序比较</text></svg>';desc='混合偏导交换定理需满足相应连续性条件（常用充分条件：邻域内二阶混合偏导连续），才能推出 f_xy=f_yx；不能仅凭两个偏导都存在就交换次序。';}
 else if(/路径检验|多元函数极限/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M35 210L230 125L425 210 M35 210L230 245L425 210 M230 125V245" stroke="#9aaabd"/><path d="M90 190L230 185L370 190" stroke="'+COLORS.blue+'" stroke-width="3"/><path d="M230 185Q290 135 350 115" stroke="'+COLORS.orange+'" stroke-width="3" fill="none"/><text x="40" y="25" fill="'+COLORS.blue+'">不同路径趋近同一点</text><text x="40" y="250" fill="'+COLORS.orange+'">两路径极限不同 ⇒ 二元极限不存在</text></svg>';desc='路径法可用于否定二元极限：只要找到两条路径得到不同极限，极限就不存在；两条路径相同仍不能证明极限存在。';}
 else if(/极值|Hessian|二阶判别/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><ellipse cx="230" cy="135" rx="'+(45+35*p)+'" ry="'+(30+22*p)+'" fill="none" stroke="'+COLORS.blue+'" stroke-width="2.5"/><ellipse cx="230" cy="135" rx="'+(85+35*p)+'" ry="'+(55+25*p)+'" fill="none" stroke="'+COLORS.orange+'" stroke-width="2.5"/><path d="M25 135H435 M230 15V255" stroke="#9aaabd"/><text x="45" y="28" fill="'+COLORS.blue+'">D=fₓₓfᵧᵧ−fₓᵧ²</text><text x="45" y="245" fill="'+COLORS.green+'">D&gt;0 再看 fₓₓ 符号</text></svg>';desc='二元函数驻点的二阶判别：D=f_xx f_yy−f_xy²。D>0 且 f_xx>0 为极小，D>0 且 f_xx<0 为极大；D<0 为鞍点；D=0 判别失效。';}
@@ -458,7 +465,8 @@ desc='线性方程组有解当且仅当 r(A)=r(A|b)。有解时自由变量数�
 body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M45 220L410 40 M45 50L410 210" stroke="'+COLORS.blue+'" stroke-width="3"/><circle cx="230" cy="130" r="7" fill="'+COLORS.orange+'"/><path d="M230 130L230 220" stroke="'+COLORS.orange+'" stroke-dasharray="4 4"/><text x="250" y="120" fill="'+COLORS.orange+'">解</text><text x="330" y="245" fill="'+COLORS.ink+'">自由变量 '+Math.max(0,Math.round(p*2))+'</text></svg>';desc='方程组解对应几何交点/交集；秩决定约束独立性，自由变量数为 n−r(A)。';
 }
  }else if(k==='eigen'){
-if(/迹|行列式|和与积/.test(t)){
+if(/相似/.test(t)){body='<svg viewBox="0 0 460 270" class="sp-plot"><rect x="40" y="70" width="105" height="95" rx="8" fill="#eaf2fa" stroke="'+COLORS.blue+'"/><rect x="180" y="70" width="105" height="95" rx="8" fill="#fff2e5" stroke="'+COLORS.orange+'"/><rect x="320" y="70" width="100" height="95" rx="8" fill="#e5f4ed" stroke="'+COLORS.green+'"/><text x="92" y="120" text-anchor="middle">A</text><text x="232" y="120" text-anchor="middle">P⁻¹AP</text><text x="370" y="120" text-anchor="middle">B</text><path d="M150 118H175 M168 110L175 118L168 126 M290 118H315 M308 110L315 118L308 126" stroke="'+COLORS.ink+'" stroke-width="2" fill="none"/><text x="45" y="205" fill="'+COLORS.blue+'">特征值、迹、行列式、秩保持不变</text><text x="45" y="235" fill="'+COLORS.green+'">相似 ≠ 相等；表示同一线性变换的不同基</text></svg>';desc='相似矩阵 B=P⁻¹AP，表示同一线性变换在不同基下的矩阵表示；相似保持特征多项式、特征值、迹、行列式和秩，但矩阵元素通常不同。';}
+else if(/迹|行列式|和与积/.test(t)){
 const l1=.5+p,l2=2.5-p,tr=l1+l2,det=l1*l2;
 body='<svg viewBox="0 0 460 270" class="sp-plot"><path d="M45 220H425 M65 245V20" stroke="#9aaabd"/><path d="M95 220V'+(220-l1*55)+' M205 220V'+(220-l2*55)+'" stroke="'+COLORS.blue+'" stroke-width="14"/><text x="70" y="35" fill="'+COLORS.blue+'">λ₁='+l1.toFixed(2)+'</text><text x="205" y="35" fill="'+COLORS.orange+'">λ₂='+l2.toFixed(2)+'</text><text x="270" y="100" fill="'+COLORS.green+'">tr A=λ₁+λ₂='+tr.toFixed(2)+'</text><text x="270" y="130" fill="'+COLORS.green+'">det A=λ₁λ₂='+det.toFixed(2)+'</text></svg>';
 desc='二阶矩阵特征值满足 λ₁+λ₂=tr(A)，λ₁λ₂=det(A)。滑块改变两个特征值，观察和与积如何同步变化。';
