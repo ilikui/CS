@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-11-23T13:05:37.047Z",
+  "generatedAt": "2026-11-23T13:10:18.103Z",
   "policy": "Machine-ranked candidates only, including secondary-card candidates for already-linked questions. No candidate is a formal association until question wording and the directly tested concept are manually verified.",
   "counts": {
     "sourceQuestions": 66,
-    "formalMappingRecords": 385,
-    "uniqueQuestionsAlreadyLinked": 279,
+    "formalMappingRecords": 388,
+    "uniqueQuestionsAlreadyLinked": 282,
     "questionsWithoutAnyFormalLink": 50,
     "questionsNeedingAdditionalCardReview": 66,
     "candidateQuestions": 66,
     "noCandidateQuestions": 0,
     "cards": 306,
-    "cardsWithFormalLinks": 193,
+    "cardsWithFormalLinks": 194,
     "cardsWithoutFormalLinks": [
       {
         "subject": "操作系统",
@@ -67,10 +67,6 @@
       {
         "subject": "数据结构",
         "title": "红黑树性质与高度"
-      },
-      {
-        "subject": "计算机组成原理",
-        "title": "数制转换与定点小数"
       },
       {
         "subject": "计算机组成原理",
@@ -1020,24 +1016,6 @@
       "confidence": "medium-candidate",
       "candidates": [
         {
-          "card": "数制转换与定点小数",
-          "score": 22,
-          "matchedTerms": [
-            "n−1",
-            "的整数",
-            "数范围",
-            "范围为",
-            "范围",
-            "位时为",
-            "−1",
-            "2^",
-            "−2",
-            "定点数",
-            "数补码",
-            "−2^"
-          ]
-        },
-        {
           "card": "整数溢出检测与异常处理",
           "score": 20,
           "matchedTerms": [
@@ -1051,6 +1029,24 @@
             "+1",
             "−128",
             "−1"
+          ]
+        },
+        {
+          "card": "数制转换与定点小数",
+          "score": 19,
+          "matchedTerms": [
+            "n−1",
+            "的整数",
+            "数范围",
+            "范围为",
+            "范围",
+            "位补码范围为",
+            "−1",
+            "2^",
+            "−2",
+            "定点数",
+            "数补码",
+            "−2^"
           ]
         },
         {
@@ -3428,6 +3424,24 @@
           ]
         },
         {
+          "card": "数制转换与定点小数",
+          "score": 41,
+          "matchedTerms": [
+            "int",
+            "feh",
+            "unsigned",
+            "ffeh",
+            "位无符",
+            "无符号",
+            "位无符号",
+            "运算",
+            "得到",
+            "范围",
+            "超出范围",
+            "十六进"
+          ]
+        },
+        {
           "card": "ALU 标志位 CF 与 OF",
           "score": 40,
           "matchedTerms": [
@@ -3461,24 +3475,6 @@
             "语言有符",
             "言有符号",
             "有符号溢"
-          ]
-        },
-        {
-          "card": "数制转换与定点小数",
-          "score": 35,
-          "matchedTerms": [
-            "int",
-            "feh",
-            "unsigned",
-            "位无符",
-            "无符号",
-            "位无符号",
-            "运算",
-            "得到",
-            "范围",
-            "超出范围",
-            "十六进",
-            "六进制"
           ]
         },
         {
