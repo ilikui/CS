@@ -9783,6 +9783,43 @@ window.CARD_QUESTION_MAP = {
     "answerSource": "https://pgcode.cn/exams/408/years/2026/preview",
     "audit": {"status": "original-question-source-crosschecked", "note": "题干、选项和参考答案与2026年408公开真题页面交叉核对；超级流水线归入微架构实现。"}
   }
+  ,
+  "2015-13-8位补码最小值": {
+    "year": 2015, "index": 13, "id": 201513, "typeName": "选择题", "score": 2, "topic": "计算机组成原理",
+    "question": "由 3 个“1”和 5 个“0”组成的 8 位二进制补码，能表示的最小整数是（ ）。A. −126  B. −125  C. −32  D. −3",
+    "answer": "B（−125）",
+    "analysis": "8位补码的最高位权为−128，其余位权依次为64、32、16、8、4、2、1。要使数值尽可能小，符号位必须为1；剩余两个1放在权值最小的末两位，得到10000011₂。按位权求值为−128+2+1=−125。",
+    "steps": ["总共3个1，负数最小值必须令符号位为1。","还剩2个1；为了让正权部分尽可能小，将它们放在权值最低的两位。","机器数为10000011₂。","补码位权求值：−128+2+1=−125，选B。"],
+    "stepsSource": "teaching",
+    "relatedCards": ["数制转换与定点小数", "数据表示与补码", "定点补码加减与溢出"],
+    "source": "https://pgcode.cn/exams/408/years/2015/preview",
+    "answerSource": "https://www.csgraduates.com/study_methods/408quiz/2015/",
+    "audit": {"status": "original-question-source-crosschecked", "note": "题干、四个选项及答案B与2015年408公开真题页面交叉核对；最小位权组合10000011₂独立复算为−125。"}
+  },
+  "2022-13-32位补码表示范围": {
+    "year": 2022, "index": 13, "id": 202213, "typeName": "选择题", "score": 2, "topic": "计算机组成原理",
+    "question": "32位补码所能表示的整数范围是（ ）。A. −2^32～2^31−1  B. −2^31～2^31−1  C. −2^32～2^32−1  D. −2^31～2^32−1",
+    "answer": "B（−2^31～2^31−1）",
+    "analysis": "n位补码整数的范围是[−2^(n−1), 2^(n−1)−1]。最高位权重为−2^(n−1)，其余位权为正；最小机器数100…0表示−2^(n−1)，最大机器数011…1表示2^(n−1)−1。令n=32即可得到答案。",
+    "steps": ["写出n位补码范围通式：[−2^(n−1), 2^(n−1)−1]。","代入n=32，得到[−2^31, 2^31−1]。","与选项比较，只有B符合；A、C、D的边界混淆了位宽或有符号/无符号范围。"],
+    "stepsSource": "teaching",
+    "relatedCards": ["数制转换与定点小数", "数据表示与补码", "定点补码加减与溢出"],
+    "source": "https://pgcode.cn/exams/408/years/2022/preview",
+    "answerSource": "https://csgraduates.com/study_methods/408quiz/2022/",
+    "audit": {"status": "original-question-source-crosschecked", "note": "题干、四个选项和参考答案B与2022年408公开真题页面交叉核对；范围通式和32位边界独立复算。"}
+  },
+  "2023-13-short负8190补码": {
+    "year": 2023, "index": 13, "id": 202313, "typeName": "选择题", "score": 2, "topic": "计算机组成原理",
+    "question": "若 short 型变量 x = −8190，则 x 的机器数是（ ）。A. E002H  B. E001H  C. 9FFFH  D. 9FFEH",
+    "answer": "A（E002H）",
+    "analysis": "按408题目约定short为16位二进制补码。8190=1FFEH，故−8190的补码机器数=2^16−8190=10000H−1FFEH=E002H。校验时将E002H作为无符号位模式减去10000H，得到−8190。",
+    "steps": ["把绝对值转为十六进制：8190=1FFEH。","16位负数补码=2^16−绝对值=10000H−1FFEH。","相减得E002H，即1110 0000 0000 0010₂。","按16位补码解释：E002H−10000H=−8190，选A。"],
+    "stepsSource": "teaching",
+    "relatedCards": ["数制转换与定点小数", "数据表示与补码", "定点补码加减与溢出"],
+    "source": "https://pgcode.cn/exams/408/years/2023/preview",
+    "answerSource": "https://zhenti.beokayy.club/paper/2023",
+    "audit": {"status": "original-question-source-crosschecked", "note": "题干、选项和答案A与2023年408公开真题页面交叉核对；16位补码运算独立复算。"}
+  }
 };
 
 window.CARD_EXAM_TOPIC_MAP = {
