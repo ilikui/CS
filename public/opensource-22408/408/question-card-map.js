@@ -9,60 +9,7 @@ window.QUESTION_CARD_MAP = {
     "score": 5,
     "question": "假定采用带头结点的单链表保存单词，当两个单词有相同的后缀时，则可共享相同的后缀存储空间，例如，“loading\" 和 “being” 的存储映像如下图所示。 408真题系统 l o a d b e i n g ^ str1 str2 p 设 str1 和 str2 分别指向两个单词所在单链表的头结点，链表结点结构为 | data | next | ，请设计一个时间上尽可能高效的算法，找出由 str1 和 str2 所指向两个链表共同后缀的起始位置（如图中字符 i 所在的结点位置 p）。要求： 1）给出算法的基本设计思想。 2）根据设计思想，采用 C 或 C++ 或 Java 语言描述算法，关键之处给出注释。 3）说明你所设计算法的时间复杂度。",
     "answer": "分别求两个带头结点单链表的数据结点数 m、n；较长链表指针先走 |m−n| 步，再同步后移，首次出现 p==q 的结点即为公共后缀起点。若同步到 NULL，则无公共后缀。时间复杂度 O(m+n)，辅助空间 O(1)。",
-    "analysis": "顺序遍历两个链表到尾结点时，并不能保证两个链表同时到达尾结点。这是因为两个链表的长度不同。假设一个链表比另 一个链表长 k 个结点，我们先在长链表上遍历 k 个结点，之后同步遍历两个链表，这样就能够保证它们同时到达最后一个结点。由于两个链表从第一个公共结点到链表的尾结点都是重合的，所以它们肯定同时到达第 一个公共结点。 l o a d b e i n g ^ str1 str2 i n g ^ 尾 部 对 齐 p q 算法的基本设计思想： ①分别求出 strl 和 str2 所指的两个链表的长度 m 和 n。 ②将两个链表以表尾对齐：令指针 p、q 分别指向 strl 和 str2 的头结点，若 m ≥ n ，则使 p 指向链表中的第 m-n+1 个结点；若 m < n ，则使 q 指向链表中的第 n-m+1 个结点，即使指针 p 和 q 所指的结点到表尾的长度相等。 ③反复将指针 p 和 q 同步向后移动，并判断它们是否指向同一结点。若 p 和 q 指向同一结点，则该点即为所求的共同后缀的起始位置。 2）算法的 C 语言代码描述： struct Node { int data ; Node * next ;   "2010-18": {
-    "year": 2010, "index": 18, "id": 65,
-    "subject": "计算机组成原理", "subjectCode": "computer-organization",
-    "typeName": "选择题", "score": 2,
-    "question": "下列寄存器中，汇编语言程序员可见的是（ ）。 A. MAR B. PC C. MDR D. IR",
-    "answer": "B",
-    "cards": [{"title":"计算机系统层次结构","topic":"计算机系统层次结构","status":"verified","role":"secondary"}],
-    "coreCards": [], "secondaryCards": ["计算机系统层次结构"]
-  },
-  "2022-18": {
-    "year": 2022, "index": 18, "id": 629,
-    "subject": "计算机组成原理", "subjectCode": "computer-organization",
-    "typeName": "选择题", "score": 2,
-    "question": "下列选项中，属于指令集体系结构（ISA）规定的内容是（ ）。Ⅰ.指令字格式和指令类型 Ⅱ.CPU的时钟周期 Ⅲ.通用寄存器个数和位数 Ⅳ.加法器的进位方式。A.仅Ⅰ、Ⅱ B.仅Ⅰ、Ⅲ C.仅Ⅱ、Ⅳ D.仅Ⅰ、Ⅲ、Ⅳ",
-    "answer": "B",
-    "analysis": "ISA定义程序员可见的指令格式/类型及通用寄存器资源；CPU时钟周期和加法器进位方式属于微架构/电路实现。",
-    "steps": ["Ⅰ指令格式与类型决定机器指令编码和语义，属于ISA。","Ⅱ时钟周期由具体处理器实现决定，不属于ISA。","Ⅲ通用寄存器数量和位宽是程序员可见状态，属于ISA。","Ⅳ加法器采用何种进位电路是内部实现细节，不属于ISA。","因此仅Ⅰ、Ⅲ正确，选B。"],
-    "cards": [{"title":"计算机系统层次结构","topic":"计算机系统层次结构","status":"verified","role":"core"}],
-    "coreCards": ["计算机系统层次结构"], "secondaryCards": []
-  },
-  "2022-20": {
-    "year": 2022, "index": 20, "id": 631,
-    "subject": "计算机组成原理", "subjectCode": "computer-organization",
-    "typeName": "选择题", "score": 2,
-    "question": "将高级语言源程序转换为可执行目标文件的主要过程是（ ）。A.预处理→编译→汇编→链接 B.预处理→汇编→编译→链接 C.预处理→编译→链接→汇编 D.预处理→汇编→链接→编译",
-    "answer": "A",
-    "analysis": "预处理展开宏和头文件；编译将高级语言翻译为汇编/目标表示；汇编器生成目标文件；链接器解析外部符号并合并目标文件和库。",
-    "steps": ["预处理：处理宏定义、头文件和条件编译。","编译：完成词法/语法/语义分析和优化，生成汇编或目标表示。","汇编：把汇编代码转换为机器指令目标文件。","链接：完成符号解析、重定位并合并目标文件/库，生成可执行文件。","顺序为预处理→编译→汇编→链接，选A。"],
-    "cards": [{"title":"计算机系统层次结构","topic":"计算机系统层次结构","status":"verified","role":"core"}],
-    "coreCards": ["计算机系统层次结构"], "secondaryCards": []
-  },
-  "2024-13": {
-    "year": 2024, "index": 13, "id": 202413,
-    "subject": "计算机组成原理", "subjectCode": "computer-organization",
-    "typeName": "选择题", "score": 2,
-    "question": "将汇编程序中实现特定功能的一组指令序列定义为伪指令。判断CPU能理解并直接执行的类别：Ⅰ伪指令；Ⅱ微指令；Ⅲ机器指令；Ⅳ汇编指令。选项A仅Ⅰ、Ⅳ；B仅Ⅱ、Ⅲ；C仅Ⅲ、Ⅳ；D仅Ⅰ、Ⅲ、Ⅳ。",
-    "answer": "B",
-    "analysis": "机器指令属于ISA层，由CPU按指令语义执行；微指令属于控制器内部微程序控制层。汇编指令是机器指令的符号表示，伪指令由汇编器处理。",
-    "steps": ["微指令用于控制器内部产生微操作控制信号。","机器指令是ISA规定的二进制指令，由CPU取指、译码和执行。","汇编指令是机器指令的助记符表示，需汇编成机器码。","伪指令是汇编程序的控制命令，不直接成为CPU执行指令。","故选Ⅱ、Ⅲ，即B。"],
-    "cards": [{"title":"计算机系统层次结构","topic":"计算机系统层次结构","status":"verified","role":"secondary"}],
-    "coreCards": [], "secondaryCards": ["计算机系统层次结构"]
-  },
-  "2025-16": {
-    "year": 2025, "index": 16, "id": 202516,
-    "subject": "计算机组成原理", "subjectCode": "computer-organization",
-    "typeName": "选择题", "score": 2,
-    "question": "判断由指令集体系结构ISA规定的项目：A是否采用阵列乘法器；B是否采用定长指令字；C是否采用微程序控制器；D是否采用单总线数据通路。",
-    "answer": "B",
-    "analysis": "指令编码格式属于ISA；阵列乘法器、微程序控制器和单总线数据通路属于微架构实现。",
-    "steps": ["先判断属性是否对机器语言程序员可见。","指令字长度/编码格式由ISA规定。","乘法器结构、控制器实现和内部数据通路属于微架构。","因此选B。"],
-    "cards": [{"title":"计算机系统层次结构","topic":"计算机系统层次结构","status":"verified","role":"core"}],
-    "coreCards": ["计算机系统层次结构"], "secondaryCards": []
-  },
-}; int getLength ( Node * h ) { int length = 0 ; Node * p = h -> next ; while ( p ) { length ++ ; p = p -> next ; } return length ; } Node * findCommonSuffix ( Node * h1 , Node * h2 ) { Node * p1 = h1 ; Node * p2 = h2 ; int m = getLength ( h1 ); int n = getLength ( h2 ); if ( m > n ) { for ( int i = 0 ; i < m - n ; i ++ ) { p1 = p1 -> next ; } } else { for ( int i = 0 ; i < n - m ; i ++ ) { p2 = p2 -> next ; } } while ( p1 != p2 ) { p1 = p1 -> next ; p2 = p2 -> next ; } return p1 ; } 【评分说明】 ① 若考生所给算法实现正确，且时间复杂度为 O(m+n)，可给 12分；若算法正确，但时间复杂度超过 O(m+n)，则最高可给 9 分。 ② 若在算法的基本设计思想描述中因文字表达没有非常清晰反映出算法思路，但在算法实现中能够清晰看出算法思想且正确的，可参照①的标准给分。 ③ 若算法的基本设计思想描述或算法实现中部分正确，可参照①中各种情况的相应给分标准酌情给分。 ③ 时间复杂度为 O(len1+len2) 或 O(max(len1,len2)), 其中 len1、len2 分别为两个链表的长度。",
+    "analysis": "顺序遍历两个链表到尾结点时，并不能保证两个链表同时到达尾结点。这是因为两个链表的长度不同。假设一个链表比另 一个链表长 k 个结点，我们先在长链表上遍历 k 个结点，之后同步遍历两个链表，这样就能够保证它们同时到达最后一个结点。由于两个链表从第一个公共结点到链表的尾结点都是重合的，所以它们肯定同时到达第 一个公共结点。 l o a d b e i n g ^ str1 str2 i n g ^ 尾 部 对 齐 p q 算法的基本设计思想： ①分别求出 strl 和 str2 所指的两个链表的长度 m 和 n。 ②将两个链表以表尾对齐：令指针 p、q 分别指向 strl 和 str2 的头结点，若 m ≥ n ，则使 p 指向链表中的第 m-n+1 个结点；若 m < n ，则使 q 指向链表中的第 n-m+1 个结点，即使指针 p 和 q 所指的结点到表尾的长度相等。 ③反复将指针 p 和 q 同步向后移动，并判断它们是否指向同一结点。若 p 和 q 指向同一结点，则该点即为所求的共同后缀的起始位置。 2）算法的 C 语言代码描述： struct Node { int data ; Node * next ; }; int getLength ( Node * h ) { int length = 0 ; Node * p = h -> next ; while ( p ) { length ++ ; p = p -> next ; } return length ; } Node * findCommonSuffix ( Node * h1 , Node * h2 ) { Node * p1 = h1 ; Node * p2 = h2 ; int m = getLength ( h1 ); int n = getLength ( h2 ); if ( m > n ) { for ( int i = 0 ; i < m - n ; i ++ ) { p1 = p1 -> next ; } } else { for ( int i = 0 ; i < n - m ; i ++ ) { p2 = p2 -> next ; } } while ( p1 != p2 ) { p1 = p1 -> next ; p2 = p2 -> next ; } return p1 ; } 【评分说明】 ① 若考生所给算法实现正确，且时间复杂度为 O(m+n)，可给 12分；若算法正确，但时间复杂度超过 O(m+n)，则最高可给 9 分。 ② 若在算法的基本设计思想描述中因文字表达没有非常清晰反映出算法思路，但在算法实现中能够清晰看出算法思想且正确的，可参照①的标准给分。 ③ 若算法的基本设计思想描述或算法实现中部分正确，可参照①中各种情况的相应给分标准酌情给分。 ③ 时间复杂度为 O(len1+len2) 或 O(max(len1,len2)), 其中 len1、len2 分别为两个链表的长度。",
     "steps": [
       "顺序遍历两个链表到尾结点时，并不能保证两个链表同时到达尾结点。",
       "这是因为两个链表的长度不同。",
@@ -6387,6 +6334,12 @@ window.QUESTION_CARD_MAP = {
       "阻塞式I/O与驱动程序调用"
     ]
   }
+,
+  "2010-18": {"year":2010,"index":18,"id":65,"subject":"计算机组成原理","subjectCode":"computer-organization","typeName":"选择题","score":2,"question":"下列寄存器中，汇编语言程序员可见的是（ ）。 A. MAR B. PC C. MDR D. IR","answer":"B","cards":[{"title":"计算机系统层次结构","topic":"计算机系统层次结构","status":"verified","role":"secondary"}],"coreCards":[],"secondaryCards":["计算机系统层次结构"]},
+  "2022-18": {"year":2022,"index":18,"id":629,"subject":"计算机组成原理","subjectCode":"computer-organization","typeName":"选择题","score":2,"question":"下列选项中，属于指令集体系结构（ISA）规定的内容是（ ）。Ⅰ.指令字格式和指令类型 Ⅱ.CPU的时钟周期 Ⅲ.通用寄存器个数和位数 Ⅳ.加法器的进位方式。A.仅Ⅰ、Ⅱ B.仅Ⅰ、Ⅲ C.仅Ⅱ、Ⅳ D.仅Ⅰ、Ⅲ、Ⅳ","answer":"B","analysis":"ISA定义程序员可见的指令格式/类型及通用寄存器资源；CPU时钟周期和加法器进位方式属于微架构/电路实现。","steps":["Ⅰ指令格式与类型决定机器指令编码和语义，属于ISA。","Ⅱ时钟周期由具体处理器实现决定，不属于ISA。","Ⅲ通用寄存器数量和位宽是程序员可见状态，属于ISA。","Ⅳ加法器采用何种进位电路是内部实现细节，不属于ISA。","因此仅Ⅰ、Ⅲ正确，选B。"],"cards":[{"title":"计算机系统层次结构","topic":"计算机系统层次结构","status":"verified","role":"core"}],"coreCards":["计算机系统层次结构"],"secondaryCards":[]},
+  "2022-20": {"year":2022,"index":20,"id":631,"subject":"计算机组成原理","subjectCode":"computer-organization","typeName":"选择题","score":2,"question":"将高级语言源程序转换为可执行目标文件的主要过程是（ ）。A.预处理→编译→汇编→链接 B.预处理→汇编→编译→链接 C.预处理→编译→链接→汇编 D.预处理→汇编→链接→编译","answer":"A","analysis":"预处理展开宏和头文件；编译将高级语言翻译为汇编/目标表示；汇编器生成目标文件；链接器解析外部符号并合并目标文件和库。","steps":["预处理：处理宏定义、头文件和条件编译。","编译：完成词法/语法/语义分析和优化，生成汇编或目标表示。","汇编：把汇编代码转换为机器指令目标文件。","链接：完成符号解析、重定位并合并目标文件/库，生成可执行文件。","顺序为预处理→编译→汇编→链接，选A。"],"cards":[{"title":"计算机系统层次结构","topic":"计算机系统层次结构","status":"verified","role":"core"}],"coreCards":["计算机系统层次结构"],"secondaryCards":[]},
+  "2024-13": {"year":2024,"index":13,"id":202413,"subject":"计算机组成原理","subjectCode":"computer-organization","typeName":"选择题","score":2,"question":"将汇编程序中实现特定功能的一组指令序列定义为伪指令。判断CPU能理解并直接执行的类别：Ⅰ伪指令；Ⅱ微指令；Ⅲ机器指令；Ⅳ汇编指令。","answer":"B","analysis":"机器指令属于ISA层，由CPU按指令语义执行；微指令属于控制器内部微程序控制层。汇编指令是机器指令的符号表示，伪指令由汇编器处理。","steps":["微指令用于控制器内部产生微操作控制信号。","机器指令是ISA规定的二进制指令，由CPU取指、译码和执行。","汇编指令是机器指令的助记符表示，需汇编成机器码。","伪指令是汇编程序的控制命令，不直接成为CPU执行指令。","故选Ⅱ、Ⅲ，即B。"],"cards":[{"title":"计算机系统层次结构","topic":"计算机系统层次结构","status":"verified","role":"secondary"}],"coreCards":[],"secondaryCards":["计算机系统层次结构"]},
+  "2025-16": {"year":2025,"index":16,"id":202516,"subject":"计算机组成原理","subjectCode":"computer-organization","typeName":"选择题","score":2,"question":"判断由指令集体系结构ISA规定的项目：A是否采用阵列乘法器；B是否采用定长指令字；C是否采用微程序控制器；D是否采用单总线数据通路。","answer":"B","analysis":"指令编码格式属于ISA；阵列乘法器、微程序控制器和单总线数据通路属于微架构实现。","steps":["先判断属性是否对机器语言程序员可见。","指令字长度/编码格式由ISA规定。","乘法器结构、控制器实现和内部数据通路属于微架构。","因此选B。"],"cards":[{"title":"计算机系统层次结构","topic":"计算机系统层次结构","status":"verified","role":"core"}],"coreCards":["计算机系统层次结构"],"secondaryCards":[]}
 };
 window.CARD_QUESTION_LIST = {
   "二叉搜索树与中序遍历": [
@@ -7213,5 +7166,6 @@ window.CARD_QUESTION_LIST = {
   "总线仲裁方式": [
     "2022-44"
   ]
-  "计算机系统层次结构": ["2010-18","2022-18","2022-20","2024-13","2025-16"],
+,
+  "计算机系统层次结构": ["2010-18","2022-18","2022-20","2024-13","2025-16"]
 };
