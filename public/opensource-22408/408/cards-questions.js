@@ -11037,7 +11037,9 @@ window.CARD_EXAM_TOPIC_MAP = {
   "verified-answer-2025-44::CPU异常响应与现场保护": "CPU异常响应与现场保护",
   "2015-13-8位补码最小值": "数制转换与定点小数",
   "2022-13-32位补码表示范围": "数制转换与定点小数",
-  "2023-13-short负8190补码": "数制转换与定点小数"
+  "2023-13-short负8190补码": "数制转换与定点小数",
+  "2024-CO-12-int转short再符号扩展": "数据表示与补码",
+  "2025-CO-12-short转unsigned int": "数据表示与补码"
 };
 
 window.CARD_EXAM_ROLE_MAP = {
@@ -11379,5 +11381,7 @@ window.CARD_EXAM_ROLE_MAP = {
   "verified-answer-2025-43::数组跨页与缺页次数": "secondary",
   "verified-answer-2025-44::补码恢复余数除法器": "core",
   "verified-answer-2025-44::有符号除法异常与商溢出": "core",
-  "verified-answer-2025-44::CPU异常响应与现场保护": "secondary"
+  "verified-answer-2025-44::CPU异常响应与现场保护": "secondary",
+  "2024-CO-12-int转short再符号扩展": "core",
+  "2025-CO-12-short转unsigned int": "core"
 };
