@@ -15,7 +15,7 @@ ASM_DEPS := $(SOURCES:.c=.asm.d)
 PREPROCESS_TARGETS := $(SOURCES:.c=.i)
 OBJECTS := $(SOURCES:.c=.o)
 INTERMEDIATE_DEPS := $(SOURCES:.c=.pp.d) $(SOURCES:.c=.obj.d)
-PROGRAM ?= array_stack
+PROGRAM ?= array_deque
 
 .PHONY: all asm inter run clean help
 .DELETE_ON_ERROR:
