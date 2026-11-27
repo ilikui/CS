@@ -70,6 +70,16 @@ int isEmpty(ArrayDeque *deque)
 }
 
 
+/**
+ * @brief 计算环形数组索引
+ */
+int dequeIndex(ArrayDeque *deque, int i)
+{
+    return ((i+capacity(deque)) % capacity(deque));
+}
+
+
+
 int main(void)
 {
 
